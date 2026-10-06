@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/google-drive-anchor.schema.json",
+  "title": "A7 Google Drive Governance Anchor",
+  "type": "object",
+  "required": [
+    "anchor_id",
+    "canonical_label",
+    "semantic_role",
+    "provider_object_id",
+    "access_class",
+    "observed_at"
+  ],
+  "properties": {
+    "anchor_id": {
+      "type": "string",
+      "pattern": "^GDRIVE-ANCHOR-[0-9]{6}$"
+    },
+    "canonical_label": {
+      "type": "string"
+    },
+    "semantic_role": {
+      "type": "string"
+    },
+    "provider_object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_class": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

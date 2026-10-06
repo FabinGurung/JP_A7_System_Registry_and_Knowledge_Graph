@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "inventory_id": "A7-GDRIVE-TOPOLOGY-000001",
+  "sequence_id": "A7-SEQ-000004",
+  "root_entity_id": "GDRIVE-ROOT-000001",
+  "observed_at": "2026-10-06T09:19:00Z",
+  "mode": "HYBRID_LIVE_PROVIDER_ROOT_PLUS_GOVERNED_DRIVE_INDEX_POINTER",
+  "current_root_scan": {
+    "direct_top_level_branches": 16,
+    "safe_named_top_level_branches": 15,
+    "restricted_redacted_top_level_branches": 1,
+    "source": "live Google Drive list_folder on A9_Fabin_Gurung",
+    "direct_listing_complete": true
+  },
+  "governed_index": {
+    "spreadsheet_entity_id": "GDRIVE-ANCHOR-000001",
+    "sheet_name": "Index",
+    "scanned_rows_excluding_header": 1293,
+    "rows_with_current_path_under_a9_root": 968,
+    "observed_index_grid_rows": 1294,
+    "file_modified_time": "2026-10-06T09:37:12.392Z",
+    "row_level_last_scanned_at_range": [
+      "2026-08-13 09:30 NPT",
+      "2026-10-01 NPT"
+    ],
+    "freshness_rule": "Index rows are provider evidence but not assumed current when a task needs live state; resolve exact provider object live."
+  },
+  "historical_index_rows_by_top_level": {
+    "ROOT": 1,
+    "00_DRIVE_CONTROL_CENTER": 77,
+    "01_JP": 71,
+    "02_Thesis": 250,
+    "03_Fishtail_Builders": 138,
+    "04_Rohini_Engineering_and_Builders": 62,
+    "05_AEC_Knowledge": 23,
+    "06_Silver_Hook": 29,
+    "07_Data_Operations": 53,
+    "08_MSc_Structural_Engineering": 232,
+    "09_Professional_Engineering_and_Competitive_Exams": 1,
+    "10_Software": 1,
+    "11_AI_CHAT_WORKSPACES_AND_DURABLE_RECORDS": 2,
+    "12_DISCORD_SYSTEM_AND_ARCHIVES": 1,
+    "13_Paila_Pilates": 1,
+    "98_INTAKE_STAGING": 1,
+    "RESTRICTED_PRIVATE_SUBTREE": 21,
+    "LEGACY_07_FINANCE_PROCUREMENT_PATH": 4
+  },
+  "current_direct_child_observations": {
+    "00_DRIVE_CONTROL_CENTER": {
+      "observed_children_lower_bound": 100,
+      "list_limit_reached": true,
+      "note": "Direct listing hit connector limit at 100; current child count is at least 100. Use governed index/search for targeted lookup."
+    },
+    "01_JP": {
+      "observed_children": 3,
+      "list_limit_reached": false
+    },
+    "02_Thesis": {
+      "observed_children": 17,
+      "list_limit_reached": false
+    },
+    "03_Fishtail_Builders": {
+      "observed_children": 5,
+      "list_limit_reached": false
+    },
+    "04_Rohini_Engineering_and_Builders": {
+      "observed_children": 4,
+      "list_limit_reached": false
+    },
+    "05_AEC_Knowledge": {
+      "observed_children": 8,
+      "list_limit_reached": false
+    },
+    "06_Silver_Hook": {
+      "observed_children": 8,
+      "list_limit_reached": false
+    },
+    "07_Data_Operations": {
+      "observed_children": 8,
+      "list_limit_reached": false
+    },
+    "08_MSc_Structural_Engineering": {
+      "observed_children": 5,
+      "list_limit_reached": false
+    },
+    "09_Professional_Engineering_and_Competitive_Exams": {
+      "observed_children": 8,
+      "list_limit_reached": false
+    },
+    "10_Software": {
+      "observed_children": 3,
+      "list_limit_reached": false
+    },
+    "11_AI_CHAT_WORKSPACES_AND_DURABLE_RECORDS": {
+      "observed_children": 8,
+      "list_limit_reached": false
+    },
+    "12_DISCORD_SYSTEM_AND_ARCHIVES": {
+      "observed_children": 7,
+      "list_limit_reached": false
+    },
+    "13_Paila_Pilates": {
+      "observed_children": 1,
+      "list_limit_reached": false
+    },
+    "98_INTAKE_STAGING": {
+      "observed_children": 13,
+      "list_limit_reached": false
+    },
+    "RESTRICTED_PRIVATE_SUBTREE": {
+      "observed_children": null,
+      "list_limit_reached": null,
+      "redacted": true
+    }
+  },
+  "public_registry_boundary": {
+    "copy_full_private_drive_index_to_github": false,
+    "reason": "A7 repository is public; the governed Drive index classifies many topology records as Private or otherwise access-governed.",
+    "detailed_topology_authority": "Google Drive Fabin_Gurung_Drive_Index / Index and live provider reads",
+    "a7_role": "Store safe semantic roots/anchors, coverage/freshness and deterministic query rules."
+  }
+}

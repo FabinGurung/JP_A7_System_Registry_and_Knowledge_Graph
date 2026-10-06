@@ -1,6 +1,6 @@
 {
   "policy_id": "A7-POL-PROVIDER-GDRIVE-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "ACTIVE",
   "provider": "google_drive",
   "authority_scope": [
@@ -12,5 +12,12 @@
   "underlying_fact_rule": "Drive owns the stored source object; semantic/domain authority still follows the fact-class contract.",
   "public_projection_default": "REVIEW_BEFORE_PUBLICATION",
   "mutation_rule": "Provider mutation requires provider-specific read-before/write/readback evidence when A7 actually changes that provider.",
-  "failure_rule": "After three reasonable failures, record/defer this provider dependency and continue independent work without fabricating blocked facts."
+  "failure_rule": "After three reasonable failures, record/defer this provider dependency and continue independent work without fabricating blocked facts.",
+  "public_registry_behavior": "A7 may publish only approved safe Drive metadata/anchors. Detailed private topology remains in the governed Drive index and is queried live.",
+  "topology_resolution_order": [
+    "A7 semantic node/anchor",
+    "Fabin_Gurung_Drive_Index stable-ID/path lookup",
+    "Control_Tower_Inventory_AUTO for control successors",
+    "live exact Drive provider object when current state matters"
+  ]
 }

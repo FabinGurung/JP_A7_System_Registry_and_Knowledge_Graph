@@ -8,10 +8,11 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000003` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000004` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
+- Phase 4 Google Drive / Kaksaveksaka A9 topology metadata inventory: **IN_PROGRESS**
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**
@@ -49,3 +50,18 @@ Do not commit secrets, private message bodies, confidential file contents, priva
 ## Git-native A7 closeout
 
 A7 uses commit/branch/CI/provider-readback lineage. Provider-specific PRE/POST evidence remains required when A7 actually mutates an external provider.
+
+
+## Google Drive topology model
+
+A7 does **not** mirror the private 968-row A9 Drive index into this public repository.
+
+Phase 4 instead records:
+
+- the current A9 root and safe top-level semantic branches;
+- stable governance anchors needed for deterministic AI routing;
+- a redacted boundary for the private/sensitive subtree;
+- index coverage/freshness and direct-provider observations;
+- a resolver contract that queries `Fabin_Gurung_Drive_Index` and then reads the exact Drive object live when current state matters.
+
+This preserves Drive as authority for private topology while making A7 the machine-readable routing/control plane.

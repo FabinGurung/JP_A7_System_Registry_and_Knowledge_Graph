@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "findings": [
+    {
+      "finding_id": "GDFIND-000001",
+      "severity": "HIGH",
+      "code": "PUBLIC_REPOSITORY_CANNOT_MIRROR_PRIVATE_DRIVE_TOPOLOGY",
+      "status": "CONTROLLED_BY_DESIGN",
+      "evidence": "Fabin_Gurung_Drive_Index marks large portions of A9 topology Private/access-governed while A7 repository is public.",
+      "resolution": "Keep detailed topology in Drive; A7 stores safe anchors/relationships/coverage and queries Drive live."
+    },
+    {
+      "finding_id": "GDFIND-000002",
+      "severity": "MEDIUM",
+      "code": "DRIVE_INDEX_MIXED_ROW_FRESHNESS",
+      "status": "OPEN_OBSERVATION",
+      "evidence": "968 indexed A9-path rows have row-level Last Scanned At values spanning 2026-08-13 through 2026-10-01 even though the index workbook itself was modified on 2026-10-06.",
+      "resolution": "Use stable IDs for resolution and live provider readback whenever current state matters."
+    },
+    {
+      "finding_id": "GDFIND-000003",
+      "severity": "MEDIUM",
+      "code": "DRIVE_CONTROL_CENTER_DIRECT_LISTING_TRUNCATED",
+      "status": "OPEN_OBSERVATION",
+      "evidence": "Live list_folder for 00_DRIVE_CONTROL_CENTER returned exactly 100 children, the connector maximum.",
+      "resolution": "Do not infer total child count from direct listing; use targeted search/governed index for additional children."
+    },
+    {
+      "finding_id": "GDFIND-000004",
+      "severity": "MEDIUM",
+      "code": "LEGACY_TOP_LEVEL_PATH_REMAINS_IN_INDEX",
+      "status": "OPEN_OBSERVATION",
+      "evidence": "The governed Index contains 4 rows under historical 07_Finance_Procurement while live A9 root exposes 07_Data_Operations and no 07_Finance_Procurement top-level branch.",
+      "resolution": "Treat legacy path as provenance only until exact rows are reconciled; do not recreate the legacy root."
+    },
+    {
+      "finding_id": "GDFIND-000005",
+      "severity": "INFO",
+      "code": "PAILA_IS_FEDERATED_POINTER",
+      "status": "VERIFIED",
+      "evidence": "Current A9 root contains 13_Paila_Pilates with one pointer/read-first document; its own content authority remains outside A9 root.",
+      "resolution": "Keep relationship pointer; do not duplicate Paila operational content into A7/A9."
+    },
+    {
+      "finding_id": "GDFIND-000006",
+      "severity": "INFO",
+      "code": "INTAKE_STAGING_NON_AUTHORITATIVE",
+      "status": "VERIFIED",
+      "evidence": "Governed Index classifies 98_INTAKE_STAGING as NON_AUTHORITATIVE_STAGING.",
+      "resolution": "Do not promote intake filenames to canonical facts without governed triage."
+    },
+    {
+      "finding_id": "GDFIND-000007",
+      "severity": "INFO",
+      "code": "PRIVATE_SENSITIVE_BRANCH_REDACTED",
+      "status": "CONTROLLED_BY_DESIGN",
+      "evidence": "A current top-level private/sensitive branch exists; public A7 stores only a redacted boundary node and does not copy its provider ID/descendants.",
+      "resolution": "Resolve only in a private authorized context if a task explicitly requires it."
+    },
+    {
+      "finding_id": "GDFIND-000008",
+      "severity": "INFO",
+      "code": "NAIVE_FULL_RECURSIVE_WALK_HIT_ORCHESTRATION_LIMIT",
+      "status": "MITIGATED",
+      "evidence": "Initial recursive list-folder traversal exceeded the code-mode nested tool-call ceiling before completion.",
+      "resolution": "Use the existing governed Drive Index plus bounded live verification tranches rather than brute-force recursive traversal."
+    }
+  ]
+}

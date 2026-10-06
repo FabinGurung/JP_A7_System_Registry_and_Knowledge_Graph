@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "anchors": [
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000001",
+      "canonical_label": "Fabin_Gurung_Drive_Index",
+      "semantic_role": "A9_MAIN_DRIVE_INDEX_AND_LIBRARY",
+      "provider_object_id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000002",
+      "canonical_label": "Control_Tower_Inventory_AUTO",
+      "semantic_role": "A9_CONTROL_TOWER_INVENTORY",
+      "provider_object_id": "1hk79YGGwP1p7sdivCyvst6RKXtjPgWXmYEHl8RQKUxY",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000003",
+      "canonical_label": "AI Workspaces Local Library Folder",
+      "semantic_role": "AI_WORKSPACES_LOCAL_LIBRARY_FOLDER",
+      "provider_object_id": "1GpF-VXi46DY2JmOOG8LLM-GN1wyjEkR_",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000004",
+      "canonical_label": "LOCAL_LIBRARY__A9_AI_CHAT_WORKSPACES_AND_DURABLE_RECORDS__v1.0",
+      "semantic_role": "AI_WORKSPACES_LOCAL_LIBRARY",
+      "provider_object_id": "1o6vscSHReLe76w85y1XjpouvsANEauSowrArqrh_JhM",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000005",
+      "canonical_label": "00_ACTIVE_CONTROL_MAP__READ_FIRST.md",
+      "semantic_role": "ACTIVE_CONTROL_MAP_BOOTSTRAP",
+      "provider_object_id": "10vbBnJ4IxiZTCwvQgxczGc3UJwvQtyAe",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000006",
+      "canonical_label": "00_SAVE_ROUTING_RULES_READ_FIRST",
+      "semantic_role": "DRIVE_SAVE_ROUTER_BOOTSTRAP",
+      "provider_object_id": "1fRmQCvFvyoSwI0y-wKbOFG-esrkG61Z0dmweGoehCUU",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    },
+    {
+      "anchor_id": "GDRIVE-ANCHOR-000007",
+      "canonical_label": "A9_ADDRESS_INDEX__CURRENT_v1.0.json",
+      "semantic_role": "A9_ADDRESS_INDEX_POINTER",
+      "provider_object_id": "1lMZ0twq08InSIt4LH1r6CQ6MmsWw4l2O",
+      "access_class": "INTERNAL",
+      "observed_at": "2026-10-06T09:19:00Z"
+    }
+  ]
+}
