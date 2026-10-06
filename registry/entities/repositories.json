@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "repositories": [
+    {
+      "repository_id": "REPO-000001",
+      "entity_type": "github_repository",
+      "canonical_label": "JP A7 System Registry and Knowledge Graph",
+      "repository_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+      "current_slug": "JP_A7_System_Registry_and_Knowledge_Graph",
+      "provider_object_id": "1406572237",
+      "default_branch": "main",
+      "canonical_production_branch": "main",
+      "canonical_pages_workflow": null,
+      "deployment_type": "GITHUB_ACTIONS_CONFIGURED_WORKFLOW_NOT_YET_ESTABLISHED_BY_A7",
+      "public_site_url": null,
+      "deployment_status": "PHASE_1_FOUNDATION",
+      "visibility": "public",
+      "system_role": "CANONICAL_A7_SEMANTIC_REGISTRY",
+      "last_verified_at": "2026-10-06T03:15:00Z",
+      "governance_notes": "Immutable GitHub repository ID is primary provider identity; mutable names are aliases/labels.",
+      "last_observed_default_branch_head": "78f1d7c760d9cdf2e96f8f6868436f6d894889d0",
+      "head_observed_at": "2026-10-06T03:15:00Z",
+      "head_resolution_rule": "FETCH_LIVE_FROM_GITHUB_PROVIDER_DO_NOT_TREAT_STORED_HEAD_AS_PERMANENTLY_CURRENT"
+    }
+  ]
+}

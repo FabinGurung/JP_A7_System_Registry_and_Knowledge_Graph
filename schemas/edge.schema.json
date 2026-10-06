@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/edge.schema.json",
+  "title": "A7 Typed Edge",
+  "type": "object",
+  "required": [
+    "edge_id",
+    "from_entity_id",
+    "relation_type",
+    "to_entity_id",
+    "direction",
+    "status"
+  ],
+  "properties": {
+    "edge_id": {
+      "type": "string",
+      "pattern": "^EDGE-[0-9]{6}$"
+    },
+    "from_entity_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relation_type": {
+      "type": "string",
+      "pattern": "^[A-Z0-9_]+$"
+    },
+    "to_entity_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "DIRECTED",
+        "UNDIRECTED"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE",
+        "HISTORICAL",
+        "PENDING"
+      ]
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

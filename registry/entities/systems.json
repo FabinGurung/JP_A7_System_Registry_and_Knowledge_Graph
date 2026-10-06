@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "entities": [
+    {
+      "entity_id": "SYS-A7-000001",
+      "entity_type": "control_system",
+      "canonical_label": "A7 Semantic Registry and Knowledge Graph",
+      "namespace": "A7",
+      "status": "ACTIVE",
+      "role": "GITHUB_SEMANTIC_CONTROL_PLANE",
+      "repository_id": "REPO-000001",
+      "notes": "Current repository-backed machine registry, authority map, policy and knowledge-graph system."
+    },
+    {
+      "entity_id": "SYS-A8-000001",
+      "entity_type": "external_control_namespace",
+      "canonical_label": "A8 PailaPilates10 control namespace",
+      "namespace": "A8",
+      "status": "EXTERNAL_RESERVED",
+      "role": "SEPARATE_ACCOUNT_CONTROL_NAMESPACE",
+      "notes": "Reserved external namespace. Do not silently reinterpret A8 records as A7."
+    },
+    {
+      "entity_id": "SYS-A9-000001",
+      "entity_type": "external_control_namespace",
+      "canonical_label": "A9 Kaksaveksaka control namespace",
+      "namespace": "A9",
+      "status": "EXTERNAL_RESERVED",
+      "role": "LEGACY_DRIVE_GOVERNED_CONTROL_NAMESPACE",
+      "notes": "Separate predecessor/control namespace. A7 may index lineage from it but does not rename it."
+    }
+  ]
+}

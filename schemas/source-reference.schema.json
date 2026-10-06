@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/source-reference.schema.json",
+  "title": "A7 Provider Source Reference",
+  "type": "object",
+  "required": [
+    "source_ref_id",
+    "entity_id",
+    "provider",
+    "provider_object_id",
+    "access_class",
+    "observed_at"
+  ],
+  "properties": {
+    "source_ref_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entity_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider": {
+      "type": "string",
+      "enum": [
+        "github",
+        "google_drive",
+        "google_sheets",
+        "slack",
+        "discord",
+        "email",
+        "whatsapp",
+        "other"
+      ]
+    },
+    "provider_object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_class": {
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "RESTRICTED",
+        "UNKNOWN"
+      ]
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

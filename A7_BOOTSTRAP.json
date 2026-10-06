@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "bootstrap_id": "A7-BOOTSTRAP-000001",
+  "system_id": "SYS-A7-000001",
+  "system_code": "A7",
+  "canonical_repository": {
+    "repository_id": "REPO-000001",
+    "provider": "github",
+    "provider_object_id": "1406572237",
+    "full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+    "default_branch": "main",
+    "visibility": "public"
+  },
+  "current_operating_model": {
+    "primary_writer_model": "SOLE_EDITOR_WITH_AI_OPERATORS",
+    "read_search_users": "VIEW_ONLY_UNLESS_EXPLICITLY_CHANGED",
+    "postgresql_runtime": "DEFERRED_NOT_REQUIRED",
+    "ai_role": "RESOLVER_OPERATOR_NOT_AUTHORITY",
+    "generated_outputs_are_authority": false
+  },
+  "canonical_writable_formats": [
+    "JSON",
+    "JSONL"
+  ],
+  "formal_contract_formats": [
+    "JSON_SCHEMA",
+    "POSTGRESQL_COMPATIBLE_SQL_DDL"
+  ],
+  "generated_projection_formats": [
+    "CSV",
+    "MERMAID",
+    "GRAPH_JSON",
+    "SEARCH_INDEX_JSON",
+    "MARKDOWN",
+    "HTML",
+    "EXCALIDRAW_DATA",
+    "THREE_JS_DATA"
+  ],
+  "load_order": [
+    "A7_READ_FIRST.md",
+    "policies/global/a7-core.json",
+    "policies/global/public-safety.json",
+    "policies/global/fail-forward.json",
+    "policies/global/human-qa.json",
+    "registry/entities/systems.json",
+    "registry/authority/authority-map.json",
+    "registry/aliases/aliases.jsonl",
+    "registry/edges/edges.jsonl"
+  ],
+  "closeout": {
+    "model": "GIT_NATIVE",
+    "sequence_format": "A7-SEQ-NNNNNN",
+    "event_format": "A7-EVT-NNNNNN-NNN",
+    "require_pre_commit_sha": true,
+    "require_ci_validation": true,
+    "require_provider_readback": true,
+    "create_new_sequence_for_acknowledgement": false
+  },
+  "current_sequence": "A7-SEQ-000001",
+  "observed_at": "2026-10-06T03:15:00Z"
+}

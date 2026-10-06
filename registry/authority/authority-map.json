@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "status": "BOOTSTRAP_BASELINE",
+  "assignments": [
+    {
+      "fact_class": "semantic_identity_relationship_alias_policy",
+      "authority_system_id": "SYS-A7-000001",
+      "writable_store": "A7_CANONICAL_JSON_JSONL",
+      "rule": "A7 owns semantic identities, governed aliases, typed relationships and A7 policy."
+    },
+    {
+      "fact_class": "original_provider_content",
+      "authority_system_id": null,
+      "writable_store": "ORIGINAL_PROVIDER",
+      "rule": "Original binary/document/message content remains authoritative at its declared provider; A7 stores metadata/reference unless a later contract explicitly says otherwise."
+    },
+    {
+      "fact_class": "generated_projection",
+      "authority_system_id": "SYS-A7-000001",
+      "writable_store": "GENERATED_ONLY",
+      "rule": "Generated HTML, CSV, Mermaid, graph, search, Excalidraw and 3D outputs are never independently editable facts."
+    },
+    {
+      "fact_class": "specialist_domain_truth",
+      "authority_system_id": null,
+      "writable_store": "ASSIGNED_BY_MODULE_CONTRACT",
+      "rule": "Do not mutate specialist domain truth until a module ownership contract assigns authority."
+    }
+  ]
+}
