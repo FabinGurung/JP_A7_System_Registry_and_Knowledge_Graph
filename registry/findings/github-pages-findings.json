@@ -33,9 +33,9 @@
       "repository_id": "REPO-000007",
       "severity": "MEDIUM",
       "code": "FEATURE_BRANCH_IS_PRODUCTION_PAGES_OWNER",
-      "status": "OPEN",
-      "evidence": "daily-ops-branch-preview.yml has pages:write, github-pages environment and deploy-pages; archive guard explicitly states production owner remains feature/daily-ops-current-work.",
-      "recommended_follow_up": "Rename/restructure the production lane later if desired; do not change during inventory because Daily Ops currently depends on it."
+      "status": "CLOSED_OBSERVATION",
+      "evidence": "Current workflow .github/workflows/daily-ops-branch-preview.yml triggers validation on feature/daily-ops-current-work and main, but deploy is gated to github.ref == 'refs/heads/main'. Latest verified successful production run 37539751478 used main at 9e233f4c2cda1bfe554763c1dd7fddf236ba37f6.",
+      "recommended_follow_up": "Retain the main-only production owner unless a later explicitly governed architecture change is approved. Historical workflow filename may be renamed separately if desired."
     },
     {
       "finding_id": "GHFIND-000005",

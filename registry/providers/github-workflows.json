@@ -14,7 +14,7 @@
       "deploy_pages_capable": true,
       "pages_write": true,
       "production_status": "ACTIVE",
-      "latest_successful_run_id": 37387555305
+      "latest_successful_run_id": 37458576145
     },
     {
       "workflow_id": "GHWF-000002",
@@ -118,13 +118,13 @@
       "deploy_pages_capable": true,
       "pages_write": true,
       "production_status": "ACTIVE",
-      "latest_successful_run_id": 37409071014
+      "latest_successful_run_id": 37453569373
     },
     {
       "workflow_id": "GHWF-000009",
       "repository_id": "REPO-000006",
       "workflow_path": ".github/workflows/deploy-pages.yml",
-      "workflow_sha": "22fd48c20119d11a6673c61e58b341539a3ed879",
+      "workflow_sha": "afe2a0280d0e92c4a393533786a2f3d66b09af52",
       "workflow_name": "Build and deploy JP Research & Development hub",
       "branch_refs": [
         "main",
@@ -134,7 +134,7 @@
       "deploy_pages_capable": true,
       "pages_write": true,
       "production_status": "ACTIVE",
-      "latest_successful_run_id": 37386138073
+      "latest_successful_run_id": 37459211010
     },
     {
       "workflow_id": "GHWF-000010",
@@ -212,16 +212,21 @@
       "workflow_id": "GHWF-000015",
       "repository_id": "REPO-000007",
       "workflow_path": ".github/workflows/daily-ops-branch-preview.yml",
-      "workflow_sha": "20673a757e66369fbceeb39b71ce4057d1ad4a6f",
-      "workflow_name": "Daily Ops branch preview",
+      "workflow_sha": "f67190d14e1616e41d26bbbb5446b6acbc43020d",
+      "workflow_name": "Operations Hub production",
       "branch_refs": [
-        "feature/daily-ops-current-work"
+        "feature/daily-ops-current-work",
+        "main"
       ],
       "workflow_role": "PRODUCTION_PAGES_OWNER",
       "deploy_pages_capable": true,
       "pages_write": true,
       "production_status": "ACTIVE",
-      "latest_successful_run_id": 37408376296
+      "latest_successful_run_id": 37539751478,
+      "production_deploy_branch": "main",
+      "validation_only_branches": [
+        "feature/daily-ops-current-work"
+      ]
     },
     {
       "workflow_id": "GHWF-000016",
@@ -278,7 +283,7 @@
       "deploy_pages_capable": true,
       "pages_write": true,
       "production_status": "ACTIVE",
-      "latest_successful_run_id": 36975828575
+      "latest_successful_run_id": 37458564152
     },
     {
       "workflow_id": "GHWF-000020",
