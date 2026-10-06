@@ -40,6 +40,7 @@ required_paths = [
     "registry/entities/repositories.json",
     "registry/entities/modules.json",
     "registry/entities/projects.json",
+    "registry/entities/google-drive-nodes.json",
     "registry/authority/authority-map.json",
     "registry/edges/edges.jsonl",
     "registry/aliases/aliases.jsonl",
@@ -69,6 +70,7 @@ systems_doc = load_json("registry/entities/systems.json") or {}
 repos_doc = load_json("registry/entities/repositories.json") or {}
 modules_doc = load_json("registry/entities/modules.json") or {}
 projects_doc = load_json("registry/entities/projects.json") or {}
+drive_nodes_doc = load_json("registry/entities/google-drive-nodes.json") or {}
 authority_doc = load_json("registry/authority/authority-map.json") or {}
 
 for schema in sorted((ROOT / "schemas").glob("*.json")):
@@ -93,6 +95,7 @@ systems = systems_doc.get("entities", [])
 repos = repos_doc.get("repositories", [])
 modules = modules_doc.get("modules", [])
 projects = projects_doc.get("projects", [])
+drive_nodes = drive_nodes_doc.get("nodes", [])
 
 entity_ids = set()
 for collection, id_key, label in [
@@ -100,6 +103,7 @@ for collection, id_key, label in [
     (repos, "repository_id", "repositories"),
     (modules, "module_id", "modules"),
     (projects, "project_id", "projects"),
+    (drive_nodes, "entity_id", "google-drive-nodes"),
 ]:
     for row in collection:
         rid = row.get(id_key)

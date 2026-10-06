@@ -1,4 +1,4 @@
--- A7 relational contract v3.0.0
+-- A7 relational contract v4.0.0
 -- FORMAL MODEL ONLY. A live PostgreSQL/Neon runtime is intentionally deferred.
 -- Canonical writable records remain JSON + JSONL unless a later A7 decision explicitly changes authority.
 
@@ -258,3 +258,36 @@ ALTER TABLE a7_github_pages
 ALTER TABLE a7_repository_role_candidates
     ADD CONSTRAINT fk_repo_role_candidate
     FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+
+-- Phase 4 Google Drive topology contract v1.0.0
+CREATE TABLE a7_google_drive_nodes (
+    entity_id TEXT PRIMARY KEY,
+    canonical_label TEXT NOT NULL,
+    semantic_role TEXT NOT NULL,
+    provider_object_id TEXT,
+    parent_entity_id TEXT,
+    access_class TEXT NOT NULL,
+    public_safe_metadata BOOLEAN NOT NULL,
+    public_projection BOOLEAN NOT NULL,
+    status TEXT NOT NULL,
+    observed_at TIMESTAMPTZ NOT NULL
+);
+
+CREATE TABLE a7_google_drive_anchors (
+    anchor_id TEXT PRIMARY KEY,
+    canonical_label TEXT NOT NULL,
+    semantic_role TEXT NOT NULL,
+    provider_object_id TEXT NOT NULL UNIQUE,
+    access_class TEXT NOT NULL,
+    observed_at TIMESTAMPTZ NOT NULL
+);
+
+CREATE TABLE a7_google_drive_inventory_coverage (
+    inventory_id TEXT PRIMARY KEY,
+    sequence_id TEXT NOT NULL,
+    root_entity_id TEXT NOT NULL,
+    observed_at TIMESTAMPTZ NOT NULL,
+    mode TEXT NOT NULL,
+    coverage_json JSONB NOT NULL
+);

@@ -32,6 +32,8 @@ jobs:
         run: python scripts/test_authority_resolver.py
       - name: Validate GitHub repository / Pages / workflow inventory
         run: python scripts/validate_github_inventory.py
+      - name: Validate Google Drive topology contract
+        run: python scripts/validate_drive_topology.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative

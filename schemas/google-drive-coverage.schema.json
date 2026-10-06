@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/google-drive-coverage.schema.json",
+  "title": "A7 Google Drive Topology Coverage",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "sequence_id",
+    "root_entity_id",
+    "observed_at",
+    "mode",
+    "current_root_scan",
+    "governed_index",
+    "public_registry_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "inventory_id": {
+      "type": "string"
+    },
+    "sequence_id": {
+      "type": "string",
+      "pattern": "^A7-SEQ-[0-9]{6}$"
+    },
+    "root_entity_id": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "current_root_scan": {
+      "type": "object"
+    },
+    "governed_index": {
+      "type": "object"
+    },
+    "historical_index_rows_by_top_level": {
+      "type": "object"
+    },
+    "current_direct_child_observations": {
+      "type": "object"
+    },
+    "public_registry_boundary": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
