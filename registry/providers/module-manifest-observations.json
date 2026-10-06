@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "observed_at": "2026-10-06T11:53:00Z",
+  "observations": [
+    {
+      "observation_id": "MODMAN-OBS-000001",
+      "module_id": "MOD-OPS-001",
+      "repository_id": "REPO-000007",
+      "provider_repository_id": "1312147922",
+      "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+      "default_branch": "main",
+      "pre_sha": "8f9cb1b7add3ba236771a2518a981dd6fd8cd3f7",
+      "post_sha": "cf7fcad6bffe2d6d6c0c7cb412c53f2310c784e1",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "929a7f481029924310a24f238f20d31bb041df62",
+      "pull_request": 2,
+      "entrypoint_count": 9,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "PASS",
+        "runs": [
+          37458550581
+        ],
+        "note": "Operations Hub production workflow passed on merged default-branch SHA."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000002",
+      "module_id": "MOD-SCHED-001",
+      "repository_id": "REPO-000004",
+      "provider_repository_id": "1307302088",
+      "repository_full_name": "FabinGurung/JP_Scheduling_Work_and_Resources_Management",
+      "default_branch": "main",
+      "pre_sha": "d38cd5e7b9d769917070df1b2eefb83c709b0e89",
+      "post_sha": "2cdc3a900da6cac02d1fd9e5d5ae115937acc024",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "3917a62e774f73f249eab79d961befc709417201",
+      "pull_request": 1,
+      "entrypoint_count": 7,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "NO_REPO_LOCAL_RUN_OBSERVED",
+        "runs": [],
+        "note": "Metadata-only merge; routing entrypoints were provider-verified by recursive tree readback and central A7 validation."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000003",
+      "module_id": "MOD-COST-001",
+      "repository_id": "REPO-000008",
+      "provider_repository_id": "1312661427",
+      "repository_full_name": "FabinGurung/JP_Cost_Estimation",
+      "default_branch": "main",
+      "pre_sha": "1c8e3e8ac452da5cc72b118b34e9f2bfc77c9ab3",
+      "post_sha": "4e4b884d8773ab9817777ef264df4d6ccdc3da91",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "084e34f33475eab2bc405bb2a9adba1e766aefa6",
+      "pull_request": 2,
+      "entrypoint_count": 7,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "PASS",
+        "runs": [
+          37458564152
+        ],
+        "note": "Estimation production deployment workflow passed on merged default-branch SHA."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000004",
+      "module_id": "MOD-STRUCT-001",
+      "repository_id": "REPO-000002",
+      "provider_repository_id": "843020367",
+      "repository_full_name": "FabinGurung/JP_Structural_Analysis",
+      "default_branch": "main",
+      "pre_sha": "da221e630d9ed49de5d0ce728ed2f605f2022554",
+      "post_sha": "cc84483447acef7766553743fc40609140abc7a8",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "77aa77749816641f1dd092e3b6062afc37b47f70",
+      "pull_request": 1,
+      "entrypoint_count": 8,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "PASS",
+        "runs": [
+          37458576145
+        ],
+        "note": "Structural Pages workflow passed on merged default-branch SHA."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000005",
+      "module_id": "MOD-CAD-001",
+      "repository_id": "REPO-000003",
+      "provider_repository_id": "897526094",
+      "repository_full_name": "FabinGurung/JP_Computer-Aided-Drawings",
+      "default_branch": "narayani-pages-v0.2",
+      "pre_sha": "8b306c27e77942d9f38adc6ad1b0d1dde2e2ac18",
+      "post_sha": "c0f8a61f938b495e01dc360314af477f7d73654c",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "412a81b6b8fd004e4552b039f4250d4dcd8eef39",
+      "pull_request": 4,
+      "entrypoint_count": 7,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "NO_REPO_LOCAL_RUN_OBSERVED",
+        "runs": [],
+        "note": "Metadata-only merge on default publication branch; entrypoints were provider-verified and no domain/publication files changed."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000006",
+      "module_id": "MOD-RND-001",
+      "repository_id": "REPO-000006",
+      "provider_repository_id": "1312113873",
+      "repository_full_name": "FabinGurung/JP_Research-and-Development",
+      "default_branch": "main",
+      "pre_sha": "a5491f4dac086b1a5249efa5e86b996099de8b56",
+      "post_sha": "b210f2d2dc461c0bf7d2c0975633ddac7ce98008",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "e7cd3d712bf24169edb54fbd13ec502ee3aba3bc",
+      "pull_request": 4,
+      "entrypoint_count": 7,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "PASS_AFTER_THIRD_ATTEMPT",
+        "runs": [
+          37458442595,
+          37458887724,
+          37459081398,
+          37459211122,
+          37459211010
+        ],
+        "note": "Attempt 1 failed because repository payload MANIFEST.json did not list A7_MODULE.json. Attempt 2 failed because regenerated file paths used locale collation rather than verifier default sort. Attempt 3 passed; merged main validation and Pages deployment also passed."
+      }
+    },
+    {
+      "observation_id": "MODMAN-OBS-000007",
+      "module_id": "MOD-STUDY-001",
+      "repository_id": "REPO-000009",
+      "provider_repository_id": "1326596450",
+      "repository_full_name": "FabinGurung/JP_Study_Hub",
+      "default_branch": "main",
+      "pre_sha": "56da4d10a8b11d49c8b7095c05e34507f3d00e11",
+      "post_sha": "d89e84524786154174a57dfb95f2918cc875bebd",
+      "manifest_path": "A7_MODULE.json",
+      "manifest_blob_sha": "1d3711ed0c226e1997beec48ec4521431ee492b2",
+      "pull_request": 1,
+      "entrypoint_count": 6,
+      "post_snapshot_branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "provider_readback": "PASS",
+      "repository_validation": {
+        "status": "NO_REPO_LOCAL_RUN_OBSERVED",
+        "runs": [],
+        "note": "Metadata-only merge; entrypoints were provider-verified by tree readback and central A7 validation."
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/main/schemas/module-manifest-observation.schema.json",
+  "title": "A7 Module Manifest Provider Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "observation_id",
+    "module_id",
+    "repository_id",
+    "provider_repository_id",
+    "repository_full_name",
+    "default_branch",
+    "pre_sha",
+    "post_sha",
+    "manifest_path",
+    "manifest_blob_sha",
+    "pull_request",
+    "entrypoint_count",
+    "post_snapshot_branch",
+    "provider_readback",
+    "repository_validation"
+  ],
+  "properties": {
+    "observation_id": {
+      "type": "string",
+      "pattern": "^MODMAN-OBS-[0-9]{6}$"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "repository_id": {
+      "type": "string"
+    },
+    "provider_repository_id": {
+      "type": "string"
+    },
+    "repository_full_name": {
+      "type": "string"
+    },
+    "default_branch": {
+      "type": "string"
+    },
+    "pre_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "post_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "manifest_path": {
+      "const": "A7_MODULE.json"
+    },
+    "manifest_blob_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "pull_request": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entrypoint_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "post_snapshot_branch": {
+      "const": "snapshot/post-a7-seq-000007-module-manifest"
+    },
+    "provider_readback": {
+      "const": "PASS"
+    },
+    "repository_validation": {
+      "type": "object",
+      "required": [
+        "status",
+        "runs",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "runs": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,4 +1,4 @@
--- A7 relational contract v5.0.0
+-- A7 relational contract v6.0.0
 -- FORMAL MODEL ONLY. A live PostgreSQL/Neon runtime is intentionally deferred.
 -- Canonical writable records remain JSON + JSONL unless a later A7 decision explicitly changes authority.
 
@@ -325,3 +325,30 @@ ALTER TABLE a7_modules
 ALTER TABLE a7_module_ownership_profiles
     ADD CONSTRAINT fk_a7_module_ownership
     FOREIGN KEY (module_id) REFERENCES a7_modules(module_id);
+
+
+-- Phase 7 cross-repository module manifest contract v1.0.0
+CREATE TABLE a7_module_manifest_observations (
+    observation_id TEXT PRIMARY KEY,
+    module_id TEXT NOT NULL UNIQUE,
+    repository_id TEXT NOT NULL UNIQUE,
+    provider_repository_id TEXT NOT NULL,
+    default_branch TEXT NOT NULL,
+    pre_sha TEXT NOT NULL,
+    post_sha TEXT NOT NULL,
+    manifest_path TEXT NOT NULL CHECK (manifest_path = 'A7_MODULE.json'),
+    manifest_blob_sha TEXT NOT NULL,
+    pull_request BIGINT NOT NULL,
+    entrypoint_count INTEGER NOT NULL CHECK (entrypoint_count > 0),
+    post_snapshot_branch TEXT NOT NULL,
+    provider_readback TEXT NOT NULL CHECK (provider_readback = 'PASS'),
+    validation_json JSONB NOT NULL
+);
+
+ALTER TABLE a7_module_manifest_observations
+    ADD CONSTRAINT fk_a7_manifest_module
+    FOREIGN KEY (module_id) REFERENCES a7_modules(module_id);
+
+ALTER TABLE a7_module_manifest_observations
+    ADD CONSTRAINT fk_a7_manifest_repo
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
