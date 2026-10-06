@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "role_candidates": [
     {
       "role_candidate_id": "RROLE-000001",
       "repository_id": "REPO-000001",
       "candidate_role": "CANONICAL_A7_SEMANTIC_REGISTRY",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "SYSTEM_NOT_SPECIALIST_MODULE",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
@@ -17,42 +17,45 @@
           "value": "Canonical A7 machine registry for identities, authority rules, provider object IDs, schemas, aliases, edges, policies, lineage and derived-view definitions."
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000002",
       "repository_id": "REPO-000002",
       "candidate_role": "STRUCTURAL_ANALYSIS_ENGINE",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-STRUCT-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
           "value": "FabinGurung/JP_Structural_Analysis"
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000003",
       "repository_id": "REPO-000003",
       "candidate_role": "CAD_DRAWINGS",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-CAD-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
           "value": "FabinGurung/JP_Computer-Aided-Drawings"
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000004",
       "repository_id": "REPO-000004",
       "candidate_role": "SCHEDULING_WORK_RESOURCE_MANAGEMENT",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-SCHED-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
@@ -67,7 +70,8 @@
           "value": "Historical workflow names include 'Project Controls Kernel'; current production workflow is 'Build and deploy JP Scheduling Work and Resource Management'."
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000005",
@@ -85,28 +89,30 @@
           "value": "Official website prototype for Sumita Pilates Studio"
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000006",
       "repository_id": "REPO-000006",
       "candidate_role": "RESEARCH_DEVELOPMENT_HUB",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-RND-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
           "value": "FabinGurung/JP_Research-and-Development"
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000007",
       "repository_id": "REPO-000007",
       "candidate_role": "COMMUNICATION_DAILY_OPS_WEB_OPS_HUB",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-OPS-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
@@ -117,14 +123,15 @@
           "value": "Daily Ops branch preview validates canonical operations data and deploys Pages from feature/daily-ops-current-work."
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000008",
       "repository_id": "REPO-000008",
       "candidate_role": "COST_ESTIMATION",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-COST-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
@@ -135,14 +142,15 @@
           "value": "Civilian-friendly building cost estimation system that converts simple homeowner inputs into engineering quantities, BOQ items, and preliminary construction costs."
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     },
     {
       "role_candidate_id": "RROLE-000009",
       "repository_id": "REPO-000009",
       "candidate_role": "STUDY_HUB",
       "confidence": "HIGH",
-      "binding_status": "DISCOVERED_NOT_YET_BOUND_TO_MODULE_ENTITY",
+      "binding_status": "BOUND_TO_MODULE:MOD-STUDY-001",
       "evidence": [
         {
           "kind": "CURRENT_REPOSITORY_NAME",
@@ -153,7 +161,8 @@
           "value": "Structured study and knowledge system for MSc Structural Engineering"
         }
       ],
-      "observed_at": "2026-10-06T07:50:00Z"
+      "observed_at": "2026-10-06T07:50:00Z",
+      "binding_verified_at": "2026-10-06T11:02:44Z"
     }
   ]
 }

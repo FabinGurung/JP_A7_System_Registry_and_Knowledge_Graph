@@ -8,7 +8,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000005` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000006` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
@@ -69,3 +69,21 @@ This preserves Drive as authority for private topology while making A7 the machi
 ## Research governance foundation
 
 Five public research identities and R&D routes are registered. Read `registry/dependencies/research-governance.json` for the A9 provisioning boundary. The existing R&D repository holds the public A9 foundation. A dedicated private A9 repository is optional and is not provisioned; no scientific histories or Saugat thesis records were imported.
+
+
+## Phase 6 specialist module binding
+
+A7 now binds the existing repositories as **peer modules**, not a nested monolith.
+
+```text
+A7 semantic control plane
+├── Operations / Communication
+├── Scheduling
+├── Cost
+├── Structural
+├── CAD
+├── Research & Development
+└── Study Hub
+```
+
+For the project-execution tier, Operations, Scheduling, Cost, Structural and CAD are siblings. The Operations Hub may display links/status from the other modules, but it never owns their engineering domain truth.

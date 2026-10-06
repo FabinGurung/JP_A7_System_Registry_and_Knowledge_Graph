@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "observed_at": "2026-10-06T11:02:44Z",
+  "profiles": [
+    {
+      "ownership_profile_id": "OWN-MOD-OPS-001",
+      "module_id": "MOD-OPS-001",
+      "owns_fact_classes": [
+        "project_master_operational_record",
+        "project_operational_fact",
+        "project_resource_relationship"
+      ],
+      "owns_capabilities": [
+        "project map",
+        "Daily Ops admission/current state",
+        "Daily Ops event history",
+        "project resource routing",
+        "Site Operations",
+        "Project Command Center",
+        "Workspace/Guide",
+        "specialist-module navigation"
+      ],
+      "must_not_own_fact_classes": [
+        "scheduling_fact",
+        "cost_estimation_fact",
+        "structural_analysis_fact",
+        "cad_drawing_fact",
+        "research_publication_fact",
+        "study_learning_fact"
+      ],
+      "boundary_rule": "Operations may surface, summarize and link peer specialist-module outputs, but those links/projections do not transfer engineering authority."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-SCHED-001",
+      "module_id": "MOD-SCHED-001",
+      "owns_fact_classes": [
+        "scheduling_fact"
+      ],
+      "owns_capabilities": [
+        "WBS",
+        "activities",
+        "relationships",
+        "calendars",
+        "constraints",
+        "baseline/progress scheduling",
+        "resource planning",
+        "look-ahead",
+        "scheduling interoperability"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "cost_estimation_fact",
+        "structural_analysis_fact",
+        "cad_drawing_fact"
+      ],
+      "boundary_rule": "Scheduling owns planning/time/resource logic; field Daily Ops truth remains Operations unless explicitly admitted by the owning contract."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-COST-001",
+      "module_id": "MOD-COST-001",
+      "owns_fact_classes": [
+        "cost_estimation_fact"
+      ],
+      "owns_capabilities": [
+        "BOQ",
+        "quantity/rate relationships",
+        "rate analysis",
+        "estimate revisions",
+        "cost calculations"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "scheduling_fact",
+        "structural_analysis_fact",
+        "cad_drawing_fact"
+      ],
+      "boundary_rule": "Cost owns estimation/cost logic; benchmark structural quantities are estimation inputs and do not confer structural-design authority."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-STRUCT-001",
+      "module_id": "MOD-STRUCT-001",
+      "owns_fact_classes": [
+        "structural_analysis_fact"
+      ],
+      "owns_capabilities": [
+        "normalized structural models",
+        "OpenSees/OpenSeesPy analysis",
+        "analysis runs/results",
+        "verification benchmarks",
+        "Structural Analysis Reports"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "scheduling_fact",
+        "cost_estimation_fact",
+        "cad_drawing_fact"
+      ],
+      "boundary_rule": "Structural is a peer specialist engine. Operations can link/surface its status but cannot own or rewrite structural engineering truth."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-CAD-001",
+      "module_id": "MOD-CAD-001",
+      "owns_fact_classes": [
+        "cad_drawing_fact"
+      ],
+      "owns_capabilities": [
+        "drawing identity",
+        "drawing revision",
+        "drawing packages",
+        "CAD/drawing publication",
+        "drawing workflows"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "scheduling_fact",
+        "cost_estimation_fact",
+        "structural_analysis_fact"
+      ],
+      "boundary_rule": "CAD is a peer specialist engine. Operations can navigate to drawings; structural calculations remain Structural."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-RND-001",
+      "module_id": "MOD-RND-001",
+      "owns_fact_classes": [
+        "research_publication_fact"
+      ],
+      "owns_capabilities": [
+        "research directory",
+        "research publication",
+        "methodology/evidence presentation",
+        "AEC/hydropower research dissemination"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "scheduling_fact",
+        "cost_estimation_fact",
+        "structural_analysis_fact",
+        "cad_drawing_fact"
+      ],
+      "boundary_rule": "R&D publishes and contextualizes research; executable production engines remain in their owning specialist repositories."
+    },
+    {
+      "ownership_profile_id": "OWN-MOD-STUDY-001",
+      "module_id": "MOD-STUDY-001",
+      "owns_fact_classes": [
+        "study_learning_fact"
+      ],
+      "owns_capabilities": [
+        "study materials",
+        "learning workflows",
+        "academic study pages"
+      ],
+      "must_not_own_fact_classes": [
+        "project_operational_fact",
+        "scheduling_fact",
+        "cost_estimation_fact",
+        "structural_analysis_fact",
+        "cad_drawing_fact",
+        "research_publication_fact"
+      ],
+      "boundary_rule": "Study Hub is a learning system, not a project-production or engineering-runtime authority."
+    }
+  ]
+}

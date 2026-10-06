@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "status": "ACTIVE",
   "fact_classes": [
     {
@@ -136,6 +136,38 @@
       "description": "Provider ID, URL, revision, observation timestamp and access classification used to trace evidence.",
       "default_materiality": "MATERIAL",
       "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000018",
+      "fact_class": "project_master_operational_record",
+      "description": "Operational project-master record: project code, lifecycle/status, coordinates and public project attributes used by the Operations Hub.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000019",
+      "fact_class": "project_resource_relationship",
+      "description": "Normalized project-to-engineering-resource relationship/link; original resource bytes and permissions remain at the provider.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000020",
+      "fact_class": "research_publication_fact",
+      "description": "Public research directory/methodology/evidence-presentation metadata owned by the R&D publication hub.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000021",
+      "fact_class": "study_learning_fact",
+      "description": "Study material, learning-workflow or academic study-page fact owned by the Study Hub.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "requires_explicit_authority": true
     }
   ]

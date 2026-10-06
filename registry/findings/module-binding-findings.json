@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "findings": [
+    {
+      "finding_id": "MODFIND-000001",
+      "severity": "HIGH",
+      "code": "PREVIOUS_CONCEPTUAL_NESTING_OF_STRUCTURAL_CAD_UNDER_OPERATIONS",
+      "status": "RESOLVED_BY_CONTRACT",
+      "evidence": "User identified that the earlier diagram visually nested Structural and CAD under Communication/Operations.",
+      "resolution": "Phase 6 encodes all execution modules as PEER_SPECIALIST_MODULE and forbids ownership/containment module edges."
+    },
+    {
+      "finding_id": "MODFIND-000002",
+      "severity": "INFO",
+      "code": "OPERATIONS_LOCAL_MODULE_REGISTRY_ALREADY_EXISTS",
+      "status": "VERIFIED",
+      "evidence": "JP AEC Operations Hub main contains workspace/modules.json and ops/PLATFORM_MODULES.md with specialist ownership boundaries.",
+      "resolution": "A7 binds immutable cross-system module identities; Operations keeps its local human-facing routing registry."
+    },
+    {
+      "finding_id": "MODFIND-000003",
+      "severity": "MEDIUM",
+      "code": "PHASE3_PROVIDER_OBSERVATIONS_HAVE_ADVANCED",
+      "status": "OPEN_OBSERVATION",
+      "evidence": "Live module refs show later heads than some Phase-3 repository/Page observations, notably Operations/R&D/Structural.",
+      "resolution": "Module bindings store fresh provider refs. A later targeted GitHub inventory refresh should reconcile stale Pages/workflow observations rather than silently rewriting historical Phase-3 evidence."
+    },
+    {
+      "finding_id": "MODFIND-000004",
+      "severity": "INFO",
+      "code": "STANDARD_LOCAL_MODULE_MANIFEST_NOT_YET_PRESENT_IN_ALL_REPOS",
+      "status": "EXPECTED_NEXT_PHASE",
+      "evidence": "Operations has workspace/modules.json; several specialist repositories currently express boundaries in README/branch policy instead of a common machine manifest.",
+      "resolution": "Next phase should define a minimal cross-repository manifest contract and add it to each owning repository through separate bounded mutations."
+    }
+  ]
+}

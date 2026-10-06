@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/system-boundary.schema.json",
+  "title": "A7 System and Module Topology Boundary",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "system_boundary",
+    "topology_rule"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "system_boundary": {
+      "type": "object"
+    },
+    "topology_rule": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

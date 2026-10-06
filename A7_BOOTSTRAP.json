@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -70,6 +70,9 @@
     "registry/authority/conflict-taxonomy.json",
     "registry/entities/systems.json",
     "registry/entities/repositories.json",
+    "registry/authority/system-boundaries.json",
+    "registry/authority/module-ownership.json",
+    "registry/entities/modules.json",
     "registry/providers/github-inventory-meta.json",
     "registry/providers/github-pages.json",
     "registry/entities/google-drive-nodes.json",
@@ -89,9 +92,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000005",
-  "current_sequence_status": "CLOSED_PUBLIC_RESEARCH_FOUNDATION",
-  "observed_at": "2026-10-06T09:45:00Z",
+  "current_sequence": "A7-SEQ-000006",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-06T11:02:44Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -100,5 +103,10 @@
     "findings": "registry/findings/google-drive-findings.json",
     "detailed_topology_authority": "Google Drive Fabin_Gurung_Drive_Index / Index + live provider readback"
   },
-  "research_governance": "registry/dependencies/research-governance.json"
+  "research_governance": "registry/dependencies/research-governance.json",
+  "module_registry": {
+    "modules": "registry/entities/modules.json",
+    "ownership": "registry/authority/module-ownership.json",
+    "system_boundaries": "registry/authority/system-boundaries.json"
+  }
 }

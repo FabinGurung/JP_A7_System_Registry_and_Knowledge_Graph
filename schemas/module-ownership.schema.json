@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/module-ownership.schema.json",
+  "title": "A7 Module Ownership Profile",
+  "type": "object",
+  "required": [
+    "ownership_profile_id",
+    "module_id",
+    "owns_fact_classes",
+    "owns_capabilities",
+    "must_not_own_fact_classes",
+    "boundary_rule"
+  ],
+  "properties": {
+    "ownership_profile_id": {
+      "type": "string",
+      "pattern": "^OWN-MOD-[A-Z]+-[0-9]{3}$"
+    },
+    "module_id": {
+      "type": "string",
+      "pattern": "^MOD-[A-Z]+-[0-9]{3}$"
+    },
+    "owns_fact_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "owns_capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "must_not_own_fact_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "boundary_rule": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
