@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "2.1.0",
   "status": "ACTIVE",
   "scope_precedence": [
     "ENTITY_OVERRIDE",
@@ -125,14 +125,14 @@
       "fact_class": "project_operational_fact",
       "scope_type": "GLOBAL",
       "scope_id": "*",
-      "owner_kind": "PROJECT_CONTRACT",
-      "owner_ref": "REQUIRES_PROJECT_AUTHORITY_ASSIGNMENT",
-      "writable_store": "ASSIGNED_BY_PROJECT_CONTRACT",
-      "source_role": "UNKNOWN",
-      "resolution_strategy": "BLOCK_UNTIL_ASSIGNED",
+      "owner_kind": "MODULE_ROLE",
+      "owner_ref": "MOD-OPS-001",
+      "writable_store": "OPERATIONS_HUB_CANONICAL_MACHINE_DATA",
+      "source_role": "DECLARED_AUTHORITY",
+      "resolution_strategy": "MODULE_ROLE_AUTHORITY",
       "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "materiality": "MATERIAL",
-      "rule": "No universal Slack/Sheet/Drive precedence is assumed for project operational facts; a project contract must assign authority."
+      "rule": "Normalized Daily Ops/current project operational facts are owned by MOD-OPS-001 after evidence admission; Slack/Sheets remain input/projection surfaces unless a narrower scoped override exists."
     },
     {
       "authority_id": "AUTH-000010",
@@ -154,13 +154,13 @@
       "scope_type": "GLOBAL",
       "scope_id": "*",
       "owner_kind": "MODULE_ROLE",
-      "owner_ref": "SCHEDULING",
+      "owner_ref": "MOD-SCHED-001",
       "writable_store": "SCHEDULING_SPECIALIST_SYSTEM",
       "source_role": "DECLARED_AUTHORITY",
       "resolution_strategy": "MODULE_ROLE_AUTHORITY",
       "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "materiality": "MATERIAL",
-      "rule": "Scheduling domain facts must be owned by the module registered with role SCHEDULING."
+      "rule": "Scheduling domain facts are owned by MOD-SCHED-001."
     },
     {
       "authority_id": "AUTH-000012",
@@ -168,13 +168,13 @@
       "scope_type": "GLOBAL",
       "scope_id": "*",
       "owner_kind": "MODULE_ROLE",
-      "owner_ref": "COST_ESTIMATION",
+      "owner_ref": "MOD-COST-001",
       "writable_store": "COST_SPECIALIST_SYSTEM",
       "source_role": "DECLARED_AUTHORITY",
       "resolution_strategy": "MODULE_ROLE_AUTHORITY",
       "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "materiality": "MATERIAL",
-      "rule": "Cost/BOQ facts must be owned by the module registered with role COST_ESTIMATION."
+      "rule": "BOQ/quantity/rate/cost/estimate facts are owned by MOD-COST-001."
     },
     {
       "authority_id": "AUTH-000013",
@@ -182,13 +182,13 @@
       "scope_type": "GLOBAL",
       "scope_id": "*",
       "owner_kind": "MODULE_ROLE",
-      "owner_ref": "STRUCTURAL_ANALYSIS",
+      "owner_ref": "MOD-STRUCT-001",
       "writable_store": "STRUCTURAL_SPECIALIST_SYSTEM",
       "source_role": "DECLARED_AUTHORITY",
       "resolution_strategy": "MODULE_ROLE_AUTHORITY",
       "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "materiality": "SAFETY_CRITICAL",
-      "rule": "Structural model/analysis/design/report facts must be owned by the module registered with role STRUCTURAL_ANALYSIS."
+      "rule": "Structural model/analysis/result/SAR facts are owned by MOD-STRUCT-001."
     },
     {
       "authority_id": "AUTH-000014",
@@ -196,13 +196,13 @@
       "scope_type": "GLOBAL",
       "scope_id": "*",
       "owner_kind": "MODULE_ROLE",
-      "owner_ref": "CAD_DRAWINGS",
+      "owner_ref": "MOD-CAD-001",
       "writable_store": "CAD_SPECIALIST_SYSTEM",
       "source_role": "DECLARED_AUTHORITY",
       "resolution_strategy": "MODULE_ROLE_AUTHORITY",
       "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
       "materiality": "MATERIAL",
-      "rule": "Drawing/revision/CAD publication facts must be owned by the module registered with role CAD_DRAWINGS."
+      "rule": "Drawing/revision/package/CAD publication facts are owned by MOD-CAD-001."
     },
     {
       "authority_id": "AUTH-000015",
@@ -245,6 +245,62 @@
       "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
       "materiality": "MATERIAL",
       "rule": "A7 owns normalized source-reference records; provider object identity/revision must come from provider readback where available."
+    },
+    {
+      "authority_id": "AUTH-000018",
+      "fact_class": "project_master_operational_record",
+      "scope_type": "GLOBAL",
+      "scope_id": "*",
+      "owner_kind": "MODULE_ROLE",
+      "owner_ref": "MOD-OPS-001",
+      "writable_store": "OPERATIONS_HUB_PROJECT_MASTER",
+      "source_role": "DECLARED_AUTHORITY",
+      "resolution_strategy": "MODULE_ROLE_AUTHORITY",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "materiality": "MATERIAL",
+      "rule": "Operational project-master current values are owned by MOD-OPS-001. A7 separately owns global semantic identity/aliases and must not duplicate the operational record."
+    },
+    {
+      "authority_id": "AUTH-000019",
+      "fact_class": "project_resource_relationship",
+      "scope_type": "GLOBAL",
+      "scope_id": "*",
+      "owner_kind": "MODULE_ROLE",
+      "owner_ref": "MOD-OPS-001",
+      "writable_store": "OPERATIONS_HUB_PROJECT_RESOURCES",
+      "source_role": "DECLARED_AUTHORITY",
+      "resolution_strategy": "MODULE_ROLE_AUTHORITY",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "materiality": "MATERIAL",
+      "rule": "Project-to-resource relationship/link records are owned by MOD-OPS-001; original file bytes/access remain with the provider."
+    },
+    {
+      "authority_id": "AUTH-000020",
+      "fact_class": "research_publication_fact",
+      "scope_type": "GLOBAL",
+      "scope_id": "*",
+      "owner_kind": "MODULE_ROLE",
+      "owner_ref": "MOD-RND-001",
+      "writable_store": "R_AND_D_PUBLICATION_HUB",
+      "source_role": "DECLARED_AUTHORITY",
+      "resolution_strategy": "MODULE_ROLE_AUTHORITY",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "materiality": "MATERIAL",
+      "rule": "Public research publication/directory metadata is owned by MOD-RND-001; executable production engines stay in specialist repositories."
+    },
+    {
+      "authority_id": "AUTH-000021",
+      "fact_class": "study_learning_fact",
+      "scope_type": "GLOBAL",
+      "scope_id": "*",
+      "owner_kind": "MODULE_ROLE",
+      "owner_ref": "MOD-STUDY-001",
+      "writable_store": "STUDY_HUB",
+      "source_role": "DECLARED_AUTHORITY",
+      "resolution_strategy": "MODULE_ROLE_AUTHORITY",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "materiality": "MATERIAL",
+      "rule": "Study/learning facts are owned by MOD-STUDY-001."
     }
   ]
 }

@@ -128,3 +128,17 @@ Canonical machine contracts:
 - `registry/qa/human-qa-cases.jsonl`
 
 The reference resolver in `scripts/a7_authority_engine.py` operates only on claims already classified from those contracts; it does not invent authority from a provider name.
+
+## 12. Module ownership boundary
+
+Before performing domain work, resolve the owner module in `registry/entities/modules.json` and its boundary in `registry/authority/module-ownership.json`.
+
+A7 is the semantic control plane. It may resolve, route, fetch, validate and orchestrate, but it must not duplicate the domain data/work of the owning module.
+
+The execution modules are peers:
+
+`MOD-OPS-001` · `MOD-SCHED-001` · `MOD-COST-001` · `MOD-STRUCT-001` · `MOD-CAD-001`
+
+Operations may link to/surface Scheduling, Cost, Structural and CAD in human-facing project pages. `LINKS_TO_PEER_MODULE` is navigation only; it must never be interpreted as containment or ownership.
+
+R&D and Study are separate peer knowledge modules. R&D publication does not absorb executable specialist engines.

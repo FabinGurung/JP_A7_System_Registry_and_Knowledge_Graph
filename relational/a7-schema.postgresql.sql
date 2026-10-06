@@ -1,4 +1,4 @@
--- A7 relational contract v4.0.0
+-- A7 relational contract v5.0.0
 -- FORMAL MODEL ONLY. A live PostgreSQL/Neon runtime is intentionally deferred.
 -- Canonical writable records remain JSON + JSONL unless a later A7 decision explicitly changes authority.
 
@@ -291,3 +291,37 @@ CREATE TABLE a7_google_drive_inventory_coverage (
     mode TEXT NOT NULL,
     coverage_json JSONB NOT NULL
 );
+
+
+-- Phase 6 specialist module binding / ownership boundary contract v1.0.0
+CREATE TABLE a7_modules (
+    module_id TEXT PRIMARY KEY,
+    canonical_label TEXT NOT NULL,
+    module_role TEXT NOT NULL UNIQUE,
+    module_class TEXT NOT NULL,
+    module_group TEXT NOT NULL,
+    platform_level TEXT NOT NULL CHECK (platform_level = 'PEER_SPECIALIST_MODULE'),
+    repository_id TEXT NOT NULL UNIQUE,
+    provider_repository_id TEXT NOT NULL,
+    canonical_working_ref TEXT NOT NULL,
+    observed_ref_sha TEXT NOT NULL,
+    status TEXT NOT NULL,
+    ownership_profile_id TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE a7_module_ownership_profiles (
+    ownership_profile_id TEXT PRIMARY KEY,
+    module_id TEXT NOT NULL UNIQUE,
+    owns_fact_classes_json JSONB NOT NULL,
+    owns_capabilities_json JSONB NOT NULL,
+    must_not_own_fact_classes_json JSONB NOT NULL,
+    boundary_rule TEXT NOT NULL
+);
+
+ALTER TABLE a7_modules
+    ADD CONSTRAINT fk_a7_module_repo
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+ALTER TABLE a7_module_ownership_profiles
+    ADD CONSTRAINT fk_a7_module_ownership
+    FOREIGN KEY (module_id) REFERENCES a7_modules(module_id);

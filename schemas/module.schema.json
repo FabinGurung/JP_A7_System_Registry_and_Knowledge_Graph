@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/module.schema.json",
+  "title": "A7 Specialist Module",
+  "type": "object",
+  "required": [
+    "module_id",
+    "canonical_label",
+    "module_role",
+    "module_class",
+    "module_group",
+    "platform_level",
+    "repository_id",
+    "provider_repository_id",
+    "repository_full_name",
+    "default_branch",
+    "canonical_working_ref",
+    "observed_ref_sha",
+    "status",
+    "binding_status",
+    "ownership_profile_id"
+  ],
+  "properties": {
+    "module_id": {
+      "type": "string",
+      "pattern": "^MOD-[A-Z]+-[0-9]{3}$"
+    },
+    "canonical_label": {
+      "type": "string"
+    },
+    "module_role": {
+      "type": "string"
+    },
+    "module_class": {
+      "type": "string"
+    },
+    "module_group": {
+      "type": "string"
+    },
+    "platform_level": {
+      "const": "PEER_SPECIALIST_MODULE"
+    },
+    "repository_id": {
+      "type": "string",
+      "pattern": "^REPO-[0-9]{6}$"
+    },
+    "provider_repository_id": {
+      "type": "string"
+    },
+    "repository_full_name": {
+      "type": "string"
+    },
+    "default_branch": {
+      "type": "string"
+    },
+    "canonical_working_ref": {
+      "type": "string"
+    },
+    "observed_ref_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "status": {
+      "type": "string"
+    },
+    "binding_status": {
+      "const": "BOUND"
+    },
+    "ownership_profile_id": {
+      "type": "string"
+    },
+    "public_site_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "local_manifest": {
+      "type": "object"
+    },
+    "evidence_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

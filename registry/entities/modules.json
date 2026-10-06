@@ -1,5 +1,206 @@
 {
-  "schema_version": "1.0.0",
-  "modules": [],
-  "note": "Specialist module ownership contracts are intentionally deferred to a later A7 phase."
+  "schema_version": "2.0.0",
+  "status": "ACTIVE",
+  "modules": [
+    {
+      "module_id": "MOD-OPS-001",
+      "canonical_label": "JP AEC Operations Hub",
+      "module_role": "OPERATIONS_COMMUNICATION",
+      "module_class": "OPERATIONS_EXPERIENCE",
+      "module_group": "JP_AEC_EXECUTION_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000007",
+      "provider_repository_id": "1312147922",
+      "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+      "default_branch": "main",
+      "canonical_working_ref": "main",
+      "observed_ref_sha": "8f9cb1b7add3ba236771a2518a981dd6fd8cd3f7",
+      "status": "LIVE",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "workspace/modules.json",
+        "ref": "main",
+        "role": "LOCAL_WORKSPACE_MODULE_REGISTRY"
+      },
+      "evidence_paths": [
+        "README.md",
+        "workspace/modules.json",
+        "ops/CANONICAL_DATA_AUTHORITY.md",
+        "ops/PLATFORM_MODULES.md"
+      ],
+      "ownership_profile_id": "OWN-MOD-OPS-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Communication-Command-Centre-and-Resource-Hub/",
+      "note": "Human-facing project experience, Daily Ops and specialist navigation. It may surface/link peer specialist modules but does not own their engineering engines."
+    },
+    {
+      "module_id": "MOD-SCHED-001",
+      "canonical_label": "JP Scheduling Work and Resources Management",
+      "module_role": "SCHEDULING",
+      "module_class": "ENGINEERING_ENGINE",
+      "module_group": "JP_AEC_EXECUTION_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000004",
+      "provider_repository_id": "1307302088",
+      "repository_full_name": "FabinGurung/JP_Scheduling_Work_and_Resources_Management",
+      "default_branch": "main",
+      "canonical_working_ref": "kernel-v0.2-open-source-engines",
+      "observed_ref_sha": "ae8209cdb965435617806e4eef05daeb92decc47",
+      "status": "ACTIVE_DEVELOPMENT",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "kernel-v0.2-open-source-engines",
+        "role": "CURRENT_PRODUCT_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md@kernel-v0.2-open-source-engines"
+      ],
+      "ownership_profile_id": "OWN-MOD-SCHED-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Scheduling_Work_and_Resources_Management/",
+      "note": "Owns scheduling/work/resource engine semantics; Construction Knowledge remains distinct from project-specific schedule occurrences as documented in the owning repository."
+    },
+    {
+      "module_id": "MOD-COST-001",
+      "canonical_label": "JP Cost Estimation",
+      "module_role": "COST_ESTIMATION",
+      "module_class": "ENGINEERING_ENGINE",
+      "module_group": "JP_AEC_EXECUTION_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000008",
+      "provider_repository_id": "1312661427",
+      "repository_full_name": "FabinGurung/JP_Cost_Estimation",
+      "default_branch": "main",
+      "canonical_working_ref": "research/open-estimation-engine-v0.1",
+      "observed_ref_sha": "f93563f79a38374a9ecef8d88f89faaf1ac2d68b",
+      "status": "ACTIVE_DEVELOPMENT",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "research/open-estimation-engine-v0.1",
+        "role": "CURRENT_PRODUCT_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md@research/open-estimation-engine-v0.1"
+      ],
+      "ownership_profile_id": "OWN-MOD-COST-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Cost_Estimation/",
+      "note": "Owns estimation/BOQ/rate/cost logic. Current benchmark structural quantities in this estimator do not make it a structural-design authority."
+    },
+    {
+      "module_id": "MOD-STRUCT-001",
+      "canonical_label": "JP Structural Analysis",
+      "module_role": "STRUCTURAL_ANALYSIS",
+      "module_class": "ENGINEERING_ENGINE",
+      "module_group": "JP_AEC_EXECUTION_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000002",
+      "provider_repository_id": "843020367",
+      "repository_full_name": "FabinGurung/JP_Structural_Analysis",
+      "default_branch": "main",
+      "canonical_working_ref": "engine/opensees-sar-v0.1",
+      "observed_ref_sha": "6819ef299f0ad367198fc8eda1b85f751b9df586",
+      "status": "ACTIVE_DEVELOPMENT",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "engine/opensees-sar-v0.1",
+        "role": "CURRENT_ENGINE_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md@main",
+        "README.md@engine/opensees-sar-v0.1"
+      ],
+      "ownership_profile_id": "OWN-MOD-STRUCT-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Structural_Analysis/",
+      "note": "Peer to Operations, Scheduling, Cost and CAD. Owns governed structural-analysis/SAR engine semantics; Operations may link to it but never contains or owns it."
+    },
+    {
+      "module_id": "MOD-CAD-001",
+      "canonical_label": "JP Computer-Aided Drawings",
+      "module_role": "CAD_DRAWINGS",
+      "module_class": "ENGINEERING_ENGINE",
+      "module_group": "JP_AEC_EXECUTION_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000003",
+      "provider_repository_id": "897526094",
+      "repository_full_name": "FabinGurung/JP_Computer-Aided-Drawings",
+      "default_branch": "narayani-pages-v0.2",
+      "canonical_working_ref": "narayani-pages-v0.2",
+      "observed_ref_sha": "8b306c27e77942d9f38adc6ad1b0d1dde2e2ac18",
+      "development_ref": "narayani-modular-website-v0.3",
+      "development_ref_sha": "ac443fcb6c03c4eaf96e32d7e68b1f638438eac9",
+      "status": "ACTIVE_DEVELOPMENT",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "narayani-pages-v0.2",
+        "role": "PUBLICATION_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md@narayani-pages-v0.2",
+        "README.md@narayani-modular-website-v0.3"
+      ],
+      "ownership_profile_id": "OWN-MOD-CAD-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Computer-Aided-Drawings/",
+      "note": "Peer to Operations, Scheduling, Cost and Structural. Owns drawing publication/workflows; engineering approval remains provider/project-governed."
+    },
+    {
+      "module_id": "MOD-RND-001",
+      "canonical_label": "JP Research and Development",
+      "module_role": "RESEARCH_DEVELOPMENT",
+      "module_class": "RESEARCH_PUBLICATION",
+      "module_group": "JP_KNOWLEDGE_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000006",
+      "provider_repository_id": "1312113873",
+      "repository_full_name": "FabinGurung/JP_Research-and-Development",
+      "default_branch": "main",
+      "canonical_working_ref": "main",
+      "observed_ref_sha": "a5491f4dac086b1a5249efa5e86b996099de8b56",
+      "status": "LIVE",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "main",
+        "role": "CURRENT_RESEARCH_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md",
+        "governance/ADR-001-research-authority-boundaries.md"
+      ],
+      "ownership_profile_id": "OWN-MOD-RND-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
+      "note": "Owns public research publication/routing; executable specialist product engines remain in their specialist repositories."
+    },
+    {
+      "module_id": "MOD-STUDY-001",
+      "canonical_label": "JP Study Hub",
+      "module_role": "STUDY_LEARNING",
+      "module_class": "STUDY_SYSTEM",
+      "module_group": "JP_KNOWLEDGE_MODULES",
+      "platform_level": "PEER_SPECIALIST_MODULE",
+      "repository_id": "REPO-000009",
+      "provider_repository_id": "1326596450",
+      "repository_full_name": "FabinGurung/JP_Study_Hub",
+      "default_branch": "main",
+      "canonical_working_ref": "main",
+      "observed_ref_sha": "56da4d10a8b11d49c8b7095c05e34507f3d00e11",
+      "publication_ref": "pages-live",
+      "publication_ref_sha": "ba570d6a72e265a6d0b4fc79cdd41674637d3d24",
+      "status": "LIVE",
+      "binding_status": "BOUND",
+      "local_manifest": {
+        "path": "README.md",
+        "ref": "main",
+        "role": "CURRENT_STUDY_BOUNDARY_EVIDENCE"
+      },
+      "evidence_paths": [
+        "README.md@main",
+        "README.md@pages-live"
+      ],
+      "ownership_profile_id": "OWN-MOD-STUDY-001",
+      "public_site_url": "https://fabingurung.github.io/JP_Study_Hub/",
+      "note": "Owns study/learning workflows and academic study pages, not production engineering or project operations."
+    }
+  ]
 }

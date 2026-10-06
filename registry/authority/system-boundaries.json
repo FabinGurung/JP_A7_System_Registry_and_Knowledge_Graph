@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "system_boundary": {
+    "system_id": "SYS-A7-000001",
+    "canonical_role": "SEMANTIC_CONTROL_PLANE",
+    "owns": [
+      "semantic_identity",
+      "governed_alias",
+      "typed_relationship",
+      "authority_assignment",
+      "provider_source_reference",
+      "A7 policy/schema",
+      "cross-system lineage",
+      "module identity/binding"
+    ],
+    "may": [
+      "resolve owner module",
+      "traverse edges",
+      "fetch live provider state",
+      "validate contracts",
+      "orchestrate a governed mutation in the owning module",
+      "derive registry visualizations"
+    ],
+    "must_not_own": [
+      "Daily Ops current state",
+      "project schedule",
+      "BOQ/rate/cost calculations",
+      "structural model/analysis/results/SAR",
+      "CAD/drawing production/revisions",
+      "research scientific content",
+      "study content",
+      "original Drive files"
+    ],
+    "rule": "A7 tells AI what an entity means, where its authority lives and how systems relate. A7 does not absorb the domain work of registered modules."
+  },
+  "topology_rule": {
+    "execution_sibling_modules": [
+      "MOD-OPS-001",
+      "MOD-SCHED-001",
+      "MOD-COST-001",
+      "MOD-STRUCT-001",
+      "MOD-CAD-001"
+    ],
+    "knowledge_sibling_modules": [
+      "MOD-RND-001",
+      "MOD-STUDY-001"
+    ],
+    "forbidden_module_hierarchy_relations": [
+      "OWNS_MODULE",
+      "CONTAINS_MODULE",
+      "PARENT_OF_MODULE",
+      "SUBMODULE_OF"
+    ],
+    "allowed_cross_module_navigation_relations": [
+      "LINKS_TO_PEER_MODULE",
+      "SURFACES_STATUS_FROM_PEER_MODULE",
+      "PUBLISHES_RESEARCH_ABOUT"
+    ],
+    "operations_rule": "MOD-OPS-001 may link to Scheduling, Cost, Structural and CAD in the Project Command Center. Those are navigation/projection edges only and never ownership edges."
+  }
+}
