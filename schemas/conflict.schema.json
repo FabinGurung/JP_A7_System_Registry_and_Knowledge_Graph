@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/conflict.schema.json",
+  "title": "A7 Conflict",
+  "type": "object",
+  "required": [
+    "conflict_id",
+    "fact_class",
+    "conflict_type",
+    "materiality",
+    "status",
+    "opened_at"
+  ],
+  "properties": {
+    "conflict_id": {
+      "type": "string",
+      "pattern": "^A7-CONFLICT-EVT-[0-9]{6}$"
+    },
+    "entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fact_class": {
+      "type": "string"
+    },
+    "conflict_type": {
+      "type": "string",
+      "pattern": "^A7-CONFLICT-[0-9]{3}$"
+    },
+    "materiality": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MATERIAL",
+        "SAFETY_CRITICAL"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "opened_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "resolution_outcome": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "ACCEPT_AUTHORITY",
+        "ACCEPT_VERIFIED_HUMAN_QA_RESOLUTION",
+        "USE_AUTHORITY_REGENERATE_PROJECTION",
+        "USE_AUTHORITY_LOG_EVIDENCE_DIFFERENCE",
+        "USE_AUTHORITY_OPEN_HUMAN_QA",
+        "BLOCK_HUMAN_QA",
+        "BLOCK_NO_AUTHORITY",
+        "BLOCK_SCHEMA_INVALID",
+        "BLOCK_PUBLIC_SAFETY",
+        "DEFER_PROVIDER_CONTINUE",
+        "REFRESH_PROVIDER",
+        null
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

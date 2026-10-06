@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - "feature/a7-*"
+      - "closeout/a7-*"
   pull_request:
     branches:
       - main
@@ -28,7 +29,13 @@ jobs:
       - name: Validate canonical A7 registry
         run: python scripts/validate_registry.py
 
-      - name: Confirm Phase-1 relational contract exists
+      - name: Validate authority and provider contracts
+        run: python scripts/validate_authority.py
+
+      - name: Test deterministic authority resolver
+        run: python scripts/test_authority_resolver.py
+
+      - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
 
       - name: Confirm generated directory is explicitly non-authoritative

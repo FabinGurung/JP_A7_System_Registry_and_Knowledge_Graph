@@ -1,0 +1,15 @@
+{
+  "policy_id": "A7-POL-PROVIDER-DISCORD-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "provider": "discord",
+  "authority_scope": [
+    "message/channel/thread content as posted",
+    "provider identity and timestamp"
+  ],
+  "default_claim_role": "EVIDENCE",
+  "underlying_fact_rule": "Discord proves what was communicated; it does not automatically prove the real-world fact asserted.",
+  "public_projection_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE",
+  "mutation_rule": "Provider mutation requires provider-specific read-before/write/readback evidence when A7 actually changes that provider.",
+  "failure_rule": "After three reasonable failures, record/defer this provider dependency and continue independent work without fabricating blocked facts."
+}

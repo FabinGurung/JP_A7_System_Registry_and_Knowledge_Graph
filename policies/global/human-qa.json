@@ -1,21 +1,42 @@
 {
   "policy_id": "A7-POL-HUMAN-QA-001",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "status": "ACTIVE",
-  "trigger": "MATERIAL_CONFLICT_NOT_RESOLVED_BY_AUTHORITY_MAP",
+  "triggers": [
+    "AUTHORITATIVE_VALUES_DISAGREE",
+    "MULTIPLE_AUTHORITIES_DECLARED",
+    "MATERIAL_EVIDENCE_CONTRADICTS_AUTHORITY",
+    "ALIAS_AMBIGUITY",
+    "SAFETY_CRITICAL_UNRESOLVED_CONFLICT"
+  ],
   "ai_may_guess": false,
-  "case_status": "HUMAN_CONFIRMATION_REQUIRED",
-  "preferred_channels": [
-    "slack",
-    "email"
+  "open_case_status": "HUMAN_CONFIRMATION_REQUIRED",
+  "dedupe_key": [
+    "entity_or_project_id",
+    "fact_class",
+    "conflict_fingerprint"
+  ],
+  "preferred_channel_order": [
+    "GOVERNED_PROJECT_SLACK_THREAD_OR_CHANNEL",
+    "EMAIL_TO_GOVERNED_RESPONSIBLE_PERSON"
   ],
   "required_context": [
+    "QA_CASE_ID",
     "ENTITY_OR_PROJECT_ID",
     "FACT_CLASS",
+    "CONFLICT_TYPE",
     "CONFLICTING_VALUES_OR_STATEMENTS",
     "PROVIDER_EVIDENCE_REFERENCES",
     "ASSOCIATED_CONVERSATION_OR_EVIDENCE_LINK_WHEN_AVAILABLE",
     "EXPLICIT_RESOLUTION_QUESTION"
   ],
-  "resolution_rule": "The human reply becomes provider evidence and must be stored as a source reference before canonical mutation."
+  "response_requirements": [
+    "CAPTURE_PROVIDER_MESSAGE_OR_EMAIL_ID",
+    "CAPTURE_HUMAN_RESPONDER_IDENTITY_WHERE_AVAILABLE",
+    "CAPTURE_TIMESTAMP",
+    "CREATE_OR_UPDATE_PROVIDER_SOURCE_REFERENCE",
+    "APPEND_QA_RESOLUTION_EVENT_BEFORE_CANONICAL_MUTATION"
+  ],
+  "resolution_rule": "A verified human response may resolve only the linked QA case/scope. It becomes evidence through a provider source reference; the authority engine then performs any canonical mutation allowed by the resolved contract.",
+  "public_safety_rule": "Human QA message bodies and personal contact details are not published into this public registry unless explicitly approved."
 }

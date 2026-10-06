@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/qa-case.schema.json",
+  "title": "A7 Human QA Case",
+  "type": "object",
+  "required": [
+    "qa_case_id",
+    "fact_class",
+    "conflict_type",
+    "status",
+    "question",
+    "opened_at"
+  ],
+  "properties": {
+    "qa_case_id": {
+      "type": "string",
+      "pattern": "^A7-QA-[0-9]{6}$"
+    },
+    "entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fact_class": {
+      "type": "string"
+    },
+    "conflict_type": {
+      "type": "string",
+      "pattern": "^A7-CONFLICT-[0-9]{3}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "HUMAN_CONFIRMATION_REQUIRED",
+        "AWAITING_HUMAN",
+        "RESOLVED",
+        "CANCELLED",
+        "SUPERSEDED"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_claims": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "conversation_or_evidence_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preferred_channel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opened_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "resolved_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "resolution_source_ref_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resolution": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

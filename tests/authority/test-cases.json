@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "cases": [
+    {
+      "name": "single authority accepted",
+      "authority_configured": true,
+      "materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "claims": [
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": 48,
+          "source_ref_id": "SRC-1"
+        }
+      ],
+      "expected_outcome": "ACCEPT_AUTHORITY"
+    },
+    {
+      "name": "projection mismatch regenerates",
+      "authority_configured": true,
+      "materiality": "LOW",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "claims": [
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": "LIVE",
+          "source_ref_id": "SRC-1"
+        },
+        {
+          "claim_role": "PROJECTION",
+          "value": "NOT_CONFIGURED",
+          "source_ref_id": "SRC-P"
+        }
+      ],
+      "expected_outcome": "USE_AUTHORITY_REGENERATE_PROJECTION"
+    },
+    {
+      "name": "material evidence contradiction opens QA but keeps authority",
+      "authority_configured": true,
+      "materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "claims": [
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": 48,
+          "source_ref_id": "SRC-SHEET"
+        },
+        {
+          "claim_role": "EVIDENCE",
+          "value": 50,
+          "source_ref_id": "SRC-SLACK"
+        }
+      ],
+      "expected_outcome": "USE_AUTHORITY_OPEN_HUMAN_QA"
+    },
+    {
+      "name": "two authorities disagree without explicit recency strategy",
+      "authority_configured": true,
+      "materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "claims": [
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": 48,
+          "source_ref_id": "SRC-1"
+        },
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": 50,
+          "source_ref_id": "SRC-2"
+        }
+      ],
+      "expected_outcome": "BLOCK_HUMAN_QA"
+    },
+    {
+      "name": "explicit latest authority revision may resolve",
+      "authority_configured": true,
+      "materiality": "MATERIAL",
+      "timestamp_strategy": "LATEST_AUTHORITY_REVISION",
+      "claims": [
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": "v1",
+          "source_ref_id": "SRC-1",
+          "observed_at": "2026-10-05T00:00:00Z"
+        },
+        {
+          "claim_role": "DECLARED_AUTHORITY",
+          "value": "v2",
+          "source_ref_id": "SRC-2",
+          "observed_at": "2026-10-06T00:00:00Z"
+        }
+      ],
+      "expected_outcome": "ACCEPT_AUTHORITY"
+    },
+    {
+      "name": "no authority blocks",
+      "authority_configured": false,
+      "materiality": "MATERIAL",
+      "claims": [
+        {
+          "claim_role": "EVIDENCE",
+          "value": "reported",
+          "source_ref_id": "SRC-1"
+        }
+      ],
+      "expected_outcome": "BLOCK_NO_AUTHORITY"
+    },
+    {
+      "name": "provider unavailable after 3 attempts defers and continues",
+      "authority_configured": true,
+      "requires_live_provider": true,
+      "provider_unavailable": true,
+      "attempts": 3,
+      "claims": [],
+      "expected_outcome": "DEFER_PROVIDER_CONTINUE"
+    },
+    {
+      "name": "verified human QA resolution accepted only with case and source ref",
+      "authority_configured": true,
+      "verified_human_qa_resolution": {
+        "qa_case_id": "A7-QA-000001",
+        "source_ref_id": "SRC-HUMAN-1",
+        "value": "7_TOTAL"
+      },
+      "claims": [],
+      "expected_outcome": "ACCEPT_VERIFIED_HUMAN_QA_RESOLUTION"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/provider-policy.schema.json",
+  "title": "A7 Provider Policy",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "version",
+    "status",
+    "provider",
+    "authority_scope",
+    "default_claim_role",
+    "underlying_fact_rule",
+    "public_projection_default",
+    "mutation_rule",
+    "failure_rule"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "authority_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "default_claim_role": {
+      "type": "string",
+      "enum": [
+        "DECLARED_AUTHORITY",
+        "VERIFIED_HUMAN_QA_RESOLUTION",
+        "EVIDENCE",
+        "PROJECTION",
+        "UNKNOWN"
+      ]
+    },
+    "underlying_fact_rule": {
+      "type": "string"
+    },
+    "public_projection_default": {
+      "type": "string"
+    },
+    "mutation_rule": {
+      "type": "string"
+    },
+    "failure_rule": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

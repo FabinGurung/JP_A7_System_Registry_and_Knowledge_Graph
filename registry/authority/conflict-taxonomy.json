@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "conflicts": [
+    {
+      "conflict_type": "A7-CONFLICT-001",
+      "code": "NO_AUTHORITY_ASSIGNED",
+      "default_action": "BLOCK_NO_AUTHORITY",
+      "human_qa": "MAY_REQUIRE_AUTHORITY_DESIGNATION",
+      "description": "No applicable entity/project/module/global authority exists."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-002",
+      "code": "MULTIPLE_AUTHORITIES_DECLARED",
+      "default_action": "BLOCK_HUMAN_QA",
+      "human_qa": "REQUIRED",
+      "description": "Configuration declares competing writable authorities for the same scoped fact."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-003",
+      "code": "AUTHORITATIVE_VALUES_DISAGREE",
+      "default_action": "BLOCK_HUMAN_QA",
+      "human_qa": "REQUIRED",
+      "description": "Two or more valid authority claims disagree and no explicit timestamp/version rule resolves them."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-004",
+      "code": "MATERIAL_EVIDENCE_CONTRADICTS_AUTHORITY",
+      "default_action": "USE_AUTHORITY_OPEN_HUMAN_QA",
+      "human_qa": "REQUIRED_FOR_RECONCILIATION",
+      "description": "Evidence contradicts the current authority. Canonical value is not silently changed."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-005",
+      "code": "PROJECTION_DIFFERS_FROM_AUTHORITY",
+      "default_action": "USE_AUTHORITY_REGENERATE_PROJECTION",
+      "human_qa": "NO_UNLESS_REGENERATION_PERSISTS_AFTER_FAILURE_LIMIT",
+      "description": "A derived website/CSV/graph/search value is stale or inconsistent."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-006",
+      "code": "STALE_PROVIDER_OBSERVATION",
+      "default_action": "REFRESH_PROVIDER",
+      "human_qa": "NO",
+      "description": "Stored observation is not current enough for the requested operation."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-007",
+      "code": "ALIAS_AMBIGUITY",
+      "default_action": "BLOCK_HUMAN_QA",
+      "human_qa": "REQUIRED",
+      "description": "One alias resolves to multiple possible entities without a deterministic scoped rule."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-008",
+      "code": "PROVIDER_UNAVAILABLE",
+      "default_action": "DEFER_PROVIDER_CONTINUE",
+      "human_qa": "NO_BY_DEFAULT",
+      "description": "Required provider cannot be read after three reasonable attempts; dependent fact remains blocked while independent work continues."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-009",
+      "code": "PUBLIC_SAFETY_BLOCK",
+      "default_action": "BLOCK_PUBLIC_SAFETY",
+      "human_qa": "MAY_REQUIRE_OWNER_APPROVAL",
+      "description": "Record is not approved for publication in this public repository/site."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-010",
+      "code": "SCHEMA_INVALID",
+      "default_action": "BLOCK_SCHEMA_INVALID",
+      "human_qa": "NO",
+      "description": "Candidate mutation violates the canonical schema."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-011",
+      "code": "MISSING_SOURCE_REFERENCE",
+      "default_action": "BLOCK_SCHEMA_INVALID",
+      "human_qa": "NO",
+      "description": "Claim requiring provider traceability lacks a valid source reference."
+    },
+    {
+      "conflict_type": "A7-CONFLICT-012",
+      "code": "UNVERIFIED_MANUAL_CLAIM",
+      "default_action": "USE_AS_EVIDENCE_ONLY",
+      "human_qa": "REQUIRED_IF_MATERIAL",
+      "description": "A manual/AI claim is unsupported by an authoritative source; never treat it as canonical truth."
+    }
+  ]
+}
