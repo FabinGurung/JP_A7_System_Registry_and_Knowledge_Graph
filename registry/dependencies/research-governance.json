@@ -1,17 +1,22 @@
 {
   "schema_version": "1.0.0",
-  "status": "FOUNDATION_PREPARED",
+  "status": "EXISTING_RND_FOUNDATION_ADOPTED",
   "research_repository_id": "1312113873",
   "registry_repository_id": "1406572237",
   "a9": {
     "proposed_full_name": "FabinGurung/JP_A9_Research_Governance",
     "provider_id": null,
-    "status": "NOT_PROVISIONED",
+    "status": "OPTIONAL_NOT_PROVISIONED",
     "staging_repository_id": "1312113873",
     "staging_path": "governance/bootstrap/JP_A9_Research_Governance"
   },
   "scientific_authority": "GOOGLE_DRIVE",
   "mass_migration": "NOT_AUTHORIZED",
   "saugat_thesis_execution": "EXCLUDED_SEPARATE_CHAT",
-  "next_boundary": "Provision and verify A9 before pilot lane admission."
+  "next_boundary": "Continue in the existing R&D repository; create a private governance repository only if a separately authorized need arises.",
+  "adopted_governance_location": {
+    "repository_id": "1312113873",
+    "path": "governance/",
+    "role": "Public governance mechanics and SOPs; live scientific history is not migrated."
+  }
 }

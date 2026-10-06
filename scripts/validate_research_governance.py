@@ -20,7 +20,8 @@ for project in projects:
     assert project['public_research_route']==f"https://fabingurung.github.io/JP_Research-and-Development/projects/{project['slug']}/"
     assert len(project['canonical_label'].split())>=3
 dependency=load('registry/dependencies/research-governance.json')
-assert dependency['a9']['provider_id'] is None and dependency['a9']['status']=='NOT_PROVISIONED'
+assert dependency['a9']['provider_id'] is None and dependency['a9']['status']=='OPTIONAL_NOT_PROVISIONED'
+assert dependency['adopted_governance_location']['repository_id']=='1312113873'
 assert dependency['scientific_authority']=='GOOGLE_DRIVE'
 assert dependency['saugat_thesis_execution']=='EXCLUDED_SEPARATE_CHAT'
 assert dependency['mass_migration']=='NOT_AUTHORIZED'

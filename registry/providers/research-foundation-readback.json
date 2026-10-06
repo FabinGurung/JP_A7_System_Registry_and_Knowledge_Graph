@@ -1,0 +1,28 @@
+{
+  "event_id": "A7-EVT-000005-002",
+  "sequence_id": "A7-SEQ-000005",
+  "event_type": "PUBLIC_RESEARCH_FOUNDATION_PROVIDER_READBACK_AND_CLOSE",
+  "status": "CLOSED_PUBLIC_RESEARCH_FOUNDATION",
+  "validated_content_commit_sha": "ff052dfce608a1e96db1222f9b2ad7a8069298df",
+  "merged_content_commit_sha": "ca4c32d16eefa70fb41c24e192375b7bd036746b",
+  "provider_readback": {
+    "tree": "2ad8de8715f81b452102cf143e78ca924c40579d",
+    "verified_files": 11,
+    "status": "PASS",
+    "content_commit": "ff052dfce608a1e96db1222f9b2ad7a8069298df"
+  },
+  "ci_runs": [
+    {
+      "run_id": 37453043970,
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "ca4c32d16eefa70fb41c24e192375b7bd036746b"
+    }
+  ],
+  "public_research_identities": 5,
+  "scientific_history_migrated": false,
+  "drive_mutations": false,
+  "user_clarification": "Existing JP_Research-and-Development is adopted for cultivation and public governance foundation; separate private A9 provisioning is optional.",
+  "next_boundary": "Continue public research cultivation in R&D; any private history migration requires a separately scoped decision.",
+  "format": "same-sequence closeout receipt; no self-SHA assertion"
+}
