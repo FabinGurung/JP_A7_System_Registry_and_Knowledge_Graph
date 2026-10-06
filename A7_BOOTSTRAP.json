@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -46,6 +46,16 @@
     "authority_overrides": "registry/authority/authority-overrides.jsonl",
     "human_qa_cases": "registry/qa/human-qa-cases.jsonl"
   },
+  "github_inventory": {
+    "repositories": "registry/entities/repositories.json",
+    "branches": "registry/providers/github-branches.jsonl",
+    "pages": "registry/providers/github-pages.json",
+    "workflows": "registry/providers/github-workflows.json",
+    "inventory_meta": "registry/providers/github-inventory-meta.json",
+    "role_candidates": "registry/authority/repository-role-candidates.json",
+    "findings": "registry/findings/github-pages-findings.json",
+    "dependency_status": "registry/dependencies/status.json"
+  },
   "load_order": [
     "A7_READ_FIRST.md",
     "policies/global/a7-core.json",
@@ -59,6 +69,9 @@
     "registry/authority/conflict-resolution.json",
     "registry/authority/conflict-taxonomy.json",
     "registry/entities/systems.json",
+    "registry/entities/repositories.json",
+    "registry/providers/github-inventory-meta.json",
+    "registry/providers/github-pages.json",
     "registry/aliases/aliases.jsonl",
     "registry/edges/edges.jsonl"
   ],
@@ -72,7 +85,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000002",
-  "observed_at": "2026-10-06T03:37:00Z",
-  "current_sequence_status": "FINAL_CLOSED_PASS"
+  "current_sequence": "A7-SEQ-000003",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-06T07:50:00Z"
 }

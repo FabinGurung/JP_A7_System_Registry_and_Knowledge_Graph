@@ -1,4 +1,4 @@
--- A7 relational contract v2.0.0
+-- A7 relational contract v3.0.0
 -- FORMAL MODEL ONLY. A live PostgreSQL/Neon runtime is intentionally deferred.
 -- Canonical writable records remain JSON + JSONL unless a later A7 decision explicitly changes authority.
 
@@ -186,3 +186,75 @@ ALTER TABLE a7_claims
 ALTER TABLE a7_qa_cases
     ADD CONSTRAINT fk_qa_resolution_source_ref
     FOREIGN KEY (resolution_source_ref_id) REFERENCES a7_source_references(source_ref_id);
+
+
+-- Phase 3 GitHub inventory contract v1.0.0
+CREATE TABLE a7_github_branches (
+    branch_record_id TEXT PRIMARY KEY,
+    repository_id TEXT NOT NULL,
+    provider_repository_id TEXT NOT NULL,
+    branch_name TEXT NOT NULL,
+    head_sha TEXT NOT NULL,
+    is_default BOOLEAN NOT NULL,
+    is_pages_production_source BOOLEAN NOT NULL,
+    protected BOOLEAN NOT NULL,
+    branch_class TEXT NOT NULL,
+    observed_at TIMESTAMPTZ NOT NULL,
+    UNIQUE (repository_id, branch_name)
+);
+
+CREATE TABLE a7_github_workflows (
+    workflow_id TEXT PRIMARY KEY,
+    repository_id TEXT NOT NULL,
+    workflow_path TEXT NOT NULL,
+    workflow_sha TEXT NOT NULL,
+    workflow_name TEXT NOT NULL,
+    workflow_role TEXT NOT NULL,
+    deploy_pages_capable BOOLEAN NOT NULL,
+    pages_write BOOLEAN NOT NULL,
+    production_status TEXT NOT NULL,
+    latest_successful_run_id BIGINT
+);
+
+CREATE TABLE a7_github_pages (
+    pages_record_id TEXT PRIMARY KEY,
+    repository_id TEXT NOT NULL UNIQUE,
+    has_pages BOOLEAN NOT NULL,
+    public_site_url TEXT,
+    deployment_mode TEXT NOT NULL,
+    production_trigger_branch TEXT,
+    content_source_ref TEXT,
+    workflow_path TEXT,
+    workflow_sha TEXT,
+    latest_successful_run_id BIGINT,
+    latest_successful_run_sha TEXT,
+    latest_successful_run_at TIMESTAMPTZ,
+    owner_invariant_status TEXT NOT NULL,
+    default_branch_matches_trigger BOOLEAN
+);
+
+CREATE TABLE a7_repository_role_candidates (
+    role_candidate_id TEXT PRIMARY KEY,
+    repository_id TEXT NOT NULL UNIQUE,
+    candidate_role TEXT NOT NULL,
+    confidence TEXT NOT NULL,
+    binding_status TEXT NOT NULL,
+    evidence_json JSONB NOT NULL,
+    observed_at TIMESTAMPTZ NOT NULL
+);
+
+ALTER TABLE a7_github_branches
+    ADD CONSTRAINT fk_github_branch_repo
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+ALTER TABLE a7_github_workflows
+    ADD CONSTRAINT fk_github_workflow_repo
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+ALTER TABLE a7_github_pages
+    ADD CONSTRAINT fk_github_pages_repo
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+ALTER TABLE a7_repository_role_candidates
+    ADD CONSTRAINT fk_repo_role_candidate
+    FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);

@@ -1,0 +1,346 @@
+{
+  "schema_version": "1.0.0",
+  "workflows": [
+    {
+      "workflow_id": "GHWF-000001",
+      "repository_id": "REPO-000002",
+      "workflow_path": ".github/workflows/pages.yml",
+      "workflow_sha": "06890ecee6bf91e3be7c785aaaa30ac25b196d5e",
+      "workflow_name": "deploy-pages",
+      "branch_refs": [
+        "main"
+      ],
+      "workflow_role": "PRODUCTION_PAGES_OWNER",
+      "deploy_pages_capable": true,
+      "pages_write": true,
+      "production_status": "ACTIVE",
+      "latest_successful_run_id": 37387555305
+    },
+    {
+      "workflow_id": "GHWF-000002",
+      "repository_id": "REPO-000002",
+      "workflow_path": ".github/workflows/ci.yml",
+      "workflow_sha": "63266b811361c293393bbfa98bc009dcef49f07a",
+      "workflow_name": "structural-engine-ci",
+      "branch_refs": [
+        "engine/opensees-sar-v0.1"
+      ],
+      "workflow_role": "ENGINE_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION",
+      "latest_successful_run_id": 37409482489
+    },
+    {
+      "workflow_id": "GHWF-000003",
+      "repository_id": "REPO-000003",
+      "workflow_path": ".github/workflows/a9-milestone-release.yml",
+      "workflow_sha": "db653ec023ced20c0239bfbe53c833c556ed14b3",
+      "workflow_name": "A9 Milestone Tag and Release",
+      "branch_refs": [
+        "narayani-modular-website-v0.3",
+        "snapshot/pre-pages-policy-overlay-20261005"
+      ],
+      "workflow_role": "LEGACY_NAMESPACE_RELEASE_AUTOMATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PAGES"
+    },
+    {
+      "workflow_id": "GHWF-000004",
+      "repository_id": "REPO-000003",
+      "workflow_path": ".github/workflows/research-pages-overlay.yml",
+      "workflow_sha": "0a2e99f4fb607ff3e3db4679e9a00cde7a16d909",
+      "workflow_name": "Validate Narayani + Open Architecture overlay",
+      "branch_refs": [
+        "narayani-modular-website-v0.3"
+      ],
+      "workflow_role": "VALIDATION_ONLY",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000005",
+      "repository_id": "REPO-000003",
+      "workflow_path": ".github/workflows/open-architecture-poc.yml",
+      "workflow_sha": "5e06aa9ae0427f5768eb977a19bec9bc3be7fad6",
+      "workflow_name": "Open Architecture POC",
+      "branch_refs": [
+        "project-hub-v0.2",
+        "research/open-architecture-engine-v0.1",
+        "research/open-architecture-engine-v0.2"
+      ],
+      "workflow_role": "RESEARCH_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000006",
+      "repository_id": "REPO-000003",
+      "workflow_path": ".github/workflows/open-architecture-v02.yml",
+      "workflow_sha": "8c8f30c0066e5152dc867fbb23082214c1d58666",
+      "workflow_name": "Open Architecture Engine v0.2 QA",
+      "branch_refs": [
+        "research/open-architecture-engine-v0.2"
+      ],
+      "workflow_role": "RESEARCH_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000007",
+      "repository_id": "REPO-000004",
+      "workflow_path": ".github/workflows/deploy-construction-knowledge-preview.yml",
+      "workflow_sha": "ede18cbc25012a1a98e301613f409e98c75fbd26",
+      "workflow_name": "Validate construction-knowledge historical branch",
+      "branch_refs": [
+        "construction-knowledge-kernel-demo-v0.1",
+        "kernel-v0.2-open-source-engines"
+      ],
+      "workflow_role": "VALIDATION_ONLY",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000008",
+      "repository_id": "REPO-000004",
+      "workflow_path": ".github/workflows/deploy-kernel-v02.yml",
+      "workflow_sha": "a9aa159a2f044845a3650ae6a94c06885b87e80f",
+      "workflow_name": "Build and deploy JP Scheduling Work and Resource Management",
+      "branch_refs": [
+        "kernel-v0.2-open-source-engines"
+      ],
+      "workflow_role": "PRODUCTION_PAGES_OWNER",
+      "deploy_pages_capable": true,
+      "pages_write": true,
+      "production_status": "ACTIVE",
+      "latest_successful_run_id": 37409071014
+    },
+    {
+      "workflow_id": "GHWF-000009",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "22fd48c20119d11a6673c61e58b341539a3ed879",
+      "workflow_name": "Build and deploy JP Research & Development hub",
+      "branch_refs": [
+        "main",
+        "snapshot/post-actions-pages-direct-20261006-main"
+      ],
+      "workflow_role": "PRODUCTION_PAGES_OWNER",
+      "deploy_pages_capable": true,
+      "pages_write": true,
+      "production_status": "ACTIVE",
+      "latest_successful_run_id": 37386138073
+    },
+    {
+      "workflow_id": "GHWF-000010",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "7c6a2d59ab65b27b94ea5b57bcc8406e85ee8cda",
+      "workflow_name": "Validate historical Next.js R&D branch",
+      "branch_refs": [
+        "github-pages-nextjs"
+      ],
+      "workflow_role": "HISTORICAL_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000011",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "44fb702d01e2a89c3da1e7b14f221c4356501d54",
+      "workflow_name": "Non-production Pages ownership guard",
+      "branch_refs": [
+        "opensees-mdm-validation-v0.1",
+        "opensees-structural-report-v0.1"
+      ],
+      "workflow_role": "PAGES_OWNERSHIP_GUARD",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000012",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "3719b2298f43b73485fcbdaee3d73f05ee2b0a47",
+      "workflow_name": "Validate non-production R&D branch",
+      "branch_refs": [
+        "shared-data-methodology-demo-v1",
+        "structural-analysis-demo-v1"
+      ],
+      "workflow_role": "VALIDATION_ONLY",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000013",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/opensees-mdm-validation.yml",
+      "workflow_sha": "a0af0c435d7f6bb9b04466237934a2e6141e847a",
+      "workflow_name": "Validate thesis MDM beam with OpenSeesPy",
+      "branch_refs": [
+        "opensees-mdm-validation-v0.1"
+      ],
+      "workflow_role": "RESEARCH_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000014",
+      "repository_id": "REPO-000006",
+      "workflow_path": ".github/workflows/opensees-structural-report.yml",
+      "workflow_sha": "45f7d3f2bddb2d9e9a0436a589939c8b08cf7507",
+      "workflow_name": "OpenSees structural-report lane checks",
+      "branch_refs": [
+        "opensees-structural-report-v0.1"
+      ],
+      "workflow_role": "RESEARCH_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000015",
+      "repository_id": "REPO-000007",
+      "workflow_path": ".github/workflows/daily-ops-branch-preview.yml",
+      "workflow_sha": "20673a757e66369fbceeb39b71ce4057d1ad4a6f",
+      "workflow_name": "Daily Ops branch preview",
+      "branch_refs": [
+        "feature/daily-ops-current-work"
+      ],
+      "workflow_role": "PRODUCTION_PAGES_OWNER",
+      "deploy_pages_capable": true,
+      "pages_write": true,
+      "production_status": "ACTIVE",
+      "latest_successful_run_id": 37408376296
+    },
+    {
+      "workflow_id": "GHWF-000016",
+      "repository_id": "REPO-000007",
+      "workflow_path": ".github/workflows/validate-projects.yml",
+      "workflow_sha": "b14fe0c9e1305c4cc380a912e6bd02c21f55a821",
+      "workflow_name": "Validate project data",
+      "branch_refs": [
+        "main"
+      ],
+      "workflow_role": "DATA_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000017",
+      "repository_id": "REPO-000007",
+      "workflow_path": ".github/workflows/restore-pre-demo-pages.yml",
+      "workflow_sha": "05b068c8f87e447852015dee8452a3e04dfb84fd",
+      "workflow_name": "Validate pre-demo restore snapshot",
+      "branch_refs": [
+        "archive/restore-pre-construction-demo-pages-20261002"
+      ],
+      "workflow_role": "HISTORICAL_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000018",
+      "repository_id": "REPO-000007",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "926e38b05066592a3c1ba08face8a40f9a7ce278",
+      "workflow_name": "Historical Pages deployment guard",
+      "branch_refs": [
+        "v1.3-construction-knowledge-kernel-demo"
+      ],
+      "workflow_role": "PAGES_OWNERSHIP_GUARD",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000019",
+      "repository_id": "REPO-000008",
+      "workflow_path": ".github/workflows/deploy-estimation-product.yml",
+      "workflow_sha": "fb7e7212210eeeaa968c8299e287971b23066dff",
+      "workflow_name": "Deploy Estimation Research Product",
+      "branch_refs": [
+        "main"
+      ],
+      "workflow_role": "PRODUCTION_PAGES_OWNER",
+      "deploy_pages_capable": true,
+      "pages_write": true,
+      "production_status": "ACTIVE",
+      "latest_successful_run_id": 36975828575
+    },
+    {
+      "workflow_id": "GHWF-000020",
+      "repository_id": "REPO-000008",
+      "workflow_path": ".github/workflows/estimation-ci.yml",
+      "workflow_sha": "153680ce9f5df5df05d3ec9c9320e175487de019",
+      "workflow_name": "Estimation CI",
+      "branch_refs": [
+        "research/open-estimation-engine-v0.1",
+        "snapshot/pre-pages-policy-research-20261005"
+      ],
+      "workflow_role": "RESEARCH_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000021",
+      "repository_id": "REPO-000008",
+      "workflow_path": ".github/workflows/pages.yml",
+      "workflow_sha": "93ee4ffa6cf3180526fce0f484ff2d46f7563209",
+      "workflow_name": "Production Pages ownership guard",
+      "branch_refs": [
+        "research/open-estimation-engine-v0.1"
+      ],
+      "workflow_role": "PAGES_OWNERSHIP_GUARD",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000022",
+      "repository_id": "REPO-000008",
+      "workflow_path": ".github/workflows/research-preview-pages.yml",
+      "workflow_sha": "d8dd668e944fcf398f6f0883530487a48ce0c432",
+      "workflow_name": "Validate Research Estimator Preview",
+      "branch_refs": [
+        "research/open-estimation-engine-v0.1"
+      ],
+      "workflow_role": "VALIDATION_ONLY",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PRODUCTION"
+    },
+    {
+      "workflow_id": "GHWF-000023",
+      "repository_id": "REPO-000001",
+      "workflow_path": ".github/workflows/validate-registry.yml",
+      "workflow_sha": "0195442262009a65b893ebf4ee388934ed090e96",
+      "workflow_name": "A7 Registry Validation",
+      "branch_refs": [
+        "main",
+        "feature/a7-seq-000002-authority-engine",
+        "feature/a7-seq-000003-github-inventory",
+        "closeout/a7-seq-000002",
+        "snapshot/post-a7-seq-000002",
+        "snapshot-pre-a7-seq-000003"
+      ],
+      "workflow_role": "A7_VALIDATION",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PAGES"
+    }
+  ]
+}

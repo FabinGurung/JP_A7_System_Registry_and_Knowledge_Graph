@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/github-branch.schema.json",
+  "title": "A7 GitHub Branch Observation",
+  "type": "object",
+  "required": [
+    "branch_record_id",
+    "repository_id",
+    "provider_repository_id",
+    "branch_name",
+    "head_sha",
+    "is_default",
+    "is_pages_production_source",
+    "protected",
+    "branch_class",
+    "observed_at"
+  ],
+  "properties": {
+    "branch_record_id": {
+      "type": "string",
+      "pattern": "^GHBR-[0-9]{6}$"
+    },
+    "repository_id": {
+      "type": "string",
+      "pattern": "^REPO-[0-9]{6}$"
+    },
+    "provider_repository_id": {
+      "type": "string"
+    },
+    "branch_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "head_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "is_default": {
+      "type": "boolean"
+    },
+    "is_pages_production_source": {
+      "type": "boolean"
+    },
+    "protected": {
+      "type": "boolean"
+    },
+    "branch_class": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

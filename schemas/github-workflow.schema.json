@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/github-workflow.schema.json",
+  "title": "A7 GitHub Workflow Inventory Record",
+  "type": "object",
+  "required": [
+    "workflow_id",
+    "repository_id",
+    "workflow_path",
+    "workflow_sha",
+    "workflow_name",
+    "branch_refs",
+    "workflow_role",
+    "deploy_pages_capable",
+    "pages_write",
+    "production_status"
+  ],
+  "properties": {
+    "workflow_id": {
+      "type": "string",
+      "pattern": "^GHWF-[0-9]{6}$"
+    },
+    "repository_id": {
+      "type": "string",
+      "pattern": "^REPO-[0-9]{6}$"
+    },
+    "workflow_path": {
+      "type": "string"
+    },
+    "workflow_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "workflow_name": {
+      "type": "string"
+    },
+    "branch_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "workflow_role": {
+      "type": "string"
+    },
+    "deploy_pages_capable": {
+      "type": "boolean"
+    },
+    "pages_write": {
+      "type": "boolean"
+    },
+    "production_status": {
+      "type": "string"
+    },
+    "latest_successful_run_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

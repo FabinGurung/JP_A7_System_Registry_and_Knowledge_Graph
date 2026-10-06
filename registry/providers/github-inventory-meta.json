@@ -1,0 +1,33 @@
+{
+  "inventory_id": "A7-GITHUB-INVENTORY-000001",
+  "sequence_id": "A7-SEQ-000003",
+  "owner": "FabinGurung",
+  "observed_at": "2026-10-06T07:50:00Z",
+  "repositories_observed": 9,
+  "repositories_scope": "ALL_REPOSITORIES_RETURNED_FOR_OWNER_BY_CONNECTED_GITHUB_PROVIDER",
+  "branch_records": 88,
+  "current_custom_workflow_records": 23,
+  "pages_records": 9,
+  "methodology": [
+    "GitHub repository metadata endpoint for immutable repository IDs/default branch/homepage/has_pages",
+    "GitHub branches endpoint for branch names/current heads",
+    "repository .github/workflows contents across branches",
+    "GitHub Actions run history for deployment evidence and current Pages-owner inference",
+    "workflow file content inspection for deploy-pages/pages:write/github-pages ownership guards"
+  ],
+  "endpoint_limitations": [
+    {
+      "endpoint": "GET /repos/{owner}/{repo}/pages",
+      "status": "CONNECTOR_NOT_ALLOWED",
+      "impact": "No direct Pages settings object; deployment ownership is derived from repository has_pages/homepage metadata plus current workflow files and successful Actions runs."
+    },
+    {
+      "endpoint": "GET /repos/{owner}/{repo}/actions/workflows",
+      "status": "CONNECTOR_NOT_ALLOWED",
+      "impact": "Workflow inventory is built from branch file inspection and Actions run history instead."
+    }
+  ],
+  "fail_forward_status": "NO_INVENTORY_BLOCKER; equivalent provider evidence paths succeeded.",
+  "historical_alias_policy": "GitHub repository rename history is not exposed by the available provider endpoint. Historical aliases are recorded only where independently verified; do not infer missing old slugs.",
+  "cross_repository_dependency_search": "No current default-branch code-search hits were returned for specialist repository slugs in the Operations Hub or R&D hub. Treat cross-repository dependencies as not yet provider-verified rather than absent."
+}
