@@ -89,8 +89,8 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000004",
-  "current_sequence_status": "FINAL_CLOSED_PASS",
+  "current_sequence": "A7-SEQ-000005",
+  "current_sequence_status": "PREPARED_AWAITING_PROVIDER_READBACK",
   "observed_at": "2026-10-06T09:45:00Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
@@ -99,5 +99,6 @@
     "resolver": "registry/providers/google-drive-resolution.json",
     "findings": "registry/findings/google-drive-findings.json",
     "detailed_topology_authority": "Google Drive Fabin_Gurung_Drive_Index / Index + live provider readback"
-  }
+  },
+  "research_governance": "registry/dependencies/research-governance.json"
 }

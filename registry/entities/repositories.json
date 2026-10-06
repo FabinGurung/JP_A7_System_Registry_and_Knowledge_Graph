@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "1.0.0",
   "repositories": [
     {
       "repository_id": "REPO-000001",
@@ -144,14 +144,14 @@
       "deployment_status": "LIVE_SUCCESS",
       "visibility": "public",
       "archived": false,
-      "system_role": "RESEARCH_DEVELOPMENT_HUB",
+      "system_role": "CROSS_PROJECT_RESEARCH_KNOWLEDGE_AND_PUBLICATION",
       "ecosystem_scope": "CORE",
       "role_confidence": "HIGH",
       "pages_enabled": true,
       "last_observed_default_branch_head": "ad11758cdf0c153a428eda72bd597d78af01f0d2",
       "last_verified_at": "2026-10-06T07:50:00Z",
       "historical_alias_coverage": "NOT_EXPOSED_BY_PROVIDER",
-      "governance_notes": "Current main workflow explicitly enforces main as canonical production Pages source. Non-production R&D branches inspected now contain validation/ownership guards; historical dynamic Pages runs remain audit evidence only."
+      "governance_notes": "Research presentation only. A9 event histories belong in the dedicated governance repository after provisioning; Drive remains scientific authority. Existing AEC and Hydropower modules retained."
     },
     {
       "repository_id": "REPO-000007",
