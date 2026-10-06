@@ -6,6 +6,7 @@
   "required": [
     "schema_version",
     "status",
+    "scope_precedence",
     "assignments"
   ],
   "properties": {
@@ -15,29 +16,109 @@
     "status": {
       "type": "string"
     },
+    "scope_precedence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ENTITY_OVERRIDE",
+          "PROJECT_OVERRIDE",
+          "MODULE_OVERRIDE",
+          "GLOBAL_FACT_CLASS"
+        ]
+      },
+      "uniqueItems": true
+    },
     "assignments": {
       "type": "array",
       "items": {
         "type": "object",
         "required": [
+          "authority_id",
           "fact_class",
+          "scope_type",
+          "scope_id",
+          "owner_kind",
+          "owner_ref",
           "writable_store",
+          "source_role",
+          "resolution_strategy",
+          "timestamp_strategy",
+          "materiality",
           "rule"
         ],
         "properties": {
+          "authority_id": {
+            "type": "string",
+            "pattern": "^AUTH-[0-9]{6}$"
+          },
           "fact_class": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "scope_type": {
+            "type": "string",
+            "enum": [
+              "GLOBAL",
+              "ENTITY_OVERRIDE",
+              "PROJECT_OVERRIDE",
+              "MODULE_OVERRIDE"
+            ]
+          },
+          "scope_id": {
             "type": "string",
             "minLength": 1
           },
-          "authority_system_id": {
-            "type": [
-              "string",
-              "null"
+          "owner_kind": {
+            "type": "string",
+            "enum": [
+              "SYSTEM",
+              "PROVIDER",
+              "MODULE_ROLE",
+              "PROJECT_CONTRACT",
+              "GENERATED_ONLY",
+              "HUMAN_QA"
             ]
+          },
+          "owner_ref": {
+            "type": "string",
+            "minLength": 1
           },
           "writable_store": {
             "type": "string",
             "minLength": 1
+          },
+          "source_role": {
+            "type": "string",
+            "enum": [
+              "DECLARED_AUTHORITY",
+              "VERIFIED_HUMAN_QA_RESOLUTION",
+              "EVIDENCE",
+              "PROJECTION",
+              "UNKNOWN"
+            ]
+          },
+          "resolution_strategy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timestamp_strategy": {
+            "type": "string",
+            "enum": [
+              "NO_TIMESTAMP_ARBITRATION",
+              "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+              "LATEST_AUTHORITY_REVISION",
+              "EXPLICIT_FACT_CLASS_RULE_ONLY",
+              "DERIVE_FROM_CURRENT_AUTHORITY"
+            ]
+          },
+          "materiality": {
+            "type": "string",
+            "enum": [
+              "LOW",
+              "MATERIAL",
+              "SAFETY_CRITICAL"
+            ]
           },
           "rule": {
             "type": "string",
