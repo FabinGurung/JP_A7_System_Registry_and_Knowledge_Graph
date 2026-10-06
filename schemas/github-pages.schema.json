@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/github-pages.schema.json",
+  "title": "A7 GitHub Pages Ownership Record",
+  "type": "object",
+  "required": [
+    "pages_record_id",
+    "repository_id",
+    "has_pages",
+    "public_site_url",
+    "deployment_mode",
+    "owner_invariant_status",
+    "attention"
+  ],
+  "properties": {
+    "pages_record_id": {
+      "type": "string",
+      "pattern": "^GHPAGES-[0-9]{6}$"
+    },
+    "repository_id": {
+      "type": "string",
+      "pattern": "^REPO-[0-9]{6}$"
+    },
+    "has_pages": {
+      "type": "boolean"
+    },
+    "public_site_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "public_site_url_evidence": {
+      "type": "string"
+    },
+    "deployment_mode": {
+      "type": "string"
+    },
+    "production_trigger_branch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "content_source_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workflow_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "workflow_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latest_successful_run_id": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "latest_successful_run_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "latest_successful_run_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "owner_invariant_status": {
+      "type": "string"
+    },
+    "default_branch_matches_trigger": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "attention": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

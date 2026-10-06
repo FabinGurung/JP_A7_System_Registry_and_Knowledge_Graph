@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "findings": [
+    {
+      "finding_id": "GHFIND-000001",
+      "repository_id": "REPO-000002",
+      "severity": "HIGH",
+      "code": "STRUCTURAL_PAGES_PINNED_BEHIND_ENGINE_HEAD",
+      "status": "OPEN",
+      "evidence": "Production workflow on main checks out f91224b4f82bfec1440b97f2f8afaef09427eaa9; current engine/opensees-sar-v0.1 head is d362470d21dd0ff83e11fcd6a25a850a08d4e11d.",
+      "recommended_follow_up": "In a later structural-engine run, decide whether Pages should pin a frozen release/tag or track a newer governed engine release. Do not auto-change during inventory."
+    },
+    {
+      "finding_id": "GHFIND-000002",
+      "repository_id": "REPO-000003",
+      "severity": "MEDIUM",
+      "code": "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH",
+      "status": "OPEN",
+      "evidence": "Default branch is narayani-pages-v0.2; latest successful GitHub-managed Pages run uses narayani-modular-website-v0.3.",
+      "recommended_follow_up": "Confirm intended canonical publication branch before any default-branch or Pages-source repair."
+    },
+    {
+      "finding_id": "GHFIND-000003",
+      "repository_id": "REPO-000004",
+      "severity": "MEDIUM",
+      "code": "NON_DEFAULT_BRANCH_IS_PRODUCTION_PAGES_OWNER",
+      "status": "OPEN",
+      "evidence": "Production workflow explicitly enforces kernel-v0.2-open-source-engines while default branch is main.",
+      "recommended_follow_up": "Decide whether to retain the non-default canonical product branch or promote/merge it into main in a separate bounded operation."
+    },
+    {
+      "finding_id": "GHFIND-000004",
+      "repository_id": "REPO-000007",
+      "severity": "MEDIUM",
+      "code": "FEATURE_BRANCH_IS_PRODUCTION_PAGES_OWNER",
+      "status": "OPEN",
+      "evidence": "daily-ops-branch-preview.yml has pages:write, github-pages environment and deploy-pages; archive guard explicitly states production owner remains feature/daily-ops-current-work.",
+      "recommended_follow_up": "Rename/restructure the production lane later if desired; do not change during inventory because Daily Ops currently depends on it."
+    },
+    {
+      "finding_id": "GHFIND-000005",
+      "repository_id": "REPO-000008",
+      "severity": "MEDIUM",
+      "code": "MAIN_TRIGGER_DEPLOYS_RESEARCH_BRANCH_CONTENT",
+      "status": "OPEN",
+      "evidence": "deploy-estimation-product.yml triggers from main but checks out research/open-estimation-engine-v0.1 before deploying.",
+      "recommended_follow_up": "Make branch/content ownership explicit in the future module contract; avoid assuming main files equal published product."
+    },
+    {
+      "finding_id": "GHFIND-000006",
+      "repository_id": "REPO-000009",
+      "severity": "LOW",
+      "code": "PAGES_LIVE_BRANCH_DIFFERS_FROM_DEFAULT",
+      "status": "OPEN",
+      "evidence": "Latest successful GitHub-managed Pages run uses pages-live; default branch is main.",
+      "recommended_follow_up": "Keep as explicit publication branch or normalize later."
+    },
+    {
+      "finding_id": "GHFIND-000007",
+      "repository_id": "REPO-000005",
+      "severity": "LOW",
+      "code": "GIS_BRANCH_IS_PAGES_SOURCE",
+      "status": "OPEN",
+      "evidence": "Latest successful GitHub-managed Pages run uses gis-site-selection while default branch is main.",
+      "recommended_follow_up": "Confirm whether the live site is intended to remain the GIS/site-selection view."
+    },
+    {
+      "finding_id": "GHFIND-000008",
+      "repository_id": "REPO-000001",
+      "severity": "LOW",
+      "code": "A7_PAGES_ENABLED_NO_DEPLOYMENT_OBSERVED",
+      "status": "EXPECTED",
+      "evidence": "Repository reports has_pages=true and homepage metadata, but only A7 validation workflows were observed; no successful Pages deployment run exists yet.",
+      "recommended_follow_up": "Pages visualization is intentionally deferred to the visualization phase."
+    },
+    {
+      "finding_id": "GHFIND-000009",
+      "repository_id": "REPO-000006",
+      "severity": "INFO",
+      "code": "R_AND_D_HISTORICAL_PAGES_COLLISIONS_CURRENTLY_GUARDED",
+      "status": "CLOSED_OBSERVATION",
+      "evidence": "main is the current deploy-capable production owner; inspected historical/research branches now use non-production validation/ownership guards.",
+      "recommended_follow_up": "Retain current one-owner policy; do not re-enable research-branch deploys."
+    }
+  ]
+}

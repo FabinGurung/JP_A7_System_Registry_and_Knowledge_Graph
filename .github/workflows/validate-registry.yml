@@ -20,23 +20,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Validate canonical A7 registry
         run: python scripts/validate_registry.py
-
       - name: Validate authority and provider contracts
         run: python scripts/validate_authority.py
-
       - name: Test deterministic authority resolver
         run: python scripts/test_authority_resolver.py
-
+      - name: Validate GitHub repository / Pages / workflow inventory
+        run: python scripts/validate_github_inventory.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
-
       - name: Confirm generated directory is explicitly non-authoritative
         run: grep -q "derived and non-authoritative" generated/README.md

@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "pages": [
+    {
+      "pages_record_id": "GHPAGES-000001",
+      "repository_id": "REPO-000001",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "ENABLED_NO_PRODUCTION_DEPLOYMENT_OBSERVED",
+      "production_trigger_branch": null,
+      "content_source_ref": null,
+      "workflow_path": null,
+      "workflow_sha": null,
+      "latest_successful_run_id": null,
+      "latest_successful_run_sha": null,
+      "latest_successful_run_at": null,
+      "owner_invariant_status": "NOT_ESTABLISHED",
+      "default_branch_matches_trigger": null,
+      "attention": [
+        "PAGES_ENABLED_WITHOUT_OBSERVED_PRODUCTION_DEPLOYMENT"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000002",
+      "repository_id": "REPO-000002",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Structural_Analysis/",
+      "public_site_url_evidence": "STANDARD_GITHUB_PAGES_URL_DERIVED_FROM_SUCCESSFUL_DEPLOYMENT",
+      "deployment_mode": "GITHUB_ACTIONS_CUSTOM",
+      "production_trigger_branch": "main",
+      "content_source_ref": "PINNED_COMMIT:f91224b4f82bfec1440b97f2f8afaef09427eaa9",
+      "workflow_path": ".github/workflows/pages.yml",
+      "workflow_sha": "06890ecee6bf91e3be7c785aaaa30ac25b196d5e",
+      "latest_successful_run_id": 37387555305,
+      "latest_successful_run_sha": "da221e630d9ed49de5d0ce728ed2f605f2022554",
+      "latest_successful_run_at": "2026-10-05T23:16:35Z",
+      "owner_invariant_status": "PASS_SINGLE_CUSTOM_OWNER",
+      "default_branch_matches_trigger": true,
+      "attention": [
+        "CONTENT_SOURCE_PINNED_BEHIND_CURRENT_ENGINE_BRANCH"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000003",
+      "repository_id": "REPO-000003",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Computer-Aided-Drawings/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_MANAGED_BRANCH",
+      "production_trigger_branch": "narayani-modular-website-v0.3",
+      "content_source_ref": "BRANCH:narayani-modular-website-v0.3",
+      "workflow_path": "dynamic/pages/pages-build-deployment",
+      "workflow_sha": null,
+      "latest_successful_run_id": 37402742401,
+      "latest_successful_run_sha": "ac443fcb6c03c4eaf96e32d7e68b1f638438eac9",
+      "latest_successful_run_at": "2026-10-06T02:09:15Z",
+      "owner_invariant_status": "PASS_SINGLE_OWNER_NON_DEFAULT_SOURCE",
+      "default_branch_matches_trigger": false,
+      "attention": [
+        "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000004",
+      "repository_id": "REPO-000004",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Scheduling_Work_and_Resources_Management/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_ACTIONS_CUSTOM",
+      "production_trigger_branch": "kernel-v0.2-open-source-engines",
+      "content_source_ref": "BRANCH:kernel-v0.2-open-source-engines",
+      "workflow_path": ".github/workflows/deploy-kernel-v02.yml",
+      "workflow_sha": "a9aa159a2f044845a3650ae6a94c06885b87e80f",
+      "latest_successful_run_id": 37409071014,
+      "latest_successful_run_sha": "b3cd399a81ab623d28f677d0965347d3302b8d87",
+      "latest_successful_run_at": "2026-10-06T03:27:37Z",
+      "owner_invariant_status": "PASS_SINGLE_CUSTOM_OWNER_NON_DEFAULT_SOURCE",
+      "default_branch_matches_trigger": false,
+      "attention": [
+        "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH",
+        "OLDER_MAIN_BRANCH_MANAGED_PAGES_HISTORY_EXISTS"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000005",
+      "repository_id": "REPO-000005",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/sumita-pilates-studio/",
+      "public_site_url_evidence": "STANDARD_GITHUB_PAGES_URL_DERIVED_FROM_SUCCESSFUL_DEPLOYMENT",
+      "deployment_mode": "GITHUB_MANAGED_BRANCH",
+      "production_trigger_branch": "gis-site-selection",
+      "content_source_ref": "BRANCH:gis-site-selection",
+      "workflow_path": "dynamic/pages/pages-build-deployment",
+      "workflow_sha": null,
+      "latest_successful_run_id": 30681650626,
+      "latest_successful_run_sha": "646667e08611454dc9b1ea0d1820bc61b7e00bce",
+      "latest_successful_run_at": "2026-08-01T03:15:39Z",
+      "owner_invariant_status": "PASS_SINGLE_OWNER_NON_DEFAULT_SOURCE",
+      "default_branch_matches_trigger": false,
+      "attention": [
+        "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000006",
+      "repository_id": "REPO-000006",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_ACTIONS_CUSTOM",
+      "production_trigger_branch": "main",
+      "content_source_ref": "BRANCH:main",
+      "workflow_path": ".github/workflows/deploy-pages.yml",
+      "workflow_sha": "22fd48c20119d11a6673c61e58b341539a3ed879",
+      "latest_successful_run_id": 37386138073,
+      "latest_successful_run_sha": "ad11758cdf0c153a428eda72bd597d78af01f0d2",
+      "latest_successful_run_at": "2026-10-05T23:02:12Z",
+      "owner_invariant_status": "PASS_SINGLE_CUSTOM_OWNER",
+      "default_branch_matches_trigger": true,
+      "attention": [
+        "HISTORICAL_NON_DEFAULT_PAGES_RUNS_EXIST_BUT_CURRENT_BRANCH_GUARDS_ARE_NON_DEPLOYING"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000007",
+      "repository_id": "REPO-000007",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Communication-Command-Centre-and-Resource-Hub/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_ACTIONS_CUSTOM",
+      "production_trigger_branch": "feature/daily-ops-current-work",
+      "content_source_ref": "BRANCH:feature/daily-ops-current-work",
+      "workflow_path": ".github/workflows/daily-ops-branch-preview.yml",
+      "workflow_sha": "20673a757e66369fbceeb39b71ce4057d1ad4a6f",
+      "latest_successful_run_id": 37408376296,
+      "latest_successful_run_sha": "988ce648d132913d40ed6f55d3ca4cc8a0e7661e",
+      "latest_successful_run_at": "2026-10-06T03:18:42Z",
+      "owner_invariant_status": "PASS_SINGLE_CUSTOM_OWNER_NON_DEFAULT_SOURCE",
+      "default_branch_matches_trigger": false,
+      "attention": [
+        "PRODUCTION_WORKFLOW_NAME_SAYS_PREVIEW",
+        "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH",
+        "OLDER_MAIN_BRANCH_MANAGED_PAGES_HISTORY_EXISTS"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000008",
+      "repository_id": "REPO-000008",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Cost_Estimation/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_ACTIONS_CUSTOM",
+      "production_trigger_branch": "main",
+      "content_source_ref": "BRANCH:research/open-estimation-engine-v0.1",
+      "workflow_path": ".github/workflows/deploy-estimation-product.yml",
+      "workflow_sha": "fb7e7212210eeeaa968c8299e287971b23066dff",
+      "latest_successful_run_id": 36975828575,
+      "latest_successful_run_sha": "1c8e3e8ac452da5cc72b118b34e9f2bfc77c9ab3",
+      "latest_successful_run_at": "2026-10-02T06:54:31Z",
+      "owner_invariant_status": "PASS_SINGLE_CUSTOM_OWNER_WITH_CROSS_BRANCH_CONTENT_SOURCE",
+      "default_branch_matches_trigger": true,
+      "attention": [
+        "TRIGGER_BRANCH_AND_CONTENT_SOURCE_BRANCH_DIFFER"
+      ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000009",
+      "repository_id": "REPO-000009",
+      "has_pages": true,
+      "public_site_url": "https://fabingurung.github.io/JP_Study_Hub/",
+      "public_site_url_evidence": "REPOSITORY_HOMEPAGE_METADATA",
+      "deployment_mode": "GITHUB_MANAGED_BRANCH",
+      "production_trigger_branch": "pages-live",
+      "content_source_ref": "BRANCH:pages-live",
+      "workflow_path": "dynamic/pages/pages-build-deployment",
+      "workflow_sha": null,
+      "latest_successful_run_id": 37240560843,
+      "latest_successful_run_sha": "ba570d6a72e265a6d0b4fc79cdd41674637d3d24",
+      "latest_successful_run_at": "2026-10-04T22:34:56Z",
+      "owner_invariant_status": "PASS_SINGLE_OWNER_NON_DEFAULT_SOURCE",
+      "default_branch_matches_trigger": false,
+      "attention": [
+        "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH"
+      ]
+    }
+  ]
+}
