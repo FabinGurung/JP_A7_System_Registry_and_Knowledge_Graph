@@ -14,17 +14,19 @@
       "canonical_pages_workflow": null,
       "deployment_type": "PAGES_ENABLED_NO_PRODUCTION_DEPLOYMENT_OBSERVED",
       "public_site_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
-      "deployment_status": "PHASE_3_GITHUB_INVENTORY_IN_PROGRESS",
+      "deployment_status": "PHASE_3_GITHUB_INVENTORY_COMPLETE",
       "visibility": "public",
       "archived": false,
       "system_role": "CANONICAL_A7_SEMANTIC_REGISTRY",
       "ecosystem_scope": "CORE",
       "role_confidence": "HIGH",
       "pages_enabled": true,
-      "last_observed_default_branch_head": "8ab105b60878551e90ac1e3ade1155b951eb362c",
-      "last_verified_at": "2026-10-06T07:50:00Z",
+      "last_observed_default_branch_head": "4c38239ac5dd44870b14d4b55c1356ab0f5f7a1b",
+      "last_verified_at": "2026-10-06T08:02:30Z",
       "historical_alias_coverage": "PARTIAL_VERIFIED",
-      "governance_notes": "GitHub Pages is enabled and a homepage URL is registered, but no successful production Pages deployment was observed during Phase 3. A7 Pages visualization is intentionally a later phase."
+      "governance_notes": "A7 Phase 3 GitHub repository/Pages/workflow inventory is complete. GitHub Pages remains enabled but no successful A7 production Pages deployment was observed during Phase 3; visualization is intentionally deferred. Live default-branch HEAD must always be fetched from GitHub rather than treated as permanently current inside this self-describing registry.",
+      "head_observed_at": "2026-10-06T08:02:30Z",
+      "head_resolution_rule": "FETCH_LIVE_FROM_GITHUB_PROVIDER_DO_NOT_TREAT_STORED_HEAD_AS_PERMANENTLY_CURRENT"
     },
     {
       "repository_id": "REPO-000002",
