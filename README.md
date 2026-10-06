@@ -65,3 +65,7 @@ Phase 4 instead records:
 - a resolver contract that queries `Fabin_Gurung_Drive_Index` and then reads the exact Drive object live when current state matters.
 
 This preserves Drive as authority for private topology while making A7 the machine-readable routing/control plane.
+
+## Research governance foundation
+
+Five public research identities and R&D routes are registered. Read `registry/dependencies/research-governance.json` for the A9 provisioning boundary. The dedicated A9 repository is not provisioned; no scientific histories or Saugat thesis records were imported.

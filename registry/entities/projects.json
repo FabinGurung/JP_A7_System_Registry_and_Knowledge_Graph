@@ -1,5 +1,56 @@
 {
   "schema_version": "1.0.0",
-  "projects": [],
-  "note": "Project inventory is intentionally deferred until schemas and authority contracts are stable."
+  "projects": [
+    {
+      "project_id": "PROJ-000001",
+      "canonical_label": "Saugat NBC205 Seismic Assessment",
+      "status": "PUBLIC_DIRECTORY_METADATA",
+      "slug": "saugat-nbc205-seismic-assessment",
+      "scientific_state": "NOT_ASSERTED",
+      "research_repository_id": "REPO-000006",
+      "public_research_route": "https://fabingurung.github.io/JP_Research-and-Development/projects/saugat-nbc205-seismic-assessment/",
+      "source": "User-supplied research architecture plan; no scientific state or Drive authority imported."
+    },
+    {
+      "project_id": "PROJ-000002",
+      "canonical_label": "Nabin Hospital Fragility Assessment",
+      "status": "PUBLIC_DIRECTORY_METADATA",
+      "slug": "nabin-hospital-fragility-assessment",
+      "scientific_state": "NOT_ASSERTED",
+      "research_repository_id": "REPO-000006",
+      "public_research_route": "https://fabingurung.github.io/JP_Research-and-Development/projects/nabin-hospital-fragility-assessment/",
+      "source": "User-supplied research architecture plan; no scientific state or Drive authority imported."
+    },
+    {
+      "project_id": "PROJ-000003",
+      "canonical_label": "Fabin BIM GIS Database",
+      "status": "PUBLIC_DIRECTORY_METADATA",
+      "slug": "fabin-bim-gis-database",
+      "scientific_state": "NOT_ASSERTED",
+      "research_repository_id": "REPO-000006",
+      "public_research_route": "https://fabingurung.github.io/JP_Research-and-Development/projects/fabin-bim-gis-database/",
+      "source": "User-supplied research architecture plan; no scientific state or Drive authority imported."
+    },
+    {
+      "project_id": "PROJ-000004",
+      "canonical_label": "AEC Open Architecture Engine",
+      "status": "PUBLIC_DIRECTORY_METADATA",
+      "slug": "aec-open-architecture-engine",
+      "scientific_state": "NOT_ASSERTED",
+      "research_repository_id": "REPO-000006",
+      "public_research_route": "https://fabingurung.github.io/JP_Research-and-Development/projects/aec-open-architecture-engine/",
+      "source": "User-supplied research architecture plan; no scientific state or Drive authority imported."
+    },
+    {
+      "project_id": "PROJ-000005",
+      "canonical_label": "Bijayapur Hydrokinetic Energy Study",
+      "status": "PUBLIC_DIRECTORY_METADATA",
+      "slug": "bijayapur-hydrokinetic-energy-study",
+      "scientific_state": "NOT_ASSERTED",
+      "research_repository_id": "REPO-000006",
+      "public_research_route": "https://fabingurung.github.io/JP_Research-and-Development/projects/bijayapur-hydrokinetic-energy-study/",
+      "source": "User-supplied research architecture plan; no scientific state or Drive authority imported."
+    }
+  ],
+  "note": "Public research-directory identities. Live scientific status and private evidence remain in their existing authorities."
 }
