@@ -95,8 +95,8 @@
     "create_new_sequence_for_acknowledgement": false
   },
   "current_sequence": "A7-SEQ-000007",
-  "current_sequence_status": "IN_PROGRESS",
-  "observed_at": "2026-10-06T11:53:00Z",
+  "current_sequence_status": "FINAL_CLOSED_PASS",
+  "observed_at": "2026-10-06T11:58:30Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
