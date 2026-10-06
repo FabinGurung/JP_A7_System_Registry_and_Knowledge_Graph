@@ -13,16 +13,19 @@ For any A7 task:
 1. Read `A7_BOOTSTRAP.json`.
 2. Resolve the requested entity by permanent A7 ID or governed alias.
 3. Load applicable global policy.
-4. Load the authority assignment for the requested fact class.
-5. Traverse typed edges only as needed.
-6. Fetch the live authoritative provider when the task depends on provider state.
-7. Verify provider object ID/revision/timestamp where available.
-8. Normalize only supported facts.
-9. Mutate only the declared writable authority for that data class.
-10. Regenerate downstream projections.
-11. Run validation/CI.
-12. Provider-read back the result.
-13. Close the same bounded A7 sequence; do not create a new sequence merely to acknowledge it.
+4. Resolve the requested fact class.
+5. Load the most-specific authority assignment: entity override → project override → module override → global fact class.
+6. Load the originating provider policy.
+7. Fetch the live provider when current state is required.
+8. Verify provider object ID/revision/timestamp where available.
+9. Classify candidate claims as declared authority, verified human-QA resolution, evidence, projection or unknown.
+10. Apply `registry/authority/conflict-resolution.json`; never use recency unless the fact class explicitly permits it.
+11. If unresolved material/safety conflict remains, open human QA instead of guessing.
+12. Mutate only the declared writable authority.
+13. Regenerate downstream projections.
+14. Run validation/CI.
+15. Provider-read back the result.
+16. Close the same bounded A7 sequence; do not create a new sequence merely to acknowledge it.
 
 ## 3. AI behavior
 
@@ -34,21 +37,25 @@ Never:
 - invent a project-specific route;
 - infer completion from an unlabeled image;
 - silently reconcile conflicting provider claims;
+- treat a communication statement as automatically proving its real-world claim;
 - edit generated HTML/CSV/graphs to change an authoritative fact.
 
 ## 4. Conflict and human QA
 
-Apply the authority map first. If policy does not resolve a material conflict, create a human-QA case rather than guessing.
+Authority precedes recency. Provider truth and domain truth are distinct: Slack/Discord/email/WhatsApp may prove what was said; Drive may prove which file/revision exists; Sheets may prove exact cell state; GitHub may prove repository/ref/workflow state. The applicable fact-class contract decides whether those provider facts are also the domain authority.
 
-A human-QA request should include:
+If material evidence contradicts the designated domain authority, keep the current authority value, record the disagreement, and open a human-QA reconciliation case. If multiple valid authorities disagree, block the canonical mutation until QA or an explicit version rule resolves it.
+
+A human-QA request must include:
+- QA case ID;
 - entity/project ID;
-- disputed fact class;
+- disputed fact class and conflict type;
 - each conflicting statement/value;
 - provider/evidence references;
-- the associated conversation/evidence link when available;
-- a short explicit question that can resolve the ambiguity.
+- associated conversation/evidence link when available;
+- a short explicit question.
 
-Preferred communication channel is the governed project Slack thread/channel; email may be used where Slack is unavailable or the responsible person is defined through email. The confirming reply becomes provider evidence.
+Preferred route: governed project Slack thread/channel, then email where Slack is unavailable or email is the governed responsible-person route. The confirming response must be provider-referenced before it can resolve the case.
 
 ## 5. Three-attempt fail-forward rule
 
@@ -58,7 +65,7 @@ For a connector/provider action that fails:
 - after 3 failed attempts: record the deferred dependency/problem and continue the next independent task;
 - never fabricate the blocked fact;
 - mark the affected item `BLOCKED`, `UNVERIFIED` or `AWAITING_PROVIDER`;
-- report the failed dependency and error summary in the closeout.
+- report the failed dependency and last error in closeout.
 
 See `policies/global/fail-forward.json`.
 
@@ -70,7 +77,7 @@ This repository is public. Store metadata and public-safe relationships, not con
 
 Canonical writable:
 - JSON for current normalized state;
-- JSONL/NDJSON for append-only events, edges, aliases and provider observations.
+- JSONL/NDJSON for append-only events, edges, aliases, provider observations and QA events.
 
 Formal contracts:
 - JSON Schema;
@@ -107,3 +114,17 @@ Each bounded mutation has:
 - final status.
 
 A sequence may contain many events. Acknowledgement alone does not create another sequence.
+
+## 11. Phase-2 authority engine
+
+Canonical machine contracts:
+- `registry/authority/fact-classes.json`
+- `registry/authority/authority-map.json`
+- `registry/authority/provider-roles.json`
+- `registry/authority/conflict-resolution.json`
+- `registry/authority/conflict-taxonomy.json`
+- `registry/authority/vocabularies.json`
+- `registry/authority/authority-overrides.jsonl`
+- `registry/qa/human-qa-cases.jsonl`
+
+The reference resolver in `scripts/a7_authority_engine.py` operates only on claims already classified from those contracts; it does not invent authority from a provider name.

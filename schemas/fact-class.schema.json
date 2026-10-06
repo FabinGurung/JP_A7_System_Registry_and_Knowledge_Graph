@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/fact-class.schema.json",
+  "title": "A7 Fact Class",
+  "type": "object",
+  "required": [
+    "fact_class_id",
+    "fact_class",
+    "description",
+    "default_materiality",
+    "timestamp_strategy",
+    "requires_explicit_authority"
+  ],
+  "properties": {
+    "fact_class_id": {
+      "type": "string",
+      "pattern": "^FC-[0-9]{6}$"
+    },
+    "fact_class": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_materiality": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MATERIAL",
+        "SAFETY_CRITICAL"
+      ]
+    },
+    "timestamp_strategy": {
+      "type": "string",
+      "enum": [
+        "NO_TIMESTAMP_ARBITRATION",
+        "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+        "LATEST_AUTHORITY_REVISION",
+        "EXPLICIT_FACT_CLASS_RULE_ONLY",
+        "DERIVE_FROM_CURRENT_AUTHORITY"
+      ]
+    },
+    "requires_explicit_authority": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

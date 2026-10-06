@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "fact_classes": [
+    {
+      "fact_class_id": "FC-000001",
+      "fact_class": "semantic_identity",
+      "description": "Permanent A7 identity and canonical semantic label.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000002",
+      "fact_class": "governed_alias",
+      "description": "Alias-to-entity mapping, including historical names.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000003",
+      "fact_class": "typed_relationship",
+      "description": "Directed/undirected A7 knowledge-graph edge.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000004",
+      "fact_class": "a7_policy",
+      "description": "A7 operating, authority, public-safety and mutation policy.",
+      "default_materiality": "SAFETY_CRITICAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000005",
+      "fact_class": "provider_object_state",
+      "description": "Provider-native object identity/state such as GitHub branch/commit, Drive object or Slack message metadata.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000006",
+      "fact_class": "original_document_or_binary_content",
+      "description": "Actual source document/model/photo/binary bytes and provider revision.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000007",
+      "fact_class": "communication_statement",
+      "description": "What a person/system actually communicated, including body, timestamp and thread context.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000008",
+      "fact_class": "spreadsheet_record",
+      "description": "Exact provider cell/range/table state. It becomes domain truth only when a separate fact-class contract assigns it.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000009",
+      "fact_class": "project_operational_fact",
+      "description": "Normalized project progress/readiness/blocker/work-state fact.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000010",
+      "fact_class": "material_quantity_stock_usage",
+      "description": "Material receipt, stock, usage or quantity fact.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000011",
+      "fact_class": "scheduling_fact",
+      "description": "Activity, dependency, calendar, progress, baseline, resource assignment or look-ahead fact.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000012",
+      "fact_class": "cost_estimation_fact",
+      "description": "BOQ, quantity, rate, cost, estimate revision or cost breakdown fact.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000013",
+      "fact_class": "structural_analysis_fact",
+      "description": "Structural model, analysis run, load case, result, design check or structural report fact.",
+      "default_materiality": "SAFETY_CRITICAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000014",
+      "fact_class": "cad_drawing_fact",
+      "description": "Drawing identity, revision, package, publication status or CAD-derived presentation fact.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "EXPLICIT_FACT_CLASS_RULE_ONLY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000015",
+      "fact_class": "generated_projection",
+      "description": "Derived HTML/CSV/Mermaid/graph/search/Excalidraw/3D representation.",
+      "default_materiality": "LOW",
+      "timestamp_strategy": "DERIVE_FROM_CURRENT_AUTHORITY",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000016",
+      "fact_class": "human_qa_resolution",
+      "description": "Verified human response resolving an A7 QA case.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "NO_TIMESTAMP_ARBITRATION",
+      "requires_explicit_authority": true
+    },
+    {
+      "fact_class_id": "FC-000017",
+      "fact_class": "provider_source_reference",
+      "description": "Provider ID, URL, revision, observation timestamp and access classification used to trace evidence.",
+      "default_materiality": "MATERIAL",
+      "timestamp_strategy": "LATEST_PROVIDER_REVISION_WHEN_PROVIDER_EXPLICITLY_VERSIONED",
+      "requires_explicit_authority": true
+    }
+  ]
+}

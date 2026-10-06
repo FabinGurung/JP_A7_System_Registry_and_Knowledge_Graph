@@ -1,0 +1,14 @@
+{
+  "policy_id": "A7-POL-PROVIDER-GSHEETS-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "provider": "google_sheets",
+  "authority_scope": [
+    "exact spreadsheet/sheet/cell/range state"
+  ],
+  "default_claim_role": "EVIDENCE",
+  "underlying_fact_rule": "A spreadsheet record becomes domain authority only when a project/module contract assigns that fact class.",
+  "public_projection_default": "REVIEW_BEFORE_PUBLICATION",
+  "mutation_rule": "Provider mutation requires provider-specific read-before/write/readback evidence when A7 actually changes that provider.",
+  "failure_rule": "After three reasonable failures, record/defer this provider dependency and continue independent work without fabricating blocked facts."
+}

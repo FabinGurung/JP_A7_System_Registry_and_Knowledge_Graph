@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/claim.schema.json",
+  "title": "A7 Classified Claim",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "fact_class",
+    "claim_role",
+    "value"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "pattern": "^CLAIM-[0-9]{6}$"
+    },
+    "entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fact_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_role": {
+      "type": "string",
+      "enum": [
+        "DECLARED_AUTHORITY",
+        "VERIFIED_HUMAN_QA_RESOLUTION",
+        "EVIDENCE",
+        "PROJECTION",
+        "UNKNOWN"
+      ]
+    },
+    "value": {},
+    "source_ref_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "effective_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "authority_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

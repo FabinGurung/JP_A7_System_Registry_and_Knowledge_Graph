@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -36,14 +36,29 @@
     "EXCALIDRAW_DATA",
     "THREE_JS_DATA"
   ],
+  "authority_resolution": {
+    "fact_class_registry": "registry/authority/fact-classes.json",
+    "authority_map": "registry/authority/authority-map.json",
+    "provider_roles": "registry/authority/provider-roles.json",
+    "conflict_engine": "registry/authority/conflict-resolution.json",
+    "conflict_taxonomy": "registry/authority/conflict-taxonomy.json",
+    "vocabularies": "registry/authority/vocabularies.json",
+    "authority_overrides": "registry/authority/authority-overrides.jsonl",
+    "human_qa_cases": "registry/qa/human-qa-cases.jsonl"
+  },
   "load_order": [
     "A7_READ_FIRST.md",
     "policies/global/a7-core.json",
     "policies/global/public-safety.json",
     "policies/global/fail-forward.json",
     "policies/global/human-qa.json",
-    "registry/entities/systems.json",
+    "registry/authority/vocabularies.json",
+    "registry/authority/fact-classes.json",
+    "registry/authority/provider-roles.json",
     "registry/authority/authority-map.json",
+    "registry/authority/conflict-resolution.json",
+    "registry/authority/conflict-taxonomy.json",
+    "registry/entities/systems.json",
     "registry/aliases/aliases.jsonl",
     "registry/edges/edges.jsonl"
   ],
@@ -51,11 +66,12 @@
     "model": "GIT_NATIVE",
     "sequence_format": "A7-SEQ-NNNNNN",
     "event_format": "A7-EVT-NNNNNN-NNN",
+    "qa_case_format": "A7-QA-NNNNNN",
     "require_pre_commit_sha": true,
     "require_ci_validation": true,
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000001",
-  "observed_at": "2026-10-06T03:15:00Z"
+  "current_sequence": "A7-SEQ-000002",
+  "observed_at": "2026-10-06T03:25:00Z"
 }

@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "providers": [
+    {
+      "provider": "github",
+      "immutable_identity_rule": "USE_GITHUB_NUMERIC_OBJECT_ID_WHEN_AVAILABLE",
+      "authoritative_for": [
+        "repository existence",
+        "repository numeric ID",
+        "branch/ref state",
+        "commit/tree/blob content at a ref",
+        "workflow/run state when connector exposes it",
+        "Pages/deployment state when provider endpoint is available"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "GitHub provider state can be authoritative for GitHub itself; a repository file is domain authority only when A7/module policy declares it.",
+      "public_metadata_default": "PUBLIC_IF_REPOSITORY_PUBLIC"
+    },
+    {
+      "provider": "google_drive",
+      "immutable_identity_rule": "USE_DRIVE_FILE_OR_FOLDER_ID",
+      "authoritative_for": [
+        "Drive object existence",
+        "file/folder ID",
+        "original stored content",
+        "provider revision/version where available",
+        "Drive parent/metadata/permission state where connector exposes it"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "Drive owns the source file/object, not every semantic interpretation of its contents.",
+      "public_metadata_default": "REVIEW_BEFORE_PUBLICATION"
+    },
+    {
+      "provider": "google_sheets",
+      "immutable_identity_rule": "USE_SPREADSHEET_ID_PLUS_SHEET_ID_AND_RANGE_WHERE_NEEDED",
+      "authoritative_for": [
+        "exact spreadsheet/sheet/cell/range state"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "A spreadsheet cell is a domain authority only when a project/module fact-class contract explicitly assigns it.",
+      "public_metadata_default": "REVIEW_BEFORE_PUBLICATION"
+    },
+    {
+      "provider": "slack",
+      "immutable_identity_rule": "USE_WORKSPACE_CHANNEL_ID_PLUS_MESSAGE_TS_OR_PROVIDER_MESSAGE_ID",
+      "authoritative_for": [
+        "what was posted",
+        "message timestamp",
+        "thread relationship",
+        "sender identity where available",
+        "attachment/message metadata"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "Slack is authoritative for the statement, not automatically for the real-world fact asserted by the statement.",
+      "public_metadata_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE"
+    },
+    {
+      "provider": "discord",
+      "immutable_identity_rule": "USE_GUILD_CHANNEL_MESSAGE_IDS",
+      "authoritative_for": [
+        "what was posted",
+        "message/provider IDs",
+        "channel/thread relationship",
+        "sender identity where available"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "Discord is authoritative for the statement, not automatically for the real-world fact asserted by the statement.",
+      "public_metadata_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE"
+    },
+    {
+      "provider": "email",
+      "immutable_identity_rule": "USE_PROVIDER_MESSAGE_OR_THREAD_ID",
+      "authoritative_for": [
+        "email message body as sent",
+        "sender/recipient metadata",
+        "provider message/thread timestamps"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "Email is authoritative for the communication, not automatically for the underlying domain fact.",
+      "public_metadata_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE"
+    },
+    {
+      "provider": "whatsapp",
+      "immutable_identity_rule": "USE_PROVIDER_MESSAGE_CHAT_ID_WHERE_AN_APPROVED_CONNECTOR_OR_EXPORT_EXPOSES_IT",
+      "authoritative_for": [
+        "message/export content and provider identity only when verifiably sourced"
+      ],
+      "default_claim_role": "EVIDENCE",
+      "semantic_warning": "WhatsApp is authoritative for a sourced communication record, not automatically for the underlying domain fact. Connector unavailability must use fail-forward rather than guessed data.",
+      "public_metadata_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE"
+    }
+  ]
+}

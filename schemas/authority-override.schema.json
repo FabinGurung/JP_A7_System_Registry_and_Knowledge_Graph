@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/authority-override.schema.json",
+  "title": "A7 Scoped Authority Override",
+  "type": "object",
+  "required": [
+    "override_id",
+    "fact_class",
+    "scope_type",
+    "scope_id",
+    "authority_id",
+    "active"
+  ],
+  "properties": {
+    "override_id": {
+      "type": "string",
+      "pattern": "^AUTH-OVR-[0-9]{6}$"
+    },
+    "fact_class": {
+      "type": "string"
+    },
+    "scope_type": {
+      "type": "string",
+      "enum": [
+        "ENTITY_OVERRIDE",
+        "PROJECT_OVERRIDE",
+        "MODULE_OVERRIDE"
+      ]
+    },
+    "scope_id": {
+      "type": "string"
+    },
+    "authority_id": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

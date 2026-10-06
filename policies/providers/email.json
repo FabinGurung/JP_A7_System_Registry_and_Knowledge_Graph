@@ -1,0 +1,15 @@
+{
+  "policy_id": "A7-POL-PROVIDER-EMAIL-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "provider": "email",
+  "authority_scope": [
+    "message/thread content as sent",
+    "provider message/thread identity and timestamp"
+  ],
+  "default_claim_role": "EVIDENCE",
+  "underlying_fact_rule": "Email proves the communication record; domain authority still follows the fact-class contract.",
+  "public_projection_default": "RESTRICTED_UNLESS_EXPLICITLY_PUBLIC_SAFE",
+  "mutation_rule": "Provider mutation requires provider-specific read-before/write/readback evidence when A7 actually changes that provider.",
+  "failure_rule": "After three reasonable failures, record/defer this provider dependency and continue independent work without fabricating blocked facts."
+}
