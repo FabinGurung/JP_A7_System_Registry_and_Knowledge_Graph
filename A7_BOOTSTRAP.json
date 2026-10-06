@@ -86,6 +86,6 @@
     "create_new_sequence_for_acknowledgement": false
   },
   "current_sequence": "A7-SEQ-000003",
-  "current_sequence_status": "IN_PROGRESS",
-  "observed_at": "2026-10-06T07:50:00Z"
+  "current_sequence_status": "FINAL_CLOSED_PASS",
+  "observed_at": "2026-10-06T08:02:30Z"
 }
