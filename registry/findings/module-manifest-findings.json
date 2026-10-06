@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "findings": [
+    {
+      "finding_id": "MODMAN-FIND-000001",
+      "severity": "INFO",
+      "code": "ALL_BOUND_MODULES_HAVE_ROOT_A7_MODULE_MANIFEST",
+      "status": "VERIFIED",
+      "evidence": "Seven provider readbacks matched module/repository/provider IDs and A7_MODULE.json blob SHAs.",
+      "resolution": "Use the root manifest as deterministic repository doorway."
+    },
+    {
+      "finding_id": "MODMAN-FIND-000002",
+      "severity": "INFO",
+      "code": "ENTRYPOINT_PATHS_PROVIDER_VERIFIED",
+      "status": "VERIFIED",
+      "evidence": "All declared routing entrypoints were checked against recursive GitHub trees on their declared refs before merge.",
+      "resolution": "Future manifest changes must repeat provider path verification."
+    },
+    {
+      "finding_id": "MODMAN-FIND-000003",
+      "severity": "MEDIUM",
+      "code": "RND_PAYLOAD_MANIFEST_REQUIRED_REGENERATION",
+      "status": "RESOLVED",
+      "evidence": "R&D validation failed twice after adding A7_MODULE.json; third materially corrected attempt passed, followed by main validation and Pages deployment PASS.",
+      "resolution": "Preserve the three-attempt history in provider observations; no remaining R&D blocker."
+    },
+    {
+      "finding_id": "MODMAN-FIND-000004",
+      "severity": "LOW",
+      "code": "SOME_MODULE_REPOSITORIES_HAVE_NO_LOCAL_MANIFEST_CI",
+      "status": "OPEN_OBSERVATION",
+      "evidence": "Scheduling, CAD and Study exposed no repository-local default-branch validation run for the metadata-only merge.",
+      "resolution": "Central A7 contract validates identity/readback now; a future optional module-local validator may be added if drift becomes frequent."
+    }
+  ]
+}

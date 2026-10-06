@@ -142,3 +142,21 @@ The execution modules are peers:
 Operations may link to/surface Scheduling, Cost, Structural and CAD in human-facing project pages. `LINKS_TO_PEER_MODULE` is navigation only; it must never be interpreted as containment or ownership.
 
 R&D and Study are separate peer knowledge modules. R&D publication does not absorb executable specialist engines.
+
+
+## 13. Cross-repository module manifest
+
+Every bound specialist/knowledge repository exposes `A7_MODULE.json` at its default-branch root.
+
+When entering a module:
+
+1. Resolve the module and immutable repository identity from A7.
+2. Fetch `A7_MODULE.json` from the repository default branch.
+3. Verify `module_id`, `repository_id` and `provider_repository_id` against A7.
+4. Load the central ownership profile and authority map.
+5. Select only the routing entrypoint relevant to the requested task.
+6. Fetch that exact ref/path live when current state matters.
+7. Mutate only the owning domain/provider.
+8. Provider-read back the mutation.
+
+`A7_MODULE.json` is routing metadata, not domain truth. It must not contain or replace Daily Ops facts, schedules, BOQs, structural results, drawing revisions, research findings, study content or original Drive files.

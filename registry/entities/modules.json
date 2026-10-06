@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "2.1.0",
   "status": "ACTIVE",
   "modules": [
     {
@@ -30,7 +30,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-OPS-001",
       "public_site_url": "https://fabingurung.github.io/JP_Communication-Command-Centre-and-Resource-Hub/",
-      "note": "Human-facing project experience, Daily Ops and specialist navigation. It may surface/link peer specialist modules but does not own their engineering engines."
+      "note": "Human-facing project experience, Daily Ops and specialist navigation. It may surface/link peer specialist modules but does not own their engineering engines.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "929a7f481029924310a24f238f20d31bb041df62",
+        "observed_commit_sha": "cf7fcad6bffe2d6d6c0c7cb412c53f2310c784e1",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-SCHED-001",
@@ -57,7 +65,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-SCHED-001",
       "public_site_url": "https://fabingurung.github.io/JP_Scheduling_Work_and_Resources_Management/",
-      "note": "Owns scheduling/work/resource engine semantics; Construction Knowledge remains distinct from project-specific schedule occurrences as documented in the owning repository."
+      "note": "Owns scheduling/work/resource engine semantics; Construction Knowledge remains distinct from project-specific schedule occurrences as documented in the owning repository.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "3917a62e774f73f249eab79d961befc709417201",
+        "observed_commit_sha": "2cdc3a900da6cac02d1fd9e5d5ae115937acc024",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-COST-001",
@@ -84,7 +100,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-COST-001",
       "public_site_url": "https://fabingurung.github.io/JP_Cost_Estimation/",
-      "note": "Owns estimation/BOQ/rate/cost logic. Current benchmark structural quantities in this estimator do not make it a structural-design authority."
+      "note": "Owns estimation/BOQ/rate/cost logic. Current benchmark structural quantities in this estimator do not make it a structural-design authority.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "084e34f33475eab2bc405bb2a9adba1e766aefa6",
+        "observed_commit_sha": "4e4b884d8773ab9817777ef264df4d6ccdc3da91",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-STRUCT-001",
@@ -112,7 +136,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-STRUCT-001",
       "public_site_url": "https://fabingurung.github.io/JP_Structural_Analysis/",
-      "note": "Peer to Operations, Scheduling, Cost and CAD. Owns governed structural-analysis/SAR engine semantics; Operations may link to it but never contains or owns it."
+      "note": "Peer to Operations, Scheduling, Cost and CAD. Owns governed structural-analysis/SAR engine semantics; Operations may link to it but never contains or owns it.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "77aa77749816641f1dd092e3b6062afc37b47f70",
+        "observed_commit_sha": "cc84483447acef7766553743fc40609140abc7a8",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-CAD-001",
@@ -142,7 +174,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-CAD-001",
       "public_site_url": "https://fabingurung.github.io/JP_Computer-Aided-Drawings/",
-      "note": "Peer to Operations, Scheduling, Cost and Structural. Owns drawing publication/workflows; engineering approval remains provider/project-governed."
+      "note": "Peer to Operations, Scheduling, Cost and Structural. Owns drawing publication/workflows; engineering approval remains provider/project-governed.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "narayani-pages-v0.2",
+        "provider_blob_sha": "412a81b6b8fd004e4552b039f4250d4dcd8eef39",
+        "observed_commit_sha": "c0f8a61f938b495e01dc360314af477f7d73654c",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-RND-001",
@@ -170,7 +210,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-RND-001",
       "public_site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
-      "note": "Owns public research publication/routing; executable specialist product engines remain in their specialist repositories."
+      "note": "Owns public research publication/routing; executable specialist product engines remain in their specialist repositories.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "e7cd3d712bf24169edb54fbd13ec502ee3aba3bc",
+        "observed_commit_sha": "b210f2d2dc461c0bf7d2c0975633ddac7ce98008",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     },
     {
       "module_id": "MOD-STUDY-001",
@@ -200,7 +248,15 @@
       ],
       "ownership_profile_id": "OWN-MOD-STUDY-001",
       "public_site_url": "https://fabingurung.github.io/JP_Study_Hub/",
-      "note": "Owns study/learning workflows and academic study pages, not production engineering or project operations."
+      "note": "Owns study/learning workflows and academic study pages, not production engineering or project operations.",
+      "a7_module_manifest": {
+        "path": "A7_MODULE.json",
+        "ref": "main",
+        "provider_blob_sha": "1d3711ed0c226e1997beec48ec4521431ee492b2",
+        "observed_commit_sha": "d89e84524786154174a57dfb95f2918cc875bebd",
+        "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+        "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001"
+      }
     }
   ]
 }

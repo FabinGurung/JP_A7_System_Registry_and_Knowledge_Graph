@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001",
+  "status": "ACTIVE",
+  "canonical_path": "A7_MODULE.json",
+  "manifest_kind": "A7_MODULE_MANIFEST",
+  "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
+  "scope": "ALL_BOUND_A7_SPECIALIST_AND_KNOWLEDGE_MODULES",
+  "authority_model": {
+    "schema_authority": "A7 / schemas/module-manifest.schema.json",
+    "module_identity_authority": "A7 / registry/entities/modules.json",
+    "ownership_authority": "A7 / registry/authority/module-ownership.json + authority-map.json",
+    "repository_local_routing_authority": "Owning repository default-branch A7_MODULE.json",
+    "domain_fact_authority": "Never A7_MODULE.json; resolve the owning fact class/module/provider."
+  },
+  "required_invariants": [
+    "One A7_MODULE.json exists at repository root on each bound module's default branch.",
+    "module_id, repository_id and provider_repository_id must exactly match A7.",
+    "The manifest contains routing pointers, not duplicated domain facts.",
+    "Every routing entrypoint declares both ref and path.",
+    "Non-default working/publication refs are explicit; default branch is never assumed to be the current engine source.",
+    "A7 ownership profile must be loaded before domain mutation.",
+    "Operations links to peer modules do not imply containment or ownership."
+  ],
+  "ai_resolution_order": [
+    "Read A7_BOOTSTRAP.json.",
+    "Resolve module identity from registry/entities/modules.json.",
+    "Fetch A7_MODULE.json from that module repository's default branch using immutable repository identity.",
+    "Verify module_id + repository_id + provider_repository_id.",
+    "Load the central ownership profile and authority assignment.",
+    "Follow only the routing entrypoint relevant to the requested task.",
+    "Fetch the target ref/path live when current state matters.",
+    "Mutate only the owning domain repository/provider, then provider-read back.",
+    "Treat A7_MODULE.json as routing metadata, never domain truth."
+  ],
+  "mutation_rule": "Changing A7_MODULE.json requires provider readback and A7 manifest observation reconciliation. Do not edit generated Pages/HTML to change the routing contract.",
+  "observed_at": "2026-10-06T11:53:00Z"
+}

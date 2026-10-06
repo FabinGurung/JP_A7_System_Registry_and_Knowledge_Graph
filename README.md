@@ -8,12 +8,13 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000006` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000007` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
 - Phase 4 Google Drive / Kaksaveksaka A9 topology metadata inventory: **COMPLETE**
 - Phase 6 specialist module binding + ownership boundaries: **COMPLETE**
+- Phase 7 cross-repository module manifest contract: **IN_PROGRESS**
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**
@@ -88,3 +89,10 @@ A7 semantic control plane
 ```
 
 For the project-execution tier, Operations, Scheduling, Cost, Structural and CAD are siblings. The Operations Hub may display links/status from the other modules, but it never owns their engineering domain truth.
+
+
+## Phase 7 cross-repository module doorway
+
+Every bound module repository now exposes a root `A7_MODULE.json`. It is a small routing contract: stable IDs, A7 ownership pointer, explicit refs and task entrypoints. It does **not** duplicate domain facts.
+
+This lets an AI enter a specialist repository deterministically without first reading a long README or guessing which branch/file is current.
