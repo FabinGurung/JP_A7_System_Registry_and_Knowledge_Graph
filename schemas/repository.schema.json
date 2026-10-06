@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/repository.schema.json",
+  "title": "A7 GitHub Repository Registry Record",
+  "type": "object",
+  "required": [
+    "repository_id",
+    "repository_full_name",
+    "current_slug",
+    "provider_object_id",
+    "default_branch",
+    "visibility",
+    "system_role"
+  ],
+  "properties": {
+    "repository_id": {
+      "type": "string",
+      "pattern": "^REPO-[0-9]{6}$"
+    },
+    "repository_full_name": {
+      "type": "string",
+      "pattern": "^[^/]+/[^/]+$"
+    },
+    "current_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provider_object_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "default_branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_production_branch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_pages_workflow": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "public_site_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private",
+        "internal"
+      ]
+    },
+    "system_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

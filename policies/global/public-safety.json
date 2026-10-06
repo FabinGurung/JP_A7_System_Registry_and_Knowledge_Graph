@@ -1,0 +1,27 @@
+{
+  "policy_id": "A7-POL-PUBLIC-SAFETY-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "repository_visibility": "PUBLIC",
+  "allowed_by_default": [
+    "PUBLIC_REPOSITORY_IDS_AND_URLS",
+    "PUBLIC_PAGES_URLS",
+    "GENERIC_SCHEMAS",
+    "PUBLIC_PROJECT_IDS_AND_ALIASES",
+    "PUBLIC_MODULE_RELATIONSHIPS",
+    "PUBLIC_SAFE_PROVIDER_METADATA",
+    "GENERATED_PUBLIC_DIAGRAMS"
+  ],
+  "forbidden_by_default": [
+    "TOKENS",
+    "API_KEYS",
+    "PASSWORDS",
+    "PRIVATE_MESSAGE_BODIES",
+    "CONFIDENTIAL_FILE_CONTENTS",
+    "PRIVATE_PERSONAL_INFORMATION",
+    "RESTRICTED_FINANCIAL_DATA",
+    "RESTRICTED_ENGINEERING_CONTENT"
+  ],
+  "metadata_rule": "A private provider object may be indexed only when its metadata exposure is itself approved for public publication.",
+  "projection_rule": "Records with public_projection=false must be omitted from public generated views."
+}

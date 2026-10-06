@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/schemas/authority.schema.json",
+  "title": "A7 Authority Map",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "assignments"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fact_class",
+          "writable_store",
+          "rule"
+        ],
+        "properties": {
+          "fact_class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority_system_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "writable_store": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

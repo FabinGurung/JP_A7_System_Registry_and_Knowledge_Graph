@@ -1,0 +1,1 @@
+{"edge_id":"EDGE-000001","from_entity_id":"SYS-A7-000001","relation_type":"IMPLEMENTED_BY","to_entity_id":"REPO-000001","direction":"DIRECTED","status":"ACTIVE","observed_at":"2026-10-06T03:15:00Z","note":"A7 semantic control system is implemented by the canonical GitHub repository."}

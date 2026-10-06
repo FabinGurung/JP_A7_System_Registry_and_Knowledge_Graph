@@ -1,0 +1,23 @@
+{
+  "policy_id": "A7-POL-FAIL-FORWARD-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "max_attempts_per_dependency": 3,
+  "on_repeated_failure": "DEFER_AND_CONTINUE_NEXT_INDEPENDENT_TASK",
+  "required_actions": [
+    "RECORD_FAILED_DEPENDENCY",
+    "RECORD_ATTEMPT_COUNT",
+    "RECORD_ERROR_SUMMARY",
+    "PRESERVE_NEXT_EXECUTION_BOUNDARY",
+    "CONTINUE_NEXT_INDEPENDENT_TASK"
+  ],
+  "truth_safety": {
+    "fabricate_blocked_fact": false,
+    "allowed_blocked_states": [
+      "BLOCKED",
+      "UNVERIFIED",
+      "AWAITING_PROVIDER"
+    ]
+  },
+  "closeout_requirement": "LIST_DEFERRED_PROBLEMS_AND_LAST_ERROR"
+}

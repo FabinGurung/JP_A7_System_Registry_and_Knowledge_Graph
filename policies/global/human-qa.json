@@ -1,0 +1,21 @@
+{
+  "policy_id": "A7-POL-HUMAN-QA-001",
+  "version": "1.0.0",
+  "status": "ACTIVE",
+  "trigger": "MATERIAL_CONFLICT_NOT_RESOLVED_BY_AUTHORITY_MAP",
+  "ai_may_guess": false,
+  "case_status": "HUMAN_CONFIRMATION_REQUIRED",
+  "preferred_channels": [
+    "slack",
+    "email"
+  ],
+  "required_context": [
+    "ENTITY_OR_PROJECT_ID",
+    "FACT_CLASS",
+    "CONFLICTING_VALUES_OR_STATEMENTS",
+    "PROVIDER_EVIDENCE_REFERENCES",
+    "ASSOCIATED_CONVERSATION_OR_EVIDENCE_LINK_WHEN_AVAILABLE",
+    "EXPLICIT_RESOLUTION_QUESTION"
+  ],
+  "resolution_rule": "The human reply becomes provider evidence and must be stored as a source reference before canonical mutation."
+}
