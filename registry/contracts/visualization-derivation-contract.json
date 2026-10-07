@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "A7-CONTRACT-VISUALIZATION-DERIVATION-001",
+  "status": "ACTIVE",
+  "fact_class": "generated_projection",
+  "authority_id": "AUTH-000015",
+  "generator": "scripts/generate_visualizations.py",
+  "validator": "scripts/validate_visualizations.py",
+  "website_root": "site/",
+  "source_inputs": [
+    "A7_BOOTSTRAP.json",
+    "registry/entities/systems.json",
+    "registry/entities/repositories.json",
+    "registry/entities/modules.json",
+    "registry/entities/project-identities.json",
+    "registry/entities/projects.json",
+    "registry/authority/fact-classes.json",
+    "registry/authority/authority-map.json",
+    "registry/routing/project-module-bindings.json",
+    "registry/edges/edges.jsonl",
+    "registry/entities/google-drive-nodes.json"
+  ],
+  "outputs": [
+    {
+      "path": "a7-summary.json",
+      "role": "SUMMARY"
+    },
+    {
+      "path": "a7-graph.json",
+      "role": "SHARED_2D_3D_GRAPH"
+    },
+    {
+      "path": "a7-search-index.json",
+      "role": "STATIC_SEARCH_INDEX"
+    },
+    {
+      "path": "project-module-matrix.json",
+      "role": "PROJECT_ROUTING_MATRIX"
+    },
+    {
+      "path": "authority-projection.json",
+      "role": "AUTHORITY_MATRIX"
+    },
+    {
+      "path": "a7-architecture.mmd",
+      "role": "MERMAID_SOURCE"
+    },
+    {
+      "path": "a7-excalidraw.json",
+      "role": "EXCALIDRAW_PROJECTION"
+    },
+    {
+      "path": "derivation-manifest.json",
+      "role": "SOURCE_OUTPUT_HASH_LINEAGE"
+    }
+  ],
+  "required_invariants": [
+    "Every generated output is explicitly non-authoritative or inherits that status from the derivation manifest.",
+    "Generated views never override canonical JSON/JSONL or live provider authority.",
+    "Graph edges may be canonical or derived, but derived edges must be labeled as projection relationships.",
+    "Project routing visualization must preserve ROUTE_AVAILABLE_DOES_NOT_ASSERT_PROJECT_INSTANCE.",
+    "Public graph output must not emit Google Drive topology node IDs or provider-private Drive labels.",
+    "Every deployment records the exact source Git commit SHA.",
+    "Derivation manifest records SHA-256 hashes for canonical source inputs and generated outputs.",
+    "Website has no runtime database and no authority-bearing write path."
+  ],
+  "public_projection_policy": {
+    "drive_topology": "EXCLUDE_NODES_AND_LABELS_FROM_PUBLIC_GRAPH",
+    "drive_projection": "AGGREGATE_COUNT_ONLY",
+    "repository_links": "PUBLIC_GITHUB_ONLY",
+    "module_sites": "PUBLIC_PAGES_ONLY"
+  },
+  "deployment": {
+    "provider": "GITHUB_PAGES",
+    "workflow": ".github/workflows/deploy-a7-pages.yml",
+    "canonical_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
+    "deploy_from_exact_commit": true
+  }
+}
