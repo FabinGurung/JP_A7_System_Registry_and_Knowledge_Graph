@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "authority": {
+    "semantic_identity_owner": "SYS-A7-000001",
+    "operational_project_master_owner": "MOD-OPS-001",
+    "source_repository_id": "REPO-000007",
+    "provider_repository_id": "1312147922",
+    "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+    "ref": "main",
+    "path": "projects.csv"
+  },
+  "provider_observation": {
+    "provider_head_sha": "cdad6b3f580ac6a89ae6cd4ace19e42c09c28f82",
+    "provider_head_commit_at": "2026-10-07T10:43:12Z",
+    "source_blob_sha": "8cc669f9761c305de4715c77cb8356598727ee9c",
+    "provider_readback": "PASS"
+  },
+  "project_count": 28,
+  "project_identities": [
+    {
+      "project_id": "PRJ-000001",
+      "source_record_key": "PRJ-000001"
+    },
+    {
+      "project_id": "PRJ-000002",
+      "source_record_key": "PRJ-000002"
+    },
+    {
+      "project_id": "PRJ-000003",
+      "source_record_key": "PRJ-000003"
+    },
+    {
+      "project_id": "PRJ-000004",
+      "source_record_key": "PRJ-000004"
+    },
+    {
+      "project_id": "PRJ-000005",
+      "source_record_key": "PRJ-000005"
+    },
+    {
+      "project_id": "PRJ-000006",
+      "source_record_key": "PRJ-000006"
+    },
+    {
+      "project_id": "PRJ-000007",
+      "source_record_key": "PRJ-000007"
+    },
+    {
+      "project_id": "PRJ-000008",
+      "source_record_key": "PRJ-000008"
+    },
+    {
+      "project_id": "PRJ-000009",
+      "source_record_key": "PRJ-000009"
+    },
+    {
+      "project_id": "PRJ-000010",
+      "source_record_key": "PRJ-000010"
+    },
+    {
+      "project_id": "PRJ-000011",
+      "source_record_key": "PRJ-000011"
+    },
+    {
+      "project_id": "PRJ-000012",
+      "source_record_key": "PRJ-000012"
+    },
+    {
+      "project_id": "PRJ-000013",
+      "source_record_key": "PRJ-000013"
+    },
+    {
+      "project_id": "PRJ-000014",
+      "source_record_key": "PRJ-000014"
+    },
+    {
+      "project_id": "PRJ-000015",
+      "source_record_key": "PRJ-000015"
+    },
+    {
+      "project_id": "PRJ-000016",
+      "source_record_key": "PRJ-000016"
+    },
+    {
+      "project_id": "PRJ-000017",
+      "source_record_key": "PRJ-000017"
+    },
+    {
+      "project_id": "PRJ-000018",
+      "source_record_key": "PRJ-000018"
+    },
+    {
+      "project_id": "PRJ-000019",
+      "source_record_key": "PRJ-000019"
+    },
+    {
+      "project_id": "PRJ-000020",
+      "source_record_key": "PRJ-000020"
+    },
+    {
+      "project_id": "PRJ-000021",
+      "source_record_key": "PRJ-000021"
+    },
+    {
+      "project_id": "PRJ-000022",
+      "source_record_key": "PRJ-000022"
+    },
+    {
+      "project_id": "PRJ-000023",
+      "source_record_key": "PRJ-000023"
+    },
+    {
+      "project_id": "PRJ-000024",
+      "source_record_key": "PRJ-000024"
+    },
+    {
+      "project_id": "PRJ-000025",
+      "source_record_key": "PRJ-000025"
+    },
+    {
+      "project_id": "PRJ-000026",
+      "source_record_key": "PRJ-000026"
+    },
+    {
+      "project_id": "PRJ-000027",
+      "source_record_key": "PRJ-000027"
+    },
+    {
+      "project_id": "PRJ-000028",
+      "source_record_key": "PRJ-000028"
+    }
+  ],
+  "rule": "A7 stores semantic project IDs only. Project names, status, coordinates, company assignment and other operational project-master values remain in MOD-OPS-001."
+}
