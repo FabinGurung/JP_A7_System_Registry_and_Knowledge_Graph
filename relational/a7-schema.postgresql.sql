@@ -1,4 +1,4 @@
--- A7 relational contract v6.0.0
+-- A7 relational contract v7.0.0
 -- FORMAL MODEL ONLY. A live PostgreSQL/Neon runtime is intentionally deferred.
 -- Canonical writable records remain JSON + JSONL unless a later A7 decision explicitly changes authority.
 
@@ -352,3 +352,40 @@ ALTER TABLE a7_module_manifest_observations
 ALTER TABLE a7_module_manifest_observations
     ADD CONSTRAINT fk_a7_manifest_repo
     FOREIGN KEY (repository_id) REFERENCES a7_repositories(repository_id);
+
+-- Phase 10 deterministic project-module routing contract v1.0.0
+CREATE TABLE a7_project_semantic_identities (
+    project_id TEXT PRIMARY KEY,
+    source_repository_id TEXT NOT NULL,
+    source_record_key TEXT NOT NULL UNIQUE,
+    observed_source_blob_sha TEXT NOT NULL,
+    observed_provider_head_sha TEXT NOT NULL
+);
+
+CREATE TABLE a7_execution_profiles (
+    execution_profile_id TEXT PRIMARY KEY,
+    profile_role TEXT NOT NULL UNIQUE,
+    status TEXT NOT NULL
+);
+
+CREATE TABLE a7_execution_profile_routes (
+    route_id TEXT PRIMARY KEY,
+    execution_profile_id TEXT NOT NULL,
+    fact_class TEXT NOT NULL,
+    authority_id TEXT NOT NULL,
+    module_id TEXT NOT NULL,
+    route_role TEXT NOT NULL,
+    project_instance_assertion TEXT NOT NULL CHECK (project_instance_assertion = 'NOT_ASSERTED_BY_A7'),
+    UNIQUE (execution_profile_id, fact_class),
+    FOREIGN KEY (execution_profile_id) REFERENCES a7_execution_profiles(execution_profile_id),
+    FOREIGN KEY (module_id) REFERENCES a7_modules(module_id)
+);
+
+CREATE TABLE a7_project_execution_bindings (
+    project_id TEXT PRIMARY KEY,
+    execution_profile_id TEXT NOT NULL,
+    binding_status TEXT NOT NULL CHECK (binding_status = 'ACTIVE_ROUTING'),
+    project_specific_module_instances TEXT NOT NULL CHECK (project_specific_module_instances = 'NOT_ASSERTED_BY_A7'),
+    FOREIGN KEY (project_id) REFERENCES a7_project_semantic_identities(project_id),
+    FOREIGN KEY (execution_profile_id) REFERENCES a7_execution_profiles(execution_profile_id)
+);

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "A7-CONTRACT-PROJECT-MODULE-ROUTING-001",
+  "status": "ACTIVE",
+  "project_identity_registry": "registry/entities/project-identities.json",
+  "module_registry": "registry/entities/modules.json",
+  "authority_map": "registry/authority/authority-map.json",
+  "binding_registry": "registry/routing/project-module-bindings.json",
+  "default_execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+  "required_invariants": [
+    "Project operational master values remain owned by MOD-OPS-001 and are not duplicated into A7 routing records.",
+    "A7 may store stable project semantic IDs and project-to-routing-profile relationships.",
+    "Each route maps exactly one governed fact class to its A7 authority-owner module.",
+    "Route availability never asserts that a project-specific instance, model, schedule, BOQ or drawing already exists.",
+    "Module resolution proceeds through registry/entities/modules.json and the module's current A7_MODULE.json pointer.",
+    "Research and Study are not default project-execution routes.",
+    "Current provider state must be re-read when mutation or freshness matters."
+  ],
+  "ai_resolution_order": [
+    "Resolve project_id in registry/entities/project-identities.json.",
+    "If current operational project-master data is needed, read MOD-OPS-001 projects.csv live.",
+    "Resolve the project's execution_profile_id from registry/routing/project-module-bindings.json.",
+    "Select the route matching the requested fact class.",
+    "Verify that the selected module is the authority owner in registry/authority/authority-map.json.",
+    "Resolve the module through registry/entities/modules.json.",
+    "Follow the module's current A7_MODULE.json pointer and task-specific routing entrypoint.",
+    "Fetch the owning repository/provider live before mutation.",
+    "Do not infer project-specific artifact existence from route availability."
+  ]
+}
