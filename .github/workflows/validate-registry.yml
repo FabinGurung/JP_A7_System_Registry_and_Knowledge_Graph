@@ -40,6 +40,8 @@ jobs:
         run: python scripts/validate_module_boundaries.py
       - name: Validate cross-repository module manifest contract
         run: python scripts/validate_module_manifests.py
+      - name: Validate deterministic project-module routing
+        run: python scripts/validate_project_module_bindings.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative
