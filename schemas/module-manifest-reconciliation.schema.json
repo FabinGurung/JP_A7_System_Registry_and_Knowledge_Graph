@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/main/schemas/module-manifest-reconciliation.schema.json",
+  "title": "A7 Module Manifest Reconciliation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reconciliation_id",
+    "sequence_id",
+    "module_id",
+    "repository_id",
+    "provider_repository_id",
+    "repository_full_name",
+    "manifest_path",
+    "previous_manifest_blob_sha",
+    "current_manifest_blob_sha",
+    "previous_observed_commit_sha",
+    "current_observed_commit_sha",
+    "default_branch",
+    "refs",
+    "entrypoint_count",
+    "entrypoint_ids",
+    "manifest_role",
+    "provider_readback",
+    "provider_observed_at",
+    "reconciled_at",
+    "historical_baseline_preserved",
+    "note"
+  ],
+  "properties": {
+    "reconciliation_id": {
+      "type": "string",
+      "pattern": "^MODMAN-REC-[0-9]{6}$"
+    },
+    "sequence_id": {
+      "type": "string",
+      "pattern": "^A7-SEQ-[0-9]{6}$"
+    },
+    "module_id": {
+      "type": "string"
+    },
+    "repository_id": {
+      "type": "string"
+    },
+    "provider_repository_id": {
+      "type": "string"
+    },
+    "repository_full_name": {
+      "type": "string"
+    },
+    "manifest_path": {
+      "const": "A7_MODULE.json"
+    },
+    "previous_manifest_blob_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "current_manifest_blob_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "previous_observed_commit_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "current_observed_commit_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "default_branch": {
+      "type": "string"
+    },
+    "refs": {
+      "type": "object"
+    },
+    "entrypoint_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entrypoint_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "manifest_role": {
+      "const": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS"
+    },
+    "provider_readback": {
+      "const": "PASS"
+    },
+    "provider_observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reconciled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "historical_baseline_preserved": {
+      "const": true
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

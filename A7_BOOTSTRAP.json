@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -74,6 +74,7 @@
     "registry/authority/module-ownership.json",
     "registry/entities/modules.json",
     "registry/providers/module-manifest-observations.json",
+    "registry/providers/module-manifest-reconciliations.jsonl",
     "registry/contracts/module-manifest-contract.json",
     "registry/providers/github-inventory-meta.json",
     "registry/providers/github-pages.json",
@@ -94,9 +95,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000008",
-  "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-06T23:28:47Z",
+  "current_sequence": "A7-SEQ-000009",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-07T15:27:00+05:45",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -115,6 +116,7 @@
     "contract": "registry/contracts/module-manifest-contract.json",
     "schema": "schemas/module-manifest.schema.json",
     "observations": "registry/providers/module-manifest-observations.json",
-    "canonical_repository_path": "A7_MODULE.json"
+    "canonical_repository_path": "A7_MODULE.json",
+    "reconciliations": "registry/providers/module-manifest-reconciliations.jsonl"
   }
 }
