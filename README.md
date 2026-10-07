@@ -8,7 +8,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000010` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000011` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
@@ -17,7 +17,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Phase 7 cross-repository module manifest contract: **COMPLETE**
 - Seq8 GitHub Pages/workflow refresh: **COMPLETE**
 - Seq9 R&D module-manifest reconciliation: **COMPLETE**
-- Seq10 deterministic Project-to-Module routing: **COMPLETE**
+- Seq10 deterministic Project-to-Module routing: **COMPLETE**\n- Seq11 visualization / derivation layer + A7 Pages UI: **IN_PROGRESS**
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**
@@ -108,3 +108,24 @@ A7 registers only stable project semantic IDs and their routing profile. Operati
 The default AEC execution profile routes governed fact classes to the five peer execution modules: Operations, Scheduling, Cost, Structural and CAD. A route means that the selected module owns the requested fact class for the project context; it does not claim that a project-specific schedule, BOQ, structural model or CAD package already exists.
 
 AI resolution is: project ID -> execution profile -> fact-class route -> authority-owner module -> current A7_MODULE.json -> live owning provider/ref/path.
+
+
+## Visualization and derivation layer
+
+A7 generates a public-safe, non-authoritative visualization layer from canonical JSON/JSONL and the exact deployed Git commit.
+
+The derivation engine produces:
+
+- shared 2D/3D graph data;
+- static search index;
+- Project-to-Module routing matrix;
+- authority matrix;
+- Mermaid architecture source;
+- Excalidraw projection data;
+- SHA-256 source/output derivation manifest.
+
+The interactive site is published at:
+
+https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/
+
+The site is a projection surface only. It cannot mutate domain facts and does not become authority. Internal/private Google Drive topology nodes and labels are excluded from the public graph; only an aggregate registered-node count is exposed.

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#020617">
+  <meta name="description" content="A7 semantic control plane — generated knowledge graph, authority routing and project-module visualization.">
+  <title>A7 Control Plane · Knowledge Graph</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="A7 home">
+      <span class="brand-mark">A7</span>
+      <span><strong>System Registry</strong><small>Knowledge Graph & Routing</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="icon-button" id="searchButton" title="Search (/)">⌕</button>
+      <a class="ghost-link" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <span class="status-pill"><i></i><span id="sequenceStatus">Loading</span></span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">GENERATED · NON-AUTHORITATIVE PROJECTION</p>
+        <h1>One control plane.<br><span>Every governed route visible.</span></h1>
+        <p class="hero-copy">Explore A7 identities, peer engineering modules, authority boundaries, project routing and derivation lineage without duplicating the domain truth they point to.</p>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="core">A7</div>
+      </div>
+    </section>
+
+    <section class="metrics" id="metrics"></section>
+
+    <nav class="tabs" aria-label="Visualization views">
+      <button class="tab active" data-view="overview">Overview</button>
+      <button class="tab" data-view="graph">2D Graph</button>
+      <button class="tab" data-view="spatial">Spatial 3D</button>
+      <button class="tab" data-view="routing">Project Routing</button>
+      <button class="tab" data-view="authority">Authority</button>
+      <button class="tab" data-view="derivation">Derivation</button>
+    </nav>
+
+    <section class="view active" id="view-overview">
+      <div class="grid-12">
+        <article class="panel span-8">
+          <div class="panel-head">
+            <div><p class="kicker">SYSTEM TOPOLOGY</p><h2>Execution architecture</h2></div>
+            <button class="text-button" data-go="graph">Open graph →</button>
+          </div>
+          <div class="architecture" id="architecture"></div>
+        </article>
+        <article class="panel span-4 authority-rule">
+          <p class="kicker">CORE RULE</p>
+          <h2>Authority before recency.</h2>
+          <p>A7 resolves who owns a fact before considering timestamps. Generated HTML, graphs and search indexes never become authority.</p>
+          <div class="rule-chain"><span>Project ID</span><b>→</b><span>Fact class</span><b>→</b><span>Owner module</span><b>→</b><span>Live provider</span></div>
+        </article>
+        <article class="panel span-12">
+          <div class="panel-head"><div><p class="kicker">PEER MODULES</p><h2>Specialist systems</h2></div><span class="muted">No nested monolith</span></div>
+          <div class="module-grid" id="moduleGrid"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" id="view-graph">
+      <div class="workspace">
+        <aside class="workspace-tools">
+          <p class="kicker">FILTERS</p>
+          <div id="graphFilters" class="filter-stack"></div>
+          <hr>
+          <button class="wide-button" id="fitGraph">Fit graph</button>
+          <button class="wide-button secondary" id="resetGraph">Reset view</button>
+          <p class="hint">Drag to pan · wheel to zoom · click a node for details.</p>
+        </aside>
+        <div class="canvas-wrap"><canvas id="graphCanvas"></canvas><div class="canvas-label">2D KNOWLEDGE GRAPH</div></div>
+        <aside class="inspector" id="graphInspector"><p class="kicker">INSPECTOR</p><h3>Select a node</h3><p class="muted">The graph contains only public-safe semantic metadata.</p></aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-spatial">
+      <div class="workspace spatial-workspace">
+        <aside class="workspace-tools">
+          <p class="kicker">SPATIAL MODEL</p>
+          <h3>3D projection</h3>
+          <p class="muted">Same graph, deterministic 3D coordinates. It is a view of A7—not a second data store.</p>
+          <button class="wide-button" id="reset3d">Reset camera</button>
+          <div class="legend" id="spatialLegend"></div>
+        </aside>
+        <div class="canvas-wrap"><canvas id="spatialCanvas"></canvas><div class="canvas-label">ROTATE · ZOOM · INSPECT</div></div>
+        <aside class="inspector" id="spatialInspector"><p class="kicker">INSPECTOR</p><h3>Rotate the graph</h3><p class="muted">Drag to rotate. Wheel changes camera distance.</p></aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-routing">
+      <div class="routing-head">
+        <div><p class="kicker">DETERMINISTIC ROUTER</p><h2>Project → fact class → module</h2><p class="muted">Routing availability does not assert that a project-specific schedule, BOQ, model or drawing exists.</p></div>
+        <label class="select-wrap">Project semantic ID<select id="projectSelect"></select></label>
+      </div>
+      <div class="route-flow"><span id="selectedProject">PRJ</span><b>→</b><span>EXEC-PROFILE-AEC-CORE-001</span><b>→</b><span>5 governed routes</span></div>
+      <div class="route-grid" id="routeGrid"></div>
+      <article class="panel matrix-panel">
+        <div class="panel-head"><div><p class="kicker">ROUTING MATRIX</p><h2>All project identities</h2></div><span class="muted" id="matrixCount"></span></div>
+        <div class="matrix-wrap"><table id="routeMatrix"></table></div>
+      </article>
+    </section>
+
+    <section class="view" id="view-authority">
+      <div class="section-head">
+        <div><p class="kicker">AUTHORITY ENGINE</p><h2>Fact ownership matrix</h2></div>
+        <input class="filter-input" id="authorityFilter" placeholder="Filter fact classes…">
+      </div>
+      <div class="table-wrap"><table class="data-table" id="authorityTable"></table></div>
+    </section>
+
+    <section class="view" id="view-derivation">
+      <div class="grid-12">
+        <article class="panel span-7">
+          <p class="kicker">DERIVATION PIPELINE</p><h2>Canonical inputs → reproducible projections</h2>
+          <div class="pipeline" id="pipeline"></div>
+        </article>
+        <article class="panel span-5">
+          <p class="kicker">BUILD PROVENANCE</p><h2 id="buildId">Loading…</h2>
+          <dl class="provenance" id="provenance"></dl>
+        </article>
+        <article class="panel span-7">
+          <div class="panel-head"><div><p class="kicker">MERMAID SOURCE</p><h2>Architecture projection</h2></div><button class="text-button" id="copyMermaid">Copy</button></div>
+          <pre class="code-block" id="mermaidSource"></pre>
+        </article>
+        <article class="panel span-5">
+          <p class="kicker">OUTPUT INTEGRITY</p><h2>Derived artifacts</h2>
+          <div class="checksum-list" id="checksumList"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal">
+      <div class="search-line"><span>⌕</span><input id="globalSearch" placeholder="Search projects, modules, repositories, fact classes…" autocomplete="off"><kbd>ESC</kbd></div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <footer><span>A7 generated projection · <strong>AI is resolver/operator, not authority.</strong></span><span id="footerBuild"></span></footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
