@@ -8,14 +8,16 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000009` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000010` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
 - Phase 4 Google Drive / Kaksaveksaka A9 topology metadata inventory: **COMPLETE**
 - Phase 6 specialist module binding + ownership boundaries: **COMPLETE**
 - Phase 7 cross-repository module manifest contract: **COMPLETE**
-- Seq8 GitHub Pages/workflow refresh: **COMPLETE**\n- Seq9 R&D module-manifest reconciliation: **COMPLETE**
+- Seq8 GitHub Pages/workflow refresh: **COMPLETE**
+- Seq9 R&D module-manifest reconciliation: **COMPLETE**
+- Seq10 deterministic Project-to-Module routing: **IN_PROGRESS**
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**
@@ -97,3 +99,12 @@ For the project-execution tier, Operations, Scheduling, Cost, Structural and CAD
 Every bound module repository now exposes a root `A7_MODULE.json`. It is a small routing contract: stable IDs, A7 ownership pointer, explicit refs and task entrypoints. It does **not** duplicate domain facts.
 
 This lets an AI enter a specialist repository deterministically without first reading a long README or guessing which branch/file is current.
+
+
+## Deterministic project-module routing
+
+A7 registers only stable project semantic IDs and their routing profile. Operational project-master fields remain in the Operations module.
+
+The default AEC execution profile routes governed fact classes to the five peer execution modules: Operations, Scheduling, Cost, Structural and CAD. A route means that the selected module owns the requested fact class for the project context; it does not claim that a project-specific schedule, BOQ, structural model or CAD package already exists.
+
+AI resolution is: project ID -> execution profile -> fact-class route -> authority-owner module -> current A7_MODULE.json -> live owning provider/ref/path.
