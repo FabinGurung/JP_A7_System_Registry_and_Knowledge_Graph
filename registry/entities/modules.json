@@ -196,7 +196,7 @@
       "repository_full_name": "FabinGurung/JP_Research-and-Development",
       "default_branch": "main",
       "canonical_working_ref": "main",
-      "observed_ref_sha": "90e544b25a0ff6ac493aa8fd02cc4e782cc0feaf",
+      "observed_ref_sha": "b8edd20e0d63b30ed5e303825bf6319c81441713",
       "status": "LIVE",
       "binding_status": "BOUND",
       "local_manifest": {
@@ -215,11 +215,11 @@
         "path": "A7_MODULE.json",
         "ref": "main",
         "provider_blob_sha": "237749ea0caf814a47364b47a092554a926fcd7b",
-        "observed_commit_sha": "90e544b25a0ff6ac493aa8fd02cc4e782cc0feaf",
+        "observed_commit_sha": "b8edd20e0d63b30ed5e303825bf6319c81441713",
         "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
         "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001",
-        "last_reconciliation_id": "MODMAN-REC-000001",
-        "last_reconciled_at": "2026-10-07T15:27:00+05:45"
+        "last_reconciliation_id": "MODMAN-REC-000002",
+        "last_reconciled_at": "2026-10-07T10:45:03Z"
       }
     },
     {
