@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "contract_id": "A7-CONTRACT-PROJECT-MODULE-ROUTING-001",
+  "source_project_identity_registry": "registry/entities/project-identities.json",
+  "execution_profiles": [
+    {
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "profile_role": "DEFAULT_AEC_PROJECT_EXECUTION",
+      "status": "ACTIVE",
+      "routes": [
+        {
+          "route_id": "ROUTE-OPS-001",
+          "fact_class": "project_operational_fact",
+          "authority_id": "AUTH-000009",
+          "module_id": "MOD-OPS-001",
+          "route_role": "OPERATIONS",
+          "route_semantics": "AUTHORITY_ROUTE_ONLY",
+          "project_instance_assertion": "NOT_ASSERTED_BY_A7"
+        },
+        {
+          "route_id": "ROUTE-SCHED-001",
+          "fact_class": "scheduling_fact",
+          "authority_id": "AUTH-000011",
+          "module_id": "MOD-SCHED-001",
+          "route_role": "SCHEDULING",
+          "route_semantics": "AUTHORITY_ROUTE_ONLY",
+          "project_instance_assertion": "NOT_ASSERTED_BY_A7"
+        },
+        {
+          "route_id": "ROUTE-COST-001",
+          "fact_class": "cost_estimation_fact",
+          "authority_id": "AUTH-000012",
+          "module_id": "MOD-COST-001",
+          "route_role": "COST",
+          "route_semantics": "AUTHORITY_ROUTE_ONLY",
+          "project_instance_assertion": "NOT_ASSERTED_BY_A7"
+        },
+        {
+          "route_id": "ROUTE-STRUCT-001",
+          "fact_class": "structural_analysis_fact",
+          "authority_id": "AUTH-000013",
+          "module_id": "MOD-STRUCT-001",
+          "route_role": "STRUCTURAL",
+          "route_semantics": "AUTHORITY_ROUTE_ONLY",
+          "project_instance_assertion": "NOT_ASSERTED_BY_A7"
+        },
+        {
+          "route_id": "ROUTE-CAD-001",
+          "fact_class": "cad_drawing_fact",
+          "authority_id": "AUTH-000014",
+          "module_id": "MOD-CAD-001",
+          "route_role": "CAD",
+          "route_semantics": "AUTHORITY_ROUTE_ONLY",
+          "project_instance_assertion": "NOT_ASSERTED_BY_A7"
+        }
+      ]
+    }
+  ],
+  "project_binding_count": 28,
+  "project_bindings": [
+    {
+      "project_id": "PRJ-000001",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000002",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000003",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000004",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000005",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000006",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000007",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000008",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000009",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000010",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000011",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000012",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000013",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000014",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000015",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000016",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000017",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000018",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000019",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000020",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000021",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000022",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000023",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000024",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000025",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000026",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000027",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000028",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    }
+  ],
+  "resolver_rules": [
+    "PROJECT_ID_FIRST",
+    "FACT_CLASS_SELECTS_ROUTE",
+    "AUTHORITY_MAP_MUST_MATCH_ROUTE_MODULE",
+    "MODULE_MANIFEST_RESOLVES_REPOSITORY_ENTRYPOINT",
+    "ROUTE_DOES_NOT_ASSERT_PROJECT_INSTANCE",
+    "PROVIDER_READBACK_BEFORE_MUTATION"
+  ]
+}
