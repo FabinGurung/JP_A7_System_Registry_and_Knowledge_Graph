@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/main/schemas/derivation-manifest.schema.json",
+  "title": "A7 Derivation Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "projection_kind",
+    "non_authoritative",
+    "generator",
+    "source_commit_sha",
+    "source_sequence",
+    "source_sequence_status",
+    "generated_at",
+    "sources",
+    "outputs",
+    "privacy_boundary",
+    "authority_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "projection_kind": {
+      "const": "A7_DERIVATION_MANIFEST"
+    },
+    "non_authoritative": {
+      "const": true
+    },
+    "generator": {
+      "const": "scripts/generate_visualizations.py"
+    },
+    "source_commit_sha": {
+      "type": "string",
+      "minLength": 7
+    },
+    "source_sequence": {
+      "type": "string",
+      "pattern": "^A7-SEQ-[0-9]{6}$"
+    },
+    "source_sequence_status": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "privacy_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_boundary": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
