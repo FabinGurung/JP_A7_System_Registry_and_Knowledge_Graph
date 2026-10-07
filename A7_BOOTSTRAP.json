@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.7.0",
+  "schema_version": "1.8.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -98,9 +98,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000010",
-  "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-07T10:52:32Z",
+  "current_sequence": "A7-SEQ-000011",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-07T17:07:00+05:45",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -133,5 +133,25 @@
       "ref": "main"
     },
     "route_instance_rule": "ROUTE_AVAILABLE_DOES_NOT_ASSERT_PROJECT_INSTANCE"
+  },
+  "visualization_derivation": {
+    "contract": "registry/contracts/visualization-derivation-contract.json",
+    "generator": "scripts/generate_visualizations.py",
+    "validator": "scripts/validate_visualizations.py",
+    "public_site_root": "site/",
+    "pages_workflow": ".github/workflows/deploy-a7-pages.yml",
+    "canonical_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
+    "outputs": [
+      "a7-summary.json",
+      "a7-graph.json",
+      "a7-search-index.json",
+      "project-module-matrix.json",
+      "authority-projection.json",
+      "a7-architecture.mmd",
+      "a7-excalidraw.json",
+      "derivation-manifest.json"
+    ],
+    "generated_outputs_are_authority": false,
+    "public_drive_projection": "AGGREGATE_COUNT_ONLY"
   }
 }
