@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.6.0",
+  "schema_version": "1.7.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -73,6 +73,9 @@
     "registry/authority/system-boundaries.json",
     "registry/authority/module-ownership.json",
     "registry/entities/modules.json",
+    "registry/entities/project-identities.json",
+    "registry/contracts/project-module-routing-contract.json",
+    "registry/routing/project-module-bindings.json",
     "registry/providers/module-manifest-observations.json",
     "registry/providers/module-manifest-reconciliations.jsonl",
     "registry/contracts/module-manifest-contract.json",
@@ -95,9 +98,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000009",
-  "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-07T10:45:03Z",
+  "current_sequence": "A7-SEQ-000010",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-07T10:47:56Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -118,5 +121,17 @@
     "observations": "registry/providers/module-manifest-observations.json",
     "canonical_repository_path": "A7_MODULE.json",
     "reconciliations": "registry/providers/module-manifest-reconciliations.jsonl"
+  },
+  "project_module_routing": {
+    "contract": "registry/contracts/project-module-routing-contract.json",
+    "project_identities": "registry/entities/project-identities.json",
+    "bindings": "registry/routing/project-module-bindings.json",
+    "default_execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+    "operations_project_master": {
+      "repository_id": "REPO-000007",
+      "path": "projects.csv",
+      "ref": "main"
+    },
+    "route_instance_rule": "ROUTE_AVAILABLE_DOES_NOT_ASSERT_PROJECT_INSTANCE"
   }
 }
