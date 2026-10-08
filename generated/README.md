@@ -26,3 +26,7 @@ The public website projects A7 semantic metadata only. Google Drive topology nod
 ### Website
 
 The static UI in `site/` renders the generated artifacts with no runtime database and no third-party JavaScript dependency. GitHub Pages is a projection surface, never a domain authority.
+
+## Pinned visualization workspace projection
+
+`registry/decisions/visualization-workspace.json` owns the accepted six-lane design decision. `scripts/generate_visualizations.py` also generates `visualization-workspace.json` under the website's `data/` directory, with the exact source SHA and source/output hash manifest. The workspace consumes this generated read-only decision; it must not be edited to change a decision directly.
