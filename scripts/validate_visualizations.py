@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 REQUIRED = {
+    "visualization-workspace.json",
     "a7-summary.json",
     "a7-graph.json",
     "a7-search-index.json",
