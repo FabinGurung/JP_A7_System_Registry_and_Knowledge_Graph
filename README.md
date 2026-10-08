@@ -8,7 +8,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000011` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000012` — **IN_PROGRESS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
@@ -18,6 +18,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Seq8 GitHub Pages/workflow refresh: **COMPLETE**
 - Seq9 R&D module-manifest reconciliation: **COMPLETE**
 - Seq10 deterministic Project-to-Module routing: **COMPLETE**\n- Seq11 visualization / derivation layer + A7 Pages UI: **COMPLETE**
+- Seq12 pinned visualization strategy: **IN_PROGRESS**
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**
@@ -129,3 +130,11 @@ The interactive site is published at:
 https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/
 
 The site is a projection surface only. It cannot mutate domain facts and does not become authority. Internal/private Google Drive topology nodes and labels are excluded from the public graph; only an aggregate registered-node count is exposed.
+
+## Pinned visualization strategy (A7-SEQ-000012)
+
+The publicly pinned workspace is [A7 visualization strategy](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/visualization-workspace.html).
+
+The governing design decision is `registry/decisions/visualization-workspace.json`; the human handover is `docs/VISUALIZATION_WORKSPACE_READ_FIRST.md`. The six preserved roles are Cytoscape/semantic, React Flow/architecture and routing, tables/audit and QA, Mermaid/docs-as-code, Excalidraw/human annotation, and optional 3D/spatial. Their **implementation statuses are recorded as observations, not promises**. The first two are preferred/NOT INSTALLED; current Canvas/HTML renderers remain. Mermaid/Excalidraw currently generate source/export data only; 3D uses a lightweight Canvas projection. Do not infer completed upgrades without provider readback.
+
+Pages receives `visualization-workspace.json` derived from the canonical decision and included in source/output SHA-256 lineage. CI verifies the pinned navigation, six roles, explicit states and source provenance.
