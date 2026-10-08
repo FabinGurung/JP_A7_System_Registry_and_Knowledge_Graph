@@ -23,6 +23,7 @@ SOURCE_PATHS = [
     "registry/routing/project-module-bindings.json",
     "registry/edges/edges.jsonl",
     "registry/entities/google-drive-nodes.json",
+    "registry/decisions/visualization-workspace.json",
 ]
 
 PUBLIC_GRAPH_TYPES = {
@@ -552,7 +553,15 @@ def main() -> int:
         ],
     }
 
+    workspace_decision = load_json("registry/decisions/visualization-workspace.json")
+    workspace_projection = dict(workspace_decision)
+    workspace_projection["source_commit_sha"] = args.commit_sha
+    workspace_projection["projection_kind"] = "A7_PINNED_VISUALIZATION_DECISION"
+    workspace_projection["non_authoritative"] = True
+    workspace_projection["source_path"] = "registry/decisions/visualization-workspace.json"
+
     outputs: dict[str, Any] = {
+        "visualization-workspace.json": workspace_projection,
         "a7-summary.json": summary,
         "a7-graph.json": graph,
         "a7-search-index.json": {"schema_version": "1.0.0", "non_authoritative": True, "items": search},
