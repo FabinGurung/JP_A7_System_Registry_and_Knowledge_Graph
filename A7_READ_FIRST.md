@@ -160,3 +160,7 @@ When entering a module:
 8. Provider-read back the mutation.
 
 `A7_MODULE.json` is routing metadata, not domain truth. It must not contain or replace Daily Ops facts, schedules, BOQs, structural results, drawing revisions, research findings, study content or original Drive files.
+
+## 14. Pinned visualization strategy
+
+Before modifying the A7 visualization layer, read `registry/decisions/visualization-workspace.json` and `docs/VISUALIZATION_WORKSPACE_READ_FIRST.md`, plus the live source and deployment. The design is pinned at `site/visualization-workspace.html` and in the main website navigation. Preserve the six preferred roles and be explicit about **planned vs installed** technology. Material deviations require a governed and traceable decision update.
