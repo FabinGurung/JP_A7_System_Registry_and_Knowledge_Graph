@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.8.0",
+  "schema_version": "1.9.0",
   "bootstrap_id": "A7-BOOTSTRAP-000001",
   "system_id": "SYS-A7-000001",
   "system_code": "A7",
@@ -98,9 +98,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000011",
-  "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-07T11:32:43Z",
+  "current_sequence": "A7-SEQ-000012",
+  "current_sequence_status": "IN_PROGRESS",
+  "observed_at": "2026-10-09T04:54:00+05:45",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -158,5 +158,16 @@
     "latest_pages_artifact_id": 11479567949,
     "latest_pages_artifact_sha256": "1a8aba923ebd74a798424f0a9231234806ea093dbea8a3cb2de35a0f5ba42070",
     "latest_pages_status": "SUCCESS"
+  },
+  "visualization_strategy": {
+    "decision_id": "A7-VIS-DEC-000001",
+    "preferred_architecture": "Cytoscape semantic exploration / React Flow deterministic architecture / Tables audit+QA / Mermaid docs-as-code / Excalidraw annotation / optional spatial 3D",
+    "machine_decision": "registry/decisions/visualization-workspace.json",
+    "human_runbook": "docs/VISUALIZATION_WORKSPACE_READ_FIRST.md",
+    "pinned_page": "site/visualization-workspace.html",
+    "generated_decision": "site/data/visualization-workspace.json",
+    "validator": "scripts/validate_visualization_workspace.py",
+    "target_does_not_mean_installed": true,
+    "implementation_requires_live_readback": true
   }
 }
