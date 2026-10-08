@@ -99,8 +99,8 @@
     "create_new_sequence_for_acknowledgement": false
   },
   "current_sequence": "A7-SEQ-000012",
-  "current_sequence_status": "IN_PROGRESS",
-  "observed_at": "2026-10-09T04:54:00+05:45",
+  "current_sequence_status": "FINAL_CLOSED_PASS",
+  "observed_at": "2026-10-08T23:16:20Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -168,6 +168,10 @@
     "generated_decision": "site/data/visualization-workspace.json",
     "validator": "scripts/validate_visualization_workspace.py",
     "target_does_not_mean_installed": true,
-    "implementation_requires_live_readback": true
+    "implementation_requires_live_readback": true,
+    "latest_provider_verified_deployed_sha": "69e0a74ba3bfdb07bd7122334a945d746177caa5",
+    "latest_pages_run_id": 37858453762,
+    "latest_pages_artifact_id": 11585560191,
+    "latest_pages_artifact_sha256": "38d1cfdd0580159047ab44852406fc27113a3e025609caa07c5f68dedef3a3d5"
   }
 }
