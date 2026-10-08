@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "A7-VIS-DEC-000001",
+  "sequence_id": "A7-SEQ-000012",
+  "decision_state": "ADOPTED_TARGET_ARCHITECTURE",
+  "recorded_on": "2026-10-09",
+  "title": "Pinned visualization strategy and reproducible workspace",
+  "intent": "Preserve agreed roles, rationale, implementation truth, source paths, and resumption controls; no silent changes or imagined integrations.",
+  "canonical_design_record": true,
+  "domain_fact_authority": false,
+  "public_page": "site/visualization-workspace.html",
+  "source_code_paths": [
+    "site/index.html",
+    "site/assets/app.js",
+    "site/assets/styles.css",
+    "scripts/generate_visualizations.py",
+    "scripts/validate_visualizations.py",
+    ".github/workflows/deploy-a7-pages.yml"
+  ],
+  "ordered_pipeline": [
+    {
+      "order": 1,
+      "id": "CYTOSCAPE",
+      "technology": "Cytoscape.js",
+      "role": "Semantic exploration",
+      "implementation_state_at_record": "PLANNED_NOT_INSTALLED",
+      "observed_implementation": "Custom HTML5 Canvas node-link graph in site/assets/app.js",
+      "why": "Exploratory entity neighborhoods, typed links, filterable clusters",
+      "upgrade_gate": "Introduce Cytoscape as a projection renderer over existing graph JSON; prove stable IDs, filtering, selection and provenance before marking installed."
+    },
+    {
+      "order": 2,
+      "id": "REACT_FLOW",
+      "technology": "React Flow (XYFlow)",
+      "role": "System architecture / deterministic routing",
+      "implementation_state_at_record": "PLANNED_NOT_INSTALLED",
+      "observed_implementation": "HTML/CSS architecture boxes and JavaScript project routing cards",
+      "why": "Explicit Project → Profile → Fact class → Owner module → Repository/entrypoint",
+      "upgrade_gate": "Implement separately from the semantic graph with exact authority route consistency; preserve NOT_ASSERTED_BY_A7 for project artifacts."
+    },
+    {
+      "order": 3,
+      "id": "TABLES",
+      "technology": "Tables / relational matrices",
+      "role": "Audit and QA",
+      "implementation_state_at_record": "IMPLEMENTED",
+      "observed_implementation": "JavaScript-driven Project × Module and authority HTML tables",
+      "why": "Precise IDs, relationship verification, joins, exceptions and evidence",
+      "upgrade_gate": "Keep audit tables usable even when graph interfaces are upgraded."
+    },
+    {
+      "order": 4,
+      "id": "MERMAID",
+      "technology": "Mermaid",
+      "role": "Documentation-as-code",
+      "implementation_state_at_record": "GENERATED_SOURCE_ONLY",
+      "observed_implementation": "Python produces a7-architecture.mmd; site shows copyable source, not Mermaid rendering",
+      "why": "Versionable reproducible diagrams and readable Git diffs",
+      "upgrade_gate": "Optional renderer must read the generated Mermaid source without changing truth."
+    },
+    {
+      "order": 5,
+      "id": "EXCALIDRAW",
+      "technology": "Excalidraw",
+      "role": "Human annotation / presentation",
+      "implementation_state_at_record": "GENERATED_EXPORT_ONLY",
+      "observed_implementation": "Python produces a7-excalidraw.json; no embedded Excalidraw editor/plugin",
+      "why": "Editable explanatory canvases and human review annotations",
+      "upgrade_gate": "Store annotations separately; never back-write canonical facts from user sketches."
+    },
+    {
+      "order": 6,
+      "id": "SPATIAL_3D",
+      "technology": "Optional 3D spatial graph",
+      "role": "Optional spatial exploration",
+      "implementation_state_at_record": "IMPLEMENTED_LIGHTWEIGHT",
+      "observed_implementation": "HTML5 Canvas projection from generated XYZ using manual perspective; no Three.js/WebGL",
+      "why": "Optional spatial relationship exploration at large scale",
+      "upgrade_gate": "Only use WebGL when performance/accessibility justifies it, and preserve 2D/table alternatives."
+    }
+  ],
+  "shared_data_model": "One canonical A7 JSON/JSONL and owning provider source; Python generates graph, search, route/authority matrices, Mermaid, Excalidraw, XYZ and SHA-256 lineage; website is read-only projection.",
+  "source_evidence": {
+    "canonical_project_routes": "registry/routing/project-module-bindings.json",
+    "authority_map": "registry/authority/authority-map.json",
+    "graph_renderer": "site/assets/app.js",
+    "python_derivation": "scripts/generate_visualizations.py",
+    "pages_deployment": ".github/workflows/deploy-a7-pages.yml"
+  },
+  "read_first": [
+    "Fetch LIVE A7_BOOTSTRAP.json, this decision, source code and latest CI/Pages deployment before any claims or edits.",
+    "Never mistake desired Cytoscape/React Flow libraries for installed code; validate actual imports/dependencies.",
+    "Never mistake Mermaid .mmd or Excalidraw JSON exports for integrated rendering/editing plugins.",
+    "3D presently uses manual Canvas perspective, not WebGL/Three.js.",
+    "A project/module route means routable, NOT existence of project-specific specialist artifacts.",
+    "No generated graph, table, canvas, site, or annotation becomes source of authority.",
+    "For a change, preserve PRE → feature/CI → PR/main → provider readback → POST and append events.",
+    "Never silently replace six roles; log explicit rationale and obtain human acceptance for material changes."
+  ],
+  "controls": {
+    "no_parallel_manually_maintained_truth": true,
+    "ui_generated_non_authoritative": true,
+    "no_public_private_drive_labels": true,
+    "no_live_postgres_database": true,
+    "change_requires_live_readback": true,
+    "statuses_not_evergreen": true
+  }
+}
