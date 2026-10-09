@@ -206,7 +206,7 @@
     DATA.graph.legend.forEach(item=>{
       const label=document.createElement("label");label.className="filter-item";
       const input=document.createElement("input");input.type="checkbox";input.checked=true;
-      const dot=document.createElement("i");dot.style.background=item.color;
+      const dot=document.createElement("i");dot.style.background=NODE_PALETTE[item.type] || item.color;
       const text=document.createElement("span");text.textContent=TYPE_LABELS[item.type]||item.type;
       input.addEventListener("change",()=>{input.checked?enabled.add(item.type):enabled.delete(item.type);draw();});
       label.append(input,dot,text);filters.appendChild(label);
@@ -240,7 +240,7 @@
   function setupGraph3d() {
     const canvas=$("#spatialCanvas"),ctx=canvas.getContext("2d"),inspector=$("#spatialInspector");
     let state={yaw:-.45,pitch:.25,distance:1050,drag:false,lastX:0,lastY:0,selected:null};
-    DATA.graph.legend.forEach(item=>{const span=document.createElement("span");const dot=document.createElement("i");dot.style.background=item.color;span.append(dot,document.createTextNode(TYPE_LABELS[item.type]||item.type));$("#spatialLegend").appendChild(span);});
+    DATA.graph.legend.forEach(item=>{const span=document.createElement("span");const dot=document.createElement("i");dot.style.background=NODE_PALETTE[item.type] || item.color;span.append(dot,document.createTextNode(TYPE_LABELS[item.type]||item.type));$("#spatialLegend").appendChild(span);});
     function resize(){const rect=canvas.parentElement.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.floor(rect.width*dpr);canvas.height=Math.floor(rect.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw();}
     function project(n){let[x,y,z]=n.position3d;const cy=Math.cos(state.yaw),sy=Math.sin(state.yaw),cp=Math.cos(state.pitch),sp=Math.sin(state.pitch);const x1=x*cy-z*sy,z1=x*sy+z*cy,y1=y*cp-z1*sp,z2=y*sp+z1*cp;const rect=canvas.parentElement.getBoundingClientRect();const f=state.distance/(state.distance+z2+520);return{x:rect.width/2+x1*f,y:rect.height/2+y1*f,z:z2,f};}
     function draw(){const rect=canvas.parentElement.getBoundingClientRect();ctx.clearRect(0,0,rect.width,rect.height);const projected=new Map(DATA.graph.nodes.map(n=>[n.id,project(n)]));const sortedEdges=DATA.graph.edges.slice().sort((a,b)=>(projected.get(a.source)?.z||0)-(projected.get(b.source)?.z||0));sortedEdges.forEach(e=>{const a=projected.get(e.source),b=projected.get(e.target);if(!a||!b)return;ctx.strokeStyle=e.source_kind==="canonical_edge"?"#9ebbcbd9":"#c5dbe7c4";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();});const nodes=DATA.graph.nodes.slice().sort((a,b)=>projected.get(a.id).z-projected.get(b.id).z);nodes.forEach(n=>{const p=projected.get(n.id),r=Math.max(2,(n.type==="system"?10:n.type==="module"?7:4)*p.f);ctx.globalAlpha=Math.max(.28,Math.min(1,p.f));ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=NODE_PALETTE[n.type] || n.color;ctx.fill();if(state.selected===n.id){ctx.globalAlpha=1;ctx.strokeStyle="#1c597d";ctx.lineWidth=2;ctx.stroke();}ctx.globalAlpha=1;});}
