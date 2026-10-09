@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "theme_id": "A7-UI-THEME-SKY-MIST-001",
+  "scope": "A7_PUBLIC_GITHUB_PAGES_ONLY",
+  "sequence_id": "A7-SEQ-000014",
+  "status": "ADOPTED_LIGHT_THEME",
+  "preferred_appearance": "CALM_SKY_BLUE_LIGHT",
+  "replaces": "OLD_DARK_SITE_THEME",
+  "palette": {
+    "background": "#eff8fc",
+    "surface": "#ffffff",
+    "surface_tint": "#f7fcff",
+    "ink": "#243e52",
+    "muted": "#59768b",
+    "border": "#d1e4ee",
+    "accent_blue": "#267eac",
+    "accent_teal": "#197fa6",
+    "success": "#257b69",
+    "warning": "#9a6a28"
+  },
+  "locations": [
+    "site/index.html",
+    "site/visualization-workspace.html",
+    "site/governance.html",
+    "site/roadmap.html"
+  ],
+  "stylesheet": "site/assets/sky-theme.css",
+  "shared_base_stylesheet": "site/assets/styles.css",
+  "canvas_renderer": "site/assets/app.js",
+  "implemented_by": "CSS overrides and view-only Canvas color palette; does not change generated graph schema or canonical relationships",
+  "accessibility": {
+    "clear_ink_on_light_background": true,
+    "mobile_wrap_nav": true,
+    "reduced_motion_orbit": true,
+    "maintain_keyboard_focus_visible": true,
+    "manual_browser_visual_qa_required": true
+  },
+  "governance": {
+    "public_only": true,
+    "domain_authority_unchanged": true,
+    "no_changes_to_a7_seq_000013_private_a9_migration": true,
+    "never_claims_private_main_library_ack": true,
+    "no_research_or_domain_work": true
+  }
+}
