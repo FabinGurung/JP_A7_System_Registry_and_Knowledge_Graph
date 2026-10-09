@@ -8,7 +8,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Repository provider ID: `1406572237`
 - Default branch: `main`
 - Visibility: public
-- Current sequence: `A7-SEQ-000014` — **FINAL_CLOSED_PASS**
+- Current sequence: `A7-SEQ-000015` — **FINAL_CLOSED_PASS**
 - Phase 1 semantic-registry foundation: **COMPLETE**
 - Phase 2 authority + conflict-resolution engine: **COMPLETE**
 - Phase 3 GitHub repository / Pages / workflow inventory: **COMPLETE**
@@ -21,6 +21,7 @@ Canonical **A7 semantic registry, knowledge graph, authority map and AI control 
 - Seq12 pinned visualization strategy: **COMPLETE**
 - Seq13 Git/Drive public-safe migration: **STAGED, NOT PRIVATE-A9 CLOSED**
 - Seq14 Sky Mist light UI theme: **COMPLETE**
+- Seq15 Control Tower Atlas: **FINAL_CLOSED_PASS**; private Seq13 stays STAGED
 - Connected FabinGurung repositories inventoried: **9**
 - Live PostgreSQL/Neon runtime: **DEFERRED / NOT REQUIRED FOR CURRENT OPERATING MODEL**
 - Canonical editable data: **JSON + JSONL**

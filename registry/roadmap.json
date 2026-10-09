@@ -4,7 +4,7 @@
   "status": "ACTIVE__SEQ13_PUBLIC_SAFE_STAGE_ONLY",
   "snapshot_date": "2026-10-09",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000014",
+  "current_closed_sequence": "A7-SEQ-000015",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -75,6 +75,13 @@
       "title": "Sky Mist light theme across A7 Pages",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Calm sky-blue site theme for graph, visualization workspace, governance and roadmap; graph palette and CI guard. A7-SEQ-000013 remains staged, private A9 import not claimed."
+    },
+    {
+      "id": "A7-D10",
+      "stage": "Sequence 15 — Control Tower Atlas",
+      "title": "Evidence-linked global/module/Drive/library control hierarchy",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "20 public-safe node identities, 24 typed relationships; navigable authority/data lineage, R&D LaTeX/PPTX links, private Drive normative categories, Main/Local roles and prioritized plan. GitHub Pages and CI verified. Private seq13 staged, not closed."
     }
   ],
   "next": [
