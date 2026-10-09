@@ -99,9 +99,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000014",
+  "current_sequence": "A7-SEQ-000015",
   "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-09T02:24:40Z",
+  "observed_at": "2026-10-09T02:52:36Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -210,5 +210,20 @@
     "provider_verified_artifact_sha256": "7f49c997769a4729417f2c8fd12b1895ec882af2e21b7007c4f7172fbf70270f",
     "independent_open_sequence": "A7-SEQ-000013",
     "private_a9_migration_status": "NOT_FINAL_CLOSED"
+  },
+  "control_tower_atlas": {
+    "map_id": "A7-CONTROL-TOWER-MAP-001",
+    "canonical_map": "registry/controls/control-tower-map.json",
+    "human_runbook": "docs/CONTROL_TOWERS_READ_FIRST.md",
+    "public_page": "site/control-towers.html",
+    "projection": "site/data/control-tower-map.json",
+    "generator": "scripts/generate_visualizations.py",
+    "validator": "scripts/validate_control_tower_map.py",
+    "last_verified_content_deploy_sha": "e2de61abf4f4a4cd170c668f5cfdec5bae72f5f4",
+    "pages_run_id": 37876604524,
+    "pages_artifact_id": 11592726724,
+    "pages_artifact_sha256": "e0e3b91bb5f2c77434fb22ab24a31c5d62b7408834de42be0db2cfbaf4911eb5",
+    "private_a9_cutover_complete": false,
+    "rd_exact_template_migration_verified": false
   }
 }

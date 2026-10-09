@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000014` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000015` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -15,6 +15,8 @@ A7 governs semantic identities, authority, routing and public-safe cross-provide
 - **A7-D08 · Sequence 13 — staged · DRY_RUN_PASS__NOT_IMPORTED — GitHub → Main Library dry-run bridge.** Nine GitHub repository heads → schema-aligned nine ArtifactRegistry and eight ArtifactEdges candidates, SHA-256 digest manifest; no private Google Sheet writes. Actions 37870717830 success.
 
 - **A7-D09 · Sequence 14 · FINAL_CLOSED_PASS — Sky Mist light theme.** Calm sky-blue interface across four A7 Pages views, updated 2D/3D Canvas colors and CI regression guard. Independent of the still-staged Sequence 13; no private A9 migration or Main Library import.
+
+- **A7-D10 · Sequence 15 · FINAL_CLOSED_PASS — Control Tower Atlas.** Public-safe interactive map of A7 global policies, R&D module contracts, private Drive/A9 norms and Main/Local libraries; verified CI, source lineage and navigation. Private A9 migration remains open.
 
 ## Pending roadmap, by priority
 - **A7-N01 · P0 · IN_PROGRESS — Seal bounded public-safe A7 seq13 change accurately.** Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover.
