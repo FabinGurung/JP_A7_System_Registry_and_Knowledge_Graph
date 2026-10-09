@@ -168,3 +168,7 @@ Before modifying the A7 visualization layer, read `registry/decisions/visualizat
 ## 15. Cross-provider A9 migration entrypoint — 2026-10-09
 
 For **all new Git/Drive multi-repository work**, start with [`A9_GIT_DRIVE_BOOTSTRAP.json`](A9_GIT_DRIVE_BOOTSTRAP.json) and only the fact-specific owner contract. The full public-safe rule lives in [`docs/A9_GIT_DRIVE_OPERATING_RULE.md`](docs/A9_GIT_DRIVE_OPERATING_RULE.md). The [governance map](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/governance.html) gives human links. This centralizes new cross-provider **routing**, not all historic private A9 control text. The old Drive control documents still govern their existing private/non-migrated workflows until parity and cutover are expressly verified.
+
+## 16. Coordinated A7 and R&D roadmaps
+
+On resumption read [`registry/roadmap.json`](registry/roadmap.json) and [`docs/ROADMAP.md`](docs/ROADMAP.md) for the global control-plane work. The owning R&D repo publishes [its own researcher roadmap](https://fabingurung.github.io/JP_Research-and-Development/roadmap/) and [A7 cross-thread handover](https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md). They are work-planning views and do not override provider object state or older A9 private constraints.

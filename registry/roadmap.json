@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "roadmap_id": "A7-ROADMAP-20261009",
+  "status": "ACTIVE__SEQ13_PUBLIC_SAFE_STAGE_ONLY",
+  "snapshot_date": "2026-10-09",
+  "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+  "current_closed_sequence": "A7-SEQ-000012",
+  "current_staged_sequence": "A7-SEQ-000013",
+  "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
+  "previous_deploy_confirmed": {
+    "run_id": 37870717817,
+    "head_sha": "3d82f138cde757e436a2f88f947228cbb40bda12",
+    "conclusion": "success"
+  },
+  "developed": [
+    {
+      "id": "A7-D01",
+      "stage": "Phases 1–2",
+      "title": "Semantic identity, authority and conflict engine",
+      "status": "DELIVERED",
+      "detail": "Entities, repository IDs, governed aliases, typed relationships, fact classes, authority precedence, human QA and public safety."
+    },
+    {
+      "id": "A7-D02",
+      "stage": "Phases 3–4",
+      "title": "GitHub inventory and redacted Drive topology",
+      "status": "DELIVERED",
+      "detail": "Nine connected repositories, branch and workflow/Pages evidence, A9 Drive anchors/coverage without dumping confidential Main Library metadata."
+    },
+    {
+      "id": "A7-D03",
+      "stage": "Phases 6–7",
+      "title": "Module ownership and deterministic cross-repository routing",
+      "status": "DELIVERED",
+      "detail": "Peer specialist modules, A7_MODULE.json contract and project → fact class → owner → provider route."
+    },
+    {
+      "id": "A7-D04",
+      "stage": "Sequences 8–10",
+      "title": "Pages/workflow refresh and module/project reconciliation",
+      "status": "DELIVERED",
+      "detail": "Provider-backed repository/Pages and R&D manifest reconciliation, project-to-module routing and tests."
+    },
+    {
+      "id": "A7-D05",
+      "stage": "Sequence 11",
+      "title": "Public visualization and derivation platform",
+      "status": "DELIVERED",
+      "detail": "Canvas 2D/3D, semantic search, route/authority matrices, generated Mermaid and Excalidraw data, content digests and public Pages. Does not imply React Flow/Cytoscape runtime implementation."
+    },
+    {
+      "id": "A7-D06",
+      "stage": "Sequence 12",
+      "title": "Pinned six-role visualization strategy",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Cytoscape semantic exploration; React Flow deterministic architecture; Tables QA; Mermaid docs as code; Excalidraw annotation; optional 3D. Implementation status is explicitly distinguished."
+    },
+    {
+      "id": "A7-D07",
+      "stage": "Sequence 13 — staged",
+      "title": "Git/Drive cross-provider operating contract",
+      "status": "PUBLIC_SAFE_RULE_ACTIVE__SEQ13_NOT_FINAL_CLOSED",
+      "detail": "A9_GIT_DRIVE_BOOTSTRAP.json, human rule, governance page, AGENTS.md pointers across all nine repos, minimal-context provider routing."
+    },
+    {
+      "id": "A7-D08",
+      "stage": "Sequence 13 — staged",
+      "title": "GitHub → Main Library dry-run bridge",
+      "status": "DRY_RUN_PASS__NOT_IMPORTED",
+      "detail": "Nine GitHub repository heads → schema-aligned nine ArtifactRegistry and eight ArtifactEdges candidates, SHA-256 digest manifest; no private Google Sheet writes. Actions 37870717830 success."
+    }
+  ],
+  "next": [
+    {
+      "id": "A7-N01",
+      "priority": "P0",
+      "title": "Seal bounded public-safe A7 seq13 change accurately",
+      "state": "IN_PROGRESS",
+      "done_when": "Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover."
+    },
+    {
+      "id": "A7-N02",
+      "priority": "P1",
+      "title": "Reconcile private A9 Main/Local semantics before bridge import",
+      "state": "BLOCKED_ON_PRIVATE_PARITY",
+      "done_when": "Provider-first live index, ID collision reconciliation, historical run/edge/source parity, Main consumed cursors and Local ACK; gated private A9 write only."
+    },
+    {
+      "id": "A7-N03",
+      "priority": "P1",
+      "title": "Define release/artifact lineage contract",
+      "state": "PLANNED",
+      "done_when": "Owning module Git repo/ref/commit/path → build/QA → Drive file/provider revision → A7 public-safe edges; do not duplicate every commit into Main Library."
+    },
+    {
+      "id": "A7-N04",
+      "priority": "P1",
+      "title": "Cross-repository bootstrap/version visibility and CI",
+      "state": "PARTIAL",
+      "done_when": "Each peer module can resolve pinned A7 policy release, owner control and drift check with provider readback; AGENTS files are not an account-wide auto-policy."
+    },
+    {
+      "id": "A7-N05",
+      "priority": "P2",
+      "title": "Roadmap and authority dashboard with real observations",
+      "state": "STAGED",
+      "done_when": "Show current policy migration stages, provider-confirmed releases, audit gaps and human-QA queue. No stale SHA claimed current."
+    },
+    {
+      "id": "A7-N06",
+      "priority": "P2",
+      "title": "Implement visualization roles only with verified code",
+      "state": "PLANNED",
+      "done_when": "Cytoscape/React Flow if needed, keep source-of-truth JSON, Tables audit, Mermaid/Excalidraw export and accessible interactive pages tested."
+    },
+    {
+      "id": "A7-N07",
+      "priority": "P2",
+      "title": "Optional confidential governance runtime",
+      "state": "DEFERRED",
+      "done_when": "Only provision private repository or DB when authorized collaboration/concurrency needs justify it; do not mirror private Drive corpus in public A7."
+    }
+  ],
+  "strict_boundaries": [
+    "Old Drive A9 governance is not replaced; controlled source-by-source parity and explicit cutover are required.",
+    "A7 is a public-safe semantic registry and router, not owner of peer research science, construction finance or raw source binaries.",
+    "A9 Main Library is private and has not imported the candidate Git records; its exact PK/FK/event/ACK ledger remains in Drive.",
+    "Git branches refer to whole repository commits, not one isolated researcher dataset.",
+    "R&D 18/18 Drive audit and 11 researchers are owned by R&D; A7 legacy research coverage was narrower and is not blindly rewritten.",
+    "MSCH_HYDROPOWER_CORPUS_B013 remains HOLD/DO NOT RESUME.",
+    "No latest deployed SHA should be stored as a permanent truth; fetch GitHub live before status claims."
+  ],
+  "crosslinks": {
+    "rd_roadmap": "https://fabingurung.github.io/JP_Research-and-Development/roadmap/",
+    "rd_handover": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md",
+    "a7_entrypoint": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json",
+    "public_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/"
+  }
+}

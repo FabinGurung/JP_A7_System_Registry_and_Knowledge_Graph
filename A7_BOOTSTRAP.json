@@ -189,5 +189,13 @@
     "input": "registry/bridges/github-heads-20261009.json",
     "documentation": "docs/MAIN_LIBRARY_GITHUB_BRIDGE.md",
     "historical_parity": "NOT_VERIFIED"
+  },
+  "roadmap": {
+    "machine": "registry/roadmap.json",
+    "human": "docs/ROADMAP.md",
+    "published_page": "site/roadmap.html",
+    "linked_peer": "FabinGurung/JP_Research-and-Development/registry/roadmap.json",
+    "handover": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md",
+    "status": "PUBLISHED_SOURCE__SEQ13_STAGED__LATEST_ACTIONS_READBACK_REQUIRED"
   }
 }

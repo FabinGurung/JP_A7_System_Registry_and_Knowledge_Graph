@@ -74,7 +74,7 @@ This preserves Drive as authority for private topology while making A7 the machi
 
 ## Research governance foundation
 
-Five public research identities and R&D routes are registered. Read `registry/dependencies/research-governance.json` for the A9 provisioning boundary. The existing R&D repository holds the public A9 foundation. A dedicated private A9 repository is optional and is not provisioned; no scientific histories or Saugat thesis records were imported.
+The historical A7 research foundation registered five identities; the owning R&D researcher registry now lists 11 separate researchers and must be fetched live. A7 has not blindly imported that newer domain registry. Read `registry/dependencies/research-governance.json` for the A9 provisioning boundary. The existing R&D repository holds the public A9 foundation. A dedicated private A9 repository is optional and is not provisioned; no scientific histories or Saugat thesis records were imported.
 
 
 ## Phase 6 specialist module binding
@@ -142,3 +142,12 @@ Pages receives `visualization-workspace.json` derived from the canonical decisio
 ## A9 cross-provider Main Library bridge (staging)
 
 See [schema-aligned GitHub observation bridge](docs/MAIN_LIBRARY_GITHUB_BRIDGE.md). A7 records nine public GitHub repository HEAD observations and builds deterministic, checksummed ArtifactRegistry/ArtifactEdges **candidate** CSVs. This is not a Google Drive Main Library write or ACK.
+
+## Public roadmap and R&D handover (2026-10-09)
+
+- **Live A7 roadmap:** https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html
+- **Machine/human canonical sources:** [registry/roadmap.json](registry/roadmap.json) · [docs/ROADMAP.md](docs/ROADMAP.md)
+- **Linked R&D roadmap:** https://fabingurung.github.io/JP_Research-and-Development/roadmap/
+- **R&D cross-chat handover:** [R&D 2026-10-09 handover](https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md)
+
+A7 sequence 12 remains the last documented FINAL_CLOSED_PASS. The public-safe Git–Drive sequence 13 is *staged* and must not be confused with private A9 cutover. The offline Main Library bridge passed but no private library import or ACK was claimed.
