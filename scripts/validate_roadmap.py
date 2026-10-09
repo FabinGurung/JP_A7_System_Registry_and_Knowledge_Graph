@@ -13,6 +13,6 @@ assert (ROOT/"site/roadmap.html").is_file()
 assert (ROOT/"docs/ROADMAP.md").is_file()
 assert "roadmap.html" in (ROOT/"site/index.html").read_text(encoding="utf-8")
 assert "HISTORICAL" not in obj.get("status","")
-assert "DO_NOT_RESUME" in " ".join(obj["strict_boundaries"])
+assert "DO NOT RESUME" in " ".join(obj["strict_boundaries"])
 assert "HANDOVER_TO_A7_20261009.md" in obj["crosslinks"]["rd_handover"]
 print("A7 ROADMAP VALIDATION: PASS")
