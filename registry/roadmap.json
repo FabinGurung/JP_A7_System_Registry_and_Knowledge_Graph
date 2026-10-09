@@ -4,7 +4,7 @@
   "status": "ACTIVE__SEQ13_PUBLIC_SAFE_STAGE_ONLY",
   "snapshot_date": "2026-10-09",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000012",
+  "current_closed_sequence": "A7-SEQ-000014",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -68,6 +68,13 @@
       "title": "GitHub → Main Library dry-run bridge",
       "status": "DRY_RUN_PASS__NOT_IMPORTED",
       "detail": "Nine GitHub repository heads → schema-aligned nine ArtifactRegistry and eight ArtifactEdges candidates, SHA-256 digest manifest; no private Google Sheet writes. Actions 37870717830 success."
+    },
+    {
+      "id": "A7-D09",
+      "stage": "Sequence 14 — independent UI release",
+      "title": "Sky Mist light theme across A7 Pages",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Calm sky-blue site theme for graph, visualization workspace, governance and roadmap; graph palette and CI guard. A7-SEQ-000013 remains staged, private A9 import not claimed."
     }
   ],
   "next": [

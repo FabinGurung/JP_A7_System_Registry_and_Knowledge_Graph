@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000012` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000014` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -13,6 +13,8 @@ A7 governs semantic identities, authority, routing and public-safe cross-provide
 - **A7-D06 · Sequence 12 · FINAL_CLOSED_PASS — Pinned six-role visualization strategy.** Cytoscape semantic exploration; React Flow deterministic architecture; Tables QA; Mermaid docs as code; Excalidraw annotation; optional 3D. Implementation status is explicitly distinguished.
 - **A7-D07 · Sequence 13 — staged · PUBLIC_SAFE_RULE_ACTIVE__SEQ13_NOT_FINAL_CLOSED — Git/Drive cross-provider operating contract.** A9_GIT_DRIVE_BOOTSTRAP.json, human rule, governance page, AGENTS.md pointers across all nine repos, minimal-context provider routing.
 - **A7-D08 · Sequence 13 — staged · DRY_RUN_PASS__NOT_IMPORTED — GitHub → Main Library dry-run bridge.** Nine GitHub repository heads → schema-aligned nine ArtifactRegistry and eight ArtifactEdges candidates, SHA-256 digest manifest; no private Google Sheet writes. Actions 37870717830 success.
+
+- **A7-D09 · Sequence 14 · FINAL_CLOSED_PASS — Sky Mist light theme.** Calm sky-blue interface across four A7 Pages views, updated 2D/3D Canvas colors and CI regression guard. Independent of the still-staged Sequence 13; no private A9 migration or Main Library import.
 
 ## Pending roadmap, by priority
 - **A7-N01 · P0 · IN_PROGRESS — Seal bounded public-safe A7 seq13 change accurately.** Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover.
