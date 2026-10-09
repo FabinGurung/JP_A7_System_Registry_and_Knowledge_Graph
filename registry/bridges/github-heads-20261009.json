@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "A7-GIT-HEAD-OBSERVATIONS-20261009-001",
+  "snapshot_date": "2026-10-09",
+  "status": "HISTORICAL_POINT_IN_TIME__HEADS_REQUIRE_FRESH_READ_BEFORE_WRITE",
+  "scope": "PUBLIC_REPOSITORY_ID_AND_DEFAULT_BRANCH_HEAD_ONLY",
+  "repository_count": 9,
+  "source": "LIVE_GITHUB_PROVIDER_READBACK",
+  "main_library_import_state": "CANDIDATE_NOT_WRITTEN",
+  "private_main_library_sheet_id_publicly_omitted": true,
+  "note": "A commit SHA is a Git object identifier, not automatically an SHA-256 content digest. A7 self-ref will advance when this snapshot is committed.",
+  "repositories": [
+    {
+      "repository_id": "1406572237",
+      "repository_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+      "default_branch": "main",
+      "observed_head_sha": "4e25eb90f72cda1a76070c9cd846f0117a6ed2f2",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1312147922",
+      "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+      "default_branch": "main",
+      "observed_head_sha": "04d8cb93b728220bf1e55eb0bcc745ab48bbb689",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "897526094",
+      "repository_full_name": "FabinGurung/JP_Computer-Aided-Drawings",
+      "default_branch": "narayani-pages-v0.2",
+      "observed_head_sha": "2687d42757cdc7350f92835199efe2bf55a5fbd0",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1312661427",
+      "repository_full_name": "FabinGurung/JP_Cost_Estimation",
+      "default_branch": "main",
+      "observed_head_sha": "f0bdeadc7b8e2f7a2a524f1b3e2bbe57e4e2f81d",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1312113873",
+      "repository_full_name": "FabinGurung/JP_Research-and-Development",
+      "default_branch": "main",
+      "observed_head_sha": "754cabda32da7857ef511a6d01029c93f0f799f6",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1307302088",
+      "repository_full_name": "FabinGurung/JP_Scheduling_Work_and_Resources_Management",
+      "default_branch": "main",
+      "observed_head_sha": "ae00a2bccb325db71ec819beeecb9da816d9e131",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "843020367",
+      "repository_full_name": "FabinGurung/JP_Structural_Analysis",
+      "default_branch": "main",
+      "observed_head_sha": "bb4b8069f991b433a8594040f6bbbc9a99c685de",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1326596450",
+      "repository_full_name": "FabinGurung/JP_Study_Hub",
+      "default_branch": "main",
+      "observed_head_sha": "94af1c711f4270717ba1c26c6819cfb270b7bd48",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    },
+    {
+      "repository_id": "1309466765",
+      "repository_full_name": "FabinGurung/sumita-pilates-studio",
+      "default_branch": "main",
+      "observed_head_sha": "15f00eb39140dbfb2eb5cd60baf5b021b767d0ea",
+      "visibility": "public",
+      "provider": "GITHUB",
+      "observed_from": "GITHUB_BRANCH_READBACK"
+    }
+  ]
+}

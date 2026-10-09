@@ -181,5 +181,13 @@
     "migration_status": "ACTIVE_FOR_PUBLIC_SAFE_NEW_WORK__HISTORICAL_A9_DRIVE_PARITY_NOT_ATTESTED",
     "legacy_drive_parity": "NOT_YET_VALIDATED",
     "default_new_code_workflow": "GIT_FIRST_PRIVATE_EVIDENCE_IN_DRIVE"
+  },
+  "main_library_bridge": {
+    "status": "DRY_RUN_BRIDGE__PRIVATE_MAIN_SHEET_NOT_WRITTEN",
+    "current_live_sheet_schema_validated": "2026-10-09",
+    "script": "scripts/build_main_library_bridge.py",
+    "input": "registry/bridges/github-heads-20261009.json",
+    "documentation": "docs/MAIN_LIBRARY_GITHUB_BRIDGE.md",
+    "historical_parity": "NOT_VERIFIED"
   }
 }

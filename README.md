@@ -138,3 +138,7 @@ The publicly pinned workspace is [A7 visualization strategy](https://fabingurung
 The governing design decision is `registry/decisions/visualization-workspace.json`; the human handover is `docs/VISUALIZATION_WORKSPACE_READ_FIRST.md`. The six preserved roles are Cytoscape/semantic, React Flow/architecture and routing, tables/audit and QA, Mermaid/docs-as-code, Excalidraw/human annotation, and optional 3D/spatial. Their **implementation statuses are recorded as observations, not promises**. The first two are preferred/NOT INSTALLED; current Canvas/HTML renderers remain. Mermaid/Excalidraw currently generate source/export data only; 3D uses a lightweight Canvas projection. Do not infer completed upgrades without provider readback.
 
 Pages receives `visualization-workspace.json` derived from the canonical decision and included in source/output SHA-256 lineage. CI verifies the pinned navigation, six roles, explicit states and source provenance.
+
+## A9 cross-provider Main Library bridge (staging)
+
+See [schema-aligned GitHub observation bridge](docs/MAIN_LIBRARY_GITHUB_BRIDGE.md). A7 records nine public GitHub repository HEAD observations and builds deterministic, checksummed ArtifactRegistry/ArtifactEdges **candidate** CSVs. This is not a Google Drive Main Library write or ACK.
