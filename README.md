@@ -151,3 +151,7 @@ See [schema-aligned GitHub observation bridge](docs/MAIN_LIBRARY_GITHUB_BRIDGE.m
 - **R&D cross-chat handover:** [R&D 2026-10-09 handover](https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md)
 
 A7 sequence 12 remains the last documented FINAL_CLOSED_PASS. The public-safe Git–Drive sequence 13 is *staged* and must not be confused with private A9 cutover. The offline Main Library bridge passed but no private library import or ACK was claimed.
+
+## Sky Mist site theme — independent A7-SEQ-000014 UI refresh
+
+A7's four public Pages surfaces (knowledge graph, visualization workspace, governance, roadmap) use the soft sky-blue light palette in `site/assets/sky-theme.css`. The design tokens and guard are `registry/decisions/ui-theme.json`, `docs/SKY_MIST_THEME.md`, and `scripts/validate_site_theme.py`. No semantic data, technical graph schema, or project ownership is changed. This UI scope does **not** close the staged A7-SEQ-000013 Git/Drive / private A9 transition.
