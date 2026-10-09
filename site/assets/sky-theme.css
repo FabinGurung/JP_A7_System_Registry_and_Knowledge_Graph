@@ -199,3 +199,16 @@ body.standalone-page{
 @media(prefers-reduced-motion:reduce){
   .orbit{animation:none}
 }
+
+/* Compact, usable header on phones with all governance links preserved. */
+@media(max-width:880px){
+  .topbar{height:auto;min-height:64px;flex-wrap:wrap;gap:10px;padding-block:10px}
+  .top-actions{flex:1 1 240px;flex-wrap:wrap;justify-content:flex-end;gap:7px}
+  .tabs{position:static}
+}
+@media(max-width:520px){
+  .top-actions{justify-content:flex-start}
+  .ws-pinned-link{font-size:10px;padding:7px 10px}
+  .hero{padding-top:32px}
+  .status-pill{padding:6px 8px}
+}
