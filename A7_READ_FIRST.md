@@ -172,3 +172,7 @@ For **all new Git/Drive multi-repository work**, start with [`A9_GIT_DRIVE_BOOTS
 ## 16. Coordinated A7 and R&D roadmaps
 
 On resumption read [`registry/roadmap.json`](registry/roadmap.json) and [`docs/ROADMAP.md`](docs/ROADMAP.md) for the global control-plane work. The owning R&D repo publishes [its own researcher roadmap](https://fabingurung.github.io/JP_Research-and-Development/roadmap/) and [A7 cross-thread handover](https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md). They are work-planning views and do not override provider object state or older A9 private constraints.
+
+## 17. Control Tower Atlas: do not confuse governance layers
+
+Use `docs/CONTROL_TOWERS_READ_FIRST.md` and `registry/controls/control-tower-map.json` for semantic resolution of global controls, R&D contracts, private A9 thesis/PPTX control and Main/Local library rules. Public site: `site/control-towers.html`. This is navigation/decision metadata, not a replacement for the private Drive provider or a claim of private A9 migration completion.
