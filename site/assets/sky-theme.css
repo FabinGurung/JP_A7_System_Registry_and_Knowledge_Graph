@@ -1,0 +1,214 @@
+/*
+ * A7 Sky Mist theme · governed visual layer · 2026-10-09
+ * Calming light/sky blue palette. Presentation only; never edits authority data.
+ * This stylesheet MUST load after all existing page CSS (including standalone inline styles).
+ */
+:root{
+  color-scheme:light;
+  --bg:#eff8fc;--bg2:#e8f5fb;
+  --panel:#ffffffed;--panel2:#f7fcff;
+  --line:#d1e4ee;--line2:#b8d3e1;
+  --text:#243e52;--muted:#59768b;
+  --violet:#6d75b9;--cyan:#197fa6;--blue:#267eac;
+  --amber:#9a6a28;--green:#257b69;--pink:#b46c93;--danger:#b65d66;
+  --shadow:0 16px 46px #6597ae18;--radius:18px;
+}
+html{background:#edf8fc;color-scheme:light}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(900px 520px at 78% -140px,#a9dcf16b,transparent 70%),
+    radial-gradient(740px 490px at 2% 22%,#d3ecfaad,transparent 65%),
+    linear-gradient(145deg,#f3fbfe 0%,#eaf5fc 48%,#f6fcff 100%);
+}
+.noise{opacity:.025;mix-blend-mode:multiply}
+a{color:#16648b}
+a:hover{color:#0d5174}
+:focus-visible{outline:3px solid #3598c1;outline-offset:3px}
+.topbar{background:#f8fcffed;border-bottom:1px solid #cbdfea;box-shadow:0 3px 20px #82acc20e}
+.brand-mark{
+  color:#18577c;border-color:#9bcde4;
+  background:linear-gradient(145deg,#e5f6ff,#b9e4f5);
+  box-shadow:inset 0 0 16px #9dd8f266,0 5px 15px #7fb3ca26;
+}
+.brand strong{color:#28495f}
+.brand small,.muted,.hint,.eyebrow,.kicker{color:#638096}
+.ghost-link,.icon-button{background:#fff;color:#345a72;border-color:#bfd7e5}
+.ghost-link:hover,.icon-button:hover{background:#e4f4fc}
+.status-pill{background:#e5f5ed;color:#25735b;border-color:#a8d4bf}
+.status-pill i{background:#359d78;box-shadow:0 0 8px #70ba97}
+.hero h1,.ws-hero h1{color:#24465d}
+.hero h1 span,.ws-hero h1 span{
+  color:transparent;
+  background:linear-gradient(90deg,#2679ac,#3e95ba 62%,#5b8b97);
+  background-clip:text;-webkit-background-clip:text;
+}
+.hero-copy,.ws-hero>p:not(.eyebrow){color:#57748a}
+.orbit{border-color:#9cc9db99}
+.orbit-a:before{background:#4b9ec0;box-shadow:0 0 14px #7abfdd}
+.orbit-b:after{background:#8b9dc5;box-shadow:0 0 14px #bbc8e2}
+.core{background:#f9fdff;color:#27709a;border-color:#a3cfe0;box-shadow:0 0 34px #80c2de66,0 0 0 16px #b3e0f255}
+.metric,.panel,.module-card,.route-card,.arch-node,.rule-chain span{
+  background:#ffffffed;border-color:#cfe2ed;box-shadow:0 7px 22px #91bacd14;
+}
+.metric strong{color:#2e6687}
+.metric span{color:#587a90}
+.tabs{background:#e7f3fbe8;border-color:#c8dfeb;box-shadow:0 6px 18px #95bdcf26}
+.tab{color:#56738b}
+.tab:hover{background:#d9ecf7;color:#315973}
+.tab.active{background:#fff;color:#26749c;box-shadow:inset 0 0 0 1px #a8d3e7,0 3px 8px #91bace24}
+.panel h2,.section-head h2,.routing-head h2{color:#2d5269}
+.text-button{color:#277aa5}
+.arch-node.control{border-color:#a6c9dd;box-shadow:0 0 18px #a6c9dd2a}
+.arch-node.profile{border-color:#b8c9e1}
+.arch-node.module{border-left-color:#4c9bbb}
+.arch-node.repo{border-left-color:#76a6d0}
+.arch-node strong,.module-card h3{color:#2c526d}
+.arch-node small,.module-card p{color:#6c8396}
+.module-card .module-dot{background:#438fb7;box-shadow:0 0 11px #b1d9e8}
+.module-card.knowledge .module-dot{background:#a984b8;box-shadow:0 0 10px #d7c8e2}
+.module-card a{color:#2a7eaa}
+.authority-rule{background:linear-gradient(145deg,#eff8fe,#e8f2fc)}
+.authority-rule>p:not(.kicker){color:#57748b}
+.rule-chain b{color:#6680b2}
+.workspace{border-color:#c9dee9;background:#f8fcff;box-shadow:var(--shadow)}
+.workspace-tools,.inspector{background:#f7fbff;border-color:#d0e3ee}
+.workspace-tools hr{border-color:#dceaf1}
+.workspace-tools h3,.inspector h3{color:#2d536b}
+.filter-item{color:#526c80}
+.filter-item input{accent-color:#347d9f}
+.wide-button{background:#dbf0fa;border-color:#b0d3e5;color:#216688}
+.wide-button:hover{background:#c9e9f8}
+.wide-button.secondary{background:#fff;color:#537187;border-color:#cbdee8}
+.canvas-wrap{
+  background:
+    linear-gradient(#d9eaf350 1px,transparent 1px),
+    linear-gradient(90deg,#d9eaf350 1px,transparent 1px),
+    radial-gradient(circle at 50% 43%,#fafdff,#e5f3fa 85%);
+  background-size:28px 28px,28px 28px,auto;
+}
+.canvas-label{color:#799cb0}
+.inspector .muted,.inspect-row b{color:#698497}
+.inspector a{color:#177ca6}
+.inspect-type{border-color:#bcd8e7;background:#edf8fc;color:#47748b}
+.inspect-row{border-top-color:#d8e8f1}
+.inspect-row span{color:#3a5c73}
+.routing-head p{color:#6c8194}
+.select-wrap{color:#5e7c91}
+.select-wrap select,.filter-input{background:#fff;border-color:#bdd7e5;color:#2c5269}
+.route-flow{color:#648096}
+.route-flow span{background:#fff;border-color:#cadee9}
+.route-flow b{color:#5a90b2}
+.route-card:before{background:linear-gradient(90deg,#5ba7c8,transparent)}
+.route-card .fact{color:#307fa4}
+.route-card dt{color:#718da2}
+.route-card dd{color:#3c5a70}
+.route-card a{color:#267da4}
+.matrix-wrap th,.data-table th{background:#e8f3fa;color:#4b728a}
+.matrix-wrap td,.data-table td,.matrix-wrap th,.data-table th{border-bottom-color:#d5e5ef}
+.route-ok{color:#247b63}
+.route-unknown{color:#697fac}
+.materiality{border-color:#d5dfe7;color:#4c6378;background:#f7fbfe}
+.materiality.safety{border-color:#ecc5c6;background:#fff1f0;color:#a94e5a}
+.pipeline-box,.checksum,.code-block{background:#f6fbfe;border-color:#c9e0eb}
+.pipeline-box strong,.checksum b{color:#345b71}
+.pipeline-box span,.checksum code{color:#678599}
+.pipeline-arrow{color:#598fb4}
+.code-block{color:#2c6c8d}
+.provenance dt{color:#64879b}
+.provenance dd{color:#34586f}
+.search-overlay{background:#c8dfeab8}
+.search-modal{background:#fbfdff;border-color:#b7d1e0;box-shadow:0 18px 50px #608fa744}
+.search-line{border-color:#d2e3ed}
+.search-line input{color:#243e52}
+.search-line kbd{border-color:#bfd7e4;color:#54788d}
+.search-result:hover,.search-result.active{background:#e5f3fa}
+.search-result strong{color:#2c4d63}
+.search-result small{color:#6b8495}
+.result-type{color:#2b7da8}
+footer{border-top-color:#d2e5ef;color:#758c9f}
+footer strong{color:#547186}
+.error-card{border-color:#edc8c4;background:#fff4f2;color:#9d4e4b}
+/* Pinned strategy workspace */
+.ws-pinned-link,.tabs .ws-tab-link{
+  background:#e3f2fc;border-color:#acd6eb;color:#256888;
+}
+.ws-pinned-link:hover,.tabs .ws-tab-link:hover{background:#d5ebf9}
+.ws-home-pin,.ws-principle{
+  background:linear-gradient(105deg,#e8f6fd,#f7fbff);
+  border-color:#bddcea;box-shadow:0 9px 24px #9ac7da24;
+}
+.ws-home-pin b,.ws-principle h2{color:#2f627e}
+.ws-home-pin p,.ws-principle p:last-child{color:#5e7c90}
+.ws-home-pin a,.ws-headlinks a{
+  background:#fff;color:#29769d;border-color:#a8d5e7;
+}
+.ws-a7-orb{background:#e4f6fc;color:#277ca7;border-color:#a1d3e8;box-shadow:0 0 20px #afdeef99}
+.ws-hero small{color:#688ea4}
+.ws-section-heading h2{color:#2d536d}
+.ws-section-heading p:last-child:not(.kicker){color:#627f92}
+.ws-lane,.ws-panel,.ws-pipeline>div{background:#fff;border-color:#cbdfe9;box-shadow:0 5px 21px #8ab7cc1b}
+.ws-index{color:#5287af}
+.ws-lane-head h3,.ws-panel h3{color:#2b566e}
+.ws-lane-head p,.ws-why,.ws-now p,.ws-gate p{color:#536e84}
+.ws-state{border-color:#c8dce7}
+.ws-live{background:#e7f5ee;border-color:#a6d6bd;color:#287b61}
+.ws-export{background:#fff4e2;border-color:#e5c999;color:#906320}
+.ws-planned{background:#edf0fc;border-color:#b6c8e9;color:#526fa2}
+.ws-art{background:radial-gradient(circle,#eff9fe,#e2f1f9 90%);color:#317899;border-color:#d1e4ef}
+.ws-now,.ws-gate{border-top-color:#dbe9f0}
+.ws-now b,.ws-gate b{color:#4b84a4}
+.ws-pipeline small{color:#5c82a6}
+.ws-pipeline b{color:#31586d}
+.ws-pipeline p,.ws-panel li,.ws-evidence>p{color:#667f92}
+.ws-pipeline>span{color:#6096b7}
+.ws-evidence-link{border-top-color:#d9e8ef}
+.ws-evidence-link strong{color:#2d6784}
+.ws-evidence-link span{color:#637f94}
+.ws-evidence-link b{color:#3b8eaf}
+.ws-footer-rule{background:#eaf6fd;border-color:#c5dce8}
+.ws-footer-rule h2{color:#315a72}
+.ws-footer-rule p{color:#5b798f}
+.ws-footer-rule a{color:#267da4}
+/* Other A7 pages (governance and roadmap) use historically inlined CSS.
+   Only these page roots get the following standalone overrides. */
+body.standalone-page{
+  background:linear-gradient(140deg,#f5fcff,#eaf5fc 55%,#f5fbfe);
+  color:#29465a;
+}
+.standalone-page header{
+  background:#fafdffdf;border-bottom:1px solid #c9dfec;
+  box-shadow:0 4px 20px #82bad122;
+}
+.standalone-page h1,.standalone-page h2,.standalone-page h3{color:#244960}
+.standalone-page a{color:#24779f}
+.standalone-page a:hover{color:#0d6084}
+.standalone-page .dim,.standalone-page .eyebrow{color:#627d92}
+.standalone-page .card,.standalone-page .metric{
+  background:#fff;border:1px solid #c9e0ec;box-shadow:0 8px 26px #92b8cb1c;
+}
+.standalone-page .card p{color:#587589}
+.standalone-page .card small{color:#347f94}
+.standalone-page .tag{background:#e7f4fb;color:#376e90;border-color:#b7d9e9}
+.standalone-page .notice{
+  background:#fff8e9;border-left-color:#d8aa60;color:#735925;
+  box-shadow:0 3px 17px #d1bf8d14;
+}
+.standalone-page .eyebrow{color:#557f97}
+.standalone-page .metric strong{color:#2c7096}
+@media(prefers-reduced-motion:reduce){
+  .orbit{animation:none}
+}
+
+/* Compact, usable header on phones with all governance links preserved. */
+@media(max-width:880px){
+  .topbar{height:auto;min-height:64px;flex-wrap:wrap;gap:10px;padding-block:10px}
+  .top-actions{flex:1 1 240px;flex-wrap:wrap;justify-content:flex-end;gap:7px}
+  .tabs{position:static}
+}
+@media(max-width:520px){
+  .top-actions{justify-content:flex-start}
+  .ws-pinned-link{font-size:10px;padding:7px 10px}
+  .hero{padding-top:32px}
+  .status-pill{padding:6px 8px}
+}

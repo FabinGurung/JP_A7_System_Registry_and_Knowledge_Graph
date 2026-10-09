@@ -2,6 +2,18 @@
   "use strict";
 
   const DATA = {};
+  // Presentation palette only: do not mutate generated graph JSON/canonical node IDs.
+  // Darker, distinguishable node colors stay legible on the light graph canvases.
+  const NODE_PALETTE = Object.freeze({
+    system:"#275674",
+    execution_profile:"#7476bb",
+    module:"#217ca3",
+    repository:"#4c82b3",
+    fact_class:"#ab782d",
+    project:"#258d75",
+    research_project:"#ab6a92"
+  });
+
   const TYPE_LABELS = {
     system: "Systems",
     execution_profile: "Execution profiles",
@@ -194,7 +206,7 @@
     DATA.graph.legend.forEach(item=>{
       const label=document.createElement("label");label.className="filter-item";
       const input=document.createElement("input");input.type="checkbox";input.checked=true;
-      const dot=document.createElement("i");dot.style.background=item.color;
+      const dot=document.createElement("i");dot.style.background=NODE_PALETTE[item.type] || item.color;
       const text=document.createElement("span");text.textContent=TYPE_LABELS[item.type]||item.type;
       input.addEventListener("change",()=>{input.checked?enabled.add(item.type):enabled.delete(item.type);draw();});
       label.append(input,dot,text);filters.appendChild(label);
@@ -209,8 +221,8 @@
       const rect=canvas.parentElement.getBoundingClientRect();ctx.clearRect(0,0,rect.width,rect.height);
       ctx.lineWidth=1;
       const map=new Map(DATA.graph.nodes.map(n=>[n.id,n]));
-      DATA.graph.edges.forEach(e=>{const a=map.get(e.source),b=map.get(e.target);if(!a||!b||!enabled.has(a.type)||!enabled.has(b.type))return;const p=point(a),q=point(b);ctx.strokeStyle=e.source_kind==="canonical_edge"?"#334155aa":"#33415566";ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();});
-      visibleNodes().forEach(n=>{const p=point(n),r=n.type==="system"?9:n.type==="module"?7:n.type==="project"?3.6:5;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=n.color;ctx.globalAlpha=state.selected&&state.selected!==n.id?.35:1;ctx.fill();ctx.globalAlpha=1;if(state.selected===n.id){ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();}if(state.scale>.55 && !["project","fact_class"].includes(n.type)){ctx.fillStyle="#cbd5e1";ctx.font="10px system-ui";ctx.fillText(n.label,p.x+r+5,p.y+3);}});
+      DATA.graph.edges.forEach(e=>{const a=map.get(e.source),b=map.get(e.target);if(!a||!b||!enabled.has(a.type)||!enabled.has(b.type))return;const p=point(a),q=point(b);ctx.strokeStyle=e.source_kind==="canonical_edge"?"#9db9c9d6":"#c1d5e2b8";ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke();});
+      visibleNodes().forEach(n=>{const p=point(n),r=n.type==="system"?9:n.type==="module"?7:n.type==="project"?3.6:5;ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=NODE_PALETTE[n.type] || n.color;ctx.globalAlpha=state.selected&&state.selected!==n.id?.35:1;ctx.fill();ctx.globalAlpha=1;if(state.selected===n.id){ctx.strokeStyle="#1c597d";ctx.lineWidth=2;ctx.stroke();}if(state.scale>.55 && !["project","fact_class"].includes(n.type)){ctx.fillStyle="#3a627c";ctx.font="10px system-ui";ctx.fillText(n.label,p.x+r+5,p.y+3);}});
     }
     function hit(x,y){let best=null,dist=15;visibleNodes().forEach(n=>{const p=point(n),d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=n;}});return best;}
     function inspect(n){state.selected=n?n.id:null;if(!n){inspector.innerHTML='<p class="kicker">INSPECTOR</p><h3>Select a node</h3>';draw();return;}inspector.innerHTML="";const k=document.createElement("p");k.className="kicker";k.textContent="INSPECTOR";const type=document.createElement("span");type.className="inspect-type";type.textContent=n.type.replace("_"," ");const h=document.createElement("h3");h.textContent=n.label;inspector.append(k,type,h);const list=document.createElement("div");list.className="inspect-list";Object.entries(n).filter(x=>!["position2d","position3d","color","label","type"].includes(x[0])).forEach(([key,val])=>{if(val==null)return;const row=document.createElement("div");row.className="inspect-row";const b=document.createElement("b");b.textContent=key.replaceAll("_"," ");const s=document.createElement("span");s.textContent=String(val);row.append(b,s);list.appendChild(row);});inspector.appendChild(list);if(n.site_url||n.url){const a=document.createElement("a");a.href=n.site_url||n.url;a.target="_blank";a.rel="noreferrer";a.textContent="Open source destination ↗";inspector.appendChild(a);}draw();}
@@ -228,10 +240,10 @@
   function setupGraph3d() {
     const canvas=$("#spatialCanvas"),ctx=canvas.getContext("2d"),inspector=$("#spatialInspector");
     let state={yaw:-.45,pitch:.25,distance:1050,drag:false,lastX:0,lastY:0,selected:null};
-    DATA.graph.legend.forEach(item=>{const span=document.createElement("span");const dot=document.createElement("i");dot.style.background=item.color;span.append(dot,document.createTextNode(TYPE_LABELS[item.type]||item.type));$("#spatialLegend").appendChild(span);});
+    DATA.graph.legend.forEach(item=>{const span=document.createElement("span");const dot=document.createElement("i");dot.style.background=NODE_PALETTE[item.type] || item.color;span.append(dot,document.createTextNode(TYPE_LABELS[item.type]||item.type));$("#spatialLegend").appendChild(span);});
     function resize(){const rect=canvas.parentElement.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.floor(rect.width*dpr);canvas.height=Math.floor(rect.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw();}
     function project(n){let[x,y,z]=n.position3d;const cy=Math.cos(state.yaw),sy=Math.sin(state.yaw),cp=Math.cos(state.pitch),sp=Math.sin(state.pitch);const x1=x*cy-z*sy,z1=x*sy+z*cy,y1=y*cp-z1*sp,z2=y*sp+z1*cp;const rect=canvas.parentElement.getBoundingClientRect();const f=state.distance/(state.distance+z2+520);return{x:rect.width/2+x1*f,y:rect.height/2+y1*f,z:z2,f};}
-    function draw(){const rect=canvas.parentElement.getBoundingClientRect();ctx.clearRect(0,0,rect.width,rect.height);const projected=new Map(DATA.graph.nodes.map(n=>[n.id,project(n)]));const sortedEdges=DATA.graph.edges.slice().sort((a,b)=>(projected.get(a.source)?.z||0)-(projected.get(b.source)?.z||0));sortedEdges.forEach(e=>{const a=projected.get(e.source),b=projected.get(e.target);if(!a||!b)return;ctx.strokeStyle=e.source_kind==="canonical_edge"?"#33415599":"#33415555";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();});const nodes=DATA.graph.nodes.slice().sort((a,b)=>projected.get(a.id).z-projected.get(b.id).z);nodes.forEach(n=>{const p=projected.get(n.id),r=Math.max(2,(n.type==="system"?10:n.type==="module"?7:4)*p.f);ctx.globalAlpha=Math.max(.28,Math.min(1,p.f));ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=n.color;ctx.fill();if(state.selected===n.id){ctx.globalAlpha=1;ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();}ctx.globalAlpha=1;});}
+    function draw(){const rect=canvas.parentElement.getBoundingClientRect();ctx.clearRect(0,0,rect.width,rect.height);const projected=new Map(DATA.graph.nodes.map(n=>[n.id,project(n)]));const sortedEdges=DATA.graph.edges.slice().sort((a,b)=>(projected.get(a.source)?.z||0)-(projected.get(b.source)?.z||0));sortedEdges.forEach(e=>{const a=projected.get(e.source),b=projected.get(e.target);if(!a||!b)return;ctx.strokeStyle=e.source_kind==="canonical_edge"?"#9ebbcbd9":"#c5dbe7c4";ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();});const nodes=DATA.graph.nodes.slice().sort((a,b)=>projected.get(a.id).z-projected.get(b.id).z);nodes.forEach(n=>{const p=projected.get(n.id),r=Math.max(2,(n.type==="system"?10:n.type==="module"?7:4)*p.f);ctx.globalAlpha=Math.max(.28,Math.min(1,p.f));ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle=NODE_PALETTE[n.type] || n.color;ctx.fill();if(state.selected===n.id){ctx.globalAlpha=1;ctx.strokeStyle="#1c597d";ctx.lineWidth=2;ctx.stroke();}ctx.globalAlpha=1;});}
     function hit(x,y){let best=null,dist=18;DATA.graph.nodes.forEach(n=>{const p=project(n),d=Math.hypot(p.x-x,p.y-y);if(d<dist){dist=d;best=n;}});return best;}
     function inspect(n){state.selected=n?n.id:null;if(!n)return;inspector.innerHTML='<p class="kicker">INSPECTOR</p><span class="inspect-type">'+escapeText(n.type.replace("_"," "))+'</span><h3></h3><p class="muted"></p>';inspector.querySelector("h3").textContent=n.label;inspector.querySelector("p.muted").textContent=n.id;draw();}
     canvas.addEventListener("pointerdown",e=>{state.drag=true;state.lastX=e.offsetX;state.lastY=e.offsetY;canvas.setPointerCapture(e.pointerId);});

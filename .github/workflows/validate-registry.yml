@@ -50,6 +50,8 @@ jobs:
         run: python scripts/validate_visualization_workspace.py --data-dir .a7-generated-test
       - name: Validate A7 and R&D coordination roadmap
         run: python scripts/validate_roadmap.py
+      - name: Validate A7 sky mist site theme
+        run: python scripts/validate_site_theme.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative
