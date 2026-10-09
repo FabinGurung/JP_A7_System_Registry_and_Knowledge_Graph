@@ -24,6 +24,7 @@ SOURCE_PATHS = [
     "registry/edges/edges.jsonl",
     "registry/entities/google-drive-nodes.json",
     "registry/decisions/visualization-workspace.json",
+    "registry/controls/control-tower-map.json",
 ]
 
 PUBLIC_GRAPH_TYPES = {
@@ -560,7 +561,14 @@ def main() -> int:
     workspace_projection["non_authoritative"] = True
     workspace_projection["source_path"] = "registry/decisions/visualization-workspace.json"
 
+    control_catalog = dict(load_json("registry/controls/control-tower-map.json"))
+    control_catalog["non_authoritative"] = True
+    control_catalog["projection_kind"] = "A7_CONTROL_TOWER_NAVIGATION"
+    control_catalog["source_path"] = "registry/controls/control-tower-map.json"
+    control_catalog["source_commit_sha"] = args.commit_sha
+
     outputs: dict[str, Any] = {
+        "control-tower-map.json": control_catalog,
         "visualization-workspace.json": workspace_projection,
         "a7-summary.json": summary,
         "a7-graph.json": graph,

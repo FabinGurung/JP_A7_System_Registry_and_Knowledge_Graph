@@ -49,3 +49,7 @@ The R&D thread's scoped source-first [handover](https://github.com/FabinGurung/J
 The pre-roadmap A7 site, validation and Main Library dry run passed on SHA `3d82f138cde757e436a2f88f947228cbb40bda12`; Actions Pages `37870717817`, validation `37870717858`, bridge `37870717830`. Confirm latest branch HEAD and current Actions before declaring an updated roadmap deployed.
 
 The native private Main Library has not been written, while the Git-head candidate files are safely reproducible. No account-wide ChatGPT system settings were changed by AGENTS.md.
+
+### Bounded independent A7-SEQ-000015: control tower navigator (site architecture)
+
+Public-safe authority classification and interactive site navigation are staged independently of the still-open A7-SEQ-000013 Git/Drive migration. The readable entrypoint is [Control Tower Atlas](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/control-towers.html). Its machine source is `registry/controls/control-tower-map.json`. R&D repo retains owning workflows. Private Drive A9 thesis v1.23 / presentation v2.2 / AI Tool v0.42 were provider-inspected but must not be copied into public Git. Next work: full exact-rule crosswalk, format generator/template QA, A9 private Main/Local reconciliation, drift CI, and module-local dashboards.

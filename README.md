@@ -157,3 +157,7 @@ A7 sequence 12 remains the last documented FINAL_CLOSED_PASS. The public-safe Gi
 ## Sky Mist site theme — independent A7-SEQ-000014 UI refresh
 
 A7's four public Pages surfaces (knowledge graph, visualization workspace, governance, roadmap) use the soft sky-blue light palette in `site/assets/sky-theme.css`. The design tokens and guard are `registry/decisions/ui-theme.json`, `docs/SKY_MIST_THEME.md`, and `scripts/validate_site_theme.py`. No semantic data, technical graph schema, or project ownership is changed. This UI scope does **not** close the staged A7-SEQ-000013 Git/Drive / private A9 transition.
+
+## Interactive Control Tower Atlas — A7-SEQ-000015
+
+A public-safe, machine-derived [control tower map](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/control-towers.html) distinguishes central A7 policy routing, R&D source/build controls, private A9 Drive normative towers, and Main/Local Library/artifact lineage. Machine source: `registry/controls/control-tower-map.json`. Governed validator: `scripts/validate_control_tower_map.py`. Read-first: `docs/CONTROL_TOWERS_READ_FIRST.md`. No private Drive IDs, rows or source bytes are copied to the public projection. Crosswalk between full private format rules and R&D Git controls remains pending.

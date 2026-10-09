@@ -1,0 +1,492 @@
+{
+  "schema_version": "1.0.0",
+  "map_id": "A7-CONTROL-TOWER-MAP-001",
+  "sequence": "A7-SEQ-000015",
+  "recorded_at": "2026-10-09",
+  "title": "Control Towers · Authority · Source / Artifact Libraries",
+  "projection_policy": "PUBLIC_SAFE_READ_ONLY",
+  "domain_authority": false,
+  "federated_model": "A7 resolves normative ownership and routing; each domain module owns its specific control contract and executable source; original Drive/A9 controls retain private normative authority until proven superseded.",
+  "privacy_notice": "Only public-safe control names/categories and paraphrased responsibilities. No private Drive IDs, folder paths, source bytes or Main Library rows are published.",
+  "nonclaims": [
+    "No public page or generated JSON is an owning provider.",
+    "R&D JSON workflow files are not proof full current private university/PPTX/LaTeX controls have been migrated.",
+    "A7-SEQ-000013 remains staged; private A9 migration and Main ACK are not completed.",
+    "Library pointers and control status do not establish artifact existence or institutional approval."
+  ],
+  "node_tiers": [
+    {
+      "id": "global",
+      "label": "Global Control Plane",
+      "color": "#267eac"
+    },
+    {
+      "id": "module",
+      "label": "Owning Module Controls",
+      "color": "#5c86b0"
+    },
+    {
+      "id": "drive",
+      "label": "Private Drive/A9 Controls",
+      "color": "#9b7eab"
+    },
+    {
+      "id": "library",
+      "label": "Main + Local Libraries",
+      "color": "#469587"
+    },
+    {
+      "id": "artifact",
+      "label": "Release & Projections",
+      "color": "#bb8759"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "a7",
+      "label": "A7 Global Control Plane",
+      "tier": "global",
+      "status": "verified",
+      "summary": "One semantic identity and authority router for connected systems; controls which repository or provider owns each fact.",
+      "owner": "A7 Git repository",
+      "code": "A7_BOOTSTRAP.json",
+      "link": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A7_BOOTSTRAP.json",
+      "kind": "master_router"
+    },
+    {
+      "id": "a7policy",
+      "label": "Global policy & boundaries",
+      "tier": "global",
+      "status": "verified",
+      "summary": "Authority precedence, human QA, public safety, module governance, routing, typed edges and conflicts.",
+      "owner": "A7 Git repository",
+      "code": "registry/authority/authority-map.json",
+      "link": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/authority/authority-map.json",
+      "kind": "authority"
+    },
+    {
+      "id": "a7catalog",
+      "label": "Project / module registry",
+      "tier": "global",
+      "status": "verified",
+      "summary": "Stable project IDs and module-resolution entrypoints. A route never proves a specialist project-specific artifact exists.",
+      "owner": "A7 Git repository",
+      "code": "registry/routing/project-module-bindings.json",
+      "link": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/routing/project-module-bindings.json",
+      "kind": "routing"
+    },
+    {
+      "id": "rnd",
+      "label": "R&D Research Control Tower",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Owns researcher workflows, templates, source-build scripts, code/pointer registries and presentation/LaTeX lifecycle—not global provider rules.",
+      "owner": "R&D Git repository",
+      "code": "A7_MODULE.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/A7_MODULE.json",
+      "kind": "module"
+    },
+    {
+      "id": "rnd_repo",
+      "label": "Repository governance",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Main stores code, contracts and links; private manuscript bodies and generated PDFs/PPTX stay in Drive.",
+      "owner": "R&D Git repository",
+      "code": "controls/repository.control.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/controls/repository.control.json",
+      "kind": "contract"
+    },
+    {
+      "id": "rnd_discussion",
+      "label": "Discussion workflow",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Google Doc is the discussion authority; Git holds only pointers, provenance and approved workflow logic.",
+      "owner": "R&D Git repository",
+      "code": "controls/discussion.control.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/controls/discussion.control.json",
+      "kind": "contract"
+    },
+    {
+      "id": "rnd_latex",
+      "label": "LaTeX source & build",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Git owns admitted .tex/.bib and build scripts; compile and QA; uploaded PDF is a Drive deliverable.",
+      "owner": "R&D Git repository",
+      "code": "controls/latex.control.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/controls/latex.control.json",
+      "kind": "contract"
+    },
+    {
+      "id": "rnd_presentation",
+      "label": "Presentation source & build",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Machine control recommends TypeScript + PptxGenJS + JSON/YAML, renders and QAs outputs, saves PPTX/PDF in Drive.",
+      "owner": "R&D Git repository",
+      "code": "controls/presentation.control.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/controls/presentation.control.json",
+      "kind": "contract"
+    },
+    {
+      "id": "rnd_website",
+      "label": "Research website workflows",
+      "tier": "module",
+      "status": "verified",
+      "summary": "Optional verified researcher websites are source-controlled and deployed via review; no invented site branches.",
+      "owner": "R&D Git repository",
+      "code": "controls/website.control.json",
+      "link": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/controls/website.control.json",
+      "kind": "contract"
+    },
+    {
+      "id": "engineering",
+      "label": "Peer engineering modules",
+      "tier": "module",
+      "status": "routing_only",
+      "summary": "Structural, CAD, Cost, Scheduling, Operations and Study modules each own their executable tools and domain contracts; this map shows the delegation role.",
+      "owner": "Individual peer repositories",
+      "code": "registry/entities/modules.json",
+      "link": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/entities/modules.json",
+      "kind": "module"
+    },
+    {
+      "id": "a9",
+      "label": "A9 private Drive Control Center",
+      "tier": "drive",
+      "status": "verified_private",
+      "summary": "Legacy/current private normative-control warehouse: read-first rules, save/version protocols, role assignments, source evidence and snapshots. Not migrated by simply linking Git.",
+      "owner": "Original Google Drive / A9",
+      "code": "PRIVATE_DRIVE_READ_FIRST",
+      "kind": "private_router"
+    },
+    {
+      "id": "a9_ai",
+      "label": "AI Tool Control Tower v0.42",
+      "tier": "drive",
+      "status": "verified_private",
+      "summary": "Controls capability/plugin selection, connector routing, address-first retrieval, checkpointing and canonical ownership.",
+      "owner": "Google Drive / A9",
+      "code": "00_AI_TOOL_CONTROL_TOWER_READ_FIRST",
+      "kind": "private_control"
+    },
+    {
+      "id": "a9_thesis",
+      "label": "Thesis Control Tower v1.23",
+      "tier": "drive",
+      "status": "verified_private",
+      "summary": "Thesis-wide source admission, official formatting precedence, canonical folder model, reproducible LaTeX source and release QC.",
+      "owner": "Google Drive / Thesis",
+      "code": "00_THESIS_CONTROL_TOWER_READ_FIRST",
+      "kind": "private_control"
+    },
+    {
+      "id": "a9_presentation",
+      "label": "Presentation Control v2.2",
+      "tier": "drive",
+      "status": "verified_private",
+      "summary": "Current presentation read order, official university/supervisor gate, institutional logos, PDF/PPTX outputs, slide geometry and visual QC.",
+      "owner": "Google Drive / A9",
+      "code": "A9_GENERALIZED_PRESENTATION_READ_FIRST_v2.2",
+      "kind": "private_control"
+    },
+    {
+      "id": "a9_save",
+      "label": "Save Router & Workspace Protocol",
+      "tier": "drive",
+      "status": "private_resolution_required",
+      "summary": "A9 PRE/readback/POST, append-only registration, version enumeration, owner/address resolution and Local/Main ACK; full live comparison remains open.",
+      "owner": "Google Drive / A9",
+      "code": "OWNER_READ_FIRST_REQUIRED",
+      "kind": "private_control"
+    },
+    {
+      "id": "library",
+      "label": "Main / Local Library System",
+      "tier": "library",
+      "status": "verified_private",
+      "summary": "Original Drive registry and locality model for stable artifact identities, navigation, typed edges, revisions, local checkpoints and Main consumption acknowledgements.",
+      "owner": "Google Drive / A9",
+      "code": "Fabin_Gurung_Drive_Index",
+      "kind": "library"
+    },
+    {
+      "id": "library_main",
+      "label": "Main Library Index",
+      "tier": "library",
+      "status": "verified_private",
+      "summary": "ArtifactRegistry, ArtifactEdges, version/run tracking, AddressLookup and system-wide discovery; private values are not copied into the public graph.",
+      "owner": "Google Drive / A9 Main",
+      "code": "PRIVATE_MAIN_INDEX",
+      "kind": "catalog"
+    },
+    {
+      "id": "library_local",
+      "label": "Owning Local Library",
+      "tier": "library",
+      "status": "verified_private",
+      "summary": "Per-project/lane catalogs, controls and mutation cursors; local reconciliation/ACK precedes meaningful Main consumption.",
+      "owner": "Google Drive / owning project",
+      "code": "PRIVATE_LOCAL_READ_FIRST",
+      "kind": "catalog"
+    },
+    {
+      "id": "delivery",
+      "label": "Governed Deliverable Release",
+      "tier": "artifact",
+      "status": "contract_partial",
+      "summary": "Resolve authoritatively: research/project inputs → reproducible code → build QA → verified Drive PDF/PPTX → local lineage → approved Main ACK.",
+      "owner": "Owning module / provider",
+      "code": "GIT_COMMIT_TO_DRIVE_ID",
+      "kind": "release"
+    },
+    {
+      "id": "website",
+      "label": "A7 read-only navigation site",
+      "tier": "artifact",
+      "status": "verified",
+      "summary": "Generated public-safe map, graph, documentation and routing projections. Website never becomes source of domain fact truth.",
+      "owner": "A7 GitHub Pages",
+      "code": "site/control-towers.html",
+      "link": "control-towers.html",
+      "kind": "projection"
+    }
+  ],
+  "edges": [
+    {
+      "id": "CT-EDGE-001",
+      "source": "a7",
+      "target": "a7policy",
+      "relation": "owns_global_policy"
+    },
+    {
+      "id": "CT-EDGE-002",
+      "source": "a7",
+      "target": "a7catalog",
+      "relation": "registers_routes"
+    },
+    {
+      "id": "CT-EDGE-003",
+      "source": "a7",
+      "target": "rnd",
+      "relation": "delegates_research_rules"
+    },
+    {
+      "id": "CT-EDGE-004",
+      "source": "a7",
+      "target": "engineering",
+      "relation": "delegates_domain_rules"
+    },
+    {
+      "id": "CT-EDGE-005",
+      "source": "a7",
+      "target": "a9",
+      "relation": "resolves_private_provider"
+    },
+    {
+      "id": "CT-EDGE-006",
+      "source": "rnd",
+      "target": "rnd_repo",
+      "relation": "owns_control"
+    },
+    {
+      "id": "CT-EDGE-007",
+      "source": "rnd",
+      "target": "rnd_discussion",
+      "relation": "owns_control"
+    },
+    {
+      "id": "CT-EDGE-008",
+      "source": "rnd",
+      "target": "rnd_latex",
+      "relation": "owns_control"
+    },
+    {
+      "id": "CT-EDGE-009",
+      "source": "rnd",
+      "target": "rnd_presentation",
+      "relation": "owns_control"
+    },
+    {
+      "id": "CT-EDGE-010",
+      "source": "rnd",
+      "target": "rnd_website",
+      "relation": "owns_control"
+    },
+    {
+      "id": "CT-EDGE-011",
+      "source": "a9",
+      "target": "a9_ai",
+      "relation": "hosts_private_control"
+    },
+    {
+      "id": "CT-EDGE-012",
+      "source": "a9",
+      "target": "a9_thesis",
+      "relation": "hosts_private_control"
+    },
+    {
+      "id": "CT-EDGE-013",
+      "source": "a9",
+      "target": "a9_presentation",
+      "relation": "hosts_private_control"
+    },
+    {
+      "id": "CT-EDGE-014",
+      "source": "a9",
+      "target": "a9_save",
+      "relation": "hosts_private_control"
+    },
+    {
+      "id": "CT-EDGE-015",
+      "source": "a9",
+      "target": "library",
+      "relation": "governs_lineage"
+    },
+    {
+      "id": "CT-EDGE-016",
+      "source": "library",
+      "target": "library_main",
+      "relation": "catalogues"
+    },
+    {
+      "id": "CT-EDGE-017",
+      "source": "library",
+      "target": "library_local",
+      "relation": "catalogues"
+    },
+    {
+      "id": "CT-EDGE-018",
+      "source": "a9_thesis",
+      "target": "rnd_latex",
+      "relation": "constrains_research_build"
+    },
+    {
+      "id": "CT-EDGE-019",
+      "source": "a9_presentation",
+      "target": "rnd_presentation",
+      "relation": "constrains_presentations"
+    },
+    {
+      "id": "CT-EDGE-020",
+      "source": "rnd_latex",
+      "target": "delivery",
+      "relation": "creates_output_via_QA"
+    },
+    {
+      "id": "CT-EDGE-021",
+      "source": "rnd_presentation",
+      "target": "delivery",
+      "relation": "creates_output_via_QA"
+    },
+    {
+      "id": "CT-EDGE-022",
+      "source": "delivery",
+      "target": "library_local",
+      "relation": "registers_release_if_approved"
+    },
+    {
+      "id": "CT-EDGE-023",
+      "source": "library_local",
+      "target": "library_main",
+      "relation": "ack_if_verified"
+    },
+    {
+      "id": "CT-EDGE-024",
+      "source": "a7",
+      "target": "website",
+      "relation": "publishes_public_safe_projection"
+    }
+  ],
+  "prioritized_roadmap": [
+    {
+      "id": "CT-N01",
+      "priority": "P0",
+      "title": "Close public-safe SEQ-000013 accurately",
+      "status": "OPEN",
+      "done_when": "Revalidate Git/Drive bootstrap, bridge dry run, PR and provider state; no false private A9 cutover."
+    },
+    {
+      "id": "CT-N02",
+      "priority": "P0",
+      "title": "Pin global versus module-control boundaries",
+      "status": "INITIAL_NAVIGATION_DELIVERED",
+      "done_when": "Link public-safe ownership and source contracts in A7; future changes pass per-repo QA."
+    },
+    {
+      "id": "CT-N03",
+      "priority": "P1",
+      "title": "Inventory executable thesis/PPTX/LaTeX constraints",
+      "status": "PROPOSED_EVIDENCE_RECONCILIATION",
+      "done_when": "Compare live Drive v1.23/v2.2 with R&D Git controls and actual templates/generators; classify adopted/partial/missing/conflicting."
+    },
+    {
+      "id": "CT-N04",
+      "priority": "P1",
+      "title": "Create contract-of-contracts with semver",
+      "status": "PROPOSED",
+      "done_when": "For each rule: ID, owner, scope, version, source, dependency, validator, exception, privacy class, last verified and evidence."
+    },
+    {
+      "id": "CT-N05",
+      "priority": "P1",
+      "title": "Bridge Git release → Drive artifact → Local/Main ACK",
+      "status": "BLOCKED_ON_PRIVATE_A9_PARITY",
+      "done_when": "Reconcile current/private IDs, historic edges, locators, Main/Local cursors and ACK before importing candidates."
+    },
+    {
+      "id": "CT-N06",
+      "priority": "P1",
+      "title": "Automated cross-repo drift + site navigation",
+      "status": "PARTIAL",
+      "done_when": "Add CI assertions for manifests, owner links, artifact contracts, stale versions and broken public links."
+    },
+    {
+      "id": "CT-N07",
+      "priority": "P2",
+      "title": "Operator dashboard / reusable project templates",
+      "status": "PROPOSED",
+      "done_when": "Read-first playbooks, versioned institutional templates, checklists, exception reviews, updated per-workstream dashboards."
+    }
+  ],
+  "policy_samples": {
+    "latex": "Read latest private thesis formatting/source control plus R&D LaTeX workflow; do not assume Git JSON includes exact font/margin/package rules.",
+    "presentation": "Read private v2.2 and official institutional constraints before rendering; R&D PptxGenJS workflow is execution contract, not replacement authority.",
+    "libraries": "Local→Main ACK is distinct from storing PDFs or Git commits. No blind imports.",
+    "governance": "Source truth follows the provider and fact class; route is not artifact existence."
+  },
+  "verified_sources": [
+    {
+      "name": "A7 current main",
+      "provider": "GitHub",
+      "path": "A7_BOOTSTRAP.json"
+    },
+    {
+      "name": "R&D controls",
+      "provider": "GitHub",
+      "path": "controls/{repository,discussion,latex,presentation,website}.control.json"
+    },
+    {
+      "name": "AI Tool control v0.42",
+      "provider": "Private Google Drive",
+      "disclosure": "NAME_VERSION_ONLY"
+    },
+    {
+      "name": "Thesis control v1.23",
+      "provider": "Private Google Drive",
+      "disclosure": "NAME_VERSION_ONLY"
+    },
+    {
+      "name": "Presentation control v2.2",
+      "provider": "Private Google Drive",
+      "disclosure": "NAME_VERSION_ONLY"
+    },
+    {
+      "name": "Main/Local Library",
+      "provider": "Private Google Drive",
+      "disclosure": "STRUCTURE_ONLY"
+    }
+  ]
+}
