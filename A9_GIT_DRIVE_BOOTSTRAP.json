@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "A7-A9-GIT-DRIVE-ENTRY-001",
+  "status": "ACTIVE_FOR_PUBLIC_SAFE_NEW_WORK__HISTORICAL_A9_DRIVE_PARITY_NOT_ATTESTED",
+  "policy_version": "2026-10-09-v1",
+  "repository_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+  "read_first": "A7_READ_FIRST.md",
+  "policy": "docs/A9_GIT_DRIVE_OPERATING_RULE.md",
+  "semantic_authority": "registry/authority/authority-map.json",
+  "repository_directory": "registry/entities/repositories.json",
+  "module_resolution": "A7_MODULE.json in target repository",
+  "context_budget": {
+    "bootstrap": "read this entry, target A7_MODULE.json, and one relevant owner policy",
+    "avoid": "whole Drive scan / all control towers / chat transcripts unless fact-specific conflict"
+  },
+  "provider_roles": {
+    "git": "Source code, executable configurations, peer module definitions, source-history diffs, PR reviews, branch snapshots, CI results and deployment provenance.",
+    "google_drive": "Research documents, original scanned/office content, native Google Docs/Sheets/Slides, compiled PDF/PPTX/DOCX, restricted evidence and stable provider IDs.",
+    "a7": "Global public-safe authority resolution, semantic identities, repository/module routing, versioned machine contracts and typed cross-provider relationships.",
+    "module": "Project facts/data and domain-specific source/manifests remain owned by the respective project/module.",
+    "main_library": "Private Drive-based discovery catalog and artifact/edge/event projection, not a duplicate Git history.",
+    "chatgpt": "Runtime resolver/operator; must fetch live GitHub/Drive objects; cannot magically load these instructions across all chats without an active workflow or connector."
+  },
+  "policy_resolution": [
+    "A7 public-safe cross-provider default",
+    "exact module control and repository A7_MODULE.json",
+    "project control/source manifest in owning provider",
+    "original-provider current provider readback"
+  ],
+  "version_control": {
+    "git": "Commit history; feature branch is entire repository snapshot, not a folder or researcher-only database. Tagged releases when needed.",
+    "drive": "Native revision and stable document IDs; snapshot/archives only when original must be changed without reliable rollback, when a project-specific control requires, or for material regulated changes.",
+    "no_unbounded_versions": "Do not create new Drive duplicates or sequences solely to acknowledge Git commits.",
+    "migration": "Keep Drive originals and old A9 controls until specific safe replacement is independently verified."
+  },
+  "write_and_readback": [
+    "resolve module identity and authority",
+    "read minimal live source and current git commit",
+    "snapshot provider-native state before material mutation",
+    "change only correct writable provider",
+    "record Git commit SHA and Drive ID/revision into per-module manifest/ledger",
+    "run owner validation and Pages/workflow when applicable",
+    "provider readback",
+    "report open debts and unresolved migrations"
+  ],
+  "privacy": "A7 and current peer GitHub repositories are PUBLIC. Never publish secrets, private Drive corpus, personal credentials, raw financial/construction evidence, copyrighted originals, private font files or restricted documents.",
+  "scope_limits": {
+    "a9_full_controls_migrated": false,
+    "private_drive_main_library_migrated": false,
+    "historical_a9_snapshots_deleted": false,
+    "legacy_controls_superseded": false,
+    "git_code_source_migration": "incremental_by_module",
+    "external_scheduling": "not_enabled"
+  },
+  "links": {
+    "a7_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
+    "rnd": "https://github.com/FabinGurung/JP_Research-and-Development"
+  }
+}

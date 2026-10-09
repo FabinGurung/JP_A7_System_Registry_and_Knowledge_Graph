@@ -164,3 +164,7 @@ When entering a module:
 ## 14. Pinned visualization strategy
 
 Before modifying the A7 visualization layer, read `registry/decisions/visualization-workspace.json` and `docs/VISUALIZATION_WORKSPACE_READ_FIRST.md`, plus the live source and deployment. The design is pinned at `site/visualization-workspace.html` and in the main website navigation. Preserve the six preferred roles and be explicit about **planned vs installed** technology. Material deviations require a governed and traceable decision update.
+
+## 15. Cross-provider A9 migration entrypoint — 2026-10-09
+
+For **all new Git/Drive multi-repository work**, start with [`A9_GIT_DRIVE_BOOTSTRAP.json`](A9_GIT_DRIVE_BOOTSTRAP.json) and only the fact-specific owner contract. The full public-safe rule lives in [`docs/A9_GIT_DRIVE_OPERATING_RULE.md`](docs/A9_GIT_DRIVE_OPERATING_RULE.md). The [governance map](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/governance.html) gives human links. This centralizes new cross-provider **routing**, not all historic private A9 control text. The old Drive control documents still govern their existing private/non-migrated workflows until parity and cutover are expressly verified.

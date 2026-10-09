@@ -58,6 +58,7 @@
   },
   "load_order": [
     "A7_READ_FIRST.md",
+    "A9_GIT_DRIVE_BOOTSTRAP.json",
     "policies/global/a7-core.json",
     "policies/global/public-safety.json",
     "policies/global/fail-forward.json",
@@ -173,5 +174,12 @@
     "latest_pages_run_id": 37858453762,
     "latest_pages_artifact_id": 11585560191,
     "latest_pages_artifact_sha256": "38d1cfdd0580159047ab44852406fc27113a3e025609caa07c5f68dedef3a3d5"
+  },
+  "cross_provider_git_drive": {
+    "entrypoint": "A9_GIT_DRIVE_BOOTSTRAP.json",
+    "policy": "docs/A9_GIT_DRIVE_OPERATING_RULE.md",
+    "migration_status": "ACTIVE_FOR_PUBLIC_SAFE_NEW_WORK__HISTORICAL_A9_DRIVE_PARITY_NOT_ATTESTED",
+    "legacy_drive_parity": "NOT_YET_VALIDATED",
+    "default_new_code_workflow": "GIT_FIRST_PRIVATE_EVIDENCE_IN_DRIVE"
   }
 }
