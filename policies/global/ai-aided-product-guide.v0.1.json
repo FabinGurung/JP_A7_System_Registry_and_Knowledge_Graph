@@ -1,0 +1,131 @@
+{
+  "schema": "fabin-a7://ai-aided-product-guide/0.1",
+  "policy_id": "A7-POL-AI-AIDED-INTERACTION-001",
+  "version": "0.1.0",
+  "status": "ACTIVE_GLOBAL_GUIDANCE",
+  "owner": "A7_SEMANTIC_CONTROL_PLANE",
+  "scope": "Public-facing instructions and AI-to-versioned-engine reproducibility across A7-bound specialist products, not domain engineering approvals",
+  "principle": "Humans speak their goals and choose outcomes. The AI resolves intent and evidence. Versioned deterministic software computes and validates. The product presents understandable, progressive, source-linked results, with limits and authority explicit.",
+  "no_requirements_on_human": [
+    "NO_JSON_AUTHORING",
+    "NO_MANUAL_PARAMETER_SCHEMA",
+    "NO_GITHUB_NAVIGATION_FOR_PRODUCT_USE",
+    "NO_UNJUSTIFIED_TECHNICAL_JARGON"
+  ],
+  "required_human_guide": [
+    "START_HERE",
+    "HOW_IT_WORKS",
+    "EXPLORE_OUTPUT",
+    "SOURCE_AND_SAFETY",
+    "FOR_BUILDERS"
+  ],
+  "publication_rule": "The canonical standard is here in A7; each owning product publishes a domain-specific derived human guide; do not duplicate domain facts in A7.",
+  "execution_sequence": [
+    {
+      "id": "UNDERSTAND",
+      "title": "Tell us what you need",
+      "owner": "USER",
+      "action": "Free-form language, optional existing files/data and corrections; avoid forcing JSON forms"
+    },
+    {
+      "id": "RESOLVE",
+      "title": "Interpret with evidence",
+      "owner": "AI_ORCHESTRATOR",
+      "action": "Locate provider-native source, classify authority, link quoted values, ask only missing independent facts"
+    },
+    {
+      "id": "NORMALIZE",
+      "title": "Validate a typed request",
+      "owner": "VERSIONED_MACHINE_CONTRACT",
+      "action": "Normalize units, coordinates, IDs, revisions, source hashes, prerequisites, constraints and permissions; reject unsupported claims"
+    },
+    {
+      "id": "EXECUTE",
+      "title": "Run the owning engine",
+      "owner": "DOMAIN_REPO_OR_AUTHORIZED_RUNTIME",
+      "action": "Run version-pinned deterministic algorithms; public CI for synthetic data, private authenticated runner for restricted sources"
+    },
+    {
+      "id": "VERIFY",
+      "title": "Check and capture evidence",
+      "owner": "AUTOMATED_QA_AND_REQUIRED_DOMAIN_APPROVAL",
+      "action": "Regression tests, invariants, provenance, checksums, error disclosure, and separate human licensed/professional approval when required"
+    },
+    {
+      "id": "EXPLORE",
+      "title": "Show useful, layered results",
+      "owner": "HUMAN_SITE",
+      "action": "Start with 3D or most useful domain-specific view; provide role-specific filtering, drawings, labels, drill-down, accessibly"
+    },
+    {
+      "id": "TRACE",
+      "title": "Preserve reproducibility",
+      "owner": "GIT_AND_SOURCE_PROVIDER",
+      "action": "Persist source version, canonical input fingerprint, engine SHA, runtime/dependency pins, output manifest and release status"
+    }
+  ],
+  "reproducibility": {
+    "guaranteed_only_for": "Same normalized input bytes, pinned software/toolchain/assets, fixed deterministic settings and controlled external source revisions; evidence checked",
+    "not_guaranteed": "Identical results from identical unconstrained prompts across different AI models or changed external providers",
+    "required_keys": [
+      "canonical_input_sha256",
+      "source_revision_or_sha",
+      "engine_commit_sha",
+      "runtime_dependency_lock",
+      "output_manifest_sha256",
+      "validation_result"
+    ],
+    "no_claims": [
+      "HIDDEN_MODEL_CAPABILITY_COPIED_TO_GITHUB",
+      "AI_OR_GITHUB_SUBSTITUTES_LICENSED_APPROVAL",
+      "UNVERIFIED_COMPLETION",
+      "CONVERSATION_ALONE_PROVES_REAL_WORLD_FACTS"
+    ]
+  },
+  "progressive_detail": {
+    "levels": [
+      "OVERVIEW",
+      "WORK_AREA",
+      "ELEMENT",
+      "DETAIL",
+      "VERIFIED_INSTRUCTIONS"
+    ],
+    "roles": [
+      "PUBLIC",
+      "OWNER",
+      "WORKER",
+      "ENGINEER",
+      "DEVELOPER"
+    ],
+    "minimum_display": [
+      "SOURCE_AND_REVISION",
+      "STATUS_OR_HOLD",
+      "DIMENSIONS_WHERE_VERIFIED",
+      "LEGEND_AND_LABELS",
+      "NEXT_ACTION_OR_MISSING_INPUT"
+    ],
+    "role_boundary": "Workers must not mistake synthetic, estimated, candidate or unapproved drawings for issued-for-construction instructions"
+  },
+  "dimensions": {
+    "2D": "Source-linked drawings, plans, elevations, sections and details",
+    "3D": "Navigable geometry with semantic selection and layers; default for CAD where supported",
+    "4D": "Model components linked to verified milestones, schedule tasks and dependencies",
+    "5D": "Verified quantities linked to separate authoritative rates/cost data, never a guess from imagery"
+  },
+  "authority": {
+    "global_semantic_map": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+    "technical_code": "Each owning GitHub module",
+    "restricted_inputs": "Approved authenticated private source provider",
+    "publication": "Only public-safe projections after CI",
+    "high_stakes": "Engineer/client/regulator approval external to language interpretation"
+  },
+  "adoption": {
+    "standard_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/policies/global/ai-aided-product-guide.v0.1.json",
+    "required_module_paths": [
+      "guide or how-it-works user entry",
+      "README/AGENTS cross-reference",
+      "verified test or CI assertion"
+    ],
+    "do_not_create": "Separate competing governance templates for each repository"
+  }
+}

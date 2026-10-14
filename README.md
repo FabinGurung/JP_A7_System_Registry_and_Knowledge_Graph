@@ -1,5 +1,8 @@
 # JP_A7_System_Registry_and_Knowledge_Graph
 
+**Universal AI-aided product guidance v0.1:** [Website — How It Works](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/how-it-works.html) · [Canonical machine contract](policies/global/ai-aided-product-guide.v0.1.json) · [Reusable guide template](docs/AI_AIDED_PRODUCT_GUIDE_TEMPLATE_v0.1.md). Nine connected owner repositories reviewed; only A7 and CAD piloted in this change. Domain authority is never transferred to A7.
+
+
 Canonical **A7 semantic registry, knowledge graph, authority map and AI control plane** for the JP engineering ecosystem.
 
 ## Current state

@@ -176,3 +176,7 @@ On resumption read [`registry/roadmap.json`](registry/roadmap.json) and [`docs/R
 ## 17. Control Tower Atlas: do not confuse governance layers
 
 Use `docs/CONTROL_TOWERS_READ_FIRST.md` and `registry/controls/control-tower-map.json` for semantic resolution of global controls, R&D contracts, private A9 thesis/PPTX control and Main/Local library rules. Public site: `site/control-towers.html`. This is navigation/decision metadata, not a replacement for the private Drive provider or a claim of private A9 migration completion.
+
+## 18. Cross-repository AI-aided product guide (2026-10-15)
+
+User-facing websites expose **How It Works** near the first action; hide machine controls behind **For builders / AI agents**. Canonical guide standard: `policies/global/ai-aided-product-guide.v0.1.json`. Versioned human template: `docs/AI_AIDED_PRODUCT_GUIDE_TEMPLATE_v0.1.md`. Survey: `registry/decisions/ai-aided-guide-adoption.v0.1.json`. The AI interprets natural language and resolves governed sources; deterministic owner-specific GitHub engines execute normalized validated requests. Repeatability requires pinned canonical inputs/runtime/source bytes; a prompt alone cannot guarantee identical output. The site guide is a projection, not a second authority. Only CAD and A7 are in the initial implementation scope; other surveyed repositories remain unchanged.
