@@ -1,0 +1,63 @@
+{
+  "schema": "fabin-a7://ai-aided-guide-adoption/0.1",
+  "policy_id": "A7-POL-AI-AIDED-INTERACTION-001",
+  "reviewed_scope": "Connected GitHub owner FabinGurung, nine visible public repositories, not all possible repos tied to an email address",
+  "version": "0.1.0",
+  "module_repositories": [
+    {
+      "repo": "JP_A7_System_Registry_and_Knowledge_Graph",
+      "primary": "Global authority graph and cross-repo routing",
+      "existing_guide": "A7_READ_FIRST.md; site/control-towers.html",
+      "adoption": "PROPOSED_IN_PR"
+    },
+    {
+      "repo": "JP_Computer-Aided-Drawings",
+      "primary": "3D-first progressive drawing/geometry",
+      "existing_guide": "public/guide/index.html; cad/brief/",
+      "adoption": "PROPOSED_IN_PR"
+    },
+    {
+      "repo": "JP_Communication-Command-Centre-and-Resource-Hub",
+      "primary": "Field quick start, project and operational evidence",
+      "existing_guide": "guide/ (1/3/7/15 pages)",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "JP_Scheduling_Work_and_Resources_Management",
+      "primary": "Milestone roadmap and task execution",
+      "existing_guide": "README.md, site map entry",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "JP_Cost_Estimation",
+      "primary": "Plain-language budget/quantities and rate provenance",
+      "existing_guide": "README.md, estimator on main/research branches",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "JP_Structural_Analysis",
+      "primary": "Analysis model, assumptions and result QA",
+      "existing_guide": "README.md; engine development branch",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "JP_Research-and-Development",
+      "primary": "Two-family AI-first documents and research",
+      "existing_guide": "docs/AI_FIRST_FAMILY_ROUTING_READ_FIRST.md",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "JP_Study_Hub",
+      "primary": "Subject/study plan and verified next step",
+      "existing_guide": "README.md and source catalogs",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    },
+    {
+      "repo": "sumita-pilates-studio",
+      "primary": "Class schedule/member/owner workflows",
+      "existing_guide": "README.md and prototype pages",
+      "adoption": "REVIEWED_NOT_MODIFIED"
+    }
+  ],
+  "rule": "No bulk changes or compliance claims; domain PR, QA and provider readback required for every adoption"
+}
