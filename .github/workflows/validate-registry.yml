@@ -54,6 +54,8 @@ jobs:
         run: python scripts/validate_site_theme.py
       - name: Validate public-safe control tower navigation
         run: python scripts/validate_control_tower_map.py
+      - name: Validate versioned AI-aided product guide and nine-repository survey
+        run: python scripts/validate_ai_aided_product_guide.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative
