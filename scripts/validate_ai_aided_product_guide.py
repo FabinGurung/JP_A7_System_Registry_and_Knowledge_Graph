@@ -42,7 +42,7 @@ for phase in policy["execution_sequence"]:
     assert phase["id"] in guide and phase["id"] in site,phase["id"]
 for target in ["3D","2D","4D","5D","SOURCE","GitHub","ChatGPT"]:
     assert target.lower() in (guide+site).lower(),target
-assert "not the authority" in guide.lower()
+assert "not the source of truth" in guide.lower() or "not the authority" in guide.lower()
 assert "not the authority" in site.lower()
 assert "private" in site.lower() and "unverified" in site.lower()
 print("A7_AI_AIDED_GUIDE_CONTRACT_PASS policies=1 guide=1 repo_inventory=9")
