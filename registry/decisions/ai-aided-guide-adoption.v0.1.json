@@ -8,13 +8,24 @@
       "repo": "JP_A7_System_Registry_and_Knowledge_Graph",
       "primary": "Global authority graph and cross-repo routing",
       "existing_guide": "A7_READ_FIRST.md; site/control-towers.html",
-      "adoption": "PROPOSED_IN_PR"
+      "adoption": "PUBLISHED_PROVIDER_VERIFIED",
+      "release_evidence": {
+        "main_commit": "0ba63adf9a1a1d051ca6694b3e83efb61c30723a",
+        "validation_run": 38657195963,
+        "pages_run": 38657196018
+      }
     },
     {
       "repo": "JP_Computer-Aided-Drawings",
       "primary": "3D-first progressive drawing/geometry",
       "existing_guide": "public/guide/index.html; cad/brief/",
-      "adoption": "PROPOSED_IN_PR"
+      "adoption": "PUBLISHED_PROVIDER_VERIFIED",
+      "release_evidence": {
+        "main_commit": "0cba83f75f24c1bdc60ea67561fb14f6ddb2791d",
+        "pr_checks_passed": "15/15",
+        "staging_run": 38657294444,
+        "pages_run": 38657294489
+      }
     },
     {
       "repo": "JP_Communication-Command-Centre-and-Resource-Hub",
@@ -59,5 +70,6 @@
       "adoption": "REVIEWED_NOT_MODIFIED"
     }
   ],
-  "rule": "No bulk changes or compliance claims; domain PR, QA and provider readback required for every adoption"
+  "rule": "No bulk changes or compliance claims; domain PR, QA and provider readback required for every adoption",
+  "postmerge_status": "A7_AND_CAD_PUBLISHED_VERIFIED_2026-10-15_NPT"
 }
