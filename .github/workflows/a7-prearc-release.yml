@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
       - name: Verify frozen baseline and create annotated tag and GitHub Release without moving baseline
         env:
-          GH_TOKEN: ${ github.token }
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
