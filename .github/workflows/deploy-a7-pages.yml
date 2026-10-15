@@ -9,6 +9,8 @@ on:
       - "registry/**"
       - "scripts/generate_visualizations.py"
       - "scripts/validate_visualizations.py"
+      - "scripts/generate_galactic_atlas.py"
+      - "scripts/validate_galactic_atlas.py"
       - "site/**"
       - ".github/workflows/deploy-a7-pages.yml"
   workflow_dispatch:
@@ -36,6 +38,12 @@ jobs:
         run: python scripts/generate_visualizations.py --output-dir site/data --commit-sha "$GITHUB_SHA"
       - name: Validate generated projections
         run: python scripts/validate_visualizations.py --data-dir site/data
+      - name: Generate derived Galactic Atlas directory
+        run: python scripts/generate_galactic_atlas.py --output site/data/galactic-atlas.json --commit-sha "$GITHUB_SHA"
+      - name: Validate non-authoritative Galactic Atlas and legacy preservation
+        run: |
+          python scripts/validate_galactic_atlas.py
+          test -s site/data/galactic-atlas.json
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - name: Configure Pages

@@ -1,5 +1,20 @@
 # JP_A7_System_Registry_and_Knowledge_Graph
 
+## GALACTIC ATLAS · Arc 01 (2026-10-15)
+
+**Central user entrypoint:** [A7 Galactic Atlas](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/). This is a **federated service catalogue / metadata directory / relationship index**, not a shared source repository for specialist templates and calculation engines.
+
+**What A7 owns:** stable repository/module IDs, safe service and website URLs, aliases, typed cross-module references, owner/authority routing, provider observations and links to releases/commit history.
+
+**What A7 must NOT own:** the CAD/AAD drawing template, structural analysis kernel, scheduling engine, cost rate/BOQ logic, operational project facts, R&D/Study content or an independent copy of approved private source records. These belong to their own repositories and original authoritative providers. A7 must not silently edit peer repositories.
+
+**User flow:** central galactic map → choose one peer world → inspect repository owner, current recorded links and scope → **Visit website** or **Repository/version history**. More technical material is hidden behind explicit disclosure controls. The earlier entire homepage remains [Original interactive dashboard](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/legacy-overview.html); all other site routes are unchanged.
+
+**Before this redesign:** immutable commit `49c99f7010e53a66fab94cad4a955e195f9b060d`, preserved under readback-verified `milestone/pre-galactic-atlas-v0.1-20261015` branch and [release-record issue #31](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/issues/31). This is **not** a true Git tag or GitHub Release (the connected GitHub action does not support their creation). Do not move the milestone branch or delete the legacy site.
+
+**Versioned Arc 01 contract:** [docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md](docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md). Website links and stable IDs derive from `registry/entities/repositories.json`; UI-only coordinates and service labels are `registry/decisions/galactic-atlas-ui.v0.1.json`. The build generates a public-safe, read-only `galactic-atlas.json` projection with source hashes. **Recorded deployment statuses are historical observations**, not real-time availability claims. Private A9 SEQ13 remains separately staged, not implicitly admitted.
+
+
 **Universal AI-aided product guidance v0.1:** [Website — How It Works](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/how-it-works.html) · [Canonical machine contract](policies/global/ai-aided-product-guide.v0.1.json) · [Reusable guide template](docs/AI_AIDED_PRODUCT_GUIDE_TEMPLATE_v0.1.md). Nine connected owner repositories reviewed; only A7 and CAD piloted in this change. Domain authority is never transferred to A7.
 
 
