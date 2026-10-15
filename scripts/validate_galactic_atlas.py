@@ -30,7 +30,7 @@ assert aad["module_repository"] == "FabinGurung/JP_Computer-Aided-Drawings"
 assert any("governance/aad/aad-domain-template" in l["url"] for l in aad["deep_links"])
 assert all(s["id"] == "REPO-000001" or "owns" in s for s in d["stations"])
 assert "catalogue" in d["catalogue_role"].lower()
-assert "not" in d["fact_scope_note"].lower()
+assert "may be stale" in d["fact_scope_note"].lower() and "authoritative" in d["fact_scope_note"].lower()
 for file in ("site/index.html", "site/legacy-overview.html",
              "site/milestone.html", "site/assets/galactic-atlas.css",
              "site/assets/galactic-atlas.js"):
