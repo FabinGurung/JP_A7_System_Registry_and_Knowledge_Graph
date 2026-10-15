@@ -5,7 +5,7 @@
 ## Pre-arc release preservation
 
 - Frozen exact pre-mutation `main` SHA: `49c99f7010e53a66fab94cad4a955e195f9b060d`.
-- Provider-verified *branch* ref: `refs/heads/milestone/pre-galactic-atlas-v0.1-20261015`. This is not a true Git tag or GitHub Release because the current connector has no tag/release write action. Do not move this ref.
+- Provider-verified *branch* ref: `refs/heads/milestone/pre-galactic-atlas-v0.1-20261015`. The ref was created before code changes; the same pre-arc SHA was subsequently provider-verified as the annotated [Git tag + published Release `a7/pre-galactic-atlas-v0.1.0`](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/pre-galactic-atlas-v0.1.0) through GitHub Actions. Do not move the frozen ref or retag it.
 - Release record issue: https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/issues/31
 - Previous homepage: `site/legacy-overview.html` is an exact copy of the old `site/index.html`, including the original app loader. Its original graph, matrix, search and authority modes remain browsable.
 - Older standalone pages `control-towers.html`, `governance.html`, `roadmap.html`, `how-it-works.html`, `visualization-workspace.html` remain preserved at their previous routes.
