@@ -1,0 +1,49 @@
+name: A7 Preserve Frozen Pre-Galactic-Arc Release
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/a7-prearc-release.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release-existing-frozen-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify frozen baseline and create annotated tag and GitHub Release without moving baseline
+        env:
+          GH_TOKEN: ${ github.token }
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="49c99f7010e53a66fab94cad4a955e195f9b060d"
+          BRANCH="milestone/pre-galactic-atlas-v0.1-20261015"
+          TAG="a7/pre-galactic-atlas-v0.1.0"
+          test "$(git rev-parse HEAD)" != "$BASE"
+          git fetch origin "refs/heads/${BRANCH}"
+          ACTUAL="$(git rev-parse FETCH_HEAD)"
+          test "$ACTUAL" = "$BASE" || { echo "FROZEN MILESTONE MOVED"; exit 1; }
+          git fetch origin --tags
+          if git rev-parse --verify "refs/tags/${TAG}" >/dev/null 2>&1; then
+            test "$(git rev-parse "${TAG}^{commit}")" = "$BASE" || { echo "TAG CONFLICT"; exit 1; }
+            test "$(git cat-file -t "refs/tags/${TAG}")" = "tag" || { echo "REQUIRES ANNOTATED TAG"; exit 1; }
+          else
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git config user.name "github-actions[bot]"
+            git tag -a "${TAG}" "${BASE}" -m "A7 v0.1 pre-Galactic Atlas immutable baseline; original full homepage and catalogues"
+            git push origin "refs/tags/${TAG}"
+          fi
+          test "$(git rev-parse "${TAG}^{commit}")" = "$BASE"
+          if ! gh release view "${TAG}" --repo "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release create "${TAG}" \
+              --repo "${GITHUB_REPOSITORY}" \
+              --target "${BASE}" \
+              --title "A7 · Pre-Galactic Atlas baseline v0.1.0" \
+              --notes "Frozen original A7 website before the Galactic exploration arc. Exact original commit: ${BASE}. Original graphs, router, policies, visualization, control towers and public-safe catalogues preserved. Arc 01 only changes the read-only public site navigation; source authority remains with each specialist. The previously verified preservation branch ${BRANCH} remains unchanged. A7-SEQ-000013 private A9 transition is still staged, NOT final."
+          fi
+          gh release view "${TAG}" --repo "${GITHUB_REPOSITORY}" --json name,tagName,url,createdAt
+          echo "A7_PRE_GALACTIC_ARC_ANNOTATED_TAG_AND_RELEASE_PASS ${BASE}"
