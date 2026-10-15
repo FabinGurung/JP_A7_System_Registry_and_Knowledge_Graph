@@ -1,0 +1,89 @@
+/* A7 GALACTIC ATLAS ARC 01 — isolated public presentation layer.
+   Legacy Sky Mist pages and original graphs are deliberately untouched. */
+:root{--gx-bg:#050a17;--gx-pane:#0b172ae8;--gx-line:#27415a;--gx-text:#e8f7ff;--gx-muted:#90adc2;--gx-blue:#64d7ed;--gx-gold:#f1be82;color-scheme:dark}
+html{background:var(--gx-bg);scroll-behavior:smooth}
+body.galactic-arc{margin:0;min-height:100vh;background:radial-gradient(ellipse 80% 52% at 51% 35%,#1632568a,transparent 76%),radial-gradient(ellipse 45% 43% at 20% 65%,#1c265f88,transparent),linear-gradient(168deg,#030713 4%,#071225 62%,#070b19);color:var(--gx-text);font-family:Inter,ui-sans-serif,system-ui,sans-serif;overflow-x:hidden}
+.galaxy-stars{pointer-events:none;position:fixed;inset:0;z-index:0;background-image:radial-gradient(1px 1px at 17px 42px,#e1effca8 99%,transparent),radial-gradient(1px 1px at 81px 99px,#e4c89b99 99%,transparent),radial-gradient(1px 1px at 130px 170px,#6bd8eda1 99%,transparent);background-size:185px 203px,223px 271px,303px 297px;opacity:.45}
+.galactic-arc a{color:#a6eafa}.galactic-arc a:focus-visible,.galactic-arc button:focus-visible,.galactic-arc summary:focus-visible{outline:3px solid #ffd58e;outline-offset:4px}
+.galaxy-header{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:18px clamp(20px,3.6vw,60px);border-bottom:1px solid #79bfd72b;background:#050c1dbc;backdrop-filter:blur(13px)}
+.galaxy-logo{display:flex;align-items:center;gap:12px;color:#f2f9ff!important;text-decoration:none}
+.galaxy-mark{width:45px;height:45px;border:1px solid #7de9f9a3;border-radius:50%;display:grid;place-items:center;font-size:15px;font-weight:900;background:#092e43;box-shadow:0 0 19px #2bd8fa3b}
+.galaxy-logo strong,.galaxy-logo small{display:block}.galaxy-logo strong{letter-spacing:.21em;font-size:12px}.galaxy-logo small{font-size:11px;color:#8bb8cd;margin-top:4px}
+.galaxy-topnav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.galaxy-topnav a{font-size:12px;text-decoration:none;padding:10px 12px;border:1px solid transparent;border-radius:10px;color:#9cbacf}
+.galaxy-topnav a:hover,.galaxy-topnav a.is-current{border-color:#4984a67f;color:#e4f8ff;background:#1630489c}
+.galaxy-topnav a.nav-source{border-color:#55728760;color:#bdeefd}
+.galaxy-shell{position:relative;z-index:1;width:min(1520px,100%);margin:0 auto;padding:0 clamp(18px,3.4vw,54px) 80px}
+.galaxy-intro{padding:48px 0 24px;max-width:950px}
+.arc-kicker{color:#f2c68c;font-size:11px;font-weight:850;letter-spacing:.18em;display:flex;gap:12px;align-items:center}
+.pulse-dot{width:7px;height:7px;display:inline-block;background:#f6bd82;border-radius:50%;box-shadow:0 0 13px #f6bd82}
+.galaxy-intro h1{font-size:clamp(42px,6.1vw,88px);line-height:.99;letter-spacing:-.064em;margin:20px 0 18px;font-weight:850;color:#edf8ff}
+.galaxy-intro h1 em{font-weight:650;font-style:normal;background:linear-gradient(92deg,#65d2ff 5%,#bed1ff 51%,#f6c48d 95%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.galaxy-intro>p{font-size:16px;line-height:1.65;color:#acc3d4;max-width:760px;margin:0}
+.arc-meta{display:flex;gap:9px;flex-wrap:wrap;margin:23px 0 0}.arc-meta span{border:1px solid #45627e;background:#0c192ddd;border-radius:999px;padding:7px 12px;font-size:11px;color:#a8c4d6;font-weight:650}
+.galaxy-experience{display:grid;grid-template-columns:minmax(0,1fr) minmax(265px,330px);gap:14px;align-items:stretch}
+.map-stage,.galaxy-inspector{border-radius:22px;border:1px solid #30536a;background:linear-gradient(144deg,#0b1b32e9,#060f1fe9);box-shadow:0 30px 75px #0006;min-width:0}
+.map-head,.map-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 21px;font-size:10px;letter-spacing:.14em;font-weight:700;color:#8babbf}
+.map-head{border-bottom:1px solid #3152676e}.map-label{color:#85cde1}.map-footer{border-top:1px solid #3152676e;letter-spacing:.04em;line-height:1.4}.map-footer span{font-weight:500}
+.signal-dot{display:inline-block;width:6px;height:6px;background:#83dfb5;border-radius:50%;margin-right:7px}
+.space-field{height:clamp(470px,47vw,680px);position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 51% 43% at 50% 50%,#1b365550,transparent 95%),linear-gradient(#12263a29 1px,transparent 1px),linear-gradient(90deg,#12263a29 1px,transparent 1px);background-size:auto,32px 32px,32px 32px}
+.space-nebula{position:absolute;inset:-10%;opacity:.55;background:radial-gradient(ellipse 17% 28% at 16% 32%,#142c7180,transparent 100%),radial-gradient(ellipse 28% 20% at 80% 77%,#08637847,transparent 100%),radial-gradient(ellipse 20% 30% at 68% 16%,#6c407e3b,transparent);pointer-events:none}
+.space-field:before{content:"";position:absolute;inset:0;background-image:radial-gradient(1px 1px at 35px 63px,#d6f6ff 99%,transparent),radial-gradient(1px 1px at 153px 126px,#abc4fe 99%,transparent);background-size:199px 163px,251px 179px;opacity:.4;pointer-events:none}
+.orbit-ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed #63819c3c;transform:translate(-50%,-50%);pointer-events:none}.orbit-ring-one{width:42%;aspect-ratio:1}.orbit-ring-two{width:78%;aspect-ratio:1}
+.flight-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.flight-lines line{vector-effect:non-scaling-stroke;stroke:#3d91b05c;stroke-width:1.3;stroke-dasharray:3 6}
+.flight-lines line.is-selected{stroke:#75d9f8c2;stroke-width:2;stroke-dasharray:none;filter:drop-shadow(0 0 5px #65dffd)}
+.star-node{position:absolute;z-index:2;transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;color:#c3dbe9;min-width:85px;max-width:128px;padding:4px 0;text-shadow:0 3px 12px #010714;font:inherit}
+.star-node .star-planet{width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(139deg,#2c6681,#12263e);border:1px solid #6fb9cd99;box-shadow:inset -9px -7px 13px #050d19a8,0 0 23px #3cabc743;font-size:11px;font-weight:850;color:#edfaff;transition:transform .2s,box-shadow .2s}
+.star-node .star-name{font-size:11px;font-weight:750;line-height:1.2;text-align:center;max-width:125px}
+.star-node:hover .star-planet,.star-node.is-selected .star-planet{transform:scale(1.15);box-shadow:inset -9px -6px 10px #0d1728,0 0 0 4px #69d8f21e,0 0 35px #78dff7a6}
+.star-node.is-selected .star-name{color:#f8e0af}
+.star-node.star-hub .star-planet{width:82px;height:82px;font-size:23px;border:1px solid #ffc991;background:radial-gradient(circle at 31% 25%,#70ced4,#276078 33%,#12243c 80%);box-shadow:0 0 0 13px #62d7ea0a,0 0 0 32px #61bbdd08,0 0 55px #66dce67a;letter-spacing:.03em}
+.star-node.star-hub .star-name{font-size:12px;font-weight:850;letter-spacing:.06em}
+.star-node[data-zone="KNOWLEDGE"] .star-planet{background:linear-gradient(145deg,#615a94,#2b3261)}
+.star-node[data-zone="ADJACENT"] .star-planet{background:linear-gradient(145deg,#6d6a86,#33394a);border-color:#8b94a2}
+.star-node[data-zone="ENGINEERING"][data-role="COST_ENGINE"] .star-planet{background:linear-gradient(145deg,#997650,#493426)}
+.planet-loading{position:absolute;bottom:20px;left:20px;font-size:12px;color:#a7bbd1}
+.galaxy-inspector{padding:21px;display:flex;flex-direction:column;gap:12px}
+.inspector-topline{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:#9bbacd;font-weight:750;letter-spacing:.12em}
+.signal-tag{color:#d6efb9;padding:4px 7px;background:#28482a73;border:1px solid #51845970;border-radius:5px;font-size:9px}
+.inspector-emblem{width:67px;height:67px;border-radius:16px;display:grid;place-items:center;color:#dff7fd;font-size:22px;letter-spacing:.01em;font-weight:850;border:1px solid #5790a7;background:linear-gradient(140deg,#225571,#101e3b);box-shadow:0 11px 31px #040b19;margin-top:7px}
+.inspector-class{font-size:10px;color:#e6bd81;letter-spacing:.14em;font-weight:800}
+.galaxy-inspector h2{font-size:clamp(23px,2.1vw,30px);line-height:1.12;letter-spacing:-.03em;color:#f5fbff;margin:0}
+.galaxy-inspector>p{margin:0;color:#adc2d4;font-size:13px;line-height:1.7}
+.domain-boundary{padding:13px;border:1px solid #33516e;border-radius:10px;background:#081a2ad9;display:grid;gap:5px}.domain-boundary span{font-size:10px;letter-spacing:.12em;color:#87aabe}.domain-boundary strong{font-size:12px;line-height:1.4;color:#c9ebf8}
+.inspector-links{display:grid;gap:9px;margin-top:4px}
+.inspector-links a{padding:12px;border-radius:10px;border:1px solid #5ea3c2;background:#1b657c;color:white!important;text-decoration:none;font-size:13px;font-weight:770;display:flex;justify-content:space-between}
+.inspector-links a+ a{border-color:#39607c;background:#10273e;color:#baddf1!important}
+.inspector-links a:hover,.more-links a:hover{filter:brightness(1.2)}
+.more-links{display:flex;flex-wrap:wrap;gap:8px}.more-links:empty{display:none}
+.more-links a{font-size:11px;padding:7px 9px;border-radius:8px;border:1px solid #3b6080;text-decoration:none;background:#101f35}
+.galaxy-inspector p.inspector-caveat{margin-top:auto;font-size:11px;color:#819bad;border-top:1px solid #314960;padding-top:13px}
+.galaxy-next{display:grid;gap:12px;margin:25px 0 0}
+.reveal-panel{border:1px solid #2c506b;background:#0d1a2bbd;border-radius:15px;overflow:hidden}
+.reveal-panel summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:22px;color:#e7f6ff}
+.reveal-panel summary::-webkit-details-marker{display:none}
+.reveal-panel summary small{display:block;color:#d9a976;font-size:10px;letter-spacing:.12em;font-weight:850;margin-bottom:6px}
+.reveal-panel summary strong{font-size:17px}
+.reveal-panel summary .chevron{font-size:23px;color:#7fcfe8;transition:transform .2s}
+.reveal-panel[open] summary .chevron{transform:rotate(180deg)}
+.reveal-panel[open] summary{border-bottom:1px solid #305069}
+.reveal-body{padding:18px 23px 25px}
+.reveal-lead{max-width:940px;line-height:1.7;font-size:14px;color:#bdd1de}
+.owner-flow{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:20px 0 23px}
+.owner-flow div{border:1px solid #356687;border-radius:12px;padding:16px;background:#102943;color:#e4f5fe;font-weight:800}
+.owner-flow div small{color:#a4bece;font-weight:500;font-size:11px}
+.owner-flow>span{color:#ecc48d;font-size:13px}
+.ownership-table-wrap{overflow-x:auto;border:1px solid #35506a;border-radius:12px}
+.ownership-table{width:100%;border-collapse:collapse;text-align:left;font-size:13px;min-width:650px}
+.ownership-table th,.ownership-table td{padding:12px 15px;border-bottom:1px solid #264159}.ownership-table thead{background:#14324c;color:#9fdef0}
+.ownership-table tbody th{color:#f4d5ac;width:18%}.ownership-table td{color:#bed4df}
+.principle-note{border-left:3px solid #e9b982;padding:10px 15px;margin-top:20px;color:#c4d8e2;background:#14253b}
+.archive-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:18px 0}
+.archive-links a{border-radius:10px;border:1px solid #406888;padding:12px;text-decoration:none;background:#17314b;color:#d6edfc}
+.galaxy-error{border:1px solid #b87071;background:#402533;color:#ffe4e2;padding:16px;margin:12px 0;border-radius:11px}
+.galaxy-footer{position:relative;z-index:1;padding:24px clamp(20px,3.4vw,54px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #27405b;color:#85a5b6;font-size:12px}
+.galaxy-footer a{font-size:12px}
+@media(max-width:1000px){.galaxy-experience{grid-template-columns:1fr}.galaxy-inspector{display:grid;grid-template-columns:95px 1fr;align-items:start}.galaxy-inspector .inspector-topline,.galaxy-inspector .inspector-links,.galaxy-inspector .more-links,.galaxy-inspector .inspector-caveat,.galaxy-inspector .domain-boundary{grid-column:1/-1}.galaxy-inspector .inspector-emblem{grid-row:2/5}.galaxy-inspector .inspector-class{grid-column:2}.galaxy-inspector h2,.galaxy-inspector>p{grid-column:2}}
+@media(max-width:620px){.galaxy-header{padding:13px 17px}.galaxy-topnav{overflow-x:auto;flex-wrap:nowrap;max-width:100%;padding-bottom:4px}.galaxy-topnav a{white-space:nowrap;font-size:11px}.galaxy-intro{padding:31px 0 23px}.galaxy-intro>p{font-size:14px}.space-field{height:500px}.star-node{min-width:62px;max-width:82px}.star-node .star-planet{width:36px;height:36px;font-size:9px}.star-node .star-name{font-size:9px}.star-node.star-hub .star-planet{width:65px;height:65px;font-size:17px}.star-node.star-hub .star-name{font-size:10px}.map-head,.map-footer{padding:12px}.map-footer{font-size:9px}.galaxy-inspector{padding:17px}.reveal-panel summary{padding:16px}.reveal-panel summary strong{font-size:14px}.reveal-body{padding:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
