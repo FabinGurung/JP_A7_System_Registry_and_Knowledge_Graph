@@ -1,0 +1,125 @@
+{
+  "schema": "a7://galactic-atlas-ui/0.1",
+  "status": "PRESENTATION_ONLY_NOT_DOMAIN_AUTHORITY",
+  "arc": "GALACTIC_EXPLORATION_PHASE_1",
+  "primary_view": "CENTRAL_MAP_SELECT_ONE_DESTINATION",
+  "ownership_rule": "A7 is a read-only catalogue and cross-domain router; implementation/template/approval/release authority remains in each owning repository and original provider",
+  "primary_system": "REPO-000001",
+  "systems": [
+    {
+      "id": "REPO-000001",
+      "label": "A7 · Galactic Atlas",
+      "short": "A7",
+      "role": "CENTRAL_CATALOGUE",
+      "zone": "HUB",
+      "azimuth": 0,
+      "radial": 0,
+      "summary": "Discovery, service routing, identities, cross-module links, status snapshots and release-history pointers.",
+      "owns": "Cross-domain catalogue metadata and routing links",
+      "does_not_own": "Specialist algorithms, templates, construction releases, private provider originals"
+    },
+    {
+      "id": "REPO-000002",
+      "label": "Structural Analysis",
+      "short": "STR",
+      "role": "ANALYSIS_ENGINE",
+      "zone": "ENGINEERING",
+      "azimuth": 285,
+      "radial": 36,
+      "summary": "Analysis engines, model validation, structural results and engineering review boundaries.",
+      "owns": "OpenSees/SAR analysis source, schemas, tests and version history"
+    },
+    {
+      "id": "REPO-000003",
+      "label": "AAD / CAD",
+      "short": "AAD",
+      "role": "DRAWING_ENGINE",
+      "zone": "ENGINEERING",
+      "azimuth": 221,
+      "radial": 38,
+      "summary": "AI-Aided Design/Drawing, parametric geometry, 2D/3D, IFC/DXF/STEP and native CAD templates.",
+      "owns": "AAD drawing-specific template and engine, geometry validation, versions and output manifests",
+      "deep_links": [
+        {
+          "label": "AI-Aided Drawing",
+          "path": "cad/brief/"
+        },
+        {
+          "label": "How It Works",
+          "path": "guide/"
+        },
+        {
+          "label": "AAD owning template",
+          "github_path": "governance/aad/aad-domain-template.v0.1.json"
+        }
+      ]
+    },
+    {
+      "id": "REPO-000004",
+      "label": "Scheduling",
+      "short": "4D",
+      "role": "SCHEDULE_ENGINE",
+      "zone": "ENGINEERING",
+      "azimuth": 161,
+      "radial": 36,
+      "summary": "Work-breakdown activities, project milestones, resources, calendars and 4D sequencing.",
+      "owns": "Scheduling/activity logic and approved task status"
+    },
+    {
+      "id": "REPO-000005",
+      "label": "Pilates Studio",
+      "short": "STUDIO",
+      "role": "INDEPENDENT_BUSINESS",
+      "zone": "ADJACENT",
+      "azimuth": 345,
+      "radial": 48,
+      "summary": "A separate studio business and public website prototype; indexed, not governed as an AEC engine.",
+      "owns": "Studio website and member/schedule product logic"
+    },
+    {
+      "id": "REPO-000006",
+      "label": "R&D",
+      "short": "R&D",
+      "role": "KNOWLEDGE_ENGINE",
+      "zone": "KNOWLEDGE",
+      "azimuth": 41,
+      "radial": 37,
+      "summary": "Academic and enterprise research/document engineering, templates and versioned knowledge workflows.",
+      "owns": "R&D academic/enterprise research, LaTeX and presentation controls"
+    },
+    {
+      "id": "REPO-000007",
+      "label": "Operations Hub",
+      "short": "OPS",
+      "role": "FIELD_EVIDENCE",
+      "zone": "ENGINEERING",
+      "azimuth": 105,
+      "radial": 38,
+      "summary": "Project operations, daily progress, field evidence, site resources and human-facing work readiness.",
+      "owns": "Admitted operational facts and field workflow state"
+    },
+    {
+      "id": "REPO-000008",
+      "label": "Cost Estimation",
+      "short": "5D",
+      "role": "COST_ENGINE",
+      "zone": "ENGINEERING",
+      "azimuth": 258,
+      "radial": 43,
+      "summary": "BOQ calculations, quantity/cost intelligence, approved rate-source integration and 5D cost linkage.",
+      "owns": "Estimating methods, BOQ/rates and cost controls"
+    },
+    {
+      "id": "REPO-000009",
+      "label": "Study Hub",
+      "short": "STUDY",
+      "role": "KNOWLEDGE_ENGINE",
+      "zone": "KNOWLEDGE",
+      "azimuth": 72,
+      "radial": 50,
+      "summary": "Research-backed learning materials, study sequences and knowledge acquisition.",
+      "owns": "Study materials, curricula and learning workflows"
+    }
+  ],
+  "fact_scope_note": "Provider/release statuses are recorded observations and may be stale; each owning repo and live provider is authoritative for current work."
+}
