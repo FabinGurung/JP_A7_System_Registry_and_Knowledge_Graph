@@ -1,161 +1,81 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#eff8fc">
-  <meta name="description" content="A7 semantic control plane — generated knowledge graph, authority routing and project-module visualization.">
-  <title>A7 Control Plane · Knowledge Graph</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="assets/sky-theme.css">
-</head>
-<body>
-  <div class="noise"></div>
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="A7 home">
-      <span class="brand-mark">A7</span>
-      <span><strong>System Registry</strong><small>Knowledge Graph & Routing</small></span>
-    </a>
-    <div class="top-actions">
-      <a class="ws-pinned-link" href="governance.html">A9 · Git + Drive rules</a>
-      <a class="ws-pinned-link" href="roadmap.html">Roadmap · Developed + Next</a>
-      <a class="ws-pinned-link" href="how-it-works.html">How It Works · AI + Engine</a>
-      <a class="ws-pinned-link" href="control-towers.html">🧭 Control Tower Atlas</a>
-      <a class="ws-pinned-link" href="visualization-workspace.html">📌 Visualization strategy</a>
-      <button class="icon-button" id="searchButton" title="Search (/)">⌕</button>
-      <a class="ghost-link" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noreferrer">GitHub ↗</a>
-      <span class="status-pill"><i></i><span id="sequenceStatus">Loading</span></span>
-    </div>
-  </header>
-
-  <main class="shell">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">GENERATED · NON-AUTHORITATIVE PROJECTION</p>
-        <h1>One control plane.<br><span>Every governed route visible.</span></h1>
-        <p class="hero-copy">Explore A7 identities, peer engineering modules, authority boundaries, project routing and derivation lineage without duplicating the domain truth they point to.</p>
-      </div>
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="core">A7</div>
-      </div>
-    </section>
-
-    <section class="metrics" id="metrics"></section>
-    <aside class="ws-home-pin" aria-label="Control tower map"><div><b>🧭 Control Towers · A7, R&D, Drive & Libraries</b><p>Explore who owns rules, LaTeX/PPTX workflows, private A9 controls, Main/Local artifact libraries and the next roadmap.</p></div><a href="control-towers.html">Explore control hierarchy →</a></aside>
-    <aside class="ws-home-pin"><div><b>📌 Pinned visualization strategy</b><p>Cytoscape · React Flow · Tables · Mermaid · Excalidraw · optional 3D. What exists, what is planned, and how to resume correctly.</p></div><a href="visualization-workspace.html">Open permanent workspace →</a></aside>
-
-    <nav class="tabs" aria-label="Visualization views">
-      <button class="tab active" data-view="overview">Overview</button>
-      <button class="tab" data-view="graph">2D Graph</button>
-      <button class="tab" data-view="spatial">Spatial 3D</button>
-      <button class="tab" data-view="routing">Project Routing</button>
-      <button class="tab" data-view="authority">Authority</button>
-      <button class="tab" data-view="derivation">Derivation</button>
-      <a class="tab ws-tab-link" href="visualization-workspace.html">📌 How we built this</a>
-    </nav>
-
-    <section class="view active" id="view-overview">
-      <div class="grid-12">
-        <article class="panel span-8">
-          <div class="panel-head">
-            <div><p class="kicker">SYSTEM TOPOLOGY</p><h2>Execution architecture</h2></div>
-            <button class="text-button" data-go="graph">Open graph →</button>
-          </div>
-          <div class="architecture" id="architecture"></div>
-        </article>
-        <article class="panel span-4 authority-rule">
-          <p class="kicker">CORE RULE</p>
-          <h2>Authority before recency.</h2>
-          <p>A7 resolves who owns a fact before considering timestamps. Generated HTML, graphs and search indexes never become authority.</p>
-          <div class="rule-chain"><span>Project ID</span><b>→</b><span>Fact class</span><b>→</b><span>Owner module</span><b>→</b><span>Live provider</span></div>
-        </article>
-        <article class="panel span-12">
-          <div class="panel-head"><div><p class="kicker">PEER MODULES</p><h2>Specialist systems</h2></div><span class="muted">No nested monolith</span></div>
-          <div class="module-grid" id="moduleGrid"></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="view" id="view-graph">
-      <div class="workspace">
-        <aside class="workspace-tools">
-          <p class="kicker">FILTERS</p>
-          <div id="graphFilters" class="filter-stack"></div>
-          <hr>
-          <button class="wide-button" id="fitGraph">Fit graph</button>
-          <button class="wide-button secondary" id="resetGraph">Reset view</button>
-          <p class="hint">Drag to pan · wheel to zoom · click a node for details.</p>
-        </aside>
-        <div class="canvas-wrap"><canvas id="graphCanvas"></canvas><div class="canvas-label">2D KNOWLEDGE GRAPH</div></div>
-        <aside class="inspector" id="graphInspector"><p class="kicker">INSPECTOR</p><h3>Select a node</h3><p class="muted">The graph contains only public-safe semantic metadata.</p></aside>
-      </div>
-    </section>
-
-    <section class="view" id="view-spatial">
-      <div class="workspace spatial-workspace">
-        <aside class="workspace-tools">
-          <p class="kicker">SPATIAL MODEL</p>
-          <h3>3D projection</h3>
-          <p class="muted">Same graph, deterministic 3D coordinates. It is a view of A7—not a second data store.</p>
-          <button class="wide-button" id="reset3d">Reset camera</button>
-          <div class="legend" id="spatialLegend"></div>
-        </aside>
-        <div class="canvas-wrap"><canvas id="spatialCanvas"></canvas><div class="canvas-label">ROTATE · ZOOM · INSPECT</div></div>
-        <aside class="inspector" id="spatialInspector"><p class="kicker">INSPECTOR</p><h3>Rotate the graph</h3><p class="muted">Drag to rotate. Wheel changes camera distance.</p></aside>
-      </div>
-    </section>
-
-    <section class="view" id="view-routing">
-      <div class="routing-head">
-        <div><p class="kicker">DETERMINISTIC ROUTER</p><h2>Project → fact class → module</h2><p class="muted">Routing availability does not assert that a project-specific schedule, BOQ, model or drawing exists.</p></div>
-        <label class="select-wrap">Project semantic ID<select id="projectSelect"></select></label>
-      </div>
-      <div class="route-flow"><span id="selectedProject">PRJ</span><b>→</b><span>EXEC-PROFILE-AEC-CORE-001</span><b>→</b><span>5 governed routes</span></div>
-      <div class="route-grid" id="routeGrid"></div>
-      <article class="panel matrix-panel">
-        <div class="panel-head"><div><p class="kicker">ROUTING MATRIX</p><h2>All project identities</h2></div><span class="muted" id="matrixCount"></span></div>
-        <div class="matrix-wrap"><table id="routeMatrix"></table></div>
-      </article>
-    </section>
-
-    <section class="view" id="view-authority">
-      <div class="section-head">
-        <div><p class="kicker">AUTHORITY ENGINE</p><h2>Fact ownership matrix</h2></div>
-        <input class="filter-input" id="authorityFilter" placeholder="Filter fact classes…">
-      </div>
-      <div class="table-wrap"><table class="data-table" id="authorityTable"></table></div>
-    </section>
-
-    <section class="view" id="view-derivation">
-      <div class="grid-12">
-        <article class="panel span-7">
-          <p class="kicker">DERIVATION PIPELINE</p><h2>Canonical inputs → reproducible projections</h2>
-          <div class="pipeline" id="pipeline"></div>
-        </article>
-        <article class="panel span-5">
-          <p class="kicker">BUILD PROVENANCE</p><h2 id="buildId">Loading…</h2>
-          <dl class="provenance" id="provenance"></dl>
-        </article>
-        <article class="panel span-7">
-          <div class="panel-head"><div><p class="kicker">MERMAID SOURCE</p><h2>Architecture projection</h2></div><button class="text-button" id="copyMermaid">Copy</button></div>
-          <pre class="code-block" id="mermaidSource"></pre>
-        </article>
-        <article class="panel span-5">
-          <p class="kicker">OUTPUT INTEGRITY</p><h2>Derived artifacts</h2>
-          <div class="checksum-list" id="checksumList"></div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-    <div class="search-modal">
-      <div class="search-line"><span>⌕</span><input id="globalSearch" placeholder="Search projects, modules, repositories, fact classes…" autocomplete="off"><kbd>ESC</kbd></div>
-      <div class="search-results" id="searchResults"></div>
-    </div>
-  </div>
-
-  <footer><span>A7 generated projection · <strong>AI is resolver/operator, not authority.</strong></span><span id="footerBuild"></span></footer>
-  <script src="assets/app.js" defer></script>
-</body>
-</html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eff8fc"><meta name="description" content="A7 Galactic Atlas — a progressive, federated catalogue linking independently owned engineering systems.">
+<title>A7 Galactic Atlas · Explore the JP systems</title>
+<link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/sky-theme.css"><link rel="stylesheet" href="assets/galactic-atlas.css">
+<script src="assets/galactic-atlas.js" defer></script>
+</head><body class="galactic-arc">
+<div class="galaxy-stars" aria-hidden="true"></div>
+<header class="galaxy-header">
+<a class="galaxy-logo" href="./" aria-label="A7 Galactic Atlas home"><span class="galaxy-mark">A7</span><span><strong>GALACTIC ATLAS</strong><small>Federated engineering directory</small></span></a>
+<nav aria-label="Primary navigation" class="galaxy-topnav">
+<a class="nav-link is-current" href="./">Atlas</a>
+<a class="nav-link" href="legacy-overview.html">Original dashboard</a>
+<a class="nav-link" href="control-towers.html">Control Towers</a>
+<a class="nav-link" href="visualization-workspace.html">📌 Visualizations</a>
+<a class="nav-source" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</nav></header>
+<main class="galaxy-shell">
+<section class="galaxy-intro" aria-label="Introduction">
+<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 01 / THE CENTRAL MAP</div>
+<h1>One galaxy.<br><em>Independent systems.</em></h1>
+<p>A7 is the map, not the machine. Select a constellation to discover its owning repository, visit its website, and follow its version history. Each world keeps its own code, templates, data and authority.</p>
+<div class="arc-meta"><span>9 indexed repositories</span><span>8 destination systems</span><span>Zero authority transfers</span></div>
+</section>
+<section class="galaxy-experience" aria-label="Federated system star map">
+<div class="map-stage">
+<div class="map-head"><span class="map-label">NAVIGATION / JP SYSTEM GALAXY</span><span class="map-hint">SELECT A SYSTEM • EXPLORE ONE AT A TIME</span></div>
+<div class="space-field" id="spaceField" role="group" aria-label="Central star map of linked repositories">
+<div class="space-nebula" aria-hidden="true"></div>
+<div class="orbit-ring orbit-ring-one" aria-hidden="true"></div><div class="orbit-ring orbit-ring-two" aria-hidden="true"></div>
+<svg class="flight-lines" id="flightLines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+<div class="planet-loading" id="planetLoading" role="status">Contacting catalogue · loading destinations…</div>
+</div>
+<div class="map-footer"><span><span class="signal-dot"></span> PUBLIC-SAFE DIRECTORY • NON-AUTHORITATIVE PROJECTION</span><span id="readStatus">Catalogue observation: loading…</span></div>
+</div>
+<aside class="galaxy-inspector" id="inspector" aria-live="polite" aria-label="Selected system details">
+<div class="inspector-topline"><span>SELECTED DESTINATION</span><span class="signal-tag">READ ONLY</span></div>
+<div class="inspector-emblem" id="selectedEmblem">A7</div>
+<div class="inspector-class" id="selectedRole">SERVICE CATALOGUE</div>
+<h2 id="selectedTitle">A7 Galactic Atlas</h2>
+<p id="selectedSummary">A7 indexes systems and routes navigation. It does not own their algorithms or templates.</p>
+<div class="domain-boundary"><span>DOMAIN OWNER</span><strong id="selectedOwner">A7 / Metadata and references</strong></div>
+<div class="inspector-links">
+<a id="selectedSite" href="./">Open website <span aria-hidden="true">↗</span></a>
+<a id="selectedRepo" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">Repository / commits ↗</a>
+</div>
+<div id="selectedExtras" class="more-links" aria-label="Destination-specific links"></div>
+<p class="inspector-caveat" id="selectedEvidence">Recorded links are catalogue observations; live statuses belong to each provider.</p>
+</aside>
+</section>
+<div id="galaxyError" class="galaxy-error" role="alert" hidden>Directory data unavailable. Use the <a href="legacy-overview.html">preserved original dashboard</a> or the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph">GitHub catalogue</a>.</div>
+<section class="galaxy-next" aria-label="Progressively revealed architecture">
+<details class="reveal-panel" id="principle">
+<summary><span><small>02 / GOVERNANCE PROTOCOL</small><strong>Who owns what? Explore the single-writer rule.</strong></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+<div class="reveal-body">
+<p class="reveal-lead">A7 is a <strong>metadata catalogue + service registry + knowledge-graph index</strong>. Each peer repository is an independently governed bounded context. A7 holds navigational references, never a second writable copy of a specialist template.</p>
+<div class="owner-flow"><div>A7 catalogue<br><small>Identity • relationships • source links</small></div><span>routes to →</span><div>Owning system<br><small>Templates • algorithms • releases • approvals</small></div></div>
+<div class="ownership-table-wrap"><table class="ownership-table">
+<thead><tr><th>Concept</th><th>A7 catalogue owns</th><th>Specialist repository owns</th></tr></thead><tbody>
+<tr><th>Identity</th><td>Module IDs and aliases</td><td>Internal record and element IDs</td></tr>
+<tr><th>Discovery</th><td>Repository, website and service links</td><td>Application routes and interfaces</td></tr>
+<tr><th>Relationships</th><td>Cross-module references and owner map</td><td>Domain-specific PK/FK relations</td></tr>
+<tr><th>History</th><td>Release references, status observations and links</td><td>Real Git commits, diffs, output artifacts</td></tr>
+<tr><th>Templates</th><td>Template location and owner pointer</td><td>Canonical definitions and validation</td></tr>
+<tr><th>Execution</th><td>Route to the right engine</td><td>Algorithms, tests and computed outputs</td></tr>
+<tr><th>Authority</th><td>Fact-class ownership map</td><td>Domain rules and original source records</td></tr>
+</tbody></table></div>
+<p class="principle-note">Governing rule: <strong>single-writer ownership with referential links, not duplicated authority.</strong> Stale catalogue observations should trigger a grounded pointer review, never an automatic rewrite of the owning domain.</p>
+</div></details>
+<details class="reveal-panel">
+<summary><span><small>03 / ENGINEERING ARCHIVES</small><strong>Open the original A7 knowledge graph and control rooms.</strong></span><span class="chevron" aria-hidden="true">⌄</span></summary>
+<div class="reveal-body">
+<p class="reveal-lead">No old system was deleted or reset. Browse the original 2D/3D graphs, search, authority matrix, project routing and specialist control references through the preserved dashboard.</p>
+<div class="archive-links"><a href="legacy-overview.html">Original dashboard + graphs ↗</a><a href="control-towers.html">Control Tower Atlas ↗</a><a href="governance.html">A9 & Git/Drive pointers ↗</a><a href="roadmap.html">Development roadmap ↗</a><a href="visualization-workspace.html">📌 Visualization workspace ↗</a><a href="how-it-works.html">Earlier How It Works ↗</a></div>
+<p class="inspector-caveat">A7's older technical records, schemas, canonical JSON/JSONL registry, derivation manifests and current A9/Drive boundaries remain preserved.</p>
+</div></details>
+</section>
+</main>
+<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 01</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="milestone.html">Release checkpoint ↗</a></footer>
+</body></html>
