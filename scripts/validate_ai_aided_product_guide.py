@@ -29,11 +29,14 @@ assert policy["dimensions"]["5D"].startswith("Verified quantities")
 rows=registry["module_repositories"]
 assert len(rows)==9 and len({x["repo"] for x in rows})==9
 assert all(re.fullmatch(r"[A-Za-z0-9_-]{3,100}",x["repo"]) for x in rows)
-assert sum(x["adoption"]=="PROPOSED_IN_PR" for x in rows)==2
-assert {x["repo"] for x in rows if x["adoption"]=="PROPOSED_IN_PR"}=={
+assert sum(x["adoption"]=="PUBLISHED_PROVIDER_VERIFIED" for x in rows)==2
+assert {x["repo"] for x in rows if x["adoption"]=="PUBLISHED_PROVIDER_VERIFIED"}=={
  "JP_A7_System_Registry_and_Knowledge_Graph","JP_Computer-Aided-Drawings"}
-assert all(x["adoption"] in ("PROPOSED_IN_PR","REVIEWED_NOT_MODIFIED")
+assert all(x["adoption"] in ("PUBLISHED_PROVIDER_VERIFIED","REVIEWED_NOT_MODIFIED")
  for x in rows)
+assert all(re.fullmatch(r"[0-9a-f]{40}",x["release_evidence"]["main_commit"]) for x in rows if x["adoption"]=="PUBLISHED_PROVIDER_VERIFIED")
+assert all(x["release_evidence"]["pages_run"]>0 for x in rows if x["adoption"]=="PUBLISHED_PROVIDER_VERIFIED")
+assert registry["postmerge_status"]=="A7_AND_CAD_PUBLISHED_VERIFIED_2026-10-15_NPT"
 assert "How It Works" in guide and "How It Works" in site
 assert "<main" in site and "assets/sky-theme.css" in site
 assert "content=\"#eff8fc\"" in site and "aria-label=" in site
