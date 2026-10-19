@@ -11,6 +11,8 @@ on:
       - "scripts/validate_visualizations.py"
       - "scripts/generate_galactic_atlas.py"
       - "scripts/validate_galactic_atlas.py"
+      - "scripts/generate_repository_health.py"
+      - "scripts/validate_repository_health.py"
       - "site/**"
       - ".github/workflows/deploy-a7-pages.yml"
   workflow_dispatch:
@@ -44,6 +46,10 @@ jobs:
         run: |
           python scripts/validate_galactic_atlas.py
           test -s site/data/galactic-atlas.json
+      - name: Generate dated repository health projection
+        run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"
+      - name: Validate dated health and guide ownership
+        run: python scripts/validate_repository_health.py
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - name: Configure Pages

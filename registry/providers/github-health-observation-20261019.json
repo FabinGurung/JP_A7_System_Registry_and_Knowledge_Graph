@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "A7-GITHUB-HEALTH-20261019-001",
+  "snapshot_date": "2026-10-19",
+  "timezone": "Asia/Kathmandu",
+  "status": "OBSERVED_SNAPSHOT_NOT_MONITORING",
+  "provider": "GitHub REST through connected authorized integration",
+  "scope": "Nine registered public repositories; provider evidence observed on 2026-10-19; CI and Pages are not domain/professional approval.",
+  "freshness_rule": "Never claim these records are current without new provider readback. Use observed SHA and run ID, compare with live provider.",
+  "records": [
+    {
+      "id": "REPO-000001",
+      "slug": "JP_A7_System_Registry_and_Knowledge_Graph",
+      "name": "A7 Galactic Atlas",
+      "main_sha": "aafeba37990ae83aa6cda238eefa6d7d627b2cd6",
+      "production_branch": "main",
+      "health": "DEPLOYED_AT_OBSERVED_SHA",
+      "deployment_run": 38675686071,
+      "validation_run": 38675686077,
+      "observed_source_sha": "aafeba37990ae83aa6cda238eefa6d7d627b2cd6",
+      "attention": "Arc01 Pages and CI pass; sequence ledger not yet reflecting atlas; seq13 private A9 hold unchanged"
+    },
+    {
+      "id": "REPO-000002",
+      "slug": "JP_Structural_Analysis",
+      "name": "Structural Analysis",
+      "main_sha": "f9d6b0e120fa1995167fde8127e5006ded5e0f40",
+      "production_branch": "main",
+      "health": "DEPLOYED_ENGINEERING_HOLDS",
+      "deployment_run": 39183854751,
+      "validation_run": 39221377110,
+      "observed_source_sha": "f9d6b0e120fa1995167fde8127e5006ded5e0f40",
+      "attention": "Signed OpenSees Phase D2 work on separate branch; CI success not engineering approval; PR #4 preserved"
+    },
+    {
+      "id": "REPO-000003",
+      "slug": "JP_Computer-Aided-Drawings",
+      "name": "CAD / AAD",
+      "main_sha": "80e131e78a41b5a6e0e853a5492beffb8924898e",
+      "production_branch": "main",
+      "health": "DEPLOYED_READBACK_SUCCESS",
+      "deployment_run": 39221493039,
+      "validation_run": 39221829848,
+      "observed_source_sha": "80e131e78a41b5a6e0e853a5492beffb8924898e",
+      "attention": "CAD owns AAD template; M01 Pages readback succeeded, no automatic IFC engineering approval"
+    },
+    {
+      "id": "REPO-000004",
+      "slug": "JP_Scheduling_Work_and_Resources_Management",
+      "name": "Scheduling / 4D",
+      "main_sha": "111ac4f2ecb0504130df480b62fbbf509972d352",
+      "production_branch": "kernel-v0.2-open-source-engines",
+      "health": "DEPLOYED_NONDEFAULT_BRANCH",
+      "deployment_run": 39234129141,
+      "validation_run": 39234129146,
+      "observed_source_sha": "b2ab3ced4811",
+      "attention": "v1.6.1 production on kernel branch; main is not Pages content source; project-specific schedules require adoption evidence"
+    },
+    {
+      "id": "REPO-000005",
+      "slug": "sumita-pilates-studio",
+      "name": "Sumita Pilates Studio",
+      "main_sha": "81dd353525a899a7dd1e0937ef4083cf4134a631",
+      "production_branch": "gis-site-selection",
+      "health": "OLDER_DEMO_DEPLOYMENT",
+      "deployment_run": 30681650626,
+      "validation_run": null,
+      "observed_source_sha": "646667e08611454dc9b1ea0d1820bc61b7e00bce",
+      "attention": "Pages last successful August 1; browser-local demo bookings, not synchronized production service"
+    },
+    {
+      "id": "REPO-000006",
+      "slug": "JP_Research-and-Development",
+      "name": "Research & Development",
+      "main_sha": "4d1570ae5dd3bc6ee02faaa5120cbca6965d1fe2",
+      "production_branch": "main",
+      "health": "LATEST_MAIN_CI_AND_PAGES_FAILED",
+      "deployment_run": 39182409536,
+      "validation_run": 39203482618,
+      "observed_source_sha": "29af38cf9bf4",
+      "failed_deployment_run": 39203482674,
+      "attention": "October 19 main validation, Pages and researcher LaTeX source gates failed. Earlier Pages success does not certify latest main."
+    },
+    {
+      "id": "REPO-000007",
+      "slug": "JP_Communication-Command-Centre-and-Resource-Hub",
+      "name": "Operations / CWO",
+      "main_sha": "d2963c2380c359dff3ea2f23f4a702c6074cb642",
+      "production_branch": "main",
+      "health": "DEPLOYED_AT_OBSERVED_SHA",
+      "deployment_run": 39221946717,
+      "validation_run": 39221946784,
+      "observed_source_sha": "d2963c2380c359dff3ea2f23f4a702c6074cb642",
+      "attention": "Operations v2.1 production success; private evidence/admission still requires owner control"
+    },
+    {
+      "id": "REPO-000008",
+      "slug": "JP_Cost_Estimation",
+      "name": "Cost Estimation / 5D",
+      "main_sha": "13a1bd6954b80c5b1359cd69b90c88b0674bc86b",
+      "production_branch": "main",
+      "health": "DEPLOYED_OWNER_HOLDS",
+      "deployment_run": 39094919472,
+      "validation_run": 39094886042,
+      "observed_source_sha": "13a1bd6954b80c5b1359cd69b90c88b0674bc86b",
+      "attention": "Research rate engine and Pages passed October 18; CAD FID takeoff/approved production BOQ separately gated"
+    },
+    {
+      "id": "REPO-000009",
+      "slug": "JP_Study_Hub",
+      "name": "Study Hub",
+      "main_sha": "1d75d7b8d301cdc9faa78b9c647bd1fdd165665e",
+      "production_branch": "pages-live",
+      "health": "OLDER_DEPLOYMENT",
+      "deployment_run": 37240560843,
+      "validation_run": null,
+      "observed_source_sha": "ba570d6a72e265a6d0b4fc79cdd41674637d3d24",
+      "attention": "Last observed Pages success October 4; publication branch differs from main"
+    }
+  ]
+}
