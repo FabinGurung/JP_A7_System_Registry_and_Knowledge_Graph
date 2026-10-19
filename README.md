@@ -2,6 +2,9 @@
 
 ## GALACTIC ATLAS · Arc 01 (2026-10-15)
 
+**19 October provider observation and governance clarity:** [Mission Status](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/repository-status.html) · [Guide ownership decision](registry/decisions/ai-aided-guide-ownership-resolution.v0.2.json). Original historical v0.1 UX guide remains preserved, but no longer confers specialist-domain template ownership. Latest R&D main CI/Pages failed as recorded in the dated provider snapshot; this is not repaired by the A7 release.
+
+
 **Central user entrypoint:** [A7 Galactic Atlas](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/). This is a **federated service catalogue / metadata directory / relationship index**, not a shared source repository for specialist templates and calculation engines.
 
 **What A7 owns:** stable repository/module IDs, safe service and website URLs, aliases, typed cross-module references, owner/authority routing, provider observations and links to releases/commit history.

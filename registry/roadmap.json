@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
-  "status": "ACTIVE__SEQ13_PUBLIC_SAFE_STAGE_ONLY",
-  "snapshot_date": "2026-10-09",
+  "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
+  "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
   "current_closed_sequence": "A7-SEQ-000015",
   "current_staged_sequence": "A7-SEQ-000013",
@@ -82,9 +82,30 @@
       "title": "Evidence-linked global/module/Drive/library control hierarchy",
       "status": "FINAL_CLOSED_PASS",
       "detail": "20 public-safe node identities, 24 typed relationships; navigable authority/data lineage, R&D LaTeX/PPTX links, private Drive normative categories, Main/Local roles and prioritized plan. GitHub Pages and CI verified. Private seq13 staged, not closed."
+    },
+    {
+      "id": "A7-D11",
+      "stage": "Galactic Atlas Arc 01 — 15 October 2026",
+      "title": "Central navigable repository galaxy and frozen pre-arc release",
+      "status": "DEPLOYED_PROVIDER_VERIFIED",
+      "detail": "Main aafeba37990ae83aa6cda238eefa6d7d627b2cd6, CI 38675686077, Pages 38675686071; original legacy-overview.html and annotated frozen release a7/pre-galactic-atlas-v0.1.0 preserved. Arc release is not A7 SEQ-000013 private A9 closeout."
+    },
+    {
+      "id": "A7-D12",
+      "stage": "A7-SEQ-000016 · policy/status debt reconciliation",
+      "title": "Explicit domain guide ownership and dated cross-repository status board",
+      "status": "STAGED_UNTIL_PROVIDER_QA",
+      "detail": "Separate A7 global interface advice from CAD-owned AAD workflow; source nine GitHub provider observations; display R&D latest-main failures explicitly; no external repo modifications."
     }
   ],
   "next": [
+    {
+      "id": "A7-N08",
+      "priority": "P0",
+      "title": "R&D latest main workflow failures — owner-side remediation",
+      "state": "EXTERNAL_OWNER_ACTION_REQUIRED",
+      "done_when": "R&D repo CI and Pages succeeds at current main SHA, with root cause and provider readback; A7 only links reports."
+    },
     {
       "id": "A7-N01",
       "priority": "P0",
@@ -133,6 +154,20 @@
       "title": "Optional confidential governance runtime",
       "state": "DEFERRED",
       "done_when": "Only provision private repository or DB when authorized collaboration/concurrency needs justify it; do not mirror private Drive corpus in public A7."
+    },
+    {
+      "id": "A7-N09",
+      "priority": "P1",
+      "title": "Galactic Atlas Arc 02: selected-world provider inspection",
+      "state": "PLANNED",
+      "done_when": "Status provenance, age, owner workflow, pinned commit and dependencies in a usable world inspector, without claiming live monitoring."
+    },
+    {
+      "id": "A7-N10",
+      "priority": "P2",
+      "title": "Galaxy sectors, Developer Dock and operator guidance",
+      "state": "PLANNED",
+      "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
     }
   ],
   "strict_boundaries": [

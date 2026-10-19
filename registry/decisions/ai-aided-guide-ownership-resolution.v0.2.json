@@ -1,0 +1,41 @@
+{
+  "schema": "a7://ai-guide-domain-ownership-resolution/0.2",
+  "decision_id": "A7-DEC-UX-OWNERSHIP-002",
+  "status": "ADOPTED_PUBLIC_SAFE",
+  "sequence_id": "A7-SEQ-000016",
+  "scope": "Factual ownership and policy precedence for universal human-first guidance versus specialist-domain templates.",
+  "precedence": "THIS_DOMAIN_OWNERSHIP_DECISION_OVERRIDES_ANY_DOMAIN_TEMPLATE_OWNERSHIP_IMPLICATION_IN_THE_HISTORICAL_V0_1_GUIDE",
+  "historical_reference": {
+    "path": "policies/global/ai-aided-product-guide.v0.1.json",
+    "policy_id": "A7-POL-AI-AIDED-INTERACTION-001",
+    "preservation": "PRESERVED_READ_ONLY_HISTORICAL_REFERENCE",
+    "historic_status_field": "ACTIVE_GLOBAL_GUIDANCE",
+    "not_a_current_specialist_template_authority": true
+  },
+  "a7_owns": [
+    "Global stable identities and module/fact-class authority routing",
+    "Public service discovery and accessible operator-guide design suggestions",
+    "Cross-repository policy-index pointers and provenance",
+    "Shared non-domain-specific interaction vocabulary when adopted by owners"
+  ],
+  "a7_does_not_own": [
+    "CAD/AAD drawing template, geometry/schema and engineering execution",
+    "R&D LaTeX and PPTX formatting/generator controls",
+    "Structural member checks, Scheduling activities, Cost rate/BOQ formulae, Operations site evidence",
+    "Private Drive/A9 Main/Local normative bytes, registry state or release approvals"
+  ],
+  "specialized_owner_contracts": [
+    {
+      "domain": "CAD_AAD",
+      "owner_repository": "FabinGurung/JP_Computer-Aided-Drawings",
+      "contract": "governance/aad/aad-domain-template.v0.1.json",
+      "template_id": "AAD-CAD-TEMPLATE-001",
+      "relationship": "DOMAIN_NORMATIVE_OWNER",
+      "independent_updates": "OWNING_REPOSITORY_ONLY"
+    }
+  ],
+  "mandatory_navigation": "A7 may index owner, route, version, public URL and source observation. No editing peer repositories without a separately scoped user mandate.",
+  "compatibility": "The seven-stage A7 v0.1 example is historical guidance, not a global implementation mandate. CAD's source-owned UNDERSTAND→RESOLVE→VALIDATE→EXECUTE→VERIFY→VIEW→TRACE is CAD's active domain flow.",
+  "source_truth": "GitHub owner contracts and owning provider sources verified independently. User prompts and this public registry cannot make domain approvals.",
+  "private_a9": "A7-SEQ-000013 remains staged; private Main/Local bridge not imported or ACKed."
+}

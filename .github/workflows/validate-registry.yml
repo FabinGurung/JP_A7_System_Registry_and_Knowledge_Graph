@@ -61,6 +61,8 @@ jobs:
           python scripts/validate_galactic_atlas.py
           python scripts/generate_galactic_atlas.py --output .a7-generated-test/galactic-atlas.json --commit-sha "$GITHUB_SHA"
           test -s .a7-generated-test/galactic-atlas.json
+      - name: Validate domain-guide ownership and dated provider status
+        run: python scripts/validate_repository_health.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative

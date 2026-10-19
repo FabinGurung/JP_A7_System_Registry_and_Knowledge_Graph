@@ -55,3 +55,12 @@ The native private Main Library has not been written, while the Git-head candida
 ### Bounded independent A7-SEQ-000015: control tower navigator (site architecture)
 
 Public-safe authority classification and interactive site navigation are staged independently of the still-open A7-SEQ-000013 Git/Drive migration. The readable entrypoint is [Control Tower Atlas](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/control-towers.html). Its machine source is `registry/controls/control-tower-map.json`. R&D repo retains owning workflows. Private Drive A9 thesis v1.23 / presentation v2.2 / AI Tool v0.42 were provider-inspected but must not be copied into public Git. Next work: full exact-rule crosswalk, format generator/template QA, A9 private Main/Local reconciliation, drift CI, and module-local dashboards.
+
+## 2026-10-19: verified status and Galactic Atlas continuation
+
+- **Arc 01 already deployed:** source `aafeba37990ae83aa6cda238eefa6d7d627b2cd6`, Actions registry `38675686077`, Pages `38675686071` (15 October). Frozen pre-arc Git release `a7/pre-galactic-atlas-v0.1.0` and `site/legacy-overview.html` remain available.
+- **A7-SEQ-000016:** a bounded public-safe owner-policy clarification, dated nine-repository Github observation, visible health/debt board, and roadmap alignment. Domain/peer/private A9 source files are not modified by A7.
+- **Owner-policy decision:** `registry/decisions/ai-aided-guide-ownership-resolution.v0.2.json`. The old v0.1 generic AI guide remains immutable in Git history, but cannot override CAD's specialist AAD template or other owner-local workflows.
+- **Provider-based snapshot:** `registry/providers/github-health-observation-20261019.json` and derived `/repository-status.html`. Never call this live status; run GitHub provider verification when current state is needed. R&D October 19 main CI/Pages failure is OPEN in its owning repo.
+- **Arc 02:** world inspector with current verified status references, capabilities and last observation; **Arc 03:** sector filtering; **Arc 04:** typed cross-domain navigation; **Arc 05:** release/history constellations. They are not shipped by this cleanup.
+- **Debt boundary:** A7 SEQ-000013 remains staged, private Main/Local bridge and ACK not admitted. R&D error remediation is owner-side.

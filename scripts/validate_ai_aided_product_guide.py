@@ -13,7 +13,7 @@ homepage=(root/"site/index.html").read_text()
 readme=(root/"README.md").read_text()
 assert policy["schema"]=="fabin-a7://ai-aided-product-guide/0.1"
 assert policy["policy_id"]=="A7-POL-AI-AIDED-INTERACTION-001"
-assert policy["version"]=="0.1.0" and policy["status"]=="ACTIVE_GLOBAL_GUIDANCE"
+assert policy["version"]=="0.1.0" and policy["status"]=="ACTIVE_GLOBAL_GUIDANCE"  # original historically preserved; narrowed by v0.2 specialist owner resolution
 assert registry["policy_id"]==policy["policy_id"] and registry["version"]==policy["version"]
 assert len(policy["execution_sequence"])==7
 assert [x["id"] for x in policy["execution_sequence"]]==[
@@ -38,6 +38,7 @@ assert all(re.fullmatch(r"[0-9a-f]{40}",x["release_evidence"]["main_commit"]) fo
 assert all(x["release_evidence"]["pages_run"]>0 for x in rows if x["adoption"]=="PUBLISHED_PROVIDER_VERIFIED")
 assert registry["postmerge_status"]=="A7_AND_CAD_PUBLISHED_VERIFIED_2026-10-15_NPT"
 assert "How It Works" in guide and "How It Works" in site
+assert "v0.2 ownership decision" in site and "not specialist template" not in policy.get("owner","")
 assert "<main" in site and "assets/sky-theme.css" in site
 assert "content=\"#eff8fc\"" in site and "aria-label=" in site
 assert "how-it-works.html" in homepage and "How It Works" in readme
