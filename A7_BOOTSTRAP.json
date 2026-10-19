@@ -99,9 +99,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000015",
+  "current_sequence": "A7-SEQ-000016",
   "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-09T02:52:36Z",
+  "observed_at": "2026-10-19T10:09:48Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -225,5 +225,21 @@
     "pages_artifact_sha256": "e0e3b91bb5f2c77434fb22ab24a31c5d62b7408834de42be0db2cfbaf4911eb5",
     "private_a9_cutover_complete": false,
     "rd_exact_template_migration_verified": false
+  },
+  "policy_and_health_reconciliation": {
+    "decision": "registry/decisions/ai-aided-guide-ownership-resolution.v0.2.json",
+    "provider_snapshot": "registry/providers/github-health-observation-20261019.json",
+    "public_status": "site/repository-status.html",
+    "site_derivation": "scripts/generate_repository_health.py",
+    "validation": "scripts/validate_repository_health.py",
+    "content_deployed_sha": "ad8e784ea8d03219b878485b132916b71cc83b44",
+    "pages_run_id": 39235390271,
+    "validation_run_id": 39235390341,
+    "provider_artifact_id": 12179750187,
+    "provider_artifact_sha256": "d0d178f026a47c1df18fe5e2a57f8e6d7102d607de7b05dd47522197a6fd6595",
+    "public_release_scope_only": true,
+    "seq13_still_staged": true,
+    "private_a9_import_not_done": true,
+    "rnd_current_main_failed_as_of_snapshot": true
   }
 }
