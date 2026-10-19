@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000015` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000016` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -64,3 +64,10 @@ Public-safe authority classification and interactive site navigation are staged 
 - **Provider-based snapshot:** `registry/providers/github-health-observation-20261019.json` and derived `/repository-status.html`. Never call this live status; run GitHub provider verification when current state is needed. R&D October 19 main CI/Pages failure is OPEN in its owning repo.
 - **Arc 02:** world inspector with current verified status references, capabilities and last observation; **Arc 03:** sector filtering; **Arc 04:** typed cross-domain navigation; **Arc 05:** release/history constellations. They are not shipped by this cleanup.
 - **Debt boundary:** A7 SEQ-000013 remains staged, private Main/Local bridge and ACK not admitted. R&D error remediation is owner-side.
+
+### A7-SEQ-000016 FINAL_CLOSED_PASS — Provider evidence
+
+- PRE: `snapshot/pre-a7-seq-000016-status-policy-reconcile` at `aafeba37990ae83aa6cda238eefa6d7d627b2cd6`.
+- Content PR #36 merged and independently provider-tested at `ad8e784ea8d03219b878485b132916b71cc83b44`; CI run `39235390341` SUCCESS; Pages run `39235390271` SUCCESS; artifact SHA256 `d0d178f026a47c1df18fe5e2a57f8e6d7102d607de7b05dd47522197a6fd6595`.
+- Public `repository-status.html` and machine source present; generic A7 historical guide remains preserved, specialist CAD-owned AAD template authority wins.
+- Still unresolved: R&D current-main CI/Pages, A7 seq13 private Main/Local parity/ACK, later Arc02-05, exact cross-provider statuses beyond dated source observation. Do not claim privately approved releases.
