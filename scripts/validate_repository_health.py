@@ -31,5 +31,5 @@ assert "repository-status.js" in html and "assets/sky-theme.css" in html
 assert 'data/repository-health.json' in js and 'textContent' in js
 assert 'href="repository-status.html"' in (R/"site/index.html").read_text()
 assert "live" not in v["status"].lower()
-assert "SEQ-000013" in (R/"docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md").read_text() or "SEQ13" in (R/"docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md").read_text()
+assert "private A9" in (R/"docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md").read_text()
 print("A7 POLICY+REPO HEALTH AUDIT PASS owner=CAD indexed=9 R&D=BLOCKED")
