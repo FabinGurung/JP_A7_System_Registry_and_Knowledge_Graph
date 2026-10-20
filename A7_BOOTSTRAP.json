@@ -99,9 +99,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000018",
+  "current_sequence": "A7-SEQ-000019",
   "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-20T02:11:30Z",
+  "observed_at": "2026-10-20T03:29:23Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -278,5 +278,27 @@
     "external_repositories_modified": false,
     "manual_visual_browser_qa": "NOT_PERFORMED_NETWORK_UNAVAILABLE",
     "seq13_private_a9_status": "STAGED_NOT_IMPORTED"
+  },
+  "navigation_consolidation": {
+    "decision": "registry/decisions/site-navigation-consolidation.v0.1.json",
+    "read_first": "docs/HISTORY_AND_ROLLBACK_READ_FIRST.md",
+    "unified_shell": [
+      "site/assets/a7-site-shell.css",
+      "site/assets/a7-site-shell.js"
+    ],
+    "active_routes": 6,
+    "archived_routes_preserved": 3,
+    "total_html_pages": 11,
+    "visualization_memory_host": "site/memory-wall.html#visualization-reminders",
+    "history": "site/history.html",
+    "source_engines_modified": false,
+    "mascot_modified": false,
+    "private_a9_import_closed": false,
+    "provider_deployed_source_sha": "f5b5890abf55571c01fa3b59d2ec70e9f96dc40c",
+    "registry_ci_run": 39364515947,
+    "pages_run": 39364515979,
+    "artifact_id": 12238906286,
+    "artifact_sha256": "74fae5080e07770287109f4ac972ae479fb857329016d2020757becd449e060a",
+    "manual_browser_visual_qa": "NOT_INDEPENDENTLY_PERFORMED"
   }
 }

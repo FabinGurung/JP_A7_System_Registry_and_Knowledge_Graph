@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000018` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000019` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -98,3 +98,11 @@ Across all ten A7 Pages HTML routes (Galaxy, Original Dashboard, Control Tower, 
 ### A7-SEQ-000019 — navigation/Memory Wall/History consolidation
 
 Unified primary navigation for all eleven current A7 public pages, moved visualization technique reminders under the Memory Wall while keeping their canonical decision and original detailed guide intact, and archived redundant public-facing legacy/dashboard and pre-arc milestone surfaces into a single History & Rollback page. The earlier dashboard has genuine graph/search/matrix tools not yet in the Galaxy; preserve instead of deleting. PRE `snapshot/pre-a7-seq-000019-navigation-consolidation`; pending CI/PR/Pages/POST. No changes to six app engines, original fluffy mascot, data, R&D/CAD/Operations or private A9 Main/Local ledger.
+
+### A7-SEQ-000019 — FINAL_CLOSED_PASS: site navigation consolidation
+
+- PRE snapshot: `snapshot/pre-a7-seq-000019-navigation-consolidation` at `ac4b8724ba675508675b389f308301a5085bf60c`.
+- Feature PR #42 provider-validated and merged to `f5b5890abf55571c01fa3b59d2ec70e9f96dc40c`; merged-main CI 39364515947 passed; Pages 39364515979 success with artifact SHA256 `74fae5080e07770287109f4ac972ae479fb857329016d2020757becd449e060a` (artifact id 12238906286).
+- Shared Cloud Orbit A7 chrome on all 11 pages; existing fluffy rocket unchanged. Main nav Atlas / Control Towers / Mission Status / Memory Wall / Roadmap / How It Works; More for Governance / History.
+- Visualization six-lane projection is inside Memory Wall from original generated decision, with true recorded implementation states; technical original retained. Legacy graph/matrix search + pre-Arc milestone are in History and Rollback rather than primary navigation. No original pages, engines or immutable releases deleted.
+- Browser visual QA not independently performed. A7-SEQ-000013 private A9 remains separately STAGED, R&D and other peer repository debt unchanged.
