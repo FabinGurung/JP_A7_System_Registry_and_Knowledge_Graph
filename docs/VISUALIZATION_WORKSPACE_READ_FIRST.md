@@ -36,3 +36,7 @@ Read `A7_BOOTSTRAP.json`, the decision JSON, actual rendering JS, Python derivat
 - `.github/workflows/deploy-a7-pages.yml`: production Pages derivation and deployment.
 
 **Public privacy boundary:** no private/internal A9 Drive labels, IDs or document bodies in the public graph. A7 is the semantic control plane and resolver, not the owning provider for specialist work.
+
+## Navigation consolidation (A7-SEQ-000019)
+
+The six deliberate visualization roles now appear on `memory-wall.html#visualization-reminders` as always-visible memory aids. This original technical guide/page remains available through its Memory Wall deep link and `history.html`. No renderer installation or six-lane decision state has changed.

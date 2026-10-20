@@ -6,17 +6,17 @@
 <link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/sky-theme.css"><link rel="stylesheet" href="assets/galactic-atlas.css"><link rel="stylesheet" href="assets/memory-wall-entry.css">
 <script src="assets/galactic-atlas.js" defer></script>
 <link rel="stylesheet" href="assets/a7-unified-theme.css">
+<link rel="stylesheet" href="assets/a7-site-shell.css">
+<script src="assets/a7-site-shell.js" defer></script>
 </head><body class="galactic-arc">
 <div class="galaxy-stars" aria-hidden="true"></div>
 <header class="galaxy-header">
 <a class="galaxy-logo" href="./" aria-label="A7 Galactic Atlas home"><span class="galaxy-mark">A7</span><span><strong>GALACTIC ATLAS</strong><small>Federated engineering directory</small></span></a>
 <nav aria-label="Primary navigation" class="galaxy-topnav">
 <a class="nav-link is-current" href="./">Atlas</a>
-<a class="nav-link" href="legacy-overview.html">Original dashboard</a>
 <a class="nav-link" href="control-towers.html">Control Towers</a>
 <a class="nav-link" href="repository-status.html">Mission Status</a>
 <a class="nav-link" href="memory-wall.html">✳ Memory Wall</a>
-<a class="nav-link" href="visualization-workspace.html">📌 Visualizations</a>
 <a class="nav-source" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </nav></header>
 <main class="galaxy-shell">
@@ -53,7 +53,7 @@
 <p class="inspector-caveat" id="selectedEvidence">Recorded links are catalogue observations; live statuses belong to each provider.</p>
 </aside>
 </section>
-<div id="galaxyError" class="galaxy-error" role="alert" hidden>Directory data unavailable. Use the <a href="legacy-overview.html">preserved original dashboard</a> or the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph">GitHub catalogue</a>.</div>
+<div id="galaxyError" class="galaxy-error" role="alert" hidden>Directory data unavailable. Consult the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph">GitHub catalogue</a> or <a href="history.html">History &amp; Rollback</a> for older advanced graph tools.</div>
 <section class="galaxy-next" aria-label="Progressively revealed architecture">
 <details class="reveal-panel" id="principle">
 <summary><span><small>02 / GOVERNANCE PROTOCOL</small><strong>Who owns what? Explore the single-writer rule.</strong></span><span class="chevron" aria-hidden="true">⌄</span></summary>
@@ -70,17 +70,11 @@
 <tr><th>Execution</th><td>Route to the right engine</td><td>Algorithms, tests and computed outputs</td></tr>
 <tr><th>Authority</th><td>Fact-class ownership map</td><td>Domain rules and original source records</td></tr>
 </tbody></table></div>
-<p class="principle-note">Governing rule: <strong>single-writer ownership with referential links, not duplicated authority.</strong> Stale catalogue observations should trigger a grounded pointer review, never an automatic rewrite of the owning domain.</p>
+<p class="principle-note">Governing rule: <strong>single-writer ownership with referential links, not duplicated authority.</strong> Stale catalogue observations should trigger a grounded pointer review, never an automatic rewrite of the owning domain. For the full procedure see <a href="governance.html">Governance</a>, <a href="how-it-works.html">How It Works</a> and the <a href="roadmap.html">Roadmap</a>.</p>
 </div></details>
-<details class="reveal-panel">
-<summary><span><small>03 / ENGINEERING ARCHIVES</small><strong>Open the original A7 knowledge graph and control rooms.</strong></span><span class="chevron" aria-hidden="true">⌄</span></summary>
-<div class="reveal-body">
-<p class="reveal-lead">No old system was deleted or reset. Browse the original 2D/3D graphs, search, authority matrix, project routing and specialist control references through the preserved dashboard.</p>
-<div class="archive-links"><a href="legacy-overview.html">Original dashboard + graphs ↗</a><a href="control-towers.html">Control Tower Atlas ↗</a><a href="governance.html">A9 & Git/Drive pointers ↗</a><a href="roadmap.html">Development roadmap ↗</a><a href="visualization-workspace.html">📌 Visualization workspace ↗</a><a href="how-it-works.html">Earlier How It Works ↗</a><a href="memory-wall.html">✳ Memory Wall ↗</a></div>
-<p class="inspector-caveat">A7's older technical records, schemas, canonical JSON/JSONL registry, derivation manifests and current A9/Drive boundaries remain preserved.</p>
-</div></details>
+
 </section>
 </main>
-<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 01</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="milestone.html">Release checkpoint ↗</a></footer>
+<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 01</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="history.html">History &amp; rollback ↗</a></footer>
 <script src="assets/fluffy-rocket.js" defer></script>
 </body></html>

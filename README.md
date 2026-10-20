@@ -191,3 +191,7 @@ The [Memory Wall](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowle
 ## Cloud Orbit theme normalization / A7-SEQ-000018
 
 Visual-only light UI normalization across all ten A7 HTML pages using the last-loaded CSS `site/assets/a7-unified-theme.css`. The fluffy self-hosted mascot `site/assets/fluffy-rocket.svg` and `site/assets/fluffy-rocket.js` visits occasionally along varying curved routes, without intercepting user input. See `docs/CLOUD_ORBIT_UNIFIED_THEME_READ_FIRST.md` and `registry/decisions/cloud-orbit-theme.v0.1.json`. Existing app engines and domain sources are preserved and validated by SHA-1 git blob. This does not change other repositories or private A9.
+
+## Unified navigation / Memory Wall visualization reminders / A7-SEQ-000019
+
+The active navigation is now Atlas, Control Towers, Mission Status, Memory Wall, Roadmap and How It Works; Governance and History & Rollback are under More. The six previously pinned visualization methods are now always-visible reminders within `memory-wall.html#visualization-reminders`, using the same generated decision JSON as the preserved `visualization-workspace.html`. The older dashboard, milestone and detailed visualization runbook remain accessible only through `history.html` and recorded versioned history; no files or product engines are deleted. Read `docs/HISTORY_AND_ROLLBACK_READ_FIRST.md` before future theme/nav changes.

@@ -67,6 +67,11 @@ jobs:
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket
         run: python scripts/validate_unified_theme.py
+      - name: Validate unified navigation, preserved history and six Memory Wall techniques
+        run: |
+          python scripts/validate_site_navigation.py
+          node --check site/assets/a7-site-shell.js
+          node --check site/assets/memory-visualization.js
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative

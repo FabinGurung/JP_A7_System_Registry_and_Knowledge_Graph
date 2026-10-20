@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "id": "A7-NAV-DEC-000001",
+  "sequence_id": "A7-SEQ-000019",
+  "status": "PRESENTATION_ONLY_NAVIGATION_CHANGE",
+  "title": "One cohesive A7 navigation, visualization learning within Memory Wall, archived prior interfaces",
+  "primary_pages": [
+    "index.html",
+    "control-towers.html",
+    "repository-status.html",
+    "memory-wall.html",
+    "roadmap.html",
+    "how-it-works.html"
+  ],
+  "more_pages": [
+    "governance.html",
+    "history.html"
+  ],
+  "archived_pages": [
+    "legacy-overview.html",
+    "milestone.html",
+    "visualization-workspace.html"
+  ],
+  "current_primary_directory": "index.html",
+  "history": "history.html",
+  "visualization_host": "memory-wall.html#visualization-reminders",
+  "visualization_source": "registry/decisions/visualization-workspace.json",
+  "previous_visualization_detail": "visualization-workspace.html",
+  "previous_dashboard_unique_tools": [
+    "2D/3D graph exploration",
+    "Search and graph inspector",
+    "Project-module and authority routing matrices"
+  ],
+  "asset_scope": [
+    "site/assets/a7-site-shell.js",
+    "site/assets/a7-site-shell.css",
+    "site/assets/memory-visualization.js",
+    "site/assets/memory-visualization.css",
+    "site/assets/history.css"
+  ],
+  "preservation_policy": "NO_FILES_DELETED; LEGACY_PAGES_KEEP_ROUTES; PREVIOUS_TAGS_IMMUTABLE; NO_ENGINE_CHANGES",
+  "primary_theme": "A7-THEME-CLOUD-ORBIT-001",
+  "rocket_unchanged": true,
+  "private_a9_reconciliation_complete": false,
+  "peer_repo_mutations": false,
+  "source_ownership": "A7 only indexes external sources; domain owners remain independently canonical",
+  "browser_visual_qa": "NOT_YET_PERFORMED"
+}

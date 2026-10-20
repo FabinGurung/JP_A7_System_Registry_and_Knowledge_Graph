@@ -94,3 +94,7 @@ Across all ten A7 Pages HTML routes (Galaxy, Original Dashboard, Control Tower, 
 - Six app JavaScript Git blob hashes unchanged; all ten HTML pages retain original content with two added references each.
 - Merged-main CI run `39357528271` SUCCESS; Pages provider deploy run `39357528287` SUCCESS (artifact `12235284533` SHA256 `81656469565c06e482c05942745cd1bad05cc9c73aaf3afcf4541a99735a44f5`).
 - Browser-based screenshot/visual navigation inspection was NOT performed (public Pages host inaccessible from this environment). A7-SEQ-000013 Main/Local remains staged. Operations repo and all specialist repositories untouched.
+
+### A7-SEQ-000019 — navigation/Memory Wall/History consolidation
+
+Unified primary navigation for all eleven current A7 public pages, moved visualization technique reminders under the Memory Wall while keeping their canonical decision and original detailed guide intact, and archived redundant public-facing legacy/dashboard and pre-arc milestone surfaces into a single History & Rollback page. The earlier dashboard has genuine graph/search/matrix tools not yet in the Galaxy; preserve instead of deleting. PRE `snapshot/pre-a7-seq-000019-navigation-consolidation`; pending CI/PR/Pages/POST. No changes to six app engines, original fluffy mascot, data, R&D/CAD/Operations or private A9 Main/Local ledger.
