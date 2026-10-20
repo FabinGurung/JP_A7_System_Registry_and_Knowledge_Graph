@@ -42,15 +42,15 @@ def build():
         url = "https://github.com/" + name
         assert url.startswith(ALLOWED_HOSTS[0])
         deep = []
-        for item in shape.get("deep_links", []):
-            if "github_path" in item:
-                link = url + "/blob/main/" + item["github_path"]
+        for deep_item in shape.get("deep_links", []):
+            if "github_path" in deep_item:
+                link = url + "/blob/main/" + deep_item["github_path"]
             else:
-                assert ".." not in item["path"] and "://" not in item["path"]
+                assert ".." not in deep_item["path"] and "://" not in item["path"]
                 link = site.rstrip("/") + "/" + item["path"]
             if not link.startswith(ALLOWED_HOSTS):
                 raise ValueError("Untrusted deep link")
-            deep.append({"label": item["label"], "url": link})
+            deep.append({"label": deep_item["label"], "url": link})
         stations.append({
             "id": ident, "title": shape["label"], "short": shape["short"],
             "role": shape["role"], "zone": shape["zone"],
