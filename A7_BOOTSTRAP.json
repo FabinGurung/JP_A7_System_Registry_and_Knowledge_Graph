@@ -99,9 +99,9 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000017",
+  "current_sequence": "A7-SEQ-000018",
   "current_sequence_status": "FINAL_CLOSED_PASS",
-  "observed_at": "2026-10-20T00:19:31Z",
+  "observed_at": "2026-10-20T02:11:30Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
     "anchors": "registry/providers/google-drive-anchors.json",
@@ -260,5 +260,23 @@
     "private_a9_data_committed": false,
     "original_drive_collection_preserved_unlinked_in_public": true,
     "a7_seq13_private_import_ack": "NOT_CLOSED"
+  },
+  "cloud_orbit_theme": {
+    "theme_id": "A7-THEME-CLOUD-ORBIT-001",
+    "contract": "registry/decisions/cloud-orbit-theme.v0.1.json",
+    "css": "site/assets/a7-unified-theme.css",
+    "svg": "site/assets/fluffy-rocket.svg",
+    "script": "site/assets/fluffy-rocket.js",
+    "read_first": "docs/CLOUD_ORBIT_UNIFIED_THEME_READ_FIRST.md",
+    "pages_normalized": 10,
+    "product_engine_git_blobs_preserved": 6,
+    "provider_verified_deployed_content_sha": "fe2ef558386080ca51948ef24c3f4184ea7cfb73",
+    "validation_run": 39357528271,
+    "pages_run": 39357528287,
+    "pages_artifact_id": 12235284533,
+    "pages_artifact_sha256": "81656469565c06e482c05942745cd1bad05cc9c73aaf3afcf4541a99735a44f5",
+    "external_repositories_modified": false,
+    "manual_visual_browser_qa": "NOT_PERFORMED_NETWORK_UNAVAILABLE",
+    "seq13_private_a9_status": "STAGED_NOT_IMPORTED"
   }
 }
