@@ -13,6 +13,8 @@ on:
       - "scripts/validate_galactic_atlas.py"
       - "scripts/generate_repository_health.py"
       - "scripts/validate_repository_health.py"
+      - "scripts/generate_memory_wall.py"
+      - "scripts/validate_memory_wall.py"
       - "site/**"
       - ".github/workflows/deploy-a7-pages.yml"
   workflow_dispatch:
@@ -50,6 +52,10 @@ jobs:
         run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"
       - name: Validate dated health and guide ownership
         run: python scripts/validate_repository_health.py
+      - name: Derive public reference posters from machine curation
+        run: python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
+      - name: Validate Memory Wall design and curation
+        run: python scripts/validate_memory_wall.py
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - name: Configure Pages

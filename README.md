@@ -183,3 +183,7 @@ A7's four public Pages surfaces (knowledge graph, visualization workspace, gover
 ## Interactive Control Tower Atlas — A7-SEQ-000015
 
 A public-safe, machine-derived [control tower map](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/control-towers.html) distinguishes central A7 policy routing, R&D source/build controls, private A9 Drive normative towers, and Main/Local Library/artifact lineage. Machine source: `registry/controls/control-tower-map.json`. Governed validator: `scripts/validate_control_tower_map.py`. Read-first: `docs/CONTROL_TOWERS_READ_FIRST.md`. No private Drive IDs, rows or source bytes are copied to the public projection. Crosswalk between full private format rules and R&D Git controls remains pending.
+
+## Memory Wall — independent A7-SEQ-000017 poster curation
+
+The [Memory Wall](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html) is a dedicated, printable, sky-mist noticeboard: always-visible posters, not Q/A flashcards. Its first three verified external links are `nilbuild/developer-roadmap`, `public-apis/public-apis` and `sudheerj/reactjs-interview-questions`. Sources: `registry/curations/memory-posters.v0.1.json`, `scripts/generate_memory_wall.py`, `scripts/validate_memory_wall.py`, `docs/MEMORY_WALL_READ_FIRST.md`. External bookmarks are not nine A7-owned modules, implementations, endorsements, private Drive source data, or A9 Main/Local admissions. Add or update posters through a governed Git review.

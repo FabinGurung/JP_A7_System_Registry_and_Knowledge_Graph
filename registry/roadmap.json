@@ -96,6 +96,13 @@
       "title": "Explicit domain guide ownership and dated cross-repository status board",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Separate A7 global interface advice from CAD-owned AAD workflow; source nine GitHub provider observations; display R&D latest-main failures explicitly; no external repo modifications. Feature and merged main CI passed, Pages provider readback SUCCESS at ad8e784ea8d03219b878485b132916b71cc83b44; original A7 seq13 and owner R&D failure remain OPEN."
+    },
+    {
+      "id": "A7-D13",
+      "stage": "A7-SEQ-000017 — Memory Wall / posters",
+      "title": "Dedicated passive-recall poster board for three external developer references",
+      "status": "STAGED_UNTIL_PROVIDER_QA",
+      "detail": "Sky-mist noticeboard page with printed A4 posters, no hidden/flip cards; owner-safe derived source and CI; unrelated to private A9 or new modules."
     }
   ],
   "next": [

@@ -63,6 +63,8 @@ jobs:
           test -s .a7-generated-test/galactic-atlas.json
       - name: Validate domain-guide ownership and dated provider status
         run: python scripts/validate_repository_health.py
+      - name: Validate printable, non-authoritative Memory Wall posters
+        run: python scripts/validate_memory_wall.py
       - name: Confirm relational contract exists
         run: test -f relational/a7-schema.postgresql.sql
       - name: Confirm generated directory is explicitly non-authoritative

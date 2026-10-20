@@ -71,3 +71,7 @@ Public-safe authority classification and interactive site navigation are staged 
 - Content PR #36 merged and independently provider-tested at `ad8e784ea8d03219b878485b132916b71cc83b44`; CI run `39235390341` SUCCESS; Pages run `39235390271` SUCCESS; artifact SHA256 `d0d178f026a47c1df18fe5e2a57f8e6d7102d607de7b05dd47522197a6fd6595`.
 - Public `repository-status.html` and machine source present; generic A7 historical guide remains preserved, specialist CAD-owned AAD template authority wins.
 - Still unresolved: R&D current-main CI/Pages, A7 seq13 private Main/Local parity/ACK, later Arc02-05, exact cross-provider statuses beyond dated source observation. Do not claim privately approved releases.
+
+### SEQ-000017 — Memory Wall (independent public presentation)
+
+The user selected **Option 3: dedicated Memory Posters page** — a static/glanceable student noticeboard/ceiling-poster analogy. Source: `registry/curations/memory-posters.v0.1.json`, derived: `site/data/memory-posters.json`, view: `site/memory-wall.html`, validator: `scripts/validate_memory_wall.py`. Three externally owned GitHub links were verified 20 Oct 2026 and are bookmarked privately in Drive. This public site remains A7-owned navigation/curation only; do not register the public source repos as JP modules, leak private Drive folder IDs or disturb SEQ-000013. Feature status remains staged until branch CI, PR merge, main CI, Pages provider readback and POST.

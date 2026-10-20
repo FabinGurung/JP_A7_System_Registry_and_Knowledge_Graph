@@ -180,3 +180,7 @@ Use `docs/CONTROL_TOWERS_READ_FIRST.md` and `registry/controls/control-tower-map
 ## 18. Cross-repository AI-aided product guide (2026-10-15)
 
 User-facing websites expose **How It Works** near the first action; hide machine controls behind **For builders / AI agents**. Canonical guide standard: `policies/global/ai-aided-product-guide.v0.1.json`. Versioned human template: `docs/AI_AIDED_PRODUCT_GUIDE_TEMPLATE_v0.1.md`. Survey: `registry/decisions/ai-aided-guide-adoption.v0.1.json`. The AI interprets natural language and resolves governed sources; deterministic owner-specific GitHub engines execute normalized validated requests. Repeatability requires pinned canonical inputs/runtime/source bytes; a prompt alone cannot guarantee identical output. The site guide is a projection, not a second authority. Only CAD and A7 are in the initial implementation scope; other surveyed repositories remain unchanged.
+
+## 19. Personal learning Memory Wall / SEQ-000017
+
+Read `docs/MEMORY_WALL_READ_FIRST.md` and curated Git source `registry/curations/memory-posters.v0.1.json`. Site page `site/memory-wall.html` visualizes always-visible posters and optional print, not quiz/Anki flashcards. Curated *external* GitHub bookmarks are not A7 module registrations or owner facts. Do not copy the original private Google Drive reference-folder IDs to the public repository. A7-SEQ-000013 private A9 reconciliation stays separately staged.
