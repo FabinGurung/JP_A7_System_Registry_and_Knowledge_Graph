@@ -4,7 +4,7 @@
   "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000016",
+  "current_closed_sequence": "A7-SEQ-000017",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -101,8 +101,8 @@
       "id": "A7-D13",
       "stage": "A7-SEQ-000017 — Memory Wall / posters",
       "title": "Dedicated passive-recall poster board for three external developer references",
-      "status": "STAGED_UNTIL_PROVIDER_QA",
-      "detail": "Sky-mist noticeboard page with printed A4 posters, no hidden/flip cards; owner-safe derived source and CI; unrelated to private A9 or new modules."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Sky-mist noticeboard page with printed A4 posters, no hidden/flip cards; owner-safe derived source and CI; unrelated to private A9 or new modules. PR #38 merged; main CI run 39346911707 succeeded; Pages run 39346912074 succeeded at 24510271c4f78e532b2c0232bc5b2a6008ff4132. Manual browser visual QA not independently performed."
     }
   ],
   "next": [
