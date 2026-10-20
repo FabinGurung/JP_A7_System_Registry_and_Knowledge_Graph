@@ -192,3 +192,7 @@ The Cloud Orbit style decision is `registry/decisions/cloud-orbit-theme.v0.1.jso
 ## 21. A7 unified nav + preserved history (A7-SEQ-000019)
 
 Site shell `site/assets/a7-site-shell.js`/`a7-site-shell.css` is the current common header/navigation/footer. Six visualization methods appear under Memory Wall by reading the existing versioned decision, not by pretending Cytoscape/React Flow are installed. The original dashboard's 2D/3D graphs and routing matrices still have unique advanced uses and remain reachable from `history.html`, not as a separate homepage. Preserve all existing URLs and release tags. `docs/HISTORY_AND_ROLLBACK_READ_FIRST.md` gives migration/rollback QA. A7-SEQ-000013 private A9 is still staged.
+
+## 22. Galactic Atlas Arc 02 (A7-SEQ-000020)
+
+Read `docs/GALACTIC_ATLAS_ARC02_READ_FIRST.md` and the provider-dated `registry/providers/galactic-atlas-arc02-observation-20261020.json`. The inspector joins nine A7 owner definitions to dated GitHub run/source observations and renders explicit boundaries and gate text. It must never imply a new runtime cross-repository dependency, project approval, private A9 acceptance, or always-live provider status. Source code and six app engines other than the intentionally changed `galactic-atlas.js` remain stable; Cloud Orbit and the fluffy rocket remain unchanged.

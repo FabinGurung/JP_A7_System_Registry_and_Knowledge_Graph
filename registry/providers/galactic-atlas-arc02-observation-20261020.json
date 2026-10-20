@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0.0",
+  "observation_id": "A7-ARC02-PROVIDER-20261020-001",
+  "scope": "PUBLIC_GITHUB_PROVIDER_READBACK",
+  "observed_date": "2026-10-20",
+  "timezone_label": "UTC observation dates from GitHub runs",
+  "source_authority": "ORIGINAL_GITHUB_PROVIDER_RECORDS_ONLY",
+  "status": "DATED_SNAPSHOT_NOT_LIVE_MONITOR",
+  "deployed_does_not_mean_approved": true,
+  "private_data_included": false,
+  "verification_rule": "Before taking action, revisit the exact GitHub Actions run and current owning repository. Observations are immutable as-of records, not live polling or readiness certification.",
+  "dependency_rule": "A7's registry/dependencies/status.json says no provider-verified cross-repository runtime dependencies. The galaxy's eight hub connections are catalogue navigation edges only.",
+  "records": [
+    {
+      "id": "REPO-000001",
+      "slug": "JP_A7_System_Registry_and_Knowledge_Graph",
+      "main_sha": "995e6f7413eec3c262638ec21b89502513795518",
+      "production_branch": "main",
+      "provider_label": "MAIN_PAGES_VERIFIED",
+      "deployment": {
+        "id": 39364878861,
+        "name": "A7 Pages Visualization",
+        "sha": "995e6f7413eec3c262638ec21b89502513795518",
+        "branch": "main",
+        "at": "2026-10-20T03:33:01Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39364878869,
+        "name": "A7 Registry Validation",
+        "branch": "main",
+        "result": "success"
+      },
+      "capability": "Federated catalogue, stable IDs, authority routing and public visualizations",
+      "gate": "A7-SEQ-000013 private A9 Main/Local parity and ACK remain unverified; Pages success is not a private migration.",
+      "dependency_note": "Catalogue hub routes to eight indexed systems; no operational dependency is asserted."
+    },
+    {
+      "id": "REPO-000002",
+      "slug": "JP_Structural_Analysis",
+      "main_sha": "2210c933d508b6e9657839e2ceef00a6d3be73df",
+      "production_branch": "main",
+      "provider_label": "MAIN_PAGES_VERIFIED",
+      "deployment": {
+        "id": 39417728335,
+        "name": "deploy-pages",
+        "sha": "2210c933d508b6e9657839e2ceef00a6d3be73df",
+        "branch": "main",
+        "at": "2026-10-20T11:49:36Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39417453730,
+        "name": "structural-engine-ci",
+        "branch": "site/interactive-analysis-mvp-20261020",
+        "result": "success"
+      },
+      "capability": "Structural analysis engine and interactive engineering result exploration",
+      "gate": "Engineering calculations/models require project-specific source evidence and engineering acceptance; branch CI alone is not signed approval.",
+      "dependency_note": "Only a catalogue navigation link to A7 is recorded; no runtime integration certified."
+    },
+    {
+      "id": "REPO-000003",
+      "slug": "JP_Computer-Aided-Drawings",
+      "main_sha": "7bbe9f0ff46b913826277ce0bdb9475532d3491a",
+      "production_branch": "main",
+      "provider_label": "MAIN_PAGES_VERIFIED_FEATURE_QA_SEPARATE",
+      "deployment": {
+        "id": 39377724622,
+        "name": "CAD M01 Live Pages Readback",
+        "sha": "7bbe9f0ff46b913826277ce0bdb9475532d3491a",
+        "branch": "main",
+        "at": "2026-10-20T05:58:09Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39418392061,
+        "name": "CAD Unified Website Staging QA",
+        "branch": "feat/aad-template-topology-room-authoring-v1-20261020",
+        "result": "success"
+      },
+      "capability": "AI-Aided Drawing, parametric room topology, connected 2D/3D geometry and project exports",
+      "gate": "Staging-linked topology changes are not admitted into main by an A7 observation; CAD owns its AAD template and engineering release QA.",
+      "dependency_note": "A7 indexes CAD source and entrypoints, not an approved CAD-to-other-engine data contract."
+    },
+    {
+      "id": "REPO-000004",
+      "slug": "JP_Scheduling_Work_and_Resources_Management",
+      "main_sha": "111ac4f2ecb0504130df480b62fbbf509972d352",
+      "production_branch": "kernel-v0.2-open-source-engines",
+      "provider_label": "SEPARATE_PUBLICATION_BRANCH_VERIFIED",
+      "deployment": {
+        "id": 39417901775,
+        "name": "Site · Validate and Deploy",
+        "sha": "7a79ff045bd64933f55c19890cc9473a6a772a36",
+        "branch": "kernel-v0.2-open-source-engines",
+        "at": "2026-10-20T11:51:03Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39417901775,
+        "name": "Site · Validate and Deploy",
+        "branch": "kernel-v0.2-open-source-engines",
+        "result": "success"
+      },
+      "capability": "WBS activities, project resources, progress calendars and scheduling/4D views",
+      "gate": "Published site runs on kernel branch, not main. No private schedule or project completion is admitted by a public deployment.",
+      "dependency_note": "Project–module catalogue routing is conceptual; no verified live A7 scheduler dependency."
+    },
+    {
+      "id": "REPO-000005",
+      "slug": "sumita-pilates-studio",
+      "main_sha": "81dd353525a899a7dd1e0937ef4083cf4134a631",
+      "production_branch": "gis-site-selection",
+      "provider_label": "OLDER_DEMO_PUBLICATION",
+      "deployment": {
+        "id": 30681650626,
+        "name": "pages build and deployment",
+        "sha": "646667e08611454dc9b1ea0d1820bc61b7e00bce",
+        "branch": "gis-site-selection",
+        "at": "2026-08-01T03:15:39Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 30681650626,
+        "name": "pages build and deployment",
+        "branch": "gis-site-selection",
+        "result": "success"
+      },
+      "capability": "Studio website prototype and GIS-led site selection references",
+      "gate": "Older Pages demo publication; online booking/member synchronisation and business readiness are not verified.",
+      "dependency_note": "Independent adjacent studio, no claimed engineering-system dependency."
+    },
+    {
+      "id": "REPO-000006",
+      "slug": "JP_Research-and-Development",
+      "main_sha": "58a412a7aacfb16b2b2563d20cd78fdee39c3ff1",
+      "production_branch": "main",
+      "provider_label": "MAIN_PAGES_RECOVERED_RESEARCH_QA_SEPARATE",
+      "deployment": {
+        "id": 39364816804,
+        "name": "Deploy JP R&D control portal",
+        "sha": "58a412a7aacfb16b2b2563d20cd78fdee39c3ff1",
+        "branch": "main",
+        "at": "2026-10-20T03:32:19Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39413870381,
+        "name": "Researcher LaTeX source and folder-role gates (NO scientific PDF)",
+        "branch": "latex/pu-v2-5-144-rule-audit-saugat-20261020-r2",
+        "result": "success"
+      },
+      "capability": "Research records, shared LaTeX and presentation controls, source QA and knowledge publications",
+      "gate": "The earlier October 19 main validation failure has newer owner-side activity; branch QA and a portal deploy do not establish scientific PDF/manuscript approval. Reconcile current R&D owner gates separately.",
+      "dependency_note": "R&D documentation governance remains owned by R&D, not copied into A7."
+    },
+    {
+      "id": "REPO-000007",
+      "slug": "JP_Communication-Command-Centre-and-Resource-Hub",
+      "main_sha": "25d24ec826f840bddb697bd1a0d433ab5667acd1",
+      "production_branch": "feature/daily-ops-current-work",
+      "provider_label": "FEATURE_WORKFLOW_SUCCESS_VISUAL_QA_FAILED",
+      "deployment": {
+        "id": 39418131983,
+        "name": "Operations Hub production",
+        "sha": "9fe2e88f6c92a5cca61025c9408f468d4ba9bc52",
+        "branch": "feature/daily-ops-current-work",
+        "at": "2026-10-20T11:52:57Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39418131978,
+        "name": "Field Desk and Map visual QA",
+        "branch": "feature/daily-ops-current-work",
+        "result": "failure"
+      },
+      "capability": "Daily site communications, work progress, evidence capture and operations map/desk",
+      "gate": "Latest feature-branch workflow succeeded but Field Desk and Map visual QA failed in the same branch batch; do not claim accepted live project evidence or full website QA.",
+      "dependency_note": "Field records governed by Operations/private source admission; A7 provides links only."
+    },
+    {
+      "id": "REPO-000008",
+      "slug": "JP_Cost_Estimation",
+      "main_sha": "33939fec0fa5e51d1185e24325b295109fcf8080",
+      "production_branch": "research/open-estimation-engine-v0.1",
+      "provider_label": "RESEARCH_PREVIEW_PENDING_LATEST_DEPLOY",
+      "deployment": {
+        "id": 39417718040,
+        "name": "Publish site milestone v0.8.0",
+        "sha": "07f938407b9a20bc86457743ae4a49d282a533fe",
+        "branch": "research/open-estimation-engine-v0.1",
+        "at": "2026-10-20T11:49:31Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 39418680395,
+        "name": "Deploy research website to GitHub Pages",
+        "branch": "research/open-estimation-engine-v0.1",
+        "result": "in_progress"
+      },
+      "capability": "Preliminary BOQ quantities, rate research, configurable estimate logic and public research preview",
+      "gate": "More recent research-site deployment was in progress during observation; do not claim its outcome or production BOQ/rate approval.",
+      "dependency_note": "CAD takeoff and rates must be source-reconciled by owner; no live integration assumed."
+    },
+    {
+      "id": "REPO-000009",
+      "slug": "JP_Study_Hub",
+      "main_sha": "1d75d7b8d301cdc9faa78b9c647bd1fdd165665e",
+      "production_branch": "pages-live",
+      "provider_label": "OLDER_SEPARATE_BRANCH_PUBLICATION",
+      "deployment": {
+        "id": 37240560843,
+        "name": "pages build and deployment",
+        "sha": "ba570d6a72e265a6d0b4fc79cdd41674637d3d24",
+        "branch": "pages-live",
+        "at": "2026-10-04T22:34:56Z",
+        "result": "success"
+      },
+      "latest_check": {
+        "id": 37240560843,
+        "name": "pages build and deployment",
+        "branch": "pages-live",
+        "result": "success"
+      },
+      "capability": "Structured technical learning, study materials, course navigation and published notes",
+      "gate": "Pages success is from October 4 on pages-live, not main; curriculum or document freshness not confirmed.",
+      "dependency_note": "Learning hub is an independent knowledge system; no provider-verified runtime dependency."
+    }
+  ]
+}

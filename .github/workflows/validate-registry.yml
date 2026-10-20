@@ -61,6 +61,10 @@ jobs:
           python scripts/validate_galactic_atlas.py
           python scripts/generate_galactic_atlas.py --output .a7-generated-test/galactic-atlas.json --commit-sha "$GITHUB_SHA"
           test -s .a7-generated-test/galactic-atlas.json
+      - name: Validate Arc 02 provider-derived Galaxy inspector
+        run: |
+          python scripts/validate_galactic_atlas_arc02.py
+          node --check site/assets/galactic-atlas.js
       - name: Validate domain-guide ownership and dated provider status
         run: python scripts/validate_repository_health.py
       - name: Validate printable, non-authoritative Memory Wall posters
