@@ -1,0 +1,78 @@
+/* A7 Cloud Orbit 2026-10-20. Last-loaded site-only skin; presentation-only. */
+:root{color-scheme:light!important;--a7-bg:#f3faff;--a7-surface:#fff;--a7-tint:#eaf6fc;--a7-ink:#244b64;--a7-muted:#52758a;--a7-border:#c9dfeb;--a7-accent:#267fa8;
+--bg:#f3faff;--bg2:#edf7fc;--panel:#fff;--panel2:#f8fcff;--line:#c9dfeb;--line2:#b6d5e5;--text:#244b64;--muted:#52758a;
+--gx-bg:#f3faff;--gx-pane:#fff;--gx-line:#c9dfeb;--gx-text:#244b64;--gx-muted:#52758a;--gx-blue:#2b91b6;--gx-gold:#9b733b}
+html{color-scheme:light!important;background:var(--a7-bg)!important}
+body,body.galactic-arc,body.standalone-page{color:var(--a7-ink)!important;background:radial-gradient(1000px 560px at 89% -8%,#cfedfb88,transparent 70%),radial-gradient(600px 680px at 2% 43%,#e4f3fbad,transparent 67%),linear-gradient(145deg,#f8fcff 0%,#edf7fc 50%,#fafdff 100%)!important}
+a{color:#1f7198}button,input,select,textarea{font-family:inherit}::selection{background:#c7edfa;color:#173c58}:focus-visible{outline:3px solid #2b8fb9!important;outline-offset:3px}
+body .noise{mix-blend-mode:multiply;opacity:.018}
+body .galaxy-stars{opacity:.18;background-image:radial-gradient(1.5px 1.5px at 20px 35px,#2b8fb980 99%,transparent),radial-gradient(1px 1px at 100px 130px,#7896d480 99%,transparent)!important}
+body .topbar,body .galaxy-header,body .ct-top,body .wall-topbar,body.standalone-page header{background:#fafdffea!important;border-bottom:1px solid var(--a7-border)!important;color:var(--a7-ink)!important;box-shadow:0 4px 23px #6795b112!important;backdrop-filter:blur(13px)}
+body .galaxy-header,body .topbar{z-index:30}
+body .galaxy-logo,body .galaxy-logo strong,body .galaxy-topnav a,body .ct-logo,body .ct-top nav a,body .wall-topbar nav a{color:#28546e!important;text-shadow:none}
+body .galaxy-logo small{color:#698ea3!important}
+body .galaxy-mark,body .brand-mark{color:#1d6488!important;border-color:#a7d1e5!important;background:linear-gradient(145deg,#e8f8ff,#c3e6f7)!important;box-shadow:0 3px 14px #8cc2d33a!important}
+body .galaxy-topnav a:hover,body .galaxy-topnav a.is-current,body .ct-top nav a:hover,body .ct-top nav a.current,body .wall-topbar nav a:hover,body .wall-topbar nav a.active{background:#dbf1fb!important;border-color:#b7d8e8!important;color:#1c6b90!important}
+body .galaxy-topnav a.nav-source{border-color:#bddae8!important;color:#286f91!important;background:#fff}
+body .galactic-arc a{color:#206c93}
+body .galaxy-intro h1,body .ct-hero h1,body .wall-hero h1{color:#234d66!important;text-shadow:none;overflow-wrap:break-word}
+body .galaxy-intro h1 em{color:#3187ab!important;-webkit-text-fill-color:currentColor;background:none!important}
+body .galaxy-intro>p,body .galaxy-inspector>p,body .reveal-lead{color:#55788e}
+body .arc-kicker,body .inspector-class,body .reveal-panel summary small{color:#9b723b}
+body .pulse-dot{background:#f6be81;box-shadow:0 0 8px #e6a266}
+body .arc-meta span{color:#477188;border:1px solid #c8e0ed;background:#fff}
+body .map-stage,body .galaxy-inspector,body .reveal-panel,body .ct-workspace,body .ct-inspector,body .health-card,body .health-debt,body .tip,body .ws-lane,body .ws-panel{color:#294f67;background:#fff!important;border-color:var(--a7-border)!important;box-shadow:0 13px 30px #89b5ca24!important}
+body .map-head,body .map-footer{color:#5c8095}
+body .map-head{border-bottom-color:#d5e5ef}body .map-footer{border-top-color:#d5e5ef}body .map-label{color:#337e9f}
+body .space-field{background:radial-gradient(ellipse 56% 46% at 50% 49%,#c2eaff69,transparent 90%),linear-gradient(#d7e9f37a 1px,transparent 1px),linear-gradient(90deg,#d7e9f37a 1px,transparent 1px),linear-gradient(#fafeff,#eef7fc)!important;background-size:auto,32px 32px,32px 32px,auto}
+body .space-nebula{opacity:.6;background:radial-gradient(ellipse 16% 25% at 17% 32%,#add9f092,transparent 100%),radial-gradient(ellipse 27% 20% at 81% 78%,#bdddf6a0,transparent 100%),radial-gradient(ellipse 18% 30% at 65% 16%,#e3d6f59c,transparent)!important}
+body .space-field:before{opacity:.32;background-image:radial-gradient(1px 1px at 35px 63px,#6caac5 99%,transparent),radial-gradient(1px 1px at 153px 126px,#93b6db 99%,transparent)}
+body .orbit-ring{border-color:#8fc1d89c!important}
+body .flight-lines line{stroke:#86bad4a6}body .flight-lines line.is-selected{stroke:#298cb4!important;filter:drop-shadow(0 0 3px #9edcf3)}
+body .star-node{color:#35627b!important;text-shadow:0 1px 0 #fff!important}
+body .star-node .star-planet{background:linear-gradient(140deg,#c4eaf9,#70b4d6)!important;border-color:#7cb4d3!important;color:#1f5576!important;box-shadow:inset -7px -9px 13px #3d8ab338,0 0 0 4px #fff8,0 5px 15px #6f9bb041!important}
+body .star-node.star-hub .star-planet{background:radial-gradient(circle at 33% 23%,#fff,#a5dbf3 42%,#3987b4 94%)!important;border-color:#62afd1!important;color:#164d70!important;box-shadow:0 0 0 12px #8fd8ef26,0 0 0 26px #7db8d321,0 8px 30px #6ea9ca62!important}
+body .star-node[data-zone="KNOWLEDGE"] .star-planet{background:linear-gradient(145deg,#efe8ff,#b4bee9)!important}
+body .star-node[data-zone="ADJACENT"] .star-planet{background:linear-gradient(145deg,#e8f8eb,#9ed6c0)!important}
+body .star-node[data-zone="ENGINEERING"][data-role="COST_ENGINE"] .star-planet{background:linear-gradient(145deg,#fff0ca,#f1bd80)!important}
+body .star-node:hover .star-planet,body .star-node.is-selected .star-planet{transform:scale(1.13);box-shadow:0 0 0 5px #d4f0fb,0 6px 22px #5aa0c363!important}
+body .star-node.is-selected .star-name{color:#1a638e!important}
+body .planet-loading{color:#567b91}
+body .galaxy-inspector h2,body .reveal-panel summary,body .owner-flow div{color:#274f68!important}
+body .inspector-topline,body .domain-boundary span{color:#6b8598}
+body .signal-tag{background:#e1f5eb;color:#247b63;border-color:#abdbc2}
+body .inspector-emblem{background:linear-gradient(135deg,#eafaff,#aedbed)!important;color:#28658d!important;border-color:#9ecce2!important;box-shadow:0 7px 22px #99bccd48!important}
+body .domain-boundary{background:#f4faff;border-color:#d1e4ef}body .domain-boundary strong{color:#2d5f78}
+body .inspector-links a{background:#287eaa!important;color:#fff!important;border-color:#287eaa!important}
+body .inspector-links a+a{background:#f3faff!important;color:#2d6a8c!important;border-color:#b8d9e9!important}
+body .more-links a{background:#f4fbff;color:#2b6b89;border-color:#d0e5ef}
+body .galaxy-inspector p.inspector-caveat{color:#748da0;border-color:#d9e6ef}
+body .reveal-panel summary{border-color:#d6e8f0!important}body .reveal-panel summary .chevron{color:#488fb1}
+body .owner-flow div{background:#f4faff;border-color:#cbe1ec}body .owner-flow div small{color:#607f94}body .owner-flow>span{color:#98713b}
+body .ownership-table-wrap{border-color:#d1e3eb}body .ownership-table th,body .ownership-table td{border-bottom-color:#dceaf2}
+body .ownership-table thead{background:#e9f5fc;color:#386783}body .ownership-table tbody th{color:#896a39}body .ownership-table td{color:#436a81}
+body .principle-note{background:#f3f9fe;color:#52778d;border-color:#e4b26e}
+body .archive-links a{color:#2d7597;background:#f6fbfe;border-color:#c5dfe9}
+body .galaxy-error{background:#fff5f4;color:#934e51;border-color:#deb2b4}
+body .galaxy-footer{border-top-color:#d5e5ec;color:#6c8b9e}body .galaxy-footer a{color:#266e94}
+body .health-banner,body .notice-board{background-color:#f8fcff}
+body .health-header h1,body .ct-heading h2,body .guide-hero h1{color:#28526d}
+body .ct-level,body .ct-card,body .ct-edge,body .ct-step,body .card,body .panel{border-color:var(--a7-border)!important;background:#fff!important}
+body .ghost-link,body .ws-pinned-link,body .health-nav a{color:#276f92!important;background:#fff!important;border-color:#c5e1ec!important}
+body .ws-pinned-link:hover,body .ghost-link:hover{background:#eaf6fc!important}
+body .ws-principle,body .ws-home-pin,body .ws-footer-rule{background:#eef8fd!important;border-color:#c6e0eb!important}
+body .ws-pipeline>div{background:#fff!important;border-color:#c6deeb!important}
+body.standalone-page .card,body.standalone-page .metric{background:#fff!important;color:#315973!important;border-color:var(--a7-border)!important}
+body.standalone-page h1,body.standalone-page h2,body.standalone-page h3{color:#294e65!important}
+body.standalone-page .card p{color:#59788a}body.standalone-page .dim{color:#577b91}
+body.standalone-page .notice{background:#fff7e8;color:#725d3e;border-color:#ddb479}
+body.standalone-page .tag{background:#eaf6fd;color:#336f91;border-color:#c6dfec}
+body .guide-hero,body .ct-hero{background-color:transparent}
+body .reveal-panel[style]{background:#fff!important}
+body .reveal-panel h2[style],body .reveal-panel p[style]{color:#385d76!important}
+body .reveal-panel p[style*="#d9b78a"]{color:#8b6a3d!important}
+.a7-rocket-mascot{position:fixed;left:0;top:0;width:clamp(68px,7.5vw,105px);height:auto;z-index:24;pointer-events:none;user-select:none;opacity:0;will-change:transform,opacity;contain:layout paint;filter:drop-shadow(0 9px 12px #5d97b84d)}
+.a7-rocket-mascot img{display:block;width:100%;height:auto;pointer-events:none}
+@media(max-width:640px){.a7-rocket-mascot{width:64px;z-index:19}}
+@media(prefers-reduced-motion:reduce){.a7-rocket-mascot{display:none!important}.galaxy-stars,.pulse-dot,.orbit-ring,.star-node .star-planet{animation:none!important;transition:none!important}}
+@media print{.a7-rocket-mascot{display:none!important}body,body.galactic-arc{background:#fff!important}}
