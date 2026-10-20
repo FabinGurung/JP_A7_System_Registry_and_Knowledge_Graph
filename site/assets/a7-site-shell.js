@@ -26,6 +26,7 @@ function create(){
  for(const [path,label] of primary)nav.append(link(path,label,id===path));
  const more=el("details",undefined,"a7-shell-more");const sum=el("summary","More");const menu=el("div",undefined,"a7-shell-menu");
  for(const [path,label] of routes.slice(6,8))menu.append(link(path,label,id===path));
+ const github=el("a","GitHub source ↗");github.href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph";github.target="_blank";github.rel="noopener noreferrer";menu.append(github);
  more.append(sum,menu);more.addEventListener("click",e=>{if(e.target.closest("a"))more.open=false;});
  document.addEventListener("click",e=>{if(more.open&&!more.contains(e.target))more.open=false;});
  nav.append(more);header.append(brand,nav);
