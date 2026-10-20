@@ -69,11 +69,11 @@
     get("selectedOwner").textContent = selectedRecord.owns;
     const isCentral = id === ROOT_ID;
     const homepage = isCentral
-      ? new URL("legacy-overview.html", location.href).href
+      ? new URL("control-towers.html", location.href).href
       : selectedRecord.website_url;
     if (isCentral) {
       get("selectedSite").href = homepage;
-      get("selectedSite").textContent = "Explore the original A7 dashboard ↗";
+      get("selectedSite").textContent = "Open A7 Control Towers ↗";
       get("selectedSite").target = "_self";
       get("selectedSite").removeAttribute("rel");
     } else link(get("selectedSite"), homepage, "pages", "Visit system website ↗");
@@ -90,11 +90,47 @@
       a.rel = "noopener noreferrer";
       extras.append(a);
     }
+    renderProviderEvidence(selectedRecord);
     const when = selectedRecord.source_observed_at
       ? selectedRecord.source_observed_at.slice(0,10)
       : "undated";
     get("selectedEvidence").textContent =
       "Directory observation " + when + " · The owning GitHub repository and source provider establish the current version and actual operational status. This map cannot approve or edit it.";
+  }
+
+
+  /* Recorded provider snapshots are authored on A7 only after GitHub
+     readback. No API calls, speculative dependencies, or release approvals. */
+  function renderProviderEvidence(station) {
+    const e = station.provider_evidence;
+    if (!e || !e.not_live || !e.last_successful_publication) return;
+    get("inspectorObservationDate").textContent = "Observed " + e.observed_date + " (snapshot)";
+    const status = get("inspectorStatus");
+    status.textContent = e.provider_label.replaceAll("_"," ");
+    status.classList.toggle("arc02-review",/FAILED|PENDING|OLDER|MIXED|SEPARATE|FEATURE/.test(e.provider_label));
+    get("inspectorMainSha").textContent = e.main_sha.slice(0,12);
+    get("inspectorPublishedBranch").textContent = e.publication_branch;
+    get("inspectorDeployedSha").textContent = e.last_successful_publication.sha.slice(0,12);
+    get("inspectorDeployedAt").textContent = e.last_successful_publication.at.slice(0,16).replace("T"," ")+" UTC";
+    get("inspectorCapabilities").textContent = e.capability;
+    get("inspectorGate").textContent = e.owner_gate;
+    get("inspectorDependency").textContent = e.dependency_note;
+    const anchors = get("inspectorProviderLinks");
+    anchors.replaceChildren();
+    const base="https://github.com/" + station.module_repository;
+    function add(label,url) {
+      if(!safeUrl(url,"other")) return;
+      const a=document.createElement("a");
+      a.href=url; a.target="_blank"; a.rel="noopener noreferrer";
+      a.textContent=label+" ↗";anchors.append(a);
+    }
+    add("Successful deployment evidence",base+"/actions/runs/"+e.last_successful_publication.id);
+    if(e.related_workflow?.id!==e.last_successful_publication.id) {
+      add("Additional workflow observation",base+"/actions/runs/"+e.related_workflow.id);
+    }
+    add("Main source at recorded SHA",base+"/tree/"+e.main_sha);
+    if(e.publication_branch!=="main")
+      add("Publication commit",base+"/tree/"+e.last_successful_publication.sha);
   }
 
   function valid(data) {
@@ -111,6 +147,9 @@
           !station.module_repository?.startsWith(OWNER_PREFIX) ||
           !safeUrl(station.github_url, "github") ||
           !safeUrl(station.website_url, "pages") ||
+          !station.provider_evidence?.not_live ||
+          !station.provider_evidence?.last_successful_publication?.id ||
+          !station.provider_evidence?.owner_gate ||
           !Number.isFinite(Number(station.azimuth)) ||
           !Number.isFinite(Number(station.radial))) return false;
       ids.add(station.id);

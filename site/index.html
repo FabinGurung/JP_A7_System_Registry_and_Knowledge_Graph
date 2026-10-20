@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/sky-theme.css"><link rel="stylesheet" href="assets/galactic-atlas.css"><link rel="stylesheet" href="assets/memory-wall-entry.css">
 <script src="assets/galactic-atlas.js" defer></script>
 <link rel="stylesheet" href="assets/a7-unified-theme.css">
+<link rel="stylesheet" href="assets/galactic-atlas-arc02.css">
 <link rel="stylesheet" href="assets/a7-site-shell.css">
 <script src="assets/a7-site-shell.js" defer></script>
 </head><body class="galactic-arc">
@@ -21,15 +22,15 @@
 </nav></header>
 <main class="galaxy-shell">
 <section class="galaxy-intro" aria-label="Introduction">
-<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 01 / THE CENTRAL MAP</div>
+<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 02 / THE INSPECTOR</div>
 <h1>One galaxy.<br><em>Independent systems.</em></h1>
-<p>A7 is the map, not the machine. Select a constellation to discover its owning repository, visit its website, and follow its version history. Each world keeps its own code, templates, data and authority.</p>
+<p>A7 is the map, not the machine. Select a world to inspect its capabilities, owning branch, dated GitHub deployment evidence and unresolved gates. Every system retains independent source and approval authority.</p>
 <div class="arc-meta"><span>9 indexed repositories</span><span>8 destination systems</span><span>Zero authority transfers</span></div>
 </section>
 <aside class="memory-wall-shortcut" aria-label="Pinned reference posters"><div><small>YOUR STUDY CORNER · 03 VERIFIED PUBLIC BOOKMARKS</small><strong>Memory Wall — little posters for big reminders</strong><p>Developer Roadmap · Public APIs · React Questions. Always visible, no flip cards; bring a little noticeboard into the galaxy.</p></div><a href="memory-wall.html">Visit the poster wall ↗</a></aside>
 <section class="galaxy-experience" aria-label="Federated system star map">
 <div class="map-stage">
-<div class="map-head"><span class="map-label">NAVIGATION / JP SYSTEM GALAXY</span><span class="map-hint">SELECT A SYSTEM • EXPLORE ONE AT A TIME</span></div>
+<div class="map-head"><span class="map-label">NAVIGATION / JP SYSTEM GALAXY</span><span class="map-hint">SELECT A WORLD • INSPECT PROVIDER EVIDENCE</span></div>
 <div class="space-field" id="spaceField" role="group" aria-label="Central star map of linked repositories">
 <div class="space-nebula" aria-hidden="true"></div>
 <div class="orbit-ring orbit-ring-one" aria-hidden="true"></div><div class="orbit-ring orbit-ring-two" aria-hidden="true"></div>
@@ -50,6 +51,21 @@
 <a id="selectedRepo" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">Repository / commits ↗</a>
 </div>
 <div id="selectedExtras" class="more-links" aria-label="Destination-specific links"></div>
+<section class="arc02-evidence" aria-label="GitHub provider snapshot for selected system">
+  <div class="arc02-evidence-head"><strong>Provider evidence</strong><span class="arc02-observed" id="inspectorObservationDate">Loading dated record…</span></div>
+  <div class="arc02-status" id="inspectorStatus" role="status">Recorded GitHub observation pending</div>
+  <dl class="arc02-details">
+    <div><dt>Main source</dt><dd><code id="inspectorMainSha">—</code></dd></div>
+    <div><dt>Published branch</dt><dd id="inspectorPublishedBranch">—</dd></div>
+    <div><dt>Published commit</dt><dd><code id="inspectorDeployedSha">—</code></dd></div>
+    <div><dt>Successful run</dt><dd id="inspectorDeployedAt">—</dd></div>
+  </dl>
+  <div id="inspectorProviderLinks" class="arc02-provider-links" aria-label="Exact GitHub workflow evidence"></div>
+  <div class="arc02-block"><h3>What this system offers</h3><p id="inspectorCapabilities">Select a system</p></div>
+  <div class="arc02-block arc02-owner-gate"><h3>Owner-side gate / what remains unverified</h3><p id="inspectorGate">Check owning repository</p></div>
+  <div class="arc02-block"><h3>Cross-system relation</h3><p id="inspectorDependency">A7 catalogue link only; no unverified runtime integration.</p></div>
+  <p class="arc02-freshness">Dated snapshot, not a live heartbeat. Workflow success is not engineering, project, research or business approval. Verify with the owner before decisions.</p>
+</section>
 <p class="inspector-caveat" id="selectedEvidence">Recorded links are catalogue observations; live statuses belong to each provider.</p>
 </aside>
 </section>
