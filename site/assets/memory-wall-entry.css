@@ -1,0 +1,8 @@
+/* Independent minimal homepage entry only; preserves Galactic Atlas Arc01 CSS. */
+.galactic-arc .memory-wall-shortcut{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:0 0 23px;padding:18px 22px;border:1px solid #699ac0a0;border-radius:14px;background:linear-gradient(110deg,#d8f2fc,#e7f7fa 66%,#f4fbff);box-shadow:0 9px 32px #07182b30;color:#244f69}
+.galactic-arc .memory-wall-shortcut small{color:#5488a2;font-size:9px;font-weight:850;letter-spacing:.13em}
+.galactic-arc .memory-wall-shortcut strong{display:block;font-size:18px;margin:4px 0;color:#244f69}
+.galactic-arc .memory-wall-shortcut p{font-size:12px;color:#527389;max-width:670px;margin:5px 0}
+.galactic-arc .memory-wall-shortcut>a{color:#236f9b;background:white;border:1px solid #9dcee4;padding:11px 14px;border-radius:10px;text-decoration:none;font-size:12px;font-weight:800;white-space:nowrap}
+.galactic-arc .memory-wall-shortcut>a:hover{background:#eefaff}
+@media(max-width:570px){.galactic-arc .memory-wall-shortcut{padding:17px}.galactic-arc .memory-wall-shortcut>a{width:100%;text-align:center}}

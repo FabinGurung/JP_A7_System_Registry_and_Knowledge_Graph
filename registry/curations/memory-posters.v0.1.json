@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "A7-MEM-WALL-EXTERNAL-REFERENCES-001",
+  "sequence_id": "A7-SEQ-000017",
+  "title": "Memory Wall · Pinned Reference Posters",
+  "purpose": "Always-visible passive-recall wall posters for external developer references, not Anki cards.",
+  "collection_owner": "A7_SITE_PUBLIC_CURATIONS",
+  "scope": "EXTERNAL_PUBLIC_REFERENCE_BOOKMARKS_ONLY",
+  "source_class": "CURATED_LINKS_VERIFIED_VIA_GITHUB",
+  "verified_on": "2026-10-20",
+  "not_domain_authority": true,
+  "not_new_owned_modules": true,
+  "no_private_drive_identity": true,
+  "source_notes": "Links are also preserved privately in a separate Google Drive reference collection. Do not put private Drive IDs, folders, ACLs or A9 rows on the public site.",
+  "categories": [
+    {
+      "id": "learning",
+      "label": "Learning & career",
+      "description": "Pathways and skills you want to keep seeing"
+    },
+    {
+      "id": "integrations",
+      "label": "APIs & integrations",
+      "description": "Useful external data and integration indexes"
+    },
+    {
+      "id": "frontend",
+      "label": "Frontend & React",
+      "description": "Knowledge checklists and technology concepts"
+    }
+  ],
+  "posters": [
+    {
+      "id": "MEM-EXT-0001",
+      "category": "learning",
+      "theme": "mist",
+      "label": "01 / LEARNING MAP",
+      "icon": "🧭",
+      "title": "DEVELOPER ROADMAP",
+      "big_word": "CHOOSE THE PATH",
+      "summary": "Interactive developer roadmaps and learning guides.",
+      "remember": "When choosing what to learn next or planning a technical skill path.",
+      "owner": "nilbuild",
+      "repository": "nilbuild/developer-roadmap",
+      "url": "https://github.com/nilbuild/developer-roadmap",
+      "status": "VERIFIED_PUBLIC_LINK_2026_10_20"
+    },
+    {
+      "id": "MEM-EXT-0002",
+      "category": "integrations",
+      "theme": "sand",
+      "label": "02 / API DIRECTORY",
+      "icon": "🧩",
+      "title": "PUBLIC APIs",
+      "big_word": "FIND THE DATA",
+      "summary": "A collective list of free public APIs.",
+      "remember": "When exploring candidate API integrations for a new feature.",
+      "owner": "public-apis",
+      "repository": "public-apis/public-apis",
+      "url": "https://github.com/public-apis/public-apis",
+      "status": "VERIFIED_PUBLIC_LINK_2026_10_20"
+    },
+    {
+      "id": "MEM-EXT-0003",
+      "category": "frontend",
+      "theme": "lilac",
+      "label": "03 / FRONTEND REVIEW",
+      "icon": "⚛️",
+      "title": "REACT QUESTIONS",
+      "big_word": "CHECK KNOWLEDGE",
+      "summary": "ReactJS interview questions and explanations.",
+      "remember": "When studying React fundamentals or preparing for interviews.",
+      "owner": "sudheerj",
+      "repository": "sudheerj/reactjs-interview-questions",
+      "url": "https://github.com/sudheerj/reactjs-interview-questions",
+      "status": "VERIFIED_PUBLIC_LINK_2026_10_20"
+    }
+  ],
+  "curation_rules": {
+    "poster_visible_at_rest": true,
+    "no_flip": true,
+    "no_quiz": true,
+    "single_default_board": true,
+    "printed_poster_layout": true,
+    "allowed_links": [
+      "https://github.com/"
+    ],
+    "external_links_are_not_endorsements": true,
+    "add_poster_by_editing": "registry/curations/memory-posters.v0.1.json",
+    "review_requirement": "Verify repository exists and current source/terms/licensing before adding or using."
+  }
+}
