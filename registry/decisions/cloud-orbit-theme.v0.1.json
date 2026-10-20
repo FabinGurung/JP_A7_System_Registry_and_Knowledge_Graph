@@ -50,12 +50,20 @@
     "Source-linked visualization output"
   ],
   "preserved_engine_git_blobs": {
-    "site/assets/galactic-atlas.js": "af92e67785f4bccbf80ef29e9448bc37d4295a4d",
+    "site/assets/galactic-atlas.js": "d4c6ca60b753c28edfbd2358da0b148ccba341c0",
     "site/assets/app.js": "2091769e669d27a64898d1413a691ddcc75f0945",
     "site/assets/control-towers.js": "2413b9f5934e30d97982e0dfb32a23c7cb9d3b5c",
     "site/assets/memory-wall.js": "3063e043023310fca7c4c727092d14b5c707b07a",
     "site/assets/repository-status.js": "50291bc0c9dda4dc1fd8c98c481576019a48c0d7",
     "site/assets/visualization-workspace.js": "ba4884fbea2e7e508dbbeb7c51e3c17e7f722889"
   },
-  "no_private_data_in_css_or_mascot": true
+  "no_private_data_in_css_or_mascot": true,
+  "intentional_change_record": {
+    "sequence_id": "A7-SEQ-000020",
+    "path": "site/assets/galactic-atlas.js",
+    "new_git_blob_sha": "d4c6ca60b753c28edfbd2358da0b148ccba341c0",
+    "previous_git_blob_sha": "af92e67785f4bccbf80ef29e9448bc37d4295a4d",
+    "reason": "Arc02 intentionally augments selected-world inspector with dated provider provenance; five other original engines retain exact preserved blob hashes.",
+    "css_theme_and_mascot_unchanged": true
+  }
 }

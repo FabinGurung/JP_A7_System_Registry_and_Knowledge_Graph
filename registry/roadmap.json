@@ -117,6 +117,13 @@
       "title": "One site navigation, Visualization reminders under Memory Wall, retire duplicate legacy landing pages",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Shared site chrome across eleven pages, preserved old engines and releases in History & Rollback, Memory Wall six-lane cards from original derived decision, no source authority changes. Pending CI/Pages. PR #42 merged; main registry CI run 39364515947 succeeded and Pages run 39364515979 deployed f5b5890abf55571c01fa3b59d2ec70e9f96dc40c. Browser screenshot and interaction QA not independently performed."
+    },
+    {
+      "id": "A7-D16",
+      "stage": "A7-SEQ-000020 — Galactic Atlas Arc 02 selected-system inspector",
+      "title": "Dated source-owned GitHub provenance and owner gates for all nine stations",
+      "status": "STAGED_UNTIL_PROVIDER_QA",
+      "detail": "Public-safe GitHub snapshot readback 20 October; nine station evidence panels with capabilities, branches, SHAs, successful deployment and separate workflow observation. R&D/Operations/Cost nuances are retained, no live-provider claim and no runtime dependency asserted. CI and Pages pending."
     }
   ],
   "next": [
@@ -180,7 +187,7 @@
       "id": "A7-N09",
       "priority": "P1",
       "title": "Galactic Atlas Arc 02: selected-world provider inspection",
-      "state": "PLANNED",
+      "state": "IN_PROGRESS_ARC02_AWAITING_PROVIDER_QA",
       "done_when": "Status provenance, age, owner workflow, pinned commit and dependencies in a usable world inspector, without claiming live monitoring."
     },
     {

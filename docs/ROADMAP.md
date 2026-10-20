@@ -106,3 +106,7 @@ Unified primary navigation for all eleven current A7 public pages, moved visuali
 - Shared Cloud Orbit A7 chrome on all 11 pages; existing fluffy rocket unchanged. Main nav Atlas / Control Towers / Mission Status / Memory Wall / Roadmap / How It Works; More for Governance / History.
 - Visualization six-lane projection is inside Memory Wall from original generated decision, with true recorded implementation states; technical original retained. Legacy graph/matrix search + pre-Arc milestone are in History and Rollback rather than primary navigation. No original pages, engines or immutable releases deleted.
 - Browser visual QA not independently performed. A7-SEQ-000013 private A9 remains separately STAGED, R&D and other peer repository debt unchanged.
+
+### Galactic Atlas Arc 02 / A7-SEQ-000020 — source-backed inspector (staged)
+
+Arc 01 and Seq19 navigation remain the operator entrypoint; Arc02 adds a source-linked nine-system inspector rather than new website destinations. The 20 October provider snapshot distinguishes main HEAD, production/publication branch, last successful workflow run, latest additional workflow evidence, owner-side gate, and zero asserted runtime dependencies. Note R&D main portal success with separate manuscript/source QA, Operations branch production workflow success with failed visual QA, and Cost preview deployment observed in progress. Sequence13 private A9 is not modified. Requires feature CI, PR/Pages readback, closeout and POST. No browser screenshot QA claimed.

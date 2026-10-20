@@ -195,3 +195,7 @@ Visual-only light UI normalization across all ten A7 HTML pages using the last-l
 ## Unified navigation / Memory Wall visualization reminders / A7-SEQ-000019
 
 The active navigation is now Atlas, Control Towers, Mission Status, Memory Wall, Roadmap and How It Works; Governance and History & Rollback are under More. The six previously pinned visualization methods are now always-visible reminders within `memory-wall.html#visualization-reminders`, using the same generated decision JSON as the preserved `visualization-workspace.html`. The older dashboard, milestone and detailed visualization runbook remain accessible only through `history.html` and recorded versioned history; no files or product engines are deleted. Read `docs/HISTORY_AND_ROLLBACK_READ_FIRST.md` before future theme/nav changes.
+
+## Galactic Atlas Arc 02 — source-backed world inspector
+
+The Galactic Atlas selected-world panel now displays **dated** capability, owner main SHA versus published branch/commit, successful GitHub Pages/workflow evidence, current related workflow observation and unresolved owner gates for all nine stations. The evidence snapshot is `registry/providers/galactic-atlas-arc02-observation-20261020.json`, composed into derived `site/data/galactic-atlas.json` with SHA-256 source lineage. `docs/GALACTIC_ATLAS_ARC02_READ_FIRST.md` explains scope, source observations and why this does not constitute live monitoring, peer integration, approval or private A9 reconciliation. CI: `scripts/validate_galactic_atlas_arc02.py`.
