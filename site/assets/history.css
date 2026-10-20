@@ -1,0 +1,17 @@
+/* Active history page under the same Cloud Orbit shell. */
+.history-page{max-width:1190px;padding:43px clamp(17px,4vw,44px) 95px;margin:auto;color:#2b506b;font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+.history-eyebrow{color:#4c8cac;font-size:11px;letter-spacing:.15em;font-weight:800}
+.history-page h1{font-size:clamp(34px,5.2vw,59px);line-height:1.1;letter-spacing:-.045em;margin:15px 0;color:#265472}
+.history-page h1 em{color:#599bbb;font-style:normal}
+.history-lead{max-width:850px;color:#608198}
+.history-status{background:#e5f5fc;border:1px solid #c5e0ed;border-radius:13px;padding:15px 20px;margin:27px 0;color:#3f7390}
+.history-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.history-grid article,.history-recovery{border:1px solid #cbe2ec;background:#fff;border-radius:16px;padding:23px;box-shadow:0 11px 30px #8eb8ca22}
+.history-grid article span{font-size:10px;color:#638fa6;font-weight:800;letter-spacing:.07em}
+.history-grid h2,.history-recovery h2{font-size:20px;line-height:1.2;margin:14px 0;color:#285977}
+.history-grid article p,.history-recovery p{font-size:13px;color:#597e95}
+.history-grid article a{display:inline-block;margin-top:10px;padding:9px 12px;background:#ecf8fd;border:1px solid #c4deeb;border-radius:9px;color:#28749b;text-decoration:none;font-weight:700;font-size:12px}
+.history-recovery{margin-top:22px}.history-recovery code{font-size:11px;overflow-wrap:anywhere}
+.history-actions{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.history-actions a{padding:10px 12px;border-radius:8px;background:#edf7fc;color:#2b769e;border:1px solid #cde0ee;text-decoration:none;font-size:12px}
+.history-boundary{padding:12px;background:#fff8ea;border-left:3px solid #dab47d}
+@media(max-width:930px){.history-grid{grid-template-columns:1fr}}

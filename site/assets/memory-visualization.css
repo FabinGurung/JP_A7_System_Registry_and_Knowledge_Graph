@@ -1,0 +1,21 @@
+/* Memory Wall / six visualization reminders (not competing app navigation). */
+.memory-viz-board{margin:35px 0 26px;padding:clamp(18px,3vw,30px);background:linear-gradient(145deg,#f8fcff,#eef6fe);border:1px solid #c9dfeb;border-radius:21px;box-shadow:0 13px 35px #8ab8ca22}
+.memory-viz-heading{display:flex;align-items:flex-end;gap:18px;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid #d0e3ed;padding-bottom:16px}
+.memory-viz-heading h2{font-size:clamp(25px,3.2vw,34px);margin:8px 0;color:#254f6c;line-height:1.2}
+.memory-viz-heading p{max-width:660px;color:#5e8195;font-size:13px;line-height:1.7;margin:0}
+.memory-viz-heading .eyebrow{font-size:10px}
+.memory-viz-source-link{background:#fff;color:#2d7ca2;border:1px solid #c4deeb;border-radius:9px;text-decoration:none;padding:9px 12px;font-size:12px;font-weight:700;white-space:nowrap}
+.memory-viz-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:22px}
+.memory-viz-card{padding:19px 18px 21px;background:#fffefa;border:1px solid #d7e3ed;border-radius:13px;box-shadow:0 6px 18px #85a8bc1b;min-width:0}
+.memory-viz-card:nth-child(6n+2),.memory-viz-card:nth-child(6n+5){background:#f6f9ff}
+.memory-viz-card:nth-child(6n+3),.memory-viz-card:nth-child(6n+6){background:#f4fbf8}
+.memory-viz-head{display:flex;align-items:center;gap:10px;color:#6892a8;font-size:10px;font-weight:800;letter-spacing:.07em}
+.memory-viz-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e2f4fc;color:#2f8cb6;font-size:24px}
+.memory-viz-card h3{font-size:20px;line-height:1.2;color:#285875;margin:18px 0 12px;overflow-wrap:break-word}
+.memory-viz-card strong{font-size:12px;letter-spacing:.06em;color:#2b819e}
+.memory-viz-card p{font-size:12px;line-height:1.65;color:#5b7c90;min-height:43px}
+.memory-viz-card small{display:block;color:#788f9e;font-size:10px;line-height:1.6;padding-top:9px;border-top:1px solid #e1edf2}
+.memory-viz-source{font-size:11px;color:#6f8fa2;margin:17px 0 0}
+@media(max-width:900px){.memory-viz-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.memory-viz-grid{grid-template-columns:1fr}.memory-viz-heading{align-items:flex-start}}
+@media print{.memory-viz-board{break-before:page;box-shadow:none}.memory-viz-grid{grid-template-columns:repeat(2,1fr)}.memory-viz-card{break-inside:avoid}}
