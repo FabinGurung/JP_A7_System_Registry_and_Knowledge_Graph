@@ -1,0 +1,33 @@
+/* A7 Unified Site Shell — consistent identity & navigation; core engines untouched. */
+:root{--a7-shell-ink:#244b64;--a7-shell-muted:#5c7c90;--a7-shell-line:#c9dfeb;--a7-shell-blue:#267fa8}
+.a7-shell-header{position:sticky;top:0;z-index:45;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:11px clamp(16px,3.4vw,54px);background:#fbfdffed;color:var(--a7-shell-ink);border-bottom:1px solid var(--a7-shell-line);box-shadow:0 5px 22px #77afc11f;backdrop-filter:blur(17px);font:13px/1.45 system-ui,sans-serif}
+.a7-shell-header *{box-sizing:border-box}
+.a7-shell-brand{display:flex;align-items:center;gap:10px;text-decoration:none!important;color:var(--a7-shell-ink)!important}
+.a7-shell-emblem{display:grid;place-items:center;background:linear-gradient(145deg,#f1fbff,#c8eafb);border:1px solid #a7d5e8;border-radius:13px;height:39px;width:39px;font-weight:900;color:#1e6c93;flex:0 0 39px}
+.a7-shell-brand strong,.a7-shell-brand small{display:block}.a7-shell-brand strong{font-size:14px;letter-spacing:.018em;color:#264e65}.a7-shell-brand small{color:#7195a7;font-size:10px;margin-top:2px}
+.a7-shell-nav{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.a7-shell-nav>a,.a7-shell-more>summary{list-style:none;display:inline-block;text-decoration:none;color:#4c7389!important;padding:8px 10px;border-radius:9px;border:1px solid transparent;background:transparent;font:650 12px/1.4 system-ui,sans-serif;white-space:nowrap;cursor:pointer}
+.a7-shell-nav a:hover,.a7-shell-more summary:hover,.a7-shell-nav a[aria-current="page"]{background:#e5f4fb;color:#1e769b!important;border-color:#b5d8e9}
+.a7-shell-more{position:relative}.a7-shell-more summary::-webkit-details-marker{display:none}.a7-shell-more summary:after{content:"⌄";margin-left:6px;color:#6d96ac}
+.a7-shell-menu{position:absolute;right:0;top:calc(100% + 6px);min-width:210px;background:#fff;border:1px solid #c6dfeb;border-radius:12px;box-shadow:0 14px 36px #6e9db52e;padding:7px;display:grid;gap:4px;z-index:60}
+.a7-shell-menu a{display:block;color:#426b82!important;text-decoration:none;padding:9px 11px;border-radius:8px;font:650 12px/1.5 system-ui,sans-serif}
+.a7-shell-menu a[aria-current="page"]{background:#e4f4fb}
+.a7-shell-context{display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap;background:#edf8fdec;border-bottom:1px solid #d8e9f1;padding:8px clamp(17px,3.4vw,54px);font:11px/1.5 system-ui,sans-serif;color:#668aa0;position:relative;z-index:3}
+.a7-shell-context b{font-size:11px;color:#3e7694;font-weight:750}.a7-shell-context a{color:#2f7f9f;text-decoration:none}
+.a7-shell-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:22px clamp(17px,3.4vw,54px);background:#fbfdff;border-top:1px solid #c9dfeb;font:11px/1.6 system-ui,sans-serif;color:#718fa1;position:relative;z-index:3}
+.a7-shell-footer a{color:#2d7a9c;text-decoration:none;margin-left:10px}
+.a7-shell-archive-chip{font-size:10px;color:#856842;border:1px solid #e9d8b9;border-radius:7px;background:#fff8ec;padding:4px 8px}
+body.a7-shell-ready>.galaxy-header,body.a7-shell-ready>.ct-top,body.a7-shell-ready>.wall-topbar,
+body.a7-shell-ready>.topbar:not(:has(#searchButton)),body.a7-shell-ready.standalone-page>header:not(.a7-shell-header),
+body.a7-shell-ready .health-nav{display:none!important}
+/* Old dashboard has a unique working search function: retain it as a slim toolrail. */
+body.a7-shell-ready>.topbar:has(#searchButton){position:relative;top:auto;height:auto;min-height:42px;padding:7px clamp(17px,3.4vw,54px);background:#f1f9fe!important;border-bottom:1px solid #d0e5f0!important;justify-content:flex-end}
+body.a7-shell-ready>.topbar:has(#searchButton)>.brand,body.a7-shell-ready>.topbar:has(#searchButton) .top-actions>a{display:none!important}
+body.a7-shell-ready>.topbar:has(#searchButton) .top-actions{display:flex;justify-content:flex-end;flex:1;gap:9px}
+body.a7-shell-ready>.galaxy-footer,body.a7-shell-ready>.wall-footer,body.a7-shell-ready main>.wall-footer,
+body.a7-shell-ready>.ct-shell+footer,body.a7-shell-ready>.topbar:not(:has(#searchButton))+main+footer{display:none!important}
+body.a7-shell-ready.a7-archived>.topbar:has(#searchButton)~footer{display:flex!important;background:#f8fcff;color:#587d92;padding:12px clamp(17px,3.4vw,54px);font-size:11px}
+body.a7-shell-ready .galaxy-shell,body.a7-shell-ready .ct-shell,body.a7-shell-ready .wall-main,body.a7-shell-ready .health{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body.a7-shell-ready .galaxy-intro h1,body.a7-shell-ready .ct-hero h1,body.a7-shell-ready .wall-hero h1{letter-spacing:-.047em}
+@media(max-width:850px){.a7-shell-header{align-items:flex-start}.a7-shell-nav{justify-content:flex-start;width:100%;overflow-x:auto;flex-wrap:nowrap;padding:3px 0 5px}.a7-shell-nav>a,.a7-shell-more>summary{font-size:11px;padding:7px 8px}.a7-shell-more{position:static}.a7-shell-menu{right:10px;left:auto;top:auto;min-width:200px}.a7-shell-footer a{margin-left:6px}}
+@media print{.a7-shell-header,.a7-shell-context,.a7-shell-footer{display:none!important}}
