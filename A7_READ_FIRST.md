@@ -184,3 +184,7 @@ User-facing websites expose **How It Works** near the first action; hide machine
 ## 19. Personal learning Memory Wall / SEQ-000017
 
 Read `docs/MEMORY_WALL_READ_FIRST.md` and curated Git source `registry/curations/memory-posters.v0.1.json`. Site page `site/memory-wall.html` visualizes always-visible posters and optional print, not quiz/Anki flashcards. Curated *external* GitHub bookmarks are not A7 module registrations or owner facts. Do not copy the original private Google Drive reference-folder IDs to the public repository. A7-SEQ-000013 private A9 reconciliation stays separately staged.
+
+## 20. Cloud Orbit site-only theme
+
+The Cloud Orbit style decision is `registry/decisions/cloud-orbit-theme.v0.1.json`. All ten public A7 HTML pages load `site/assets/a7-unified-theme.css` last and `site/assets/fluffy-rocket.js` as a decorative, motion-accessible mascot, without modifying A7 semantics, project data or peer repositories. The public Operations map example is not a theme donor and is never mutated as part of A7 normalization. Validate with `scripts/validate_unified_theme.py`. A7-SEQ-000013 private A9 cutover remains staged.

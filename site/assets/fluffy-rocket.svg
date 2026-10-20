@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 206" role="img" aria-label="Fluffy rocket mascot">
+<defs><linearGradient id="body" x1=".12" x2=".85" y1=".15" y2=".95"><stop stop-color="#fff"/><stop offset=".6" stop-color="#eefaff"/><stop offset="1" stop-color="#bde9fc"/></linearGradient><linearGradient id="fin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#91d9fb"/><stop offset="1" stop-color="#318cce"/></linearGradient><radialGradient id="glass" cx=".3" cy=".22" r=".95"><stop stop-color="#defaff"/><stop offset="1" stop-color="#6cb8e5"/></radialGradient><linearGradient id="fire" x1=".5" y1="0" x2=".5" y2="1"><stop stop-color="#ffffdc"/><stop offset=".35" stop-color="#ffd884"/><stop offset=".7" stop-color="#ff9eb2"/><stop offset="1" stop-color="#f7c4ed" stop-opacity=".1"/></linearGradient></defs>
+<path d="M75 138Q63 162 85 202Q93 194 98 166Q108 193 117 201Q129 156 108 136Z" fill="url(#fire)" opacity=".93"/>
+<path d="M64 92Q28 105 24 149Q41 147 69 130Z" fill="url(#fin)" stroke="#75b8e3" stroke-width="3" stroke-linejoin="round"/>
+<path d="M116 92Q152 105 156 149Q139 147 111 130Z" fill="url(#fin)" stroke="#75b8e3" stroke-width="3" stroke-linejoin="round"/>
+<path d="M90 13Q55 28 48 75Q42 115 57 143Q68 162 90 163Q112 162 123 143Q138 115 132 75Q125 28 90 13Z" fill="url(#body)" stroke="#9cd4ef" stroke-width="3.3"/>
+<path d="M90 13Q65 21 55 51Q72 60 90 60Q108 60 125 51Q115 21 90 13Z" fill="url(#fin)" stroke="#66bce9" stroke-width="2.6"/>
+<path d="M57 135Q43 141 52 151Q58 156 67 152Q79 171 90 162Q104 172 116 152Q130 157 135 144Q136 135 122 132" fill="#fff" opacity=".82"/>
+<ellipse cx="90" cy="87" rx="29" ry="24" fill="url(#glass)" stroke="#6ec2e9" stroke-width="3"/>
+<ellipse cx="79" cy="76" rx="10" ry="5" transform="rotate(-30 79 76)" fill="#fff" opacity=".68"/>
+<ellipse cx="77" cy="109" rx="6" ry="8" fill="#224e7d"/><ellipse cx="104" cy="109" rx="6" ry="8" fill="#224e7d"/>
+<circle cx="79" cy="106" r="2" fill="#fff"/><circle cx="106" cy="106" r="2" fill="#fff"/>
+<ellipse cx="67" cy="122" rx="9" ry="5" fill="#ffb8c6" opacity=".78"/><ellipse cx="115" cy="122" rx="9" ry="5" fill="#ffb8c6" opacity=".78"/>
+<path d="M84 121Q90 128 96 121" stroke="#285d80" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M82 147Q90 152 98 147" stroke="#79c7e8" stroke-width="3" stroke-linecap="round" fill="none"/>
+<path d="M39 44l4 8 9 3-9 3-4 8-4-8-9-3 9-3z" fill="#ffe7a5"/><path d="M142 64l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#a5e4f5"/>
+</svg>

@@ -82,3 +82,7 @@ The user selected **Option 3: dedicated Memory Posters page** — a static/glanc
 - Validation `39346911707` succeeded and Pages `39346912074` succeeded with artifact `12230469234`, digest `sha256:547d4bf72aaddc0a7f3b1234b45a9c68f26e1c829c7cf938c17976646b5987b6`.
 - Public `memory-wall.html` contains three external GitHub reference posters, optional filters and printable A4 view; page generated from versioned curation JSON. Separate Drive bookmark folder was preserved privately, not published.
 - Browser visual QA remains an explicit unverified check. A7 Seq13 and private A9 ACK remain OPEN. New development remains Arc02+ as recorded.
+
+### SEQ-000018 — Cloud Orbit theme normalization (staged until provider QA)
+
+Across all ten A7 Pages HTML routes (Galaxy, Original Dashboard, Control Tower, Governance, How It Works, Memory Wall, Milestone, Repository Status, Roadmap and Visualization Workspace) apply last-loaded Cloud Orbit light CSS and a pointer-transparent, self-hosted, reduced-motion-safe fluffy rocket with multi-waypoint wandering flight. Keep existing site code/data/markup intact. Only shared CSS/script tags added to old HTML. See docs/CLOUD_ORBIT_UNIFIED_THEME_READ_FIRST.md and validator scripts/validate_unified_theme.py. This does not modify the Operations repository example or private A9. Final status only after GitHub CI + Pages.
