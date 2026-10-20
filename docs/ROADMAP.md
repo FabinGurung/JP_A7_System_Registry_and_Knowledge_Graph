@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000017` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000018` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -86,3 +86,11 @@ The user selected **Option 3: dedicated Memory Posters page** — a static/glanc
 ### SEQ-000018 — Cloud Orbit theme normalization (staged until provider QA)
 
 Across all ten A7 Pages HTML routes (Galaxy, Original Dashboard, Control Tower, Governance, How It Works, Memory Wall, Milestone, Repository Status, Roadmap and Visualization Workspace) apply last-loaded Cloud Orbit light CSS and a pointer-transparent, self-hosted, reduced-motion-safe fluffy rocket with multi-waypoint wandering flight. Keep existing site code/data/markup intact. Only shared CSS/script tags added to old HTML. See docs/CLOUD_ORBIT_UNIFIED_THEME_READ_FIRST.md and validator scripts/validate_unified_theme.py. This does not modify the Operations repository example or private A9. Final status only after GitHub CI + Pages.
+
+### A7-SEQ-000018 FINAL_CLOSED_PASS — Cloud Orbit site-only theme
+
+- PRE Git snapshot: `snapshot/pre-a7-seq-000018-white-theme-rocket` at `8aedbe5dc510c42d9114dcb733e52263118756f8`.
+- PR #40 merged light site CSS + self-hosted fluffy rocket at `fe2ef558386080ca51948ef24c3f4184ea7cfb73`.
+- Six app JavaScript Git blob hashes unchanged; all ten HTML pages retain original content with two added references each.
+- Merged-main CI run `39357528271` SUCCESS; Pages provider deploy run `39357528287` SUCCESS (artifact `12235284533` SHA256 `81656469565c06e482c05942745cd1bad05cc9c73aaf3afcf4541a99735a44f5`).
+- Browser-based screenshot/visual navigation inspection was NOT performed (public Pages host inaccessible from this environment). A7-SEQ-000013 Main/Local remains staged. Operations repo and all specialist repositories untouched.
