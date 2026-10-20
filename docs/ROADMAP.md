@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000016` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000017` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -75,3 +75,10 @@ Public-safe authority classification and interactive site navigation are staged 
 ### SEQ-000017 — Memory Wall (independent public presentation)
 
 The user selected **Option 3: dedicated Memory Posters page** — a static/glanceable student noticeboard/ceiling-poster analogy. Source: `registry/curations/memory-posters.v0.1.json`, derived: `site/data/memory-posters.json`, view: `site/memory-wall.html`, validator: `scripts/validate_memory_wall.py`. Three externally owned GitHub links were verified 20 Oct 2026 and are bookmarked privately in Drive. This public site remains A7-owned navigation/curation only; do not register the public source repos as JP modules, leak private Drive folder IDs or disturb SEQ-000013. Feature status remains staged until branch CI, PR merge, main CI, Pages provider readback and POST.
+
+### SEQ-000017 · FINAL_CLOSED_PASS / public Memory Wall
+
+- Content PR #38 merged into main at `24510271c4f78e532b2c0232bc5b2a6008ff4132`.
+- Validation `39346911707` succeeded and Pages `39346912074` succeeded with artifact `12230469234`, digest `sha256:547d4bf72aaddc0a7f3b1234b45a9c68f26e1c829c7cf938c17976646b5987b6`.
+- Public `memory-wall.html` contains three external GitHub reference posters, optional filters and printable A4 view; page generated from versioned curation JSON. Separate Drive bookmark folder was preserved privately, not published.
+- Browser visual QA remains an explicit unverified check. A7 Seq13 and private A9 ACK remain OPEN. New development remains Arc02+ as recorded.
