@@ -39,7 +39,14 @@ def main() -> int:
     page = (ROOT / "site/visualization-workspace.html").read_text(encoding="utf-8")
     page_js = (ROOT / "site/assets/visualization-workspace.js").read_text(encoding="utf-8")
     gen = (ROOT / "scripts/generate_visualizations.py").read_text(encoding="utf-8")
-    check('href="visualization-workspace.html"' in home and '📌' in home, "homepage pin missing")
+    memory = (ROOT / "site/memory-wall.html").read_text(encoding="utf-8")
+    posters_js = (ROOT / "site/assets/memory-visualization.js").read_text(encoding="utf-8")
+    history = (ROOT / "site/history.html").read_text(encoding="utf-8")
+    check('href="memory-wall.html"' in home, "homepage Memory Wall entry missing")
+    check('id="visualization-reminders"' in memory and 'memory-visualization.js' in memory, "six-lane memory-wall section missing")
+    check('data/visualization-workspace.json' in posters_js, "memory reminder must use existing generated decision")
+    check('href="visualization-workspace.html"' in memory and 'href="visualization-workspace.html"' in history, "detailed historical guide not preserved")
+    check('href="visualization-workspace.html"' not in home, "standalone technical guide must not be top-level navigation")
     check('visualization-workspace.js' in page, "workspace JS entrypoint missing")
     check('data/visualization-workspace.json' in page_js, "workspace page must read generated decision")
     check(source in gen and '"visualization-workspace.json": workspace_projection' in gen, "generator not deriving decision record")
@@ -49,7 +56,7 @@ def main() -> int:
         got = [(x.get("id"), x.get("technology"), x.get("implementation_state_at_record")) for x in output.get("ordered_pipeline", [])]
         check(got == actual, "generated published record differs from canonical JSON")
         check(output.get("source_path") == source and output.get("non_authoritative") is True, "projection is not source-linked/non-authoritative")
-    print("A7 VISUALIZATION WORKSPACE VALIDATION: PASS six_roles=6 pinned=YES current_vs_target=EXPLICIT")
+    print("A7 VISUALIZATION WORKSPACE VALIDATION: PASS six_roles=6 in_memory_wall=YES current_vs_target=EXPLICIT")
     return 0
 
 if __name__ == "__main__":

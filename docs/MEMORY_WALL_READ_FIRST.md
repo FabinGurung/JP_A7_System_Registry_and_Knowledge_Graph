@@ -29,3 +29,7 @@ This is an independent presentation/curation update. It neither changes the nine
 ## Layout acceptance
 
 At rest all posters are visible. Filter is optional; default All. Cards feature large titles, symbolic illustrations, single short descriptions, direct GitHub link, and a bold memory anchor. CSS supports responsive cards and printable A4 poster sheets. No front/back state, no answer masking, no enrollment in the flashcard review experience. No persistent browser state needed.
+
+## Poster collection 02 · Visualization techniques (A7-SEQ-000019)
+
+Memory Wall now includes six additional glance reminders, **not** an extra six external GitHub links and **not** Anki quiz cards. They derive from `registry/decisions/visualization-workspace.json` through the existing `data/visualization-workspace.json` generator and `site/assets/memory-visualization.js`. Their status at record is displayed to prevent claims of uninstalled frameworks. The original technical visualization detail remains under `visualization-workspace.html` via the Memory Wall source link and History, not primary navigation.

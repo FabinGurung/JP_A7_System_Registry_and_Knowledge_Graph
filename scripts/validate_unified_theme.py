@@ -9,8 +9,9 @@ assert d["status"]=="ADOPTED_SITE_PRESENTATION_ONLY"
 assert d["scope"].startswith("A7 GitHub Pages")
 assert len(d["pages"])==10
 all_html={p.name for p in (ROOT/"site").glob("*.html")}
-assert set(d["pages"])==all_html,(sorted(all_html),d["pages"])
-for name in d["pages"]:
+assert set(d["pages"]).issubset(all_html),(sorted(all_html),d["pages"])
+assert all_html-set(d["pages"])=={"history.html"},sorted(all_html-set(d["pages"]))
+for name in sorted(all_html):
     c=(ROOT/"site"/name).read_text(encoding="utf-8")
     assert c.count('assets/a7-unified-theme.css')==1,name
     assert c.count('assets/fluffy-rocket.js')==1,name
@@ -39,4 +40,4 @@ for rel in ["site/data","site/.nojekyll"]:
     pass
 assert "Validate unified site theme" in (ROOT/".github/workflows/validate-registry.yml").read_text()
 assert "site/**" in (ROOT/".github/workflows/deploy-a7-pages.yml").read_text()
-print("A7 CLOUD ORBIT PASS pages=10 preserved_engines=6 mascot=accessible source=unchanged")
+print("A7 CLOUD ORBIT PASS original_pages=10 current_pages=11 preserved_engines=6 mascot=accessible source=unchanged")

@@ -110,6 +110,13 @@
       "title": "Unified soothing white/sky-blue theme and wandering fluffy rocket across ten pages",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Last-loaded presentation-only CSS shared on ten existing HTML pages; no page content/data changes; independent SVG + reduced-motion-aware curved flight mascot. Site provider readback/CI pending. PR #40 merged; CI 39357528271 success, Pages 39357528287 success at fe2ef558386080ca51948ef24c3f4184ea7cfb73. Manual browser-level visual QA unavailable; no domain/peer/Drive source mutations."
+    },
+    {
+      "id": "A7-D15",
+      "stage": "A7-SEQ-000019 — Consistent navigation and History consolidation",
+      "title": "One site navigation, Visualization reminders under Memory Wall, retire duplicate legacy landing pages",
+      "status": "STAGED_UNTIL_PROVIDER_QA",
+      "detail": "Shared site chrome across eleven pages, preserved old engines and releases in History & Rollback, Memory Wall six-lane cards from original derived decision, no source authority changes. Pending CI/Pages."
     }
   ],
   "next": [

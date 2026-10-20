@@ -188,3 +188,7 @@ Read `docs/MEMORY_WALL_READ_FIRST.md` and curated Git source `registry/curations
 ## 20. Cloud Orbit site-only theme
 
 The Cloud Orbit style decision is `registry/decisions/cloud-orbit-theme.v0.1.json`. All ten public A7 HTML pages load `site/assets/a7-unified-theme.css` last and `site/assets/fluffy-rocket.js` as a decorative, motion-accessible mascot, without modifying A7 semantics, project data or peer repositories. The public Operations map example is not a theme donor and is never mutated as part of A7 normalization. Validate with `scripts/validate_unified_theme.py`. A7-SEQ-000013 private A9 cutover remains staged.
+
+## 21. A7 unified nav + preserved history (A7-SEQ-000019)
+
+Site shell `site/assets/a7-site-shell.js`/`a7-site-shell.css` is the current common header/navigation/footer. Six visualization methods appear under Memory Wall by reading the existing versioned decision, not by pretending Cytoscape/React Flow are installed. The original dashboard's 2D/3D graphs and routing matrices still have unique advanced uses and remain reachable from `history.html`, not as a separate homepage. Preserve all existing URLs and release tags. `docs/HISTORY_AND_ROLLBACK_READ_FIRST.md` gives migration/rollback QA. A7-SEQ-000013 private A9 is still staged.

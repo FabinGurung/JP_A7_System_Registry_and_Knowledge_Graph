@@ -44,9 +44,11 @@ assert "spaceField" in site and "selectedSite" in site and "selectedRepo" in sit
 assert "fetch(\"data/galactic-atlas.json\"" in js
 assert "read-only" in site.lower() and "single-writer" in site.lower()
 assert all(x in site for x in (
-    'href="legacy-overview.html"', 'href="control-towers.html"',
-    'href="visualization-workspace.html"', 'href="roadmap.html"',
+    'href="history.html"', 'href="control-towers.html"',
+    'href="memory-wall.html"', 'href="roadmap.html"',
     'href="how-it-works.html"', 'href="governance.html"'))
+assert 'href="legacy-overview.html"' not in site and 'href="visualization-workspace.html"' not in site
+assert 'href="legacy-overview.html"' in (R/"site/history.html").read_text()
 assert "<details" in site and site.index("spaceField") < site.index("<details")
 assert "prefers-reduced-motion" in css
 assert "<canvas id=\"graphCanvas\">" in legacy and "graphInspector" in legacy
