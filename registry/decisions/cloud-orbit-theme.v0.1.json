@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "id": "A7-THEME-CLOUD-ORBIT-001",
+  "sequence_id": "A7-SEQ-000018",
+  "status": "ADOPTED_SITE_PRESENTATION_ONLY",
+  "name": "Cloud Orbit · Soothing White and Sky Blue",
+  "scope": "A7 GitHub Pages all ten existing HTML pages only. No specialist repository mutations.",
+  "tokens": {
+    "page": "#f3faff",
+    "surface": "#ffffff",
+    "tint": "#eaf6fc",
+    "ink": "#244b64",
+    "muted": "#52758a",
+    "border": "#c9dfeb",
+    "accent": "#267fa8"
+  },
+  "css": "site/assets/a7-unified-theme.css",
+  "mascot": {
+    "svg": "site/assets/fluffy-rocket.svg",
+    "controller": "site/assets/fluffy-rocket.js",
+    "behavior": "Decorative occasional wandering flight, multiple noncollinear waypoints, randomized entry and curves",
+    "pointer_events": "none",
+    "aria_hidden": true,
+    "disable_on_reduced_motion": true,
+    "hidden_page_pauses": true,
+    "save_data_preference": true,
+    "print_hidden": true
+  },
+  "pages": [
+    "index.html",
+    "legacy-overview.html",
+    "control-towers.html",
+    "governance.html",
+    "how-it-works.html",
+    "memory-wall.html",
+    "milestone.html",
+    "repository-status.html",
+    "roadmap.html",
+    "visualization-workspace.html"
+  ],
+  "earlier_sky_mist_theme": "PRESERVED_SOURCE_LAYER_RESKINNED",
+  "dark_galaxy_source": "PRESERVED_SOURCE_LAYER_RESKINNED",
+  "historical_prearc_release": "UNCHANGED",
+  "immutable_scope": [
+    "A7 domain IDs/fact classes/authorities",
+    "Original graph and Galaxy engines",
+    "Other specialist GitHub repositories, including Operations map.html",
+    "Private A9 Main/Local ACK",
+    "All page content and routes",
+    "Source-linked visualization output"
+  ],
+  "preserved_engine_git_blobs": {
+    "site/assets/galactic-atlas.js": "af92e67785f4bccbf80ef29e9448bc37d4295a4d",
+    "site/assets/app.js": "2091769e669d27a64898d1413a691ddcc75f0945",
+    "site/assets/control-towers.js": "2413b9f5934e30d97982e0dfb32a23c7cb9d3b5c",
+    "site/assets/memory-wall.js": "3063e043023310fca7c4c727092d14b5c707b07a",
+    "site/assets/repository-status.js": "50291bc0c9dda4dc1fd8c98c481576019a48c0d7",
+    "site/assets/visualization-workspace.js": "ba4884fbea2e7e508dbbeb7c51e3c17e7f722889"
+  },
+  "no_private_data_in_css_or_mascot": true
+}

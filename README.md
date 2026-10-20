@@ -187,3 +187,7 @@ A public-safe, machine-derived [control tower map](https://fabingurung.github.io
 ## Memory Wall — independent A7-SEQ-000017 poster curation
 
 The [Memory Wall](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html) is a dedicated, printable, sky-mist noticeboard: always-visible posters, not Q/A flashcards. Its first three verified external links are `nilbuild/developer-roadmap`, `public-apis/public-apis` and `sudheerj/reactjs-interview-questions`. Sources: `registry/curations/memory-posters.v0.1.json`, `scripts/generate_memory_wall.py`, `scripts/validate_memory_wall.py`, `docs/MEMORY_WALL_READ_FIRST.md`. External bookmarks are not nine A7-owned modules, implementations, endorsements, private Drive source data, or A9 Main/Local admissions. Add or update posters through a governed Git review.
+
+## Cloud Orbit theme normalization / A7-SEQ-000018
+
+Visual-only light UI normalization across all ten A7 HTML pages using the last-loaded CSS `site/assets/a7-unified-theme.css`. The fluffy self-hosted mascot `site/assets/fluffy-rocket.svg` and `site/assets/fluffy-rocket.js` visits occasionally along varying curved routes, without intercepting user input. See `docs/CLOUD_ORBIT_UNIFIED_THEME_READ_FIRST.md` and `registry/decisions/cloud-orbit-theme.v0.1.json`. Existing app engines and domain sources are preserved and validated by SHA-1 git blob. This does not change other repositories or private A9.
