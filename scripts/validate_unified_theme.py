@@ -18,7 +18,7 @@ for name in sorted(all_html):
     assert c.index('assets/a7-unified-theme.css')<c.index('</head>'),name
     assert c.index('assets/fluffy-rocket.js')<c.index('</body>'),name
     css_links=[c.index(x) for x in ['assets/a7-unified-theme.css']]
-    assert c.rfind('<link ',0,c.index('</head>')) < c.index('assets/a7-unified-theme.css'),name
+    assert c.index('assets/a7-unified-theme.css') < c.index('assets/a7-site-shell.css') < c.index('</head>'),name
     assert '<meta name="viewport"' in c,name
 css=(ROOT/d["css"]).read_text(encoding="utf-8")
 for required in ("color-scheme:light","body.galactic-arc","body.standalone-page",".space-field",".galaxy-inspector",".reveal-panel",".a7-rocket-mascot","@media print","prefers-reduced-motion"):
