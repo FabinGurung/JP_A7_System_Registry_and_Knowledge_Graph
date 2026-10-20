@@ -1,5 +1,5 @@
 /* A7 Cloud Orbit 2026-10-20. Last-loaded site-only skin; presentation-only. */
-:root{color-scheme:light!important;--a7-bg:#f3faff;--a7-surface:#fff;--a7-tint:#eaf6fc;--a7-ink:#244b64;--a7-muted:#52758a;--a7-border:#c9dfeb;--a7-accent:#267fa8;
+:root{color-scheme:light!important;--a7-surface:#ffffff;--a7-bg:#f3faff;--a7-surface:#fff;--a7-tint:#eaf6fc;--a7-ink:#244b64;--a7-muted:#52758a;--a7-border:#c9dfeb;--a7-accent:#267fa8;
 --bg:#f3faff;--bg2:#edf7fc;--panel:#fff;--panel2:#f8fcff;--line:#c9dfeb;--line2:#b6d5e5;--text:#244b64;--muted:#52758a;
 --gx-bg:#f3faff;--gx-pane:#fff;--gx-line:#c9dfeb;--gx-text:#244b64;--gx-muted:#52758a;--gx-blue:#2b91b6;--gx-gold:#9b733b}
 html{color-scheme:light!important;background:var(--a7-bg)!important}
