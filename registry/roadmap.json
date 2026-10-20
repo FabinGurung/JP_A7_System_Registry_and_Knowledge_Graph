@@ -4,7 +4,7 @@
   "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000019",
+  "current_closed_sequence": "A7-SEQ-000020",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -122,8 +122,8 @@
       "id": "A7-D16",
       "stage": "A7-SEQ-000020 — Galactic Atlas Arc 02 selected-system inspector",
       "title": "Dated source-owned GitHub provenance and owner gates for all nine stations",
-      "status": "STAGED_UNTIL_PROVIDER_QA",
-      "detail": "Public-safe GitHub snapshot readback 20 October; nine station evidence panels with capabilities, branches, SHAs, successful deployment and separate workflow observation. R&D/Operations/Cost nuances are retained, no live-provider claim and no runtime dependency asserted. CI and Pages pending."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Public-safe GitHub snapshot readback 20 October; nine station evidence panels with capabilities, branches, SHAs, successful deployment and separate workflow observation. R&D/Operations/Cost nuances are retained, no live-provider claim and no runtime dependency asserted. CI and Pages pending. PR #44 merged; merged-main CI run 39420207189 and Pages run 39420207301 succeeded at 707144cf0c6bb02759907beffe4eb6ee593bebc5. Artifact 12262888718 verified; no live provider polling or domain approval."
     }
   ],
   "next": [
@@ -187,7 +187,7 @@
       "id": "A7-N09",
       "priority": "P1",
       "title": "Galactic Atlas Arc 02: selected-world provider inspection",
-      "state": "IN_PROGRESS_ARC02_AWAITING_PROVIDER_QA",
+      "state": "DELIVERED_DATED_EVIDENCE_NO_LIVE_POLLING",
       "done_when": "Status provenance, age, owner workflow, pinned commit and dependencies in a usable world inspector, without claiming live monitoring."
     },
     {

@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000019` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000020` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -110,3 +110,10 @@ Unified primary navigation for all eleven current A7 public pages, moved visuali
 ### Galactic Atlas Arc 02 / A7-SEQ-000020 — source-backed inspector (staged)
 
 Arc 01 and Seq19 navigation remain the operator entrypoint; Arc02 adds a source-linked nine-system inspector rather than new website destinations. The 20 October provider snapshot distinguishes main HEAD, production/publication branch, last successful workflow run, latest additional workflow evidence, owner-side gate, and zero asserted runtime dependencies. Note R&D main portal success with separate manuscript/source QA, Operations branch production workflow success with failed visual QA, and Cost preview deployment observed in progress. Sequence13 private A9 is not modified. Requires feature CI, PR/Pages readback, closeout and POST. No browser screenshot QA claimed.
+
+### A7-SEQ-000020 · FINAL_CLOSED_PASS — Galactic Atlas Arc02
+
+- PRE snapshot `snapshot/pre-a7-seq-000020-galactic-arc02-inspector` = `995e6f7413eec3c262638ec21b89502513795518`.
+- Content PR #44 merged at `707144cf0c6bb02759907beffe4eb6ee593bebc5`; merged-main CI `39420207189` succeeded; GitHub Pages run `39420207301` succeeded with artifact `12262888718`, SHA256 `a18249207eb5ce465d5ccad436a4faf685e269bcf2d13ec3ae622ced21c3252d`.
+- Joined nine source-owner catalogue stations to dated GitHub provider records with SHA/branch/provenance and owner gates; R&D owner-QA, Operations visual-QA and Cost preview-in-progress observations separately retained. A7 dependency registry still has zero provider-confirmed runtime edges.
+- Scoped Arc02 only. A7 Seq13 private A9 Main/Local admission and R&D research/LaTeX acceptance not declared complete; no peer repo files changed. Independent browser screenshot QA not performed.
