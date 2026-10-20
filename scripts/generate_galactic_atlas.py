@@ -46,8 +46,8 @@ def build():
             if "github_path" in deep_item:
                 link = url + "/blob/main/" + deep_item["github_path"]
             else:
-                assert ".." not in deep_item["path"] and "://" not in item["path"]
-                link = site.rstrip("/") + "/" + item["path"]
+                assert ".." not in deep_item["path"] and "://" not in deep_item["path"]
+                link = site.rstrip("/") + "/" + deep_item["path"]
             if not link.startswith(ALLOWED_HOSTS):
                 raise ValueError("Untrusted deep link")
             deep.append({"label": deep_item["label"], "url": link})
