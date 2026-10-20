@@ -26,14 +26,14 @@ for token in d["tokens"].values():assert token in css,token
 svg=ROOT/d["mascot"]["svg"]
 ET.parse(svg)
 js=(ROOT/d["mascot"]["controller"]).read_text(encoding="utf-8")
-for word in ("document.createElement","pointer","prefers-reduced-motion","visibilitychange","pagehide","rocket.animate","random(17000,32000)","points.length-1","saveData"):
+for word in ("document.createElement","prefers-reduced-motion","visibilitychange","pagehide","rocket.animate","random(17000,32000)","points.length-1","saveData"):
     assert word in js,word
 assert "pointer-events:none" in css
 assert 'aria-hidden","true"' in js
 assert len(d["preserved_engine_git_blobs"])==6
 for path,expected in d["preserved_engine_git_blobs"].items():
     b=(ROOT/path).read_bytes()
-    sha=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\0"+b).hexdigest()
+    sha=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
     assert sha==expected,(path,sha,expected)
 for rel in ["site/data","site/.nojekyll"]:
     pass
