@@ -149,3 +149,7 @@ One provider-verified GitHub release tag (pre-galactic), five accepted A7 milest
 ### A7-SEQ-000024 — Arc05 FINAL_CLOSED_PASS source release
 
 PR #53 merged at `7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd`. Source merged-main validation 39593600381 SUCCESS, GitHub Pages run 39593600407 SUCCESS, Chromium desktop/mobile QA 39593600377 SUCCESS. The live Atlas now presents 1 true Git tag + 5 A7 source release events + 8 dated peer publication snapshots; no fabricated live statuses or private A9 artifacts. Closeout PR and final POST equality remain separately provider-gated. Private A9 historical Main/Local parity and independent manual visual signoff remain open.
+
+### A7-SEQ-000025 — debt clearance: release/source lineage (feature staged)
+
+N03 public-safe lineage contract and validated real GitHub Pages release example; bounded live Main Library search reported no exact A7 slug/provider identity. Private A9 reconciliation report stored in Drive ChatGPT folder with NO PUBLIC ID. A9 Portable Canon 13/13 separate and closed; A7-SEQ-000013 bridge private import still NOT_ACKED. No Arc06 until remaining debt addressed.

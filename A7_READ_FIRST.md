@@ -216,3 +216,7 @@ Read `docs/A7_DEBT_AND_BROWSER_QA_READ_FIRST.md` and the dated `registry/provide
 ## 27. Arc05 release-history constellations — SEQ-000024 staged
 
 Read `docs/GALACTIC_ATLAS_ARC05_READ_FIRST.md` and `registry/decisions/galactic-atlas-arc05-history.v0.1.json` before changing release lineage. Exactly one pre-Galactic source-confirmed tag; five event-backed A7 source-release records, eight dated peer publication snapshots. A7 source release does not equal final closeout SHA and successful Pages never certifies science. Preserve Arc02/03/04, A9 private and rollback branches. Chromium workflow checks release timeline; no manual visual QA is implied.
+
+## 28. Source-to-artifact lineage debt clearance — A7-SEQ-000025
+
+Read `docs/ARTIFACT_LINEAGE_CONTRACT_READ_FIRST.md`; validate `scripts/validate_artifact_lineage_contract.py`. Git SHA, artifact SHA-256 and Google Drive revision are distinct original-provider facts. A bounded A9 parity audit exists in PRIVATE Drive only; do not publish its identifiers or guess Main/Local ACK. A9 Portable Canon v1 seq13 was separate and already closed, A7-SEQ-000013 bridge private parity is NOT. No Arc06 started.

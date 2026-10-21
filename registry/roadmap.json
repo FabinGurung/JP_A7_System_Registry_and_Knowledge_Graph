@@ -151,7 +151,14 @@
       "stage": "A7-SEQ-000024 — Arc05 immutable history constellations",
       "title": "Pinned A7 release events and dated specialist publication evidence",
       "status": "FINAL_CLOSED_PASS",
-      "detail": "Five validated A7 source-milestone event histories, one genuine pre-Galactic GitHub tag, eight dated specialist Pages snapshots. PR #53 merged at 7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd. Main registry CI 39593600381, Pages 39593600407, Chromium browser QA 39593600377 all SUCCESS. Private A9 data excluded, no runtime handoffs or extra tags invented. Final closeout readback/POST pending."
+      "detail": "Five validated A7 source-milestone event histories, one genuine pre-Galactic GitHub tag, eight dated specialist Pages snapshots. PR #53 merged at 7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd. Main registry CI 39593600381, Pages 39593600407, Chromium browser QA 39593600377 all SUCCESS. Private A9 data excluded, no runtime handoffs or extra tags invented. Final closeout CI 39593936542, Pages 39593936610 passed; POST branch identical to final main e0face993127f121220c564e874c03fdce4dcb5c, 0 ahead/behind."
+    },
+    {
+      "id": "A7-D21",
+      "stage": "A7-SEQ-000025 — outstanding debt: artifact lineage and private parity",
+      "title": "Meaningful source→CI→artifact→owner-Drive→Main-ACK typed contract",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Public-safe contract, validation and real A7 provider Pages example. Private A9 bounded audit saved in Drive (ID deliberately not exposed in public registry). No 9-repo mass import, no private ACK, no owner-science sign-off."
     }
   ],
   "next": [
@@ -166,21 +173,21 @@
       "id": "A7-N01",
       "priority": "P0",
       "title": "Seal bounded public-safe A7 seq13 change accurately",
-      "state": "PUBLIC_SAFE_DRY_RUN_SEALED__PRIVATE_SEQ13_STAGED",
+      "state": "PUBLIC_SAFE_GIT_ROUTING_ACTIVE__PRIVATE_A9_STAGE_UNACKNOWLEDGED",
       "done_when": "Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover."
     },
     {
       "id": "A7-N02",
       "priority": "P1",
       "title": "Reconcile private A9 Main/Local semantics before bridge import",
-      "state": "BLOCKED_PRIVATE_PARITY_NO_ACK",
+      "state": "PRIVATE_A9_PARITY_AUDITED_NO_NEW_ACK__EXACT_SOURCE_RECONCILIATION_PENDING",
       "done_when": "Provider-first live index, ID collision reconciliation, historical run/edge/source parity, Main consumed cursors and Local ACK; gated private A9 write only."
     },
     {
       "id": "A7-N03",
       "priority": "P1",
       "title": "Define release/artifact lineage contract",
-      "state": "PLANNED",
+      "state": "CONTRACT_IMPLEMENTED_PENDING_PROVIDER_CI",
       "done_when": "Owning module Git repo/ref/commit/path → build/QA → Drive file/provider revision → A7 public-safe edges; do not duplicate every commit into Main Library."
     },
     {
