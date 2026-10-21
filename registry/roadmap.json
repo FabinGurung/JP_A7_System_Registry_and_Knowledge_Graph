@@ -145,6 +145,13 @@
       "title": "Live-source R&D workflow status and A7 real-browser regression testing",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Source PR #51 merged at 4ca4119ef9251c8357877c147b3beffb7d8ab1ce; main registry CI 39592347665, Pages 39592347916, and real Chromium automated desktop/mobile 39592347739 all SUCCESS. R&D main workflow failures stale, R&D scientific approval still separately gated. Private A9 seq13 remains unacknowledged and unimported. Manual external QA not performed."
+    },
+    {
+      "id": "A7-D20",
+      "stage": "A7-SEQ-000024 — Arc05 immutable history constellations",
+      "title": "Pinned A7 release events and dated specialist publication evidence",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Five accepted A7 milestone releases, one actual GitHub tag, eight dated peer Pages publication snapshots. Source-linked immutable SHA and CI/Pages evidence, no fabricated tags, no live-health or Drive private facts; new browser QA checks."
     }
   ],
   "next": [
@@ -229,7 +236,7 @@
       "id": "A7-N12",
       "priority": "P2",
       "title": "Galactic Atlas Arc05: immutable release-history constellations",
-      "state": "PLANNED",
+      "state": "ARC05_FEATURE_IMPLEMENTED_PENDING_PROVIDER_ACCEPTANCE",
       "done_when": "Display anchored Git tags, commits, source artifact provenance and verified release/readback history without becoming a second authority."
     },
     {
