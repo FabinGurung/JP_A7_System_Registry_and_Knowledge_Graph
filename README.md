@@ -199,3 +199,7 @@ The active navigation is now Atlas, Control Towers, Mission Status, Memory Wall,
 ## Galactic Atlas Arc 02 — source-backed world inspector
 
 The Galactic Atlas selected-world panel now displays **dated** capability, owner main SHA versus published branch/commit, successful GitHub Pages/workflow evidence, current related workflow observation and unresolved owner gates for all nine stations. The evidence snapshot is `registry/providers/galactic-atlas-arc02-observation-20261020.json`, composed into derived `site/data/galactic-atlas.json` with SHA-256 source lineage. `docs/GALACTIC_ATLAS_ARC02_READ_FIRST.md` explains scope, source observations and why this does not constitute live monitoring, peer integration, approval or private A9 reconciliation. CI: `scripts/validate_galactic_atlas_arc02.py`.
+
+## Galactic Atlas Arc 03 / governed sector navigation
+
+The A7 Galaxy now derives five sector categories through `registry/decisions/galactic-atlas-sectors.v0.1.json` and `scripts/generate_galactic_atlas.py`: A7 Command, Engineering, Operations, Knowledge, Adjacent Products. Sector chips/search/reset keep the central hub visible, filter navigational catalogue nodes and preserve Arc 02 provider evidence. The active Cloud Orbit light theme, fluffy rocket, Memory Wall, archive, and shared nav remain intact. This feature does NOT admit cross-repository runtime links, change authority, alter other repositories or complete private A9 seq13. Read `docs/GALACTIC_ATLAS_ARC03_READ_FIRST.md`.

@@ -1,0 +1,27 @@
+/* A7 Arc03 · Cloud Orbit sector toolbar and semantic sector tint. No dark theme. */
+.galaxy-sector-toolbar{margin:4px 0 23px;padding:20px clamp(15px,2.5vw,28px);border:1px solid #c5deeb;border-radius:18px;background:linear-gradient(116deg,#fff 0%,#edf8fd 100%);box-shadow:0 10px 33px #9fc5d62a;color:#2c5a75}
+.sector-toolbar-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sector-eyebrow{font-size:10px;font-weight:850;color:#448ab0;letter-spacing:.15em}
+.sector-toolbar-head h2{font:800 clamp(19px,2vw,25px)/1.2 system-ui,sans-serif;margin:6px 0;color:#265472}
+.sector-toolbar-head p{margin:4px 0;color:#67889c;font-size:12px;line-height:1.6}
+.sector-reset{border:1px solid #bbd6e6;border-radius:10px;background:#f8fcff;color:#347b9d;font:700 12px system-ui,sans-serif;padding:9px 13px;cursor:pointer}
+.sector-reset:hover{background:#e8f5fb}
+.galaxy-sector-filters{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0}
+.galaxy-sector-chip{cursor:pointer;border:1px solid #c6dfea;border-radius:100px;background:#fff;color:#3e7896;font:750 12px system-ui,sans-serif;padding:9px 14px;box-shadow:0 2px 7px #93bbcb15;transition:background .15s,border-color .15s}
+.galaxy-sector-chip:hover{background:#e8f6fc;border-color:#89bfdb}
+.galaxy-sector-chip.is-active,.galaxy-sector-chip[aria-pressed=true]{background:#c9edfa;border-color:#65adce;color:#145d80;box-shadow:inset 0 0 0 1px #b1dbe8}
+.sector-toolbar-foot{display:grid;grid-template-columns:auto minmax(160px,1fr) minmax(180px,1fr);align-items:center;gap:12px;border-top:1px solid #d4e7ee;padding-top:15px}
+.sector-toolbar-foot label{font-size:12px;font-weight:750;color:#537b91}
+.sector-toolbar-foot input{background:#fff;color:#2a556e;border:1px solid #bbdbe7;border-radius:9px;font:13px system-ui,sans-serif;padding:10px 12px;min-width:0;width:100%}
+.sector-toolbar-foot #sectorStatus{font-size:11px;color:#597d91;text-align:right}
+.star-node[hidden]{display:none!important}
+.inspector-sector{font:800 10px system-ui,sans-serif;color:#64889e;margin:0 0 11px;letter-spacing:.06em}
+.inspector-sector strong{background:#e8f5fc;border:1px solid #c4e2ee;border-radius:6px;color:#247d9e;padding:4px 8px}
+body .star-node[data-sector="OPERATIONS"] .star-planet{background:linear-gradient(145deg,#dcf8ee,#89cfb8)!important}
+body .star-node[data-sector="ADJACENT"] .star-planet{background:linear-gradient(145deg,#fbeafa,#e5bfe6)!important}
+body .star-node[data-sector="KNOWLEDGE"] .star-planet{background:linear-gradient(145deg,#e8edff,#a8bce8)!important}
+body .star-node[data-sector="ENGINEERING"] .star-planet{background:linear-gradient(145deg,#e0f6ff,#8fc8e8)!important}
+@media(max-width:860px){.sector-toolbar-foot{grid-template-columns:1fr 2fr}.sector-toolbar-foot #sectorStatus{grid-column:1/-1;text-align:left}}
+@media(max-width:550px){.sector-toolbar-head{align-items:start}.sector-reset{width:100%}.sector-toolbar-foot{grid-template-columns:1fr}.sector-toolbar-foot #sectorStatus{grid-column:auto}.galaxy-sector-chip{font-size:11px;padding:8px 12px}}
+@media(prefers-reduced-motion:reduce){.galaxy-sector-chip{transition:none!important}}
+@media print{.galaxy-sector-toolbar{box-shadow:none}.galaxy-sector-chip{background:#fff}}

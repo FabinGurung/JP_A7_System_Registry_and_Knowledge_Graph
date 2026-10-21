@@ -1,0 +1,108 @@
+{
+  "schema": "a7://galactic-atlas-sector-taxonomy/0.1",
+  "sequence_id": "A7-SEQ-000021",
+  "decision_id": "A7-GAL-ARC03-001",
+  "status": "ADOPTED_PRESENTATION_TAXONOMY",
+  "scope": "Eight destination stations plus the one A7 control hub; navigation/filtering only, not domain reclassification",
+  "sector_order": [
+    "CONTROL",
+    "ENGINEERING",
+    "OPERATIONS",
+    "KNOWLEDGE",
+    "ADJACENT"
+  ],
+  "sectors": [
+    {
+      "id": "CONTROL",
+      "label": "A7 Command",
+      "short": "Hub",
+      "description": "The A7 source-linked registry and navigation control plane",
+      "visual_symbol": "✦"
+    },
+    {
+      "id": "ENGINEERING",
+      "label": "Engineering",
+      "short": "Engineering",
+      "description": "Design, analysis, work sequencing and cost calculation owner systems",
+      "visual_symbol": "◈"
+    },
+    {
+      "id": "OPERATIONS",
+      "label": "Operations",
+      "short": "Operations",
+      "description": "Field communication, project progress and governed site evidence",
+      "visual_symbol": "▤"
+    },
+    {
+      "id": "KNOWLEDGE",
+      "label": "Knowledge",
+      "short": "Knowledge",
+      "description": "Research governance, document systems and study materials",
+      "visual_symbol": "◇"
+    },
+    {
+      "id": "ADJACENT",
+      "label": "Adjacent Products",
+      "short": "Adjacent",
+      "description": "Separate business prototypes indexed by A7, not governed as AEC engines",
+      "visual_symbol": "✿"
+    }
+  ],
+  "assignments": [
+    {
+      "repository_id": "REPO-000001",
+      "sector_id": "CONTROL",
+      "why": "Central catalogue owner"
+    },
+    {
+      "repository_id": "REPO-000002",
+      "sector_id": "ENGINEERING",
+      "why": "Structural analysis"
+    },
+    {
+      "repository_id": "REPO-000003",
+      "sector_id": "ENGINEERING",
+      "why": "Computer-aided drawings"
+    },
+    {
+      "repository_id": "REPO-000004",
+      "sector_id": "ENGINEERING",
+      "why": "Work scheduling and resources"
+    },
+    {
+      "repository_id": "REPO-000005",
+      "sector_id": "ADJACENT",
+      "why": "Separate Pilates studio product"
+    },
+    {
+      "repository_id": "REPO-000006",
+      "sector_id": "KNOWLEDGE",
+      "why": "Academic/enterprise research and document controls"
+    },
+    {
+      "repository_id": "REPO-000007",
+      "sector_id": "OPERATIONS",
+      "why": "Field evidence and communication"
+    },
+    {
+      "repository_id": "REPO-000008",
+      "sector_id": "ENGINEERING",
+      "why": "BOQ/rates and quantity estimation"
+    },
+    {
+      "repository_id": "REPO-000009",
+      "sector_id": "KNOWLEDGE",
+      "why": "Study materials and learning"
+    }
+  ],
+  "restrictions": {
+    "a7_center_always_visible": true,
+    "existing_arc01_zones_unchanged": true,
+    "existing_arc02_provider_observations_unchanged": true,
+    "source_of_truth": "registry/entities/repositories.json",
+    "category_changes_are_not_runtime_deps": true,
+    "public_projection_only": true,
+    "private_a9_seq13_remains_staged": true,
+    "peer_repository_edits": false
+  }
+}

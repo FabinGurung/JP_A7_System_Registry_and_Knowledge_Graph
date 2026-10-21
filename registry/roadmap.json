@@ -124,6 +124,13 @@
       "title": "Dated source-owned GitHub provenance and owner gates for all nine stations",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Public-safe GitHub snapshot readback 20 October; nine station evidence panels with capabilities, branches, SHAs, successful deployment and separate workflow observation. R&D/Operations/Cost nuances are retained, no live-provider claim and no runtime dependency asserted. CI and Pages pending. PR #44 merged; merged-main CI run 39420207189 and Pages run 39420207301 succeeded at 707144cf0c6bb02759907beffe4eb6ee593bebc5. Artifact 12262888718 verified; no live provider polling or domain approval."
+    },
+    {
+      "id": "A7-D17",
+      "stage": "A7-SEQ-000021 — Galactic Atlas Arc03 sector exploration",
+      "title": "Five source-owned sectors with category filtering and searchable station inspection",
+      "status": "STAGED_UNTIL_PROVIDER_QA",
+      "detail": "Five sector classifications (Control 1, Engineering 4, Operations 1, Knowledge 2, Adjacent 1), A7 hub always in view, search/reset, keyboard-visible arrow navigation; derived from normalized repository IDs; Arc02 source/QA preserved. CI/Pages still pending."
     }
   ],
   "next": [
@@ -194,8 +201,22 @@
       "id": "A7-N10",
       "priority": "P2",
       "title": "Galaxy sectors, Developer Dock and operator guidance",
-      "state": "PLANNED",
+      "state": "PARTIAL_ARC03_SECTOR_DELIVERY_PENDING_PROVIDER_QA",
       "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
+    },
+    {
+      "id": "A7-N11",
+      "priority": "P2",
+      "title": "Galactic Atlas Arc04: evidence-gated typed interstellar routes",
+      "state": "PLANNED",
+      "done_when": "Visualize typed cross-module relationships only with source-backed provider evidence; no inferred runtime data transfer or private A9 admission."
+    },
+    {
+      "id": "A7-N12",
+      "priority": "P2",
+      "title": "Galactic Atlas Arc05: immutable release-history constellations",
+      "state": "PLANNED",
+      "done_when": "Display anchored Git tags, commits, source artifact provenance and verified release/readback history without becoming a second authority."
     }
   ],
   "strict_boundaries": [

@@ -13,6 +13,9 @@
   const nodes = new Map();
   const segments = new Map();
   let stations = [];
+  let sectors = [];
+  let activeSector = "ALL";
+  let searchQuery = "";
   let selected = ROOT_ID;
 
   const safeUrl = (url, kind) => {
@@ -64,6 +67,7 @@
       "is-selected", key === id);
     get("selectedEmblem").textContent = selectedRecord.short;
     get("selectedRole").textContent = selectedRecord.role.replaceAll("_", " ");
+    get("selectedSector").textContent = sectors.find(s=>s.id===selectedRecord.sector)?.label || "Unassigned";
     get("selectedTitle").textContent = selectedRecord.title;
     get("selectedSummary").textContent = selectedRecord.summary;
     get("selectedOwner").textContent = selectedRecord.owns;
@@ -133,16 +137,78 @@
       add("Publication commit",base+"/tree/"+e.last_successful_publication.sha);
   }
 
+  /* Arc 03: UI filtering only; never a runtime relationship or authority claim. */
+  function eligible(station) {
+    if(station.id===ROOT_ID) return true;
+    if(activeSector!=="ALL" && station.sector!==activeSector) return false;
+    if(!searchQuery) return true;
+    const terms=[station.title,station.short,station.summary,station.role,
+      station.module_repository,station.provider_evidence?.capability].join(" ").toLocaleLowerCase();
+    return terms.includes(searchQuery);
+  }
+  function visibleStations(){ return stations.filter(eligible); }
+  function applySectors(){
+    let visible=0;
+    for(const station of stations){
+      const show=eligible(station);
+      if(show && station.id!==ROOT_ID)visible++;
+      const node=nodes.get(station.id);
+      if(node){node.hidden=!show;node.setAttribute("aria-hidden",String(!show));}
+      const line=segments.get(station.id);
+      if(line)line.style.display=show?"":"none";
+    }
+    const current=stations.find(s=>s.id===selected);
+    if(current && !eligible(current))selectStation(ROOT_ID);
+    get("sectorStatus").textContent="Showing "+visible+" of "+(stations.length-1)+" destinations · A7 hub stays visible · Navigation only";
+    for(const chip of get("sectorFilters").querySelectorAll("button[data-sector]")){
+      const on=chip.dataset.sector===activeSector;
+      chip.classList.toggle("is-active",on);
+      chip.setAttribute("aria-pressed",String(on));
+    }
+  }
+  function setupSectors(){
+    const target=get("sectorFilters");
+    target.replaceChildren();
+    const choices=[{id:"ALL",label:"All sectors",count:stations.length-1},
+      ...sectors.filter(s=>s.id!=="CONTROL")];
+    for(const sector of choices){
+      const button=document.createElement("button");
+      button.type="button";button.className="galaxy-sector-chip";
+      button.dataset.sector=sector.id;
+      button.textContent=sector.label+" · "+sector.count;
+      button.setAttribute("aria-pressed","false");
+      button.addEventListener("click",()=>{activeSector=sector.id;applySectors();});
+      target.append(button);
+    }
+    const input=get("sectorSearch");
+    input.addEventListener("input",()=>{searchQuery=input.value.trim().toLocaleLowerCase();applySectors();});
+    input.addEventListener("keydown",event=>{if(event.key==="Escape"){
+      input.value="";searchQuery="";applySectors();
+    }});
+    get("sectorReset").addEventListener("click",()=>{
+      activeSector="ALL";searchQuery="";input.value="";applySectors();input.focus();
+    });
+    applySectors();
+  }
+
   function valid(data) {
     if (!data || data.schema !== "a7://galactic-atlas-read-projection/0.1" ||
       data.non_authoritative !== true || data.station_count !== 9 ||
       !Array.isArray(data.stations) || data.stations.length !== 9 ||
-      !Array.isArray(data.links) || data.links.length !== 8) return false;
+      !Array.isArray(data.links) || data.links.length !== 8 ||
+      data.navigation_arc!=="GALACTIC_ATLAS_ARC_03_SECTORS" ||
+      data.sector_taxonomy_presentation_only!==true ||
+      data.sector_count!==5 || !Array.isArray(data.sectors) ||
+      data.sectors.length!==5) return false;
+    const sectorNames=new Set(data.sectors.map(s=>s.id));
+    if(sectorNames.size!==5 || !sectorNames.has("CONTROL"))return false;
     const ids = new Set();
     for (const station of data.stations) {
       if (!station.id || ids.has(station.id) ||
           typeof station.title !== "string" ||
           typeof station.summary !== "string" ||
+          !sectorNames.has(station.sector) ||
+          (station.id===ROOT_ID && station.sector!=="CONTROL") ||
           typeof station.owns !== "string" ||
           !station.module_repository?.startsWith(OWNER_PREFIX) ||
           !safeUrl(station.github_url, "github") ||
@@ -161,6 +227,7 @@
 
   function render(data) {
     stations = data.stations;
+    sectors = data.sectors;
     nodes.clear(); segments.clear();
     edges.replaceChildren();
     stage.querySelectorAll(".star-node").forEach(node => node.remove());
@@ -179,6 +246,7 @@
       button.type = "button";
       button.className = "star-node" + (station.id === ROOT_ID ? " star-hub" : "");
       button.dataset.zone = station.zone;
+      button.dataset.sector = station.sector;
       button.dataset.role = station.role;
       button.style.left = x + "%";
       button.style.top = y + "%";
@@ -197,8 +265,9 @@
         if (!["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key)) return;
         event.preventDefault();
         const step = event.key === "ArrowLeft" || event.key === "ArrowUp" ? -1 : 1;
-        const index = stations.findIndex(x => x.id === station.id);
-        const next = stations[(index + step + stations.length) % stations.length];
+        const available=visibleStations();
+        const index=available.findIndex(x => x.id === station.id);
+        const next=available[(index + step + available.length) % available.length];
         selectStation(next.id, true);
       });
       stage.append(button);
@@ -210,6 +279,7 @@
       ? "Catalogue records dated up to " + observed.slice(0,10)
       : "Recorded catalogue / date unverified";
     selectStation(ROOT_ID);
+    setupSectors();
   }
 
   async function main() {

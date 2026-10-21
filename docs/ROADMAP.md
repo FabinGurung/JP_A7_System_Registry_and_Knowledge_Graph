@@ -117,3 +117,7 @@ Arc 01 and Seq19 navigation remain the operator entrypoint; Arc02 adds a source-
 - Content PR #44 merged at `707144cf0c6bb02759907beffe4eb6ee593bebc5`; merged-main CI `39420207189` succeeded; GitHub Pages run `39420207301` succeeded with artifact `12262888718`, SHA256 `a18249207eb5ce465d5ccad436a4faf685e269bcf2d13ec3ae622ced21c3252d`.
 - Joined nine source-owner catalogue stations to dated GitHub provider records with SHA/branch/provenance and owner gates; R&D owner-QA, Operations visual-QA and Cost preview-in-progress observations separately retained. A7 dependency registry still has zero provider-confirmed runtime edges.
 - Scoped Arc02 only. A7 Seq13 private A9 Main/Local admission and R&D research/LaTeX acceptance not declared complete; no peer repo files changed. Independent browser screenshot QA not performed.
+
+### A7-SEQ-000021 — Arc03 Galactic Sectors (staged)
+
+Five versioned public-safe Galaxy sector classes (A7 Command, Engineering, Operations, Knowledge, Adjacent Products) derived from stable REPO IDs. Added keyboard-aware filter/search/reset UI, updated generated read model with source hash; preserving Arc02 owner-gate and deployment observations, 8 catalogue-only A7 routes, the Cloud Orbit theme/fluffy rocket and all other site pages. PRE `snapshot/pre-a7-seq-000021-galactic-arc03-sectors`; awaiting feature PR validation, main CI, Pages and POST snapshot. Original A7-SEQ-000013 private Main/Local and owner R&D QA remain unresolved separately.
