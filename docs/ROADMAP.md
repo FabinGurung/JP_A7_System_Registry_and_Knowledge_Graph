@@ -125,3 +125,7 @@ Five versioned public-safe Galaxy sector classes (A7 Command, Engineering, Opera
 ### A7-SEQ-000021 — FINAL_CLOSED_PASS / Galactic Sectors
 
 PRE `snapshot/pre-a7-seq-000021-galactic-arc03-sectors` at `5f00e2f8db2d36abf940b4221fe2bc378e09b4de`. Feature PR #46 merged at `efd0933f760260c82cf79f6f6374090e4c8fdab8`; main validation run 39530362803 and Pages run 39530362779 passed (artifact 12314873495, SHA256 8a50df34116d7a3458a5dd611562ba2c4568d81068300512e23bae3073a77f1d). Five sector groups and eight catalogue routes preserved; keyboard accessible search/filter/reset delivered. Cloud Orbit and mascot unchanged. Manual browser visual QA not independently verified. Main/Local private A9 seq13 and owner-side R&D QA remain separately OPEN. Next is Arc04 typed relationship routes only with verified provenance.
+
+### A7-SEQ-000022 — Arc04 evidence-gated routes (feature staged)
+
+Four canonical `LINKS_TO_PEER_MODULE` edges (Operations navigation to Scheduling, Cost, Structural and CAD) are source-projected with line-linked pinned GitHub evidence. Four possible cross-system engineering/knowledge handoffs are OFF by default, labeled proposed/unverified and not added to canonical edges. Zero verified runtime handoffs asserted. Preserve Arc02/03, Cloud Orbit, fluffy rocket and all specialist ownership. PRE `snapshot/pre-a7-seq-000022-galactic-arc04-routes` at `ec318c5b43362347a121585b03a59b0c09ee39df`. Feature CI, PR, merged-main Pages, final closeout and POST comparison still required. A9/R&D/browser debts remain outside scope.

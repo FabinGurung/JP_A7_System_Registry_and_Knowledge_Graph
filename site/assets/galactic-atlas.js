@@ -57,6 +57,8 @@
     const selectedRecord = stations.find(x => x.id === id);
     if (!selectedRecord) return;
     selected = id;
+    window.a7SelectedStationId = id;
+    window.dispatchEvent(new CustomEvent("a7:station-selected", {detail:{id}}));
     for (const [key, button] of nodes) {
       const active = key === id;
       button.classList.toggle("is-selected", active);
@@ -247,6 +249,7 @@
       button.className = "star-node" + (station.id === ROOT_ID ? " star-hub" : "");
       button.dataset.zone = station.zone;
       button.dataset.sector = station.sector;
+      button.dataset.repoId = station.id;
       button.dataset.role = station.role;
       button.style.left = x + "%";
       button.style.top = y + "%";

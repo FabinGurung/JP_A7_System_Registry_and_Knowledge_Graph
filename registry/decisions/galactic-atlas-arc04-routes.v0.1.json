@@ -1,0 +1,59 @@
+{
+  "schema": "a7://galactic-atlas-arc04-routes/0.1",
+  "decision_id": "A7-GAL-ARC04-001",
+  "sequence_id": "A7-SEQ-000022",
+  "status": "ADOPTED_PUBLIC_PRESENTATION_ONLY",
+  "recorded_date": "2026-10-21",
+  "source_commit_sha": "ec318c5b43362347a121585b03a59b0c09ee39df",
+  "admitted_canonical_edge_type": "LINKS_TO_PEER_MODULE",
+  "admitted_edge_ids": [
+    "EDGE-000053",
+    "EDGE-000054",
+    "EDGE-000055",
+    "EDGE-000056"
+  ],
+  "interpretation": "Source-recorded Operations Hub navigation to independently owned modules only. Not a verified runtime handoff, shared database, build dependency or ownership transfer.",
+  "proposed_display_only_type": "CANDIDATE_INTEGRATION",
+  "proposals": [
+    {
+      "proposal_id": "ARC04-CAND-001",
+      "from_repository_id": "REPO-000003",
+      "to_repository_id": "REPO-000002",
+      "label": "CAD → Structural",
+      "purpose": "Possible future geometry/model handoff for structural analysis",
+      "state": "PROPOSED_UNVERIFIED"
+    },
+    {
+      "proposal_id": "ARC04-CAND-002",
+      "from_repository_id": "REPO-000003",
+      "to_repository_id": "REPO-000004",
+      "label": "CAD → Scheduling",
+      "purpose": "Possible future quantity/element references for 4D planning",
+      "state": "PROPOSED_UNVERIFIED"
+    },
+    {
+      "proposal_id": "ARC04-CAND-003",
+      "from_repository_id": "REPO-000003",
+      "to_repository_id": "REPO-000008",
+      "label": "CAD → Cost",
+      "purpose": "Possible future verified takeoff-to-estimation interface",
+      "state": "PROPOSED_UNVERIFIED"
+    },
+    {
+      "proposal_id": "ARC04-CAND-004",
+      "from_repository_id": "REPO-000006",
+      "to_repository_id": "REPO-000009",
+      "label": "R&D → Study Hub",
+      "purpose": "Possible future governed publication-to-learning reference",
+      "state": "PROPOSED_UNVERIFIED"
+    }
+  ],
+  "boundaries": {
+    "navigation_is_not_runtime": true,
+    "provider_verified_runtime_handoff_count": 0,
+    "private_a9_admission": false,
+    "peer_repositories_modified": false,
+    "arc02_provider_snapshot_remains_dated": true,
+    "proposals_are_not_canonical_edges": true
+  }
+}

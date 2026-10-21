@@ -69,6 +69,10 @@ jobs:
         run: |
           python scripts/validate_galactic_atlas_arc03.py
           node --check site/assets/galactic-atlas.js
+      - name: Validate Arc 04 evidence-gated interstellar routes
+        run: |
+          python scripts/validate_galactic_atlas_arc04.py
+          node --check site/assets/galactic-atlas-arc04.js
       - name: Validate domain-guide ownership and dated provider status
         run: python scripts/validate_repository_health.py
       - name: Validate printable, non-authoritative Memory Wall posters

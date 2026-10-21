@@ -11,6 +11,9 @@ CATALOGUE = ROOT / "registry/entities/repositories.json"
 LAYOUT = ROOT / "registry/decisions/galactic-atlas-ui.v0.1.json"
 PROVIDER = ROOT / "registry/providers/galactic-atlas-arc02-observation-20261020.json"
 SECTORS = ROOT / "registry/decisions/galactic-atlas-sectors.v0.1.json"
+ARC04 = ROOT / "registry/decisions/galactic-atlas-arc04-routes.v0.1.json"
+MODULES = ROOT / "registry/entities/modules.json"
+EDGES = ROOT / "registry/edges/edges.jsonl"
 ALLOWED_HOSTS = ("https://github.com/FabinGurung/",
                  "https://fabingurung.github.io/")
 
@@ -87,9 +90,62 @@ def build():
                 "dependency_verified": False
             }
         })
+    # Arc04 projects ONLY admitted canonical module-navigation edges; the
+    # display-only future candidates are not admitted into registry/edges.
+    arc04 = json.loads(ARC04.read_text(encoding="utf-8"))
+    assert arc04["status"] == "ADOPTED_PUBLIC_PRESENTATION_ONLY"
+    assert arc04["source_commit_sha"] and len(arc04["source_commit_sha"]) == 40
+    assert arc04["boundaries"]["provider_verified_runtime_handoff_count"] == 0
+    assert arc04["boundaries"]["proposals_are_not_canonical_edges"]
+    module_source = json.loads(MODULES.read_text(encoding="utf-8"))
+    module_map = {m["module_id"]: m["repository_id"] for m in module_source["modules"]}
+    assert len(module_map) == len(module_source["modules"])
+    admitted = set(arc04["admitted_edge_ids"])
+    assert len(admitted) == len(arc04["admitted_edge_ids"])
+    routes = []
+    for lineno, raw in enumerate(EDGES.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip():
+            continue
+        edge = json.loads(raw)
+        if edge["edge_id"] not in admitted:
+            continue
+        assert edge["relation_type"] == arc04["admitted_canonical_edge_type"]
+        source_id, target_id = module_map[edge["from_entity_id"]], module_map[edge["to_entity_id"]]
+        assert source_id != target_id and source_id in source and target_id in source
+        routes.append({
+            "id": edge["edge_id"], "from": source_id, "to": target_id,
+            "relation_type": edge["relation_type"],
+            "verification": "DOCUMENTED_NAVIGATION_ONLY", "runtime_verified": False,
+            "authority_transfer": False, "evidence_observed_at": edge["observed_at"],
+            "evidence_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/"
+              + arc04["source_commit_sha"] + "/registry/edges/edges.jsonl#L" + str(lineno),
+            "source_path": "registry/edges/edges.jsonl",
+            "source_commit_sha": arc04["source_commit_sha"],
+            "owner_fact_scope": "A7 module-navigation metadata",
+            "limitation": edge["note"]
+        })
+    assert {r["id"] for r in routes} == admitted
+    proposed = []
+    proposal_ids = set()
+    for item in arc04["proposals"]:
+        assert item["state"] == "PROPOSED_UNVERIFIED"
+        assert item["proposal_id"] not in proposal_ids
+        proposal_ids.add(item["proposal_id"])
+        assert item["from_repository_id"] in source and item["to_repository_id"] in source
+        assert item["from_repository_id"] != item["to_repository_id"]
+        proposed.append({
+            "id": item["proposal_id"], "from": item["from_repository_id"],
+            "to": item["to_repository_id"], "label": item["label"],
+            "purpose": item["purpose"], "relation_type": "CANDIDATE_INTEGRATION",
+            "verification": "PROPOSED_UNVERIFIED", "runtime_verified": False,
+            "authority_transfer": False, "source_path": "registry/decisions/galactic-atlas-arc04-routes.v0.1.json",
+            "evidence_url": None, "source_commit_sha": None,
+            "limitation": "Design proposal only; no provider-verified transfer or interface."
+        })
     return {
         "schema": "a7://galactic-atlas-read-projection/0.1",
         "arc": "GALACTIC_ATLAS_ARC_02_INSPECTOR", "navigation_arc": "GALACTIC_ATLAS_ARC_03_SECTORS",
+        "relationship_arc": "GALACTIC_ATLAS_ARC_04_EVIDENCE_GATED_ROUTES",
         "sector_taxonomy_presentation_only": True, "non_authoritative": True,
         "provider_observation_date": provider["observed_date"],
         "provider_snapshot_not_live": True,
@@ -99,12 +155,18 @@ def build():
             "registry/entities/repositories.json": digest(CATALOGUE),
             "registry/decisions/galactic-atlas-ui.v0.1.json": digest(LAYOUT),
             "registry/providers/galactic-atlas-arc02-observation-20261020.json": digest(PROVIDER),
-            "registry/decisions/galactic-atlas-sectors.v0.1.json": digest(SECTORS)},
+            "registry/decisions/galactic-atlas-sectors.v0.1.json": digest(SECTORS),
+            "registry/decisions/galactic-atlas-arc04-routes.v0.1.json": digest(ARC04),
+            "registry/entities/modules.json": digest(MODULES),
+            "registry/edges/edges.jsonl": digest(EDGES)},
         "sectors": [{**s, "count": sum(x == s["id"] for x in sector_lookup.values())}
                     for s in sector_data["sectors"]],
         "sector_count": len(sector_data["sectors"]),
         "station_count": len(stations),
         "stations": stations,
+        "route_count": len(routes), "candidate_count": len(proposed),
+        "verified_runtime_handoff_count": 0,
+        "routes": routes, "candidate_routes": proposed,
         "links": [{"from": "REPO-000001", "to": x["id"],
                    "type": "CATALOGUE_ROUTES_TO", "authority_transfer": False}
                   for x in stations if x["id"] != "REPO-000001"]

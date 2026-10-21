@@ -200,3 +200,7 @@ Read `docs/GALACTIC_ATLAS_ARC02_READ_FIRST.md` and the provider-dated `registry/
 ## 23. Arc03 Galaxy sector navigation / SEQ-000021
 
 The stable repo ID -> sector UI mapping is `registry/decisions/galactic-atlas-sectors.v0.1.json`, joined by `scripts/generate_galactic_atlas.py` into the generated non-authoritative Galaxy read model. Arc03 makes sector selection, search and reset accessible, with a central A7 hub always present. The existing zone metadata, dated Arc02 GitHub evidence and all domain engines remain owner-local. Do not claim new runtime dependencies, live monitoring, R&D QA approval or A9 private parity. Consult `docs/GALACTIC_ATLAS_ARC03_READ_FIRST.md`, and run `scripts/validate_galactic_atlas_arc03.py`.
+
+## 24. Arc04 evidence-gated interstellar routes — SEQ-000022 in progress
+
+Read `docs/GALACTIC_ATLAS_ARC04_READ_FIRST.md`; the display-only decision is `registry/decisions/galactic-atlas-arc04-routes.v0.1.json`. Four already-registered module navigation edges EDGE-000053..56 are projected by source join to stable repository IDs, each with pinned GitHub canonical record lines. Four possible future handoffs are clearly PROPOSED_UNVERIFIED and hidden by default, not admitted as graph edges. No provider-verified runtime handoff exists, no specialist source changed, and Arc02 GitHub observations remain dated. Do not report final closeout until merged-main CI, Pages readback and matching POST snapshot.
