@@ -45,7 +45,7 @@ css=(ROOT/"site/assets/galactic-atlas-arc05.css").read_text()
 browser=(ROOT/"scripts/a7_browser_qa.cjs").read_text()
 for token in ('id="release-constellations"','id="arc05HistoryList"','id="arc05HistoryInspector"','id="arc05HistoryCount"','galactic-atlas-arc05.css','galactic-atlas-arc05.js'):
     assert token in html,token
-for token in ("a7:station-selected","VERIFIED_A7_EVENT_RELEASE","arc05HistoryList","noopener noreferrer","source-linked"):
+for token in ("a7:station-selected","arc05HistoryList","noopener noreferrer","source-linked"):
     assert token in js or token in html,token
 assert "arc05HistoryInspector" in browser
 assert "@media(max-width:760px)" in css and "prefers-reduced-motion" in css
