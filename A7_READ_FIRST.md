@@ -204,3 +204,7 @@ The stable repo ID -> sector UI mapping is `registry/decisions/galactic-atlas-se
 ## 24. Arc04 evidence-gated interstellar routes — SEQ-000022 in progress
 
 Read `docs/GALACTIC_ATLAS_ARC04_READ_FIRST.md`; the display-only decision is `registry/decisions/galactic-atlas-arc04-routes.v0.1.json`. Four already-registered module navigation edges EDGE-000053..56 are projected by source join to stable repository IDs, each with pinned GitHub canonical record lines. Four possible future handoffs are clearly PROPOSED_UNVERIFIED and hidden by default, not admitted as graph edges. No provider-verified runtime handoff exists, no specialist source changed, and Arc02 GitHub observations remain dated. Do not report final closeout until merged-main CI, Pages readback and matching POST snapshot.
+
+## 25. Arc04 provider release closeout / A7-SEQ-000022
+
+PR #48 merged as `fcf880a84e08f1631e3077fb69f38c5cfaffa529`. Feature and PR CI passed; main CI 39587284143 and Pages 39587284188 passed with public artifact 12340006573. `registry/roadmap.json` marks Arc04 source release FINAL_CLOSED_PASS, with follow-on closeout CI/Pages and POST matching required for final provider readback. No browser-level QA claimed. A9 private and R&D owner QA remain open. Begin Arc05 only after final POST equals main.
