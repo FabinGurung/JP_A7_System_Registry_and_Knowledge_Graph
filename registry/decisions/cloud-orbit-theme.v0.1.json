@@ -50,7 +50,7 @@
     "Source-linked visualization output"
   ],
   "preserved_engine_git_blobs": {
-    "site/assets/galactic-atlas.js": "d4c6ca60b753c28edfbd2358da0b148ccba341c0",
+    "site/assets/galactic-atlas.js": "3a199eb1a3a3ad08f343e7b878393f97ff805715",
     "site/assets/app.js": "2091769e669d27a64898d1413a691ddcc75f0945",
     "site/assets/control-towers.js": "2413b9f5934e30d97982e0dfb32a23c7cb9d3b5c",
     "site/assets/memory-wall.js": "3063e043023310fca7c4c727092d14b5c707b07a",
@@ -65,5 +65,14 @@
     "previous_git_blob_sha": "af92e67785f4bccbf80ef29e9448bc37d4295a4d",
     "reason": "Arc02 intentionally augments selected-world inspector with dated provider provenance; five other original engines retain exact preserved blob hashes.",
     "css_theme_and_mascot_unchanged": true
-  }
+  },
+  "reviewed_engine_updates": [
+    {
+      "sequence_id": "A7-SEQ-000021",
+      "path": "site/assets/galactic-atlas.js",
+      "reason": "Arc03 source-derived sector filters and accessible navigation; other five engines unchanged",
+      "before_git_blob_sha": "d4c6ca60b753c28edfbd2358da0b148ccba341c0",
+      "after_git_blob_sha": "3a199eb1a3a3ad08f343e7b878393f97ff805715"
+    }
+  ]
 }

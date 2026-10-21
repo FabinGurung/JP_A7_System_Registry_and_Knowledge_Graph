@@ -17,10 +17,10 @@
 .star-node[hidden]{display:none!important}
 .inspector-sector{font:800 10px system-ui,sans-serif;color:#64889e;margin:0 0 11px;letter-spacing:.06em}
 .inspector-sector strong{background:#e8f5fc;border:1px solid #c4e2ee;border-radius:6px;color:#247d9e;padding:4px 8px}
-.star-node[data-sector="OPERATIONS"] .star-planet{background:linear-gradient(145deg,#dcf8ee,#89cfb8)!important}
-.star-node[data-sector="ADJACENT"] .star-planet{background:linear-gradient(145deg,#fbeafa,#e5bfe6)!important}
-.star-node[data-sector="KNOWLEDGE"] .star-planet{background:linear-gradient(145deg,#e8edff,#a8bce8)!important}
-.star-node[data-sector="ENGINEERING"] .star-planet{background:linear-gradient(145deg,#e0f6ff,#8fc8e8)!important}
+body .star-node[data-sector="OPERATIONS"] .star-planet{background:linear-gradient(145deg,#dcf8ee,#89cfb8)!important}
+body .star-node[data-sector="ADJACENT"] .star-planet{background:linear-gradient(145deg,#fbeafa,#e5bfe6)!important}
+body .star-node[data-sector="KNOWLEDGE"] .star-planet{background:linear-gradient(145deg,#e8edff,#a8bce8)!important}
+body .star-node[data-sector="ENGINEERING"] .star-planet{background:linear-gradient(145deg,#e0f6ff,#8fc8e8)!important}
 @media(max-width:860px){.sector-toolbar-foot{grid-template-columns:1fr 2fr}.sector-toolbar-foot #sectorStatus{grid-column:1/-1;text-align:left}}
 @media(max-width:550px){.sector-toolbar-head{align-items:start}.sector-reset{width:100%}.sector-toolbar-foot{grid-template-columns:1fr}.sector-toolbar-foot #sectorStatus{grid-column:auto}.galaxy-sector-chip{font-size:11px;padding:8px 12px}}
 @media(prefers-reduced-motion:reduce){.galaxy-sector-chip{transition:none!important}}
