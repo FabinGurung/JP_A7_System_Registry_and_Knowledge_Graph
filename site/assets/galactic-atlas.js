@@ -137,6 +137,60 @@
       add("Publication commit",base+"/tree/"+e.last_successful_publication.sha);
   }
 
+  /* Arc 03: UI filtering only; never a runtime relationship or authority claim. */
+  function eligible(station) {
+    if(station.id===ROOT_ID) return true;
+    if(activeSector!=="ALL" && station.sector!==activeSector) return false;
+    if(!searchQuery) return true;
+    const terms=[station.title,station.short,station.summary,station.role,
+      station.module_repository,station.provider_evidence?.capability].join(" ").toLocaleLowerCase();
+    return terms.includes(searchQuery);
+  }
+  function visibleStations(){ return stations.filter(eligible); }
+  function applySectors(){
+    let visible=0;
+    for(const station of stations){
+      const show=eligible(station);
+      if(show && station.id!==ROOT_ID)visible++;
+      const node=nodes.get(station.id);
+      if(node){node.hidden=!show;node.setAttribute("aria-hidden",String(!show));}
+      const line=segments.get(station.id);
+      if(line)line.style.display=show?"":"none";
+    }
+    const current=stations.find(s=>s.id===selected);
+    if(current && !eligible(current))selectStation(ROOT_ID);
+    get("sectorStatus").textContent="Showing "+visible+" of "+(stations.length-1)+" destinations · A7 hub stays visible · Navigation only";
+    for(const chip of get("sectorFilters").querySelectorAll("button[data-sector]")){
+      const on=chip.dataset.sector===activeSector;
+      chip.classList.toggle("is-active",on);
+      chip.setAttribute("aria-pressed",String(on));
+    }
+  }
+  function setupSectors(){
+    const target=get("sectorFilters");
+    target.replaceChildren();
+    const choices=[{id:"ALL",label:"All sectors",count:stations.length-1},
+      ...sectors.filter(s=>s.id!=="CONTROL")];
+    for(const sector of choices){
+      const button=document.createElement("button");
+      button.type="button";button.className="galaxy-sector-chip";
+      button.dataset.sector=sector.id;
+      button.textContent=sector.label+" · "+sector.count;
+      button.setAttribute("aria-pressed","false");
+      button.addEventListener("click",()=>{activeSector=sector.id;applySectors();});
+      target.append(button);
+    }
+    const input=get("sectorSearch");
+    input.addEventListener("input",()=>{searchQuery=input.value.trim().toLocaleLowerCase();applySectors();});
+    input.addEventListener("keydown",event=>{if(event.key==="Escape"){
+      input.value="";searchQuery="";applySectors();
+    }});
+    get("sectorReset").addEventListener("click",()=>{
+      activeSector="ALL";searchQuery="";input.value="";applySectors();input.focus();
+    });
+    applySectors();
+  }
+
   function valid(data) {
     if (!data || data.schema !== "a7://galactic-atlas-read-projection/0.1" ||
       data.non_authoritative !== true || data.station_count !== 9 ||
