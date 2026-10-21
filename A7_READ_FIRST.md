@@ -208,3 +208,7 @@ Read `docs/GALACTIC_ATLAS_ARC04_READ_FIRST.md`; the display-only decision is `re
 ## 25. Arc04 provider release closeout / A7-SEQ-000022
 
 PR #48 merged as `fcf880a84e08f1631e3077fb69f38c5cfaffa529`. Feature and PR CI passed; main CI 39587284143 and Pages 39587284188 passed with public artifact 12340006573. `registry/roadmap.json` marks Arc04 source release FINAL_CLOSED_PASS, with follow-on closeout CI/Pages and POST matching required for final provider readback. No browser-level QA claimed. A9 private and R&D owner QA remain open. Begin Arc05 only after final POST equals main.
+
+## 26. A7 debt and automated browser QA — SEQ-000023
+
+Read `docs/A7_DEBT_AND_BROWSER_QA_READ_FIRST.md` and the dated `registry/providers/a7-debt-observation-20261021.json`. R&D current-main workflows observed pass, but source-only LaTeX validation is not scientific-PDF approval. A7 seq13 private A9 parity/ACK remains NOT imported. A7 Chromium browser QA in `.github/workflows/a7-browser-qa.yml` is new; only a passing provider run may mark automation verified. Arc05 release lineage is next; never infer cross-repository data transfer.

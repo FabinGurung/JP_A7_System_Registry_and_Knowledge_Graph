@@ -133,3 +133,7 @@ Four canonical `LINKS_TO_PEER_MODULE` edges (Operations navigation to Scheduling
 ### A7-SEQ-000022 — Arc04 FINAL_CLOSED_PASS source release
 
 Implementation PR #48, merged source `fcf880a84e08f1631e3077fb69f38c5cfaffa529`. Feature CI 39587206657 and PR CI 39587214395 succeeded. Merged-main registry CI 39587284143 and Pages run 39587284188 succeeded; Pages artifact 12340006573 digest SHA-256 `88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633`. Four admitted metadata navigation edges plus four OFF-by-default unverified ideas, ZERO verified runtime handoffs. PRE snapshot is preserved; closing metadata PR and final POST comparison are follow-on governance checks, not owner-domain releases. Browser QA not independently performed. Private A9 and R&D scientific QA stay open. Next: Arc05 release/history constellations.
+
+### A7-SEQ-000023 — repay stale/deferred QA debt (feature staged)
+
+R&D repository latest main CI, LaTeX source gate and portal deployment now pass at b9863d1f8aa4be1db8f948037bb4131c77804e4b; update old A7 failure notice with dated proof, not scientific-output approval. Arc04 terminal POST equality confirmed. Add Chromium desktop/mobile A7 regression CI with screenshots. Private A9 Main/Local bridge remains NOT IMPORTED and seq13 not closed; no Drive writes or private IDs. PRE `snapshot/pre-a7-seq-000023-debt-qa-reconciliation`. This scoped cleanup precedes Arc05.

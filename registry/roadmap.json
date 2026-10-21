@@ -137,7 +137,14 @@
       "stage": "A7-SEQ-000022 — Galactic Atlas Arc04",
       "title": "Evidence-gated typed interstellar routes",
       "status": "FINAL_CLOSED_PASS",
-      "detail": "Four canonical Operations→peer LINKS_TO_PEER_MODULE navigation edges with pinned record references; four off-by-default proposals explicitly unverified; zero runtime handoffs. PR #48 merged at fcf880a84e08f1631e3077fb69f38c5cfaffa529. Main registry CI 39587284143 and Pages run 39587284188 PASS; artifact 12340006573 sha256:88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633. Final closeout CI/Pages and POST pending readback. Browser QA not independently performed."
+      "detail": "Four canonical Operations→peer LINKS_TO_PEER_MODULE navigation edges with pinned record references; four off-by-default proposals explicitly unverified; zero runtime handoffs. PR #48 merged at fcf880a84e08f1631e3077fb69f38c5cfaffa529. Main registry CI 39587284143 and Pages run 39587284188 PASS; artifact 12340006573 sha256:88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633. Final closeout main CI 39588033923 and Pages 39588033873 succeeded; POST snapshot identical to final main bcbeaa0361e83248c71a8990564b707ccbe3b43f, 0 ahead/behind. Browser QA not independently performed."
+    },
+    {
+      "id": "A7-D19",
+      "stage": "A7-SEQ-000023 — governance debt/QA reconciliation",
+      "title": "Live-source R&D workflow status and A7 real-browser regression testing",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Remove stale R&D current-main CI failure, retain scientific/private A9 unresolved gates, add Chromium desktop/mobile QA workflow and dated status ledger; no private Drive writes or peer repo changes."
     }
   ],
   "next": [
@@ -145,21 +152,21 @@
       "id": "A7-N08",
       "priority": "P0",
       "title": "R&D latest main workflow failures — owner-side remediation",
-      "state": "EXTERNAL_OWNER_ACTION_REQUIRED",
+      "state": "CURRENT_MAIN_CI_PASS__SCIENTIFIC_OUTPUT_QA_SEPARATE",
       "done_when": "R&D repo CI and Pages succeeds at current main SHA, with root cause and provider readback; A7 only links reports."
     },
     {
       "id": "A7-N01",
       "priority": "P0",
       "title": "Seal bounded public-safe A7 seq13 change accurately",
-      "state": "IN_PROGRESS",
+      "state": "PUBLIC_SAFE_DRY_RUN_SEALED__PRIVATE_SEQ13_STAGED",
       "done_when": "Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover."
     },
     {
       "id": "A7-N02",
       "priority": "P1",
       "title": "Reconcile private A9 Main/Local semantics before bridge import",
-      "state": "BLOCKED_ON_PRIVATE_PARITY",
+      "state": "BLOCKED_PRIVATE_PARITY_NO_ACK",
       "done_when": "Provider-first live index, ID collision reconciliation, historical run/edge/source parity, Main consumed cursors and Local ACK; gated private A9 write only."
     },
     {
@@ -224,6 +231,13 @@
       "title": "Galactic Atlas Arc05: immutable release-history constellations",
       "state": "PLANNED",
       "done_when": "Display anchored Git tags, commits, source artifact provenance and verified release/readback history without becoming a second authority."
+    },
+    {
+      "id": "A7-N13",
+      "priority": "P1",
+      "title": "Automated real-Chromium Galaxy mobile/desktop QA",
+      "state": "WORKFLOW_ADDED_PENDING_CI",
+      "done_when": "Chromium workflow passes headless desktop/mobile interactions and generates screenshot/report artifacts at exact A7 commit; manual external browser acceptance separately recorded if performed."
     }
   ],
   "strict_boundaries": [

@@ -1,0 +1,89 @@
+{
+  "schema": "a7://governance-debt-snapshot/0.1",
+  "id": "A7-DEBT-20261021-001",
+  "sequence_id": "A7-SEQ-000023",
+  "recorded_date": "2026-10-21",
+  "source_a7_main": "bcbeaa0361e83248c71a8990564b707ccbe3b43f",
+  "static_observation_not_live": true,
+  "findings": [
+    {
+      "id": "A7-D23-01",
+      "owner": "A7",
+      "description": "Arc04 final deployment and POST snapshot",
+      "state": "CLOSED_PROVIDER_VERIFIED",
+      "evidence": {
+        "main_commit": "bcbeaa0361e83248c71a8990564b707ccbe3b43f",
+        "ci_run": 39588033923,
+        "pages_run": 39588033873,
+        "post_branch": "snapshot/post-a7-seq-000022-galactic-arc04-routes",
+        "compare": "identical_0_ahead_0_behind"
+      },
+      "limitation": "Visual browser QA is independently tracked"
+    },
+    {
+      "id": "A7-D23-02",
+      "owner": "R&D",
+      "description": "Previously reported latest-main CI and portal failures",
+      "state": "CURRENT_MAIN_WORKFLOWS_PASS",
+      "evidence": {
+        "observed_main": "b9863d1f8aa4be1db8f948037bb4131c77804e4b",
+        "repository_validation": 39585297906,
+        "latex_source_gate": 39585297654,
+        "pages_portal": 39585297540,
+        "editorial_release": 39585297927
+      },
+      "limitation": "Success validates CI source/workflow scope, NOT complete scientific manuscript, PDF or Drive output acceptance"
+    },
+    {
+      "id": "A7-D23-03",
+      "owner": "A7/A9 private Main and Local",
+      "description": "SEQ-000013 private Git/Drive bridge reconciliation and ACK",
+      "state": "BLOCKED_PRIVATE_PARITY_NO_ACK",
+      "evidence": {
+        "bridge": "docs/MAIN_LIBRARY_GITHUB_BRIDGE.md",
+        "status": "CANDIDATE_NOT_IMPORTED",
+        "canonical_schema_observed": [
+          "ArtifactRegistry",
+          "ArtifactEdges",
+          "LocalLibraryRegistry"
+        ],
+        "drive_main_checked_date": "2026-10-21"
+      },
+      "limitation": "No exact historic private source/version/PK-FK parity and consumed-cursor acceptance; do not create new Main imports or public private IDs"
+    },
+    {
+      "id": "A7-D23-04",
+      "owner": "A7",
+      "description": "Arc04 automated Chromium desktop/mobile interaction QA",
+      "state": "IMPLEMENTED_PENDING_PROVIDER_RUN",
+      "evidence": {
+        "workflow": ".github/workflows/a7-browser-qa.yml",
+        "script": "scripts/a7_browser_qa.cjs",
+        "mode": "GitHub Actions real Chromium on local generated Pages site"
+      },
+      "limitation": "CI screenshots are automated evidence, not independent external user/browser signoff"
+    },
+    {
+      "id": "A7-D23-05",
+      "owner": "A7 + specialist owners",
+      "description": "Cross-system release/artifact lineage and active-data handoffs",
+      "state": "PLANNED_ARC05__RUNTIME_HANDOFF_NOT_ASSERTED",
+      "evidence": {
+        "next": "Galactic Atlas Arc05",
+        "verified_handoffs": 0
+      },
+      "limitation": "Arc05 visualizes immutable release evidence only; private Drive lineage remains gated by owner"
+    },
+    {
+      "id": "A7-D23-06",
+      "owner": "A7",
+      "description": "Cross-repository policy/bootstrap drift",
+      "state": "PARTIAL_OWNER_SCOPE",
+      "evidence": {
+        "source": "registry/roadmap.json",
+        "scope": "Nine publicly indexed repos"
+      },
+      "limitation": "Do not claim all repos pin and continuously check a global A7 policy"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+name: A7 real-browser Galactic Atlas QA
+on:
+  push:
+    branches:
+      - main
+      - "feature/a7-*"
+      - "closeout/a7-*"
+    paths:
+      - "site/**"
+      - "scripts/a7_browser_qa.cjs"
+      - "scripts/generate_galactic_atlas.py"
+      - "registry/decisions/galactic-atlas-*"
+      - "registry/edges/edges.jsonl"
+      - ".github/workflows/a7-browser-qa.yml"
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Build source-derived Arc04 projection
+        run: |
+          python scripts/generate_galactic_atlas.py --output site/data/galactic-atlas.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_galactic_atlas_arc04.py
+          node --check site/assets/galactic-atlas.js
+          node --check site/assets/galactic-atlas-arc04.js
+      - name: Install isolated Chromium for browser and viewport checks
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Exercise desktop, mobile, filters, selected-route evidence and reduced motion
+        run: node scripts/a7_browser_qa.cjs
+      - name: Preserve screenshot and assertion evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a7-browser-qa-${{ github.run_id }}
+          path: browser-qa-output/
+          retention-days: 14
+          if-no-files-found: warn
