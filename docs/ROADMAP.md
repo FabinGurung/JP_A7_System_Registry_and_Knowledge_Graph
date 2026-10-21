@@ -137,3 +137,7 @@ Implementation PR #48, merged source `fcf880a84e08f1631e3077fb69f38c5cfaffa529`.
 ### A7-SEQ-000023 — repay stale/deferred QA debt (feature staged)
 
 R&D repository latest main CI, LaTeX source gate and portal deployment now pass at b9863d1f8aa4be1db8f948037bb4131c77804e4b; update old A7 failure notice with dated proof, not scientific-output approval. Arc04 terminal POST equality confirmed. Add Chromium desktop/mobile A7 regression CI with screenshots. Private A9 Main/Local bridge remains NOT IMPORTED and seq13 not closed; no Drive writes or private IDs. PRE `snapshot/pre-a7-seq-000023-debt-qa-reconciliation`. This scoped cleanup precedes Arc05.
+
+### A7-SEQ-000023 — provider-verified debt and real-browser QA release
+
+PR #51 merged source 4ca4119ef9251c8357877c147b3beffb7d8ab1ce. Main CI 39592347665 SUCCESS, Pages 39592347916 SUCCESS, Chromium real-browser QA 39592347739 SUCCESS (desktop/mobile screenshot/artifact workflow). Closed stale claim that R&D current main CI is failing, not researcher-specific PDF/scientific gates. A9 seq13 private Main/Local import remains blocked pending parity and ACK; no Drive records mutated. A7 browser QA is automated, not independent external human sign-off. Final closeout/POST readback required. After release gate: Arc05.
