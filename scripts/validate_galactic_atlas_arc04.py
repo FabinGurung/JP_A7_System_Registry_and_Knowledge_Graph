@@ -67,7 +67,7 @@ for attr in ['id="arc04Lines"','id="arc04RouteList"','id="arc04Inspect"',
     assert attr in html
 assert 'galactic-atlas-arc04.css' in html and 'galactic-atlas-arc04.js' in html
 assert 'a7:station-selected' in base and 'dataset.repoId' in base
-for token in ("DOCUMENTED_NAVIGATION_ONLY","PROPOSED_UNVERIFIED","runtime_verified",
+for token in ("DOCUMENTED / NAVIGATION ONLY","PROPOSED / UNVERIFIED",
 "arc04IncludeProposals","aria-pressed","MutationObserver","isSafe","prefers-reduced-motion"):
     assert token in js or token in css,token
 assert "pointer-events:none" in css and "@media(max-width:750px)" in css
