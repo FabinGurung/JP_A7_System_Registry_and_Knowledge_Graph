@@ -368,5 +368,16 @@
       "observed_date": "2026-10-21",
       "post_ref_should_follow_final_attestation_main": true
     }
+  },
+  "debt_qa_reconciliation": {
+    "source": "registry/providers/a7-debt-observation-20261021.json",
+    "read_first": "docs/A7_DEBT_AND_BROWSER_QA_READ_FIRST.md",
+    "browser_workflow": ".github/workflows/a7-browser-qa.yml",
+    "browser_script": "scripts/a7_browser_qa.cjs",
+    "source_main_sha": "bcbeaa0361e83248c71a8990564b707ccbe3b43f",
+    "claimed_provider_runs_are_dated": true,
+    "private_a9_ack": false,
+    "scientific_pdf_acceptance": false,
+    "status": "FEATURE_STAGED_BROWSER_CI_PENDING"
   }
 }
