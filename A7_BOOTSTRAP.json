@@ -404,5 +404,14 @@
     "pages_run": 39593600407,
     "main_browser_run": 39593600377,
     "human_external_browser_signoff": "NOT_PERFORMED"
+  },
+  "source_artifact_lineage": {
+    "contract": "registry/contracts/source-artifact-lineage.v0.1.json",
+    "read_first": "docs/ARTIFACT_LINEAGE_CONTRACT_READ_FIRST.md",
+    "validator": "scripts/validate_artifact_lineage_contract.py",
+    "provider_sample": "registry/lineage/public-pages-release.example.json",
+    "private_A9_ack": false,
+    "staged_sequence": "A7-SEQ-000025",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI"
   }
 }

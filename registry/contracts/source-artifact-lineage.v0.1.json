@@ -1,0 +1,100 @@
+{
+  "schema": "a7://source-artifact-lineage-contract/0.1",
+  "contract_id": "A7-LINEAGE-001",
+  "version": "0.1.0",
+  "owner": "A7_PUBLIC_GOVERNANCE",
+  "adoption_status": "ACTIVE_PUBLIC_SAFE_CONTRACT_NO_PRIVATE_DRIVE_IMPORT",
+  "scope": "Typed provenance for meaningful released outputs, not a replica of ordinary Git history or confidential Drive ledgers.",
+  "canonical_authority": {
+    "identity_route": "A7 public namespace registry",
+    "source_code": "GitHub owning module path at exact immutable commit",
+    "build_and_publication": "Owning GitHub Actions workflow and artifact provider readback",
+    "original_science_and_evidence": "Owning project admitted source and restricted Drive manifest",
+    "google_workspace_outputs": "Exact original Google Drive file ID and current provider revision in authorized private domain",
+    "acknowledgments": "Private A9 Main and Local owner ledgers and consumed cursors only after actual provider writes/readback",
+    "presentation": "A7 derived non-authoritative public read model"
+  },
+  "admissible_public_fact_classes": [
+    "GITHUB_RELEASE_SOURCE",
+    "GITHUB_BUILD_RUN",
+    "GITHUB_PAGES_ARTIFACT",
+    "PUBLIC_PROVENANCE_EDGE",
+    "DATED_PROVIDER_OBSERVATION"
+  ],
+  "private_owner_only_fact_classes": [
+    "GOOGLE_DRIVE_FILE_ID",
+    "GOOGLE_WORKSPACE_REVISION",
+    "LOCAL_MAIN_CONSUMED_CURSOR",
+    "SCIENTIFIC_ADMISSION_STATUS",
+    "PRIVATE_ARTIFACT_SOURCE_HASH"
+  ],
+  "typed_edges": [
+    {
+      "type": "BUILT_FROM",
+      "from": "RELEASE_ARTIFACT",
+      "to": "GIT_SOURCE",
+      "direction": "DIRECTED"
+    },
+    {
+      "type": "VALIDATED_BY",
+      "from": "RELEASE_ARTIFACT",
+      "to": "CI_RUN",
+      "direction": "DIRECTED"
+    },
+    {
+      "type": "PUBLISHED_BY",
+      "from": "RELEASE_ARTIFACT",
+      "to": "PUBLICATION_RUN",
+      "direction": "DIRECTED"
+    },
+    {
+      "type": "GENERATED_FROM",
+      "from": "PRIVATE_OUTPUT",
+      "to": "OWNER_SOURCE",
+      "direction": "DIRECTED",
+      "scope": "PRIVATE_ONLY"
+    },
+    {
+      "type": "REGISTERED_IN",
+      "from": "PRIVATE_OUTPUT",
+      "to": "LOCAL_OR_MAIN_LEDGER",
+      "direction": "DIRECTED",
+      "scope": "PRIVATE_ONLY"
+    },
+    {
+      "type": "ROUTED_BY",
+      "from": "OWNER_RELEASE",
+      "to": "A7_MODULE",
+      "direction": "DIRECTED",
+      "scope": "PUBLIC_METADATA_ONLY"
+    }
+  ],
+  "lifecycle": [
+    "SOURCE_PINNED",
+    "BUILD_VERIFIED",
+    "OWNER_OUTPUT_VERIFIED",
+    "PRIVATE_ADMISSION_PENDING",
+    "MAIN_ACKED_IF_APPLICABLE"
+  ],
+  "checks": {
+    "commit_is_git_object_id_not_file_sha256": true,
+    "provider_digest_only_if_readback": true,
+    "no_release_tag_without_provider_tag_readback": true,
+    "drive_file_id_not_public_in_a7": true,
+    "private_ack_requires_exact_cursor_and_readback": true,
+    "do_not_backfill_legacy_sequences_automatically": true,
+    "do_not_copy_each_git_commit_to_main_library": true,
+    "no_verified_runtime_exchange_by_navigation": true,
+    "no_research_scientific_acceptance_inferred_from_ci": true,
+    "no_cross_repo_ownership_transfer": true
+  },
+  "public_projection_gate": {
+    "private_A9_bridge": "NO_IMPORT_NO_ACK",
+    "research_scientific_approval": "OWNER_AUTHORITY_ONLY",
+    "runtime_handoff_count": 0,
+    "emit_private_drive_identifiers": false,
+    "model_is_authoritative": false
+  },
+  "example": "registry/lineage/public-pages-release.example.json",
+  "implementation_notes": "The example is an evidenced historic A7 provider release. A non-null Drive mapping must be emitted and validated in the owning private repository or Drive ledger, never in A7 public Git. Read private live revisions and Main/Local ACK only for a specifically authorized private import."
+}

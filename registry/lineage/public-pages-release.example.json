@@ -1,0 +1,63 @@
+{
+  "schema": "a7://source-artifact-lineage-instance/0.1",
+  "record_id": "A7-LINEAGE-PUBLIC-PAGES-20261021-001",
+  "state": "PUBLIC_SOURCE_RELEASE_VERIFIED",
+  "source_observed_date": "2026-10-21",
+  "authority": "GITHUB_PROVIDER_ORIGINAL",
+  "source": {
+    "repo_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+    "repository_provider_id": "1406572237",
+    "branch": "main",
+    "commit": "e0face993127f121220c564e874c03fdce4dcb5c",
+    "path": "site/index.html",
+    "path_at_source_commit": true,
+    "source_file_sha256": null
+  },
+  "ci": {
+    "provider": "GITHUB_ACTIONS",
+    "run_id": 39593936542,
+    "commit": "e0face993127f121220c564e874c03fdce4dcb5c",
+    "conclusion": "success",
+    "kind": "SOURCE_REGISTRY_VALIDATION"
+  },
+  "publication": {
+    "provider": "GITHUB_PAGES",
+    "run_id": 39593936610,
+    "commit": "e0face993127f121220c564e874c03fdce4dcb5c",
+    "conclusion": "success",
+    "artifact_id": 12342599596,
+    "artifact_archive_digest_sha256": "6f7ae529d3958a080b5ee04d6f01c96c2565827535957818437abb2b15beb9d6",
+    "artifact_role": "GITHUB_PAGES_BUILD_ARCHIVE",
+    "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/"
+  },
+  "drive_output": null,
+  "release_tag": null,
+  "edges": [
+    {
+      "type": "BUILT_FROM",
+      "from": "A7-LINEAGE-PUBLIC-PAGES-20261021-001",
+      "to": "GIT:1406572237@e0face993127f121220c564e874c03fdce4dcb5c"
+    },
+    {
+      "type": "VALIDATED_BY",
+      "from": "A7-LINEAGE-PUBLIC-PAGES-20261021-001",
+      "to": "GITHUB_ACTIONS:39593936542"
+    },
+    {
+      "type": "PUBLISHED_BY",
+      "from": "A7-LINEAGE-PUBLIC-PAGES-20261021-001",
+      "to": "GITHUB_ACTIONS:39593936610"
+    }
+  ],
+  "private_main_ack": {
+    "state": "NOT_APPLICABLE_NO_DRIVE_IMPORT",
+    "cursor": null,
+    "local_sequence": null
+  },
+  "limitations": [
+    "Pages artifact archive SHA-256 does not equal Git commit SHA or individual HTML SHA-256",
+    "No Drive output or private Main acknowledgment claimed",
+    "Does not prove runtime exchanges or manuscript scientific signoff",
+    "Dated original-source readback, not continuous monitoring"
+  ]
+}
