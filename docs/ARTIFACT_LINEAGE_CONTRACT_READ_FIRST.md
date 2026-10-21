@@ -30,3 +30,7 @@ The separately saved A9 parity audit is stored in private Google Drive, not cros
 ## Validation and scope
 
 `python scripts/validate_artifact_lineage_contract.py` runs in A7 source CI and GitHub Pages build gate. The contract is completed independently of A9 private parity, R&D scientific admission, any external human signoff and optional whole-network bootstrap drift checking. No new Arc has been begun.
+
+## Provider source-release acceptance
+
+A7-SEQ-000025 implementation PR #55 merged at `df18c7266b24ab5f98899a21a2893e356f236ecf`; main Registry CI 39624448190 and Pages 39624448234 both SUCCESS; PR real Chromium browser 39624257598 SUCCESS. Final public release contract was tested without private Drive reads/writes in GitHub Actions. Remaining A9 historical import/ACK and scientific owner gate NOT closed.

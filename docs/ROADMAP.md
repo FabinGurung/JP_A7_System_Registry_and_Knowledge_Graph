@@ -153,3 +153,7 @@ PR #53 merged at `7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd`. Source merged-main 
 ### A7-SEQ-000025 — debt clearance: release/source lineage (feature staged)
 
 N03 public-safe lineage contract and validated real GitHub Pages release example; bounded live Main Library search reported no exact A7 slug/provider identity. Private A9 reconciliation report stored in Drive ChatGPT folder with NO PUBLIC ID. A9 Portable Canon 13/13 separate and closed; A7-SEQ-000013 bridge private import still NOT_ACKED. No Arc06 until remaining debt addressed.
+
+### A7-SEQ-000025 — lineage debt finalized, private A9 remains gated
+
+PR #55 merged at `df18c7266b24ab5f98899a21a2893e356f236ecf`, registry CI [39624448190](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39624448190) SUCCESS and Pages [39624448234](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39624448234) SUCCESS. Contract and provider-derived GitHub Pages example accepted as A7 **public governance** only. Private Main and Local ACK not established; R&D scientific/owner QA and human visual acceptance stay separate. Final closeout CI/Pages and POST parity follow as governance checks. No Arc06 started.

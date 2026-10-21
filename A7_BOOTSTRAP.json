@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000024",
+  "current_sequence": "A7-SEQ-000025",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -412,6 +412,13 @@
     "provider_sample": "registry/lineage/public-pages-release.example.json",
     "private_A9_ack": false,
     "staged_sequence": "A7-SEQ-000025",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI"
+    "status": "PROVIDER_CI_PAGES_VERIFIED_PUBLIC_CONTRACT",
+    "implementation_pr": 55,
+    "source_main_sha": "df18c7266b24ab5f98899a21a2893e356f236ecf",
+    "source_main_ci": 39624448190,
+    "source_main_pages": 39624448234,
+    "pr_browser_qa_run": 39624257598,
+    "scientific_approval_claim": false,
+    "arc06_started": false
   }
 }
