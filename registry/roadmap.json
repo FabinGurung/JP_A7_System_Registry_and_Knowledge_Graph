@@ -4,7 +4,7 @@
   "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000024",
+  "current_closed_sequence": "A7-SEQ-000025",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -157,8 +157,8 @@
       "id": "A7-D21",
       "stage": "A7-SEQ-000025 — outstanding debt: artifact lineage and private parity",
       "title": "Meaningful source→CI→artifact→owner-Drive→Main-ACK typed contract",
-      "status": "FEATURE_STAGED_PENDING_CI",
-      "detail": "Public-safe contract, validation and real A7 provider Pages example. Private A9 bounded audit saved in Drive (ID deliberately not exposed in public registry). No 9-repo mass import, no private ACK, no owner-science sign-off."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Public-safe Git source→CI→Pages output provenance contract and real Pages example, CI/Pages validator. PR #55 merged at df18c7266b24ab5f98899a21a2893e356f236ecf; registry CI 39624448190 SUCCESS; Pages 39624448234 SUCCESS; feature PR Chromium 39624257598 SUCCESS. Private A9 audit saved privately, no forced import or ACK, historic A9 Portable Canon seq13 distinct from staged A7 bridge seq13."
     }
   ],
   "next": [
@@ -187,7 +187,7 @@
       "id": "A7-N03",
       "priority": "P1",
       "title": "Define release/artifact lineage contract",
-      "state": "CONTRACT_IMPLEMENTED_PENDING_PROVIDER_CI",
+      "state": "DELIVERED_PUBLIC_SAFE_CONTRACT_VALIDATED__PRIVATE_DRIVE_LINEAGE_GATED",
       "done_when": "Owning module Git repo/ref/commit/path → build/QA → Drive file/provider revision → A7 public-safe edges; do not duplicate every commit into Main Library."
     },
     {
