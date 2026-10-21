@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOGUE = ROOT / "registry/entities/repositories.json"
 LAYOUT = ROOT / "registry/decisions/galactic-atlas-ui.v0.1.json"
 PROVIDER = ROOT / "registry/providers/galactic-atlas-arc02-observation-20261020.json"
+SECTORS = ROOT / "registry/decisions/galactic-atlas-sectors.v0.1.json"
 ALLOWED_HOSTS = ("https://github.com/FabinGurung/",
                  "https://fabingurung.github.io/")
 
@@ -22,6 +23,15 @@ def build():
     meta = json.loads(CATALOGUE.read_text(encoding="utf-8"))
     ui = json.loads(LAYOUT.read_text(encoding="utf-8"))
     source = {r["repository_id"]: r for r in meta["repositories"]}
+    sector_data = json.loads(SECTORS.read_text(encoding="utf-8"))
+    assert sector_data["status"] == "ADOPTED_PRESENTATION_TAXONOMY"
+    sector_lookup = {x["repository_id"]: x["sector_id"] for x in sector_data["assignments"]}
+    valid_sectors = {s["id"] for s in sector_data["sectors"]}
+    assert len(sector_data["assignments"]) == len(sector_lookup) == 9
+    assert set(sector_lookup) == set(source), "Each station requires exactly one sector"
+    assert valid_sectors == {"CONTROL","ENGINEERING","OPERATIONS","KNOWLEDGE","ADJACENT"}
+    assert all(x in valid_sectors for x in sector_lookup.values())
+    assert sector_lookup["REPO-000001"] == "CONTROL"
     provider = json.loads(PROVIDER.read_text(encoding="utf-8"))
     assert provider["status"] == "DATED_SNAPSHOT_NOT_LIVE_MONITOR"
     evidence = {item["id"]: item for item in provider["records"]}
@@ -54,6 +64,7 @@ def build():
         stations.append({
             "id": ident, "title": shape["label"], "short": shape["short"],
             "role": shape["role"], "zone": shape["zone"],
+            "sector": sector_lookup[ident],
             "azimuth": shape["azimuth"], "radial": shape["radial"],
             "summary": shape["summary"], "owns": shape["owns"],
             "does_not_own": shape.get("does_not_own"),
@@ -78,7 +89,8 @@ def build():
         })
     return {
         "schema": "a7://galactic-atlas-read-projection/0.1",
-        "arc": "GALACTIC_ATLAS_ARC_02_INSPECTOR", "non_authoritative": True,
+        "arc": "GALACTIC_ATLAS_ARC_02_INSPECTOR", "navigation_arc": "GALACTIC_ATLAS_ARC_03_SECTORS",
+        "sector_taxonomy_presentation_only": True, "non_authoritative": True,
         "provider_observation_date": provider["observed_date"],
         "provider_snapshot_not_live": True,
         "catalogue_role": ui["ownership_rule"],
@@ -86,7 +98,11 @@ def build():
         "source_revisions": {
             "registry/entities/repositories.json": digest(CATALOGUE),
             "registry/decisions/galactic-atlas-ui.v0.1.json": digest(LAYOUT),
-            "registry/providers/galactic-atlas-arc02-observation-20261020.json": digest(PROVIDER)},
+            "registry/providers/galactic-atlas-arc02-observation-20261020.json": digest(PROVIDER),
+            "registry/decisions/galactic-atlas-sectors.v0.1.json": digest(SECTORS)},
+        "sectors": [{**s, "count": sum(x == s["id"] for x in sector_lookup.values())}
+                    for s in sector_data["sectors"]],
+        "sector_count": len(sector_data["sectors"]),
         "station_count": len(stations),
         "stations": stations,
         "links": [{"from": "REPO-000001", "to": x["id"],
