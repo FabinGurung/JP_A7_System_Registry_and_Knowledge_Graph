@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000020",
+  "current_sequence": "A7-SEQ-000021",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -321,5 +321,24 @@
     "A9_private_seq13": "STAGED_NOT_IMPORTED",
     "external_repositories_modified": false,
     "manual_visual_browser_qa": "NOT_PERFORMED"
+  },
+  "galactic_atlas_arc03": {
+    "decision": "registry/decisions/galactic-atlas-sectors.v0.1.json",
+    "page": "site/index.html",
+    "validator": "scripts/validate_galactic_atlas_arc03.py",
+    "sectors": {
+      "CONTROL": 1,
+      "ENGINEERING": 4,
+      "OPERATIONS": 1,
+      "KNOWLEDGE": 2,
+      "ADJACENT": 1
+    },
+    "published_sha": "efd0933f760260c82cf79f6f6374090e4c8fdab8",
+    "validation_run": 39530362803,
+    "pages_run": 39530362779,
+    "artifact_id": 12314873495,
+    "artifact_digest": "8a50df34116d7a3458a5dd611562ba2c4568d81068300512e23bae3073a77f1d",
+    "external_workstream_gates": "UNCHANGED",
+    "visual_browser_check": "NOT_PERFORMED"
   }
 }
