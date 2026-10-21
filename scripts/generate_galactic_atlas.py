@@ -14,6 +14,8 @@ SECTORS = ROOT / "registry/decisions/galactic-atlas-sectors.v0.1.json"
 ARC04 = ROOT / "registry/decisions/galactic-atlas-arc04-routes.v0.1.json"
 MODULES = ROOT / "registry/entities/modules.json"
 EDGES = ROOT / "registry/edges/edges.jsonl"
+ARC05 = ROOT / "registry/decisions/galactic-atlas-arc05-history.v0.1.json"
+EVENT_LOG = ROOT / "registry/events/a7-mutations.jsonl"
 ALLOWED_HOSTS = ("https://github.com/FabinGurung/",
                  "https://fabingurung.github.io/")
 
@@ -142,10 +144,93 @@ def build():
             "evidence_url": None, "source_commit_sha": None,
             "limitation": "Design proposal only; no provider-verified transfer or interface."
         })
+    # Arc05: deterministic historical-only projection. Genuine A7 acceptance
+    # event records and dated specialist provider snapshots remain the owners.
+    arc05 = json.loads(ARC05.read_text(encoding="utf-8"))
+    assert arc05["status"] == "ADOPTED_DATED_HISTORY_PROJECTION"
+    assert arc05["source_commit_sha"] and len(arc05["source_commit_sha"]) == 40
+    assert arc05["restrictions"]["runtime_dependency_assertions"] == 0
+    event_ledger = {}
+    event_lines = {}
+    for lineno, raw in enumerate(EVENT_LOG.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip():
+            continue
+        event = json.loads(raw)
+        assert event["event_id"] not in event_ledger, "Duplicate event"
+        event_ledger[event["event_id"]] = event
+        event_lines[event["event_id"]] = lineno
+    history = []
+    tag = arc05["preserved_tagged_release"]
+    assert tag["tag_name"] == "a7/pre-galactic-atlas-v0.1.0"
+    assert len(tag["commit_sha"]) == 40
+    assert tag["url"].startswith(ALLOWED_HOSTS[0])
+    history.append({
+        "id": tag["id"], "station_id": "REPO-000001", "title": tag["label"],
+        "kind": "VERIFIED_GITHUB_RELEASE_TAG", "sequence_id": None,
+        "date": tag["published_at"][:10], "commit_sha": tag["commit_sha"],
+        "commit_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/commit/" + tag["commit_sha"],
+        "release_url": tag["url"], "run_ci_url": None, "run_pages_url": None,
+        "artifact_sha256": None, "evidence_url": tag["url"],
+        "limitation": "Published release tag is a recovery anchor, not a complete runtime or scientific approval."
+    })
+    for milestone in arc05["admitted_milestones"]:
+        identifier = milestone["acceptance_event_id"]
+        event = event_ledger[identifier]
+        assert event["sequence_id"] == milestone["sequence_id"]
+        assert event["status"] == "VALIDATED_PASS"
+        commit = next((event[k] for k in ("main_source_sha", "content_main_sha", "content_sha")
+                       if k in event), None)
+        ci_id = next((event[k] for k in ("main_ci", "main_validation_run")
+                      if k in event), None)
+        pages_id = next((event[k] for k in ("main_pages", "pages_run")
+                         if k in event), None)
+        assert isinstance(commit, str) and len(commit) == 40
+        assert isinstance(ci_id, int) and ci_id > 0
+        assert isinstance(pages_id, int) and pages_id > 0
+        artifact_digest = event.get("artifact_sha256") or event.get("pages_artifact_sha256")
+        if artifact_digest is not None:
+            assert len(artifact_digest) == 64
+        event_url = ("https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/"
+                     + arc05["source_commit_sha"] + "/registry/events/a7-mutations.jsonl#L"
+                     + str(event_lines[identifier]))
+        history.append({
+            "id": identifier, "station_id": "REPO-000001", "title": milestone["title"],
+            "kind": "VERIFIED_A7_EVENT_RELEASE", "sequence_id": event["sequence_id"],
+            "date": (event.get("recorded_date") or event.get("observed_at") or event.get("occurred_at"))[:10],
+            "commit_sha": commit,
+            "commit_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/commit/" + commit,
+            "release_url": None,
+            "run_ci_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/" + str(ci_id),
+            "run_pages_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/" + str(pages_id),
+            "artifact_sha256": artifact_digest,
+            "evidence_url": event_url,
+            "limitation": "Source release/event accepted by A7 workflows; later closeout commits can differ. Not an immutable Git tag or specialist-scientific approval."
+        })
+    peer_snapshots = []
+    for item in provider["records"]:
+        if item["id"] == "REPO-000001":
+            continue
+        dep = item["deployment"]
+        assert dep["result"] == "success" and dep["id"] > 0 and len(dep["sha"]) == 40
+        repo_name = source[item["id"]]["repository_full_name"]
+        peer_snapshots.append({
+            "id": "ARC05-PROVIDER-" + item["id"], "station_id": item["id"],
+            "title": item["capability"], "kind": "DATED_PEER_PUBLICATION_SNAPSHOT",
+            "date": dep["at"][:10], "commit_sha": dep["sha"],
+            "commit_url": "https://github.com/" + repo_name + "/commit/" + dep["sha"],
+            "release_url": None, "run_ci_url": None,
+            "run_pages_url": "https://github.com/" + repo_name + "/actions/runs/" + str(dep["id"]),
+            "artifact_sha256": None,
+            "evidence_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/"
+                            + arc05["source_commit_sha"] + "/registry/providers/galactic-atlas-arc02-observation-20261020.json",
+            "limitation": "Last successful Pages/publication in 20 October 2026 recorded snapshot; not a complete history, current live status or owner approval."
+        })
+    assert len(history) == 6 and len(peer_snapshots) == 8
     return {
         "schema": "a7://galactic-atlas-read-projection/0.1",
         "arc": "GALACTIC_ATLAS_ARC_02_INSPECTOR", "navigation_arc": "GALACTIC_ATLAS_ARC_03_SECTORS",
         "relationship_arc": "GALACTIC_ATLAS_ARC_04_EVIDENCE_GATED_ROUTES",
+        "history_arc": "GALACTIC_ATLAS_ARC_05_IMMUTABLE_RELEASE_HISTORY",
         "sector_taxonomy_presentation_only": True, "non_authoritative": True,
         "provider_observation_date": provider["observed_date"],
         "provider_snapshot_not_live": True,
@@ -158,7 +243,9 @@ def build():
             "registry/decisions/galactic-atlas-sectors.v0.1.json": digest(SECTORS),
             "registry/decisions/galactic-atlas-arc04-routes.v0.1.json": digest(ARC04),
             "registry/entities/modules.json": digest(MODULES),
-            "registry/edges/edges.jsonl": digest(EDGES)},
+            "registry/edges/edges.jsonl": digest(EDGES),
+            "registry/decisions/galactic-atlas-arc05-history.v0.1.json": digest(ARC05),
+            "registry/events/a7-mutations.jsonl": digest(EVENT_LOG)},
         "sectors": [{**s, "count": sum(x == s["id"] for x in sector_lookup.values())}
                     for s in sector_data["sectors"]],
         "sector_count": len(sector_data["sectors"]),
@@ -167,6 +254,8 @@ def build():
         "route_count": len(routes), "candidate_count": len(proposed),
         "verified_runtime_handoff_count": 0,
         "routes": routes, "candidate_routes": proposed,
+        "history_event_count": len(history), "peer_publication_count": len(peer_snapshots),
+        "history": history, "peer_publications": peer_snapshots,
         "links": [{"from": "REPO-000001", "to": x["id"],
                    "type": "CATALOGUE_ROUTES_TO", "authority_transfer": False}
                   for x in stations if x["id"] != "REPO-000001"]

@@ -42,6 +42,16 @@ async function inspect(page,kind){
   const screenshot=out+"/atlas-"+kind+".png";
   await page.screenshot({path:screenshot,fullPage:true});
   report.screenshots.push(screenshot);
+  await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("6 source-linked history records"));
+  assert.equal(await page.locator("#arc05HistoryList .arc05-history-item").count(),6);
+  await page.locator("#arc05HistoryList .arc05-history-item").first().click();
+  await page.locator('#arc05HistoryInspector a[href*="/releases/tag/"]').waitFor();
+  await page.locator('.star-node[data-repo-id="REPO-000006"]').click();
+  await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("1 source-linked history record"));
+  await page.locator('#arc05HistoryInspector a[href*="/actions/runs/"]').waitFor();
+  await page.locator('.star-node[data-repo-id="REPO-000001"]').click();
+  await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("6 source-linked history records"));
+  pass(kind+": Arc05 true tag, five immutable A7 events, dated peer publication");
   if(kind==="mobile"){
     const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
     assert.ok(widths.scroll<=widths.viewport+4,"mobile page horizontal overflow: "+JSON.stringify(widths));

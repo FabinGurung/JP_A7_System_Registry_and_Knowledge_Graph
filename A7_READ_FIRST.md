@@ -212,3 +212,7 @@ PR #48 merged as `fcf880a84e08f1631e3077fb69f38c5cfaffa529`. Feature and PR CI p
 ## 26. A7 debt and automated browser QA — SEQ-000023
 
 Read `docs/A7_DEBT_AND_BROWSER_QA_READ_FIRST.md` and the dated `registry/providers/a7-debt-observation-20261021.json`. R&D current-main workflows observed pass, but source-only LaTeX validation is not scientific-PDF approval. A7 seq13 private A9 parity/ACK remains NOT imported. A7 Chromium browser QA in `.github/workflows/a7-browser-qa.yml` is new; only a passing provider run may mark automation verified. Arc05 release lineage is next; never infer cross-repository data transfer.
+
+## 27. Arc05 release-history constellations — SEQ-000024 staged
+
+Read `docs/GALACTIC_ATLAS_ARC05_READ_FIRST.md` and `registry/decisions/galactic-atlas-arc05-history.v0.1.json` before changing release lineage. Exactly one pre-Galactic source-confirmed tag; five event-backed A7 source-release records, eight dated peer publication snapshots. A7 source release does not equal final closeout SHA and successful Pages never certifies science. Preserve Arc02/03/04, A9 private and rollback branches. Chromium workflow checks release timeline; no manual visual QA is implied.

@@ -1,0 +1,54 @@
+{
+  "schema": "a7://galactic-atlas-release-history/0.1",
+  "decision_id": "A7-GAL-ARC05-001",
+  "sequence_id": "A7-SEQ-000024",
+  "status": "ADOPTED_DATED_HISTORY_PROJECTION",
+  "source_commit_sha": "7cafce3574ef119552c5c208ad57c38a135db9c8",
+  "source_event_ledger": "registry/events/a7-mutations.jsonl",
+  "source_provider_snapshot": "registry/providers/galactic-atlas-arc02-observation-20261020.json",
+  "preserved_tagged_release": {
+    "id": "A7-RELEASE-PREGALACTIC-001",
+    "tag_name": "a7/pre-galactic-atlas-v0.1.0",
+    "published_at": "2026-10-15T03:16:29Z",
+    "commit_sha": "49c99f7010e53a66fab94cad4a955e195f9b060d",
+    "url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/pre-galactic-atlas-v0.1.0",
+    "label": "Pre-Galactic Atlas — tagged recovery baseline",
+    "observed_at": "2026-10-21"
+  },
+  "admitted_milestones": [
+    {
+      "sequence_id": "A7-SEQ-000019",
+      "acceptance_event_id": "A7-EVT-000019-002",
+      "title": "Unified navigation & preserved history"
+    },
+    {
+      "sequence_id": "A7-SEQ-000020",
+      "acceptance_event_id": "A7-EVT-000020-002",
+      "title": "Arc 02 — selected-world inspector"
+    },
+    {
+      "sequence_id": "A7-SEQ-000021",
+      "acceptance_event_id": "A7-EVT-000021-002",
+      "title": "Arc 03 — Galactic Sectors"
+    },
+    {
+      "sequence_id": "A7-SEQ-000022",
+      "acceptance_event_id": "A7-EVT-000022-002",
+      "title": "Arc 04 — evidence-gated routes"
+    },
+    {
+      "sequence_id": "A7-SEQ-000023",
+      "acceptance_event_id": "A7-EVT-000023-002",
+      "title": "Automated Chromium QA and debt reconciliation"
+    }
+  ],
+  "restrictions": {
+    "no_fake_tags": true,
+    "event_links_immutable_source_pin": true,
+    "peer_observation_dated_not_live": true,
+    "runtime_dependency_assertions": 0,
+    "private_a9_artifact_ids": false,
+    "specialist_owner_approval_assertions": false,
+    "archives_preserved": true
+  }
+}

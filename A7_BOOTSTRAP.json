@@ -385,5 +385,18 @@
     "pages_run": 39592347916,
     "browser_run": 39592347739,
     "external_human_browser_qa": "NOT_PERFORMED"
+  },
+  "galactic_atlas_arc05": {
+    "decision": "registry/decisions/galactic-atlas-arc05-history.v0.1.json",
+    "generator": "scripts/generate_galactic_atlas.py",
+    "validator": "scripts/validate_galactic_atlas_arc05.py",
+    "view": "site/index.html#release-constellations",
+    "read_first": "docs/GALACTIC_ATLAS_ARC05_READ_FIRST.md",
+    "real_release_tags": 1,
+    "verified_a7_milestone_events": 5,
+    "dated_peer_publication_snapshots": 8,
+    "provider_data_auto_live": false,
+    "private_a9_data_included": false,
+    "status": "FEATURE_STAGED_PROVIDER_PENDING"
   }
 }

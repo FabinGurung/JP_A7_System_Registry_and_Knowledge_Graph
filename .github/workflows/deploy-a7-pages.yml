@@ -14,6 +14,7 @@ on:
       - "scripts/validate_galactic_atlas_arc02.py"
       - "scripts/validate_galactic_atlas_arc03.py"
       - "scripts/validate_galactic_atlas_arc04.py"
+      - "scripts/validate_galactic_atlas_arc05.py"
       - "scripts/generate_repository_health.py"
       - "scripts/validate_repository_health.py"
       - "scripts/generate_memory_wall.py"
@@ -63,6 +64,10 @@ jobs:
         run: |
           python scripts/validate_galactic_atlas_arc04.py
           node --check site/assets/galactic-atlas-arc04.js
+      - name: Validate Arc 05 immutable history and script
+        run: |
+          python scripts/validate_galactic_atlas_arc05.py
+          node --check site/assets/galactic-atlas-arc05.js
       - name: Generate dated repository health projection
         run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"
       - name: Validate dated health and guide ownership

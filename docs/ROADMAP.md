@@ -141,3 +141,7 @@ R&D repository latest main CI, LaTeX source gate and portal deployment now pass 
 ### A7-SEQ-000023 — provider-verified debt and real-browser QA release
 
 PR #51 merged source 4ca4119ef9251c8357877c147b3beffb7d8ab1ce. Main CI 39592347665 SUCCESS, Pages 39592347916 SUCCESS, Chromium real-browser QA 39592347739 SUCCESS (desktop/mobile screenshot/artifact workflow). Closed stale claim that R&D current main CI is failing, not researcher-specific PDF/scientific gates. A9 seq13 private Main/Local import remains blocked pending parity and ACK; no Drive records mutated. A7 browser QA is automated, not independent external human sign-off. Final closeout/POST readback required. After release gate: Arc05.
+
+### A7-SEQ-000024 — Arc05 source-linked release constellations (feature staged)
+
+One provider-verified GitHub release tag (pre-galactic), five accepted A7 milestone events and eight dated specialist deployment snapshots projected in the existing Atlas. No fabricated tags, peer source ownership claim, private A9 fact or live-health assertion. PRE `snapshot/pre-a7-seq-000024-galactic-arc05-history`; requires CI, browser, PR, main Pages, closeout and POST.

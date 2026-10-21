@@ -73,6 +73,10 @@ jobs:
         run: |
           python scripts/validate_galactic_atlas_arc04.py
           node --check site/assets/galactic-atlas-arc04.js
+      - name: Validate Arc 05 immutable release constellations
+        run: |
+          python scripts/validate_galactic_atlas_arc05.py
+          node --check site/assets/galactic-atlas-arc05.js
       - name: Validate domain-guide ownership and dated provider status
         run: python scripts/validate_repository_health.py
       - name: Validate printable, non-authoritative Memory Wall posters
