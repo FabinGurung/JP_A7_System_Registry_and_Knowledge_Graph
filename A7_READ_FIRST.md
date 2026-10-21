@@ -220,3 +220,7 @@ Read `docs/GALACTIC_ATLAS_ARC05_READ_FIRST.md` and `registry/decisions/galactic-
 ## 28. Source-to-artifact lineage debt clearance — A7-SEQ-000025
 
 Read `docs/ARTIFACT_LINEAGE_CONTRACT_READ_FIRST.md`; validate `scripts/validate_artifact_lineage_contract.py`. Git SHA, artifact SHA-256 and Google Drive revision are distinct original-provider facts. A bounded A9 parity audit exists in PRIVATE Drive only; do not publish its identifiers or guess Main/Local ACK. A9 Portable Canon v1 seq13 was separate and already closed, A7-SEQ-000013 bridge private parity is NOT. No Arc06 started.
+
+## 29. Private Main Git identity provider reconciliation — A7-SEQ-000026
+
+Read `docs/MAIN_LIBRARY_GITHUB_BRIDGE.md` and run `scripts/validate_private_bridge_boundary.py`. Private Main repo identity metadata is now provider-confirmed with PRE/POST retained privately, but historical A7 Seq13 parity and Main/Local cursor ACK remain open. Never copy private IDs into this public repository, reimport the old candidate CSV, invent a Local sequence, or claim current Git commit SHA equals a Drive SHA256.

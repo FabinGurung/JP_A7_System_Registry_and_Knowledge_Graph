@@ -1,4 +1,4 @@
-# GitHub → private Main Library bridge — staged, not imported
+# GitHub → private Main Library bridge — current identity projection verified; historical ACK open
 
 ## Exact live table schema verified 2026-10-09
 
@@ -14,7 +14,13 @@ No confidential workbook data or spreadsheet ID is placed in this public reposit
 4. **Do not import blindly.** Resolve existing Main artifact identity and PK/FK edges, check concurrency/last Main ACK, compare each old external-ID target with the new Git provider ID and verify live HEAD. Import through a separately governed private A9 write when explicitly authorized.
 5. After exact Main provider readback, register a Git commit/release pointer and `GENERATED_FROM` or `ROUTED_BY` edges in Main; Google Drive owns the content/row state. Avoid one row per ordinary code commit: Git itself already retains complete history. Record changes at meaningful release or synchronization boundaries.
 
-## Current state and limits
+## 22 October 2026 — approved bounded provider reconciliation
+
+The public repository-identity layer is now **provider-confirmed in the existing private Main Library** after a bounded, authorized original-provider mutation and exact post-write readback. Existing private Main identities were reused and missing public GitHub identities admitted, with navigation-only metadata relations. All private record identifiers, foreign keys, workbook coordinates, native revision receipts and PRE/POST evidence are retained **only in the private Main/Local custody and its owner audit**, not in this public repository.
+
+**Critical distinction:** the 9 October candidate CSV files were **not imported or replayed**. The candidate exporter remains a dry-run artifact and is still non-mutating. A dated private Main identity projection is neither a legacy A7-SEQ-000013 source/control-text parity certificate nor an authenticated Local-to-Main consumed-cursor ACK. No local sequence or synchronized cursor was invented, no researcher/project payload was moved, and no runtime integration or private control migration has been asserted.
+
+### Current state and limits
 
 - A7 has **9 public connected repositories** in the observed snapshot.
 - This executable exporter is a **non-mutating candidate bridge**; it does not call Google Drive/Sheets APIs.

@@ -55,5 +55,14 @@
   "links": {
     "a7_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
     "rnd": "https://github.com/FabinGurung/JP_Research-and-Development"
+  },
+  "private_bridge_dated_observation": {
+    "observed_date": "2026-10-22",
+    "result": "CURRENT_PUBLIC_GITHUB_IDENTITY_METADATA_REGISTERED_IN_PRIVATE_MAIN",
+    "private_main_or_local_ids_in_public_record": false,
+    "full_historical_parity_verified": false,
+    "local_main_cursor_ack": false,
+    "bulk_candidate_csv_imported": false,
+    "no_legacy_mutation": true
   }
 }

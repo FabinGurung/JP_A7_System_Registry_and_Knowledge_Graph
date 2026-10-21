@@ -159,6 +159,13 @@
       "title": "Meaningful source→CI→artifact→owner-Drive→Main-ACK typed contract",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Public-safe Git source→CI→Pages output provenance contract and real Pages example, CI/Pages validator. PR #55 merged at df18c7266b24ab5f98899a21a2893e356f236ecf; registry CI 39624448190 SUCCESS; Pages 39624448234 SUCCESS; feature PR Chromium 39624257598 SUCCESS. Private A9 audit saved privately, no forced import or ACK, historic A9 Portable Canon seq13 distinct from staged A7 bridge seq13."
+    },
+    {
+      "id": "A7-D22",
+      "stage": "A7-SEQ-000026 — reconcile current private Main Git identity metadata",
+      "title": "Provider-verified public repo identity admission without synthetic Local ACK",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Privately authorized original-provider Main registration completed and read back. Public status is an aggregate dated observation; exact private Main/Local record IDs, workbook locations and row coordinates remain in the owning private audit, not this public A7 repository. Historic A7 seq13 full A9 parity and consumed-cursor ACK remain explicitly open."
     }
   ],
   "next": [
@@ -173,14 +180,14 @@
       "id": "A7-N01",
       "priority": "P0",
       "title": "Seal bounded public-safe A7 seq13 change accurately",
-      "state": "PUBLIC_SAFE_GIT_ROUTING_ACTIVE__PRIVATE_A9_STAGE_UNACKNOWLEDGED",
+      "state": "PUBLIC_SAFE_GIT_ROUTING_ACTIVE__PRIVATE_PROVIDER_IDENTITY_PROJECTION_CONFIRMED__LEGACY_SEQ13_STAGED",
       "done_when": "Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover."
     },
     {
       "id": "A7-N02",
       "priority": "P1",
       "title": "Reconcile private A9 Main/Local semantics before bridge import",
-      "state": "PRIVATE_A9_PARITY_AUDITED_NO_NEW_ACK__EXACT_SOURCE_RECONCILIATION_PENDING",
+      "state": "CURRENT_PUBLIC_GIT_IDENTITY_PARITY_PROVIDER_CONFIRMED__HISTORIC_A9_SOURCE_AND_CURSOR_ACK_OPEN",
       "done_when": "Provider-first live index, ID collision reconciliation, historical run/edge/source parity, Main consumed cursors and Local ACK; gated private A9 write only."
     },
     {
