@@ -19,3 +19,7 @@ Within the existing Cloud Orbit Atlas, choose a world; `site/index.html#release-
 All published values are source-derived from A7 JSONL, canonical decision and dated provider evidence, with explicit source SHA. Do not imply an Arc05 Git tag exists, or that an A7 source content commit is necessarily the final closeout main commit. Do not transfer/private-import Main Library IDs; A9 seq13 is independently open. R&D source workflow status is distinct from research approval.
 
 Release requires PRE snapshot, feature/PR CI, browser, merged-main Pages, then closeout and POST parity. Arc05 future development may add owner-verified per-module histories and release artifact graphs without duplicating Git history.
+
+## Source release evidence — 21 October 2026
+
+Implementation PR [#53](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/53) merged at `7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd`. Main [registry CI 39593600381](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39593600381), [Pages 39593600407](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39593600407), and [Chromium QA 39593600377](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39593600377) SUCCESS. Closeout/final POST gate follows. No scientific, runtime, or A9 private admission asserted.

@@ -4,7 +4,7 @@
   "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000023",
+  "current_closed_sequence": "A7-SEQ-000024",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -150,8 +150,8 @@
       "id": "A7-D20",
       "stage": "A7-SEQ-000024 — Arc05 immutable history constellations",
       "title": "Pinned A7 release events and dated specialist publication evidence",
-      "status": "FEATURE_STAGED_PENDING_CI",
-      "detail": "Five accepted A7 milestone releases, one actual GitHub tag, eight dated peer Pages publication snapshots. Source-linked immutable SHA and CI/Pages evidence, no fabricated tags, no live-health or Drive private facts; new browser QA checks."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Five validated A7 source-milestone event histories, one genuine pre-Galactic GitHub tag, eight dated specialist Pages snapshots. PR #53 merged at 7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd. Main registry CI 39593600381, Pages 39593600407, Chromium browser QA 39593600377 all SUCCESS. Private A9 data excluded, no runtime handoffs or extra tags invented. Final closeout readback/POST pending."
     }
   ],
   "next": [
@@ -236,7 +236,7 @@
       "id": "A7-N12",
       "priority": "P2",
       "title": "Galactic Atlas Arc05: immutable release-history constellations",
-      "state": "ARC05_FEATURE_IMPLEMENTED_PENDING_PROVIDER_ACCEPTANCE",
+      "state": "DELIVERED_DATED_EVIDENCE_ARC05_V01",
       "done_when": "Display anchored Git tags, commits, source artifact provenance and verified release/readback history without becoming a second authority."
     },
     {
