@@ -1,0 +1,32 @@
+/* A7 Arc04: evidence-gated route explorer. Cloud Orbit light; existing zones untouched. */
+.arc04-route-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.space-field .star-node{z-index:2}
+.arc04-route-stroke{fill:none;stroke:#2d91bb;stroke-width:.38;stroke-dasharray:1.3 .75;opacity:.72;vector-effect:non-scaling-stroke}
+.arc04-route-stroke.is-proposed{stroke:#ac809c;stroke-dasharray:.7 1.3;opacity:.55}
+.arc04-route-stroke.is-active{stroke:#1277aa;stroke-width:.65;opacity:1}
+.arc04-route-explorer{margin:20px 0 12px;padding:clamp(16px,2.5vw,28px);background:#fff;border:1px solid #c8dfea;border-radius:20px;color:#254d66;box-shadow:0 14px 33px #a5c7d62e}
+.arc04-title-row{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:15px}
+.arc04-title-row h2{font-size:clamp(20px,2.4vw,29px);margin:3px 0 7px;color:#23536f}
+.arc04-title-row p{margin:0;max-width:760px;font-size:13px;line-height:1.65;color:#50758c}
+.arc04-label{font-size:10px;letter-spacing:.14em;color:#3886ac;font-weight:850}
+.arc04-count{padding:7px 10px;border:1px solid #bddfe9;border-radius:12px;font-size:11px;color:#235d7e;background:#eaf8fc;font-weight:750}
+.arc04-tools{display:flex;gap:17px;flex-wrap:wrap;align-items:center;margin:20px 0 12px}
+.arc04-tools select{font:650 12px system-ui,sans-serif;padding:9px 12px;max-width:100%;background:#f6fcff;color:#285776;border:1px solid #b7d7e5;border-radius:9px}
+.arc04-tools label{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:650;color:#47718b;cursor:pointer}
+.arc04-tools input{accent-color:#298bb4}
+.arc04-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,0.85fr);gap:14px}
+.arc04-list{display:grid;gap:8px;align-content:start;max-height:380px;overflow-y:auto}
+.arc04-item{width:100%;text-align:left;background:#f5fbfe;border:1px solid #d0e5ef;border-radius:11px;padding:12px;cursor:pointer;font:inherit;color:#27526d;display:grid;gap:5px}
+.arc04-item:hover,.arc04-item.is-active{border-color:#5fa9cd;background:#e8f7fd}
+.arc04-item strong{font-size:13px}.arc04-item small{font-size:11px;color:#597f93;line-height:1.45}
+.arc04-item .arc04-status{font-size:10px;font-weight:850;color:#277698}
+.arc04-item.is-proposed .arc04-status{color:#8e6588}
+.arc04-inspect{padding:16px;background:#f8fcff;border:1px solid #d2e5ef;border-radius:13px;min-width:0}
+.arc04-inspect h3{margin:0 0 9px;font-size:16px;color:#265877}
+.arc04-inspect p{margin:7px 0;color:#52758a;font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.arc04-inspect a{color:#176e9f;font-weight:750;font-size:12px;overflow-wrap:anywhere}
+.arc04-caveat{border-top:1px solid #d8e9f1;margin-top:14px!important;padding-top:12px;font-size:11px!important}
+.arc04-empty{padding:19px;color:#6b8999;background:#f5fbfe;border-radius:10px;font-size:12px}
+@media(max-width:750px){.arc04-layout{grid-template-columns:1fr}.arc04-route-explorer{margin-top:12px}.arc04-list{max-height:300px}}
+@media(prefers-reduced-motion:reduce){.arc04-item{transition:none}}
+@media print{.arc04-route-explorer{box-shadow:none}.arc04-tools{display:none}}

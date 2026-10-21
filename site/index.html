@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="assets/a7-unified-theme.css">
 <link rel="stylesheet" href="assets/galactic-atlas-arc02.css">
 <link rel="stylesheet" href="assets/galactic-atlas-arc03.css">
+<link rel="stylesheet" href="assets/galactic-atlas-arc04.css">
+<script src="assets/galactic-atlas-arc04.js" defer></script>
 <link rel="stylesheet" href="assets/a7-site-shell.css">
 <script src="assets/a7-site-shell.js" defer></script>
 </head><body class="galactic-arc">
@@ -23,9 +25,9 @@
 </nav></header>
 <main class="galaxy-shell">
 <section class="galaxy-intro" aria-label="Introduction">
-<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 03 / GALACTIC SECTORS</div>
+<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 04 / EVIDENCE-GATED ROUTES</div>
 <h1>One galaxy.<br><em>Independent systems.</em></h1>
-<p>A7 is the map, not the machine. Browse systems by sector, search for a destination, and inspect capabilities, owning branches, dated GitHub evidence and unresolved gates. Every system retains independent source and approval authority.</p>
+<p>A7 is the map, not the machine. Browse systems by sector, inspect documented routes and explicitly unverified ideas, search for a destination, and inspect capabilities, owning branches, dated GitHub evidence and unresolved gates. Every system retains independent source and approval authority.</p>
 <div class="arc-meta"><span>9 indexed repositories</span><span>8 destination systems</span><span>Zero authority transfers</span></div>
 </section>
 <aside class="memory-wall-shortcut" aria-label="Pinned reference posters"><div><small>YOUR STUDY CORNER · 03 VERIFIED PUBLIC BOOKMARKS</small><strong>Memory Wall — little posters for big reminders</strong><p>Developer Roadmap · Public APIs · React Questions. Always visible, no flip cards; bring a little noticeboard into the galaxy.</p></div><a href="memory-wall.html">Visit the poster wall ↗</a></aside>
@@ -44,6 +46,7 @@
 <div class="space-field" id="spaceField" role="group" aria-label="Central star map of linked repositories">
 <div class="space-nebula" aria-hidden="true"></div>
 <div class="orbit-ring orbit-ring-one" aria-hidden="true"></div><div class="orbit-ring orbit-ring-two" aria-hidden="true"></div>
+<svg class="arc04-route-overlay" id="arc04Lines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
 <svg class="flight-lines" id="flightLines" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
 <div class="planet-loading" id="planetLoading" role="status">Contacting catalogue · loading destinations…</div>
 </div>
@@ -80,6 +83,17 @@
 <p class="inspector-caveat" id="selectedEvidence">Recorded links are catalogue observations; live statuses belong to each provider.</p>
 </aside>
 </section>
+<section class="arc04-route-explorer" id="interstellar-routes" aria-label="Evidence-gated interstellar relationships">
+<div class="arc04-title-row"><div><span class="arc04-label">ARC 04 / INTERSTELLAR ROUTES</span>
+<h2>Relationships, with receipts</h2>
+<p>Choose a world above to isolate its connections. Solid catalogue spokes still mean navigation only; blue dashed routes mean documented module links, and optional purple dashed routes are unverified ideas — never active runtime transfers.</p></div>
+<span class="arc04-count" id="arc04Count" role="status" aria-live="polite">Loading route evidence…</span></div>
+<div class="arc04-tools"><label for="arc04Type">Show relationship kind</label>
+<select id="arc04Type"><option value="ALL">All admitted kinds</option><option value="DOCUMENTED">Documented navigation</option><option value="PROPOSED">Unverified proposals</option></select>
+<label><input type="checkbox" id="arc04IncludeProposals"> Show unverified proposals (off by default)</label></div>
+<div class="arc04-layout"><div class="arc04-list" id="arc04RouteList" aria-label="Select relationship to inspect"></div>
+<article class="arc04-inspect" id="arc04Inspect" aria-label="Selected relationship evidence"><p>Loading evidence…</p></article></div>
+</section>
 <div id="galaxyError" class="galaxy-error" role="alert" hidden>Directory data unavailable. Consult the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph">GitHub catalogue</a> or <a href="history.html">History &amp; Rollback</a> for older advanced graph tools.</div>
 <section class="galaxy-next" aria-label="Progressively revealed architecture">
 <details class="reveal-panel" id="principle">
@@ -102,6 +116,6 @@
 
 </section>
 </main>
-<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 01</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="history.html">History &amp; rollback ↗</a></footer>
+<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 04</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="history.html">History &amp; rollback ↗</a></footer>
 <script src="assets/fluffy-rocket.js" defer></script>
 </body></html>

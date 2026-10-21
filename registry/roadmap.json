@@ -131,6 +131,13 @@
       "title": "Five source-owned sectors with category filtering and searchable station inspection",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Five sector classifications (Control 1, Engineering 4, Operations 1, Knowledge 2, Adjacent 1), A7 hub always in view, search/reset, keyboard-visible arrow navigation; derived from normalized repository IDs; Arc02 source/QA preserved. CI/Pages still pending. PR #46 merged; main CI 39530362803 and Pages 39530362779 successful; browser QA separately open."
+    },
+    {
+      "id": "A7-D18",
+      "stage": "A7-SEQ-000022 — Galactic Atlas Arc04",
+      "title": "Evidence-gated typed interstellar routes",
+      "status": "IMPLEMENTED_PENDING_PROVIDER_RELEASE",
+      "detail": "Four source-recorded Operations peer-navigation edges projected with line-linked evidence; four off-by-default unverified proposals; zero runtime handoffs asserted; Arc02/Arc03/Cloud Orbit preserved. Feature CI/PR/Pages gate pending."
     }
   ],
   "next": [
@@ -208,7 +215,7 @@
       "id": "A7-N11",
       "priority": "P2",
       "title": "Galactic Atlas Arc04: evidence-gated typed interstellar routes",
-      "state": "PLANNED",
+      "state": "IN_PROGRESS_A7_SEQ_000022",
       "done_when": "Visualize typed cross-module relationships only with source-backed provider evidence; no inferred runtime data transfer or private A9 admission."
     },
     {

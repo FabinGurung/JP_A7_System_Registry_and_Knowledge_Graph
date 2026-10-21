@@ -340,5 +340,17 @@
     "artifact_digest": "8a50df34116d7a3458a5dd611562ba2c4568d81068300512e23bae3073a77f1d",
     "external_workstream_gates": "UNCHANGED",
     "visual_browser_check": "NOT_PERFORMED"
+  },
+  "galactic_atlas_arc04": {
+    "decision": "registry/decisions/galactic-atlas-arc04-routes.v0.1.json",
+    "read_first": "docs/GALACTIC_ATLAS_ARC04_READ_FIRST.md",
+    "validator": "scripts/validate_galactic_atlas_arc04.py",
+    "page": "site/index.html#interstellar-routes",
+    "admitted_navigation_links": 4,
+    "display_only_proposals": 4,
+    "verified_runtime_handoffs": 0,
+    "status": "FEATURE_STAGED_PENDING_CI_AND_PAGES",
+    "seq13_private_a9_ack": false,
+    "scientific_qa_approval_claim": false
   }
 }
