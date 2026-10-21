@@ -1,6 +1,6 @@
 # A7 System Registry — development history and roadmap
 
-**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000020` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
+**Snapshot:** 2026-10-09 NPT · **A7 latest fully closed sequence:** `A7-SEQ-000021` · **A7-SEQ-000013:** staged public-safe transition, **NOT FINAL_CLOSED_PASS**.
 
 A7 governs semantic identities, authority, routing and public-safe cross-provider relationships. It does not own a peer module's scientific results, code or private document bytes. This file is [the machine roadmap](../registry/roadmap.json) projected for humans.
 
@@ -121,3 +121,7 @@ Arc 01 and Seq19 navigation remain the operator entrypoint; Arc02 adds a source-
 ### A7-SEQ-000021 — Arc03 Galactic Sectors (staged)
 
 Five versioned public-safe Galaxy sector classes (A7 Command, Engineering, Operations, Knowledge, Adjacent Products) derived from stable REPO IDs. Added keyboard-aware filter/search/reset UI, updated generated read model with source hash; preserving Arc02 owner-gate and deployment observations, 8 catalogue-only A7 routes, the Cloud Orbit theme/fluffy rocket and all other site pages. PRE `snapshot/pre-a7-seq-000021-galactic-arc03-sectors`; awaiting feature PR validation, main CI, Pages and POST snapshot. Original A7-SEQ-000013 private Main/Local and owner R&D QA remain unresolved separately.
+
+### A7-SEQ-000021 — FINAL_CLOSED_PASS / Galactic Sectors
+
+PRE `snapshot/pre-a7-seq-000021-galactic-arc03-sectors` at `5f00e2f8db2d36abf940b4221fe2bc378e09b4de`. Feature PR #46 merged at `efd0933f760260c82cf79f6f6374090e4c8fdab8`; main validation run 39530362803 and Pages run 39530362779 passed (artifact 12314873495, SHA256 8a50df34116d7a3458a5dd611562ba2c4568d81068300512e23bae3073a77f1d). Five sector groups and eight catalogue routes preserved; keyboard accessible search/filter/reset delivered. Cloud Orbit and mascot unchanged. Manual browser visual QA not independently verified. Main/Local private A9 seq13 and owner-side R&D QA remain separately OPEN. Next is Arc04 typed relationship routes only with verified provenance.
