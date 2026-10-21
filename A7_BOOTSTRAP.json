@@ -359,6 +359,14 @@
     "pages_artifact_id": 12340006573,
     "pages_artifact_sha256": "88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633",
     "independent_browser_qa": "NOT_PERFORMED",
-    "post_snapshot_pending": true
+    "post_snapshot": {
+      "branch": "snapshot/post-a7-seq-000022-galactic-arc04-routes",
+      "initial_post_sha": "e76013d071b8688898faaa783d7edccdac1961af",
+      "initial_compare_status": "identical",
+      "ahead_by": 0,
+      "behind_by": 0,
+      "observed_date": "2026-10-21",
+      "post_ref_should_follow_final_attestation_main": true
+    }
   }
 }
