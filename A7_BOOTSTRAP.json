@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000025",
+  "current_sequence": "A7-SEQ-000026",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -194,7 +194,14 @@
     "external_public_identity_registration": "CONFIRMED_IN_PRIVATE_PROVIDER__NOT_THE_OLD_CSV_IMPORT",
     "local_main_consumed_cursor_ack": false,
     "private_historical_source_content_parity": false,
-    "source_git_head_at_observation": "98bcd2a09df011033f42c2db06a4158e3e833c4b"
+    "source_git_head_at_observation": "98bcd2a09df011033f42c2db06a4158e3e833c4b",
+    "source_implementation_pr": 57,
+    "source_main_sha": "d5300d9e424afaa7159fed77bd7d3182ed50fcf7",
+    "main_registry_ci_run": 39688855866,
+    "main_pages_run": 39688855848,
+    "pr_browser_run": 39688750179,
+    "private_Main_Local_A9_historical_ACK": false,
+    "private_record_ids_excluded": true
   },
   "roadmap": {
     "machine": "registry/roadmap.json",

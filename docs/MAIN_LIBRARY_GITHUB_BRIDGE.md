@@ -33,3 +33,7 @@ The public repository-identity layer is now **provider-confirmed in the existing
 `A7 PROJECT_ID → REPO/COMMIT/PATH → BUILD/QC/RELEASE → DRIVE_PDF_OR_PPTX_ID → LOCAL_LIBRARY → MAIN_ACK`
 
 The human website is only a projection of this chain. Scientific admissibility is governed by the researcher/project, not by the existence of a webpage or a successful GitHub workflow.
+
+## Source release verification
+
+Public status implementation PR #57 merged at `d5300d9e424afaa7159fed77bd7d3182ed50fcf7`; Registry CI 39688855866 PASS and Pages run 39688855848 PASS, while the private native Main readback and PRE/POST are stored only in private provider custody. The 9 October CSV candidate source remains dry run. Full historical private reconciliation and Local-to-Main consumed-cursor ACK remain unverified and explicitly staged.
