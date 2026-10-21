@@ -55,13 +55,16 @@
       "id": "A7-D23-04",
       "owner": "A7",
       "description": "Arc04 automated Chromium desktop/mobile interaction QA",
-      "state": "IMPLEMENTED_PENDING_PROVIDER_RUN",
+      "state": "AUTOMATED_CHROMIUM_QA_PROVIDER_PASS",
       "evidence": {
         "workflow": ".github/workflows/a7-browser-qa.yml",
         "script": "scripts/a7_browser_qa.cjs",
-        "mode": "GitHub Actions real Chromium on local generated Pages site"
+        "mode": "GitHub Actions real Chromium on local generated Pages site",
+        "source_main_sha": "4ca4119ef9251c8357877c147b3beffb7d8ab1ce",
+        "main_browser_run": 39592347739,
+        "source_pr": 51
       },
-      "limitation": "CI screenshots are automated evidence, not independent external user/browser signoff"
+      "limitation": "CI real Chromium and screenshots passed; independent external Pages browser or human visual acceptance not separately performed."
     },
     {
       "id": "A7-D23-05",
