@@ -18,7 +18,7 @@
    link("Published release tag",record.release_url);
    link("Registry CI evidence",record.run_ci_url);
    link("Pages workflow evidence",record.run_pages_url);
-   link("Source provenance",record.evidence_url);
+   if(record.evidence_url!==record.release_url)link("Source provenance",record.evidence_url);
    if(record.artifact_sha256)note("Recorded Pages artifact SHA-256: "+record.artifact_sha256);
    note("Drive/private A9 artifacts and scientific sign-offs are never reconstructed from a public release marker.");
  }
