@@ -12,6 +12,7 @@ on:
       - "scripts/generate_galactic_atlas.py"
       - "scripts/validate_galactic_atlas.py"
       - "scripts/validate_galactic_atlas_arc02.py"
+      - "scripts/validate_galactic_atlas_arc03.py"
       - "scripts/generate_repository_health.py"
       - "scripts/validate_repository_health.py"
       - "scripts/generate_memory_wall.py"
@@ -52,6 +53,10 @@ jobs:
       - name: Validate Arc 02 selected-world provenance and deployment gates
         run: |
           python scripts/validate_galactic_atlas_arc02.py
+          node --check site/assets/galactic-atlas.js
+      - name: Validate Arc 03 sector taxonomy and filtered star navigation
+        run: |
+          python scripts/validate_galactic_atlas_arc03.py
           node --check site/assets/galactic-atlas.js
       - name: Generate dated repository health projection
         run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"

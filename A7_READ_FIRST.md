@@ -196,3 +196,7 @@ Site shell `site/assets/a7-site-shell.js`/`a7-site-shell.css` is the current com
 ## 22. Galactic Atlas Arc 02 (A7-SEQ-000020)
 
 Read `docs/GALACTIC_ATLAS_ARC02_READ_FIRST.md` and the provider-dated `registry/providers/galactic-atlas-arc02-observation-20261020.json`. The inspector joins nine A7 owner definitions to dated GitHub run/source observations and renders explicit boundaries and gate text. It must never imply a new runtime cross-repository dependency, project approval, private A9 acceptance, or always-live provider status. Source code and six app engines other than the intentionally changed `galactic-atlas.js` remain stable; Cloud Orbit and the fluffy rocket remain unchanged.
+
+## 23. Arc03 Galaxy sector navigation / SEQ-000021
+
+The stable repo ID -> sector UI mapping is `registry/decisions/galactic-atlas-sectors.v0.1.json`, joined by `scripts/generate_galactic_atlas.py` into the generated non-authoritative Galaxy read model. Arc03 makes sector selection, search and reset accessible, with a central A7 hub always present. The existing zone metadata, dated Arc02 GitHub evidence and all domain engines remain owner-local. Do not claim new runtime dependencies, live monitoring, R&D QA approval or A9 private parity. Consult `docs/GALACTIC_ATLAS_ARC03_READ_FIRST.md`, and run `scripts/validate_galactic_atlas_arc03.py`.
