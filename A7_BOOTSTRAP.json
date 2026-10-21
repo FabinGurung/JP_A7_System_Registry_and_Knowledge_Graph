@@ -183,12 +183,18 @@
     "default_new_code_workflow": "GIT_FIRST_PRIVATE_EVIDENCE_IN_DRIVE"
   },
   "main_library_bridge": {
-    "status": "DRY_RUN_BRIDGE__PRIVATE_MAIN_SHEET_NOT_WRITTEN",
+    "status": "PRIVATE_MAIN_PUBLIC_GITHUB_IDENTITY_PROJECTION_PROVIDER_VERIFIED__HISTORICAL_ACK_OPEN",
     "current_live_sheet_schema_validated": "2026-10-09",
     "script": "scripts/build_main_library_bridge.py",
     "input": "registry/bridges/github-heads-20261009.json",
     "documentation": "docs/MAIN_LIBRARY_GITHUB_BRIDGE.md",
-    "historical_parity": "NOT_VERIFIED"
+    "historical_parity": "NOT_VERIFIED",
+    "dated_status_observation": "2026-10-22",
+    "public_safe_private_provider_readback": "CONFIRMED__NO_PRIVATE_PROVIDER_IDS_PUBLISHED",
+    "external_public_identity_registration": "CONFIRMED_IN_PRIVATE_PROVIDER__NOT_THE_OLD_CSV_IMPORT",
+    "local_main_consumed_cursor_ack": false,
+    "private_historical_source_content_parity": false,
+    "source_git_head_at_observation": "98bcd2a09df011033f42c2db06a4158e3e833c4b"
   },
   "roadmap": {
     "machine": "registry/roadmap.json",
