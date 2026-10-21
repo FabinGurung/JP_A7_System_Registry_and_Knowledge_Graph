@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000021",
+  "current_sequence": "A7-SEQ-000022",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -349,8 +349,16 @@
     "admitted_navigation_links": 4,
     "display_only_proposals": 4,
     "verified_runtime_handoffs": 0,
-    "status": "FEATURE_STAGED_PENDING_CI_AND_PAGES",
+    "status": "PROVIDER_VALIDATED_PUBLIC_RELEASE_FINAL_CLOSEOUT",
     "seq13_private_a9_ack": false,
-    "scientific_qa_approval_claim": false
+    "scientific_qa_approval_claim": false,
+    "release_source_sha": "fcf880a84e08f1631e3077fb69f38c5cfaffa529",
+    "release_pr": 48,
+    "main_validation_run": 39587284143,
+    "pages_run": 39587284188,
+    "pages_artifact_id": 12340006573,
+    "pages_artifact_sha256": "88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633",
+    "independent_browser_qa": "NOT_PERFORMED",
+    "post_snapshot_pending": true
   }
 }

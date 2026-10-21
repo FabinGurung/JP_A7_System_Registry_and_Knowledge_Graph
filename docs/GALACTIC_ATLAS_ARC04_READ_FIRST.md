@@ -19,3 +19,9 @@ PRE snapshot -> feature branch CI -> PR CI -> merge -> merged-main CI and Pages 
 
 ## Next
 Arc 05 immutable releases, QA and rollback constellation, after this source and deployment gate passes.
+
+## Provider acceptance (2026-10-21)
+
+Feature CI [39587206657](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39587206657) SUCCESS; PR [#48](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/48) CI [39587214395](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39587214395) SUCCESS; merged-main CI [39587284143](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39587284143) SUCCESS; merged-main Pages [39587284188](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39587284188) SUCCESS at `fcf880a84e08f1631e3077fb69f38c5cfaffa529`. Pages artifact 12340006573 SHA-256 88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633.
+
+Final release metadata + POST snapshot closeout is tracked independently. No screen-level mobile/browser inspection has been performed.
