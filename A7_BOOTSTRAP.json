@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000028",
+  "current_sequence": "A7-SEQ-000029",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -468,16 +468,20 @@
   },
   "a7_developer_dock": {
     "sequence": "A7-SEQ-000029",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "status": "FINAL_CLOSED_PASS__MAIN_CI_PAGES_PASSED_BROWSER_PR_PASSED",
     "page": "site/developer-dock.html",
     "source_manifest": "registry/curations/a7-developer-dock.v0.1.json",
     "curated_source_exists_required": true,
     "only_a7_files": true,
-    "actions_are_scoped_tests": true
+    "actions_are_scoped_tests": true,
+    "provider_source_commit": "283a77bc2f9dce8afbe0474d0b20b217975695d1",
+    "main_registry_ci": 39764414808,
+    "main_pages_run": 39764414758,
+    "browser_pr_run": 39764276188
   },
   "a7_memory_platform_map": {
     "sequence": "A7-SEQ-000029",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "status": "FINAL_CLOSED_PASS__MAIN_CI_PAGES_PASSED_BROWSER_PR_PASSED",
     "page": "site/memory-wall.html#platform-role-board",
     "curation": "registry/curations/platform-responsibilities.v0.1.json",
     "platforms": 7,
