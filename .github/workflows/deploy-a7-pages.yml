@@ -18,6 +18,8 @@ on:
       - "scripts/validate_artifact_lineage_contract.py"
       - "scripts/validate_private_bridge_boundary.py"
       - "scripts/generate_a7_development_history.py"
+      - "scripts/generate_a7_roadmap.py"
+      - "scripts/validate_a7_roadmap.py"
       - "scripts/validate_a7_development_history.py"
       - "registry/contracts/source-artifact-lineage.v0.1.json"
       - "registry/lineage/public-pages-release.example.json"
@@ -85,6 +87,11 @@ jobs:
         run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"
       - name: Validate dated health and guide ownership
         run: python scripts/validate_repository_health.py
+      - name: Rebuild A7 progress from canonical registry
+        run: |
+          python scripts/generate_a7_roadmap.py --output site/data/a7-roadmap.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_a7_roadmap.py
+          node --check site/assets/a7-roadmap.js
       - name: Derive public reference posters from machine curation
         run: python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
       - name: Validate Memory Wall design and curation

@@ -10,6 +10,7 @@ assert obj["current_staged_sequence"]=="A7-SEQ-000013"
 assert len(obj["developed"])>=8 and len(obj["next"])>=6
 assert len({x["id"] for x in obj["developed"]+obj["next"]})==len(obj["developed"]+obj["next"])
 assert (ROOT/"site/roadmap.html").is_file()
+assert (ROOT/"scripts/generate_a7_roadmap.py").is_file()
 assert (ROOT/"docs/ROADMAP.md").is_file()
 assert "roadmap.html" in (ROOT/"site/index.html").read_text(encoding="utf-8")
 assert "HISTORICAL" not in obj.get("status","")

@@ -455,5 +455,15 @@
       "merged_prs": 24,
       "actions_runs": 24
     }
+  },
+  "a7_progress_dashboard": {
+    "sequence": "A7-SEQ-000028",
+    "status": "FEATURE_STAGED_PENDING_CI",
+    "home": "site/index.html",
+    "page": "site/roadmap.html",
+    "derived_from": "registry/roadmap.json",
+    "workflow": ".github/workflows/deploy-a7-pages.yml",
+    "version_control": "GITHUB",
+    "external_provider_approval_claimed": false
   }
 }
