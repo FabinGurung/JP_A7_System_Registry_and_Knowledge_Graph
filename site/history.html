@@ -1,16 +1,42 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eff8fc"><meta name="description" content="A7 history, preserved previous interfaces, release tags and rollback instructions."><title>A7 · History and Rollback</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eff8fc"><meta name="description" content="A7 Galactic Atlas development history: source commits, merged pull requests, GitHub Actions and real release tags.">
+<title>A7 · Development History</title>
 <link rel="stylesheet" href="assets/a7-unified-theme.css"><link rel="stylesheet" href="assets/a7-site-shell.css"><link rel="stylesheet" href="assets/history.css">
-<script src="assets/a7-site-shell.js" defer></script></head><body class="a7-history">
-<main class="history-page">
-<div class="history-eyebrow">ARCHIVE / SOURCE-VERIFIED REVISIONS</div><h1>Our history is preserved.<br><em>Our workspace stays focused.</em></h1>
-<p class="history-lead">Older interfaces are not part of the everyday navigation. They remain available because Git versions, artifacts and a few advanced tools can be useful for review or rollback. The Galactic Atlas is the primary directory now.</p>
-<div class="history-status"><strong>Current:</strong> Galactic Atlas + control workspace + Memory Wall. <strong>Historical:</strong> old dashboard, pre-arc milestone and standalone visualization technical guide. Archived does not mean deleted.</div>
+<script src="assets/a7-site-shell.js" defer></script><script src="assets/development-history.js" defer></script></head>
+<body class="a7-history"><main class="history-page">
+<div class="dh-level">L0 HOME / L1 DEVELOPMENT HISTORY · A7 SOURCE REPOSITORY ONLY</div>
+<h1>Every change has<br><em>a trail back to Git.</em></h1>
+<p class="history-lead">This is the A7 Galactic Atlas development log. See what changed, which pull requests landed and how GitHub Actions ran—without leaving the website. Select any record to inspect its authoritative evidence on GitHub.</p>
+<div class="dh-metrics" aria-label="Limited history samples">
+<div class="dh-metric"><strong id="dhCommitCount">—</strong><span>Recent commits in this build</span></div>
+<div class="dh-metric"><strong id="dhPrCount">—</strong><span>Recent merged pull requests</span></div>
+<div class="dh-metric"><strong id="dhActionCount">—</strong><span>Recent Actions runs</span></div></div>
+<div class="dh-update" role="status"><span id="dhObserved">Loading source history…</span><span id="dhSource">Reading GitHub build snapshot…</span></div>
+<nav class="dh-index" aria-label="Development history levels">
+<a href="./">← L0 Homepage</a><a href="#commit-timeline">Commit timeline</a><a href="#pull-requests">Merged PRs</a><a href="#actions-history">GitHub Actions</a><a href="#release-tags">Tags &amp; rollback</a></nav>
+<section class="dh-section" id="commit-timeline"><h2>Commit timeline</h2>
+<p class="dh-caption">Git commits in the exact checked-out source graph; merges and source changes are distinguished. Showing a bounded sample, not every commit ever made.</p>
+<div class="dh-filters"><label for="dhSearch">Find a commit<input id="dhSearch" type="search" placeholder="Search commit, sequence or SHA…"></label>
+<label for="dhKind">Kind<select id="dhKind"><option value="all">All commits</option><option value="merge">Merges</option><option value="commit">Direct source commits</option></select></label><span class="dh-count" id="dhMatching" role="status">Loading…</span></div>
+<ol id="dhCommitList" class="dh-feed" aria-label="A7 Git commit timeline"><li>Reading commit graph…</li></ol>
+<p class="dh-caption">Want the entire history? <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/commits/main" target="_blank" rel="noopener noreferrer">View every commit on GitHub ↗</a></p></section>
+<div class="dh-split">
+<section class="dh-section" id="pull-requests"><h2>Merged pull requests</h2><p class="dh-caption">Provider-confirmed completed merges, linked to the exact A7 PR and merge commit. A PR is not automatically a release.</p>
+<ol id="dhPrList" class="dh-compact"><li>Loading…</li></ol>
+<p class="dh-caption"><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pulls?q=is%3Apr+is%3Amerged" target="_blank" rel="noopener noreferrer">Open full merged PR history ↗</a></p></section>
+<section class="dh-section" id="actions-history"><h2>GitHub Actions</h2><p class="dh-caption">Run conclusions at build time. A successful CI run verifies the workflow, not external quality approval. Revisit GitHub for the latest status.</p>
+<ol id="dhActionList" class="dh-compact"><li>Loading…</li></ol>
+<p class="dh-caption"><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions" target="_blank" rel="noopener noreferrer">Open live Actions dashboard ↗</a></p></section>
+</div>
+<section class="dh-section" id="release-tags"><h2>Releases, real tags and rollback</h2>
+<p class="dh-caption">Only actual tags in this Git checkout appear here. Routine commits, source milestones and successful Pages deploys are not automatically GitHub Release tags.</p>
+<ol id="dhTagList" class="dh-compact"><li>Loading…</li></ol>
+<div class="history-actions"><a id="dhSourceLink" href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">Exact source of this build ↗</a><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/docs/HISTORY_AND_ROLLBACK_READ_FIRST.md" target="_blank" rel="noopener noreferrer">Rollback instructions ↗</a></div>
+<p class="history-boundary">GitHub remains the source of truth for the A7 code, PRs, Actions and releases. This site is a rebuildable read-only view. To roll back, use a deliberate reviewed Git change; browsing an older commit does not deploy it.</p></section>
+<details class="dh-archive"><summary>Preserved interfaces &amp; technical references</summary>
+<p class="history-lead">These earlier views remain accessible and are not a replacement homepage.</p>
 <section class="history-grid" aria-label="Archived A7 site sections">
-<article><span>ARCHIVED INTERFACE · STILL ACCESSIBLE</span><h2>Original Dashboard / Classic Graph</h2><p>The classic page retains <strong>2D and lightweight 3D graph exploration, project-module matrices, routing/search and authority inspectors</strong> that the simpler Galaxy directory does not replace one-for-one. Not a second homepage.</p><a href="legacy-overview.html">Open classic advanced tools ↗</a></article>
-<article><span>IMMUTABLE MILESTONE</span><h2>Pre-Galactic Atlas release</h2><p>The earlier navigation and source baseline were frozen before the new arc. This history entry records the reference, the Git tag and available rollback route, without presenting old navigation as current.</p><a href="milestone.html">View milestone evidence ↗</a></article>
-<article><span>TECHNICAL REFERENCE / PINNED INSIDE MEMORY WALL</span><h2>Six Visualization Techniques</h2><p>Cytoscape, React Flow, Tables, Mermaid, Excalidraw and optional 3D now appear as always-visible Memory Wall reminders. The older detailed design/runbook remains readable here for implementers.</p><a href="visualization-workspace.html">Read preserved technical guide ↗</a><a href="memory-wall.html#visualization-reminders">View current Memory Wall reminders ↗</a></article>
-</section>
-<section class="history-recovery"><h2>Restore or inspect a previous release</h2><p>The historical pre-Arc source is fixed at commit <code>49c99f7010e53a66fab94cad4a955e195f9b060d</code> with its annotated release tag. The user interface can be restored only by an explicit governed change, not by visiting this history page.</p>
-<div class="history-actions"><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/pre-galactic-atlas-v0.1.0" target="_blank" rel="noopener noreferrer">Pre-Arc tagged release ↗</a><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph" target="_blank" rel="noopener noreferrer">Current GitHub repository ↗</a><a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/docs/HISTORY_AND_ROLLBACK_READ_FIRST.md" target="_blank" rel="noopener noreferrer">Read-first rollback procedure ↗</a></div>
-<p class="history-boundary">Preserved historical pages are read-only perspectives. A7-SEQ-000013 private A9 Main/Local reconciliation has not been completed by archiving navigation.</p></section>
+<article><span>ARCHIVED INTERFACE</span><h2>Original Dashboard / Classic Graph</h2><p>Original 2D/3D network, route and authority inspection tools, preserved outside the L0 homepage.</p><a href="legacy-overview.html">Open classic graph ↗</a></article>
+<article><span>IMMUTABLE MILESTONE</span><h2>Pre-Galactic Atlas release</h2><p>The tagged point before the Galactic Atlas was introduced, retained for recovery and inspection.</p><a href="milestone.html">View tagged milestone ↗</a></article>
+<article><span>TECHNICAL REFERENCE</span><h2>Six Visualization Techniques</h2><p>Long-form technical design reference. The concise reminders remain in Memory Wall.</p><a href="visualization-workspace.html">Read technical guide ↗</a><a href="memory-wall.html#visualization-reminders">Memory Wall ↗</a></article>
+</section></details>
 </main><script src="assets/fluffy-rocket.js" defer></script></body></html>
