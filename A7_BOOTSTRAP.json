@@ -100,7 +100,7 @@
     "create_new_sequence_for_acknowledgement": false
   },
   "current_sequence": "A7-SEQ-000030",
-  "current_sequence_status": "VALIDATION_PENDING",
+  "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
     "root_nodes": "registry/entities/google-drive-nodes.json",
@@ -491,7 +491,7 @@
   "a7_governance_debt_boundary": {
     "source": "registry/governance/debt-boundaries.v1.json",
     "sequence": "A7-SEQ-000030",
-    "status": "SCOPED_A7_LOCAL_DEBT_REPAIRED_EXTERNAL_OBLIGATIONS_OPEN",
+    "status": "FINAL_CLOSED_PASS_LOCAL_A7_SCOPE__EXTERNAL_OPEN",
     "arc06_gate": "A7_OWNED_RELEASE_CHECKS_ONLY",
     "external_historical_acks_closed": false
   }
