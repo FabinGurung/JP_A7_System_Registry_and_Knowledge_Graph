@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
-  "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
+  "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000029",
+  "current_closed_sequence": "A7-SEQ-000030",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -187,6 +187,13 @@
       "title": "L1 checked-in developer source directory and curated platform responsibility guide",
       "status": "FINAL_CLOSED_PASS",
       "detail": "A7-only L1 developer dock and 7-row platform Memory Wall reference from source-curations, derived by Pages build. Feature PR #63 merged at 283a77bc2f9dce8afbe0474d0b20b217975695d1; main Registry CI 39764414808 PASS, Pages 39764414758 PASS; branch/PR Chromium 39764119173 and 39764276188 PASS. Other repositories not mutated; no A9 Drive writes or optional live service deployments."
+    },
+    {
+      "id": "A7-D26",
+      "stage": "Sequence 30 — A7 governance and local debt boundary",
+      "title": "Repair stale roadmap status and segregate external private obligations from A7 UI release gates",
+      "status": "FINAL_CLOSED_PASS_PENDING_RELEASE_CI",
+      "detail": "Source-internal governance debt audit; human roadmap header corrected, source-checked boundary file. Legacy A7 seq13 private import/Local ACK and external approvals remain OPEN and are only gates to work that depends on them; not an excuse to assert completion. No external writes."
     }
   ],
   "next": [

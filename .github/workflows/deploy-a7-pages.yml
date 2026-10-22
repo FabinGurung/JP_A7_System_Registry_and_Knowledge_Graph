@@ -20,6 +20,7 @@ on:
       - "scripts/generate_a7_development_history.py"
       - "scripts/generate_a7_roadmap.py"
       - "scripts/validate_a7_roadmap.py"
+      - "scripts/validate_a7_governance_debt.py"
       - "scripts/generate_a7_developer_dock.py"
       - "scripts/generate_platform_responsibilities.py"
       - "scripts/validate_developer_dock_platform_board.py"
@@ -90,6 +91,8 @@ jobs:
         run: python scripts/generate_repository_health.py --output site/data/repository-health.json --commit-sha "$GITHUB_SHA"
       - name: Validate dated health and guide ownership
         run: python scripts/validate_repository_health.py
+      - name: Validate A7 release governance debt boundary
+        run: python scripts/validate_a7_governance_debt.py
       - name: Rebuild A7 progress from canonical registry
         run: |
           python scripts/generate_a7_roadmap.py --output site/data/a7-roadmap.json --commit-sha "$GITHUB_SHA"
