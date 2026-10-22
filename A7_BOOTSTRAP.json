@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000027",
+  "current_sequence": "A7-SEQ-000028",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -458,7 +458,7 @@
   },
   "a7_progress_dashboard": {
     "sequence": "A7-SEQ-000028",
-    "status": "FEATURE_STAGED_PENDING_CI",
+    "status": "A7_SEQ28_MERGED_SOURCE_BUILD",
     "home": "site/index.html",
     "page": "site/roadmap.html",
     "derived_from": "registry/roadmap.json",
