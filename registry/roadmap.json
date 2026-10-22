@@ -192,8 +192,8 @@
       "id": "A7-D26",
       "stage": "Sequence 30 — A7 governance and local debt boundary",
       "title": "Repair stale roadmap status and segregate external private obligations from A7 UI release gates",
-      "status": "FINAL_CLOSED_PASS_PENDING_RELEASE_CI",
-      "detail": "Source-internal governance debt audit; human roadmap header corrected, source-checked boundary file. Legacy A7 seq13 private import/Local ACK and external approvals remain OPEN and are only gates to work that depends on them; not an excuse to assert completion. No external writes."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "A7-owned local governance/docs debt scoped and fixed: source README no stale seq21, external historic private provider ACK and owner approvals explicitly OPEN and non-gating for unrelated UI. PR #65 merged 0aada02a0b3d05c3058433486c78f227b6077aaf, Registry CI 39771043631 SUCCESS and Pages 39771043680 SUCCESS, feature browser 39770900525 SUCCESS. No private drive/other repo writes."
     }
   ],
   "next": [
