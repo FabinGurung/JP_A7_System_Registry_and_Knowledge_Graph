@@ -1,0 +1,86 @@
+{
+  "schema": "a7-governance-debt-boundary.v1",
+  "sequence": "A7-SEQ-000030",
+  "owner": "A7_ONLY",
+  "assessment_date": "2026-10-22",
+  "scope_rule": "Closing A7 website debt never certifies an independent external authority or private ledger.",
+  "source_of_truth": {
+    "code": "GITHUB_GIT",
+    "commits": "GITHUB_HISTORY",
+    "workflow_verdicts": "GITHUB_ACTIONS_RUN",
+    "pages": "GITHUB_PAGES_DEPLOYMENT",
+    "domain_outputs": "ORIGINAL_OWNER"
+  },
+  "a7_local_tasks": [
+    {
+      "id": "A7-GD-01",
+      "title": "Correct stale human roadmap headline",
+      "resolution": "REPAIRED_BY_SEQ30",
+      "evidence": "docs/ROADMAP.md and registry/roadmap.json"
+    },
+    {
+      "id": "A7-GD-02",
+      "title": "Prohibit historical private ledger debt from gating unrelated public A7 UI",
+      "resolution": "SCOPED_AND_EXCLUDED_NOT_RECONCILED",
+      "evidence": "registry/governance/debt-boundaries.v1.json"
+    },
+    {
+      "id": "A7-GD-03",
+      "title": "Expose developer/roadmap status as derived rather than live",
+      "resolution": "IMPLEMENTED_SEQ28_29",
+      "evidence": "scripts/validate_a7_roadmap.py"
+    },
+    {
+      "id": "A7-GD-04",
+      "title": "Browser regressions and visual source continuity",
+      "resolution": "IMPLEMENTED_AND_PROVIDER_VERIFIED_SEQ29",
+      "evidence": "scripts/a7_browser_qa.cjs"
+    }
+  ],
+  "external_non_gate_dependencies": [
+    {
+      "id": "A7-N01",
+      "status": "HISTORIC_PRIVATE_CUTOVER_STAGED",
+      "why_not_closed": "A7 public-safe rules exist; old private cross-provider source parity is not proven.",
+      "gate": "ONLY_IF_ACTUALLY_IMPORTING_OR_RECONCILING_PRIVATE_MAIN"
+    },
+    {
+      "id": "A7-N02",
+      "status": "HISTORIC_LOCAL_MAIN_ACK_UNVERIFIED",
+      "why_not_closed": "No private Local consumed cursor ACK inferred from A7 public Git.",
+      "gate": "ONLY_IF_PRIVATE_LOCAL_MAIN_HANDOFF_IS_REQUESTED"
+    },
+    {
+      "id": "A7-N08",
+      "status": "SPECIALIST_OWNER_APPROVAL_OUT_OF_SCOPE",
+      "why_not_closed": "A7 Actions never certifies specialist acceptance.",
+      "gate": "ONLY_IF_PUBLISHING_SPECIALIST_APPROVAL"
+    },
+    {
+      "id": "A7-N04",
+      "status": "PEER_REPO_POLICY_DRIFT_PARTIAL",
+      "why_not_closed": "Cross-repository drift cannot be closed solely by A7's public website.",
+      "gate": "ONLY_IF_CROSS_REPO_BOOTSTRAP_CONTROL_REQUIRED"
+    },
+    {
+      "id": "A7-N05",
+      "status": "PROVIDER_DASHBOARD_LIVE_MONITORING_UNIMPLEMENTED",
+      "why_not_closed": "Current A7 dashboard is source-derived, not live provider polling.",
+      "gate": "ONLY_IF_CLAIMING_REALTIME_STATUS"
+    },
+    {
+      "id": "A7-N07",
+      "status": "OPTIONAL_RUNTIME_DEFERRED",
+      "why_not_closed": "No app auth/database provisioned.",
+      "gate": "ONLY_IF_PRIVATE_CONCURRENT_APP_RUNTIME_REQUIRED"
+    }
+  ],
+  "arc06_entry_contract": {
+    "no_unresolved_a7_local_blockers": true,
+    "interface_changes_require_real_browser": true,
+    "cross_repo_writes": false,
+    "private_drive_writes": false,
+    "no_new_provider_or_engineering_approval_claims": true,
+    "historical_debts_not_reclassified_as_completed": true
+  }
+}
