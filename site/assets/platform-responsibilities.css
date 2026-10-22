@@ -1,0 +1,22 @@
+/* Memory Wall collection 03: A7 platform responsibility field guide. */
+.platform-board{margin:42px 0;background:#fff;border:1px solid #cce2ed;border-radius:22px;padding:clamp(17px,2.8vw,30px);box-shadow:0 16px 37px #8db1c421;scroll-margin-top:100px}
+.platform-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:start}
+.platform-head h2{font-size:clamp(23px,3vw,33px);color:#285776;letter-spacing:-.025em;margin:7px 0}
+.platform-head p{max-width:725px;color:#618299;font-size:13px}
+.platform-pill{border:1px solid #c2dbe7;border-radius:99px;padding:7px 11px;color:#337fa0;font-size:10px;font-weight:850;background:#eaf7fd;white-space:nowrap}
+.platform-model{margin:19px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.platform-model span{font-size:11px;text-align:center;padding:11px 5px;border:1px solid #c9dfec;background:#f0faff;color:#477894;border-radius:9px;font-weight:800}
+.platform-table-wrap{overflow:auto;width:100%;border-radius:13px;border:1px solid #d6e6ef}
+.platform-table{border-collapse:collapse;width:100%;min-width:685px;text-align:left;font-size:12px;color:#496f87}
+.platform-table thead{background:#e8f5fb}.platform-table th{color:#437c9c;font-weight:850;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.platform-table td,.platform-table th{padding:12px 13px;vertical-align:top;border-bottom:1px solid #e2edf3}
+.platform-table tr:last-child td{border-bottom:0}.platform-table tr:nth-child(even) td{background:#f8fcff}
+.platform-table td:first-child{font-size:13px;font-weight:800;color:#2c637e;min-width:160px}
+.platform-table td small{display:block;font-size:10px;color:#8b9bab;margin-top:4px}
+.platform-note{padding:15px 18px;border-left:3px solid #93b9d0;background:#f3faff;margin:18px 0;border-radius:8px}
+.platform-note strong{color:#306c8b}.platform-note p{margin:6px 0 0;color:#617f94;font-size:13px}
+.platform-experiments h3{color:#315f78;font-size:15px}.platform-chips{display:flex;gap:7px;flex-wrap:wrap}
+.platform-chips span{padding:8px 11px;border:1px solid #cce2ee;border-radius:8px;color:#4c7c9b;background:#f9fdff;font-size:11px;font-weight:700}
+.platform-source{font-size:10px;color:#809eaf;margin-top:16px}
+@media(max-width:680px){.platform-model{grid-template-columns:repeat(2,minmax(0,1fr))}.platform-board{margin:28px 0}}
+@media print{.platform-board{break-inside:avoid;box-shadow:none}.platform-table-wrap{overflow:visible}.platform-table{min-width:0;font-size:10px}}

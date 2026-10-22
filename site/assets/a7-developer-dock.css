@@ -1,0 +1,26 @@
+/* A7 Cloud Orbit L1 developer dock */
+.dock-main{max-width:1320px;margin:auto;padding:clamp(22px,4vw,52px);font:14px/1.6 system-ui,sans-serif;color:#31556c}
+.dock-overline{font:850 10px/1.4 system-ui,sans-serif;letter-spacing:.15em;color:#5890ad}
+.dock-hero h1{font-size:clamp(38px,5.6vw,70px);line-height:1.05;letter-spacing:-.05em;color:#295674;margin:14px 0}
+.dock-hero h1 em{font-style:normal;color:#5d99b9}.dock-hero p{max-width:760px;color:#68879a}
+.dock-shortcuts{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 32px}
+.dock-shortcuts a,.dock-boundary a{font-size:12px;color:#26779b;background:#fff;border:1px solid #cde2ee;border-radius:9px;padding:9px 13px;text-decoration:none;font-weight:750}
+.dock-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:30px}
+.dock-steps div{padding:16px;background:#f8fcff;border:1px solid #d0e4ed;border-radius:13px}
+.dock-steps span{color:#528fb1;display:block;font-weight:900;font-size:12px}
+.dock-steps strong,.dock-steps small{display:block}.dock-steps strong{font-size:13px;color:#315b75;margin-top:5px}.dock-steps small{color:#7493a7;font-size:11px}
+.dock-inventory,.dock-boundary{background:#fff;border:1px solid #cee4ed;border-radius:17px;padding:clamp(17px,3vw,27px);box-shadow:0 14px 32px #8bb7ca26}
+.dock-controls{display:flex;align-items:end;justify-content:space-between;gap:13px;flex-wrap:wrap}
+.dock-controls h2{font-size:25px;margin:5px 0}.dock-controls p,.dock-source{font-size:12px;color:#69889b}
+.dock-controls label{display:grid;gap:6px;flex:1 1 210px;max-width:370px;color:#56809c;font-size:11px;font-weight:800}
+.dock-controls input{width:100%;padding:11px;border:1px solid #c5dbe8;border-radius:9px;background:#f7fcff;color:#315b73}
+.dock-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:17px 0}
+.dock-group{border:1px solid #dce9f0;background:#fafeff;border-radius:12px;padding:17px;min-width:0}
+.dock-group h3{font-size:17px;color:#2f6281;margin:0}.dock-group p{font-size:11px;color:#738fa1;margin:4px 0 12px}
+.dock-items{display:grid;gap:8px}
+.dock-item{border:1px solid #dce9f1;border-radius:9px;background:#fff;padding:10px 12px;overflow-wrap:anywhere}
+.dock-item a{color:#317e9e;text-decoration:none;font-size:13px;font-weight:800}
+.dock-item small,.dock-item code{display:block;color:#6d899b;font-size:10px;margin-top:3px}
+.dock-item code{white-space:normal;word-break:break-all;color:#9a7c5f}
+.dock-boundary{margin-top:20px}.dock-boundary h2{margin-top:0}.dock-boundary p{color:#607e93;max-width:880px}
+@media(max-width:750px){.dock-steps,.dock-groups{grid-template-columns:1fr 1fr}}@media(max-width:480px){.dock-groups,.dock-steps{grid-template-columns:1fr}.dock-controls label{max-width:none}}
