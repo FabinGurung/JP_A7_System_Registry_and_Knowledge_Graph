@@ -194,6 +194,13 @@
       "title": "Repair stale roadmap status and segregate external private obligations from A7 UI release gates",
       "status": "FINAL_CLOSED_PASS",
       "detail": "A7-owned local governance/docs debt scoped and fixed: source README no stale seq21, external historic private provider ACK and owner approvals explicitly OPEN and non-gating for unrelated UI. PR #65 merged 0aada02a0b3d05c3058433486c78f227b6077aaf, Registry CI 39771043631 SUCCESS and Pages 39771043680 SUCCESS, feature browser 39770900525 SUCCESS. No private drive/other repo writes."
+    },
+    {
+      "id": "A7-D27",
+      "stage": "A7-SEQ-000031 · Galactic Atlas Arc06 world navigation",
+      "title": "Selected-world flight deck, navigation history, shareable source IDs and grounded two-world comparison",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "One public read-only A7 interaction layer; 9 real stations, links and provider observation dates from existing projection, new selector, previous/next, accessible in-page visit journal, public share links and side-by-side owner scope. No API writes/live provider claims. Browser and registry QA required."
     }
   ],
   "next": [

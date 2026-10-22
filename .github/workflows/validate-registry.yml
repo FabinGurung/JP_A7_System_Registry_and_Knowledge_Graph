@@ -75,6 +75,10 @@ jobs:
         run: |
           python scripts/validate_galactic_atlas_arc04.py
           node --check site/assets/galactic-atlas-arc04.js
+      - name: Validate Arc 06 source-linked world flight deck
+        run: |
+          python scripts/validate_galactic_atlas_arc06.py
+          node --check site/assets/galactic-atlas-arc06.js
       - name: Validate Arc 05 immutable release constellations
         run: |
           python scripts/validate_galactic_atlas_arc05.py

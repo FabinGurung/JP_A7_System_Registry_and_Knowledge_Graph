@@ -1,0 +1,36 @@
+/* A7 Arc06 source-backed world navigation cockpit */
+.arc06-deck{margin:20px 0 16px;padding:clamp(16px,2.4vw,28px);border:1px solid #c3dfeb;border-radius:19px;background:linear-gradient(130deg,#ffffff,#f0faff);box-shadow:0 13px 36px #7eb2c72b;color:#2b566f;scroll-margin-top:110px}
+.arc06-deck *{box-sizing:border-box}
+.arc06-head{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:start}
+.arc06-head h2{color:#285b77;margin:5px 0 8px;font-size:clamp(22px,2.9vw,34px)}
+.arc06-head p{color:#5b8297;max-width:720px;font-size:13px;margin:0;line-height:1.6}
+.arc06-label,.arc06-card-eyebrow{font:850 10px/1.5 system-ui;letter-spacing:.13em;color:#3684aa}
+.arc06-flag{background:#e5f5fc;border:1px solid #b8dceb;color:#397e9f;font:800 10px/1.5 system-ui;padding:7px 11px;border-radius:100px}
+.arc06-command{display:flex;gap:11px;flex-wrap:wrap;align-items:end;margin:20px 0 12px}
+.arc06-command label{display:grid;gap:6px;min-width:210px;flex:1 1 240px;color:#57809a;font-size:11px;font-weight:800}
+.arc06-command select{width:100%;padding:11px;border:1px solid #b7d8e9;color:#355c78;border-radius:9px;background:#fff;font-size:13px}
+.arc06-command button,.arc06-command a{border:1px solid #bcd9e8;background:#fff;color:#2b769a;border-radius:9px;padding:11px 12px;cursor:pointer;font-weight:750;font-size:12px;text-decoration:none;white-space:nowrap}
+.arc06-command button:hover,.arc06-command a:hover{background:#e5f5fb}
+.arc06-command button:disabled{opacity:.5;cursor:wait}
+.arc06-now{display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:#5d8197;padding:10px 0;border-bottom:1px solid #d3e7f0}
+.arc06-now strong{color:#2b5b76}.arc06-now span{font-size:11px}
+.arc06-journal{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0}
+.arc06-journal button{cursor:pointer;border:1px solid #d0e4ee;background:#f8fdff;color:#327998;padding:7px 10px;border-radius:8px;font-size:11px}
+.arc06-compare-zone{margin-top:12px;border-top:1px solid #d1e3ed;padding-top:17px}
+.arc06-compare-head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.arc06-compare-head h3{margin:0;font-size:18px;color:#2e607d}
+.arc06-compare-head label{display:grid;gap:5px;font-size:11px;font-weight:750;color:#58839a}
+.arc06-compare-head select{min-width:240px;max-width:100%;padding:9px;border:1px solid #bfdce9;border-radius:9px;background:white;color:#315c79}
+.arc06-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:12px}
+.arc06-compare-card{border:1px solid #d2e5ee;background:#fff;border-radius:12px;padding:16px;min-width:0}
+.arc06-compare-card h3{font-size:16px;margin:7px 0;color:#2a637d}
+.arc06-compare-card p,.arc06-compare-card dd{font-size:12px;color:#627f92;overflow-wrap:anywhere}
+.arc06-compare-card dl{display:grid;gap:9px}
+.arc06-compare-card dl div{border-top:1px solid #e3eef5;padding-top:7px}
+.arc06-compare-card dt{font-size:10px;color:#5791af;font-weight:850}
+.arc06-compare-card dd{margin:2px 0 0}
+.arc06-compare-card a{font-size:11px;color:#2483a6}
+.arc06-placeholder,.arc06-source{font-size:11px;color:#7795a5}
+.arc06-comparison .arc06-placeholder{grid-column:1/-1}
+@media(max-width:640px){.arc06-comparison{grid-template-columns:1fr}.arc06-command label{flex-basis:100%}.arc06-compare-head label{width:100%}.arc06-compare-head select{width:100%;min-width:0}}
+@media(prefers-reduced-motion:reduce){.arc06-deck *{scroll-behavior:auto}}

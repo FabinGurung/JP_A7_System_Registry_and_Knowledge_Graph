@@ -8,6 +8,7 @@ on:
     paths:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
+      - "scripts/validate_galactic_atlas_arc06.py"
       - "scripts/generate_galactic_atlas.py"
       - "registry/decisions/galactic-atlas-*"
       - "registry/edges/edges.jsonl"
