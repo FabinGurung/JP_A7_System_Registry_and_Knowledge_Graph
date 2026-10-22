@@ -52,6 +52,22 @@ async function inspect(page,kind){
   await page.locator('.star-node[data-repo-id="REPO-000001"]').click();
   await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("6 source-linked history records"));
   pass(kind+": Arc05 true tag, five immutable A7 events, dated peer publication");
+  // The L1 history must be navigable from L0, source-derived and usable on mobile.
+  await page.locator('.a7-shell-nav a[href="history.html"]').click();
+  await page.locator("#dhCommitList .dh-entry").first().waitFor({timeout:15000});
+  const historyCount=await page.locator("#dhCommitList .dh-entry").count();
+  assert.ok(historyCount>=1,"Git history must be populated");
+  await page.locator('#dhCommitList a[href*="/commit/"]').first().waitFor();
+  assert.match(await page.locator("#dhObserved").textContent(),/Dated GitHub Pages build snapshot, not live status/);
+  await page.locator("#dhSearch").fill("A7_NOT_A_REAL_COMMIT_000000");
+  assert.equal(await page.locator("#dhCommitList .dh-entry").count(),0);
+  await page.locator("#dhSearch").fill("");
+  await page.locator("#dhKind").selectOption("merge");
+  assert.ok((await page.locator("#dhCommitList .dh-entry").count())<=historyCount);
+  await page.locator("#dhKind").selectOption("all");
+  pass(kind+": L0 navigation → L1 Git timeline, filters, source commit links");
+  const historyShot=out+"/history-"+kind+".png";
+  await page.screenshot({path:historyShot,fullPage:true});report.screenshots.push(historyShot);
   if(kind==="mobile"){
     const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
     assert.ok(widths.scroll<=widths.viewport+4,"mobile page horizontal overflow: "+JSON.stringify(widths));

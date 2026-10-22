@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -79,6 +81,11 @@ jobs:
           node --check site/assets/galactic-atlas-arc05.js
       - name: Validate private bridge public-safe status and historical hold
         run: python scripts/validate_private_bridge_boundary.py
+      - name: Validate L0 homepage and L1 A7 Git development history
+        run: |
+          python scripts/generate_a7_development_history.py --output .a7-generated-test/development-history.json --offline
+          python scripts/validate_a7_development_history.py --data-dir .a7-generated-test
+          node --check site/assets/development-history.js
       - name: Validate cross-provider source and artifact lineage contract
         run: python scripts/validate_artifact_lineage_contract.py
       - name: Validate domain-guide ownership and dated provider status

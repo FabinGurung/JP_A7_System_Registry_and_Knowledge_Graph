@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 16
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -35,6 +37,11 @@ jobs:
           python scripts/validate_galactic_atlas_arc04.py
           node --check site/assets/galactic-atlas.js
           node --check site/assets/galactic-atlas-arc04.js
+      - name: Generate A7-only Git development timeline offline
+        run: |
+          python scripts/generate_a7_development_history.py --output site/data/development-history.json --offline
+          python scripts/validate_a7_development_history.py --data-dir site/data
+          node --check site/assets/development-history.js
       - name: Install isolated Chromium for browser and viewport checks
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1

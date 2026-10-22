@@ -15,3 +15,44 @@
 .history-actions{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.history-actions a{padding:10px 12px;border-radius:8px;background:#edf7fc;color:#2b769e;border:1px solid #cde0ee;text-decoration:none;font-size:12px}
 .history-boundary{padding:12px;background:#fff8ea;border-left:3px solid #dab47d}
 @media(max-width:930px){.history-grid{grid-template-columns:1fr}}
+
+/* A7 L1 source-linked development diary, within existing Cloud Orbit shell. */
+.history-page .dh-level{font-size:11px;font-weight:850;letter-spacing:.09em;color:#4580a0}
+.dh-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0 12px}
+.dh-metric{background:#fff;border:1px solid #cbe2ec;border-radius:15px;padding:17px 19px;box-shadow:0 9px 23px #8eb8ca16}
+.dh-metric strong{display:block;color:#235979;font-size:29px;line-height:1.2}.dh-metric span{color:#66859a;font-size:12px}
+.dh-update{background:#e9f6fc;border:1px solid #cce3ef;border-radius:12px;padding:12px 15px;font-size:12px;color:#54768d;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dh-index{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.dh-index a,.dh-source-link{padding:9px 13px;text-decoration:none;background:#fff;border:1px solid #bddce9;border-radius:9px;font-size:12px;font-weight:750;color:#2b799c}
+.dh-section{margin:25px 0;border:1px solid #cbe2ec;border-radius:16px;padding:23px;background:#fff;box-shadow:0 11px 30px #8eb8ca19;scroll-margin-top:110px}
+.dh-section h2{font-size:23px;margin:0;color:#285977}.dh-section .dh-caption{color:#65869b;font-size:12px;margin:6px 0 16px}
+.dh-filters{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin:16px 0}
+.dh-filters label{font-size:12px;font-weight:750;color:#557c93;display:grid;gap:5px;flex:1 1 200px}
+.dh-filters input,.dh-filters select{width:100%;border-radius:10px;border:1px solid #b8d7e8;padding:10px 12px;background:#f8fdff;color:#31546a;font-size:14px}
+.dh-count{font-size:11px;color:#65869b;padding-bottom:10px}
+.dh-feed,.dh-compact{list-style:none;margin:0;padding:0}
+.dh-feed{display:grid;gap:10px;max-height:640px;overflow:auto;padding-right:4px}
+.dh-entry{border:1px solid #d9e8f0;background:#f9fdff;border-radius:12px;padding:12px 15px}
+.dh-entry-head{display:flex;gap:8px;flex-wrap:wrap}
+.dh-kind,.dh-seq{font-size:10px;font-weight:800;color:#507e97;letter-spacing:.035em}
+.dh-seq{color:#806b99}
+.dh-entry h3{font-size:14px;line-height:1.45;margin:5px 0;color:#2a5974;overflow-wrap:anywhere}
+.dh-entry h3 a{text-decoration:none;color:inherit}.dh-entry h3 a:hover{text-decoration:underline}
+.dh-entry-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:#65879b}
+.dh-entry-meta code{font-size:11px;color:#3f718d}
+.dh-entry-meta a,.dh-compact-row a{color:#267da4;text-decoration:none}
+.dh-entry-meta a:hover,.dh-compact-row a:hover{text-decoration:underline}
+.dh-split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dh-compact{display:grid;gap:9px;max-height:530px;overflow:auto}
+.dh-compact-row{background:#f8fcff;border:1px solid #dceaf2;border-radius:10px;padding:11px;display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:12px}
+.dh-compact-row small,.dh-compact-row strong{display:block}.dh-compact-row small{font-size:10px;color:#67899e;margin-bottom:4px}
+.dh-compact-row strong{color:#315c78;font-size:12px;font-weight:700;overflow-wrap:anywhere}
+.dh-run-outcome{font-size:11px;white-space:nowrap;padding:4px 8px;background:#eef5fa;border:1px solid #cbdde9;border-radius:99px;color:#53758c}
+.dh-run-outcome[data-state="success"]{background:#e8f6f0;color:#35765c;border-color:#b8dfcc}
+.dh-run-outcome[data-state="failure"]{background:#fff0ee;color:#b25145;border-color:#f2c8bf}
+.dh-empty{margin:0;color:#65859c;padding:14px;font-size:13px}
+.dh-archive{margin-top:28px;border-top:1px solid #cfdfeb;padding-top:22px}
+.dh-archive summary{cursor:pointer;font-weight:800;color:#336582;font-size:15px}
+.dh-archive .history-grid{margin-top:18px}
+@media(max-width:820px){.dh-split{grid-template-columns:1fr}.dh-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.dh-metrics{grid-template-columns:1fr}.dh-section{padding:15px}.dh-feed{max-height:550px}.dh-compact-row{align-items:flex-start;flex-direction:column}}

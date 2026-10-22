@@ -433,5 +433,17 @@
     "pr_browser_qa_run": 39624257598,
     "scientific_approval_claim": false,
     "arc06_started": false
+  },
+  "a7_development_history": {
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "sequence": "A7-SEQ-000027",
+    "l0": "site/index.html",
+    "l1": "site/history.html",
+    "generator": "scripts/generate_a7_development_history.py",
+    "validator": "scripts/validate_a7_development_history.py",
+    "source_authority": "GITHUB_GIT_COMMITS_TAGS_PULL_REQUESTS_ACTIONS",
+    "snapshot_rule": "GIT_GRAPH_AT_BUILD_PLUS_GITHUB_API_PROVIDER_READBACK_FOR_PAGES",
+    "other_repository_feeds": false,
+    "google_drive_library_mutation": false
   }
 }

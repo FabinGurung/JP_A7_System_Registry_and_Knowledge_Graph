@@ -5,7 +5,7 @@ import json,re,hashlib,xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[1]
 htmls=sorted((R/"site").glob("*.html"))
 assert len(htmls)==11, [x.name for x in htmls]
-primary=["index.html","control-towers.html","repository-status.html","memory-wall.html","roadmap.html","how-it-works.html"]
+primary=["index.html","history.html","control-towers.html","repository-status.html","memory-wall.html","roadmap.html"]
 archived=["legacy-overview.html","milestone.html","visualization-workspace.html"]
 shell=(R/"site/assets/a7-site-shell.js").read_text()
 style=(R/"site/assets/a7-site-shell.css").read_text()
@@ -33,6 +33,8 @@ assert 'href="legacy-overview.html"' not in home
 assert 'href="visualization-workspace.html"' not in home
 assert 'href="milestone.html"' not in home
 assert 'href="history.html"' in home
+assert 'class="dh-home-jump"' in home
+assert '["history.html","Development History"' in shell
 assert all('href="'+n+'"' in history for n in archived)
 assert 'id="visualization-reminders"' in memory
 assert 'memory-visualization.js' in memory
@@ -45,8 +47,8 @@ assert '<canvas id="graphCanvas">' in (R/"site/legacy-overview.html").read_text(
 assert 'class="galaxy-experience"' in home
 assert 'id="spaceField"' in home
 assert 'href="history.html"' in home
-assert "A7-SEQ-000013" in history
-assert "49c99f7010e53a66fab94cad4a955e195f9b060d" in history
+assert "GitHub remains the source of truth" in history
+assert "49c99f7010e53a66fab94cad4a955e195f9b060d" in (R/"site/milestone.html").read_text()
 p=(R/"registry/decisions/site-navigation-consolidation.v0.1.json")
 d=json.loads(p.read_text())
 assert d["status"]=="PRESENTATION_ONLY_NAVIGATION_CHANGE"

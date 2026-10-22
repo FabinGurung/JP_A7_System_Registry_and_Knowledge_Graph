@@ -31,3 +31,7 @@ body.a7-shell-ready .galaxy-shell,body.a7-shell-ready .ct-shell,body.a7-shell-re
 body.a7-shell-ready .galaxy-intro h1,body.a7-shell-ready .ct-hero h1,body.a7-shell-ready .wall-hero h1{letter-spacing:-.047em}
 @media(max-width:850px){.a7-shell-header{align-items:flex-start}.a7-shell-nav{justify-content:flex-start;width:100%;overflow-x:auto;flex-wrap:nowrap;padding:3px 0 5px}.a7-shell-nav>a,.a7-shell-more>summary{font-size:11px;padding:7px 8px}.a7-shell-more{position:static}.a7-shell-menu{right:10px;left:auto;top:auto;min-width:200px}.a7-shell-footer a{margin-left:6px}}
 @media print{.a7-shell-header,.a7-shell-context,.a7-shell-footer{display:none!important}}
+
+/* A7 L0->L1 Git source history shortcut */
+.dh-home-jump{margin:15px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 15px;border:1px solid #c2e0ec;border-radius:12px;background:#f8fcff;color:#52788d;font-size:12px}
+.dh-home-jump strong{color:#2b7093}.dh-home-jump a{display:inline-block;padding:8px 11px;border:1px solid #bddce9;border-radius:9px;background:#e5f5fb;text-decoration:none;font-weight:800;color:#286f93}
