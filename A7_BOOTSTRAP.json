@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000026",
+  "current_sequence": "A7-SEQ-000027",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -435,7 +435,7 @@
     "arc06_started": false
   },
   "a7_development_history": {
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "status": "GITHUB_MAIN_PAGES_AND_CHROMIUM_PROVIDER_VERIFIED",
     "sequence": "A7-SEQ-000027",
     "l0": "site/index.html",
     "l1": "site/history.html",
@@ -444,6 +444,16 @@
     "source_authority": "GITHUB_GIT_COMMITS_TAGS_PULL_REQUESTS_ACTIONS",
     "snapshot_rule": "GIT_GRAPH_AT_BUILD_PLUS_GITHUB_API_PROVIDER_READBACK_FOR_PAGES",
     "other_repository_feeds": false,
-    "google_drive_library_mutation": false
+    "google_drive_library_mutation": false,
+    "source_pr": 59,
+    "source_sha": "89ae9616d184d2cd2db2d3177b53fcaeb0df28e8",
+    "source_main_registry_ci": 39699665201,
+    "source_main_pages": 39699665198,
+    "source_main_browser_qa": 39699665196,
+    "source_build_sample": {
+      "commits": 80,
+      "merged_prs": 24,
+      "actions_runs": 24
+    }
   }
 }

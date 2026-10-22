@@ -12,3 +12,7 @@
 - `python scripts/validate_a7_development_history.py --data-dir site/data` validates sample bounded source evidence; desktop/mobile Playwright QA checks L0 navigation, history search, commit link, filters and layout.
 
 This feature intentionally **does not open or update A9 Google Drive Main Library**, create ACKs, alter other repositories or add an external database. GitHub already preserves revision history.
+
+## Actual source-release gate — 22 October 2026
+
+Feature [PR #59](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/59) merged at `89ae9616d184d2cd2db2d3177b53fcaeb0df28e8`. GitHub Actions Registry CI 39699665201, Pages 39699665198, real desktop/mobile Chromium QA 39699665196 all SUCCESS. The provider-backed Pages generator recorded 80 commits, 24 merged PRs and 24 run snapshots (bounded samples). Source commit SHA and build time always appear on the L1 page. GitHub stays canonical for the underlying records; no external file system controls were changed. Closeout and POST parity follow.
