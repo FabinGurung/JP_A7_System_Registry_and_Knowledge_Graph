@@ -173,6 +173,13 @@
       "title": "A7-only source-controlled commit, PR and Actions history at L1",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Git-native L1 /history.html promoted and linked from L0. Pages build at 89ae9616d184d2cd2db2d3177b53fcaeb0df28e8 generated 80 recent A7 commits, 24 merged PRs, 24 Actions observations with provider readback. Source PR #59. Main Registry CI 39699665201 SUCCESS, Pages 39699665198 SUCCESS, automated real Chromium QA 39699665196 SUCCESS. GitHub remains the sole version-control authority; no A9 write or other repository mutation. Final closeout run/POST branch verified separately."
+    },
+    {
+      "id": "A7-D24",
+      "stage": "Sequence 28 — source-backed L1 A7 progress",
+      "title": "Replace stale hardcoded roadmap with registry-derived progress and source-linked evidence",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "L1 roadmap source-bound to current registry; five A7-only backlog workstreams, searchable milestones, build SHA source hash, no fabricated live or external statuses; old hardcoded milestone copy removed."
     }
   ],
   "next": [

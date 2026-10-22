@@ -1,0 +1,25 @@
+/* Cloud Orbit L1 Progress — quiet panels, readable audit trails. */
+.a7-progress{max-width:1340px;padding:clamp(20px,4vw,52px);margin:auto;color:#294e68;font:14px/1.6 system-ui,sans-serif}
+.rp-kicker,.rp-head span{font-size:10px;letter-spacing:.14em;font-weight:850;color:#558dad}
+.rp-hero h1{font-size:clamp(37px,5.4vw,68px);letter-spacing:-.045em;line-height:1.04;margin:11px 0;color:#285675}
+.rp-hero h1 em{font-style:normal;color:#5e9dbe}.rp-hero>p{max-width:790px;color:#5c7f95}
+.rp-links{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}.rp-links a,.rp-machine{display:inline-block;text-decoration:none;border:1px solid #c8e1ec;background:white;padding:9px 13px;border-radius:9px;color:#2c789d;font-weight:750;font-size:12px}
+.rp-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0 12px}
+.rp-stats article,.rp-panel{background:#fff;border:1px solid #cfe3ed;border-radius:16px;box-shadow:0 13px 30px #6e9fb521}
+.rp-stats article{padding:18px}.rp-stats span{display:block;color:#66889d;font-size:12px}
+.rp-stats strong{font-size:clamp(18px,3.5vw,32px);color:#2d7196;word-break:break-word}
+.rp-provenance{color:#65899e;font-size:11px;border-bottom:1px solid #d0e2ed;padding:10px 0 17px}
+.rp-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(290px,1fr);align-items:start;gap:15px;margin:19px 0}
+.rp-panel{padding:22px}.rp-head{display:flex;align-items:end;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.rp-head h2{font-size:23px;line-height:1.25;margin:5px 0}.rp-head p{color:#68879c;font-size:12px;max-width:550px}
+.rp-head label{display:grid;gap:4px;color:#618298;font-size:11px;font-weight:750}
+.rp-head input{border:1px solid #c9dfeb;border-radius:9px;padding:9px 11px;min-width:225px;background:#f8fdff;color:#31536a}
+.rp-ledger{display:grid;gap:9px;margin-top:20px;max-height:850px;overflow-y:auto;padding-right:4px}
+.rp-item,.rp-task{border:1px solid #d7e6ef;background:#f9fdff;border-radius:11px;padding:14px}
+.rp-item small,.rp-task small{display:block;color:#5985a0;font-weight:750;letter-spacing:.03em;font-size:10px}
+.rp-item h3,.rp-task h3{color:#295b79;font-size:15px;line-height:1.35;margin:7px 0}
+.rp-item p,.rp-task p{font-size:12px;color:#68869a;margin:7px 0}
+.rp-status{font-size:10px;color:#34715e;background:#e8f7f2;padding:3px 7px;border-radius:6px;display:inline-block;overflow-wrap:anywhere}
+.rp-status[data-state="open"]{color:#81683b;background:#fff4e2}
+.rp-tasks{display:grid;gap:10px;margin:18px 0}.rp-footer-note{font-size:12px;color:#638399}.rp-machine{margin:3px}
+@media(max-width:820px){.rp-layout{grid-template-columns:1fr}}@media(max-width:480px){.rp-stats{grid-template-columns:1fr}.rp-head label,.rp-head input{width:100%;min-width:0}}

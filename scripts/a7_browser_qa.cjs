@@ -68,6 +68,13 @@ async function inspect(page,kind){
   pass(kind+": L0 navigation → L1 Git timeline, filters, source commit links");
   const historyShot=out+"/history-"+kind+".png";
   await page.screenshot({path:historyShot,fullPage:true});report.screenshots.push(historyShot);
+  await page.goto(URL+"roadmap.html",{waitUntil:"load"});
+  await page.locator("#roadmapDeveloped .rp-item").first().waitFor();
+  assert.ok((await page.locator("#roadmapDeveloped .rp-item").count())>=20);
+  assert.match(await page.locator("#roadmapSequence").textContent(),/^0{0,4}2[78]$/);
+  await page.locator("#roadmapSearch").fill("unlikely_xyz_a7_roadmap");
+  assert.equal(await page.locator("#roadmapDeveloped .rp-item").count(),0);
+  pass(kind+": L1 source-built roadmap and working search");
   if(kind==="mobile"){
     const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
     assert.ok(widths.scroll<=widths.viewport+4,"mobile page horizontal overflow: "+JSON.stringify(widths));

@@ -90,6 +90,10 @@ jobs:
         run: python scripts/validate_artifact_lineage_contract.py
       - name: Validate domain-guide ownership and dated provider status
         run: python scripts/validate_repository_health.py
+      - name: Validate A7 L1 source-derived roadmap
+        run: |
+          python scripts/validate_a7_roadmap.py
+          node --check site/assets/a7-roadmap.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket

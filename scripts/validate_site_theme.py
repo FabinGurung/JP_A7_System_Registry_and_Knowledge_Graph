@@ -19,7 +19,10 @@ for path in theme["locations"]:
     assert 'content="#eff8fc"' in content, f"browser chrome theme mismatch on {path}"
     if path.endswith("governance.html") or path.endswith("roadmap.html"):
         assert 'class="standalone-page"' in content, f"standalone theme scope missing {path}"
-        assert content.index("</style>") < content.index("assets/sky-theme.css"), f"theme must override inline style {path}"
+        if "</style>" in content:
+            assert content.index("</style>") < content.index("assets/sky-theme.css"), f"theme must override inline style {path}"
+        else:
+            assert path.endswith("roadmap.html") and "assets/a7-roadmap.css" in content, f"standalone stylesheet not found {path}"
     else:
         assert content.index("assets/styles.css") < content.index("assets/sky-theme.css"), f"theme load order wrong {path}"
 for token in ["NODE_PALETTE","execution_profile","project","research_project","#3a627c"]:
