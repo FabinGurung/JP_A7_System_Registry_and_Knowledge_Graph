@@ -17,6 +17,8 @@ on:
       - "scripts/validate_galactic_atlas_arc05.py"
       - "scripts/validate_artifact_lineage_contract.py"
       - "scripts/validate_private_bridge_boundary.py"
+      - "scripts/generate_a7_development_history.py"
+      - "scripts/validate_a7_development_history.py"
       - "registry/contracts/source-artifact-lineage.v0.1.json"
       - "registry/lineage/public-pages-release.example.json"
       - "scripts/generate_repository_health.py"
@@ -29,6 +31,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -42,6 +45,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -84,6 +89,13 @@ jobs:
         run: python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
       - name: Validate Memory Wall design and curation
         run: python scripts/validate_memory_wall.py
+      - name: Generate bounded owner Git commits + provider-backed PR/Actions history
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/generate_a7_development_history.py --output site/data/development-history.json --require-provider
+          python scripts/validate_a7_development_history.py --data-dir site/data
+          node --check site/assets/development-history.js
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - name: Configure Pages

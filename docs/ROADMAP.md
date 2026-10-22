@@ -165,3 +165,7 @@ Explicitly approved bounded private Main Library original-provider registration 
 ### A7-SEQ-000026 — current private public-Git identity projection FINAL_CLOSED_PASS
 
 Implementation PR #57; source merge `d5300d9e424afaa7159fed77bd7d3182ed50fcf7`; Registry CI 39688855866 and Pages 39688855848 both SUCCESS. This releases only a public-safe status observation after a separately authorized private Main provider write and readback. It does not expose private row or document IDs and does not claim historical Main/Local ACK, researcher scientific QA or an active runtime exchange. PRE retained, closeout PR + final Pages and POST comparison follow.
+
+### A7-SEQ-000027 — L0 homepage → L1 Git Development History (feature staged)
+
+Existing history.html becomes the L1 A7-only development log, backed by exact Git commits and tags plus provider-read PR/Actions snapshots during GitHub Pages build. Archived interfaces remain behind disclosure; Cloud Orbit homepage and fluffy rocket remain. GitHub is source/version control; no Drive A9 changes.

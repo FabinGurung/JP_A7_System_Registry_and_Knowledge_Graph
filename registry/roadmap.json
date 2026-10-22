@@ -166,6 +166,13 @@
       "title": "Provider-verified public repo identity admission without synthetic Local ACK",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Authorized original-provider private Main identity projection and exact native readback passed; dated aggregate public status recorded by PR #57 at d5300d9e424afaa7159fed77bd7d3182ed50fcf7. Main Registry CI 39688855866 and Pages 39688855848 PASS; PR Chromium 39688750179 PASS. Main/Local historical ACK and original A9 control/source parity are explicitly OPEN. Private record IDs and row details retained only in owner private audit. No next Arc."
+    },
+    {
+      "id": "A7-D23",
+      "stage": "Sequence 27 — L0/L1 navigation and source-built A7 development diary",
+      "title": "A7-only source-controlled commit, PR and Actions history at L1",
+      "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+      "detail": "Promote existing history.html to an actual L1 development page; L0 homepage preserved. Build Git commit and tag history from full Git checkout, merge/Actions from GitHub public provider API at Pages build. Display date and scope, no duplicate version authority or Drive A9 updates; archive remains under a disclosure."
     }
   ],
   "next": [
