@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000030",
+  "current_sequence": "A7-SEQ-000031",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -497,7 +497,7 @@
   },
   "a7_galactic_atlas_arc06": {
     "sequence": "A7-SEQ-000031",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "status": "FINAL_CLOSED_PASS_VERIFIED_MAIN_CI_PAGES_BROWSER",
     "scope": "A7_STATIC_UI_ONLY",
     "source": "scripts/generate_galactic_atlas.py",
     "presentation": "site/index.html#arc06FlightDeck",
@@ -505,6 +505,13 @@
     "comparison": "SOURCE_DESCRIPTORS_ONLY",
     "url_links": "VALIDATED_REPO_IDS_ONLY",
     "runtime_handoff_claims": 0,
-    "external_writes": 0
+    "external_writes": 0,
+    "source_main_sha": "571c82dab755d0c386ce136c4a5eafac06d49c91",
+    "source_pr": 67,
+    "main_runs": {
+      "ci": 39772624811,
+      "pages": 39772624987,
+      "chromium": 39772624771
+    }
   }
 }
