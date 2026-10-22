@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000030` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000031` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
