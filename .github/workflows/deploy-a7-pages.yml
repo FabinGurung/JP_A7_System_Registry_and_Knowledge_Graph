@@ -20,6 +20,9 @@ on:
       - "scripts/generate_a7_development_history.py"
       - "scripts/generate_a7_roadmap.py"
       - "scripts/validate_a7_roadmap.py"
+      - "scripts/generate_a7_developer_dock.py"
+      - "scripts/generate_platform_responsibilities.py"
+      - "scripts/validate_developer_dock_platform_board.py"
       - "scripts/validate_a7_development_history.py"
       - "registry/contracts/source-artifact-lineage.v0.1.json"
       - "registry/lineage/public-pages-release.example.json"
@@ -92,6 +95,13 @@ jobs:
           python scripts/generate_a7_roadmap.py --output site/data/a7-roadmap.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_a7_roadmap.py
           node --check site/assets/a7-roadmap.js
+      - name: Build verified source paths and curated platform Memory Wall
+        run: |
+          python scripts/generate_a7_developer_dock.py --output site/data/a7-developer-dock.json --commit-sha "$GITHUB_SHA"
+          python scripts/generate_platform_responsibilities.py --output site/data/platform-responsibilities.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_developer_dock_platform_board.py
+          node --check site/assets/a7-developer-dock.js
+          node --check site/assets/platform-responsibilities.js
       - name: Derive public reference posters from machine curation
         run: python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
       - name: Validate Memory Wall design and curation

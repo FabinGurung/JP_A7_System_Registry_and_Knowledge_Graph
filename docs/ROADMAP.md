@@ -173,3 +173,7 @@ Existing history.html becomes the L1 A7-only development log, backed by exact Gi
 ### A7-SEQ-000027 — L1 Git Development History published and source-verified
 
 Feature PR #59 merged at `89ae9616d184d2cd2db2d3177b53fcaeb0df28e8`. Registry CI [39699665201](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39699665201), Pages [39699665198](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39699665198) and Chromium [39699665196](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39699665196) SUCCESS. L0 homepage and L1 /history.html now form one source-linked navigation; Pages generated 80 recent A7 commits, 24 merged PRs, 24 recent Actions runs at a dated build boundary. GitHub is the only version-control authority; no A9 or other repositories updated. Final closeout CI/Pages and POST equality follow.
+
+### A7-SEQ-000029 — Developer Dock + Memory Wall platform operating map (feature staged)
+
+A7-only Developer Dock and a source-pinned source directory of files, generators, validators and workflows; a compact seven-platform responsibility matrix on Memory Wall, rendered from a checked-in curation. No backend execution, no optional service provisioning, no external repository updates, no Google Drive writes. Tests cover semantic table, source provenance and mobile/browser navigation.

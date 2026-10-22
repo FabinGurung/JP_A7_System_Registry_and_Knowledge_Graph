@@ -7,6 +7,7 @@ const routes=[
  ["repository-status.html","Mission Status","Dated provider observations"],
  ["memory-wall.html","Memory Wall","Pinned learning and visualization reminders"],
  ["roadmap.html","Roadmap","Development and priorities"],
+ ["developer-dock.html","Developer Dock","L1 · source files, generators and automated checks"],
  ["how-it-works.html","How It Works","Operator and developer guidance"],
  ["governance.html","Governance","Git and Drive control boundaries"],
  ["legacy-overview.html","Classic Graph","Archived advanced graph and project matrices"],
@@ -25,7 +26,7 @@ function create(){
  const primary=routes.slice(0,6);
  for(const [path,label] of primary)nav.append(link(path,label,id===path));
  const more=el("details",undefined,"a7-shell-more");const sum=el("summary","More");const menu=el("div",undefined,"a7-shell-menu");
- for(const [path,label] of routes.slice(6,8))menu.append(link(path,label,id===path));
+ for(const [path,label] of routes.slice(6,9))menu.append(link(path,label,id===path));
  const github=el("a","GitHub source ↗");github.href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph";github.target="_blank";github.rel="noopener noreferrer";menu.append(github);
  more.append(sum,menu);more.addEventListener("click",e=>{if(e.target.closest("a"))more.open=false;});
  document.addEventListener("click",e=>{if(more.open&&!more.contains(e.target))more.open=false;});

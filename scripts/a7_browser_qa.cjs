@@ -75,6 +75,18 @@ async function inspect(page,kind){
   await page.locator("#roadmapSearch").fill("unlikely_xyz_a7_roadmap");
   assert.equal(await page.locator("#roadmapDeveloped .rp-item").count(),0);
   pass(kind+": L1 source-built roadmap and working search");
+  await page.goto(URL+"developer-dock.html",{waitUntil:"load"});
+  await page.locator("#dockGroups .dock-item").first().waitFor();
+  assert.ok((await page.locator("#dockGroups .dock-item").count())>=15);
+  await page.locator("#dockSearch").fill("unlikely_xyz_dock_123");
+  assert.equal(await page.locator("#dockGroups .dock-item").count(),0);
+  await page.goto(URL+"memory-wall.html#platform-role-board",{waitUntil:"load"});
+  await page.locator("#platformRows tr").nth(6).waitFor();
+  assert.equal(await page.locator("#platformRows tr").count(),7);
+  assert.match(await page.locator("#platformExample").textContent(),/IFC parser/);
+  assert.equal(await page.locator("#platformExamples span").count(),6);
+  pass(kind+": L1 developer file search and semantic seven-role platform board");
+  await page.screenshot({path:out+"/developer-platform-"+kind+".png",fullPage:true});
   if(kind==="mobile"){
     const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
     assert.ok(widths.scroll<=widths.viewport+4,"mobile page horizontal overflow: "+JSON.stringify(widths));

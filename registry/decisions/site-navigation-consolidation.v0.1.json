@@ -13,6 +13,7 @@
     "roadmap.html"
   ],
   "more_pages": [
+    "developer-dock.html",
     "how-it-works.html",
     "governance.html"
   ],
@@ -49,5 +50,8 @@
   "l1_development_history": "history.html",
   "history_display_authority": "A7_GIT_PLUS_GITHUB_API_PUBLIC_OWNER_AT_PAGES_BUILD",
   "history_is_build_snapshot_not_live": true,
-  "history_archives_preserved": true
+  "history_archives_preserved": true,
+  "l1_developer_dock": "developer-dock.html",
+  "memory_wall_platform_guide": "memory-wall.html#platform-role-board",
+  "additional_page_count": 1
 }

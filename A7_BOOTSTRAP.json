@@ -465,5 +465,23 @@
     "workflow": ".github/workflows/deploy-a7-pages.yml",
     "version_control": "GITHUB",
     "external_provider_approval_claimed": false
+  },
+  "a7_developer_dock": {
+    "sequence": "A7-SEQ-000029",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "page": "site/developer-dock.html",
+    "source_manifest": "registry/curations/a7-developer-dock.v0.1.json",
+    "curated_source_exists_required": true,
+    "only_a7_files": true,
+    "actions_are_scoped_tests": true
+  },
+  "a7_memory_platform_map": {
+    "sequence": "A7-SEQ-000029",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "page": "site/memory-wall.html#platform-role-board",
+    "curation": "registry/curations/platform-responsibilities.v0.1.json",
+    "platforms": 7,
+    "not_operational_proof": true,
+    "optional_services_not_deployed": true
   }
 }

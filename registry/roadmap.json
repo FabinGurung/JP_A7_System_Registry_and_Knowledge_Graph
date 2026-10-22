@@ -180,6 +180,13 @@
       "title": "Replace stale hardcoded roadmap with registry-derived progress and source-linked evidence",
       "status": "FINAL_CLOSED_PASS",
       "detail": "L1 roadmap source-bound to current registry; five A7-only backlog workstreams, searchable milestones, build SHA source hash, no fabricated live or external statuses; old hardcoded milestone copy removed."
+    },
+    {
+      "id": "A7-D25",
+      "stage": "Sequence 29 — Developer Dock and Platform Memory Map",
+      "title": "L1 checked-in developer source directory and curated platform responsibility guide",
+      "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+      "detail": "Add L1 Developer Dock with A7 source-pinned paths, generators and QA boundaries; install seven-tool compact responsibilities table and six GitHub Actions possibilities on Memory Wall. No Supabase/Vercel deployment implied."
     }
   ],
   "next": [
@@ -222,7 +229,7 @@
       "id": "A7-N05",
       "priority": "P2",
       "title": "Roadmap and authority dashboard with real observations",
-      "state": "PARTIAL_VERIFIED_SNAPSHOT",
+      "state": "A7_SOURCE_DERIVED_ROADMAP_COMPLETE__OTHER_CROSS_REPO_DASHBOARD_GATES_SEPARATE",
       "done_when": "Show current policy migration stages, provider-confirmed releases, audit gaps and human-QA queue. No stale SHA claimed current. A dated 9-repository status page is delivered; live provider queries and QA queue integration remain."
     },
     {
@@ -250,7 +257,7 @@
       "id": "A7-N10",
       "priority": "P2",
       "title": "Galaxy sectors, Developer Dock and operator guidance",
-      "state": "PARTIAL_ARC03_DONE_DEVELOPER_DOCK_PENDING",
+      "state": "DEVELOPER_DOCK_STAGED_CI_PENDING",
       "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
     },
     {

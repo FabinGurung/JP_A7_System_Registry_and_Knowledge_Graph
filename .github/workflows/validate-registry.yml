@@ -94,6 +94,11 @@ jobs:
         run: |
           python scripts/validate_a7_roadmap.py
           node --check site/assets/a7-roadmap.js
+      - name: Validate source-pinned A7 dock and curated platform Memory Wall
+        run: |
+          python scripts/validate_developer_dock_platform_board.py
+          node --check site/assets/a7-developer-dock.js
+          node --check site/assets/platform-responsibilities.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket
