@@ -52,6 +52,20 @@ async function inspect(page,kind){
   await page.locator('.star-node[data-repo-id="REPO-000001"]').click();
   await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("6 source-linked history records"));
   pass(kind+": Arc05 true tag, five immutable A7 events, dated peer publication");
+  await page.locator("#arc06World").waitFor({state:"visible"});
+  await page.waitForFunction(()=>document.querySelector("#arc06World")?.options.length===9);
+  await page.locator("#arc06World").selectOption("REPO-000006");
+  await page.locator("#arc06Go").click();
+  await page.waitForFunction(()=>window.a7SelectedStationId==="REPO-000006");
+  assert.match(page.url(),/world=REPO-000006/);
+  await page.locator("#arc06CompareWorld").selectOption("REPO-000003");
+  await page.waitForFunction(()=>document.querySelectorAll("#arc06Comparison .arc06-compare-card").length===2);
+  assert.match(await page.locator("#arc06CompareStatus").textContent(),/not implied/);
+  await page.locator("#arc06Next").click();
+  await page.waitForFunction(()=>window.a7SelectedStationId!=="REPO-000006");
+  assert.ok((await page.locator("#arc06Journal button").count())>=2);
+  pass(kind+": Arc06 world flight deck, route URL, next and source-only comparison");
+  await page.screenshot({path:out+"/arc06-"+kind+".png",fullPage:true});
   // The L1 history must be navigable from L0, source-derived and usable on mobile.
   await page.locator('.a7-shell-nav a[href="history.html"]').click();
   await page.locator("#dhCommitList .dh-entry").first().waitFor({timeout:15000});

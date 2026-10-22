@@ -494,5 +494,17 @@
     "status": "FINAL_CLOSED_PASS_LOCAL_A7_SCOPE__EXTERNAL_OPEN",
     "arc06_gate": "A7_OWNED_RELEASE_CHECKS_ONLY",
     "external_historical_acks_closed": false
+  },
+  "a7_galactic_atlas_arc06": {
+    "sequence": "A7-SEQ-000031",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_CI",
+    "scope": "A7_STATIC_UI_ONLY",
+    "source": "scripts/generate_galactic_atlas.py",
+    "presentation": "site/index.html#arc06FlightDeck",
+    "station_count": 9,
+    "comparison": "SOURCE_DESCRIPTORS_ONLY",
+    "url_links": "VALIDATED_REPO_IDS_ONLY",
+    "runtime_handoff_claims": 0,
+    "external_writes": 0
   }
 }

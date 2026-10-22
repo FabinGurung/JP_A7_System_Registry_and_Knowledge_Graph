@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="assets/galactic-atlas-arc03.css">
 <link rel="stylesheet" href="assets/galactic-atlas-arc04.css">
 <link rel="stylesheet" href="assets/galactic-atlas-arc05.css">
+<link rel="stylesheet" href="assets/galactic-atlas-arc06.css">
 <script src="assets/galactic-atlas-arc05.js" defer></script>
+<script src="assets/galactic-atlas-arc06.js" defer></script>
 <script src="assets/galactic-atlas-arc04.js" defer></script>
 <link rel="stylesheet" href="assets/a7-site-shell.css">
 <script src="assets/a7-site-shell.js" defer></script>
@@ -27,7 +29,7 @@
 </nav></header>
 <main class="galaxy-shell">
 <section class="galaxy-intro" aria-label="Introduction">
-<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 05 / RELEASE CONSTELLATIONS</div>
+<div class="arc-kicker"><span class="pulse-dot"></span> EXPLORATION ARC / STAGE 06 / WORLD FLIGHT DECK</div>
 <h1>One galaxy.<br><em>Independent systems.</em></h1>
 <p>A7 is the map, not the machine. Browse systems by sector, inspect dated release constellations, documented routes and explicitly unverified ideas, search for a destination, and inspect capabilities, owning branches, dated GitHub evidence and unresolved gates. Every system retains independent source and approval authority.</p>
 <div class="arc-meta"><span>9 indexed repositories</span><span>8 destination systems</span><span>Zero authority transfers</span></div>
@@ -87,6 +89,23 @@
 <p class="inspector-caveat" id="selectedEvidence">Recorded links are catalogue observations; live statuses belong to each provider.</p>
 </aside>
 </section>
+<section class="arc06-deck" id="arc06FlightDeck" tabindex="0" aria-label="World flight deck, keyboard navigation, source-backed comparison">
+<div class="arc06-head"><div><span class="arc06-label">ARC 06 / WORLD FLIGHT DECK</span><h2>Navigate the galaxy, keep your bearings.</h2>
+<p>Inspect one world at a time, jump between stations, share a specific world, or compare two public catalogue descriptions. No runtime integration, engineering acceptance or live provider status is implied.</p></div>
+<span class="arc06-flag">PUBLIC SOURCE · READ ONLY</span></div>
+<div class="arc06-command"><label for="arc06World">Choose a world
+<select id="arc06World" disabled aria-label="Source-backed world selection"></select></label>
+<button type="button" id="arc06Go" disabled>Inspect world ↗</button>
+<button type="button" id="arc06Prev" disabled title="Previous world">← Previous</button>
+<button type="button" id="arc06Next" disabled title="Next world">Next →</button>
+<a id="arc06Share" href="./" title="Copy the browser address or share this world link">Share world link ↗</a></div>
+<div class="arc06-now" role="status" aria-live="polite"><strong id="arc06Current">Loading world selection…</strong><span id="arc06Sector">—</span><span id="arc06Visited">0 worlds examined this visit</span></div>
+<div class="arc06-journal" id="arc06Journal" aria-label="Recently explored worlds in this page"></div>
+<div class="arc06-compare-zone"><div class="arc06-compare-head"><h3>Compare the owners, not presumed integrations</h3>
+<label for="arc06CompareWorld">Second destination<select id="arc06CompareWorld" disabled></select></label></div>
+<p class="arc06-source" id="arc06CompareStatus">No comparison selected.</p>
+<div class="arc06-comparison" id="arc06Comparison"><p class="arc06-placeholder">Reading the source catalogue…</p></div>
+<p class="arc06-source" id="arc06Source">Loading dated source material…</p></div></section>
 <section class="arc04-route-explorer" id="interstellar-routes" aria-label="Evidence-gated interstellar relationships">
 <div class="arc04-title-row"><div><span class="arc04-label">ARC 04 / INTERSTELLAR ROUTES</span>
 <h2>Relationships, with receipts</h2>
@@ -128,6 +147,6 @@
 
 </section>
 </main>
-<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 05</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="history.html">Development history ↗</a></footer>
+<footer class="galaxy-footer"><span>A7 · Galactic Atlas / Arc 06</span><span>Catalogue observations are not domain authority. Each system owns its implementation.</span><a href="history.html">Development history ↗</a></footer>
 <script src="assets/fluffy-rocket.js" defer></script>
 </body></html>
