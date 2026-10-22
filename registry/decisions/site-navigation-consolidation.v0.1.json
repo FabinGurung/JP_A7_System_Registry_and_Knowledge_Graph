@@ -6,15 +6,15 @@
   "title": "One cohesive A7 navigation, visualization learning within Memory Wall, archived prior interfaces",
   "primary_pages": [
     "index.html",
+    "history.html",
     "control-towers.html",
     "repository-status.html",
     "memory-wall.html",
-    "roadmap.html",
-    "how-it-works.html"
+    "roadmap.html"
   ],
   "more_pages": [
-    "governance.html",
-    "history.html"
+    "how-it-works.html",
+    "governance.html"
   ],
   "archived_pages": [
     "legacy-overview.html",
@@ -44,5 +44,10 @@
   "private_a9_reconciliation_complete": false,
   "peer_repo_mutations": false,
   "source_ownership": "A7 only indexes external sources; domain owners remain independently canonical",
-  "browser_visual_qa": "NOT_YET_PERFORMED"
+  "browser_visual_qa": "AUTOMATED_CHROMIUM_QA_REQUIRED__HUMAN_ACCEPTANCE_NOT_INFERRED",
+  "l0_homepage": "index.html",
+  "l1_development_history": "history.html",
+  "history_display_authority": "A7_GIT_PLUS_GITHUB_API_PUBLIC_OWNER_AT_PAGES_BUILD",
+  "history_is_build_snapshot_not_live": true,
+  "history_archives_preserved": true
 }

@@ -47,8 +47,8 @@ assert '<canvas id="graphCanvas">' in (R/"site/legacy-overview.html").read_text(
 assert 'class="galaxy-experience"' in home
 assert 'id="spaceField"' in home
 assert 'href="history.html"' in home
-assert "A7-SEQ-000013" in history
-assert "49c99f7010e53a66fab94cad4a955e195f9b060d" in history
+assert "GitHub remains the source of truth" in history
+assert "49c99f7010e53a66fab94cad4a955e195f9b060d" in (R/"site/milestone.html").read_text()
 p=(R/"registry/decisions/site-navigation-consolidation.v0.1.json")
 d=json.loads(p.read_text())
 assert d["status"]=="PRESENTATION_ONLY_NAVIGATION_CHANGE"
