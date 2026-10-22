@@ -4,7 +4,7 @@
   "status": "ACTIVE__ARC01_DEPLOYED__SEQ13_PRIVATE_PARITY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000027",
+  "current_closed_sequence": "A7-SEQ-000028",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -178,7 +178,7 @@
       "id": "A7-D24",
       "stage": "Sequence 28 — source-backed L1 A7 progress",
       "title": "Replace stale hardcoded roadmap with registry-derived progress and source-linked evidence",
-      "status": "FEATURE_STAGED_PENDING_CI",
+      "status": "FINAL_CLOSED_PASS",
       "detail": "L1 roadmap source-bound to current registry; five A7-only backlog workstreams, searchable milestones, build SHA source hash, no fabricated live or external statuses; old hardcoded milestone copy removed."
     }
   ],
