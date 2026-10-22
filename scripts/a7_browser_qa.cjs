@@ -71,7 +71,7 @@ async function inspect(page,kind){
   await page.goto(URL+"roadmap.html",{waitUntil:"load"});
   await page.locator("#roadmapDeveloped .rp-item").first().waitFor();
   assert.ok((await page.locator("#roadmapDeveloped .rp-item").count())>=20);
-  assert.match(await page.locator("#roadmapSequence").textContent(),/^0{0,4}2[78]$/);
+  assert.match(await page.locator("#roadmapSequence").textContent(),/^\d{6}$/, "Sequence derives from canonical registry and can advance");
   await page.locator("#roadmapSearch").fill("unlikely_xyz_a7_roadmap");
   assert.equal(await page.locator("#roadmapDeveloped .rp-item").count(),0);
   pass(kind+": L1 source-built roadmap and working search");
