@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "A7-MEM-PLATFORM-ROLES-005",
+  "title": "One stack. Clear ownership.",
+  "subtitle": "Seven platforms, seven distinct jobs. Never let a successful check claim more than it proved.",
+  "entries": [
+    {
+      "id": "github",
+      "label": "GitHub repositories",
+      "kind": "SOURCE",
+      "tag": "Versioned truth",
+      "purpose": "Code · schemas · configurations · commit history",
+      "boundary": "Records changes, not real-world acceptance"
+    },
+    {
+      "id": "actions",
+      "label": "GitHub Actions",
+      "kind": "AUTOMATE",
+      "tag": "Reproducible jobs",
+      "purpose": "Python jobs · builds · tests · QA · publishing",
+      "boundary": "Only verifies what the workflow actually checks"
+    },
+    {
+      "id": "pages",
+      "label": "GitHub Pages",
+      "kind": "PUBLISH",
+      "tag": "Static interface",
+      "purpose": "Approved public dashboards · viewers · AAD displays",
+      "boundary": "Publication alone is not data or engineering approval"
+    },
+    {
+      "id": "drive",
+      "label": "Google Drive",
+      "kind": "SOURCE FILES",
+      "tag": "Original evidence",
+      "purpose": "Authoritative documents · drawings · media · archives",
+      "boundary": "Preserves source files; not a code version-control replacement"
+    },
+    {
+      "id": "issues",
+      "label": "GitHub Issues + Projects",
+      "kind": "PLAN",
+      "tag": "Work coordination",
+      "purpose": "Backlog · defects · milestones · AI work tickets",
+      "boundary": "Issues describe intentions, not completed implementation"
+    },
+    {
+      "id": "supabase",
+      "label": "Supabase",
+      "kind": "OPTIONAL",
+      "tag": "Live application",
+      "purpose": "Structured app data · authentication · permissions",
+      "boundary": "Adopt only when a live, permissioned database is needed"
+    },
+    {
+      "id": "vercel",
+      "label": "Vercel",
+      "kind": "OPTIONAL",
+      "tag": "App deployment",
+      "purpose": "Preview deployments · optional server functions",
+      "boundary": "Not needed merely to publish the existing static Atlas"
+    }
+  ],
+  "principle": "Git records the change → Actions tests explicit rules → Drive retains original evidence → a database manages live application state when required.",
+  "example": "An IFC parser passing means the file parsed; it does not approve the structural design.",
+  "actions_hint": "Actions can also run geometry inspection, Python engineering calculations, spreadsheet validation, quantity takeoffs, reproducibility manifests and report assembly—only after the scripts and evidence checks are implemented.",
+  "suggested_workflows": [
+    "Python engineering runs",
+    "Spreadsheet lint + QC",
+    "Quantity takeoff reproducibility",
+    "Geometry / model checks",
+    "Checksum manifests",
+    "Report package assembly"
+  ],
+  "is_operating_guidance": true,
+  "provider_claims_are_not_approval": true,
+  "optional_services_require_explicit_adoption": true
+}

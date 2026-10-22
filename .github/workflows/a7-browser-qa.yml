@@ -46,6 +46,11 @@ jobs:
         run: |
           python scripts/generate_a7_roadmap.py --output site/data/a7-roadmap.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_a7_roadmap.py
+      - name: Derive source-verified dock and platform map QA fixtures
+        run: |
+          python scripts/generate_a7_developer_dock.py --output site/data/a7-developer-dock.json --commit-sha "$GITHUB_SHA"
+          python scripts/generate_platform_responsibilities.py --output site/data/platform-responsibilities.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_developer_dock_platform_board.py
       - name: Install isolated Chromium for browser and viewport checks
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1

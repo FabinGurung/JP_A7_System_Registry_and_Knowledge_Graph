@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "A7-DEV-DOCK-001",
+  "source_owner": "A7_REPOSITORY",
+  "purpose": "Public developer source directory for the A7 Galactic Atlas only; links, not file copies or a runtime execution console.",
+  "groups": [
+    {
+      "id": "start",
+      "name": "Start here",
+      "description": "Operating contract and current A7 structure",
+      "items": [
+        {
+          "path": "A7_READ_FIRST.md",
+          "name": "A7 Read First",
+          "summary": "Single-writer operating rules, provider boundaries and safe verification"
+        },
+        {
+          "path": "A7_BOOTSTRAP.json",
+          "name": "System Bootstrap",
+          "summary": "Machine entry point, source registries and current sequence"
+        },
+        {
+          "path": "registry/roadmap.json",
+          "name": "Canonical Roadmap",
+          "summary": "Machine-recorded delivery states and planned A7 work"
+        }
+      ]
+    },
+    {
+      "id": "pages",
+      "name": "Pages and views",
+      "description": "Editable A7 site pages, not authoritative source datasets",
+      "items": [
+        {
+          "path": "site/index.html",
+          "name": "L0 Galactic Atlas",
+          "summary": "Primary website, central galaxy navigator and Arc panels"
+        },
+        {
+          "path": "site/history.html",
+          "name": "L1 History",
+          "summary": "Git-derived releases, commits, PRs and Actions view"
+        },
+        {
+          "path": "site/roadmap.html",
+          "name": "L1 Progress",
+          "summary": "Registry-derived roadmap and milestones"
+        },
+        {
+          "path": "site/memory-wall.html",
+          "name": "L1 Memory Wall",
+          "summary": "Read-only personal reference collections"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "name": "Generators",
+      "description": "Python programs materializing non-authoritative site projections",
+      "items": [
+        {
+          "path": "scripts/generate_galactic_atlas.py",
+          "name": "Build Galaxy",
+          "summary": "Build source-based stations and relations"
+        },
+        {
+          "path": "scripts/generate_a7_roadmap.py",
+          "name": "Build Roadmap",
+          "summary": "Project registered A7 progress for Pages"
+        },
+        {
+          "path": "scripts/generate_a7_development_history.py",
+          "name": "Build History",
+          "summary": "Inspect Git commits/tags and GitHub PR/Actions at publication"
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "name": "Validation and QA",
+      "description": "Concrete checks with scoped assurances, not engineering approval",
+      "items": [
+        {
+          "path": "scripts/validate_registry.py",
+          "name": "Registry Validator",
+          "summary": "Validate A7 registry contracts"
+        },
+        {
+          "path": "scripts/validate_site_navigation.py",
+          "name": "Navigation Validator",
+          "summary": "Check L0/L1 navigation, preservation and website links"
+        },
+        {
+          "path": "scripts/a7_browser_qa.cjs",
+          "name": "Chromium Browser QA",
+          "summary": "Automated desktop/mobile interactions and screenshots"
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "name": "Actions and release",
+      "description": "GitHub executes only the scripts configured in these workflow files",
+      "items": [
+        {
+          "path": ".github/workflows/validate-registry.yml",
+          "name": "Registry CI",
+          "summary": "Build contract and static checks, not domain acceptance"
+        },
+        {
+          "path": ".github/workflows/a7-browser-qa.yml",
+          "name": "Real Browser QA",
+          "summary": "Automated Chromium coverage and screenshot artifact"
+        },
+        {
+          "path": ".github/workflows/deploy-a7-pages.yml",
+          "name": "Pages Publishing",
+          "summary": "Build source projections and deploy read-only public website"
+        },
+        {
+          "path": "docs/HISTORY_AND_ROLLBACK_READ_FIRST.md",
+          "name": "Rollback procedure",
+          "summary": "How to recover deliberately using a real Git source commit"
+        }
+      ]
+    }
+  ]
+}
