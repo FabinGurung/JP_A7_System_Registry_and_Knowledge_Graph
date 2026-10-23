@@ -513,5 +513,15 @@
       "pages": 39772624987,
       "chromium": 39772624771
     }
+  },
+  "a7_memory_wall_operating_principle": {
+    "sequence": "A7-SEQ-000032",
+    "status": "FEATURE_STAGED_PENDING_CI",
+    "source": "registry/curations/platform-responsibilities.v0.1.json",
+    "reused_id": "A7-MEM-PLATFORM-ROLES-005",
+    "page": "site/memory-wall.html#platform-role-board",
+    "new_external_posters": 0,
+    "drive_and_peer_writes": 0,
+    "automatic_drive_ingestion": false
   }
 }

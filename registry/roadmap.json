@@ -201,6 +201,13 @@
       "title": "Selected-world flight deck, navigation history, shareable source IDs and grounded two-world comparison",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Feature PR #67 merged at 571c82dab755d0c386ce136c4a5eafac06d49c91. Source-backed nine-world navigator and owner descriptor comparison, world deep-links and in-page history. Main CI 39772624811, Pages 39772624987 and real-browser Chromium 39772624771 all SUCCESS at exact main. No peer writes, no inferred live integrations or engineering approval."
+    },
+    {
+      "id": "A7-D28",
+      "stage": "A7-SEQ-000032 · existing Memory Wall operating principle refined",
+      "title": "A7 poster 005: one command, governed sources and qualified website presentation",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Update existing collection 03 canonical platform-responsibilities curation (not external bookmark posters) with AI commander, Drive/Git source distinction, Actions/Pages chain, privacy/permission boundaries and derived answer provenance; no automatic integration or other repo writes."
     }
   ],
   "next": [

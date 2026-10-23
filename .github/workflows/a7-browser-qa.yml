@@ -8,6 +8,9 @@ on:
     paths:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
+      - "registry/curations/platform-responsibilities.v0.1.json"
+      - "scripts/generate_platform_responsibilities.py"
+      - "scripts/validate_developer_dock_platform_board.py"
       - "scripts/validate_galactic_atlas_arc06.py"
       - "scripts/generate_galactic_atlas.py"
       - "registry/decisions/galactic-atlas-*"
@@ -51,6 +54,8 @@ jobs:
         run: |
           python scripts/generate_a7_developer_dock.py --output site/data/a7-developer-dock.json --commit-sha "$GITHUB_SHA"
           python scripts/generate_platform_responsibilities.py --output site/data/platform-responsibilities.json --commit-sha "$GITHUB_SHA"
+          python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_wall.py
           python scripts/validate_developer_dock_platform_board.py
       - name: Install isolated Chromium for browser and viewport checks
         run: |

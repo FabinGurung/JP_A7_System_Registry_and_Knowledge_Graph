@@ -95,11 +95,20 @@ async function inspect(page,kind){
   await page.locator("#dockSearch").fill("unlikely_xyz_dock_123");
   assert.equal(await page.locator("#dockGroups .dock-item").count(),0);
   await page.goto(URL+"memory-wall.html#platform-role-board",{waitUntil:"load"});
-  await page.locator("#platformRows tr").nth(6).waitFor();
-  assert.equal(await page.locator("#platformRows tr").count(),7);
+  await page.locator("#platformRows tr").nth(7).waitFor();
+  assert.equal(await page.locator("#platformRows tr").count(),8);
+  assert.match(await page.locator("#platformMotto").textContent(),/WEBSITE IS THE WINDOW/);
+  assert.equal(await page.locator("#platformSourcePair article").count(),2);
+  assert.equal(await page.locator("#platformOutputStrip span").count(),4);
+  await page.locator("#platformProvenance summary").click();
+  assert.equal(await page.locator("#platformProvenanceFields li").count(),7);
+  assert.equal(await page.locator("#platformClaimLabels span").count(),8);
+  assert.match(await page.locator("#platformAutomation").textContent(),/not evidence/);
+  await page.locator("#posters .poster-card").nth(2).waitFor({timeout:15000});
+  assert.equal(await page.locator("#posters .poster-card").count(),3);
   assert.match(await page.locator("#platformExample").textContent(),/IFC parser/);
   assert.equal(await page.locator("#platformExamples span").count(),6);
-  pass(kind+": L1 developer file search and semantic seven-role platform board");
+  pass(kind+": L1 developer file search and semantic eight-role command architecture, original posters, privacy gate");
   await page.screenshot({path:out+"/developer-platform-"+kind+".png",fullPage:true});
   if(kind==="mobile"){
     const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
