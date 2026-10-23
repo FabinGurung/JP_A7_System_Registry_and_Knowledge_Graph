@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000031",
+  "current_sequence": "A7-SEQ-000032",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -516,12 +516,19 @@
   },
   "a7_memory_wall_operating_principle": {
     "sequence": "A7-SEQ-000032",
-    "status": "FEATURE_STAGED_PENDING_CI",
+    "status": "FINAL_CLOSED_PASS_SOURCE_AND_PROVIDER_RELEASE_VERIFIED",
     "source": "registry/curations/platform-responsibilities.v0.1.json",
     "reused_id": "A7-MEM-PLATFORM-ROLES-005",
     "page": "site/memory-wall.html#platform-role-board",
     "new_external_posters": 0,
     "drive_and_peer_writes": 0,
-    "automatic_drive_ingestion": false
+    "automatic_drive_ingestion": false,
+    "feature_pr": 69,
+    "feature_merge_sha": "2dfb04c2b0827b6eebb628856195c5740774b04e",
+    "main_registry_ci": 39882325975,
+    "main_pages": 39882325976,
+    "feature_browser_qa": 39881697442,
+    "direct_public_http_fetch_verified": false,
+    "additional_boundaries": "No public provider HTML GET readback in current tooling; exact build/deploy artifact and source browser QA verified separately"
   }
 }

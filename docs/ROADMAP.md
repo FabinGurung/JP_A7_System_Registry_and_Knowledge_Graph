@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000031` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000032` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
@@ -17,3 +17,7 @@ Git history is canonical for code changes; Actions verifies only configured test
 After SEQ 30's real Registry CI/Pages proof, commence **Galactic Atlas Arc 06 (A7-SEQ-000031)**: interactive selected-world mission navigator, source-backed workspace routes, persistent *in-page* selection controls, keyboard/mobile QA, explicitly dated evidence. No actual external provider status or specialist output can be inferred from the interface.
 
 For the complete delivery history, read `registry/roadmap.json`, `registry/events/a7-mutations.jsonl` and Git commits. This document deliberately does not duplicate the full growing milestone list.
+
+## A7-SEQ-000032 · governed operating architecture Memory Wall
+
+The existing Memory Wall platform-curation ID `A7-MEM-PLATFORM-ROLES-005` was expanded, not duplicated. The single source-of-guidance is `registry/curations/platform-responsibilities.v0.1.json`; it renders through the existing generation job to the Collection 03 section. Detailed constraints remain under `docs/MEMORY_WALL_READ_FIRST.md`. Feature PR #69 landed at `2dfb04c2b0827b6eebb628856195c5740774b04e`; GitHub main Registry CI [39882325975](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39882325975) and Pages [39882325976](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39882325976) passed, feature Chromium [39881697442](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/39881697442) passed. Old 3 posters and 6 method reminders preserved. No private-document ingestion, external repository write, unauthorized links or original-Drive migration. Direct independent GET of the served Pages content could not be obtained through available browsing, so provider-deployed artifact proof and CI browser-of-build proof are recorded separately rather than conflated.
