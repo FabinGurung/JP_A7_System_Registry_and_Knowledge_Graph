@@ -104,6 +104,7 @@ async function inspect(page,kind){
   assert.equal(await page.locator("#platformProvenanceFields li").count(),7);
   assert.equal(await page.locator("#platformClaimLabels span").count(),8);
   assert.match(await page.locator("#platformAutomation").textContent(),/not evidence/);
+  await page.locator("#posters .poster-card").nth(2).waitFor({timeout:15000});
   assert.equal(await page.locator("#posters .poster-card").count(),3);
   assert.match(await page.locator("#platformExample").textContent(),/IFC parser/);
   assert.equal(await page.locator("#platformExamples span").count(),6);
