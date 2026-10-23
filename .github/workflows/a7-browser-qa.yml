@@ -8,6 +8,9 @@ on:
     paths:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
+      - "registry/curations/platform-responsibilities.v0.1.json"
+      - "scripts/generate_platform_responsibilities.py"
+      - "scripts/validate_developer_dock_platform_board.py"
       - "scripts/validate_galactic_atlas_arc06.py"
       - "scripts/generate_galactic_atlas.py"
       - "registry/decisions/galactic-atlas-*"

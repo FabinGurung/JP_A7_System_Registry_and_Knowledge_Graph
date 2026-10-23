@@ -20,3 +20,45 @@
 .platform-source{font-size:10px;color:#809eaf;margin-top:16px}
 @media(max-width:680px){.platform-model{grid-template-columns:repeat(2,minmax(0,1fr))}.platform-board{margin:28px 0}}
 @media print{.platform-board{break-inside:avoid;box-shadow:none}.platform-table-wrap{overflow:visible}.platform-table{min-width:0;font-size:10px}}
+
+
+/* The single existing Collection 03 poster, now elevated to the operating architecture. */
+.platform-board{scroll-margin-top:105px}
+.platform-head h2{font-size:clamp(25px,3.4vw,37px);line-height:1.17;max-width:730px}
+.platform-story{margin:21px 0 12px;padding:clamp(13px,2vw,21px);border-radius:17px;border:1px solid #d0e3ee;background:linear-gradient(160deg,#f7fcff,#eaf5fd 70%,#fefcf7)}
+.platform-story h3{font-size:17px;color:#315f7e;margin:0}
+.platform-story-intro{font-size:11px;color:#738a9e;margin:2px 0 14px}
+.platform-journey{list-style:none;margin:0 auto;padding:0;max-width:900px;display:grid;gap:11px;justify-items:stretch}
+.platform-step{position:relative;padding:14px 18px;background:#fff;border:1px solid #c9dfec;border-radius:12px;box-shadow:0 5px 13px #97bbc51c;min-width:0}
+.platform-step:not(.platform-pages):after{content:"↓";position:absolute;bottom:-15px;left:calc(50% - 7px);z-index:2;color:#458cb2;font-weight:850;font-size:13px}
+.platform-step small,.platform-source-pair small{display:block;font-size:10px;color:#588fb2;letter-spacing:.11em;font-weight:850}
+.platform-step strong{display:block;color:#245d7f;font-size:18px;margin:4px 0}
+.platform-step p{font-size:12px;color:#627f94;margin:3px 0}
+.platform-command{width:72%;justify-self:center}.platform-ai{width:84%;justify-self:center;border-color:#94cbe4;background:#eef9ff}
+.platform-inputs{width:100%;list-style:none}
+.platform-source-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.platform-source-pair article{padding:15px;border:1px solid #cae0ea;border-radius:12px;background:#fff8ed}
+.platform-source-pair article+article{background:#eef9ff}
+.platform-source-pair strong{font-size:16px;color:#2f6380;display:block;margin:5px 0}
+.platform-source-pair p{font-size:11px;color:#658399;margin:4px 0}
+.platform-actions{width:86%;justify-self:center;border-color:#b4d9eb;background:#f7fdff}
+.platform-pages{width:86%;justify-self:center;background:#e8f6ff;border-color:#a9d4e8}
+.platform-output-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:15px auto;max-width:900px}
+.platform-output-strip span{border:1px solid #d1e4ee;border-radius:8px;background:#fff;padding:10px;font-size:11px;color:#4a758e}
+.platform-motto{margin:17px 0 0;text-align:center;padding:17px 12px;background:#285b78;color:#fff;border-radius:11px;letter-spacing:.07em;font-weight:900;font-size:clamp(12px,1.5vw,17px)}
+.platform-safety-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:18px 0}
+.platform-safety-grid>div{border:1px solid #dce8ee;border-radius:11px;background:#f7fbfe;padding:12px}
+.platform-safety-grid strong{font-size:12px;color:#326580}
+.platform-safety-grid p{font-size:11px;color:#688498;line-height:1.5;margin:6px 0 0}
+.platform-provenance{border:1px solid #cbdfea;border-radius:11px;padding:13px 16px;background:#fff;margin:18px 0}
+.platform-provenance summary{cursor:pointer;color:#316888;font-weight:800;font-size:13px}
+.platform-provenance summary span{font-size:10px;font-weight:500;color:#7b9aab;margin-left:9px}
+.platform-provenance-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding-top:10px}
+.platform-provenance-columns h3{font-size:12px;color:#387395}
+.platform-provenance-columns ol{font-size:11px;color:#617e91;padding-left:21px}
+.platform-proof-labels{display:flex;flex-wrap:wrap;gap:5px}
+.platform-proof-labels span{font-size:10px;background:#f1f7fa;color:#4d718a;padding:6px;border:1px solid #d4e5ed;border-radius:6px}
+.platform-read-more{font-size:11px;color:#60879c}
+.platform-read-more a{color:#2879a0}
+@media(max-width:640px){.platform-command,.platform-ai,.platform-actions,.platform-pages{width:100%}.platform-safety-grid,.platform-provenance-columns{grid-template-columns:1fr}.platform-head h2{font-size:27px}}
+@media print{.platform-board{box-shadow:none!important;page-break-inside:auto}.platform-story,.platform-safety-grid,.platform-provenance{break-inside:avoid}.platform-provenance{display:block}.platform-provenance-columns{display:grid!important}.platform-source-pair,.platform-output-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.platform-read-more{display:none}.platform-motto{-webkit-print-color-adjust:exact;print-color-adjust:exact}}

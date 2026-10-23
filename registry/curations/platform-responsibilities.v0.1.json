@@ -1,9 +1,17 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "document_id": "A7-MEM-PLATFORM-ROLES-005",
-  "title": "One stack. Clear ownership.",
-  "subtitle": "Seven platforms, seven distinct jobs. Never let a successful check claim more than it proved.",
+  "title": "One command. One source. One verified presentation.",
+  "subtitle": "AI operates. Drive preserves. GitHub versions. Actions verifies. Pages presents.",
   "entries": [
+    {
+      "id": "ai",
+      "label": "AI orchestration",
+      "kind": "COMMAND",
+      "tag": "Governed operator",
+      "purpose": "Natural-language instructions · authority resolution · permitted tool orchestration",
+      "boundary": "AI is an operator, not a source of truth or a substitute for provider readback"
+    },
     {
       "id": "github",
       "label": "GitHub repositories",
@@ -74,5 +82,79 @@
   ],
   "is_operating_guidance": true,
   "provider_claims_are_not_approval": true,
-  "optional_services_require_explicit_adoption": true
+  "optional_services_require_explicit_adoption": true,
+  "architecture_poster": {
+    "id": "A7-MEM-PLATFORM-ROLES-005",
+    "semantic_title": "ONE COMMAND. ONE SOURCE. ONE VERIFIED PRESENTATION.",
+    "subtitle": "AI operates. Drive preserves. GitHub versions. Actions verifies. Pages presents.",
+    "poster_style": "ALWAYS_VISIBLE_READABLE_PRINTABLE",
+    "motto": "THE WEBSITE IS THE WINDOW, NOT THE SOURCE OF TRUTH.",
+    "input": {
+      "label": "USER COMMAND",
+      "description": "Describe the task naturally; permission and scope still apply"
+    },
+    "commander": {
+      "label": "AI ORCHESTRATION",
+      "description": "Resolve owners, plan, execute permitted tools and record readback. The AI is not independent authority."
+    },
+    "sources": [
+      {
+        "id": "drive",
+        "label": "GOOGLE DRIVE",
+        "caption": "Original documents, drawings and governed evidence",
+        "role": "ORIGINAL_PROVIDER_FILES"
+      },
+      {
+        "id": "github",
+        "label": "GITHUB",
+        "caption": "Versioned scripts, schemas, templates and designated structured truth",
+        "role": "SOURCE_IMPLEMENTATION"
+      }
+    ],
+    "execution": {
+      "label": "GITHUB ACTIONS",
+      "description": "Build · generate · test · validate · release QA (only the tests actually implemented)"
+    },
+    "output": {
+      "label": "GITHUB PAGES",
+      "description": "Human-friendly, public-safe project website"
+    },
+    "outputs": [
+      "Organization → Project → Category → Resource",
+      "Source-based summaries",
+      "QA-qualified derived answers",
+      "Authorized links to original Drive files"
+    ],
+    "authority_disclaimer": "File ownership is determined by fact class, module contract and original provider—not a universal rule that every file is in Drive or every structured fact is in Git.",
+    "privacy_disclaimer": "Public Pages cannot publish private originals, restricted metadata, secret IDs or unauthorized answers. Drive file access remains governed by Drive permissions.",
+    "automation_disclaimer": "This is an operating architecture, not evidence that automatic Drive → GitHub → Pages ingestion or role-based private websites are installed.",
+    "proof_disclaimer": "An Actions PASS confirms only its specified checks; engineering approval and signed/legal status require separate evidence.",
+    "provenance_fields": [
+      "Owning source and provider identity",
+      "Provider revision or source version",
+      "Transformation/calculation method",
+      "Generator code and commit",
+      "Validation evidence",
+      "Last verified date",
+      "Approval, uncertainty or HOLD"
+    ],
+    "claim_labels": [
+      "VERIFIED SOURCE FACT",
+      "DERIVED RESULT",
+      "DRAFT",
+      "ESTIMATE",
+      "NEEDS_INPUT",
+      "UNVERIFIED",
+      "ENGINEERING HOLD",
+      "APPROVED / SIGNED — evidenced only"
+    ]
+  },
+  "future_presentations": {
+    "navigation": "ORGANIZATION_TO_PROJECT_TO_CATEGORY_TO_RESOURCE",
+    "access": "PUBLIC_SAFE_OR_PERMISSION_CHECKED_SOURCE_LINKS",
+    "privacy_rule": "NEVER_PUBLISH_PRIVATE_DRIVE_IDS_OR_METADATA",
+    "deployment_status": "DESIGN_PRINCIPLE_NOT_GLOBAL_INTEGRATION"
+  },
+  "non_authoritative_operating_guidance": true,
+  "source_notes": "A7 reference/curation only. Specific fact class, module and original provider decide authority; no cross-system migration or automation asserted."
 }
