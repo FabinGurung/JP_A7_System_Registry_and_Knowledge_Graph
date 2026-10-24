@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
-  "snapshot_date": "2026-10-19",
+  "snapshot_date": "2026-10-24",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000033",
+  "current_closed_sequence": "A7-SEQ-000034",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -220,8 +220,8 @@
       "id": "A7-D30",
       "stage": "A7-SEQ-000034 · Arc07 public Resource Navigator",
       "title": "L1 Organization → Project → Category → Resource public-safe pilot",
-      "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
-      "detail": "Public A7-only manifest, additive More-menu route and scoped UI. Not deployed or accepted until Registry, real Chromium and Pages provider evidence pass. Existing homepage and Memory Wall untouched; no Drive or peer writes."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Feature PR #74 merged at ec63a7be61be58b035a66800e8a78ea7491ed528. Initial release source: 1 public A7 presentation group, 1 project, 3 categories, 9 verified in-repository resource paths; scoped JS/CSS and additive shared-menu link. Source-safe validator and main Registry #40057605039 SUCCESS, desktop/mobile Chromium #40057604925 SUCCESS, Pages build/deploy #40057605064 SUCCESS. No original Galactic Atlas homepage or Memory Wall modification. No peer or Drive writes. Direct independent publicly served HTML body unavailable; GitHub Pages provider deploy confirmed."
     }
   ],
   "next": [

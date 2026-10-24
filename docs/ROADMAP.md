@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000033` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000034` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
@@ -25,3 +25,7 @@ The existing Memory Wall platform-curation ID `A7-MEM-PLATFORM-ROLES-005` was ex
 ## A7-SEQ-000033 · Memory Wall UI vocabulary reference
 
 Existing Memory Wall preserved. New distinct Collection 04 is generated from `registry/curations/memory-ui-vocabulary.v0.1.json` (ID `A7-MEM-UI-VOCAB-006`), and rendered at `site/memory-wall.html#interface-vocabulary`. Two illustrated panel styles, 13 searchable terms, example ID toggle/copy; all example data synthetic. Original three public external posters, six technique posters and platform operating guidance unchanged. Feature [PR #72](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/72) merged at `f52fb319e40052fe23cc1c62c78978f4b5eaefdf`. Provider CI [40047852614](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40047852614), real-browser [40047852551](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40047852551) and Pages [40047852564](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40047852564) PASS at source SHA. No external mutation, no Resource Navigator implementation. Direct independent URL-body readback remains unverified through available browsing.
+
+## A7-SEQ-000034 · Galactic Atlas Arc07 Resource Navigator
+
+Added public-safe L1 [Resource Navigator](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/resource-navigator.html) to the **existing** Galactic Atlas shell. Its [canonical manifest](../registry/curations/resource-navigator.v0.1.json) contains one A7 presentation grouping, one real public A7 project, three categories and nine public source-linked references. No private Drive indexing, project-client data, live sync, domain-engine automation or peer mutations were authorized or performed. PRE at `c4aad069794f995bae35939f8e4d5236d7baa8b2`; feature PR [#74](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/74) merged at `ec63a7be61be58b035a66800e8a78ea7491ed528`. Main Registry #40057605039, main Chromium #40057604925 and Pages #40057605064 all passed. Direct external served-page body readback was unavailable; provider Pages deployment passed. See [Resource Navigator read-first](RESOURCE_NAVIGATOR_READ_FIRST.md).
