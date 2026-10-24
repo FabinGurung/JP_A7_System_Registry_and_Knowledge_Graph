@@ -573,5 +573,16 @@
     "independent_served_page_body_readback": false,
     "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/resource-navigator.html",
     "post_snapshot_expected": "snapshot/post-a7-seq-000034-resource-navigator"
+  },
+  "a7_memory_storage_architecture": {
+    "sequence_id": "A7-SEQ-000035",
+    "collection_id": "A7-MEM-STORAGE-ARCH-007",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+    "page": "site/memory-wall.html#storage-only-architecture",
+    "canonical_source": "registry/curations/memory-storage-architecture.v0.1.json",
+    "original_collections_preserved": true,
+    "private_data_migration": false,
+    "private_drive_writes": false,
+    "other_repository_writes": false
   }
 }

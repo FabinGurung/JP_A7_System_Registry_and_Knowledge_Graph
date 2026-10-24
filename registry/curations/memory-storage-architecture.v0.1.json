@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "A7-MEM-STORAGE-ARCH-007",
+  "sequence_id": "A7-SEQ-000035",
+  "collection_number": 5,
+  "title": "Storage-only architecture",
+  "subtitle": "Folders for people. Relationships in governed records.",
+  "status": "VERSIONED_GUIDANCE_NOT_IMPLEMENTATION_PROOF",
+  "public_safe": true,
+  "read_only": true,
+  "site_projection_non_authoritative": true,
+  "owner": "A7_MEMORY_WALL",
+  "principle": "Drive continues to own the original files and their permissions; GitHub owns governed relationship definitions and approved structured operational data in appropriately permissioned repositories.",
+  "distinctions": [
+    {
+      "id": "originals",
+      "label": "ORIGINALS + PERMISSIONS",
+      "name": "Google Drive",
+      "meaning": "Organize PDF, CAD, images, spreadsheets and other source binaries so humans can browse and retain permissions."
+    },
+    {
+      "id": "relationships",
+      "label": "GOVERNED DEFINITIONS",
+      "name": "GitHub",
+      "meaning": "Version approved schemas, PK/FK contracts, manifests and relationship definitions. Approved operational data only in access-appropriate repositories."
+    },
+    {
+      "id": "presentation",
+      "label": "PUBLIC-SAFE DIRECTORY",
+      "name": "GitHub Pages",
+      "meaning": "Show only authorized links and derived summaries. A page is not a permission grant, a live database or an approved original."
+    }
+  ],
+  "formats": [
+    {
+      "id": "sql",
+      "format": "SQL (.sql)",
+      "responsibility": "Canonical relationship schema and PK/FK definitions in GitHub",
+      "qualification": "Schema definition is not evidence of a deployed or synchronized database."
+    },
+    {
+      "id": "jsonl",
+      "format": "JSONL (.jsonl)",
+      "responsibility": "Append-only metadata observations and audit history",
+      "qualification": "Keep sensitive observation logs in private governed storage."
+    },
+    {
+      "id": "sqlite",
+      "format": "SQLite (.sqlite / .db)",
+      "responsibility": "Efficiently searchable private inventory snapshot",
+      "qualification": "A private snapshot is not a public GitHub Pages asset and does not replace original file ownership."
+    },
+    {
+      "id": "json",
+      "format": "JSON (.json)",
+      "responsibility": "Configurations, manifests, approved resource relationships",
+      "qualification": "Only approved, public-safe data may go to a public repository."
+    },
+    {
+      "id": "csv",
+      "format": "CSV (.csv)",
+      "responsibility": "Human-readable review and import/export",
+      "qualification": "A review/export format is not automatically the authoritative operational ledger."
+    },
+    {
+      "id": "sheets",
+      "format": "Google Sheets / Excel (.gsheet / .xlsx)",
+      "responsibility": "Operational entry, calculation and reporting",
+      "qualification": "Editable operational truth remains with the designated owning workbook/provider; derived exports do not supersede it."
+    },
+    {
+      "id": "drive",
+      "format": "Google Drive",
+      "responsibility": "Original PDF, CAD, image, spreadsheet and other source files",
+      "qualification": "Original permissions and provider revisions remain in Drive; browse-friendly folders are not database tables."
+    }
+  ],
+  "rule_title": "Do not turn Drive folders into database tables.",
+  "rule": "Drive should be easy for humans to navigate. Do not create separate folder hierarchies merely to represent database tables, foreign keys, indexes or application modules.",
+  "policy": "This poster describes a recommended separation, not a claim of a completed migration, linked database, implemented foreign keys, ingestion pipeline, or externally authorized change.",
+  "privacy": "No private Drive identifiers, private inventory, ACL lists, confidential file names, private operational records or sensitive snapshots belong in this public curation.",
+  "source_scope": "A7_ONLY_REFERENCE__OTHER_PROVIDERS_UNCHANGED"
+}

@@ -139,6 +139,16 @@ async function inspect(page,kind){
   await page.locator('#uiVocabFilters button[data-category="ALL"]').click();
   assert.equal(await page.locator("#uiVocabTerms .ui-vocab-term").count(),13);
   pass(kind+": Collection 04 two panel samples, 13 terms, filtering, ID toggle and preservation");
+  await page.locator("#storageArchRows tr").nth(6).waitFor({timeout:15000});
+  assert.equal(await page.locator("#storageArchRows tr").count(),7);
+  assert.equal(await page.locator("#storageArchFlow article").count(),3);
+  assert.match(await page.locator("#storageArchRule").textContent(),/foreign keys/i);
+  const rows=await page.locator("#storageArchRows").textContent();
+  for(const format of ["SQL (.sql)","JSONL (.jsonl)","SQLite","JSON (.json)","CSV (.csv)","Google Sheets / Excel","Google Drive"])assert.ok(rows.includes(format),"Storage matrix missing "+format);
+  assert.match(await page.locator("#storageArchStatus").textContent(),/versioned guidance, not proof/i);
+  pass(kind+": Collection 05 seven public-safe format roles, provider boundary and original four collections");
+  const storageShot=out+"/memory-storage-"+kind+".png";
+  await page.screenshot({path:storageShot,fullPage:true});report.screenshots.push(storageShot);
   pass(kind+": L1 developer file search and semantic eight-role command architecture, original posters, privacy gate");
   await page.screenshot({path:out+"/developer-platform-"+kind+".png",fullPage:true});
   if(kind==="mobile"){

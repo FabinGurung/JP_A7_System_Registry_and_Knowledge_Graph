@@ -114,6 +114,11 @@ jobs:
           python scripts/validate_resource_navigator.py
           python scripts/generate_resource_navigator.py --output .a7-generated-test/resource-navigator.json --commit-sha "$GITHUB_SHA"
           node --check site/assets/resource-navigator.js
+      - name: Validate storage-only Memory Wall collection and preserved content
+        run: |
+          python scripts/validate_memory_storage_architecture.py
+          python scripts/generate_memory_storage_architecture.py --output .a7-generated-test/memory-storage-architecture.json --commit-sha "$GITHUB_SHA"
+          node --check site/assets/memory-storage-architecture.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket

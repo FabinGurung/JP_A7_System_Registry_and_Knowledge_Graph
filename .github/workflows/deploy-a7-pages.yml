@@ -34,6 +34,8 @@ on:
       - "scripts/validate_memory_wall.py"
       - "scripts/generate_memory_ui_vocabulary.py"
       - "scripts/validate_memory_ui_vocabulary.py"
+      - "scripts/generate_memory_storage_architecture.py"
+      - "scripts/validate_memory_storage_architecture.py"
       - "scripts/generate_resource_navigator.py"
       - "scripts/validate_resource_navigator.py"
       - "site/**"
@@ -119,6 +121,11 @@ jobs:
           python scripts/generate_memory_ui_vocabulary.py --output site/data/memory-ui-vocabulary.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_memory_ui_vocabulary.py
           node --check site/assets/memory-ui-vocabulary.js
+      - name: Build storage-only architecture poster source
+        run: |
+          python scripts/generate_memory_storage_architecture.py --output site/data/memory-storage-architecture.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_storage_architecture.py
+          node --check site/assets/memory-storage-architecture.js
       - name: Build safe Resource Navigator reference projection
         run: |
           python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"
