@@ -215,6 +215,13 @@
       "title": "Fenced code versus interactive card and thirteen filtered UI/data/audit prompting terms",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Same L1 Memory Wall upgraded with source-derived Collection04 (13 terms, 2 illustrative panel patterns); PR #72 merged at f52fb319e40052fe23cc1c62c78978f4b5eaefdf. Actual main Registry CI #40047852614, Chromium #40047852551 and Pages #40047852564 all success. Previous posters preserved by strict validator and changed-file scope; main homepage untouched. Public direct HTTP body GET not verified due current browsing restrictions. Resource Navigator not commenced."
+    },
+    {
+      "id": "A7-D30",
+      "stage": "A7-SEQ-000034 · Arc07 public Resource Navigator",
+      "title": "L1 Organization → Project → Category → Resource public-safe pilot",
+      "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+      "detail": "Public A7-only manifest, additive More-menu route and scoped UI. Not deployed or accepted until Registry, real Chromium and Pages provider evidence pass. Existing homepage and Memory Wall untouched; no Drive or peer writes."
     }
   ],
   "next": [

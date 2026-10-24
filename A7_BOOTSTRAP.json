@@ -550,5 +550,18 @@
       "pages_artifact_sha256": "251fb923edf2edc160f15d5ede07d7a81135cceedc6a4ebb654ea7859553f4d8"
     },
     "independent_http_body_verified": false
+  },
+  "a7_resource_navigator": {
+    "sequence": "A7-SEQ-000034",
+    "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+    "scope": "A7_PUBLIC_SAFE_L1_ONLY",
+    "source": "registry/curations/resource-navigator.v0.1.json",
+    "published_page": "site/resource-navigator.html",
+    "generator": "scripts/generate_resource_navigator.py",
+    "validator": "scripts/validate_resource_navigator.py",
+    "no_private_ingestion": true,
+    "legacy_arc01_06_preserved": true,
+    "no_peer_writes": true,
+    "previous_closed_sequence": "A7-SEQ-000033"
   }
 }
