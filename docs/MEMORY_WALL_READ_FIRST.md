@@ -58,3 +58,11 @@ Source intent: a user gives an instruction; AI resolves authority and operates a
 ## Provider release readback — 2026-10-23
 
 Collection 03 (the same existing poster ID) was revised through A7-SEQ-000032, feature [PR #69](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/69), at `2dfb04c2b0827b6eebb628856195c5740774b04e`. Main Registry CI 39882325975 PASS, Pages 39882325976 PASS with provider artifact SHA-256 `64f96c25c623b98b6dd6317dd902eb2887f41278adfc17e0c67dc8b47ad5be04`; browser QA 39881697442 PASS. The build log confirmed eight platform responsibility roles and three unmodified public reference posters. This is **not** an assertion that independent direct HTTP GET/readback of the deployed body succeeded, nor that private project websites or automated Drive-to-Pages ingestion exist.
+
+## Collection 04 / interface and prompting vocabulary (A7-SEQ-000033)
+
+Canonical new and separate *explanatory* source: `registry/curations/memory-ui-vocabulary.v0.1.json` (stable ID `A7-MEM-UI-VOCAB-006`). It belongs to Memory Wall but is **not** a fourth external GitHub bookmark. The three original external reference posters, six visualization-role reminders and collection 03 operating principles are preserved without changes.
+
+Use two comparison examples: (1) **fenced code block / monospace panel**, for precise, copyable source text, trees and inventories; (2) **interactive card / custom UI panel**, for records with working controls such as Show IDs and Copy register. Illustrative synthetic folder names/IDs are intentionally **not** real project or private Drive references. Thirteen categorized prompting terms cover static/interactive layouts, structured data/artifacts/evidence, and audit/provider readback operations. No claim is made that every chat client supports the same custom UI.
+
+Generator: `scripts/generate_memory_ui_vocabulary.py`; derived Pages source: `site/data/memory-ui-vocabulary.json`. Rendered in `site/memory-wall.html#interface-vocabulary` with scoped `site/assets/memory-ui-vocabulary.js` and `.css`. Validate via `scripts/validate_memory_ui_vocabulary.py`, entire A7 Registry CI and desktop/mobile Chromium. The source is not an executable directory crawler and cannot serve private records. Preserve original buttons/nav and print layout; treat any provider validation as a distinct claim.

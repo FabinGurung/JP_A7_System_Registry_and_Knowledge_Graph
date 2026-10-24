@@ -105,6 +105,10 @@ jobs:
           python scripts/validate_developer_dock_platform_board.py
           node --check site/assets/a7-developer-dock.js
           node --check site/assets/platform-responsibilities.js
+      - name: Validate source-curated interface vocabulary and preserved posters
+        run: |
+          python scripts/validate_memory_ui_vocabulary.py
+          node --check site/assets/memory-ui-vocabulary.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket

@@ -530,5 +530,16 @@
     "feature_browser_qa": 39881697442,
     "direct_public_http_fetch_verified": false,
     "additional_boundaries": "No public provider HTML GET readback in current tooling; exact build/deploy artifact and source browser QA verified separately"
+  },
+  "a7_memory_ui_vocabulary": {
+    "sequence": "A7-SEQ-000033",
+    "status": "FEATURE_STAGED_PENDING_CI",
+    "collection": "A7-MEM-UI-VOCAB-006",
+    "source": "registry/curations/memory-ui-vocabulary.v0.1.json",
+    "site": "site/memory-wall.html#interface-vocabulary",
+    "source_derived": true,
+    "preserved_external_posters": 3,
+    "preserved_platform_panel": "A7-MEM-PLATFORM-ROLES-005",
+    "resource_navigator_commenced": false
   }
 }

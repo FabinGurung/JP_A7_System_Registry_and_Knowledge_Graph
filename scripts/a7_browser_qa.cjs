@@ -108,6 +108,20 @@ async function inspect(page,kind){
   assert.equal(await page.locator("#posters .poster-card").count(),3);
   assert.match(await page.locator("#platformExample").textContent(),/IFC parser/);
   assert.equal(await page.locator("#platformExamples span").count(),6);
+  await page.locator("#uiVocabTerms .ui-vocab-term").nth(12).waitFor();
+  assert.equal(await page.locator("#uiVocabTerms .ui-vocab-term").count(),13);
+  assert.equal(await page.locator("#uiVocabRegister .ui-vocab-row").count(),2);
+  await page.locator("#uiVocabToggle").click();
+  assert.equal(await page.locator("#uiVocabToggle").getAttribute("aria-pressed"),"true");
+  assert.match(await page.locator("#uiVocabRegister").textContent(),/EX-001/);
+  await page.locator('#uiVocabFilters button[data-category="WORKFLOW"]').click();
+  assert.equal(await page.locator("#uiVocabTerms .ui-vocab-term").count(),3);
+  await page.locator("#uiVocabSearch").fill("provider readback");
+  assert.equal(await page.locator("#uiVocabTerms .ui-vocab-term").count(),1);
+  await page.locator("#uiVocabSearch").fill("");
+  await page.locator('#uiVocabFilters button[data-category="ALL"]').click();
+  assert.equal(await page.locator("#uiVocabTerms .ui-vocab-term").count(),13);
+  pass(kind+": Collection 04 two panel samples, 13 terms, filtering, ID toggle and preservation");
   pass(kind+": L1 developer file search and semantic eight-role command architecture, original posters, privacy gate");
   await page.screenshot({path:out+"/developer-platform-"+kind+".png",fullPage:true});
   if(kind==="mobile"){

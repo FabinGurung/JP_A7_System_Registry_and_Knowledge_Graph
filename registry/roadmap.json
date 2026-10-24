@@ -208,6 +208,13 @@
       "title": "A7 poster 005: one command, governed sources and qualified website presentation",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Reused existing poster ID A7-MEM-PLATFORM-ROLES-005; PR #69 merged 2dfb04c2b0827b6eebb628856195c5740774b04e; main Registry CI 39882325975 SUCCESS, Pages 39882325976 SUCCESS (8 platform rows, 3 original posters, artifact digest recorded by GitHub); full push Chromium QA 39881697442 SUCCESS. Added governed AI, source/action/site flow, no new bookmark poster. Direct independent served-site HTTP content readback unavailable from current tool; Pages provider deployment verified. No peer/Drive writes."
+    },
+    {
+      "id": "A7-D29",
+      "stage": "SEQ 33 — Memory Wall vocabulary gallery",
+      "title": "Fenced code versus interactive card and thirteen filtered UI/data/audit prompting terms",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Standalone public-safe Collection 04 generated from new curated UI glossary with synthetic panel demos and real filtering/ID toggle/copy. Earlier Memory Wall collections unchanged. Resource Navigator not commenced."
     }
   ],
   "next": [
