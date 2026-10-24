@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000033",
+  "current_sequence": "A7-SEQ-000034",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -553,7 +553,7 @@
   },
   "a7_resource_navigator": {
     "sequence": "A7-SEQ-000034",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+    "status": "FINAL_CLOSED_PASS",
     "scope": "A7_PUBLIC_SAFE_L1_ONLY",
     "source": "registry/curations/resource-navigator.v0.1.json",
     "published_page": "site/resource-navigator.html",
@@ -562,6 +562,16 @@
     "no_private_ingestion": true,
     "legacy_arc01_06_preserved": true,
     "no_peer_writes": true,
-    "previous_closed_sequence": "A7-SEQ-000033"
+    "previous_closed_sequence": "A7-SEQ-000033",
+    "feature_pr": 74,
+    "feature_main_sha": "ec63a7be61be58b035a66800e8a78ea7491ed528",
+    "main_registry_run": 40057605039,
+    "main_chromium_run": 40057604925,
+    "main_pages_run": 40057605064,
+    "pr_registry_run": 40057527999,
+    "pr_chromium_run": 40057528077,
+    "independent_served_page_body_readback": false,
+    "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/resource-navigator.html",
+    "post_snapshot_expected": "snapshot/post-a7-seq-000034-resource-navigator"
   }
 }

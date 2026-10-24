@@ -27,3 +27,7 @@ Resolve fact class and module ownership, verify access/publication and original 
 ## Regression guard
 
 Preserve all prior L0 Arc 01–06 panels, L1 navigation, Memory Wall Collections 01–04, original source curation files and legacy routes. Homepage source byte-for-byte unchanged in Arc 07. Independent served HTML readback remains separate from GitHub Pages workflow success.
+
+## Verified feature publication — 2026-10-24
+
+PRE snapshot: `snapshot/pre-a7-seq-000034-resource-navigator` at `c4aad069794f995bae35939f8e4d5236d7baa8b2`. Feature PR #74 merged at `ec63a7be61be58b035a66800e8a78ea7491ed528`. Main Registry Validation run 40057605039, real desktop/mobile Chromium run 40057604925, and Pages build/deploy run 40057605064 all concluded SUCCESS. Github provider confirms deployment, **not an independent external HTML body fetch**. Final closeout must retain original source/website assets and establish POST snapshot equality.
