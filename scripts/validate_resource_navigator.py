@@ -38,7 +38,7 @@ for org in d["organizations"]:
                 if href.startswith("https://"):
                     assert href == external_prefix + path, href
                 else:
-                    assert re.fullmatch(r"[a-z0-9-]+\\.html", href), href
+                    assert re.fullmatch(r"[a-z0-9-]+\.html", href), href
                     assert path == "site/" + href
                 resource_count += 1
 assert resource_count == 9
