@@ -32,6 +32,8 @@ on:
       - "scripts/validate_repository_health.py"
       - "scripts/generate_memory_wall.py"
       - "scripts/validate_memory_wall.py"
+      - "scripts/generate_memory_ui_vocabulary.py"
+      - "scripts/validate_memory_ui_vocabulary.py"
       - "site/**"
       - ".github/workflows/deploy-a7-pages.yml"
   workflow_dispatch:
@@ -110,6 +112,11 @@ jobs:
           python scripts/validate_developer_dock_platform_board.py
           node --check site/assets/a7-developer-dock.js
           node --check site/assets/platform-responsibilities.js
+      - name: Build human UI vocabulary Memory Wall collection
+        run: |
+          python scripts/generate_memory_ui_vocabulary.py --output site/data/memory-ui-vocabulary.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_ui_vocabulary.py
+          node --check site/assets/memory-ui-vocabulary.js
       - name: Derive public reference posters from machine curation
         run: python scripts/generate_memory_wall.py --output site/data/memory-posters.json --commit-sha "$GITHUB_SHA"
       - name: Validate Memory Wall design and curation

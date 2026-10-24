@@ -1,0 +1,35 @@
+/* A7 Collection 04 · human-friendly output/prompt vocabulary. Independent of other posters. */
+.ui-vocab-board{margin:42px 0;border-radius:20px;border:1px solid #cce2ec;background:#fff;box-shadow:0 13px 34px #95c0d029;padding:clamp(16px,2.8vw,28px);color:#335d77;scroll-margin-top:110px}
+.ui-vocab-head,.ui-vocab-browser-head,.ui-vocab-mini-head{display:flex;gap:12px;align-items:start;justify-content:space-between;flex-wrap:wrap}
+.ui-vocab-head h2{font-size:clamp(24px,3vw,34px);margin:5px 0;color:#285a76}.ui-vocab-head p{font-size:13px;color:#63869c;max-width:660px;line-height:1.5}
+.ui-vocab-counter{border:1px solid #c5dfe9;background:#f0faff;border-radius:99px;color:#4783a0;font-size:10px;padding:8px 10px;font-weight:800;white-space:nowrap}
+.ui-vocab-comparison{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0 10px}
+.ui-vocab-demo{min-width:0;display:flex;flex-direction:column;gap:10px;padding:17px;border:1px solid #d5e6ed;background:#f7fbfd;border-radius:14px}
+.ui-vocab-demo-title span{letter-spacing:.1em;font-size:10px;font-weight:850;color:#5293b1}
+.ui-vocab-demo-title h3{font-size:18px;color:#32617c;margin:5px 0}
+.ui-vocab-demo-title p{font-size:12px;color:#6b8798;line-height:1.55;margin:0}
+.ui-vocab-mono pre{background:#233d50;color:#e5f5ff;padding:18px;border-radius:9px;white-space:pre;overflow:auto;font-size:12px;line-height:1.65;flex:1;min-height:132px}
+.ui-vocab-call{font-size:11px;color:#507f9a;background:white;border-radius:7px;padding:9px;margin:0;border:1px solid #dbeaf0}
+.ui-vocab-mini-register{background:#fff;border:1px solid #d1e5ee;border-radius:9px;padding:13px;flex:1}
+.ui-vocab-mini-head strong{font-size:12px;color:#356780}
+.ui-vocab-mini-head button,.ui-vocab-copy{background:#f0f9fd;border:1px solid #b9d8e7;border-radius:7px;color:#347da0;padding:7px 9px;cursor:pointer;font-size:11px}
+.ui-vocab-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0;padding:7px 9px;border:1px solid #e0edf3;border-radius:6px;font-size:12px;color:#426e86}
+.ui-vocab-row code{color:#9c7580;font-size:10px;font-weight:750}
+.ui-vocab-copy{margin-top:9px}.ui-vocab-feedback{font-size:10px;color:#547e68;display:block;min-height:17px}
+.ui-vocab-example-note,.ui-vocab-foot{font-size:11px;color:#758fa0}
+.ui-vocab-browser{padding:17px;margin-top:22px;background:#f8fcff;border:1px solid #d7e8ef;border-radius:13px}
+.ui-vocab-browser-head h3{font-size:19px;color:#326281;margin:4px 0}
+.ui-vocab-browser-head label{font-size:11px;font-weight:700;color:#61869b;display:grid;gap:5px}
+.ui-vocab-browser-head input{background:#fff;border-radius:8px;border:1px solid #c5dce9;padding:9px 11px;min-width:225px;max-width:100%;color:#365d75}
+.ui-vocab-filters{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+.ui-vocab-filters button{border:1px solid #c5e0ed;color:#387f9c;background:white;border-radius:99px;padding:7px 11px;cursor:pointer;font-size:11px}
+.ui-vocab-filters button.is-active{background:#316d90;color:#fff}
+.ui-vocab-terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ui-vocab-term{background:#fff;border:1px solid #d7e7ef;border-radius:10px;padding:12px;min-width:0}
+.ui-vocab-term small{display:block;color:#618ba5;font-size:10px;letter-spacing:.07em}
+.ui-vocab-term h4{font-size:14px;margin:4px 0;color:#2b627f}
+.ui-vocab-term p{font-size:11px;color:#657f92;margin:5px 0}
+.ui-vocab-term blockquote{font:600 11px/1.5 system-ui,sans-serif;margin:9px 0 0;padding:8px;border-left:3px solid #8fbfd9;background:#f1f8fc;color:#386a86}
+.ui-vocab-detail{font-size:11px}.ui-vocab-detail a{color:#3083a3}
+@media(max-width:700px){.ui-vocab-comparison,.ui-vocab-terms{grid-template-columns:1fr}.ui-vocab-browser-head label{width:100%}.ui-vocab-browser-head input{width:100%;min-width:0}}
+@media print{.ui-vocab-board{box-shadow:none!important;break-before:page}.ui-vocab-filters,.ui-vocab-browser-head label,.ui-vocab-mini-head button,.ui-vocab-copy{display:none!important}.ui-vocab-terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ui-vocab-term,.ui-vocab-demo{break-inside:avoid}.ui-vocab-mono pre{white-space:pre-wrap;color:#1e3c4d;background:#eef6fb}.ui-vocab-browser{background:#fff}}

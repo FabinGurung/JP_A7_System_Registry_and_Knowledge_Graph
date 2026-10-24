@@ -1,0 +1,155 @@
+{
+  "schema": "a7-memory-ui-vocabulary.v0.1",
+  "collection_id": "A7-MEM-UI-VOCAB-006",
+  "owner": "A7_MEMORY_WALL_CURATIONS",
+  "display_title": "Say it by name",
+  "subtitle": "Two panel types and thirteen reusable UI, data and verification terms",
+  "derived_only": true,
+  "public_safe": true,
+  "not_part_of_external_bookmark_collection": true,
+  "no_real_drive_path_or_provider_ids": true,
+  "source_is_explanatory_not_project_truth": true,
+  "categories": [
+    {
+      "id": "DISPLAY",
+      "label": "UI & layout"
+    },
+    {
+      "id": "DATA",
+      "label": "Data & evidence"
+    },
+    {
+      "id": "WORKFLOW",
+      "label": "Audit & verification"
+    }
+  ],
+  "comparison": [
+    {
+      "id": "code-block",
+      "label": "Fenced code block",
+      "key": "Copy the exact structure",
+      "note": "Monospace text with preserved spacing. Best for trees, source code, schemas, machine inventories and handovers."
+    },
+    {
+      "id": "interactive-card",
+      "label": "Interactive card",
+      "key": "Explore and take actions",
+      "note": "Visual grouping with real controls. Best for registers, selectable items, filters, expandable detail and copying."
+    }
+  ],
+  "example": {
+    "kind": "DEMONSTRATION_ONLY",
+    "note": "Illustrative placeholders. These are not real A7 or Drive resources.",
+    "tree": "WORKSPACE/\n├── 01_Projects/\n│   └── Sample_Project/\n└── 02_Reference/",
+    "register": [
+      {
+        "id": "EX-001",
+        "name": "01_Projects",
+        "detail": "Sample category"
+      },
+      {
+        "id": "EX-002",
+        "name": "02_Reference",
+        "detail": "Sample category"
+      }
+    ]
+  },
+  "terms": [
+    {
+      "id": "code-block",
+      "category": "DISPLAY",
+      "title": "Fenced code block / monospace panel",
+      "description": "Copyable text that preserves exact spaces, tree indentation, code and IDs.",
+      "prompt": "Show the complete directory tree in a fenced monospace code block, with IDs and indentation preserved."
+    },
+    {
+      "id": "interactive-card",
+      "category": "DISPLAY",
+      "title": "Interactive card / custom UI panel",
+      "description": "A designed panel with real controls such as filtering, expanding, selecting and copying.",
+      "prompt": "Show this folder register as an interactive card with Show IDs and Copy register controls."
+    },
+    {
+      "id": "markdown-table",
+      "category": "DISPLAY",
+      "title": "Markdown table",
+      "description": "Compact static rows and columns for easy comparison.",
+      "prompt": "Compare the three options in a Markdown table with clear column headings."
+    },
+    {
+      "id": "interactive-table",
+      "category": "DISPLAY",
+      "title": "Interactive table",
+      "description": "Structured rows with usable sorting, filtering or selection controls.",
+      "prompt": "Create an interactive table with sortable columns, filters and row details."
+    },
+    {
+      "id": "card",
+      "category": "DISPLAY",
+      "title": "Card",
+      "description": "A visually grouped item or summary; a card is not necessarily interactive.",
+      "prompt": "Show each project as a separate card with its owner, status and main link."
+    },
+    {
+      "id": "accordion",
+      "category": "DISPLAY",
+      "title": "Accordion / collapsible section",
+      "description": "A long explanation divided into expandable groups.",
+      "prompt": "Organize the detailed notes into labeled collapsible sections."
+    },
+    {
+      "id": "checklist",
+      "category": "DISPLAY",
+      "title": "Checkbox checklist",
+      "description": "Tasks or acceptance criteria with visible done/pending states.",
+      "prompt": "Show the remaining QA tasks as a checkbox checklist."
+    },
+    {
+      "id": "json-jsonl",
+      "category": "DATA",
+      "title": "JSON / JSONL",
+      "description": "Machine-readable objects; JSONL stores one JSON record per line for append-friendly logs.",
+      "prompt": "Export the records as JSONL and preserve stable IDs and field names."
+    },
+    {
+      "id": "artifact",
+      "category": "DATA",
+      "title": "Artifact / downloadable file",
+      "description": "A generated output such as XLSX, PDF, HTML or a packaged report.",
+      "prompt": "Create a downloadable HTML artifact alongside the source data."
+    },
+    {
+      "id": "source-citation",
+      "category": "DATA",
+      "title": "Source citation",
+      "description": "A precise reference identifying evidence behind a factual statement.",
+      "prompt": "Cite the exact original file or provider record for each conclusion."
+    },
+    {
+      "id": "read-only-audit",
+      "category": "WORKFLOW",
+      "title": "Read-only audit",
+      "description": "Inspect current state and report findings without changing source files.",
+      "prompt": "Run a read-only audit first; do not modify or delete any files."
+    },
+    {
+      "id": "recursive-scan",
+      "category": "WORKFLOW",
+      "title": "Recursive scan",
+      "description": "Inspect a folder and all descendants rather than its immediate children only.",
+      "prompt": "Recursively inspect the folder tree and report nested files and subfolders."
+    },
+    {
+      "id": "provider-readback",
+      "category": "WORKFLOW",
+      "title": "Provider readback",
+      "description": "Reopen the actual originating provider after a change to verify the resulting object, ID or revision.",
+      "prompt": "After the change, reread the item directly from Google Drive or GitHub and report the verified ID and revision."
+    }
+  ],
+  "limitations": [
+    "This reference does not prove a ChatGPT response can render every control on every client.",
+    "Read-only audits and provider readbacks require real provider access.",
+    "Example records and IDs are not actual Drive folders or GitHub artifacts."
+  ]
+}
