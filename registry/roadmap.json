@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-24",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000034",
+  "current_closed_sequence": "A7-SEQ-000035",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -227,8 +227,8 @@
       "id": "A7-D31",
       "stage": "A7-SEQ-000035 · Memory Wall storage-only architecture",
       "title": "Collection 05: seven formats, source/file separation and no DB-folder mimicry",
-      "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
-      "detail": "New versioned operating guidance, not deployed/final until CI, real browser and Pages readback. Existing Collections 01–04 source preserved; no actual private Drive, GitHub peer or database migration."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Source-derived Collection 05 seven-format table; feature PR #76 merged at 6b382db1c4bf73004c4ab03d9ba367d95ff9df9f. Main A7 Registry #40073991504 SUCCESS, desktop/mobile Chromium #40073991493 SUCCESS and Pages #40073991520 SUCCESS; PR Registry #40073916987, browser #40073917029 SUCCESS. Collection 03 provider overview preserved rather than duplicated; Collection 01–04 source curations and Galactic Atlas homepage unchanged. No private Drive, peer repositories, deployed databases or migrations modified. Independent HTTP readback of public body unavailable; provider Pages SUCCESS."
     }
   ],
   "next": [

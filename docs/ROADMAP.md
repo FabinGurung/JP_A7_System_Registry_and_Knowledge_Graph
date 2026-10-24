@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000034` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000035` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
@@ -29,3 +29,9 @@ Existing Memory Wall preserved. New distinct Collection 04 is generated from `re
 ## A7-SEQ-000034 · Galactic Atlas Arc07 Resource Navigator
 
 Added public-safe L1 [Resource Navigator](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/resource-navigator.html) to the **existing** Galactic Atlas shell. Its [canonical manifest](../registry/curations/resource-navigator.v0.1.json) contains one A7 presentation grouping, one real public A7 project, three categories and nine public source-linked references. No private Drive indexing, project-client data, live sync, domain-engine automation or peer mutations were authorized or performed. PRE at `c4aad069794f995bae35939f8e4d5236d7baa8b2`; feature PR [#74](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/74) merged at `ec63a7be61be58b035a66800e8a78ea7491ed528`. Main Registry #40057605039, main Chromium #40057604925 and Pages #40057605064 all passed. Direct external served-page body readback was unavailable; provider Pages deployment passed. See [Resource Navigator read-first](RESOURCE_NAVIGATOR_READ_FIRST.md).
+
+## A7-SEQ-000035 · Memory Wall Collection 05: storage-only architecture
+
+The preexisting provider-role poster (Collection 03) already explained Drive/GitHub/Pages ownership at a high level. The missing **seven-format responsibility matrix** was added as independent [Collection 05](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#storage-only-architecture), source `registry/curations/memory-storage-architecture.v0.1.json`. SQL schemas, JSONL audits, private SQLite snapshots, JSON manifests, CSV review, operational Sheets/Excel and human-friendly Drive originals are distinguished with their privacy boundaries. Drive remains human-browsable, not a database hierarchy. The poster is guidance, not a claim that a migration or integration was implemented.
+
+PRE snapshot `snapshot/pre-a7-seq-000035-memory-storage-architecture` at `4b6b1169059cf9838c79a19a8fb8a363d9c7a0a2`. Feature PR [#76](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/76) merged at `6b382db1c4bf73004c4ab03d9ba367d95ff9df9f`; main [Registry #40073991504](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40073991504), [Chromium #40073991493](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40073991493) and [Pages #40073991520](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40073991520) all succeeded. Public independent served HTML GET not verified. No peer/Drive changes.
