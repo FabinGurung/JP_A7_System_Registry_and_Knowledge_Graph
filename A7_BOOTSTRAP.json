@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000034",
+  "current_sequence": "A7-SEQ-000035",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -577,12 +577,23 @@
   "a7_memory_storage_architecture": {
     "sequence_id": "A7-SEQ-000035",
     "collection_id": "A7-MEM-STORAGE-ARCH-007",
-    "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+    "status": "FINAL_CLOSED_PASS",
     "page": "site/memory-wall.html#storage-only-architecture",
     "canonical_source": "registry/curations/memory-storage-architecture.v0.1.json",
     "original_collections_preserved": true,
     "private_data_migration": false,
     "private_drive_writes": false,
-    "other_repository_writes": false
+    "other_repository_writes": false,
+    "feature_pr": 76,
+    "feature_main_sha": "6b382db1c4bf73004c4ab03d9ba367d95ff9df9f",
+    "main_registry_run": 40073991504,
+    "main_chromium_run": 40073991493,
+    "main_pages_run": 40073991520,
+    "pr_registry_run": 40073916987,
+    "pr_chromium_run": 40073917029,
+    "independent_served_page_body_readback": false,
+    "previous_collections_original_sources_unchanged": true,
+    "post_snapshot_expected": "snapshot/post-a7-seq-000035-memory-storage-architecture",
+    "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#storage-only-architecture"
   }
 }

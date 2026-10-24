@@ -77,3 +77,7 @@ The existing Collection 03 covers broad provider responsibilities but **did not*
 
 Source: `registry/curations/memory-storage-architecture.v0.1.json`; generator: `scripts/generate_memory_storage_architecture.py`; derived Pages JSON: `site/data/memory-storage-architecture.json`; public anchor: `site/memory-wall.html#storage-only-architecture`; validator: `scripts/validate_memory_storage_architecture.py`; real browser QA runs on desktop and mobile. Preserve earlier four collections byte-for-byte at source, original A7 Galaxy template, all other repositories and all Drive folders/files.
 
+
+## Collection 05 provider QA / release checkpoint — 2026-10-24
+
+Feature PR #76 merged at `6b382db1c4bf73004c4ab03d9ba367d95ff9df9f`. A7 Registry run 40073991504 SUCCESS, Chromium desktop/mobile 40073991493 SUCCESS and Pages build/deploy 40073991520 SUCCESS, all at that same main SHA. Provider Pages build/deploy success is **not** independent direct HTTP served-content inspection. Original Collection 01–04 curations and L0 homepage remained unchanged; no user data migration. Post-merge source and publication are recorded in Git. POST snapshot must match the final closeout main commit.
