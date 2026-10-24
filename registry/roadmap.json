@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-19",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000032",
+  "current_closed_sequence": "A7-SEQ-000033",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -213,8 +213,8 @@
       "id": "A7-D29",
       "stage": "SEQ 33 — Memory Wall vocabulary gallery",
       "title": "Fenced code versus interactive card and thirteen filtered UI/data/audit prompting terms",
-      "status": "FEATURE_STAGED_PENDING_CI",
-      "detail": "Standalone public-safe Collection 04 generated from new curated UI glossary with synthetic panel demos and real filtering/ID toggle/copy. Earlier Memory Wall collections unchanged. Resource Navigator not commenced."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Same L1 Memory Wall upgraded with source-derived Collection04 (13 terms, 2 illustrative panel patterns); PR #72 merged at f52fb319e40052fe23cc1c62c78978f4b5eaefdf. Actual main Registry CI #40047852614, Chromium #40047852551 and Pages #40047852564 all success. Previous posters preserved by strict validator and changed-file scope; main homepage untouched. Public direct HTTP body GET not verified due current browsing restrictions. Resource Navigator not commenced."
     }
   ],
   "next": [
