@@ -109,6 +109,11 @@ jobs:
         run: |
           python scripts/validate_memory_ui_vocabulary.py
           node --check site/assets/memory-ui-vocabulary.js
+      - name: Validate Arc 07 source-governed public Resource Navigator
+        run: |
+          python scripts/validate_resource_navigator.py
+          python scripts/generate_resource_navigator.py --output .a7-generated-test/resource-navigator.json --commit-sha "$GITHUB_SHA"
+          node --check site/assets/resource-navigator.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket

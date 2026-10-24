@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eff8fc">
+<meta name="description" content="A7 public Resource Navigator: follow Organization to Project to Category to Resource without browsing private warehouse folders.">
+<title>A7 · Resource Navigator</title>
+<link rel="stylesheet" href="assets/a7-unified-theme.css">
+<link rel="stylesheet" href="assets/a7-site-shell.css">
+<link rel="stylesheet" href="assets/resource-navigator.css">
+<script src="assets/a7-site-shell.js" defer></script><script src="assets/resource-navigator.js" defer></script>
+</head><body class="standalone-page">
+<main class="rn-main">
+<section class="rn-hero">
+<div class="rn-eyebrow">L0 GALACTIC ATLAS / L1 RESOURCE NAVIGATOR · ARC 07</div>
+<h1>Find the right resource.<br><em>Not another folder.</em></h1>
+<p>Explore public A7 materials by their purpose. Start with an organization grouping, enter a project, choose a category, then open its original resource. This directory does not replicate private documents or grant access.</p>
+<div class="rn-toplinks"><a href="./">← Galactic Atlas</a><a href="memory-wall.html">Memory Wall ↗</a><a href="roadmap.html">Roadmap ↗</a></div>
+</section>
+<section class="rn-board" aria-label="Source-backed resource directory">
+<div class="rn-board-head"><div><span class="rn-eyebrow">THE ROUTE</span><h2>Organization → Project → Category → Resource</h2><p id="rnBreadcrumb">Choose a destination to explore its public references.</p></div>
+<div class="rn-search-controls"><label for="rnSearch">Search resources<input id="rnSearch" type="search" autocomplete="off" placeholder="Search title or description…"></label><button id="rnReset" type="button">Reset</button></div></div>
+<p id="rnStatus" class="rn-status" role="status" aria-live="polite">Reading the versioned public manifest…</p>
+<div class="rn-columns">
+<section class="rn-column" aria-labelledby="rnOrgTitle"><div class="rn-column-head"><span>01</span><h3 id="rnOrgTitle">Organization</h3></div><div id="rnOrganizations" class="rn-options"><p>Loading…</p></div></section>
+<section class="rn-column" aria-labelledby="rnProjectsTitle"><div class="rn-column-head"><span>02</span><h3 id="rnProjectsTitle">Project</h3></div><div id="rnProjects" class="rn-options"><p>Loading…</p></div></section>
+<section class="rn-column" aria-labelledby="rnCategoriesTitle"><div class="rn-column-head"><span>03</span><h3 id="rnCategoriesTitle">Category</h3></div><div id="rnCategories" class="rn-options"><p>Loading…</p></div></section>
+<section class="rn-column rn-result" aria-labelledby="rnResourcesTitle"><div class="rn-column-head"><span>04</span><h3 id="rnResourcesTitle">Document / Answer / Resource</h3></div><div id="rnResources" class="rn-options"><p>Loading…</p></div></section>
+</div>
+</section>
+<section class="rn-boundary" aria-label="Authority and privacy limitations"><h2>The website is the window, not the source of truth.</h2>
+<p>Entries come from an A7 public-safe curation at the GitHub revision used for this page build. A link is navigation—not a verification of current third-party data, engineering approval, private permission or real-time synchronization. Original project documents remain with their owning providers.</p>
+<a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/curations/resource-navigator.v0.1.json" target="_blank" rel="noopener noreferrer">Inspect canonical Resource Navigator manifest ↗</a>
+</section>
+</main><script src="assets/fluffy-rocket.js" defer></script></body></html>

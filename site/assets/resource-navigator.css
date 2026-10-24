@@ -1,0 +1,33 @@
+/* Arc 07: additive Resource Navigator; does not alter shared Galactic Atlas theme. */
+.rn-main{max-width:1480px;margin:auto;padding:clamp(18px,4vw,52px);font:14px/1.6 system-ui,sans-serif;color:#31546b}
+.rn-eyebrow{font-size:10px;font-weight:850;letter-spacing:.15em;color:#558da8}
+.rn-hero h1{color:#284d6a;font-size:clamp(35px,5.4vw,72px);line-height:1.06;letter-spacing:-.045em;margin:15px 0}
+.rn-hero h1 em{font-style:normal;color:#5b9ab8}.rn-hero p{max-width:825px;color:#617f91;font-size:15px}
+.rn-toplinks{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 35px}
+.rn-toplinks a,.rn-boundary a{border:1px solid #c5e0ee;border-radius:10px;background:#fff;color:#266f93;padding:10px 15px;text-decoration:none;font-weight:750;font-size:12px}
+.rn-board,.rn-boundary{border:1px solid #c8e1ec;border-radius:20px;background:#fff;box-shadow:0 17px 40px #709eb71d;padding:clamp(18px,3vw,30px)}
+.rn-board-head{display:flex;gap:22px;align-items:end;justify-content:space-between;flex-wrap:wrap}
+.rn-board-head h2{font-size:clamp(20px,3vw,29px);letter-spacing:-.02em;color:#2b5771;margin:8px 0}
+.rn-board-head p{color:#638398;margin:4px 0;font-size:12px}
+.rn-search-controls{display:flex;align-items:end;gap:9px;flex-wrap:wrap}
+.rn-search-controls label{display:grid;gap:4px;font-weight:750;color:#4f768d;font-size:12px}
+.rn-search-controls input{width:min(310px,80vw);background:#f7fcff;border:1px solid #bdd9e8;border-radius:9px;padding:10px;color:#2b516b}
+.rn-search-controls button{border:1px solid #b9dbea;color:#2b6d8e;background:#f0f9fe;border-radius:9px;padding:10px 15px;cursor:pointer;font-weight:750}
+.rn-status{color:#527c93;font-size:11px;margin:20px 0 12px}
+.rn-columns{display:grid;grid-template-columns:minmax(150px,.9fr) minmax(175px,1fr) minmax(175px,1fr) minmax(240px,1.55fr);gap:12px;align-items:start}
+.rn-column{background:#f7fbfe;border:1px solid #d4e7ef;border-radius:14px;padding:14px;min-width:0;min-height:250px}
+.rn-column-head{display:flex;gap:9px;align-items:center;border-bottom:1px solid #d6e8f0;padding-bottom:10px;margin-bottom:12px}
+.rn-column-head span{font-size:11px;color:#4c91b1;font-weight:850}
+.rn-column h3{font-size:14px;line-height:1.3;color:#2b607f;margin:0}
+.rn-options{display:grid;gap:9px}.rn-choice{text-align:left;width:100%;padding:13px 12px;border-radius:11px;border:1px solid #d5e4ec;background:#fff;cursor:pointer;color:#355971;font:inherit}
+.rn-choice strong,.rn-choice small{display:block;overflow-wrap:anywhere}.rn-choice strong{font-size:13px;line-height:1.35}.rn-choice small{font-size:11px;color:#7494a4;margin-top:5px}
+.rn-choice.is-selected{border-color:#61a7c6;background:#e6f5fb;box-shadow:inset 3px 0 0 #448fb2}
+.rn-resource{border:1px solid #d6e8ef;border-radius:11px;background:#fff;padding:13px;min-width:0;overflow-wrap:anywhere}
+.rn-resource-heading{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.rn-kind,.rn-id{font-size:10px;color:#60879a;font-weight:800}.rn-kind{color:#3b88a8;letter-spacing:.06em}
+.rn-resource a{display:block;margin:5px 0;color:#246f93;font-size:14px;font-weight:850;text-decoration:none}
+.rn-resource p{font-size:12px;color:#617f92;margin:3px 0 7px}.rn-resource small{font-size:10px;color:#7392a2;overflow-wrap:anywhere}
+.rn-empty{color:#648196;font-size:12px}.rn-boundary{margin-top:20px;background:#f8fcfe}.rn-boundary h2{font-size:21px;color:#2c5971;margin-top:0}.rn-boundary p{color:#5c7e90;max-width:980px}.rn-boundary a{display:inline-block;margin-top:10px}
+.rn-choice:focus-visible,.rn-search-controls button:focus-visible,.rn-resource a:focus-visible{outline:3px solid #207eaa;outline-offset:3px}
+@media(max-width:1100px){.rn-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.rn-columns{grid-template-columns:1fr}.rn-column{min-height:0}.rn-search-controls,.rn-search-controls label,.rn-search-controls input{width:100%}.rn-search-controls input{max-width:none}}
+@media print{.rn-main{padding:8mm}.rn-columns{grid-template-columns:repeat(2,1fr)}.rn-board,.rn-boundary{box-shadow:none}.rn-search-controls{display:none}.rn-resource{break-inside:avoid}}

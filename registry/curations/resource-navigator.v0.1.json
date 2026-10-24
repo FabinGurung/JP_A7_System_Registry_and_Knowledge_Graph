@@ -1,0 +1,124 @@
+{
+  "schema": "a7-resource-navigator.v0.1",
+  "collection_id": "A7-RN-001",
+  "sequence_id": "A7-SEQ-000034",
+  "owner": "A7_ONLY",
+  "scope": "PUBLIC_A7_REFERENCE_ONLY",
+  "public_safe": true,
+  "read_only": true,
+  "authority": "PUBLIC_LINK_INDEX_NOT_DOMAIN_AUTHORITY",
+  "source_observed_date": "2026-10-24",
+  "data_boundary": "No private Drive identifiers, financial, structural, client, project-private or peer-repository data. Presentation IDs are not globally authoritative project IDs.",
+  "organizations": [
+    {
+      "id": "A7-RN-ORG-001",
+      "name": "A7 public registry",
+      "classification": "PRESENTATION_GROUP_NOT_LEGAL_ORGANIZATION",
+      "description": "A human-friendly grouping of A7's own public reference pages; it does not assert a registered company.",
+      "projects": [
+        {
+          "id": "A7-RN-PROJ-001",
+          "name": "Galactic Atlas & Memory Wall",
+          "classification": "PUBLIC_A7_WEBSITE_NOT_CLIENT_PROJECT",
+          "owner": "A7 System Registry & Knowledge Graph",
+          "description": "One real public A7 project, with categorized links to its existing published materials.",
+          "categories": [
+            {
+              "id": "A7-RN-CAT-001",
+              "name": "Explore & learn",
+              "description": "Start with the galaxy and its explanatory resources.",
+              "resources": [
+                {
+                  "id": "A7-RN-RES-001",
+                  "name": "Galactic Atlas",
+                  "kind": "PAGE",
+                  "href": "index.html",
+                  "source_path": "site/index.html",
+                  "note": "L0 navigator, nine indexed worlds and documented relationships."
+                },
+                {
+                  "id": "A7-RN-RES-002",
+                  "name": "Memory Wall",
+                  "kind": "RESOURCE",
+                  "href": "memory-wall.html",
+                  "source_path": "site/memory-wall.html",
+                  "note": "Four separately governed, public-safe reference collections."
+                },
+                {
+                  "id": "A7-RN-RES-003",
+                  "name": "How It Works",
+                  "kind": "DOCUMENT",
+                  "href": "how-it-works.html",
+                  "source_path": "site/how-it-works.html",
+                  "note": "Accessible explanation of what the A7 system does and does not do."
+                }
+              ]
+            },
+            {
+              "id": "A7-RN-CAT-002",
+              "name": "Build & verify",
+              "description": "Find progress, source tooling and release evidence.",
+              "resources": [
+                {
+                  "id": "A7-RN-RES-004",
+                  "name": "Roadmap & Progress",
+                  "kind": "RESOURCE",
+                  "href": "roadmap.html",
+                  "source_path": "site/roadmap.html",
+                  "note": "Registry-derived progress; not a live provider monitoring feed."
+                },
+                {
+                  "id": "A7-RN-RES-005",
+                  "name": "Development History",
+                  "kind": "RESOURCE",
+                  "href": "history.html",
+                  "source_path": "site/history.html",
+                  "note": "Dated Git-derived commits, pull requests and workflow snapshots."
+                },
+                {
+                  "id": "A7-RN-RES-006",
+                  "name": "Developer Dock",
+                  "kind": "RESOURCE",
+                  "href": "developer-dock.html",
+                  "source_path": "site/developer-dock.html",
+                  "note": "Curated scripts, source paths and automated validation references."
+                }
+              ]
+            },
+            {
+              "id": "A7-RN-CAT-003",
+              "name": "Sources & boundaries",
+              "description": "Understand authority, traceability and public access limits.",
+              "resources": [
+                {
+                  "id": "A7-RN-RES-007",
+                  "name": "Governance",
+                  "kind": "DOCUMENT",
+                  "href": "governance.html",
+                  "source_path": "site/governance.html",
+                  "note": "Authority resolution and source separation explained."
+                },
+                {
+                  "id": "A7-RN-RES-008",
+                  "name": "A7 Read First",
+                  "kind": "SOURCE",
+                  "href": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A7_READ_FIRST.md",
+                  "source_path": "A7_READ_FIRST.md",
+                  "note": "Canonical operating rules, accessible directly from its GitHub source."
+                },
+                {
+                  "id": "A7-RN-RES-009",
+                  "name": "A7 Bootstrap",
+                  "kind": "SOURCE",
+                  "href": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A7_BOOTSTRAP.json",
+                  "source_path": "A7_BOOTSTRAP.json",
+                  "note": "Machine-readable entry point; verify the current revision in GitHub."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

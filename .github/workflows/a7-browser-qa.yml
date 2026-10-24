@@ -9,6 +9,9 @@ on:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
       - "registry/curations/memory-ui-vocabulary.v0.1.json"
+      - "registry/curations/resource-navigator.v0.1.json"
+      - "scripts/generate_resource_navigator.py"
+      - "scripts/validate_resource_navigator.py"
       - "scripts/generate_memory_ui_vocabulary.py"
       - "scripts/validate_memory_ui_vocabulary.py"
       - "registry/curations/platform-responsibilities.v0.1.json"
@@ -64,6 +67,11 @@ jobs:
         run: |
           python scripts/generate_memory_ui_vocabulary.py --output site/data/memory-ui-vocabulary.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_memory_ui_vocabulary.py
+      - name: Derive public Arc07 navigation fixture
+        run: |
+          python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_resource_navigator.py
+          node --check site/assets/resource-navigator.js
       - name: Install isolated Chromium for browser and viewport checks
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1

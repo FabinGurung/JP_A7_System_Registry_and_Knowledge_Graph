@@ -4,7 +4,7 @@ from pathlib import Path
 import json,re,hashlib,xml.etree.ElementTree as ET
 R=Path(__file__).resolve().parents[1]
 htmls=sorted((R/"site").glob("*.html"))
-assert len(htmls)==12, [x.name for x in htmls]
+assert len(htmls)==13, [x.name for x in htmls]
 primary=["index.html","history.html","control-towers.html","repository-status.html","memory-wall.html","roadmap.html"]
 archived=["legacy-overview.html","milestone.html","visualization-workspace.html"]
 shell=(R/"site/assets/a7-site-shell.js").read_text()
@@ -51,6 +51,8 @@ assert 'class="galaxy-experience"' in home
 assert 'id="spaceField"' in home
 assert 'href="history.html"' in home
 assert "GitHub remains the source of truth" in history
+assert '["resource-navigator.html","Resource Navigator"' in shell
+assert (R/"site/resource-navigator.html").is_file()
 assert "49c99f7010e53a66fab94cad4a955e195f9b060d" in (R/"site/milestone.html").read_text()
 p=(R/"registry/decisions/site-navigation-consolidation.v0.1.json")
 d=json.loads(p.read_text())
@@ -58,4 +60,4 @@ assert d["status"]=="PRESENTATION_ONLY_NAVIGATION_CHANGE"
 assert d["primary_pages"]==primary
 assert d["archived_pages"]==archived
 assert d["private_a9_reconciliation_complete"] is False
-print("A7 SITE NAVIGATION PASS pages=12 main=6 archived=3 memory_views=6 history=preserved")
+print("A7 SITE NAVIGATION PASS pages=13 main=6 archived=3 memory_views=6 history=preserved")
