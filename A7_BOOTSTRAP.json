@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000032",
+  "current_sequence": "A7-SEQ-000033",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -533,13 +533,22 @@
   },
   "a7_memory_ui_vocabulary": {
     "sequence": "A7-SEQ-000033",
-    "status": "FEATURE_STAGED_PENDING_CI",
+    "status": "FINAL_CLOSED_PASS",
     "collection": "A7-MEM-UI-VOCAB-006",
     "source": "registry/curations/memory-ui-vocabulary.v0.1.json",
     "site": "site/memory-wall.html#interface-vocabulary",
     "source_derived": true,
     "preserved_external_posters": 3,
     "preserved_platform_panel": "A7-MEM-PLATFORM-ROLES-005",
-    "resource_navigator_commenced": false
+    "resource_navigator_commenced": false,
+    "source_merge_sha": "f52fb319e40052fe23cc1c62c78978f4b5eaefdf",
+    "provider_evidence": {
+      "feature_pr": 72,
+      "registry": 40047852614,
+      "browser": 40047852551,
+      "pages": 40047852564,
+      "pages_artifact_sha256": "251fb923edf2edc160f15d5ede07d7a81135cceedc6a4ebb654ea7859553f4d8"
+    },
+    "independent_http_body_verified": false
   }
 }
