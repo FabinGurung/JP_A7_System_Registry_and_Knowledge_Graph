@@ -1,0 +1,27 @@
+/* Collection 05: A7-only storage separation poster; keep existing sections untouched. */
+.storage-arch-board{margin:42px 0;padding:clamp(18px,3vw,30px);border-radius:20px;border:1px solid #cde1ec;background:#fff;color:#315b74;box-shadow:0 13px 34px #95c0d029;scroll-margin-top:110px;font:13px/1.6 system-ui,sans-serif}
+.storage-arch-head{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.storage-arch-head h2{margin:5px 0 8px;color:#285d7b;font-size:clamp(24px,3vw,35px);line-height:1.15}
+.storage-arch-head p{margin:4px 0;color:#608295;max-width:720px}
+.storage-arch-meta{font-size:10px;border:1px solid #c3deed;border-radius:99px;padding:7px 11px;color:#4c829f;font-weight:800;white-space:normal}
+.storage-arch-principle{margin:21px 0;background:#f1f9fd;border:1px solid #d4e8f0;border-radius:12px;padding:15px 18px;color:#315b78}
+.storage-arch-principle strong{display:block;font-size:15px;margin-bottom:6px}.storage-arch-principle p{margin:0}
+.storage-arch-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.storage-arch-role{background:#f9fdff;border:1px solid #d4e8ef;border-radius:13px;padding:15px;min-width:0}
+.storage-arch-role small{font-size:10px;font-weight:900;letter-spacing:.09em;color:#4e91af}
+.storage-arch-role h3{margin:6px 0;font-size:18px;color:#306b88}
+.storage-arch-role p{margin:0;font-size:12px;color:#5d7e91}
+.storage-arch-title{font-size:18px;color:#2e6079;margin:25px 0 10px}
+.storage-arch-table-wrap{width:100%;max-width:100%;overflow-x:auto;border:1px solid #d2e5ed;border-radius:11px}
+.storage-arch-table{width:100%;border-collapse:collapse;min-width:620px;font-size:12px;text-align:left}
+.storage-arch-table th,.storage-arch-table td{padding:13px 14px;vertical-align:top;border-bottom:1px solid #dce9ef;overflow-wrap:anywhere}
+.storage-arch-table thead{background:#e9f5fb;color:#356b88}
+.storage-arch-table tbody th{color:#286d92;font-weight:850;width:22%}
+.storage-arch-table tbody td:nth-child(2){width:43%;color:#365d75}
+.storage-arch-table tbody td:nth-child(3){color:#718698}
+.storage-arch-table tbody tr:nth-child(even){background:#f9fcfe}
+.storage-arch-rule{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;margin:21px 0 14px;background:#f7fafc;border:1px solid #d9e6eb;border-left:4px solid #7eb3cd;padding:15px;border-radius:9px}
+.storage-arch-rule>span{font-size:22px;color:#568ba8}.storage-arch-rule h3{font-size:16px;color:#2e617d;margin:0 0 4px}.storage-arch-rule p{margin:0;color:#5b7d90}
+.storage-arch-note{font-size:12px;color:#637f91;margin:12px 0}.storage-arch-foot{font-size:11px;color:#76909f}.storage-arch-links a{color:#267ea3}
+@media(max-width:720px){.storage-arch-flow{grid-template-columns:1fr}.storage-arch-board{padding:16px}.storage-arch-table{min-width:590px}}
+@media print{.storage-arch-board{box-shadow:none;break-inside:auto}.storage-arch-flow{grid-template-columns:repeat(3,1fr)}.storage-arch-table{min-width:0;font-size:10px}.storage-arch-table th,.storage-arch-table td{padding:8px}.storage-arch-role{break-inside:avoid}}

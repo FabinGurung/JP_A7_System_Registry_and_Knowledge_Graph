@@ -9,6 +9,9 @@ on:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
       - "registry/curations/memory-ui-vocabulary.v0.1.json"
+      - "registry/curations/memory-storage-architecture.v0.1.json"
+      - "scripts/generate_memory_storage_architecture.py"
+      - "scripts/validate_memory_storage_architecture.py"
       - "registry/curations/resource-navigator.v0.1.json"
       - "scripts/generate_resource_navigator.py"
       - "scripts/validate_resource_navigator.py"
@@ -67,6 +70,11 @@ jobs:
         run: |
           python scripts/generate_memory_ui_vocabulary.py --output site/data/memory-ui-vocabulary.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_memory_ui_vocabulary.py
+      - name: Build storage-only Memory Wall poster fixture
+        run: |
+          python scripts/generate_memory_storage_architecture.py --output site/data/memory-storage-architecture.json --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_storage_architecture.py
+          node --check site/assets/memory-storage-architecture.js
       - name: Derive public Arc07 navigation fixture
         run: |
           python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"

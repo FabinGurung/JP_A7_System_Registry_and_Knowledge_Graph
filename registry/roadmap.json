@@ -222,6 +222,13 @@
       "title": "L1 Organization → Project → Category → Resource public-safe pilot",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Feature PR #74 merged at ec63a7be61be58b035a66800e8a78ea7491ed528. Initial release source: 1 public A7 presentation group, 1 project, 3 categories, 9 verified in-repository resource paths; scoped JS/CSS and additive shared-menu link. Source-safe validator and main Registry #40057605039 SUCCESS, desktop/mobile Chromium #40057604925 SUCCESS, Pages build/deploy #40057605064 SUCCESS. No original Galactic Atlas homepage or Memory Wall modification. No peer or Drive writes. Direct independent publicly served HTML body unavailable; GitHub Pages provider deploy confirmed."
+    },
+    {
+      "id": "A7-D31",
+      "stage": "A7-SEQ-000035 · Memory Wall storage-only architecture",
+      "title": "Collection 05: seven formats, source/file separation and no DB-folder mimicry",
+      "status": "FEATURE_STAGED_PENDING_PROVIDER_QA",
+      "detail": "New versioned operating guidance, not deployed/final until CI, real browser and Pages readback. Existing Collections 01–04 source preserved; no actual private Drive, GitHub peer or database migration."
     }
   ],
   "next": [
