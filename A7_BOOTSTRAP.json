@@ -622,5 +622,17 @@
     "public_toc_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#memory-wall-contents",
     "public_poster_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#extraction-retrieval",
     "no_private_source_extraction": true
+  },
+  "a7_memory_wall_refinement": {
+    "sequence_id": "A7-SEQ-000037",
+    "status": "FEATURE_STAGED_PENDING_QA",
+    "scope": "MEMORY_WALL_UI_ONLY",
+    "first_chapter": "Developer Learning Toolkit",
+    "source_repo_readmes_checked": 3,
+    "source_records_01_to_06_preserved": true,
+    "footer_stale_tips_replaced": true,
+    "format_details_collapsed_at_rest": true,
+    "private_data_reads": false,
+    "peer_repo_mutations": false
   }
 }

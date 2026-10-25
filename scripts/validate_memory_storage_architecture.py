@@ -29,7 +29,7 @@ for forbidden in ("drive.google.com/","docs.google.com/","a9_fabin_gurung","1ddz
     assert forbidden not in source, forbidden
 html=(R/"site/memory-wall.html").read_text()
 assert html.count('id="storage-only-architecture"') == 1
-assert html.index('id="platform-role-board"') < html.index('id="interface-vocabulary"') < html.index('id="storage-only-architecture"') < html.index('class="wall-bottom-grid"')
+assert html.index('id="platform-role-board"') < html.index('id="interface-vocabulary"') < html.index('id="storage-only-architecture"') < html.index('id="extraction-retrieval"')
 for x in ("storageArchFlow","storageArchRows","storageArchStatus","storageArchRule"):
     assert 'id="'+x+'"' in html,x
 assert html.count('assets/memory-storage-architecture.js')==1
