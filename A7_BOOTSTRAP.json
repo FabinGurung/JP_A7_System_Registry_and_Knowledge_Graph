@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000035",
+  "current_sequence": "A7-SEQ-000036",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -598,7 +598,7 @@
   },
   "a7_memory_extraction": {
     "sequence_id": "A7-SEQ-000036",
-    "status": "FEATURE_STAGED_PENDING_QA",
+    "status": "FINAL_CLOSED_PASS",
     "collection_id": "A7-MEM-EXTRACTION-008",
     "toc_source": "registry/curations/memory-wall-contents.v0.1.json",
     "canonical_source": "registry/curations/memory-extraction-retrieval.v0.1.json",
@@ -609,6 +609,18 @@
     "private_data_read": false,
     "private_data_migration": false,
     "peer_writes": false,
-    "prior_collection_curations_preserved": true
+    "prior_collection_curations_preserved": true,
+    "feature_pr": 78,
+    "feature_main_sha": "5851b450b28e455cde8caa062700e3e0ee72057b",
+    "main_registry_run": 40149409766,
+    "main_browser_run": 40149409828,
+    "main_pages_run": 40149409757,
+    "pr_registry_run": 40149333252,
+    "pr_browser_run": 40149333257,
+    "external_http_body_readback": false,
+    "post_snapshot_expected": "snapshot/post-a7-seq-000036-memory-extraction-toc",
+    "public_toc_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#memory-wall-contents",
+    "public_poster_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#extraction-retrieval",
+    "no_private_source_extraction": true
   }
 }
