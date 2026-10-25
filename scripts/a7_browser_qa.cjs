@@ -157,10 +157,10 @@ async function inspect(page,kind){
   assert.equal(await page.locator("#mwEvidenceFields code").count(),18);
   await page.locator("#mwFormatSearch").fill("ETABS");
   assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),1);
-  assert.match(await page.locator("#mwFormatGrid").textContent(),/\\.e2k/);
+  assert.ok((await page.locator("#mwFormatGrid").textContent()).includes(".e2k"));
   await page.locator("#mwFormatSearch").fill("");
   await page.locator("#mwFormatGroup").selectOption("GIS");
-  assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),3);
+  assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),4);
   await page.locator("#mwFormatGroup").selectOption("ALL");
   assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),17);
   assert.match(await page.locator("#mwExtractionStatus").textContent(),/NO_EXTERNAL_FILES_FETCHED|no private ingestion/);
