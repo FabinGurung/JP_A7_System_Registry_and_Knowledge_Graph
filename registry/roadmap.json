@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
-  "snapshot_date": "2026-10-24",
+  "snapshot_date": "2026-10-25",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000035",
+  "current_closed_sequence": "A7-SEQ-000036",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -234,8 +234,8 @@
       "id": "A7-D32",
       "stage": "A7-SEQ-000036 · Memory Wall contents and extraction evidence",
       "title": "Six-collection table of contents and 17-format source-grounded extraction/retrieval guide",
-      "status": "FEATURE_STAGED_PENDING_QA",
-      "detail": "A7-only public-safe information architecture/reference, not native source ingestion. Existing Collections 01–05 and homepage preserved. Feature QA, Pages, readback pending."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Existing Memory Wall augmented in place with source-driven 6-collection TOC and public-only 17-format extraction and machine retrieval reference, no raw file ingestion. Feature PR #78 merged at 5851b450b28e455cde8caa062700e3e0ee72057b. Main Registry #40149409766, real desktop/mobile browser #40149409828, Pages build/deploy #40149409757 all SUCCESS at exact feature main. Source curations 01–05 and original L0 homepage remain unmodified. No private Drive or peer writes. Separate independent publicly served HTTP page readback not proven; provider Pages deployment confirmed."
     }
   ],
   "next": [

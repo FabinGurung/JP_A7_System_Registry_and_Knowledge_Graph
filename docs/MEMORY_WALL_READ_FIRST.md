@@ -95,3 +95,7 @@ Feature PR #76 merged at `6b382db1c4bf73004c4ab03d9ba367d95ff9df9f`. A7 Registry
 **Owner boundaries:** A7 remains a public GitHub repository and Pages site. Only public-safe synthetic reference rules live here; no Drive reads, data migration, snapshots, app deployment, synchronization, or peer repo changes. The owning provider retains raw source files and ACLs; a permissioned future extractor would be a separate authorized task.
 
 Canonical source: `registry/curations/memory-extraction-retrieval.v0.1.json`. Derived public-only data: `site/data/memory-extraction-retrieval.json` and `site/data/memory-wall-contents.json`. Validate `scripts/validate_memory_extraction_guidance.py`, existing previous collection QA, desktop/mobile Chromium and Pages build. Vendor links in curation document format capabilities, not project data.
+
+## Collection 06 provider release checkpoint — 2026-10-25
+
+Source-guided feature PR [#78](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/78) merged `5851b450b28e455cde8caa062700e3e0ee72057b`; main Registry #40149409766, real mobile/desktop Chromium #40149409828 and Pages build/deploy #40149409757 all SUCCESS. Existing five original canonical collection sources unchanged. The new File Adapters table is guidance, **not** proof any user file was fetched, parsed, indexed or machine-approved. CI tests synthetic source-only curation and browser interactions. Independent remote served HTML body inspection is not claimed. The POST snapshot must match the final closeout main commit.
