@@ -595,5 +595,20 @@
     "previous_collections_original_sources_unchanged": true,
     "post_snapshot_expected": "snapshot/post-a7-seq-000035-memory-storage-architecture",
     "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#storage-only-architecture"
+  },
+  "a7_memory_extraction": {
+    "sequence_id": "A7-SEQ-000036",
+    "status": "FEATURE_STAGED_PENDING_QA",
+    "collection_id": "A7-MEM-EXTRACTION-008",
+    "toc_source": "registry/curations/memory-wall-contents.v0.1.json",
+    "canonical_source": "registry/curations/memory-extraction-retrieval.v0.1.json",
+    "page": "site/memory-wall.html#extraction-retrieval",
+    "toc_anchor": "site/memory-wall.html#memory-wall-contents",
+    "evidence_format_families": 17,
+    "pipeline_steps": 7,
+    "private_data_read": false,
+    "private_data_migration": false,
+    "peer_writes": false,
+    "prior_collection_curations_preserved": true
   }
 }

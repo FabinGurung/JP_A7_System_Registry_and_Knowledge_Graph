@@ -229,6 +229,13 @@
       "title": "Collection 05: seven formats, source/file separation and no DB-folder mimicry",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Source-derived Collection 05 seven-format table; feature PR #76 merged at 6b382db1c4bf73004c4ab03d9ba367d95ff9df9f. Main A7 Registry #40073991504 SUCCESS, desktop/mobile Chromium #40073991493 SUCCESS and Pages #40073991520 SUCCESS; PR Registry #40073916987, browser #40073917029 SUCCESS. Collection 03 provider overview preserved rather than duplicated; Collection 01–04 source curations and Galactic Atlas homepage unchanged. No private Drive, peer repositories, deployed databases or migrations modified. Independent HTTP readback of public body unavailable; provider Pages SUCCESS."
+    },
+    {
+      "id": "A7-D32",
+      "stage": "A7-SEQ-000036 · Memory Wall contents and extraction evidence",
+      "title": "Six-collection table of contents and 17-format source-grounded extraction/retrieval guide",
+      "status": "FEATURE_STAGED_PENDING_QA",
+      "detail": "A7-only public-safe information architecture/reference, not native source ingestion. Existing Collections 01–05 and homepage preserved. Feature QA, Pages, readback pending."
     }
   ],
   "next": [
