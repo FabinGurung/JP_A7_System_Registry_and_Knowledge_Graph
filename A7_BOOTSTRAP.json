@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000036",
+  "current_sequence": "A7-SEQ-000037",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -625,7 +625,7 @@
   },
   "a7_memory_wall_refinement": {
     "sequence_id": "A7-SEQ-000037",
-    "status": "FEATURE_STAGED_PENDING_QA",
+    "status": "FINAL_CLOSED_PASS",
     "scope": "MEMORY_WALL_UI_ONLY",
     "first_chapter": "Developer Learning Toolkit",
     "source_repo_readmes_checked": 3,
@@ -633,6 +633,16 @@
     "footer_stale_tips_replaced": true,
     "format_details_collapsed_at_rest": true,
     "private_data_reads": false,
-    "peer_repo_mutations": false
+    "peer_repo_mutations": false,
+    "feature_pr": 80,
+    "feature_main_sha": "66f36f1ca6cf356b9c79edbd26086f735cd49e5e",
+    "registry_run": 40220229943,
+    "chromium_run": 40220229950,
+    "pages_run": 40220229890,
+    "pr_registry_run": 40220124489,
+    "pr_chromium_run": 40220124551,
+    "post_snapshot_expected": "snapshot/post-a7-seq-000037-memory-wall-refinement",
+    "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#memory-wall-contents",
+    "independent_http_body_readback": false
   }
 }
