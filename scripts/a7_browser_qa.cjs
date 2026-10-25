@@ -149,6 +149,11 @@ async function inspect(page,kind){
   pass(kind+": Collection 05 seven public-safe format roles, provider boundary and original four collections");
   await page.locator("#mwContentsList .mw-toc-card").nth(5).waitFor({timeout:15000});
   assert.equal(await page.locator("#mwContentsList .mw-toc-card").count(),6);
+  assert.match(await page.locator("#mwContentsList .mw-toc-card").first().textContent(),/Developer Learning Toolkit/);
+  assert.match(await page.locator("#board-title").textContent(),/Developer Learning Toolkit/);
+  assert.equal(await page.locator(".mw-chapter-return a").count(),5);
+  assert.equal(await page.locator(".mw-format-card[open]").count(),0);
+
   assert.equal(await page.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
   assert.match(await page.locator("#mwTocStatus").textContent(),/canonical index sha256/);
   await page.locator("#mwExtractionPipeline li").nth(6).waitFor({timeout:15000});
@@ -158,6 +163,11 @@ async function inspect(page,kind){
   await page.locator("#mwFormatSearch").fill("ETABS");
   assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),1);
   assert.ok((await page.locator("#mwFormatGrid").textContent()).includes(".e2k"));
+  assert.equal(await page.locator("#mwFormatGrid details.mw-format-card").count(),1);
+  await page.locator("#mwFormatGrid details.mw-format-card summary").click();
+  assert.equal(await page.locator("#mwFormatGrid details.mw-format-card[open]").count(),1);
+  assert.equal(await page.locator("#mwFormatGrid .mw-format-detail").count(),4);
+
   await page.locator("#mwFormatSearch").fill("");
   await page.locator("#mwFormatGroup").selectOption("GIS");
   assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),4);

@@ -10,7 +10,7 @@ get("memory-wall-contents.json").then(data=>{
   if(!/^[a-z][a-z0-9-]+$/.test(c.anchor)||!document.getElementById(c.anchor))throw Error("Broken local anchor "+c.anchor);
   const a=mk("a",undefined,"mw-toc-card mw-accent-"+c.accent);a.href="#"+c.anchor;
   const top=mk("span",undefined,"mw-toc-line");top.append(mk("b",String(c.number).padStart(2,"0"),"mw-toc-index"),mk("span",c.icon,"mw-toc-symbol"));
-  a.append(top,mk("strong",c.title),mk("span",c.subtitle,"mw-toc-sub"),mk("small",c.detail),mk("span","Explore section ↗","mw-toc-cta"));host.append(a);
+  a.append(top,mk("strong",c.title),mk("span",c.subtitle,"mw-toc-sub"),mk("small",c.detail));host.append(a);
  }
  $("mwTocTotal").textContent=String(data.collections.length).padStart(2,"0");
  $("mwTocStatus").textContent="Six linked collections · canonical index sha256 "+data.source_sha256.slice(0,12)+" · build "+data.site_build_commit.slice(0,12);
@@ -23,13 +23,17 @@ function renderFormats(){
   if(group!=="ALL"&&f.group!==group)continue;
   if(!(f.label+" "+f.extension+" "+f.method+" "+f.group).toLowerCase().includes(query))continue;
   shown++;
-  const card=mk("article",undefined,"mw-format-card");
-  const header=mk("div",undefined,"mw-format-card-head");header.append(mk("small",f.group),mk("code",f.extension));
-  card.append(header,mk("h4",f.label));
+  const card=mk("details",undefined,"mw-format-card");
+  const header=mk("summary",undefined,"mw-format-card-head");
+  const heading=mk("span",undefined,"mw-format-card-heading");
+  heading.append(mk("small",f.group),mk("strong",f.label));
+  header.append(heading,mk("code",f.extension),mk("span","View method","mw-format-expand"));
+  card.append(header);
+  const body=mk("div",undefined,"mw-format-body");
   for(const [label,value] of [["READER / METHOD",f.method],["STRUCTURED OUTPUT",f.output],["EXACT LOCATOR",f.locator],["DO NOT ASSUME",f.hold]]){
-   const line=mk("div",undefined,"mw-format-detail");line.append(mk("strong",label),mk("p",value));card.append(line);
+   const line=mk("div",undefined,"mw-format-detail");line.append(mk("strong",label),mk("p",value));body.append(line);
   }
-  grid.append(card);
+  card.append(body);grid.append(card);
  }
  if(!shown)grid.append(mk("p","No matches. Clear search or switch family.","mw-no-match"));
  $("mwFormatCount").textContent=shown+" of "+guide.formats.length+" file families · documentation only, no files were accessed";

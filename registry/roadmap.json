@@ -236,6 +236,13 @@
       "title": "Six-collection table of contents and 17-format source-grounded extraction/retrieval guide",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Existing Memory Wall augmented in place with source-driven 6-collection TOC and public-only 17-format extraction and machine retrieval reference, no raw file ingestion. Feature PR #78 merged at 5851b450b28e455cde8caa062700e3e0ee72057b. Main Registry #40149409766, real desktop/mobile browser #40149409828, Pages build/deploy #40149409757 all SUCCESS at exact feature main. Source curations 01–05 and original L0 homepage remain unmodified. No private Drive or peer writes. Separate independent publicly served HTTP page readback not proven; provider Pages deployment confirmed."
+    },
+    {
+      "id": "A7-D33",
+      "stage": "A7-SEQ-000037 · Memory Wall editorial and accessibility refinement",
+      "title": "Developer Learning Toolkit after three verified source READMEs; tighter six-section navigation and expandable file-method details",
+      "status": "FEATURE_STAGED_PENDING_QA",
+      "detail": "A7-only presentation refinement. Canonical source records Collections 01–06 unchanged except TOC metadata for Chapter 01. Preserve homepage, all anchors, three poster links and formats/evidence. Remove stale repeated bottom cards; keep accessible native detail expansion and quick back-to-chapters links."
     }
   ],
   "next": [

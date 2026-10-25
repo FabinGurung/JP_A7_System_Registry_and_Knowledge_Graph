@@ -10,6 +10,9 @@ from generate_memory_extraction_guidance import build
 
 toc,d=build("SYNTHETIC_BUILD")
 assert toc["collection_count"]==6 and len(toc["collections"])==6
+assert toc["collections"][0]["title"]=="Developer Learning Toolkit"
+assert toc["collections"][0]["subtitle"].startswith("Learn a path")
+assert len(toc["presentation_refinement"]["source_refs"])==3
 assert [c["number"] for c in toc["collections"]]==list(range(1,7))
 assert [c["anchor"] for c in toc["collections"]]==[
  "posters","visualization-reminders","platform-role-board","interface-vocabulary","storage-only-architecture","extraction-retrieval"
@@ -40,8 +43,11 @@ for f in d["vendor_references"]:
 html=(ROOT/"site/memory-wall.html").read_text(encoding="utf-8")
 assert html.count('id="memory-wall-contents"')==1
 assert html.count('id="extraction-retrieval"')==1
+assert '<h2 id="board-title">Developer Learning Toolkit</h2>' in html
+assert html.count('class="mw-chapter-return"')==5
+assert "Room for more posters" not in html
 assert html.index('id="memory-wall-contents"')<html.index('class="notice-board"')
-assert html.index('id="storage-only-architecture"')<html.index('id="extraction-retrieval"')<html.index('class="wall-bottom-grid"')
+assert html.index('id="storage-only-architecture"')<html.index('id="extraction-retrieval"')<html.index('class="mw-wall-tail"')
 for c in toc["collections"]:
     assert 'id="'+c["anchor"]+'"' in html,c["anchor"]
 for ident in ("mwContentsList","mwTocStatus","mwExtractionPipeline","mwFormatGrid","mwFormatSearch","mwFormatGroup","mwFormatCount","mwExtractionOutputs","mwEvidenceFields","mwExtractionSafeguards","mwEvidenceExample","mwExtractionStatus","mwExtractionSources"):
@@ -51,6 +57,7 @@ css=(ROOT/"site/assets/memory-wall-guides.css").read_text(encoding="utf-8")
 js=(ROOT/"site/assets/memory-wall-guides.js").read_text(encoding="utf-8")
 assert "memory-wall-contents.json" in js and "memory-extraction-retrieval.json" in js
 assert "textContent" in js and "innerHTML" not in js
+assert 'mk("details"' in js and 'mk("summary"' in js
 assert ".mw-toc-card" in css and ".mw-format-card" in css and "@media print" in css and "@media(max-width:" in css
 # All earlier original content must still be governed by old acceptance scripts.
 posters=json.loads((ROOT/"registry/curations/memory-posters.v0.1.json").read_text())
