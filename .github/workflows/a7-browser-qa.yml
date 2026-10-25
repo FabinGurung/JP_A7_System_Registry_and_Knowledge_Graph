@@ -12,6 +12,10 @@ on:
       - "registry/curations/memory-storage-architecture.v0.1.json"
       - "scripts/generate_memory_storage_architecture.py"
       - "scripts/validate_memory_storage_architecture.py"
+      - "registry/curations/memory-wall-contents.v0.1.json"
+      - "registry/curations/memory-extraction-retrieval.v0.1.json"
+      - "scripts/generate_memory_extraction_guidance.py"
+      - "scripts/validate_memory_extraction_guidance.py"
       - "registry/curations/resource-navigator.v0.1.json"
       - "scripts/generate_resource_navigator.py"
       - "scripts/validate_resource_navigator.py"
@@ -75,6 +79,11 @@ jobs:
           python scripts/generate_memory_storage_architecture.py --output site/data/memory-storage-architecture.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_memory_storage_architecture.py
           node --check site/assets/memory-storage-architecture.js
+      - name: Build Memory Wall contents and extraction fixtures
+        run: |
+          python scripts/generate_memory_extraction_guidance.py --output-dir site/data --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_extraction_guidance.py
+          node --check site/assets/memory-wall-guides.js
       - name: Derive public Arc07 navigation fixture
         run: |
           python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"

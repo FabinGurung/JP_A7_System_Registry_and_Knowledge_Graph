@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "A7-MEM-EXTRACTION-008",
+  "sequence_id": "A7-SEQ-000036",
+  "collection_number": 6,
+  "title": "Source-grounded extraction & machine retrieval",
+  "motto": "EXTRACT THE SOURCE. PROVE THE RECORD. THEN LET AI DERIVE.",
+  "status": "REFERENCE_CONTRACT_ONLY_NOT_DEPLOYED_INGESTION",
+  "public_safe": true,
+  "read_only": true,
+  "source_scope": "A7_ONLY__NO_EXTERNAL_FILES_FETCHED",
+  "language_stack": {
+    "primary": "Python (modular per-format adapters, typed schemas, validation and orchestration)",
+    "structured": "JSON Schema + JSONL evidence; SQL + SQLite FTS5/private relational lookup; Parquet for approved large numeric tables",
+    "view": "JavaScript/HTML on public GitHub Pages for protocol explanation only",
+    "domain": "GDAL/GeoPackage and IFCOpenShell/IFC for relevant GIS/BIM; native proprietary app APIs for ETABS, SAP2000, Revit and SKP"
+  },
+  "core_principle": "Keep immutable originals under their owning provider permissions; extract typed evidence with exact native locators, stable IDs, hash/revision, units and method; validate before retrieval or derivation. Do not store private extracted records on public GitHub Pages.",
+  "pipeline": [
+    {
+      "step": "01",
+      "title": "Resolve authority & permissions",
+      "description": "Resolve provider, owning module, file ID/revision, permitted use, ACL and file signature. Respect revocation."
+    },
+    {
+      "step": "02",
+      "title": "Snapshot original without modification",
+      "description": "Capture cryptographic hash, byte size, MIME, version, parser compatibility and related sidecars/xrefs. Preserve source binary."
+    },
+    {
+      "step": "03",
+      "title": "Extract in native semantic order",
+      "description": "Use authenticated API/native exporter or loss-aware parser. Capture tables, text, geometry, formulas, units, relationships and warnings; OCR only if necessary."
+    },
+    {
+      "step": "04",
+      "title": "Normalize typed evidence",
+      "description": "Write structured JSONL with source locators; transform to Parquet, GeoPackage, IFC or SQLite views as appropriate, never hide conversion losses."
+    },
+    {
+      "step": "05",
+      "title": "Run independent quality gates",
+      "description": "Check schema and object counts, nulls, sheets, geometry, units, CRS, IDs, source parity, cross-reference integrity and discrepancies."
+    },
+    {
+      "step": "06",
+      "title": "Index for authorized retrieval",
+      "description": "Use SQLite FTS5/full-text and filters, spatial indexes for geometry and optional embeddings for ranking. Query access-controlled records only."
+    },
+    {
+      "step": "07",
+      "title": "Derive with evidence + explicit limits",
+      "description": "Return cited source locators, transformations, code/build version, validation outcome and uncertainty; mark missing evidence as HOLD/NEEDS_INPUT."
+    }
+  ],
+  "formats": [
+    {
+      "id": "pdf",
+      "group": "Documents",
+      "extension": ".pdf",
+      "label": "PDF · born-digital or scanned",
+      "method": "PyMuPDF / pypdf first; region/page-aware extraction. Render/OCR scanned portions only with evidence labelling.",
+      "output": "JSONL text blocks and tables; optional searchable text",
+      "locator": "Page number, block or bounding box, exact quote, extraction method",
+      "hold": "Scanned text and drawings require OCR/visual confirmation; never infer missing values."
+    },
+    {
+      "id": "doc",
+      "group": "Documents",
+      "extension": ".docx, Google Docs",
+      "label": "Word & Google Docs",
+      "method": "python-docx or OOXML reader; Google Docs API for authenticated document structure and revisions.",
+      "output": "JSONL paragraphs/tables; Markdown as human-readable derivative",
+      "locator": "Document ID/revision; heading, paragraph/table coordinates",
+      "hold": "Preserve comments, revisions and embedded objects separately; exports can omit features."
+    },
+    {
+      "id": "spreadsheet",
+      "group": "Tables",
+      "extension": ".xlsx, .xlsm",
+      "label": "Excel workbooks",
+      "method": "openpyxl for OOXML worksheets and formulas; LibreOffice or Excel calculation only when authorized.",
+      "output": "JSONL cells/formulas; Parquet normalized rows; private SQLite indexes",
+      "locator": "Workbook sheet name, exact A1 cell/range, formula, cached value, number format",
+      "hold": "Cached formula result can be missing or stale; do not evaluate unknown macros or equate formula with result."
+    },
+    {
+      "id": "sheets",
+      "group": "Tables",
+      "extension": "Google Sheets",
+      "label": "Google Sheets",
+      "method": "Authenticated Sheets API values.get/batchGet and metadata/protected-range endpoints.",
+      "output": "JSONL cells/tables; Parquet for approved analytic copies",
+      "locator": "Spreadsheet ID (private), tab ID, A1 range, version/modified time",
+      "hold": "Values API alone may omit formulas, formatting, formulas' recalculation state and protections."
+    },
+    {
+      "id": "csv",
+      "group": "Tables",
+      "extension": ".csv, .tsv",
+      "label": "Delimited data",
+      "method": "Python csv / pandas or pyarrow CSV with explicit delimiter, encoding, schema and locale.",
+      "output": "Parquet for analytics; JSONL rows; SQLite for private joins",
+      "locator": "Source hash, row number, column, header mapping",
+      "hold": "A CSV loses original formulas, formats, relations and permissions; preserve types and nulls."
+    },
+    {
+      "id": "cad-dxf",
+      "group": "CAD & BIM",
+      "extension": ".dxf",
+      "label": "AutoCAD DXF",
+      "method": "ezdxf for layers, blocks, inserts, entities, layouts and handles.",
+      "output": "JSONL CAD entities; geometry table; optional approved IFC/SVG viewer",
+      "locator": "Entity handle, layer, layout, block path, coordinate transform, native units",
+      "hold": "Units, UCS, xrefs, paperspace and blocks need explicit resolution; drawing is not certified design."
+    },
+    {
+      "id": "cad-dwg",
+      "group": "CAD & BIM",
+      "extension": ".dwg",
+      "label": "AutoCAD DWG",
+      "method": "Approved CAD/native reader or ODA tooling; export reviewed DXF with source-version trace.",
+      "output": "DXF plus JSONL entity extraction; original DWG retained",
+      "locator": "Native entity identifier/handle, layer, layout, source hash",
+      "hold": "Never rename binary DWG to DXF; different versions and external references can affect completeness."
+    },
+    {
+      "id": "dwc",
+      "group": "CAD & BIM",
+      "extension": ".dwc (unconfirmed)",
+      "label": "Unrecognized DWC extension",
+      "method": "First inspect true filename, signature, MIME and originating application; request native specification.",
+      "output": "HOLD/NEEDS_INPUT until format recognized",
+      "locator": "Source name and hash; identifying app/version required",
+      "hold": "Do not silently reinterpret DWC as DWG or fabricate an extraction pathway."
+    },
+    {
+      "id": "skp",
+      "group": "CAD & BIM",
+      "extension": ".skp",
+      "label": "SketchUp models",
+      "method": "SketchUp C SDK or authorized native export, with group/component transforms.",
+      "output": "Element records and material metadata; GLB for read-only visualization",
+      "locator": "Component persistent ID/path, layer/tag, geometry transform, units",
+      "hold": "Meshes/GLB previews are not equivalent to construction semantics; preserve instances and units."
+    },
+    {
+      "id": "ifc",
+      "group": "CAD & BIM",
+      "extension": ".ifc, .ifczip, .rvt",
+      "label": "IFC / Revit BIM",
+      "method": "IfcOpenShell for IFC; native Revit API or explicitly authorized IFC export for RVT.",
+      "output": "IFC schema-guided entity JSONL, Parquet quantities, optional GLB viewer",
+      "locator": "IFC GlobalId, property set, placement, model revision, units",
+      "hold": "RVT is not a generic IFC file; geometry-only conversion can lose semantics, parameters and relations."
+    },
+    {
+      "id": "shp",
+      "group": "GIS",
+      "extension": ".shp + .shx + .dbf + .prj + optional .cpg",
+      "label": "Shapefile bundles",
+      "method": "GDAL/OGR or GeoPandas; validate all sidecar files together.",
+      "output": "GeoPackage or GeoParquet with attributes and CRS",
+      "locator": "Feature ID, layer, spatial reference/WKT, geometry, attribute origin",
+      "hold": "Do not treat only .shp as complete; missing DBF/SHX/CRS or encoding can corrupt meaning."
+    },
+    {
+      "id": "gdb",
+      "group": "GIS",
+      "extension": ".gdb, .gpkg",
+      "label": "ArcGIS File Geodatabase / GeoPackage",
+      "method": "GDAL OpenFileGDB / OGR or ArcPy for authenticated native workflows.",
+      "output": "GeoPackage; GeoParquet for analysis; relational feature records",
+      "locator": "Dataset/layer/table name, feature ID, coordinate system, source revision",
+      "hold": "Maintain attachments, domains, subtype rules and geometry fidelity; validate unsupported classes."
+    },
+    {
+      "id": "arcgis",
+      "group": "GIS",
+      "extension": ".aprx, .mxd, map services",
+      "label": "ArcGIS projects and services",
+      "method": "ArcPy/ArcGIS Pro for native project references; ArcGIS REST Feature Service APIs for layers.",
+      "output": "Layer references and service snapshots with provenance; GeoPackage only when export permitted",
+      "locator": "Project/layer identifier, portal item or service revision, CRS, service query",
+      "hold": "A project file references data; do not assume it contains the whole geodatabase. Respect service permissions."
+    },
+    {
+      "id": "georaster",
+      "group": "GIS",
+      "extension": ".tif, .tiff, .asc",
+      "label": "GeoTIFF and GIS rasters",
+      "method": "rasterio/GDAL inspect geotransform, raster bands, nodata and CRS.",
+      "output": "COG/GeoTIFF retained; raster statistics JSONL; tiles for approved preview",
+      "locator": "Band, pixel/window, CRS, resolution, nodata, source hash",
+      "hold": "Reprojection/resampling changes pixel values; record transformation and native units."
+    },
+    {
+      "id": "etabs",
+      "group": "Structural",
+      "extension": ".edb, .e2k",
+      "label": "ETABS models",
+      "method": "CSI ETABS native application/API for .edb; official .e2k text export and approved tables.",
+      "output": "JSONL nodes, elements, loads and analysis tables; Parquet table exports",
+      "locator": "Object/story, case/combo, direction, software version, model revision, units",
+      "hold": "Native model opening/export may require licensed Windows environment; parser PASS is not analysis or engineering approval."
+    },
+    {
+      "id": "sap2000",
+      "group": "Structural",
+      "extension": ".sdb, .s2k",
+      "label": "SAP2000 models",
+      "method": "CSI SAP2000 application/API and reviewed .s2k text/tables; preserve original .sdb.",
+      "output": "JSONL frame/joint/load/case records; Parquet result tables",
+      "locator": "Native object ID, load case, combination, analysis step, units/version",
+      "hold": "Case results depend on executed solver, model state and settings; never invent missing tables."
+    },
+    {
+      "id": "images",
+      "group": "Media & containers",
+      "extension": ".jpg, .png, .tif, .zip, .json, .md",
+      "label": "Images, archives and text sources",
+      "method": "Pillow/OpenCV image metadata; manifest ZIP members securely; decode JSON/MD directly with schema.",
+      "output": "JSONL metadata/annotations; image derivatives only with consent; extracted text if present",
+      "locator": "EXIF/frame/region, archive member path, hash and known transform",
+      "hold": "No visual fact claim without inspection; ZIP may contain nested private items; never publish recursively."
+    }
+  ],
+  "groups": [
+    "Documents",
+    "Tables",
+    "CAD & BIM",
+    "GIS",
+    "Structural",
+    "Media & containers"
+  ],
+  "outputs": [
+    {
+      "format": "JSONL + JSON Schema",
+      "role": "Evidence-level canonical records and typed, replayable provenance"
+    },
+    {
+      "format": "SQLite / FTS5 (private)",
+      "role": "Efficient searchable retrieval, joins, exact filters and audit-friendly local snapshots"
+    },
+    {
+      "format": "Parquet / Arrow",
+      "role": "High-volume typed tables, numerical analysis and column scans"
+    },
+    {
+      "format": "GeoPackage / GeoParquet",
+      "role": "GIS geometry, attributes and coordinate reference metadata"
+    },
+    {
+      "format": "IFC + semantic object records",
+      "role": "BIM entity identities and relationships; GLB for view-only geometry projection"
+    },
+    {
+      "format": "Markdown / HTML / CSV",
+      "role": "Human review and exports only, not replacement for complete source semantics"
+    }
+  ],
+  "evidence_fields": [
+    "record_id",
+    "source_provider",
+    "source_file_id",
+    "source_revision",
+    "source_sha256",
+    "native_locator",
+    "native_units",
+    "coordinate_reference_system",
+    "object_identity",
+    "extractor_name",
+    "extractor_version",
+    "extraction_timestamp",
+    "verbatim_value",
+    "normalized_value",
+    "transformation",
+    "verification_state",
+    "approval_state",
+    "access_classification"
+  ],
+  "supported_states": [
+    "VERIFIED_SOURCE_LINK",
+    "EXTRACTED_UNVERIFIED",
+    "VALIDATED_MACHINE",
+    "HUMAN_APPROVED",
+    "NEEDS_INPUT",
+    "ENGINEERING_HOLD",
+    "EXTRACTION_FAILED"
+  ],
+  "safeguards": [
+    "Exact matches and native element locators outrank semantic guesses; vectors/embeddings rank candidates but never become proof.",
+    "A parser success does not prove engineering accuracy or drawings issued for construction.",
+    "Missing files, units, CRS, source pages, xrefs, formulas, solver runs and permissions cause explicit gaps/HOLD, not fabricated values.",
+    "Content must be current with the authorized source revision; stale caches are labelled, invalidated or blocked.",
+    "Conversions are derivative; keep lossy/unsupported fields and software versions documented.",
+    "Only synthetic format guidance is published here; there is no upload, connector sync, private extraction corpus or user document ingestion in A7."
+  ],
+  "synthetic_example": {
+    "record_id": "EXAMPLE-0001",
+    "source_provider": "SOURCE_PROVIDER_PLACEHOLDER",
+    "source_file_id": "REDACTED_EXAMPLE",
+    "source_revision": "VERSION_PLACEHOLDER",
+    "source_sha256": "<sha256-of-original>",
+    "native_locator": {
+      "sheet": "ExampleSheet",
+      "cell": "B7"
+    },
+    "native_units": "UNIT_REQUIRES_VERIFICATION",
+    "coordinate_reference_system": null,
+    "object_identity": null,
+    "extractor_name": "EXAMPLE_PARSER",
+    "extractor_version": "VERSION_PINNED",
+    "extraction_timestamp": "SOURCE_OBSERVED_AT",
+    "verbatim_value": "12.5",
+    "normalized_value": null,
+    "transformation": "NONE_APPLIED",
+    "verification_state": "EXTRACTED_UNVERIFIED",
+    "approval_state": "NOT_APPROVED",
+    "access_classification": "EXAMPLE_ONLY"
+  },
+  "vendor_references": [
+    {
+      "label": "PyMuPDF text blocks",
+      "url": "https://pymupdf.readthedocs.io/en/latest/app1.html"
+    },
+    {
+      "label": "Google Sheets values API",
+      "url": "https://developers.google.com/workspace/sheets/api/guides/values"
+    },
+    {
+      "label": "ezdxf documentation",
+      "url": "https://ezdxf.readthedocs.io/en/stable/"
+    },
+    {
+      "label": "SketchUp SDK",
+      "url": "https://developer.trimble.com/docs/sketchup/tools/sdk/"
+    },
+    {
+      "label": "GDAL Shapefile",
+      "url": "https://gdal.org/en/stable/drivers/vector/shapefile.html"
+    },
+    {
+      "label": "GDAL OpenFileGDB",
+      "url": "https://gdal.org/en/stable/drivers/vector/openfilegdb.html"
+    },
+    {
+      "label": "IfcOpenShell geometry",
+      "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
+    },
+    {
+      "label": "CSI API",
+      "url": "https://www.csiamerica.com/developer"
+    },
+    {
+      "label": "ETABS export",
+      "url": "https://docs.csiamerica.com/help-files/etabs/Menus/File/Export/Export.htm"
+    }
+  ]
+}

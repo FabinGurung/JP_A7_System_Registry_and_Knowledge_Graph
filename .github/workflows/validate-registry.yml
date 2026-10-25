@@ -119,6 +119,11 @@ jobs:
           python scripts/validate_memory_storage_architecture.py
           python scripts/generate_memory_storage_architecture.py --output .a7-generated-test/memory-storage-architecture.json --commit-sha "$GITHUB_SHA"
           node --check site/assets/memory-storage-architecture.js
+      - name: Validate Memory Wall contents and evidence extraction reference
+        run: |
+          python scripts/validate_memory_extraction_guidance.py
+          python scripts/generate_memory_extraction_guidance.py --output-dir .a7-generated-test --commit-sha "$GITHUB_SHA"
+          node --check site/assets/memory-wall-guides.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
       - name: Validate unified site theme and decorative rocket
