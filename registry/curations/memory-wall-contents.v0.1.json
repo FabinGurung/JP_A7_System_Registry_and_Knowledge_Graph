@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "A7-MEM-WALL-CONTENTS-001",
+  "sequence_id": "A7-SEQ-000036",
+  "status": "PUBLIC_SAFE_SITE_NAVIGATION_ONLY",
+  "public_safe": true,
+  "collection_count": 6,
+  "collections": [
+    {
+      "number": 1,
+      "id": "A7-MEM-WALL-EXTERNAL-REFERENCES-001",
+      "title": "Pinned references",
+      "subtitle": "Three trusted external learning bookmarks",
+      "anchor": "posters",
+      "detail": "3 posters · learning, APIs and frontend",
+      "accent": "sky",
+      "icon": "↗",
+      "source": "registry/curations/memory-posters.v0.1.json"
+    },
+    {
+      "number": 2,
+      "id": "A7-MEM-VIS-TECHNIQUES-002",
+      "title": "Visualization methods",
+      "subtitle": "Six ways to explain one system",
+      "anchor": "visualization-reminders",
+      "detail": "6 reference methods · not installed tools",
+      "accent": "lavender",
+      "icon": "◈",
+      "source": "registry/decisions/visualization-workspace.json"
+    },
+    {
+      "number": 3,
+      "id": "A7-MEM-PLATFORM-ROLES-005",
+      "title": "Platform responsibilities",
+      "subtitle": "Who owns sources, code and publishing",
+      "anchor": "platform-role-board",
+      "detail": "8 roles · provider boundaries",
+      "accent": "mint",
+      "icon": "◎",
+      "source": "registry/curations/platform-responsibilities.v0.1.json"
+    },
+    {
+      "number": 4,
+      "id": "A7-MEM-UI-VOCAB-006",
+      "title": "Interface vocabulary",
+      "subtitle": "Ask for precisely the output you need",
+      "anchor": "interface-vocabulary",
+      "detail": "13 terms · 2 panel patterns",
+      "accent": "peach",
+      "icon": "⌘",
+      "source": "registry/curations/memory-ui-vocabulary.v0.1.json"
+    },
+    {
+      "number": 5,
+      "id": "A7-MEM-STORAGE-ARCH-007",
+      "title": "Storage-only architecture",
+      "subtitle": "Folders for people; relationships as records",
+      "anchor": "storage-only-architecture",
+      "detail": "7 formats · ownership and permissions",
+      "accent": "ocean",
+      "icon": "▣",
+      "source": "registry/curations/memory-storage-architecture.v0.1.json"
+    },
+    {
+      "number": 6,
+      "id": "A7-MEM-EXTRACTION-008",
+      "title": "Extraction & evidence",
+      "subtitle": "Read native files; preserve source truth",
+      "anchor": "extraction-retrieval",
+      "detail": "17 file families · retrieval contract",
+      "accent": "violet",
+      "icon": "◇",
+      "source": "registry/curations/memory-extraction-retrieval.v0.1.json"
+    }
+  ]
+}
