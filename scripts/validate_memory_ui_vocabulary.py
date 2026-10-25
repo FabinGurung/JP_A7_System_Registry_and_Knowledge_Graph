@@ -17,7 +17,7 @@ roles=json.loads((R/"registry/curations/platform-responsibilities.v0.1.json").re
 assert roles["document_id"]=="A7-MEM-PLATFORM-ROLES-005" and len(roles["entries"])==8
 h=(R/"site/memory-wall.html").read_text()
 assert h.count('id="interface-vocabulary"')==1 and h.count('id="platform-role-board"')==1
-assert h.index('id="platform-role-board"')<h.index('id="interface-vocabulary"')<h.index('class="wall-bottom-grid"')
+assert h.index('id="platform-role-board"')<h.index('id="interface-vocabulary"')<h.index('id="storage-only-architecture"')<h.index('id="extraction-retrieval"')
 for x in ["uiVocabTree","uiVocabRegister","uiVocabToggle","uiVocabCopy","uiVocabTerms","uiVocabSearch","uiVocabStatus"]:
     assert 'id="'+x+'"' in h,x
 assert "assets/memory-ui-vocabulary.js" in h and "assets/memory-ui-vocabulary.css" in h
