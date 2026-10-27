@@ -111,3 +111,11 @@ No Drive, A9, Communication & Web, other repository, ingestion backend or privat
 ## SEQ 37 provider release checkpoint — 2026-10-25
 
 Source review, Chapter 01 rename and ToC/detail UX were released by [PR #80](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/80) at `66f36f1ca6cf356b9c79edbd26086f735cd49e5e`. Main Registry #40220229943 PASS, mobile/desktop real Chromium #40220229950 PASS and Pages build/deploy #40220229890 PASS. All original three poster URLs and six canonical collection IDs remain stable. Native file methods are collapsed by default for readability, available on-demand or search. No source corpus extraction or permission change. The POST branch must match final main. Provider deploy success does not constitute independent HTTP body inspection.
+
+## A7-SEQ-000039 · six-chapter contents discoverability and Pages release gate
+
+No new TOC was needed. Original sources `registry/curations/memory-wall-contents.v0.1.json` and `site/memory-wall.html#memory-wall-contents` already supplied six working, source-derived hyperlinks after SEQ36/SEQ37. The A7 Galactic Atlas L0 homepage still falsely described the Wall as **three posters** and linked to the top-level page instead of the chapter navigation; this is corrected in place. Shared site footer now links directly to contents.
+
+The new `scripts/validate_memory_wall_published_site.py` tests the exact derived `site/data/memory-wall-contents.json` SHA and build commit, the six ordered static no-JavaScript anchors, actual target IDs, all six human-readable labels, the homepage/footnote entrypoints, and the presence of the JS/CSS/json payloads. It runs in Registry CI, Chromium fixture workflow and **Pages build before artifact upload**, preventing a green deployment that omits the TOC. Real desktop/mobile Chromium additionally follows TOC anchor links and a JavaScript-disabled browser verifies static fallback.
+
+A one-time release milestone `a7/memory-wall-toc-v1.0.0` is created **only by a gated workflow after a successful GitHub Pages deployment of an exact SEQ39 FINAL_CLOSED_PASS `main` commit and successful Registry CI at that same commit**. It cannot tag an unclosed feature or peer-owned resource. A7 website and source-only scope; no remote HTML response independently verified, private document indexing, other repo mutation or A9 ACK implied.

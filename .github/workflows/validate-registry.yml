@@ -126,6 +126,7 @@ jobs:
         run: |
           python scripts/validate_memory_extraction_guidance.py
           python scripts/generate_memory_extraction_guidance.py --output-dir .a7-generated-test --commit-sha "$GITHUB_SHA"
+          python scripts/validate_memory_wall_published_site.py --site-root site --data-dir .a7-generated-test --commit-sha "$GITHUB_SHA"
           node --check site/assets/memory-wall-guides.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py

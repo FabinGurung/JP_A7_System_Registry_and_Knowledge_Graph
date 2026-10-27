@@ -666,5 +666,20 @@
     "post_snapshot_expected": "snapshot/post-a7-seq-000038-semantic-debt-reconciliation",
     "independent_http_body_readback": false,
     "project_issue_71": "RESOLVED_AFTER_MAIN_READBACK"
+  },
+  "a7_memory_wall_toc_visibility": {
+    "sequence_id": "A7-SEQ-000039",
+    "status": "FEATURE_STAGED_PENDING_CI",
+    "source": "registry/curations/memory-wall-contents.v0.1.json",
+    "canonical_anchor": "site/memory-wall.html#memory-wall-contents",
+    "homepage_entry": "site/index.html",
+    "six_links": true,
+    "static_no_javascript_links": true,
+    "pages_bundle_gate": "scripts/validate_memory_wall_published_site.py",
+    "tag_candidate": "a7/memory-wall-toc-v1.0.0",
+    "release_eligible_only_after_final_main_pages_success": true,
+    "peer_writes": false,
+    "drive_writes": false,
+    "private_ack_closed": false
   }
 }

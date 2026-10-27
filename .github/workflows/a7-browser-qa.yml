@@ -16,6 +16,7 @@ on:
       - "registry/curations/memory-extraction-retrieval.v0.1.json"
       - "scripts/generate_memory_extraction_guidance.py"
       - "scripts/validate_memory_extraction_guidance.py"
+      - "scripts/validate_memory_wall_published_site.py"
       - "registry/curations/resource-navigator.v0.1.json"
       - "scripts/generate_resource_navigator.py"
       - "scripts/validate_resource_navigator.py"
@@ -84,6 +85,8 @@ jobs:
           python scripts/generate_memory_extraction_guidance.py --output-dir site/data --commit-sha "$GITHUB_SHA"
           python scripts/validate_memory_extraction_guidance.py
           node --check site/assets/memory-wall-guides.js
+      - name: Verify generated TOC bundle before real-browser interaction
+        run: python scripts/validate_memory_wall_published_site.py --site-root site --data-dir site/data --commit-sha "$GITHUB_SHA"
       - name: Derive public Arc07 navigation fixture
         run: |
           python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"
