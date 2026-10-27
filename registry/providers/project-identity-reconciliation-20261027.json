@@ -1,0 +1,30 @@
+{
+  "schema": "a7://provider-semantic-identity-readback/1",
+  "observation_id": "A7-OBS-PRJ-20261027-001",
+  "sequence_id": "A7-SEQ-000038",
+  "observed_date": "2026-10-27",
+  "scope": "A7_SEMANTIC_KEYS_ONLY",
+  "private_provider": "GOOGLE_SHEETS_AUTHENTICATED_READ_ONLY",
+  "source_sheets": [
+    "AI_Project_Identity",
+    "AI_Project_ChangeLog"
+  ],
+  "verified_evidence": [
+    {
+      "fact": "PRJ-000029_ACTIVE_CANONICAL_ID",
+      "readback": "AI_Project_Identity row 30",
+      "result": "PASS"
+    },
+    {
+      "fact": "PRJ-000030_RETIRED_ALIAS_TO_PRJ-000029",
+      "readback": "AI_Project_Identity row 31 and AI_Project_ChangeLog row 12",
+      "result": "PASS"
+    }
+  ],
+  "active_project_count": 29,
+  "retired_alias_count": 1,
+  "observed_legacy_github_csv": "HISTORICAL_2026_10_07_NOT_CURRENT_DOMAIN_TRUTH",
+  "public_data_policy": "No private spreadsheet ID, source URL, person/project name, company, address, coordinates, file content or permissions copied. Private owning sheet remains authority.",
+  "live_sync_claim": false,
+  "no_external_writes": true
+}

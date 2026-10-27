@@ -224,3 +224,9 @@ Read `docs/ARTIFACT_LINEAGE_CONTRACT_READ_FIRST.md`; validate `scripts/validate_
 ## 29. Private Main Git identity provider reconciliation — A7-SEQ-000026
 
 Read `docs/MAIN_LIBRARY_GITHUB_BRIDGE.md` and run `scripts/validate_private_bridge_boundary.py`. Private Main repo identity metadata is now provider-confirmed with PRE/POST retained privately, but historical A7 Seq13 parity and Main/Local cursor ACK remain open. Never copy private IDs into this public repository, reimport the old candidate CSV, invent a Local sequence, or claim current Git commit SHA equals a Drive SHA256.
+
+## A7-SEQ-000038: current semantic project IDs and retired redirects (2026-10-27)
+
+Before resolving a project-specific fact, load `registry/entities/project-identities.json` and `registry/routing/project-module-bindings.json`; use `scripts/resolve_project_semantic_id.py` or its equivalent governed logic. Only canonical, active project IDs are admitted to default execution bindings. A retired alias may redirect **for lookup** but may never be reused for a new project, counted as a second active project or assigned an active route. A7's expected set is **29 active semantic IDs, PRJ-000001 through PRJ-000029**, with **PRJ-000030 retired → PRJ-000029**. No owner names, project descriptions, addresses, latitude/longitude, private register ID or confidential operational values are to be published in the A7 semantic map.
+
+The previous 2026-10-07 GitHub `projects.csv` reference is a **historic observed snapshot**, not the live operational master. `MOD-OPS-001` owns operational records, currently backed by the private Google Drive project-identity and change-log sheets. The public-safe, no-private-ID provider readback is `registry/providers/project-identity-reconciliation-20261027.json`. This note does **not** require changing the Communication & Web repository or Google Drive. Check the appropriate live owner provider whenever a new identity change is proposed.

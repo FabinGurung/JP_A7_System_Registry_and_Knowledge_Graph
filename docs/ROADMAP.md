@@ -12,9 +12,9 @@ The older A7-SEQ-000013 external Main/Local import, consumed cursors and ACK rem
 
 Git history is canonical for code changes; Actions verifies only configured tests; Pages only proves published site artifacts; private originals belong to their designated owner. No fake engineering approvals or live runtime exchange may be presented.
 
-## A7 next deliverable
+## A7 immediate scoped debt
 
-After SEQ 30's real Registry CI/Pages proof, commence **Galactic Atlas Arc 06 (A7-SEQ-000031)**: interactive selected-world mission navigator, source-backed workspace routes, persistent *in-page* selection controls, keyboard/mobile QA, explicitly dated evidence. No actual external provider status or specialist output can be inferred from the interface.
+Arc 06 has already been completed and published; do not repeat it. The current A7-only priority is semantic identity reconciliation for `PRJ-000029` and the retired `PRJ-000030` alias. See issue #71 and the public-safe provider readback in `registry/providers/project-identity-reconciliation-20261027.json`. Resolve private source attributes in the owning provider without copying their contents into A7; the separately staged private Main/Local cutover is not a public UI blocker.
 
 For the complete delivery history, read `registry/roadmap.json`, `registry/events/a7-mutations.jsonl` and Git commits. This document deliberately does not duplicate the full growing milestone list.
 

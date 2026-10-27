@@ -58,12 +58,17 @@ def main() -> int:
 
         project_nodes = [n for n in nodes if n.get("type") == "project"]
         module_nodes = [n for n in nodes if n.get("type") == "module"]
-        if len(project_nodes) != 28:
-            errors.append("expected 28 project semantic nodes")
+        canonical_count = load(Path(__file__).resolve().parents[1] / "registry/entities/project-identities.json").get("project_count")
+        if len(project_nodes) != canonical_count:
+            errors.append(f"project semantic graph count {len(project_nodes)} != canonical identity count {canonical_count}")
+        if any(n.get("id") == "PRJ-000030" for n in project_nodes):
+            errors.append("retired project alias must never become a project graph node")
         if len(module_nodes) != 7:
             errors.append("expected 7 module nodes")
-        if matrix.get("project_binding_count", len(matrix.get("projects", []))) != 28 and len(matrix.get("projects", [])) != 28:
-            errors.append("expected 28 project matrix rows")
+        if matrix.get("project_binding_count", len(matrix.get("projects", []))) != canonical_count or len(matrix.get("projects", [])) != canonical_count:
+            errors.append("project matrix count must match canonical A7 semantic identity count")
+        if any(r.get("project_id") == "PRJ-000030" for r in matrix.get("projects", [])):
+            errors.append("retired alias must never be a project matrix row")
         if len(matrix.get("route_columns", [])) != 5:
             errors.append("expected 5 execution routes")
         if any(r.get("project_instance_assertion") != "NOT_ASSERTED_BY_A7" for r in matrix.get("route_columns", [])):

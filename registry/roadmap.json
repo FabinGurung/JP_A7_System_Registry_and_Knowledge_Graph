@@ -243,6 +243,13 @@
       "title": "Developer Learning Toolkit after three verified source READMEs; tighter six-section navigation and expandable file-method details",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Read three authentic GitHub source READMEs and renamed Chapter 01 to Developer Learning Toolkit. Kept original source links/curations; tightened six-chapter TOC/hero, inserted five back-navigation links, removed stale duplicated bottom tips, and converted all 17 method cards into compact keyboard-accessible native expandable details. Feature PR #80 merged at 66f36f1ca6cf356b9c79edbd26086f735cd49e5e. Exact main Registry #40220229943 SUCCESS, Chromium mobile/desktop #40220229950 SUCCESS, Pages build/deploy #40220229890 SUCCESS. No private Drive or peer changes. Independent direct publicly served HTML body inspection unavailable."
+    },
+    {
+      "id": "A7-D34",
+      "stage": "A7-SEQ-000038 · Semantic registry debt and documentation sync",
+      "title": "Add canonical PRJ-000029, retire PRJ-000030 duplicate alias, correct stale project authority and legacy instructions",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Read-only authenticated private project identity / change-log provider verification, public-safe A7 semantic IDs and redirects only. 29 active IDs and 1 retired alias, preserved existing five default execution fact-class routes, no private project attributes, no external repo/Drive changes. Issue #71 closure only after CI/Pages provider readback."
     }
   ],
   "next": [

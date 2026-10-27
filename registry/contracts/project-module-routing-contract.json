@@ -14,9 +14,11 @@
     "Route availability never asserts that a project-specific instance, model, schedule, BOQ or drawing already exists.",
     "Module resolution proceeds through registry/entities/modules.json and the module's current A7_MODULE.json pointer.",
     "Research and Study are not default project-execution routes.",
-    "Current provider state must be re-read when mutation or freshness matters."
+    "Current provider state must be re-read when mutation or freshness matters.",
+    "Retired project IDs are never active bindings or second projects; resolve them to a canonical active semantic project ID before selecting a route."
   ],
   "ai_resolution_order": [
+    "Normalize any retired project ID using registry/entities/project-identities.json retired_project_id_aliases; reject alias cycles or unknown canonical targets.",
     "Resolve project_id in registry/entities/project-identities.json.",
     "If current operational project-master data is needed, read MOD-OPS-001 projects.csv live.",
     "Resolve the project's execution_profile_id from registry/routing/project-module-bindings.json.",
@@ -26,5 +28,6 @@
     "Follow the module's current A7_MODULE.json pointer and task-specific routing entrypoint.",
     "Fetch the owning repository/provider live before mutation.",
     "Do not infer project-specific artifact existence from route availability."
-  ]
+  ],
+  "historical_github_projects_csv": "FROZEN_OBSERVATION_ONLY_CURRENT_OWNER_IS_MOD_OPS_PRIVATE_GOOGLE_DRIVE"
 }
