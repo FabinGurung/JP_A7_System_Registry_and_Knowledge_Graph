@@ -6,6 +6,7 @@ import json
 import re
 from pathlib import Path
 from html.parser import HTMLParser
+from html import escape
 
 ROOT=Path(__file__).resolve().parents[1]
 CAN=ROOT/"registry/curations/memory-wall-contents.v0.1.json"
@@ -49,7 +50,7 @@ def main():
     hrefs=["#"+c["anchor"] for c in canonical["collections"]]
     assert parser.toc_links==hrefs,f"Static no-JavaScript TOC out of order or missing: {parser.toc_links}"
     assert all(c["anchor"] in parser.ids for c in canonical["collections"]),"A TOC destination lacks a real target"
-    assert all(f'<strong>{c["title"]}</strong>' in html for c in canonical["collections"]),"Static link labels differ from source"
+    assert all(f'<strong>{escape(c["title"])}</strong>' in html for c in canonical["collections"]),"Static link labels differ from source"
     assert home.count('href="memory-wall.html#memory-wall-contents"')==1,"L0 needs one direct contents link"
     assert 'link("memory-wall.html#memory-wall-contents","Memory Wall contents")' in shell
     for item in ("memory-wall.html","index.html","assets/memory-wall-guides.js","assets/memory-wall-guides.css","assets/a7-site-shell.js"):
