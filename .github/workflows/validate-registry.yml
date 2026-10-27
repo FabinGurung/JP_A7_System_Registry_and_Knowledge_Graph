@@ -99,6 +99,8 @@ jobs:
         run: python scripts/validate_repository_health.py
       - name: Validate A7-only governance debt boundaries
         run: python scripts/validate_a7_governance_debt.py
+      - name: Validate JP single-live-roadmap PRE/POST archive
+        run: python scripts/validate_jp_roadmap_version_control.py
       - name: Validate A7 L1 source-derived roadmap
         run: |
           python scripts/validate_a7_roadmap.py

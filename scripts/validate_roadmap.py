@@ -8,6 +8,8 @@ assert obj["roadmap_id"]=="A7-ROADMAP-20261009"
 assert obj["current_closed_sequence"]=="A7-SEQ-000039"
 assert obj["current_staged_sequence"]=="A7-SEQ-000013"
 assert len(obj["developed"])>=8 and len(obj["next"])>=6
+assert len(obj["pinned_task_ids"])==len(set(obj["pinned_task_ids"]))
+assert set(obj["pinned_task_ids"]).issubset({x["id"] for x in obj["next"]})
 assert len({x["id"] for x in obj["developed"]+obj["next"]})==len(obj["developed"]+obj["next"])
 assert (ROOT/"site/roadmap.html").is_file()
 assert (ROOT/"scripts/generate_a7_roadmap.py").is_file()

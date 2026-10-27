@@ -11,10 +11,13 @@ assert D["current_closed_sequence"]==S["current_closed_sequence"]
 assert D["kind"]=="DERIVED_NOT_AUTHORITATIVE" and D["owner"]=="A7_ONLY"
 assert D["developed"]==[{k:x.get(k) for k in ("id","stage","title","status","detail")} for x in S["developed"]]
 assert {x["id"] for x in D["next_a7"]}=={"A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
+assert [x["id"] for x in D["pinned_a7"]]==S["pinned_task_ids"]==["A7-N05","A7-N10","A7-N04"]
+assert D["pinned_a7"][-1]["task_boundary"]=="PEER_READ_ONLY_HOLD"
 assert re.fullmatch(r"[0-9a-f]{64}",D["source_sha256"])
 h=(R/"site/roadmap.html").read_text();js=(R/"site/assets/a7-roadmap.js").read_text()
 assert 'id="roadmapSequence"' in h and 'id="roadmapDeveloped"' in h
-assert 'id="roadmapUpcoming"' in h and 'data/a7-roadmap.json' in js
+assert 'id="roadmapUpcoming"' in h and 'id="roadmapPinned"' in h and 'data/a7-roadmap.json' in js
+assert 'd.next_a7.filter(x=>!pinnedIds.has(x.id))' in js
 assert "textContent" in js and "innerHTML" not in js
 assert "21</strong>Last fully closed" not in h
 assert "R&D" not in h and "A9" not in h

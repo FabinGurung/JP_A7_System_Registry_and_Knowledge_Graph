@@ -692,5 +692,22 @@
     "milestone_tag_expected": "a7/memory-wall-toc-v1.0.0",
     "post_snapshot_expected": "snapshot/post-a7-seq-000039-memory-wall-toc-publication",
     "external_site_http_readback": false
+  },
+  "jp_roadmap_pinned_version_control": {
+    "sequence_id": "A7-SEQ-000040",
+    "status": "FEATURE_STAGED_PENDING_QA",
+    "source_id": "A7-ROADMAP-20261009",
+    "live_path": "registry/roadmap.json",
+    "pinned_task_ids": [
+      "A7-N05",
+      "A7-N10",
+      "A7-N04"
+    ],
+    "PRE": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
+    "POST": "NOT_SAVED_PENDING_VALIDATION",
+    "archive": "registry/archives/roadmap/",
+    "private_sheet_writes": 0,
+    "notebook_writes": 0,
+    "peer_writes": 0
   }
 }

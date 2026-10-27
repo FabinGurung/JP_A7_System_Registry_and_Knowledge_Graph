@@ -13,11 +13,14 @@ def build(commit):
     reg=json.loads(raw)
     delivered=[{k:x.get(k) for k in ("id","stage","title","status","detail")} for x in reg["developed"]]
     backlog=[{k:x.get(k) for k in ("id","priority","title","state","done_when")} for x in reg["next"] if x["id"] in WORKLIST]
+    pins=reg.get("pinned_task_ids",[])
+    if len(pins)!=len(set(pins)) or not set(pins).issubset({x["id"] for x in backlog}): raise ValueError("Duplicate or unknown pinned task")
+    pinned=[dict(next(x for x in backlog if x["id"]==tid),pin_reason=reg["pin_semantics"][tid]["reason"],task_boundary=reg["pin_semantics"][tid]["boundary"]) for tid in pins]
     if not delivered or not backlog or len(backlog)!=len(WORKLIST): raise ValueError("Roadmap source missing a workstream")
     return {"schema":"a7-roadmap-projection.v0.1","kind":"DERIVED_NOT_AUTHORITATIVE",
       "owner":"A7_ONLY","source_path":"registry/roadmap.json","source_sha256":hashlib.sha256(raw).hexdigest(),
       "site_build_commit":commit,"current_closed_sequence":reg["current_closed_sequence"],
-      "developed":delivered,"next_a7":backlog,
+      "developed":delivered,"next_a7":backlog,"pinned_a7":pinned,
       "caveat":"Registry-recorded statuses only. Check GitHub PRs, commits and Actions for current provider facts."}
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--output",required=True);p.add_argument("--commit-sha",required=True);a=p.parse_args()
