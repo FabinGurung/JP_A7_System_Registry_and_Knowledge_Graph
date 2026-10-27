@@ -23,6 +23,20 @@ ids=[x.get("project_id") for x in ids_doc.get("project_identities",[])]
 if ids_doc.get("project_count")!=len(ids): errors.append("project identity count mismatch")
 if len(ids)!=len(set(ids)): errors.append("duplicate project semantic IDs")
 if any(not isinstance(x,str) or not x.startswith("PRJ-") for x in ids): errors.append("invalid project semantic ID")
+# Enforce explicit canonical/retired alias separation and source-owner boundary.
+if ids != [f"PRJ-{i:06d}" for i in range(1,30)]: errors.append("expected 29 active semantic IDs ending at PRJ-000029")
+retired=ids_doc.get("retired_project_id_aliases",[])
+aliases=[a.get("alias_project_id") for a in retired]
+if len(retired)!=1 or len(set(aliases))!=len(aliases): errors.append("retired alias registry unexpected or duplicated")
+for a in retired:
+    alias,canonical=a.get("alias_project_id"),a.get("canonical_project_id")
+    if alias in ids or canonical not in ids or alias==canonical: errors.append("retired alias overlaps active IDs or has missing canonical target")
+    if a.get("state")!="RETIRED_DUPLICATE_RESERVED" or a.get("active_project") is not False or a.get("resolution")!="RESOLVE_TO_CANONICAL_ONLY": errors.append("retired alias state invalid")
+if aliases != ["PRJ-000030"] or retired[0].get("canonical_project_id")!="PRJ-000029": errors.append("retired alias redirect mismatch")
+if ids_doc.get("authority",{}).get("operational_project_master_current_provider")!="GOOGLE_DRIVE_PRIVATE_OWNER": errors.append("live project owner provider is not private Drive")
+if ids_doc.get("provider_observation",{}).get("source")!="GOOGLE_DRIVE_NATIVE_SHEETS_READ_ONLY": errors.append("live source observation missing")
+if ids_doc.get("provider_observation",{}).get("legacy_github_projects_csv",{}).get("status")!="HISTORICAL_FROZEN_NOT_LIVE_PROJECT_AUTHORITY": errors.append("stale GitHub projects.csv not labelled historical")
+
 if ids_doc.get("authority",{}).get("operational_project_master_owner")!="MOD-OPS-001": errors.append("Operations must own project master")
 if ids_doc.get("provider_observation",{}).get("provider_readback")!="PASS": errors.append("project identity source provider readback not PASS")
 
@@ -70,6 +84,10 @@ required={
  "Research and Study are not default project-execution routes."
 }
 if not required.issubset(set(contract.get("required_invariants",[]))): errors.append("routing contract missing required boundaries")
+if "Retired project IDs are never active bindings or second projects; resolve them to a canonical active semantic project ID before selecting a route." not in contract.get("required_invariants",[]): errors.append("retired alias routing contract missing")
+if set(bound).intersection(aliases): errors.append("retired IDs must not be active routing bindings")
+if len(bindings)!=29: errors.append("expected 29 active project bindings")
+
 
 if errors:
     print("A7 PROJECT MODULE ROUTING VALIDATION: FAIL")

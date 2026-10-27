@@ -174,7 +174,7 @@ See [schema-aligned GitHub observation bridge](docs/MAIN_LIBRARY_GITHUB_BRIDGE.m
 - **Linked R&D roadmap:** https://fabingurung.github.io/JP_Research-and-Development/roadmap/
 - **R&D cross-chat handover:** [R&D 2026-10-09 handover](https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md)
 
-A7 sequence 12 remains the last documented FINAL_CLOSED_PASS. The public-safe Git–Drive sequence 13 is *staged* and must not be confused with private A9 cutover. The offline Main Library bridge passed but no private library import or ACK was claimed.
+For the current last closed A7 sequence, consult `A7_BOOTSTRAP.json` and `registry/roadmap.json` (not this historical 2026-10-09 handover). The independent public-safe Git–Drive sequence 13 remains *staged* for its private Main/Local parity/ACK; an offline bridge candidate is not a private import.
 
 ## Sky Mist site theme — independent A7-SEQ-000014 UI refresh
 

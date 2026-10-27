@@ -644,5 +644,17 @@
     "post_snapshot_expected": "snapshot/post-a7-seq-000037-memory-wall-refinement",
     "public_url": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/memory-wall.html#memory-wall-contents",
     "independent_http_body_readback": false
+  },
+  "a7_semantic_debt_reconciliation": {
+    "sequence_id": "A7-SEQ-000038",
+    "status": "FEATURE_STAGED_PENDING_CI",
+    "focus": "A7_ISSUE_71",
+    "active_projects": 29,
+    "retired_project_aliases": 1,
+    "source": "PRIVATE_GOOGLE_SHEETS_READ_ONLY_VERIFIED_2026_10_27",
+    "private_drive_writes": false,
+    "peer_writes": false,
+    "legacy_seq13_ack_closed": false,
+    "scope": "A7_ONLY_SEMANTIC_ROUTING_AND_STALE_DOCUMENTATION"
   }
 }

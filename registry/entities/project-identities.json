@@ -4,19 +4,29 @@
   "authority": {
     "semantic_identity_owner": "SYS-A7-000001",
     "operational_project_master_owner": "MOD-OPS-001",
-    "source_repository_id": "REPO-000007",
-    "provider_repository_id": "1312147922",
-    "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
-    "ref": "main",
-    "path": "projects.csv"
+    "operational_project_master_current_provider": "GOOGLE_DRIVE_PRIVATE_OWNER",
+    "provider_roles": "A7_ONLY_IDS_ALIASES_ROUTES__OPERATIONS_OWNS_ATTRIBUTES",
+    "history_in": "provider_observation.legacy_github_projects_csv"
   },
   "provider_observation": {
-    "provider_head_sha": "cdad6b3f580ac6a89ae6cd4ace19e42c09c28f82",
-    "provider_head_commit_at": "2026-10-07T10:43:12Z",
-    "source_blob_sha": "8cc669f9761c305de4715c77cb8356598727ee9c",
-    "provider_readback": "PASS"
+    "provider_readback": "PASS",
+    "source": "GOOGLE_DRIVE_NATIVE_SHEETS_READ_ONLY",
+    "observed_date": "2026-10-27",
+    "canonical_29": "CONFIRMED_AI_PROJECT_IDENTITY_ROW_30",
+    "retired_30": "CONFIRMED_AI_PROJECT_IDENTITY_ROW_31",
+    "retired_event": "CONFIRMED_AI_PROJECT_CHANGELOG_ROW_12",
+    "public_safety": "NO_PRIVATE_URL_OR_FILE_ID_OR_PROJECT_NAME_OR_COORDINATES_COPIED",
+    "authority": "MOD-OPS-001",
+    "legacy_github_projects_csv": {
+      "provider_head_sha": "cdad6b3f580ac6a89ae6cd4ace19e42c09c28f82",
+      "provider_head_commit_at": "2026-10-07T10:43:12Z",
+      "source_blob_sha": "8cc669f9761c305de4715c77cb8356598727ee9c",
+      "status": "HISTORICAL_FROZEN_NOT_LIVE_PROJECT_AUTHORITY",
+      "repository_id": "REPO-000007",
+      "path": "projects.csv"
+    }
   },
-  "project_count": 28,
+  "project_count": 29,
   "project_identities": [
     {
       "project_id": "PRJ-000001",
@@ -129,7 +139,21 @@
     {
       "project_id": "PRJ-000028",
       "source_record_key": "PRJ-000028"
+    },
+    {
+      "project_id": "PRJ-000029",
+      "source_record_key": "PRJ-000029"
     }
   ],
-  "rule": "A7 stores semantic project IDs only. Project names, status, coordinates, company assignment and other operational project-master values remain in MOD-OPS-001."
+  "rule": "A7 stores only semantic project IDs and retired-ID redirection. Exactly 29 active IDs include PRJ-000029. PRJ-000030 is a non-reusable retired alias resolving to PRJ-000029 and must never be bound as an active project. Project names, people, coordinates, status and operational master values remain in MOD-OPS-001 / private Google Drive.",
+  "retired_project_id_aliases": [
+    {
+      "alias_project_id": "PRJ-000030",
+      "canonical_project_id": "PRJ-000029",
+      "state": "RETIRED_DUPLICATE_RESERVED",
+      "active_project": false,
+      "resolution": "RESOLVE_TO_CANONICAL_ONLY",
+      "provider_evidence": "PRIVATE_GOOGLE_SHEETS_IDENTITY_REGISTER_2026_10_27"
+    }
+  ]
 }

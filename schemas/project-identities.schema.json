@@ -11,7 +11,8 @@
     "provider_observation",
     "project_count",
     "project_identities",
-    "rule"
+    "rule",
+    "retired_project_id_aliases"
   ],
   "properties": {
     "schema_version": {
@@ -56,6 +57,46 @@
     "rule": {
       "type": "string",
       "minLength": 1
+    },
+    "retired_project_id_aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Retired project IDs that redirect to an existing active canonical ID; never act as additional routable projects.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "alias_project_id",
+          "canonical_project_id",
+          "state",
+          "active_project",
+          "resolution",
+          "provider_evidence"
+        ],
+        "properties": {
+          "alias_project_id": {
+            "type": "string",
+            "pattern": "^PRJ-[0-9]{6}$"
+          },
+          "canonical_project_id": {
+            "type": "string",
+            "pattern": "^PRJ-[0-9]{6}$"
+          },
+          "state": {
+            "const": "RETIRED_DUPLICATE_RESERVED"
+          },
+          "active_project": {
+            "const": false
+          },
+          "resolution": {
+            "const": "RESOLVE_TO_CANONICAL_ONLY"
+          },
+          "provider_evidence": {
+            "type": "string",
+            "minLength": 5
+          }
+        }
+      }
     }
   }
 }

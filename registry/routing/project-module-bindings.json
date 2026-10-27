@@ -57,7 +57,7 @@
       ]
     }
   ],
-  "project_binding_count": 28,
+  "project_binding_count": 29,
   "project_bindings": [
     {
       "project_id": "PRJ-000001",
@@ -223,6 +223,12 @@
     },
     {
       "project_id": "PRJ-000028",
+      "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
+      "binding_status": "ACTIVE_ROUTING",
+      "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
+    },
+    {
+      "project_id": "PRJ-000029",
       "execution_profile_id": "EXEC-PROFILE-AEC-CORE-001",
       "binding_status": "ACTIVE_ROUTING",
       "project_specific_module_instances": "NOT_ASSERTED_BY_A7"
