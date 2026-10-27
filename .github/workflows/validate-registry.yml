@@ -42,8 +42,11 @@ jobs:
         run: python scripts/validate_module_boundaries.py
       - name: Validate cross-repository module manifest contract
         run: python scripts/validate_module_manifests.py
-      - name: Validate deterministic project-module routing
-        run: python scripts/validate_project_module_bindings.py
+      - name: Validate governed project identity and retired alias semantics
+        run: |
+          python scripts/validate_project_module_bindings.py
+          python scripts/test_project_semantic_id.py
+
       - name: Generate visualization derivation test artifact
         run: python scripts/generate_visualizations.py --output-dir .a7-generated-test --commit-sha "$GITHUB_SHA"
       - name: Validate visualization derivation
