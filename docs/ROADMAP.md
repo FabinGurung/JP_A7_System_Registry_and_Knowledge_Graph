@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000039` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000040` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
@@ -62,6 +62,8 @@ The six-hyperlink TOC was already in this repository, at [Memory Wall contents](
 
 PRE snapshot: `snapshot/pre-a7-seq-000039-memory-wall-toc-publication` at `28780477a80ca8356aa6551caac9d3acddb96154`. [Feature PR #84](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/84) merged at `07d5940a1a0e6da1397516effc169c556db2ab89`. Exact commit [Registry #40595339823](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40595339823) and [Pages #40595339881](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40595339881) passed; feature PR real [Chromium #40595177254](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40595177254) passed. The staged release `a7/memory-wall-toc-v1.0.0` must only be tagged by exact final closed main GitHub Actions after its own Registry and Pages pass; it is **not** a tag claim until provider readback. Private Main/Local Seq13 and peer approvals remain separate. Independent served HTML body cannot be proven through current external fetch; provider Pages workflow and local Chromium QA are documented precisely.
 
-## A7-SEQ-000040 (staged) — JP task pin and source archive
+## A7-SEQ-000040 (closed) — JP task pin and source archive
 
-Pin A7-N05, A7-N10, A7-N04 by reference in the **existing** roadmap. Dedicated numbered PRE snapshot `registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json` saved before modifications. POST **not yet created**: wait for actual QA. Changes remain A7-only, no peer repository/Sheet/notebook edits. Manifest and audit history are in the roadmap's dedicated archive. See `docs/JP_A7_VERSION_CONTROL_READ_FIRST.md`.
+Pin A7-N05, A7-N10, A7-N04 by reference in the **existing** roadmap. Dedicated numbered PRE snapshot `registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json` saved before modifications. POST saved as exact byte-for-byte final source at `registry/archives/roadmap/000001_POST_A7_SEQ_000040.json` after Registry #40602323919, Pages #40602323693 and Chromium #40602324062 succeeded. Changes remain A7-only, no peer repository/Sheet/notebook edits. Manifest and audit history are in the roadmap's dedicated archive. See `docs/JP_A7_VERSION_CONTROL_READ_FIRST.md`.
+
+The old Memory Wall v1.0.0 tag remains pinned to its original SEQ39 SHA (`059b7a0dff0bc86ce03eef6ae020f905d2becb99`). SEQ40 fixes its repeated release workflow to recognize and preserve that immutable milestone, instead of falsely attempting to retag each new Pages build. No Sheet or notebook version increment was made.

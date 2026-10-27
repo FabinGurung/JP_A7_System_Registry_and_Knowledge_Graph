@@ -29,6 +29,17 @@ jobs:
           set -euo pipefail
           TAG="a7/memory-wall-toc-v1.0.0"
           test "$(git rev-parse HEAD)" = "$PAGES_SHA"
+          # This is a one-time milestone. Later normal Pages deployments must not
+          # attempt to retarget its immutable annotated tag.
+          git fetch origin --tags
+          if git rev-parse --verify "refs/tags/${TAG}" >/dev/null 2>&1; then
+            FROZEN="$(git rev-parse "${TAG}^{commit}")"
+            test "$FROZEN" = "059b7a0dff0bc86ce03eef6ae020f905d2becb99" || { echo "Existing milestone tag drift"; exit 1; }
+            test "$(git cat-file -t "refs/tags/${TAG}")" = "tag" || { echo "Existing milestone is not annotated"; exit 1; }
+            gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null || { echo "Existing tag has no verified release"; exit 1; }
+            echo "One-time Memory Wall milestone already released at $FROZEN — no retag or additional release."
+            exit 0
+          fi
           ACTUAL_MAIN="$(git ls-remote origin refs/heads/main | cut -f1)"
           if [[ "$PAGES_SHA" != "$ACTUAL_MAIN" ]]; then
             echo "Newer A7 main detected; skip release for an old Pages run."

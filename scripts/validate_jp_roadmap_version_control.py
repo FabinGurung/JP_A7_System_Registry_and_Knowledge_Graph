@@ -8,7 +8,8 @@ live=R/"registry/roadmap.json"
 data=lambda x:json.loads(x.read_text(encoding="utf-8"))
 s,p,m=data(live),data(a/"000001_PRE_A7_SEQ_000040.json"),data(a/"manifest.json")
 assert s["roadmap_id"]==p["roadmap_id"]==m["subject_id"]=="A7-ROADMAP-20261009"
-assert "pinned_task_ids" not in p and p["current_closed_sequence"]=="A7-SEQ-000039"
+assert p["current_closed_sequence"]=="A7-SEQ-000039" and "pinned_task_ids" not in p
+assert m["pre"].get("sha256")==hashlib.sha256((a/"000001_PRE_A7_SEQ_000040.json").read_bytes()).hexdigest()
 assert s["pinned_task_ids"]==["A7-N05","A7-N10","A7-N04"]
 assert set(s["pinned_task_ids"]).issubset({x["id"] for x in s["next"]})
 assert s["pin_semantics"]["A7-N04"]["boundary"]=="PEER_READ_ONLY_HOLD"
@@ -25,6 +26,7 @@ if post.exists():
  assert m["post"]["status"]=="PASS_AFTER_VALIDATION"
  assert m["post"]["sha256"]==hashlib.sha256(live.read_bytes()).hexdigest()
  assert events[-1]["phase"]=="POST" and events[-1]["validation"]=="CI_FEATURE_SUCCESS_AND_SOURCE_BYTE_READBACK"
+ assert events[-1]["sha256"]==m["post"]["sha256"]
 else:
  assert m["status"]=="PRE_CAPTURED_POST_PENDING" and m["post"]["status"]=="AWAITING_VALIDATION"
 print("JP A7 ROADMAP ARCHIVE PASS stage="+("POST" if post.exists() else "PRE")+" single_live_id=1 task_refs=3")
