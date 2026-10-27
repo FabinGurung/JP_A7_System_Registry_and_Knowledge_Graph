@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000037",
+  "current_sequence": "A7-SEQ-000038",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -647,7 +647,7 @@
   },
   "a7_semantic_debt_reconciliation": {
     "sequence_id": "A7-SEQ-000038",
-    "status": "FEATURE_STAGED_PENDING_CI",
+    "status": "FINAL_CLOSED_PASS",
     "focus": "A7_ISSUE_71",
     "active_projects": 29,
     "retired_project_aliases": 1,
@@ -655,6 +655,16 @@
     "private_drive_writes": false,
     "peer_writes": false,
     "legacy_seq13_ack_closed": false,
-    "scope": "A7_ONLY_SEMANTIC_ROUTING_AND_STALE_DOCUMENTATION"
+    "scope": "A7_ONLY_SEMANTIC_ROUTING_AND_STALE_DOCUMENTATION",
+    "feature_pr": 82,
+    "feature_main_sha": "e5751c2fca5675f63f2d80698e584fc0b4788008",
+    "registry_run": 40520450533,
+    "pages_run": 40520450583,
+    "feature_chromium_run": 40519785461,
+    "feature_registry_run": 40519775908,
+    "source_observation": "registry/providers/project-identity-reconciliation-20261027.json",
+    "post_snapshot_expected": "snapshot/post-a7-seq-000038-semantic-debt-reconciliation",
+    "independent_http_body_readback": false,
+    "project_issue_71": "RESOLVED_AFTER_MAIN_READBACK"
   }
 }

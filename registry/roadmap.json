@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
-  "snapshot_date": "2026-10-25",
+  "snapshot_date": "2026-10-27",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000037",
+  "current_closed_sequence": "A7-SEQ-000038",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -248,8 +248,8 @@
       "id": "A7-D34",
       "stage": "A7-SEQ-000038 · Semantic registry debt and documentation sync",
       "title": "Add canonical PRJ-000029, retire PRJ-000030 duplicate alias, correct stale project authority and legacy instructions",
-      "status": "FEATURE_STAGED_PENDING_CI",
-      "detail": "Read-only authenticated private project identity / change-log provider verification, public-safe A7 semantic IDs and redirects only. 29 active IDs and 1 retired alias, preserved existing five default execution fact-class routes, no private project attributes, no external repo/Drive changes. Issue #71 closure only after CI/Pages provider readback."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "A7 issue #71: private source read-only verified PRJ-000029 canonical and PRJ-000030 retired redirect. A7 semantic index/route now 29 active IDs and 1 reserved non-routable alias, no client fields. PR #82 merged at e5751c2fca5675f63f2d80698e584fc0b4788008. Main Registry CI #40520450533 SUCCESS, Pages #40520450583 SUCCESS subject to final readback before closeout merge, feature Chromium #40519785461 SUCCESS. Historic frozen Github projects.csv labelled stale; old A7 README and roadmap next-deliverable text repaired. No private Drive or peer writes, historic A9 Seq13 remains staged."
     }
   ],
   "next": [
