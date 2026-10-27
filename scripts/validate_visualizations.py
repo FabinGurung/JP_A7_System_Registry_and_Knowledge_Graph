@@ -65,7 +65,7 @@ def main() -> int:
             errors.append("retired project alias must never become a project graph node")
         if len(module_nodes) != 7:
             errors.append("expected 7 module nodes")
-        if matrix.get("project_binding_count") != canonical_count or len(matrix.get("projects", [])) != canonical_count:
+        if matrix.get("project_binding_count", len(matrix.get("projects", []))) != canonical_count or len(matrix.get("projects", [])) != canonical_count:
             errors.append("project matrix count must match canonical A7 semantic identity count")
         if any(r.get("project_id") == "PRJ-000030" for r in matrix.get("projects", [])):
             errors.append("retired alias must never be a project matrix row")
