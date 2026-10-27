@@ -58,7 +58,7 @@ def main() -> int:
 
         project_nodes = [n for n in nodes if n.get("type") == "project"]
         module_nodes = [n for n in nodes if n.get("type") == "module"]
-        canonical_count = load(ROOT / "registry/entities/project-identities.json").get("project_count")
+        canonical_count = load(Path(__file__).resolve().parents[1] / "registry/entities/project-identities.json").get("project_count")
         if len(project_nodes) != canonical_count:
             errors.append(f"project semantic graph count {len(project_nodes)} != canonical identity count {canonical_count}")
         if any(n.get("id") == "PRJ-000030" for n in project_nodes):
