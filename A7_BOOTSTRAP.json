@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000038",
+  "current_sequence": "A7-SEQ-000039",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -669,7 +669,7 @@
   },
   "a7_memory_wall_toc_visibility": {
     "sequence_id": "A7-SEQ-000039",
-    "status": "FEATURE_STAGED_PENDING_CI",
+    "status": "FINAL_CLOSED_PASS",
     "source": "registry/curations/memory-wall-contents.v0.1.json",
     "canonical_anchor": "site/memory-wall.html#memory-wall-contents",
     "homepage_entry": "site/index.html",
@@ -680,6 +680,17 @@
     "release_eligible_only_after_final_main_pages_success": true,
     "peer_writes": false,
     "drive_writes": false,
-    "private_ack_closed": false
+    "private_ack_closed": false,
+    "feature_pr": 84,
+    "feature_main_sha": "07d5940a1a0e6da1397516effc169c556db2ab89",
+    "feature_registry_main_run": 40595339823,
+    "feature_pages_main_run": 40595339881,
+    "feature_browser_pr_run": 40595177254,
+    "feature_browser_main_run": 40595339792,
+    "closeout_pr": "PENDING",
+    "milestone_release_workflow": ".github/workflows/a7-memory-wall-toc-milestone.yml",
+    "milestone_tag_expected": "a7/memory-wall-toc-v1.0.0",
+    "post_snapshot_expected": "snapshot/post-a7-seq-000039-memory-wall-toc-publication",
+    "external_site_http_readback": false
   }
 }
