@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
-  "snapshot_date": "2026-10-27",
+  "snapshot_date": "2026-10-28",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000038",
+  "current_closed_sequence": "A7-SEQ-000039",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -255,8 +255,8 @@
       "id": "A7-D35",
       "stage": "A7-SEQ-000039 · Memory Wall TOC discoverability and Pages safety",
       "title": "Surface existing six-chapter TOC on A7 L0, verify static/dynamic hyperlinks in published Pages artifact, and tag a governed milestone",
-      "status": "FEATURE_STAGED_PENDING_CI",
-      "detail": "Memory Wall six-link canonical TOC already implemented in A7 SEQ36/37; homepage falsely advertised 3 posters and lacked a TOC deep link. Update link and shared footer, add generated-bundle gate and no-JS/real-browser regression. Preserve original six curations and all peer/Drive providers. Release tag only after final closed SEQ39 main Registry+Pages success."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Restored discoverability of existing six-hyperlink Memory Wall TOC on L0 and site-wide footer, added Python gate for the Pages-delivered static six anchors, exact source SHA and generated JSON, and real desktop/mobile/no-JS hyperlink QA. Feature PR #84 merged at 07d5940a1a0e6da1397516effc169c556db2ab89, Registry #40595339823 and Pages #40595339881 both SUCCESS. Release tag candidate a7/memory-wall-toc-v1.0.0 to be created by exact-SHA Pages-completion workflow on SEQ39 FINAL_CLOSED_PASS main. All original six chapter sources preserved; no private Drive, Communication & Web or peer repository writes. Independent served HTML-body retrieval not claimed."
     }
   ],
   "next": [
