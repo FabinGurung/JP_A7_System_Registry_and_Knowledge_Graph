@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000039",
+  "current_sequence": "A7-SEQ-000040",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -687,15 +687,18 @@
     "feature_pages_main_run": 40595339881,
     "feature_browser_pr_run": 40595177254,
     "feature_browser_main_run": 40595339792,
-    "closeout_pr": "PENDING",
+    "closeout_pr": 85,
     "milestone_release_workflow": ".github/workflows/a7-memory-wall-toc-milestone.yml",
     "milestone_tag_expected": "a7/memory-wall-toc-v1.0.0",
     "post_snapshot_expected": "snapshot/post-a7-seq-000039-memory-wall-toc-publication",
-    "external_site_http_readback": false
+    "external_site_http_readback": false,
+    "release_status": "ANNOTATED_TAG_AND_RELEASE_CONFIRMED",
+    "release_sha": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
+    "release_run": 40596095945
   },
   "jp_roadmap_pinned_version_control": {
     "sequence_id": "A7-SEQ-000040",
-    "status": "FEATURE_STAGED_PENDING_QA",
+    "status": "FINAL_CLOSED_PASS",
     "source_id": "A7-ROADMAP-20261009",
     "live_path": "registry/roadmap.json",
     "pinned_task_ids": [
@@ -704,10 +707,19 @@
       "A7-N04"
     ],
     "PRE": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
-    "POST": "NOT_SAVED_PENDING_VALIDATION",
+    "POST": "registry/archives/roadmap/000001_POST_A7_SEQ_000040.json",
     "archive": "registry/archives/roadmap/",
     "private_sheet_writes": 0,
     "notebook_writes": 0,
-    "peer_writes": 0
+    "peer_writes": 0,
+    "feature_pr": 86,
+    "feature_main_sha": "4f432fb95e6abca3f9f103789d36b0c1ff7afcd4",
+    "main_registry_run": 40602323919,
+    "main_pages_run": 40602323693,
+    "main_browser_run": 40602324062,
+    "post_sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c",
+    "post_snapshot_expected": "snapshot/post-a7-seq-000040-roadmap-version-control",
+    "final_closeout_ci": "PENDING",
+    "historical_private_ack_closed": false
   }
 }

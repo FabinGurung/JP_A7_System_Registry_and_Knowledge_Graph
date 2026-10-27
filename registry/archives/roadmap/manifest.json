@@ -8,13 +8,21 @@
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
-    "status": "COPIED_EXACT_ORIGINAL_BEFORE_EDIT"
+    "status": "COPIED_EXACT_ORIGINAL_BEFORE_EDIT",
+    "sha256": "1a2ad62ef1cc9027d63eaabe8f7af87eb2df590220e8aa49668617ce0ff588e4"
   },
   "post": {
     "path": "registry/archives/roadmap/000001_POST_A7_SEQ_000040.json",
-    "status": "AWAITING_VALIDATION"
+    "status": "PASS_AFTER_VALIDATION",
+    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c",
+    "validated_feature_main_sha": "4f432fb95e6abca3f9f103789d36b0c1ff7afcd4",
+    "registry_run": 40602323919,
+    "pages_run": 40602323693,
+    "chromium_run": 40602324062,
+    "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
+    "source_body_same_as_post": true
   },
-  "status": "PRE_CAPTURED_POST_PENDING",
+  "status": "POST_VALIDATED_ARCHIVED",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -30,5 +38,7 @@
     "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/roadmap.json",
     "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/memory-wall-toc-v1.0.0"
   ],
-  "no_private_data": true
+  "no_private_data": true,
+  "restoration_validation": "RESTORE_INTO_SAME_LIVE_PATH_AND_ID__REVALIDATE_SHA_AND_PROVIDER_READBACK",
+  "final_closeout_checks": "PENDING_FINAL_MAIN_WORKFLOWS"
 }
