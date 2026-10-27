@@ -213,12 +213,14 @@ async function run(){
    }
 
    // Static TOC is a progressive enhancement: it must work without any JavaScript.
-   const staticContext=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false});
+   const staticContext=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false,reducedMotion:"reduce"});
    const staticPage=await staticContext.newPage();
    await staticPage.goto(URL+"memory-wall.html#memory-wall-contents",{waitUntil:"load"});
    assert.equal(await staticPage.locator("#mwContentsList .mw-toc-card").count(),6);
    assert.equal(await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
-   await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').click();
+   // Keyboard navigation is the real no-JS contract. Avoid a flaky smooth-scrolling mouse-stability gate.
+   await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').focus();
+   await staticPage.keyboard.press("Enter");
    assert.ok(staticPage.url().endsWith("#extraction-retrieval"));
    pass("no-JavaScript fallback has six functional TOC anchors");
    await staticContext.close();
