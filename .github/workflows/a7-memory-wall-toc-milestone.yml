@@ -1,0 +1,74 @@
+name: A7 Memory Wall TOC v1.0 milestone release
+on:
+  workflow_run:
+    workflows: ["A7 Pages Visualization"]
+    types: [completed]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: a7-memory-wall-toc-milestone
+  cancel-in-progress: false
+jobs:
+  release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event == 'push' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+      - name: Annotated, exact-SHA and idempotent memory-wall milestone
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_SHA: ${{ github.event.workflow_run.head_sha }}
+          PAGES_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          TAG="a7/memory-wall-toc-v1.0.0"
+          test "$(git rev-parse HEAD)" = "$PAGES_SHA"
+          ACTUAL_MAIN="$(git ls-remote origin refs/heads/main | cut -f1)"
+          if [[ "$PAGES_SHA" != "$ACTUAL_MAIN" ]]; then
+            echo "Newer A7 main detected; skip release for an old Pages run."
+            exit 0
+          fi
+          if ! python - <<'PY'
+          import json
+          b=json.load(open("A7_BOOTSTRAP.json"))
+          assert b.get("current_sequence")=="A7-SEQ-000039"
+          assert b.get("current_sequence_status")=="FINAL_CLOSED_PASS"
+          PY
+          then
+            echo "SEQ39 not final yet; no release from this Pages event."
+            exit 0
+          fi
+          python scripts/generate_memory_extraction_guidance.py --output-dir /tmp/a7-mw-v1-data --commit-sha "$PAGES_SHA"
+          python scripts/validate_memory_wall_published_site.py --data-dir /tmp/a7-mw-v1-data --site-root site --commit-sha "$PAGES_SHA"
+          verified=0
+          for n in $(seq 1 24); do
+            verified="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${PAGES_SHA}&per_page=70" --jq '[.workflow_runs[] | select(.name == "A7 Registry Validation" and .conclusion == "success" and .head_sha == "'"${PAGES_SHA}"'")] | length')"
+            if [[ "$verified" -ge 1 ]]; then break; fi
+            sleep 10
+          done
+          test "$verified" -ge 1 || { echo "Exact SHA Registry check not verified"; exit 1; }
+          # Both the precise Pages SHA and Registry result must be successful.
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${PAGES_RUN}" --jq '.conclusion' | grep -qx success
+          git fetch origin --tags
+          if git rev-parse --verify "refs/tags/${TAG}" >/dev/null 2>&1; then
+            test "$(git rev-parse "${TAG}^{commit}")" = "$PAGES_SHA" || { echo "Tag points to different SHA"; exit 1; }
+            test "$(git cat-file -t "refs/tags/${TAG}")" = "tag" || { echo "Tag is not annotated"; exit 1; }
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git tag -a "$TAG" "$PAGES_SHA" -m "A7 SEQ39: Memory Wall six-chapter hyperlink TOC milestone (Registry and Pages verified)"
+            git push origin "refs/tags/${TAG}"
+          fi
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$PAGES_SHA" \
+              --title "A7 · Memory Wall six-chapter TOC v1.0.0" \
+              --notes "Exact verified A7 main commit: ${PAGES_SHA}. Six existing Memory Wall sections now linked directly from the Galactic Atlas homepage and shared site footer. Source-authored TOC, static no-JavaScript fallback, publication-bundle validation and Chromium desktop/mobile interaction checks. The source Collections 01–06 and peer repositories are preserved. No private Drive corpus ingestion, specialist acceptance or live cross-repository transfer implied. The historical A7 SEQ13 private Main/Local ACK remains separately staged. GitHub Pages publication workflow: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${PAGES_RUN}."
+          fi
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json tagName,url,targetCommitish
+          echo "A7 MEMORY WALL TOC MILESTONE RELEASE PASS tag=$TAG sha=$PAGES_SHA"

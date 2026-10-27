@@ -5,7 +5,7 @@ const routes=[
  ["history.html","Development History","L1 · A7 commits, merged PRs and Actions"],
  ["control-towers.html","Control Towers","Authorities and ownership"],
  ["repository-status.html","Mission Status","Dated provider observations"],
- ["memory-wall.html","Memory Wall","Pinned learning and visualization reminders"],
+ ["memory-wall.html","Memory Wall","Six chapters: learning, visualization, ownership, interface, storage and evidence"],
  ["roadmap.html","Roadmap","Development and priorities"],
  ["resource-navigator.html","Resource Navigator","L1 · public-safe organization to resource directory"],
  ["developer-dock.html","Developer Dock","L1 · source files, generators and automated checks"],
@@ -39,7 +39,7 @@ function create(){
  if(archive){const chip=el("span","History only · source preserved","a7-shell-archive-chip");ctx.append(chip)}
  else ctx.append(el("span","One site · One theme · Owner-defined data"));
  const foot=el("footer",undefined,"a7-shell-footer");const f1=el("span","A7 is a source-linked index; owning repositories remain authoritative.");
- const f2=el("span");f2.append(link("history.html","Development history"));f2.append(link("governance.html","Governance"));f2.append(link("memory-wall.html","Memory Wall"));foot.append(f1,f2);
+ const f2=el("span");f2.append(link("history.html","Development history"));f2.append(link("governance.html","Governance"));f2.append(link("memory-wall.html#memory-wall-contents","Memory Wall contents"));foot.append(f1,f2);
  document.body.prepend(ctx);document.body.prepend(header);document.body.append(foot);
  document.body.classList.add("a7-shell-ready");if(archive)document.body.classList.add("a7-archived");
 }

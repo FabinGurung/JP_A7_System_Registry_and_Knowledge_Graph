@@ -41,6 +41,7 @@ on:
       - "scripts/validate_memory_storage_architecture.py"
       - "scripts/generate_memory_extraction_guidance.py"
       - "scripts/validate_memory_extraction_guidance.py"
+      - "scripts/validate_memory_wall_published_site.py"
       - "scripts/generate_resource_navigator.py"
       - "scripts/validate_resource_navigator.py"
       - "site/**"
@@ -156,6 +157,9 @@ jobs:
           python scripts/generate_a7_development_history.py --output site/data/development-history.json --require-provider
           python scripts/validate_a7_development_history.py --data-dir site/data
           node --check site/assets/development-history.js
+      - name: Verify published static site has six clickable TOC links and generated JSON
+        run: |
+          python scripts/validate_memory_wall_published_site.py --site-root site --data-dir site/data --commit-sha "$GITHUB_SHA"
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - name: Configure Pages

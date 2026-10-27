@@ -39,6 +39,8 @@ assert '["developer-dock.html","Developer Dock"' in shell
 assert 'class="dh-home-jump"' in home
 assert '["history.html","Development History"' in shell
 assert all('href="'+n+'"' in history for n in archived)
+assert 'href="memory-wall.html#memory-wall-contents"' in home
+assert 'link("memory-wall.html#memory-wall-contents","Memory Wall contents")' in shell
 assert 'id="visualization-reminders"' in memory
 assert 'memory-visualization.js' in memory
 viz=(R/"site/assets/memory-visualization.js").read_text()

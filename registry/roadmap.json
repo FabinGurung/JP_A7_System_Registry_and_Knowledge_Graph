@@ -250,6 +250,13 @@
       "title": "Add canonical PRJ-000029, retire PRJ-000030 duplicate alias, correct stale project authority and legacy instructions",
       "status": "FINAL_CLOSED_PASS",
       "detail": "A7 issue #71: private source read-only verified PRJ-000029 canonical and PRJ-000030 retired redirect. A7 semantic index/route now 29 active IDs and 1 reserved non-routable alias, no client fields. PR #82 merged at e5751c2fca5675f63f2d80698e584fc0b4788008. Main Registry CI #40520450533 SUCCESS, Pages #40520450583 SUCCESS subject to final readback before closeout merge, feature Chromium #40519785461 SUCCESS. Historic frozen Github projects.csv labelled stale; old A7 README and roadmap next-deliverable text repaired. No private Drive or peer writes, historic A9 Seq13 remains staged."
+    },
+    {
+      "id": "A7-D35",
+      "stage": "A7-SEQ-000039 · Memory Wall TOC discoverability and Pages safety",
+      "title": "Surface existing six-chapter TOC on A7 L0, verify static/dynamic hyperlinks in published Pages artifact, and tag a governed milestone",
+      "status": "FEATURE_STAGED_PENDING_CI",
+      "detail": "Memory Wall six-link canonical TOC already implemented in A7 SEQ36/37; homepage falsely advertised 3 posters and lacked a TOC deep link. Update link and shared footer, add generated-bundle gate and no-JS/real-browser regression. Preserve original six curations and all peer/Drive providers. Release tag only after final closed SEQ39 main Registry+Pages success."
     }
   ],
   "next": [

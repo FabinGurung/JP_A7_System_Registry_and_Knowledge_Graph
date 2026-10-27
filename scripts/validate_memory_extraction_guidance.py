@@ -42,6 +42,10 @@ for f in d["vendor_references"]:
     assert f["url"].startswith("https://") and len(f["label"])>3
 html=(ROOT/"site/memory-wall.html").read_text(encoding="utf-8")
 assert html.count('id="memory-wall-contents"')==1
+assert '<a class="mw-toc-card' in html
+assert 'memory-wall.html#memory-wall-contents' in (ROOT/"site/index.html").read_text(encoding="utf-8")
+assert 'memory-wall.html#memory-wall-contents' in (ROOT/"site/assets/a7-site-shell.js").read_text(encoding="utf-8")
+
 assert html.count('id="extraction-retrieval"')==1
 assert '<h2 id="board-title">Developer Learning Toolkit</h2>' in html
 assert html.count('class="mw-chapter-return"')==5

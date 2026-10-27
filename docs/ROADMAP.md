@@ -12,9 +12,9 @@ The older A7-SEQ-000013 external Main/Local import, consumed cursors and ACK rem
 
 Git history is canonical for code changes; Actions verifies only configured tests; Pages only proves published site artifacts; private originals belong to their designated owner. No fake engineering approvals or live runtime exchange may be presented.
 
-## A7 immediate scoped debt
+## A7 next local improvement
 
-Arc 06 has already been completed and published; do not repeat it. The current A7-only priority is semantic identity reconciliation for `PRJ-000029` and the retired `PRJ-000030` alias. See issue #71 and the public-safe provider readback in `registry/providers/project-identity-reconciliation-20261027.json`. Resolve private source attributes in the owning provider without copying their contents into A7; the separately staged private Main/Local cutover is not a public UI blocker.
+Issue #71 and the A7-only semantic routing correction were closed in SEQ38. The next local improvement is to expose the already-existing Memory Wall's six-chapter clickable contents directly from the Galactic Atlas home, and to validate the exact Pages payload before deployment. The historical private A9 Main/Local import/ACK remains staged, not A7 website debt.
 
 For the complete delivery history, read `registry/roadmap.json`, `registry/events/a7-mutations.jsonl` and Git commits. This document deliberately does not duplicate the full growing milestone list.
 
