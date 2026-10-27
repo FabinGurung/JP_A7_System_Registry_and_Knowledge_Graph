@@ -256,7 +256,14 @@
       "stage": "A7-SEQ-000039 · Memory Wall TOC discoverability and Pages safety",
       "title": "Surface existing six-chapter TOC on A7 L0, verify static/dynamic hyperlinks in published Pages artifact, and tag a governed milestone",
       "status": "FINAL_CLOSED_PASS",
-      "detail": "Restored discoverability of existing six-hyperlink Memory Wall TOC on L0 and site-wide footer, added Python gate for the Pages-delivered static six anchors, exact source SHA and generated JSON, and real desktop/mobile/no-JS hyperlink QA. Feature PR #84 merged at 07d5940a1a0e6da1397516effc169c556db2ab89, Registry #40595339823 and Pages #40595339881 both SUCCESS. Release tag candidate a7/memory-wall-toc-v1.0.0 to be created by exact-SHA Pages-completion workflow on SEQ39 FINAL_CLOSED_PASS main. All original six chapter sources preserved; no private Drive, Communication & Web or peer repository writes. Independent served HTML-body retrieval not claimed."
+      "detail": "Restored discoverability of existing six-hyperlink Memory Wall TOC on L0 and site-wide footer, added Python gate for the Pages-delivered static six anchors, exact source SHA and generated JSON, and real desktop/mobile/no-JS hyperlink QA. Feature PR #84 merged at 07d5940a1a0e6da1397516effc169c556db2ab89, Registry #40595339823 and Pages #40595339881 both SUCCESS. GitHub milestone tag a7/memory-wall-toc-v1.0.0 issued at exact final 059b7a0dff0bc86ce03eef6ae020f905d2becb99, with passed Registry #40596017767, Pages #40596018203, Chromium #40596017905 and Release #40596095945. All original six chapter sources preserved; no private Drive, Communication & Web or peer repository writes. Independent served HTML-body retrieval not claimed."
+    },
+    {
+      "id": "A7-D36",
+      "stage": "A7-SEQ-000040 · JP safe roadmap pin/archive contract",
+      "title": "Pinned A7 work references and single-live-file PRE/POST archive",
+      "status": "FEATURE_STAGED_PENDING_QA",
+      "detail": "Existing task IDs referenced, not cloned. Original populated roadmap snapshotted PRE. POST after validation and publication; never infer private Sheets or peer approval."
     }
   ],
   "next": [
@@ -366,5 +373,36 @@
     "rd_handover": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md",
     "a7_entrypoint": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json",
     "public_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/"
+  },
+  "pinned_task_ids": [
+    "A7-N05",
+    "A7-N10",
+    "A7-N04"
+  ],
+  "pin_semantics": {
+    "A7-N05": {
+      "boundary": "A7_ONLY_DATED_PROJECTION",
+      "reason": "Display source-backed progress; do not imply realtime provider monitoring"
+    },
+    "A7-N10": {
+      "boundary": "A7_ONLY_OPERATOR_GUIDANCE",
+      "reason": "Keep A7 operator guidance separate from Developer Dock"
+    },
+    "A7-N04": {
+      "boundary": "PEER_READ_ONLY_HOLD",
+      "reason": "Only link to peer policy/version state; do not change owner repositories"
+    }
+  },
+  "version_control": {
+    "source_id": "A7-ROADMAP-20261009",
+    "live_path": "registry/roadmap.json",
+    "archive_dir": "registry/archives/roadmap/",
+    "manifest": "registry/archives/roadmap/manifest.json",
+    "append_only_history": "registry/archives/roadmap/version-history.jsonl",
+    "archive_ordinal": "000001",
+    "release_tag_namespace": "A7_GIT_RELEASE",
+    "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
+    "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",
+    "derived_are_non_authoritative": true
   }
 }

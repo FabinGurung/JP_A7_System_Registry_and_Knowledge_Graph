@@ -14,14 +14,20 @@ const b=el("span",x.status,"rp-status");b.dataset.state=dateState(x.status);a.ap
 if(!subset.length)box.append(el("p","No milestones match your search."));
 }
 fetch("data/a7-roadmap.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Not found");return r.json()}).then(d=>{
-if(d.schema!=="a7-roadmap-projection.v0.1"||d.owner!=="A7_ONLY"||d.kind!=="DERIVED_NOT_AUTHORITATIVE"||!Array.isArray(d.developed)||!Array.isArray(d.next_a7))throw Error("Invalid data source");
+if(d.schema!=="a7-roadmap-projection.v0.1"||d.owner!=="A7_ONLY"||d.kind!=="DERIVED_NOT_AUTHORITATIVE"||!Array.isArray(d.developed)||!Array.isArray(d.next_a7)||!Array.isArray(d.pinned_a7))throw Error("Invalid data source");
 rows=d.developed;
 $("roadmapSequence").textContent=d.current_closed_sequence.replace("A7-SEQ-","");
 $("roadmapMilestones").textContent=String(rows.length);
 $("roadmapBacklogCount").textContent=String(d.next_a7.length);
 $("roadmapSource").textContent="A7 registry projection • source "+d.source_sha256.slice(0,12)+" • build "+d.site_build_commit.slice(0,12)+" • dated snapshot; check GitHub for live runs";
 $("roadmapSearch").addEventListener("input",paint);paint();
+const pinnedBox=$("roadmapPinned");pinnedBox.replaceChildren();const pinnedIds=new Set();
+for(const x of d.pinned_a7){
+ if(pinnedIds.has(x.id)||!d.next_a7.some(t=>t.id===x.id))throw Error("Invalid pinned task reference");
+ pinnedIds.add(x.id);const a=el("article",undefined,"rp-pin");
+ a.append(el("small",x.id+" · "+x.priority),el("h3",x.title),el("span",x.task_boundary,"rp-pin-boundary"),el("p",x.pin_reason),el("small","Source state: "+x.state));pinnedBox.append(a);
+}
 const box=$("roadmapUpcoming");box.replaceChildren();
-for(const x of d.next_a7){const a=el("article",undefined,"rp-task");a.append(el("small",x.id+" · "+x.priority),el("h3",x.title),el("span",x.state,"rp-status"),el("p",x.done_when));box.append(a)}
+for(const x of d.next_a7.filter(x=>!pinnedIds.has(x.id))){const a=el("article",undefined,"rp-task");a.append(el("small",x.id+" · "+x.priority),el("h3",x.title),el("span",x.state,"rp-status"),el("p",x.done_when));box.append(a)}
 }).catch(()=>{$("roadmapSource").textContent="Could not read this build's roadmap; consult A7's source registry on GitHub.";});
 })();

@@ -1,0 +1,34 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-20261009",
+  "subject": "A7 roadmap",
+  "live_source_path": "registry/roadmap.json",
+  "central_archive_dir": "registry/archives/roadmap/",
+  "archive_ordinal": "000001",
+  "pre": {
+    "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
+    "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
+    "status": "COPIED_EXACT_ORIGINAL_BEFORE_EDIT"
+  },
+  "post": {
+    "path": "registry/archives/roadmap/000001_POST_A7_SEQ_000040.json",
+    "status": "AWAITING_VALIDATION"
+  },
+  "status": "PRE_CAPTURED_POST_PENDING",
+  "history": "registry/archives/roadmap/version-history.jsonl",
+  "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
+  "sheet_versions": "SEPARATE_UNTOUCHED",
+  "notebook_versions": "SEPARATE_UNTOUCHED",
+  "release_versions": "SEPARATE_GIT_TAG_NAMESPACE",
+  "original_message": {
+    "provider": "PRIVATE_CHAT",
+    "source_url": null,
+    "stored_in_private_chat": true,
+    "public_copy": false
+  },
+  "evidence": [
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/roadmap.json",
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/memory-wall-toc-v1.0.0"
+  ],
+  "no_private_data": true
+}
