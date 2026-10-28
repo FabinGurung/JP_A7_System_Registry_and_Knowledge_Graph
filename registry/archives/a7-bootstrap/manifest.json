@@ -8,7 +8,7 @@
   "post_path": "registry/archives/a7-bootstrap/000002_POST_A7_SEQ_000042.json",
   "source_commit": "f92c2d599d2d134b709796bedf133f76240dd00a",
   "original_blob_sha": "74338c105acecc0f68a652071f0f58627d38c295",
-  "status": "PRE_000002_CAPTURED_POST_PENDING",
+  "status": "POST_000002_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
   "history": "registry/archives/a7-bootstrap/version-history.jsonl",
   "restore": "Restore snapshot contents into the SAME A7_BOOTSTRAP.json on a governed PR; verify GitHub CI and source readback",
   "original_private_message_url": null,
@@ -24,5 +24,7 @@
     "pre_path": "registry/archives/a7-bootstrap/000001_PRE_A7_SEQ_000041.json",
     "post_path": "registry/archives/a7-bootstrap/000001_POST_A7_SEQ_000041.json",
     "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS"
-  }
+  },
+  "post_blob_sha": "88a5a4d7319d5cd6c374167aadb6dc434bbd2648",
+  "first_closeout_registry_run": 40788853393
 }

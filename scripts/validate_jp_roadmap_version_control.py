@@ -71,6 +71,7 @@ if m["archive_ordinal"]=="000003":
         assert m["status"]=="POST_000003_VALIDATED_ARCHIVED"
         assert q3.read_bytes()==live.read_bytes()
         assert m["latest_post"]["path"]=="registry/archives/roadmap/000003_POST_A7_SEQ_000042.json"
-        assert m["latest_post"]["sha256"]==hashlib.sha256(q3.read_bytes()).hexdigest()
+        raw=q3.read_bytes()
+        assert m["latest_post"]["git_blob_sha"]==hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()
     else: assert m["status"]=="PRE_000003_CAPTURED_POST_PENDING"
 print("JP A7 ROADMAP ARCHIVE PASS latest_stage="+("POST" if post2.exists() else "PRE")+" live_id=1 task_refs=3 previous_history_preserved=1")
