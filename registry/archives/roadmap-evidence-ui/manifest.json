@@ -1,0 +1,25 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-EVIDENCE-UI",
+  "live_source_paths": [
+    "site/roadmap.html",
+    "site/assets/a7-roadmap.js",
+    "site/assets/a7-roadmap.css",
+    "scripts/generate_a7_roadmap.py",
+    "scripts/validate_a7_roadmap.py"
+  ],
+  "central_archive_dir": "registry/archives/roadmap-evidence-ui/",
+  "archive_ordinal": "000001",
+  "pre_path": "registry/archives/roadmap-evidence-ui/000001_PRE_A7_SEQ_000042.json",
+  "post_path": "registry/archives/roadmap-evidence-ui/000001_POST_A7_SEQ_000042.json",
+  "pre_source_commit": "300476b02cf9483a76c692ce23e44fe1738bf6d9",
+  "status": "POST_CAPTURED__SOURCE_BYTE_EQUALITY_TEST_ADDED",
+  "history": "registry/archives/roadmap-evidence-ui/version-history.jsonl",
+  "restore": "Restore each archived file's bytes into the same live GitHub path via reviewed PR; validate Registry/Chromium/Pages; do not duplicate canonical roadmap",
+  "original_provider_url": null,
+  "peer_writes": 0,
+  "private_drive_writes": 0,
+  "first_feature_registry_run": 40788195590,
+  "first_feature_registry_conclusion": "success",
+  "post_contents_checked_by": "scripts/validate_a7_roadmap.py"
+}

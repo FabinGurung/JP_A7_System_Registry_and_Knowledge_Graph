@@ -20,6 +20,17 @@ $("roadmapSequence").textContent=d.current_closed_sequence.replace("A7-SEQ-","")
 $("roadmapMilestones").textContent=String(rows.length);
 $("roadmapBacklogCount").textContent=String(d.next_a7.length);
 $("roadmapSource").textContent="A7 registry projection • source "+d.source_sha256.slice(0,12)+" • build "+d.site_build_commit.slice(0,12)+" • dated snapshot; check GitHub for live runs";
+// Dated provider evidence from the owning A7 bootstrap, never a live-status claim.
+const evidenceBox=$("roadmapEvidence");evidenceBox.replaceChildren();
+const proof=d.verified_a7_provider_evidence;
+if(proof&&proof.historical_not_live===true&&/^[0-9a-f]{40}$/.test(proof.verified_commit_sha)&&proof.conclusions&&Object.values(proof.conclusions).every(v=>v==="success")){
+ evidenceBox.append(el("p",proof.sequence+" • verified historical main "+proof.verified_commit_sha.slice(0,12)+" • not live provider monitoring"));
+ for(const [caption,key] of [["Registry validation","registry_run"],["Pages deployment","pages_run"],["Release safeguard","release_safeguard_run"]]){
+  const run=proof[key];if(!Number.isSafeInteger(run)||run<1)continue;
+  const a=el("a",caption+" · #"+run);a.href=repo+"/actions/runs/"+run;a.target="_blank";a.rel="noopener noreferrer";evidenceBox.append(a);
+ }
+ evidenceBox.append(el("small",proof.independent_http_body_readback?"Independent page HTTP readback recorded.":"Independent served-page HTTP readback NOT verified."));
+}else evidenceBox.append(el("p","No verified A7 source-backed GitHub closeout snapshot is available; consult GitHub Actions."));
 $("roadmapSearch").addEventListener("input",paint);paint();
 const pinnedBox=$("roadmapPinned");pinnedBox.replaceChildren();const pinnedIds=new Set();
 for(const x of d.pinned_a7){
