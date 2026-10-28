@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "PRE_000002_CAPTURED_POST_PENDING",
+  "status": "POST_000002_VALIDATED_ARCHIVED",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -52,10 +52,21 @@
   "latest_pre": {
     "path": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
     "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
-    "status": "EXACT_PRE_SAVED"
+    "status": "EXACT_PRE_SAVED",
+    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c"
   },
   "latest_post": {
     "path": "registry/archives/roadmap/000002_POST_A7_SEQ_000041.json",
-    "status": "AWAITING_LIVE_QA"
-  }
+    "status": "PASS_AFTER_VALIDATION",
+    "sha256": "871f55fa7882dc3d0e173c800b88a11a0721371edc517c7e5a257568e5b9b156",
+    "validated_main_sha": "3a59252187d5f73c85524dd2b4cf223ea2a572c9",
+    "main_registry_run": 40639475527,
+    "main_chromium_run": 40639475532,
+    "first_feature_pages_sha": "347e174f0b28d6cde793b38de5d01e269ead2e25",
+    "first_feature_pages_run": 40639134579,
+    "prior_browser_failure_run": 40639134439,
+    "repair_pr": 89,
+    "post_same_live_id": true
+  },
+  "final_seq41_closeout_checks": "PENDING_FINAL_MAIN_WORKFLOWS"
 }

@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 obj=json.loads((ROOT/"registry/roadmap.json").read_text(encoding="utf-8"))
 assert obj["roadmap_id"]=="A7-ROADMAP-20261009"
-assert obj["current_closed_sequence"]=="A7-SEQ-000040"
+assert obj["current_closed_sequence"]=="A7-SEQ-000041"
 assert obj["current_staged_sequence"]=="A7-SEQ-000013"
 assert len(obj["developed"])>=8 and len(obj["next"])>=6
 assert len(obj["pinned_task_ids"])==len(set(obj["pinned_task_ids"]))

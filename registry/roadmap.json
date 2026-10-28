@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-28",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000040",
+  "current_closed_sequence": "A7-SEQ-000041",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -269,8 +269,8 @@
       "id": "A7-D37",
       "stage": "A7-SEQ-000041 · Operator quickstart and version-control debt closure",
       "title": "Current source-first A7 operator workflow in the existing How It Works page; preserve old CAD example",
-      "status": "FEATURE_STAGED_PENDING_QA",
-      "detail": "Adds 7-step A7-only guide and link to actual source policies, not a new owner or second page. Dedicated PRE snapshots for roadmap ordinal 000002 and operator page ordinal 000001. Historical SEQ40 final provider statuses reconciled in A7 manifest; POST pending actual live QA and deployment. No external source writes."
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Additive current seven-step A7-only operator section in existing historical How It Works page, no historical content removed and no peer/Drive writes. PRE archived for roadmap and page before edit. Feature PR #88 merged main 347e174f0b28d6cde793b38de5d01e269ead2e25, Registry #40639134488 and Pages #40639134579 SUCCESS. The first main browser #40639134439 failed intermittently on asynchronous no-JS hash-navigation assertion; timing-only QA correction PR #89 merged at 3a59252187d5f73c85524dd2b4cf223ea2a572c9; exact main Registry #40639475527 and Chromium #40639475532 SUCCESS. Numbered subject POSTs saved after these checks, byte-identical to final source. Final closeout main Registry/Pages must be independently verified. No professional or private-source approvals inferred."
     }
   ],
   "next": [
@@ -341,7 +341,7 @@
       "id": "A7-N10",
       "priority": "P2",
       "title": "Galaxy sectors, Developer Dock and operator guidance",
-      "state": "ARCS_AND_DEVELOPER_DOCK_DELIVERED__A7_OPERATOR_GUIDE_FEATURE_STAGED",
+      "state": "A7_OPERATOR_GUIDE_DELIVERED__PEER_WORKFLOW_APPROVAL_SEPARATE",
       "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
     },
     {
