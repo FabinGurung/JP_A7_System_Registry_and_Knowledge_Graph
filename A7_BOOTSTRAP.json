@@ -750,7 +750,22 @@
     "final_precloseout_chromium_run": 40639475532,
     "prior_browser_flake_run": 40639134439,
     "post_snapshot_expected": "snapshot/post-a7-seq-000041-operator-guidance",
-    "final_closeout_ci": "PENDING",
-    "independent_http_body_readback": false
+    "final_closeout_ci": "VERIFIED_FINAL_MAIN_WORKFLOWS",
+    "independent_http_body_readback": false,
+    "final_closeout_evidence": {
+      "state": "VERIFIED",
+      "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+      "registry_run": 40639913059,
+      "pages_run": 40639913026,
+      "release_safeguard_run": 40639983824,
+      "conclusions": {
+        "registry": "success",
+        "pages": "success",
+        "milestone_safeguard": "success"
+      },
+      "run_head_sha_matches_main": true,
+      "independent_http_body_readback": false,
+      "independent_owner_approval": false
+    }
   }
 }

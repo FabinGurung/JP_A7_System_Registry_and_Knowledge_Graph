@@ -68,5 +68,26 @@
     "repair_pr": 89,
     "post_same_live_id": true
   },
-  "final_seq41_closeout_checks": "PENDING_FINAL_MAIN_WORKFLOWS"
+  "final_seq41_closeout_checks": {
+    "state": "VERIFIED",
+    "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+    "registry_run": 40639913059,
+    "pages_run": 40639913026,
+    "release_safeguard_run": 40639983824,
+    "conclusions": {
+      "registry": "success",
+      "pages": "success",
+      "milestone_safeguard": "success"
+    },
+    "run_head_sha_matches_main": true,
+    "independent_http_body_readback": false,
+    "independent_owner_approval": false
+  },
+  "seq41_manifest_evidence_archive": {
+    "pre": "registry/archives/roadmap/manifest-evidence/000001_PRE_A7_SEQ_000041.json",
+    "post": "registry/archives/roadmap/manifest-evidence/000001_POST_A7_SEQ_000041.json",
+    "original_manifest_blob": "a51d4948343388d95d309a101b1c7ce9663a81d2",
+    "source_path": "registry/archives/roadmap/manifest.json",
+    "same_live_path": true
+  }
 }

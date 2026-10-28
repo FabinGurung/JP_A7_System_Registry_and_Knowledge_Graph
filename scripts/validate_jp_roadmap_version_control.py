@@ -39,8 +39,22 @@ if post2.exists():
     assert m["status"]=="POST_000002_VALIDATED_ARCHIVED"
     assert post2.read_bytes()==live.read_bytes()
     assert m["latest_post"]["sha256"]==hashlib.sha256(post2.read_bytes()).hexdigest()
-    assert events[-1]["phase"]=="POST" and events[-1]["sequence"]=="A7-SEQ-000041"
+    assert any(e["phase"]=="POST" and e["sequence"]=="A7-SEQ-000041" for e in events)
+    # Later provider evidence verification must never overwrite or remove the original POST.
+    assert events[-1]["phase"] in ("POST","VERIFY")
 else:
     assert m["status"]=="PRE_000002_CAPTURED_POST_PENDING"
     assert m["latest_post"]["status"]=="AWAITING_LIVE_QA"
+# Provider-backed SEQ41 final-main evidence; independent site HTTP remains distinct.
+close=m.get("final_seq41_closeout_checks")
+assert close["state"]=="VERIFIED" and close["verified_against_main_commit"]=="c4baaf8ff7dfcf9884f09e547e7babc3593be642"
+assert (close["registry_run"],close["pages_run"],close["release_safeguard_run"])==(40639913059,40639913026,40639983824)
+assert close["independent_http_body_readback"] is False
+archive=m["seq41_manifest_evidence_archive"]
+assert archive["source_path"]=="registry/archives/roadmap/manifest.json"
+assert (R/archive["pre"]).is_file()
+post_manifest=R/archive["post"]
+if post_manifest.exists():
+    assert post_manifest.read_bytes()==(a/"manifest.json").read_bytes()
+    assert events[-1]["phase"]=="VERIFY"
 print("JP A7 ROADMAP ARCHIVE PASS latest_stage="+("POST" if post2.exists() else "PRE")+" live_id=1 task_refs=3 previous_history_preserved=1")

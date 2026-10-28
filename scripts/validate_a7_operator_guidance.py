@@ -26,7 +26,26 @@ if post.exists():
     assert manifest["status"]=="POST_VALIDATED_ARCHIVED"
     assert post.read_bytes()==html.encode()
     assert manifest["post"]["sha256"]==hashlib.sha256(post.read_bytes()).hexdigest()
-    assert hist[-1]["phase"]=="POST"
+    assert any(e["phase"]=="POST" for e in hist)
+    assert hist[-1]["phase"] in ("POST","VERIFY")
 else:
     assert manifest["status"]=="PRE_CAPTURED_POST_PENDING"
+# SEQ41 final-main actions are verified; no served HTML or owner attestation is claimed.
+boot=json.loads((ROOT/"A7_BOOTSTRAP.json").read_text())
+final=boot["a7_operator_quickstart"]["final_closeout_evidence"]
+assert boot["a7_operator_quickstart"]["final_closeout_ci"]=="VERIFIED_FINAL_MAIN_WORKFLOWS"
+assert final==manifest["final_closeout_checks"]
+assert (final["registry_run"],final["pages_run"],final["release_safeguard_run"])==(40639913059,40639913026,40639983824)
+assert final["independent_http_body_readback"] is False
+for pointer,current in ((manifest["seq41_manifest_evidence_archive"],a/"manifest.json"),):
+    assert (ROOT/pointer["pre"]).is_file()
+    if (ROOT/pointer["post"]).exists():
+        assert (ROOT/pointer["post"]).read_bytes()==current.read_bytes()
+        assert hist[-1]["phase"]=="VERIFY"
+ba=ROOT/"registry/archives/a7-bootstrap"
+bm=json.loads((ba/"manifest.json").read_text())
+assert bm["live_source_path"]=="A7_BOOTSTRAP.json"
+assert (ROOT/bm["pre_path"]).is_file()
+if (ROOT/bm["post_path"]).exists():
+    assert (ROOT/bm["post_path"]).read_bytes()==(ROOT/"A7_BOOTSTRAP.json").read_bytes()
 print("A7 CURRENT OPERATOR GUIDANCE PASS steps=7 historical_reference_preserved=1 stage="+("POST" if post.exists() else "PRE"))

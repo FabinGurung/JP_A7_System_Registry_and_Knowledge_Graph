@@ -1,0 +1,49 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-OPERATOR-HOW-IT-WORKS",
+  "live_source_path": "site/how-it-works.html",
+  "archive_dir": "registry/archives/operator-guidance/",
+  "archive_ordinal": "000001",
+  "pre": {
+    "path": "registry/archives/operator-guidance/000001_PRE_A7_SEQ_000041.html",
+    "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "status": "EXACT_BEFORE_LIVE_CHANGE",
+    "sha256": "18f07c45353abb5d4811d4517fa21cfeae2033363f3bb8d2ffee50499a3ed9a3"
+  },
+  "post": {
+    "path": "registry/archives/operator-guidance/000001_POST_A7_SEQ_000041.html",
+    "status": "VALIDATED_SAME_LIVE_PATH",
+    "sha256": "a042df568575b2b38a2c7872c3f86b0f105546773062e998e50da7c33f44c775",
+    "feature_pages_run": 40639134579,
+    "final_precloseout_main_chromium": 40639475532,
+    "final_precloseout_registry": 40639475527,
+    "preserved_historical_content": true
+  },
+  "status": "POST_VALIDATED_ARCHIVED",
+  "history": "registry/archives/operator-guidance/version-history.jsonl",
+  "restore": "Use numbered PRE/POST as recovery; restore into original site/how-it-works.html through PR; historical CAD content preserved",
+  "original_provider_links_preserved": true,
+  "private_source_data_published": false,
+  "final_closeout_checks": {
+    "state": "VERIFIED",
+    "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+    "registry_run": 40639913059,
+    "pages_run": 40639913026,
+    "release_safeguard_run": 40639983824,
+    "conclusions": {
+      "registry": "success",
+      "pages": "success",
+      "milestone_safeguard": "success"
+    },
+    "run_head_sha_matches_main": true,
+    "independent_http_body_readback": false,
+    "independent_owner_approval": false
+  },
+  "seq41_manifest_evidence_archive": {
+    "pre": "registry/archives/operator-guidance/manifest-evidence/000001_PRE_A7_SEQ_000041.json",
+    "post": "registry/archives/operator-guidance/manifest-evidence/000001_POST_A7_SEQ_000041.json",
+    "original_manifest_blob": "7cc89af9086c4aecc05ad956345b005ee86fab8b",
+    "source_path": "registry/archives/operator-guidance/manifest.json",
+    "same_live_path": true
+  }
+}

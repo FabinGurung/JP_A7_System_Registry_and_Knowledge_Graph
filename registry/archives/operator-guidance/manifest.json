@@ -24,5 +24,26 @@
   "restore": "Use numbered PRE/POST as recovery; restore into original site/how-it-works.html through PR; historical CAD content preserved",
   "original_provider_links_preserved": true,
   "private_source_data_published": false,
-  "final_closeout_checks": "PENDING_FINAL_MAIN_WORKFLOWS"
+  "final_closeout_checks": {
+    "state": "VERIFIED",
+    "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+    "registry_run": 40639913059,
+    "pages_run": 40639913026,
+    "release_safeguard_run": 40639983824,
+    "conclusions": {
+      "registry": "success",
+      "pages": "success",
+      "milestone_safeguard": "success"
+    },
+    "run_head_sha_matches_main": true,
+    "independent_http_body_readback": false,
+    "independent_owner_approval": false
+  },
+  "seq41_manifest_evidence_archive": {
+    "pre": "registry/archives/operator-guidance/manifest-evidence/000001_PRE_A7_SEQ_000041.json",
+    "post": "registry/archives/operator-guidance/manifest-evidence/000001_POST_A7_SEQ_000041.json",
+    "original_manifest_blob": "7cc89af9086c4aecc05ad956345b005ee86fab8b",
+    "source_path": "registry/archives/operator-guidance/manifest.json",
+    "same_live_path": true
+  }
 }
