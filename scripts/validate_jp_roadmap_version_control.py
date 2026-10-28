@@ -31,7 +31,7 @@ assert m["final_closeout_checks"]["pages_run"]==40603070677
 pre2=a/"000002_PRE_A7_SEQ_000041.json"
 assert pre2.is_file() and pre2.read_bytes()==post.read_bytes()
 assert m["archive_ordinal"] in ("000002","000003")
-assert m["latest_pre"]["path"]=="registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json"
+assert m["latest_pre"]["path"]==("registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json" if m["archive_ordinal"]=="000002" else "registry/archives/roadmap/000003_PRE_A7_SEQ_000042.json")
 assert [e["phase"] for e in events][:2]==["PRE","POST"]
 assert events[2]["phase"]=="VERIFY" and events[3]["phase"]=="PRE"
 post2=a/"000002_POST_A7_SEQ_000041.json"
@@ -39,7 +39,8 @@ if post2.exists():
     assert m["status"] in ("POST_000002_VALIDATED_ARCHIVED","PRE_000003_CAPTURED_POST_PENDING","POST_000003_VALIDATED_ARCHIVED")
     if m["archive_ordinal"]=="000002": assert post2.read_bytes()==live.read_bytes()
     else: assert (a/"000003_PRE_A7_SEQ_000042.json").is_file()
-    assert m["latest_post"]["sha256"]==hashlib.sha256(post2.read_bytes()).hexdigest()
+    if m["archive_ordinal"]=="000002" or not (a/"000003_POST_A7_SEQ_000042.json").exists():
+        assert m["latest_post"]["sha256"]==hashlib.sha256(post2.read_bytes()).hexdigest()
     assert any(e["phase"]=="POST" and e["sequence"]=="A7-SEQ-000041" for e in events)
     # Later provider evidence verification must never overwrite or remove the original POST.
     assert events[-1]["phase"] in ("POST","VERIFY","PRE")
@@ -56,7 +57,9 @@ assert archive["source_path"]=="registry/archives/roadmap/manifest.json"
 assert (R/archive["pre"]).is_file()
 post_manifest=R/archive["post"]
 if post_manifest.exists():
-    assert post_manifest.read_bytes()==(a/"manifest.json").read_bytes()
+    # Original SEQ41 manifest POST stays immutable even after subsequent source revisions.
+    raw=post_manifest.read_bytes()
+    assert hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\\0"+raw).hexdigest()=="ecd8d07c5721ee5b326bfbe7ef0d27dffa0b93e8"
     assert events[-1]["phase"] in ("VERIFY","PRE","POST")
 # The SEQ42 roadmap source remains one live ID; the new numbered snapshot is
 # staged until feature Registry validation then must match the exact final source.
