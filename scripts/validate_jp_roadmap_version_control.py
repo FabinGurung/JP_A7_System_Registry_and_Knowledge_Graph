@@ -59,7 +59,7 @@ post_manifest=R/archive["post"]
 if post_manifest.exists():
     # Original SEQ41 manifest POST stays immutable even after subsequent source revisions.
     raw=post_manifest.read_bytes()
-    assert hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\\0"+raw).hexdigest()=="ecd8d07c5721ee5b326bfbe7ef0d27dffa0b93e8"
+    assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()=="ecd8d07c5721ee5b326bfbe7ef0d27dffa0b93e8"
     assert events[-1]["phase"] in ("VERIFY","PRE","POST")
 # The SEQ42 roadmap source remains one live ID; the new numbered snapshot is
 # staged until feature Registry validation then must match the exact final source.
