@@ -1,0 +1,93 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-20261009",
+  "subject": "A7 roadmap",
+  "live_source_path": "registry/roadmap.json",
+  "central_archive_dir": "registry/archives/roadmap/",
+  "archive_ordinal": "000002",
+  "pre": {
+    "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
+    "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
+    "status": "COPIED_EXACT_ORIGINAL_BEFORE_EDIT",
+    "sha256": "1a2ad62ef1cc9027d63eaabe8f7af87eb2df590220e8aa49668617ce0ff588e4"
+  },
+  "post": {
+    "path": "registry/archives/roadmap/000001_POST_A7_SEQ_000040.json",
+    "status": "PASS_AFTER_VALIDATION",
+    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c",
+    "validated_feature_main_sha": "4f432fb95e6abca3f9f103789d36b0c1ff7afcd4",
+    "registry_run": 40602323919,
+    "pages_run": 40602323693,
+    "chromium_run": 40602324062,
+    "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
+    "source_body_same_as_post": true
+  },
+  "status": "POST_000002_VALIDATED_ARCHIVED",
+  "history": "registry/archives/roadmap/version-history.jsonl",
+  "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
+  "sheet_versions": "SEPARATE_UNTOUCHED",
+  "notebook_versions": "SEPARATE_UNTOUCHED",
+  "release_versions": "SEPARATE_GIT_TAG_NAMESPACE",
+  "original_message": {
+    "provider": "PRIVATE_CHAT",
+    "source_url": null,
+    "stored_in_private_chat": true,
+    "public_copy": false
+  },
+  "evidence": [
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/roadmap.json",
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/memory-wall-toc-v1.0.0"
+  ],
+  "no_private_data": true,
+  "restoration_validation": "RESTORE_INTO_SAME_LIVE_PATH_AND_ID__REVALIDATE_SHA_AND_PROVIDER_READBACK",
+  "final_closeout_checks": {
+    "state": "VERIFIED",
+    "final_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "registry_run": 40603070798,
+    "pages_run": 40603070677,
+    "release_preservation_run": 40603140848,
+    "provider_readback": "GITHUB_ACTIONS_SUCCESS",
+    "independent_http_body_readback": false
+  },
+  "latest_pre": {
+    "path": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
+    "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "status": "EXACT_PRE_SAVED",
+    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c"
+  },
+  "latest_post": {
+    "path": "registry/archives/roadmap/000002_POST_A7_SEQ_000041.json",
+    "status": "PASS_AFTER_VALIDATION",
+    "sha256": "871f55fa7882dc3d0e173c800b88a11a0721371edc517c7e5a257568e5b9b156",
+    "validated_main_sha": "3a59252187d5f73c85524dd2b4cf223ea2a572c9",
+    "main_registry_run": 40639475527,
+    "main_chromium_run": 40639475532,
+    "first_feature_pages_sha": "347e174f0b28d6cde793b38de5d01e269ead2e25",
+    "first_feature_pages_run": 40639134579,
+    "prior_browser_failure_run": 40639134439,
+    "repair_pr": 89,
+    "post_same_live_id": true
+  },
+  "final_seq41_closeout_checks": {
+    "state": "VERIFIED",
+    "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+    "registry_run": 40639913059,
+    "pages_run": 40639913026,
+    "release_safeguard_run": 40639983824,
+    "conclusions": {
+      "registry": "success",
+      "pages": "success",
+      "milestone_safeguard": "success"
+    },
+    "run_head_sha_matches_main": true,
+    "independent_http_body_readback": false,
+    "independent_owner_approval": false
+  },
+  "seq41_manifest_evidence_archive": {
+    "pre": "registry/archives/roadmap/manifest-evidence/000001_PRE_A7_SEQ_000041.json",
+    "post": "registry/archives/roadmap/manifest-evidence/000001_POST_A7_SEQ_000041.json",
+    "original_manifest_blob": "a51d4948343388d95d309a101b1c7ce9663a81d2",
+    "source_path": "registry/archives/roadmap/manifest.json",
+    "same_live_path": true
+  }
+}

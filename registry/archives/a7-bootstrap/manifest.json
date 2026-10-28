@@ -8,9 +8,16 @@
   "post_path": "registry/archives/a7-bootstrap/000001_POST_A7_SEQ_000041.json",
   "source_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
   "original_blob_sha": "74338c105acecc0f68a652071f0f58627d38c295",
-  "status": "PRE_SAVED_POST_PENDING_PROVIDER_VALIDATION",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
   "history": "registry/archives/a7-bootstrap/version-history.jsonl",
   "restore": "Restore snapshot contents into the SAME A7_BOOTSTRAP.json on a governed PR; verify GitHub CI and source readback",
   "original_private_message_url": null,
-  "independent_http_body_readback": false
+  "independent_http_body_readback": false,
+  "post_capture_validation": {
+    "feature_pr": 91,
+    "first_feature_registry_run": 40787697816,
+    "conclusion": "success",
+    "same_live_source_content_check": "VALIDATOR_ENFORCED",
+    "final_main_checks": "PROVIDER_READBACK_AFTER_MERGE"
+  }
 }
