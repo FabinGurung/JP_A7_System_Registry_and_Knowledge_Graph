@@ -9,11 +9,11 @@
     "scripts/validate_a7_roadmap.py"
   ],
   "central_archive_dir": "registry/archives/roadmap-evidence-ui/",
-  "archive_ordinal": "000001",
+  "archive_ordinal": "000002",
   "pre_path": "registry/archives/roadmap-evidence-ui/000001_PRE_A7_SEQ_000042.json",
   "post_path": "registry/archives/roadmap-evidence-ui/000001_POST_A7_SEQ_000042.json",
   "pre_source_commit": "300476b02cf9483a76c692ce23e44fe1738bf6d9",
-  "status": "POST_CAPTURED__SOURCE_BYTE_EQUALITY_TEST_ADDED",
+  "status": "PRE_000002_CAPTURED__POST_PENDING_VALIDATION",
   "history": "registry/archives/roadmap-evidence-ui/version-history.jsonl",
   "restore": "Restore each archived file's bytes into the same live GitHub path via reviewed PR; validate Registry/Chromium/Pages; do not duplicate canonical roadmap",
   "original_provider_url": null,
@@ -21,5 +21,12 @@
   "private_drive_writes": 0,
   "first_feature_registry_run": 40788195590,
   "first_feature_registry_conclusion": "success",
-  "post_contents_checked_by": "scripts/validate_a7_roadmap.py"
+  "post_contents_checked_by": "scripts/validate_a7_roadmap.py",
+  "historical_000001": {
+    "pre_path": "registry/archives/roadmap-evidence-ui/000001_PRE_A7_SEQ_000042.json",
+    "post_path": "registry/archives/roadmap-evidence-ui/000001_POST_A7_SEQ_000042.json",
+    "first_feature_registry_run": 40788195590
+  },
+  "latest_pre_path": "registry/archives/roadmap-evidence-ui/000002_PRE_A7_SEQ_000043.json",
+  "latest_post_path": "registry/archives/roadmap-evidence-ui/000002_POST_A7_SEQ_000043.json"
 }
