@@ -13,7 +13,7 @@
   "pre_path": "registry/archives/roadmap-evidence-ui/000001_PRE_A7_SEQ_000042.json",
   "post_path": "registry/archives/roadmap-evidence-ui/000001_POST_A7_SEQ_000042.json",
   "pre_source_commit": "300476b02cf9483a76c692ce23e44fe1738bf6d9",
-  "status": "PRE_000002_CAPTURED__POST_PENDING_VALIDATION",
+  "status": "POST_000002_CAPTURED_AFTER_FEATURE_REGISTRY_VALIDATION",
   "history": "registry/archives/roadmap-evidence-ui/version-history.jsonl",
   "restore": "Restore each archived file's bytes into the same live GitHub path via reviewed PR; validate Registry/Chromium/Pages; do not duplicate canonical roadmap",
   "original_provider_url": null,
@@ -28,5 +28,29 @@
     "first_feature_registry_run": 40788195590
   },
   "latest_pre_path": "registry/archives/roadmap-evidence-ui/000002_PRE_A7_SEQ_000043.json",
-  "latest_post_path": "registry/archives/roadmap-evidence-ui/000002_POST_A7_SEQ_000043.json"
+  "latest_post_path": "registry/archives/roadmap-evidence-ui/000002_POST_A7_SEQ_000043.json",
+  "latest_post_git_blob_shas": [
+    {
+      "path": "site/roadmap.html",
+      "sha": "4343a8fa09ab83e567ebda7981cfb8412523b43f"
+    },
+    {
+      "path": "site/assets/a7-roadmap.js",
+      "sha": "40906a1d375775362e400bb4babd7b8d7b9beacf"
+    },
+    {
+      "path": "site/assets/a7-roadmap.css",
+      "sha": "58daee4d5afbab0016f5e4dcb24333510e118d86"
+    },
+    {
+      "path": "scripts/generate_a7_roadmap.py",
+      "sha": "a9818a566692a55233e5e6142526657aa58e8ee0"
+    },
+    {
+      "path": "scripts/validate_a7_roadmap.py",
+      "sha": "2ea5c277dd1ebdaf8ae578398cbba5df11b6d18a"
+    }
+  ],
+  "first_registry_success_run": 40790467113,
+  "final_main_workflows": "PENDING"
 }
