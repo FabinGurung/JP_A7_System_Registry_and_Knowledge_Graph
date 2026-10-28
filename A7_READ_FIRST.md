@@ -234,3 +234,7 @@ The previous 2026-10-07 GitHub `projects.csv` reference is a **historic observed
 ## 30. JP archive/source control for A7 roadmap — SEQ40
 
 For A7 task edits, read `docs/JP_A7_VERSION_CONTROL_READ_FIRST.md`, the original `registry/roadmap.json` and its dedicated archive `registry/archives/roadmap/manifest.json`. One live source ID, enumerated PRE/POST, append-only history, separate Sheet/notebook/Git release version namespaces. Do not confuse prepared code with executed tests or deployed Pages, and do not modify private Drive or peer sources.
+
+## 31. Current A7 operator view — A7-SEQ-000041
+
+The already-existing `site/how-it-works.html` combines the historical CAD/AAD example with the new, separate A7 operator section `#a7-operator-quickstart`. This *presentation* is derived operating guidance: `A7_READ_FIRST.md` and `docs/JP_A7_VERSION_CONTROL_READ_FIRST.md` remain the canonical procedures. Follow source ownership, exact original evidence, same-live-ID PRE, owner-only editing, distinctions between commit/CI/Pages/approval, validated POST and explicit HOLD. Never claim prior specialist acceptance from the presentation. Roadmap and guide are captured in separate numbered subject archives. Public Pages are not a private data warehouse.

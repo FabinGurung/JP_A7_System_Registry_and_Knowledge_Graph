@@ -1,0 +1,21 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-OPERATOR-HOW-IT-WORKS",
+  "live_source_path": "site/how-it-works.html",
+  "archive_dir": "registry/archives/operator-guidance/",
+  "archive_ordinal": "000001",
+  "pre": {
+    "path": "registry/archives/operator-guidance/000001_PRE_A7_SEQ_000041.html",
+    "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "status": "EXACT_BEFORE_LIVE_CHANGE"
+  },
+  "post": {
+    "path": "registry/archives/operator-guidance/000001_POST_A7_SEQ_000041.html",
+    "status": "AWAITING_VALIDATION"
+  },
+  "status": "PRE_CAPTURED_POST_PENDING",
+  "history": "registry/archives/operator-guidance/version-history.jsonl",
+  "restore": "Use numbered PRE/POST as recovery; restore into original site/how-it-works.html through PR; historical CAD content preserved",
+  "original_provider_links_preserved": true,
+  "private_source_data_published": false
+}

@@ -25,6 +25,7 @@ on:
       - "scripts/generate_a7_roadmap.py"
       - "scripts/validate_a7_roadmap.py"
       - "scripts/validate_jp_roadmap_version_control.py"
+      - "scripts/validate_a7_operator_guidance.py"
       - "scripts/validate_a7_governance_debt.py"
       - "scripts/generate_a7_developer_dock.py"
       - "scripts/generate_platform_responsibilities.py"
@@ -117,6 +118,8 @@ jobs:
         run: python scripts/validate_a7_governance_debt.py
       - name: Validate JP single-live-roadmap archival governance
         run: python scripts/validate_jp_roadmap_version_control.py
+      - name: Validate source-backed operator guide and historical preservation
+        run: python scripts/validate_a7_operator_guidance.py
       - name: Rebuild A7 progress from canonical registry
         run: |
           python scripts/generate_a7_roadmap.py --output site/data/a7-roadmap.json --commit-sha "$GITHUB_SHA"
