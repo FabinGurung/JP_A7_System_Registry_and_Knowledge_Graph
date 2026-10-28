@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-29",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000042",
+  "current_closed_sequence": "A7-SEQ-000043",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -278,6 +278,13 @@
       "title": "Dated GitHub Registry, Pages and milestone evidence on the original A7 Roadmap",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Added a source-derived SEQ41 historical workflow evidence panel to existing Roadmap rather than a new task register. It reads one authoritative A7_BOOTSTRAP.json field, links original Registry/Pages/Release GitHub Actions runs and makes independent external HTTP readback explicitly unverified. PR #92 merged at f92c2d599d2d134b709796bedf133f76240dd00a; main Registry #40788448453, Chromium #40788448158 and Pages #40788448147 succeeded. Numbered PRE/POST presentation bundle preserved; no peer, private Drive or provider automation introduced."
+    },
+    {
+      "id": "A7-D39",
+      "stage": "A7-SEQ-000043 · A7-N05 public QA and governance dependencies",
+      "title": "Source-derived public A7 QA counts and dated external non-gates on existing Roadmap",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Preserved public A7 human-QA register (zero recorded entries at source readback) and existing A7 governance debt-boundary ledger as the sole inputs. The existing Roadmap shows aggregate QA counts without case payloads, dated six external non-gate dependencies with original conditions and source SHA-256 provenance. Feature PR #94 merged at 44382d0c0d4919c1f03bf123a32f2fb71084924a; exact feature-main Registry #40790723748, Chromium #40790723682 and Pages #40790723663 succeeded. Existing roadmap and private/peer boundaries preserved; live monitoring and specialist QA separately unverified."
     }
   ],
   "next": [
@@ -320,7 +327,7 @@
       "id": "A7-N05",
       "priority": "P2",
       "title": "Roadmap and authority dashboard with real observations",
-      "state": "A7_DATED_WORKFLOW_EVIDENCE_PANEL_DELIVERED__LIVE_CROSS_REPO_AND_QA_GATED",
+      "state": "A7_PUBLIC_QA_AGGREGATE_AND_DATED_EXTERNAL_GAPS_DELIVERED__LIVE_CROSS_REPO_GATED",
       "done_when": "Show current policy migration stages, provider-confirmed releases, audit gaps and human-QA queue. No stale SHA claimed current. A dated 9-repository status page is delivered; live provider queries and QA queue integration remain."
     },
     {
@@ -413,7 +420,7 @@
     "archive_dir": "registry/archives/roadmap/",
     "manifest": "registry/archives/roadmap/manifest.json",
     "append_only_history": "registry/archives/roadmap/version-history.jsonl",
-    "archive_ordinal": "000003",
+    "archive_ordinal": "000004",
     "release_tag_namespace": "A7_GIT_RELEASE",
     "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
     "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",
