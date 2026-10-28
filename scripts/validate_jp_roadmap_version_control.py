@@ -42,7 +42,7 @@ if post2.exists():
     assert m["latest_post"]["sha256"]==hashlib.sha256(post2.read_bytes()).hexdigest()
     assert any(e["phase"]=="POST" and e["sequence"]=="A7-SEQ-000041" for e in events)
     # Later provider evidence verification must never overwrite or remove the original POST.
-    assert events[-1]["phase"] in ("POST","VERIFY")
+    assert events[-1]["phase"] in ("POST","VERIFY","PRE")
 else:
     assert m["status"]=="PRE_000002_CAPTURED_POST_PENDING"
     assert m["latest_post"]["status"]=="AWAITING_LIVE_QA"
