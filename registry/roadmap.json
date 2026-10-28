@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "roadmap_id": "A7-ROADMAP-20261009",
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
-  "snapshot_date": "2026-10-28",
+  "snapshot_date": "2026-10-29",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000041",
+  "current_closed_sequence": "A7-SEQ-000042",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -271,6 +271,13 @@
       "title": "Current source-first A7 operator workflow in the existing How It Works page; preserve old CAD example",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Additive current seven-step A7-only operator section in existing historical How It Works page, no historical content removed and no peer/Drive writes. PRE archived for roadmap and page before edit. Feature PR #88 merged main 347e174f0b28d6cde793b38de5d01e269ead2e25, Registry #40639134488 and Pages #40639134579 SUCCESS. The first main browser #40639134439 failed intermittently on asynchronous no-JS hash-navigation assertion; timing-only QA correction PR #89 merged at 3a59252187d5f73c85524dd2b4cf223ea2a572c9; exact main Registry #40639475527 and Chromium #40639475532 SUCCESS. Numbered subject POSTs saved after these checks, byte-identical to final source. Final closeout main Registry/Pages must be independently verified. No professional or private-source approvals inferred."
+    },
+    {
+      "id": "A7-D38",
+      "stage": "A7-SEQ-000042 · A7-N05 provider evidence visibility",
+      "title": "Dated GitHub Registry, Pages and milestone evidence on the original A7 Roadmap",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Added a source-derived SEQ41 historical workflow evidence panel to existing Roadmap rather than a new task register. It reads one authoritative A7_BOOTSTRAP.json field, links original Registry/Pages/Release GitHub Actions runs and makes independent external HTTP readback explicitly unverified. PR #92 merged at f92c2d599d2d134b709796bedf133f76240dd00a; main Registry #40788448453, Chromium #40788448158 and Pages #40788448147 succeeded. Numbered PRE/POST presentation bundle preserved; no peer, private Drive or provider automation introduced."
     }
   ],
   "next": [
@@ -313,7 +320,7 @@
       "id": "A7-N05",
       "priority": "P2",
       "title": "Roadmap and authority dashboard with real observations",
-      "state": "A7_SOURCE_DERIVED_ROADMAP_COMPLETE__OTHER_CROSS_REPO_DASHBOARD_GATES_SEPARATE",
+      "state": "A7_DATED_WORKFLOW_EVIDENCE_PANEL_DELIVERED__LIVE_CROSS_REPO_AND_QA_GATED",
       "done_when": "Show current policy migration stages, provider-confirmed releases, audit gaps and human-QA queue. No stale SHA claimed current. A dated 9-repository status page is delivered; live provider queries and QA queue integration remain."
     },
     {
@@ -406,7 +413,7 @@
     "archive_dir": "registry/archives/roadmap/",
     "manifest": "registry/archives/roadmap/manifest.json",
     "append_only_history": "registry/archives/roadmap/version-history.jsonl",
-    "archive_ordinal": "000002",
+    "archive_ordinal": "000003",
     "release_tag_namespace": "A7_GIT_RELEASE",
     "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
     "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",

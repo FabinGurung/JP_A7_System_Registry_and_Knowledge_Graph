@@ -4,7 +4,7 @@
   "subject": "A7 roadmap",
   "live_source_path": "registry/roadmap.json",
   "central_archive_dir": "registry/archives/roadmap/",
-  "archive_ordinal": "000002",
+  "archive_ordinal": "000003",
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "POST_000002_VALIDATED_ARCHIVED",
+  "status": "PRE_000003_CAPTURED_POST_PENDING",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -50,10 +50,9 @@
     "independent_http_body_readback": false
   },
   "latest_pre": {
-    "path": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
-    "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
-    "status": "EXACT_PRE_SAVED",
-    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c"
+    "path": "registry/archives/roadmap/000003_PRE_A7_SEQ_000042.json",
+    "source_commit": "f92c2d599d2d134b709796bedf133f76240dd00a",
+    "status": "EXACT_SOURCE_SAVED_BEFORE_EDIT"
   },
   "latest_post": {
     "path": "registry/archives/roadmap/000002_POST_A7_SEQ_000041.json",
@@ -89,5 +88,6 @@
     "original_manifest_blob": "a51d4948343388d95d309a101b1c7ce9663a81d2",
     "source_path": "registry/archives/roadmap/manifest.json",
     "same_live_path": true
-  }
+  },
+  "seq42_post_expected": "registry/archives/roadmap/000003_POST_A7_SEQ_000042.json"
 }
