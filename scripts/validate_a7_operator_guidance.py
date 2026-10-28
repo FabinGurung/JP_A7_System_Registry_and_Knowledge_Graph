@@ -46,6 +46,9 @@ ba=ROOT/"registry/archives/a7-bootstrap"
 bm=json.loads((ba/"manifest.json").read_text())
 assert bm["live_source_path"]=="A7_BOOTSTRAP.json"
 assert (ROOT/bm["pre_path"]).is_file()
+if bm["archive_ordinal"]=="000002":
+    assert (ROOT/bm["historical_000001"]["pre_path"]).is_file()
+    assert (ROOT/bm["historical_000001"]["post_path"]).is_file()
 if (ROOT/bm["post_path"]).exists():
     assert (ROOT/bm["post_path"]).read_bytes()==(ROOT/"A7_BOOTSTRAP.json").read_bytes()
 print("A7 CURRENT OPERATOR GUIDANCE PASS steps=7 historical_reference_preserved=1 stage="+("POST" if post.exists() else "PRE"))
