@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000040",
+  "current_sequence": "A7-SEQ-000041",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -727,7 +727,7 @@
   },
   "a7_operator_quickstart": {
     "sequence_id": "A7-SEQ-000041",
-    "status": "FEATURE_STAGED_PENDING_QA",
+    "status": "FINAL_CLOSED_PASS",
     "existing_page": "site/how-it-works.html",
     "operator_anchor": "site/how-it-works.html#a7-operator-quickstart",
     "runbook_authority": "A7_READ_FIRST.md",
@@ -735,10 +735,22 @@
     "roadmap_task": "A7-N10",
     "previous_historical_page_preserved": true,
     "operator_PRE": "registry/archives/operator-guidance/000001_PRE_A7_SEQ_000041.html",
-    "operator_POST": "AWAITING_VALIDATION",
+    "operator_POST": "registry/archives/operator-guidance/000001_POST_A7_SEQ_000041.html",
     "roadmap_PRE": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
-    "roadmap_POST": "AWAITING_VALIDATION",
+    "roadmap_POST": "registry/archives/roadmap/000002_POST_A7_SEQ_000041.json",
     "peer_writes": false,
-    "drive_writes": false
+    "drive_writes": false,
+    "feature_pr": 88,
+    "browser_qa_fix_pr": 89,
+    "feature_pages_sha": "347e174f0b28d6cde793b38de5d01e269ead2e25",
+    "feature_main_pages_run": 40639134579,
+    "feature_main_registry_run": 40639134488,
+    "final_precloseout_main_sha": "3a59252187d5f73c85524dd2b4cf223ea2a572c9",
+    "final_precloseout_registry_run": 40639475527,
+    "final_precloseout_chromium_run": 40639475532,
+    "prior_browser_flake_run": 40639134439,
+    "post_snapshot_expected": "snapshot/post-a7-seq-000041-operator-guidance",
+    "final_closeout_ci": "PENDING",
+    "independent_http_body_readback": false
   }
 }

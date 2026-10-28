@@ -1,6 +1,6 @@
 # A7 Roadmap — Git-backed source summary
 
-**Current registered closed sequence:** `A7-SEQ-000040` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
+**Current registered closed sequence:** `A7-SEQ-000041` (recorded in [canonical machine roadmap](../registry/roadmap.json)).
 
 **Generated website:** [L1 A7 Roadmap & Progress](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html) derives its milestones from the checked-in machine roadmap at each Pages build. **Developer history:** [L1 Git-native commits/PRs/Actions](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/history.html). Source versions, CI and deployment status must be verified at GitHub; these Markdown lines are not live provider status.
 
@@ -71,3 +71,9 @@ The old Memory Wall v1.0.0 tag remains pinned to its original SEQ39 SHA (`059b7a
 ## A7-SEQ-000041 — operator guide staged, prior release checks reconciled
 
 The old [How It Works](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/how-it-works.html) is a historical CAD/AAD interaction example. Preserve all original text, links, and owner disclaimers. Add a separate *current A7-only operator quickstart* at `#a7-operator-quickstart`, sourcing A7_READ_FIRST.md and JP version rules, without pretending it is a specialist procedure. A7-N10 stays staged until actual CI and Pages provider readback. Roadmap 000002 PRE and operator HTML 000001 PRE were saved before edits, with POST awaiting validation. SEQ40 final Registry #40603070798, Pages #40603070677 and immutable release check #40603140848 are now recorded instead of PENDING, with no change to its historical archived POST.
+
+## A7-SEQ-000041 — current operator guide and archived POST verified
+
+The historical [A7 How It Works](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/how-it-works.html) page now carries a separate [current seven-step A7 operator quickstart](https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/how-it-works.html#a7-operator-quickstart), preserving the previous CAD/AAD historical example and its source links. The guide points to actual A7 operating contracts and the JP PRE/POST protocol. It is a public reference, not an owner-run engineering test.
+
+Roadmap ordinal **000002** and operator-page ordinal **000001** each retain exact PRE and post-validation byte-identical POST with manifests and append-only event histories in their respective central archives. Feature [PR #88](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/88) merged, exact Pages [#40639134579](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40639134579) succeeded. The first main Chromium run [#40639134439](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40639134439) failed due to a timing-dependent keyboard-hash check; fixed via [PR #89](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/pull/89), then main Registry [#40639475527](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40639475527) and Chromium [#40639475532](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/actions/runs/40639475532) passed. Exact final closeout main CI/Pages must be separately checked. A7-N04 stays peer/read-only HOLD; private A9 Main/Local ACK remains unverified; no Drive or other repository writes.
