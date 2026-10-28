@@ -31,4 +31,16 @@ assert 'd.next_a7.filter(x=>!pinnedIds.has(x.id))' in js
 assert "textContent" in js and "innerHTML" not in js
 assert "21</strong>Last fully closed" not in h
 assert "R&D" not in h and "A9" not in h
+# The numbered POST is an exact archive of every live UI/code path,
+# not a parallel editable registry. PRE retains original Git object identities.
+archive=R/"registry/archives/roadmap-evidence-ui"
+a=json.loads((archive/"000001_PRE_A7_SEQ_000042.json").read_text())
+assert a["subject_id"]=="A7-ROADMAP-EVIDENCE-UI" and a["phase"]=="PRE"
+assert len(a["live_sources"])==5
+post=archive/"000001_POST_A7_SEQ_000042.json"
+if post.exists():
+    z=json.loads(post.read_text())
+    assert z["phase"]=="POST" and z["subject_id"]==a["subject_id"]
+    assert {x["path"] for x in z["live_sources"]}=={x["path"] for x in a["live_sources"]}
+    assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in z["live_sources"])
 print("A7 L1 ROADMAP SOURCE QA PASS closed="+D["current_closed_sequence"])

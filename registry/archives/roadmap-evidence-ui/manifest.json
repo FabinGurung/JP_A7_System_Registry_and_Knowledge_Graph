@@ -13,10 +13,13 @@
   "pre_path": "registry/archives/roadmap-evidence-ui/000001_PRE_A7_SEQ_000042.json",
   "post_path": "registry/archives/roadmap-evidence-ui/000001_POST_A7_SEQ_000042.json",
   "pre_source_commit": "300476b02cf9483a76c692ce23e44fe1738bf6d9",
-  "status": "PRE_CAPTURED_POST_PENDING_PROVIDER_CI",
+  "status": "POST_CAPTURED__SOURCE_BYTE_EQUALITY_TEST_ADDED",
   "history": "registry/archives/roadmap-evidence-ui/version-history.jsonl",
   "restore": "Restore each archived file's bytes into the same live GitHub path via reviewed PR; validate Registry/Chromium/Pages; do not duplicate canonical roadmap",
   "original_provider_url": null,
   "peer_writes": 0,
-  "private_drive_writes": 0
+  "private_drive_writes": 0,
+  "first_feature_registry_run": 40788195590,
+  "first_feature_registry_conclusion": "success",
+  "post_contents_checked_by": "scripts/validate_a7_roadmap.py"
 }
