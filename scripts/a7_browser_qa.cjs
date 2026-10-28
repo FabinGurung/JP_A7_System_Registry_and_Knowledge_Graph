@@ -231,7 +231,10 @@ async function run(){
    assert.equal(await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
    // Keyboard navigation is the real no-JS contract. Avoid a flaky smooth-scrolling mouse-stability gate.
    await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').focus();
-   await staticPage.keyboard.press("Enter");
+   await Promise.all([
+      staticPage.waitForURL(/#extraction-retrieval$/, {timeout:8000}),
+      staticPage.keyboard.press("Enter")
+   ]);
    assert.ok(staticPage.url().endsWith("#extraction-retrieval"));
    pass("no-JavaScript fallback has six functional TOC anchors");
    await staticContext.close();
