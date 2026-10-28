@@ -8,6 +8,47 @@ R=Path(__file__).resolve().parents[1]
 P=R/"registry/roadmap.json"
 # A7-specific website worklist; original source remains complete and audit-visible.
 WORKLIST={"A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
+
+# A7's public human-QA file is the only input here. A count of zero is never a
+# conclusion about private, external, or specialist domain QA.
+def summarize_public_qa(raw, allowed):
+    latest={}
+    entries=0
+    for line in raw.decode("utf-8").splitlines():
+        if not line.strip(): continue
+        record=json.loads(line); entries+=1
+        key=record.get("qa_case_id") or record.get("case_id")
+        status=record.get("status")
+        if not isinstance(key,str) or not key.strip() or status not in allowed:
+            raise ValueError("Invalid A7 public QA ledger record")
+        latest[key]=status
+    active=sum(1 for s in latest.values() if s in ("HUMAN_CONFIRMATION_REQUIRED","AWAITING_HUMAN"))
+    return {"scope":"PUBLIC_A7_REGISTRY_ONLY","records":entries,"cases":len(latest),
+      "active":active,"resolved":sum(s=="RESOLVED" for s in latest.values()),
+      "other_closed":sum(s in ("CANCELLED","SUPERSEDED") for s in latest.values()),
+      "no_records_in_public_source":entries==0}
+
+def governance_projection():
+    qa_path=R/"registry/qa/human-qa-cases.jsonl"
+    vocab=json.loads((R/"registry/authority/vocabularies.json").read_text(encoding="utf-8"))
+    qa_bytes=qa_path.read_bytes()
+    qa=summarize_public_qa(qa_bytes,set(vocab["qa_statuses"]))
+    qa["source_path"]="registry/qa/human-qa-cases.jsonl"
+    qa["source_sha256"]=hashlib.sha256(qa_bytes).hexdigest()
+    debt_path=R/"registry/governance/debt-boundaries.v1.json"
+    db=debt_path.read_bytes(); ledger=json.loads(db)
+    if ledger.get("owner")!="A7_ONLY": raise ValueError("Unexpected debt owner")
+    entries=ledger["external_non_gate_dependencies"]
+    ids=[x["id"] for x in entries]
+    if len(ids)!=len(set(ids)): raise ValueError("Duplicate governance dependency ID")
+    return {"qa":qa,"external": {"source_path":"registry/governance/debt-boundaries.v1.json",
+      "source_sha256":hashlib.sha256(db).hexdigest(),
+      "assessment_date":ledger["assessment_date"],
+      "count":len(entries),
+      "scope":"EXTERNAL_NON_GATE__DATED_NOT_LIVE",
+      "entries":[{"id":x["id"],"status":x["status"],"why_not_closed":x["why_not_closed"],
+        "gate":x["gate"]} for x in entries]}}
+
 def build(commit):
     raw=P.read_bytes()
     reg=json.loads(raw)
@@ -31,7 +72,7 @@ def build(commit):
           "conclusions":ev["conclusions"],
           "independent_http_body_readback":ev["independent_http_body_readback"],
           "historical_not_live":True}
-    return {"verified_a7_provider_evidence":proof,"schema":"a7-roadmap-projection.v0.1","kind":"DERIVED_NOT_AUTHORITATIVE",
+    return {"a7_governance":governance_projection(),"verified_a7_provider_evidence":proof,"schema":"a7-roadmap-projection.v0.1","kind":"DERIVED_NOT_AUTHORITATIVE",
       "owner":"A7_ONLY","source_path":"registry/roadmap.json","source_sha256":hashlib.sha256(raw).hexdigest(),
       "site_build_commit":commit,"current_closed_sequence":reg["current_closed_sequence"],
       "developed":delivered,"next_a7":backlog,"pinned_a7":pinned,

@@ -31,6 +31,25 @@ if(proof&&proof.historical_not_live===true&&/^[0-9a-f]{40}$/.test(proof.verified
  }
  evidenceBox.append(el("small",proof.independent_http_body_readback?"Independent page HTTP readback recorded.":"Independent served-page HTTP readback NOT verified."));
 }else evidenceBox.append(el("p","No verified A7 source-backed GitHub closeout snapshot is available; consult GitHub Actions."));
+// Project only aggregate QA counts and public governance metadata; never render case payloads.
+const govBox=$("roadmapGovernance");govBox.replaceChildren();
+const gov=d.a7_governance;
+if(gov&&gov.qa?.scope==="PUBLIC_A7_REGISTRY_ONLY"&&gov.external?.scope==="EXTERNAL_NON_GATE__DATED_NOT_LIVE"){
+ const q=gov.qa,ext=gov.external;
+ const qaCard=el("article",undefined,"rp-gov-card");
+ qaCard.append(el("h3","Public A7 QA ledger"),el("strong",q.no_records_in_public_source?"No public cases recorded":q.active+" active / "+q.cases+" recorded","rp-gov-total"),
+  el("p",q.no_records_in_public_source?"This public A7 source has no records. No claim is made about private or specialist QA.":"Latest recorded status per case, counted within this A7 file only."),
+  el("small","Source "+q.source_path+" • SHA-256 "+q.source_sha256.slice(0,12)));
+ const debtCard=el("article",undefined,"rp-gov-card");
+ debtCard.append(el("h3","External dependencies"),el("strong",String(ext.count)+" recorded non-gates","rp-gov-total"),
+  el("p","Assessment "+ext.assessment_date+" • historical A7 governance boundary, not live provider statuses."),
+  el("small","Source "+ext.source_path+" • SHA-256 "+ext.source_sha256.slice(0,12)));
+ const list=el("ul",undefined,"rp-gov-list");
+ for(const x of ext.entries){
+  const li=el("li");li.append(el("strong",x.id+" · "+x.status),el("span",x.why_not_closed),el("small","Condition: "+x.gate));list.append(li);
+ }
+ debtCard.append(list);govBox.append(qaCard,debtCard);
+}else govBox.append(el("p","No validated public A7 governance projection. Check the canonical sources."));
 $("roadmapSearch").addEventListener("input",paint);paint();
 const pinnedBox=$("roadmapPinned");pinnedBox.replaceChildren();const pinnedIds=new Set();
 for(const x of d.pinned_a7){
