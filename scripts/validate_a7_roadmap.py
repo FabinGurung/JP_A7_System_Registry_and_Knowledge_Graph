@@ -14,7 +14,8 @@ G=D["a7_governance"]; qa=G["qa"]; ext=G["external"]
 assert qa["scope"]=="PUBLIC_A7_REGISTRY_ONLY"
 assert qa["source_path"]=="registry/qa/human-qa-cases.jsonl"
 assert qa["source_sha256"]==__import__("hashlib").sha256((R/qa["source_path"]).read_bytes()).hexdigest()
-assert qa["no_records_in_public_source"] is True and qa["active"]==qa["cases"]==0
+assert qa["no_records_in_public_source"] is (not (R/qa["source_path"]).read_bytes().strip())
+assert 0 <= qa["active"] <= qa["cases"] <= qa["records"]
 assert ext["scope"]=="EXTERNAL_NON_GATE__DATED_NOT_LIVE"
 assert ext["source_sha256"]==__import__("hashlib").sha256((R/ext["source_path"]).read_bytes()).hexdigest()
 ledger=json.loads((R/ext["source_path"]).read_text())
