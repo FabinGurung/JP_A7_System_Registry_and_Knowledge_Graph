@@ -20,11 +20,11 @@ assert ext["source_sha256"]==__import__("hashlib").sha256((R/ext["source_path"])
 ledger=json.loads((R/ext["source_path"]).read_text())
 assert ext["count"]==len(ledger["external_non_gate_dependencies"])==len(ext["entries"])
 assert all(k in x for x in ext["entries"] for k in ("id","status","why_not_closed","gate"))
-sample=b'{"qa_case_id":"A7-QA-000001","status":"AWAITING_HUMAN"}\\n{"qa_case_id":"A7-QA-000001","status":"RESOLVED"}\\n'
+sample=b'{"qa_case_id":"A7-QA-000001","status":"AWAITING_HUMAN"}\n{"qa_case_id":"A7-QA-000001","status":"RESOLVED"}\n'
 s=summarize_public_qa(sample,{"AWAITING_HUMAN","RESOLVED"})
 assert (s["records"],s["cases"],s["active"],s["resolved"])==(2,1,0,1)
 try:
-    summarize_public_qa(b'{"qa_case_id":"A7-QA-000002","status":"UNKNOWN"}\\n',{"RESOLVED"})
+    summarize_public_qa(b'{"qa_case_id":"A7-QA-000002","status":"UNKNOWN"}\n',{"RESOLVED"})
 except ValueError: pass
 else: raise AssertionError("Unknown QA status was accepted")
 
