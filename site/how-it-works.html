@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eff8fc">
-<meta name="description" content="Historical A7 interaction example; owning repositories define their own executable workflows.">
-<title>How It Works · A7 AI-Aided Product Standard</title>
+<meta name="description" content="A7 current seven-step source-evidence operator workflow; historical CAD/AAD interaction example preserved separately.">
+<title>How It Works · A7 Operator Workflow and Historical Product Reference</title>
 <link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/sky-theme.css">
 <style>
 .guide-shell{max-width:1110px;margin:0 auto;padding:25px 18px 60px;color:#214052}
@@ -26,13 +26,43 @@
 .guide-outline{list-style:none;padding:0;display:grid;gap:10px}
 .guide-outline li{background:white;border:1px solid #cce0e9;border-radius:12px;padding:14px 16px}
 .guide-outline strong{display:block;margin-bottom:4px}
-@media(max-width:600px){.guide-hero{padding:21px}}
+.a7-operator-current{padding:24px;margin:0 0 25px;border:1px solid #b9dbe8;border-radius:19px;background:linear-gradient(120deg,#eefaff,#f8fbff)}
+.a7-oper-lead h2{font-size:clamp(25px,3.1vw,37px);line-height:1.15;margin:8px 0;color:#27597a}
+.a7-oper-lead p{color:#436b82;font-size:14px;line-height:1.6;max-width:760px}
+.a7-oper-jumps{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.a7-oper-jumps a{display:inline-block;background:white;border:1px solid #b9dae8;border-radius:9px;padding:8px 11px;text-decoration:none;font-size:12px;font-weight:750}
+.a7-oper-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:11px}
+.a7-oper-step{background:#fff;border:1px solid #d0e2ed;border-radius:12px;padding:14px;min-width:0}
+.a7-oper-step span{font-size:11px;font-weight:800;letter-spacing:.07em;color:#467f9c}
+.a7-oper-step h3{font-size:16px;color:#295979;line-height:1.33;margin:8px 0}
+.a7-oper-step p{font-size:12px;color:#536e82;line-height:1.6;margin:0}
+.a7-oper-boundary{margin-top:13px;padding:13px 16px;background:#fff;border-left:3px solid #427da1;border-radius:9px;font-size:12px;line-height:1.6;color:#3e627c}
+@media(max-width:600px){.guide-hero{padding:21px}.a7-operator-current{padding:16px}.a7-oper-grid{grid-template-columns:1fr}}
 </style><link rel="stylesheet" href="assets/a7-unified-theme.css">
 <link rel="stylesheet" href="assets/a7-site-shell.css">
 <script src="assets/a7-site-shell.js" defer></script>
 </head>
 <body><div class="noise"></div><header class="topbar"><a class="brand" href="./" aria-label="A7 home"><span class="brand-mark">A7</span><span><strong>System Registry</strong><small>Knowledge Graph & Routing</small></span></a><nav class="top-actions" aria-label="Primary navigation"><a class="ws-pinned-link" href="./">Home</a><a class="ws-pinned-link" href="control-towers.html">Control Towers</a><a class="ws-pinned-link" href="roadmap.html">Roadmap</a></nav></header>
-<main class="guide-shell"><aside role="note" style="border:1px solid #c8d5eb;background:#f4f8ff;border-radius:12px;padding:15px 18px;margin-bottom:18px;color:#345370;line-height:1.6"><strong>Historical how-to reference — clarified by the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/decisions/ai-aided-guide-ownership-resolution.v0.2.json">v0.2 ownership decision</a>.</strong> A7 is the read-only service catalogue and routing index. It does not own or edit specialist AI-Aided Drawing templates. The canonical AAD template is owned by the <a href="https://github.com/FabinGurung/JP_Computer-Aided-Drawings/tree/main/governance/aad">CAD/AAD repository</a>. For current system navigation, use the <a href="./">Galactic Atlas</a>.</aside><div class="guide-top"><span class="guide-kicker">Historical shared design guidance · owner-specific contracts prevail</span><span class="guide-status">Historical v0.1 · CAD workflow owned by CAD</span></div>
+<main class="guide-shell"><section class="a7-operator-current" id="a7-operator-quickstart" aria-labelledby="a7OperatorTitle">
+ <div class="a7-oper-lead"><span class="guide-kicker">A7 CURRENT OPERATOR / SOURCE-FIRST WORKFLOW</span><h2 id="a7OperatorTitle">From request to verifiable source.</h2>
+ <p>This is A7’s current navigation and evidence procedure, distinct from the historical CAD/AAD product example below. A7 never takes ownership of peer engines, original Sheets or private projects.</p>
+ <nav class="a7-oper-jumps" aria-label="Current A7 operator references">
+  <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A7_READ_FIRST.md">Current A7 operating contract</a>
+  <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/docs/JP_A7_VERSION_CONTROL_READ_FIRST.md">JP version control</a>
+  <a href="roadmap.html#roadmap-pinned">Pinned tasks</a>
+  <a href="memory-wall.html#extraction-retrieval">Evidence extraction guide</a>
+ </nav></div>
+ <div class="a7-oper-grid" aria-label="Seven current A7 operator steps">
+ <article class="a7-oper-step"><span>01 · RESOLVE</span><h3>Identify the owning source</h3><p>Start with A7_BOOTSTRAP.json and A7_READ_FIRST.md, resolve the stable ID and fact-class authority; A7 indexes, but owning modules hold the facts.</p></article>
+<article class="a7-oper-step"><span>02 · CHECK</span><h3>Read original provider evidence</h3><p>Open the owner’s original record and revision. Preserve provider links, original messages and permissions; unknown evidence stays unknown.</p></article>
+<article class="a7-oper-step"><span>03 · PRE</span><h3>Snapshot before making changes</h3><p>Keep one live file ID per subject. Save an enumerated PRE in that subject’s central archive and record restoration instructions.</p></article>
+<article class="a7-oper-step"><span>04 · EDIT</span><h3>Change the declared authority</h3><p>Humans edit owner Sheets; A7 edits only its own Git source. Never change generated Pages, CSV, JSON or Excel to override a Sheet.</p></article>
+<article class="a7-oper-step"><span>05 · TEST</span><h3>Separate evidence stages</h3><p>Distinguish prepared commit, executed offline tests, GitHub Actions run, deployed Pages and any independent served-page verification.</p></article>
+<article class="a7-oper-step"><span>06 · POST</span><h3>Read back and preserve</h3><p>After validation, snapshot POST and update the manifest plus append-only version history with changes, why, source evidence and rollback.</p></article>
+<article class="a7-oper-step"><span>07 · HOLD</span><h3>Do not invent approvals</h3><p>Open a domain-owner gate for missing engineering or private-library evidence. The historical Main/Local ACK remains open.</p></article>
+ </div>
+ <div class="a7-oper-boundary" role="note"><strong>Boundary:</strong> A7 sources and policies are versioned in Git. Human-owned Sheets and original files retain their independent authority. A7 only reports outcomes supported by the owning provider and validated workflow; a green Pages deployment never grants engineering approval. <a href="developer-dock.html">Developer tools are in Developer Dock</a>.</div>
+ </section><aside role="note" style="border:1px solid #c8d5eb;background:#f4f8ff;border-radius:12px;padding:15px 18px;margin-bottom:18px;color:#345370;line-height:1.6"><strong>Historical how-to reference — clarified by the <a href="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/decisions/ai-aided-guide-ownership-resolution.v0.2.json">v0.2 ownership decision</a>.</strong> A7 is the read-only service catalogue and routing index. It does not own or edit specialist AI-Aided Drawing templates. The canonical AAD template is owned by the <a href="https://github.com/FabinGurung/JP_Computer-Aided-Drawings/tree/main/governance/aad">CAD/AAD repository</a>. For current system navigation, use the <a href="./">Galactic Atlas</a>.</aside><div class="guide-top"><span class="guide-kicker">Historical shared design guidance · owner-specific contracts prevail</span><span class="guide-status">Historical v0.1 · CAD workflow owned by CAD</span></div>
 <section class="guide-hero"><div class="guide-kicker">Start here</div><h1>Tell us what you need.<br>Explore what the engine can verify.</h1><p>Explain your objective in ordinary language. The AI interprets what you mean and checks available sources. The owning software then performs calculations and checks. You get a clear, clickable result, not a wall of JSON, prompts or developer instructions.</p>
 <div class="guide-buttons"><a href="https://fabingurung.github.io/JP_Computer-Aided-Drawings/cad/brief/">Try CAD language → 3D</a><a class="secondary" href="#how">See the 7-step process</a></div>
 </section>

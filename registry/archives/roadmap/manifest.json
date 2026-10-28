@@ -4,7 +4,7 @@
   "subject": "A7 roadmap",
   "live_source_path": "registry/roadmap.json",
   "central_archive_dir": "registry/archives/roadmap/",
-  "archive_ordinal": "000001",
+  "archive_ordinal": "000002",
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "POST_VALIDATED_ARCHIVED",
+  "status": "PRE_000002_CAPTURED_POST_PENDING",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -40,5 +40,22 @@
   ],
   "no_private_data": true,
   "restoration_validation": "RESTORE_INTO_SAME_LIVE_PATH_AND_ID__REVALIDATE_SHA_AND_PROVIDER_READBACK",
-  "final_closeout_checks": "PENDING_FINAL_MAIN_WORKFLOWS"
+  "final_closeout_checks": {
+    "state": "VERIFIED",
+    "final_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "registry_run": 40603070798,
+    "pages_run": 40603070677,
+    "release_preservation_run": 40603140848,
+    "provider_readback": "GITHUB_ACTIONS_SUCCESS",
+    "independent_http_body_readback": false
+  },
+  "latest_pre": {
+    "path": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
+    "source_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "status": "EXACT_PRE_SAVED"
+  },
+  "latest_post": {
+    "path": "registry/archives/roadmap/000002_POST_A7_SEQ_000041.json",
+    "status": "AWAITING_LIVE_QA"
+  }
 }

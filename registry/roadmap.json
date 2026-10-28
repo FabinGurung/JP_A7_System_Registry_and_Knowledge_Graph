@@ -264,6 +264,13 @@
       "title": "Pinned A7 work references and single-live-file PRE/POST archive",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Original populated roadmap unchanged as live source ID A7-ROADMAP-20261009. Three existing task IDs pinned without row duplication. Numbered PRE saved before edits; following Registry #40602323919, Pages #40602323693 and Chromium #40602324062 SUCCESS at feature main 4f432fb95e6abca3f9f103789d36b0c1ff7afcd4, POST saved byte-identically from closed canonical source. Manifest/history record readback and restoration. Sheet/notebook/private data and peer sources unchanged. Final closeout provider CI/Pages must be separately verified."
+    },
+    {
+      "id": "A7-D37",
+      "stage": "A7-SEQ-000041 · Operator quickstart and version-control debt closure",
+      "title": "Current source-first A7 operator workflow in the existing How It Works page; preserve old CAD example",
+      "status": "FEATURE_STAGED_PENDING_QA",
+      "detail": "Adds 7-step A7-only guide and link to actual source policies, not a new owner or second page. Dedicated PRE snapshots for roadmap ordinal 000002 and operator page ordinal 000001. Historical SEQ40 final provider statuses reconciled in A7 manifest; POST pending actual live QA and deployment. No external source writes."
     }
   ],
   "next": [
@@ -334,7 +341,7 @@
       "id": "A7-N10",
       "priority": "P2",
       "title": "Galaxy sectors, Developer Dock and operator guidance",
-      "state": "ARCS_SECTOR_DONE__DEVELOPER_DOCK_DELIVERED__OPERATOR_GUIDANCE_SEPARATE",
+      "state": "ARCS_AND_DEVELOPER_DOCK_DELIVERED__A7_OPERATOR_GUIDE_FEATURE_STAGED",
       "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
     },
     {
@@ -399,7 +406,7 @@
     "archive_dir": "registry/archives/roadmap/",
     "manifest": "registry/archives/roadmap/manifest.json",
     "append_only_history": "registry/archives/roadmap/version-history.jsonl",
-    "archive_ordinal": "000001",
+    "archive_ordinal": "000002",
     "release_tag_namespace": "A7_GIT_RELEASE",
     "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
     "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",

@@ -21,12 +21,26 @@ assert len(events)==len(set(x["event_id"] for x in events))
 assert events[0]["phase"]=="PRE" and all(x["subject_id"]==s["roadmap_id"] for x in events)
 assert all("why" in x and "evidence" in x and "validation" in x and "restoration" in x for x in events)
 post=a/"000001_POST_A7_SEQ_000040.json"
-if post.exists():
- assert m["status"]=="POST_VALIDATED_ARCHIVED" and post.read_bytes()==live.read_bytes()
- assert m["post"]["status"]=="PASS_AFTER_VALIDATION"
- assert m["post"]["sha256"]==hashlib.sha256(live.read_bytes()).hexdigest()
- assert events[-1]["phase"]=="POST" and events[-1]["validation"]=="CI_FEATURE_SUCCESS_AND_SOURCE_BYTE_READBACK"
- assert events[-1]["sha256"]==m["post"]["sha256"]
+assert post.is_file()
+assert m["post"]["status"]=="PASS_AFTER_VALIDATION"
+assert m["post"]["sha256"]==hashlib.sha256(post.read_bytes()).hexdigest()
+assert m["final_closeout_checks"]["state"]=="VERIFIED"
+assert m["final_closeout_checks"]["final_commit"]=="f690a94e5cafcc874ed7c2d9fdd10b21b3099da2"
+assert m["final_closeout_checks"]["registry_run"]==40603070798
+assert m["final_closeout_checks"]["pages_run"]==40603070677
+pre2=a/"000002_PRE_A7_SEQ_000041.json"
+assert pre2.is_file() and pre2.read_bytes()==post.read_bytes()
+assert m["archive_ordinal"]=="000002"
+assert m["latest_pre"]["path"]=="registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json"
+assert [e["phase"] for e in events][:2]==["PRE","POST"]
+assert events[2]["phase"]=="VERIFY" and events[3]["phase"]=="PRE"
+post2=a/"000002_POST_A7_SEQ_000041.json"
+if post2.exists():
+    assert m["status"]=="POST_000002_VALIDATED_ARCHIVED"
+    assert post2.read_bytes()==live.read_bytes()
+    assert m["latest_post"]["sha256"]==hashlib.sha256(post2.read_bytes()).hexdigest()
+    assert events[-1]["phase"]=="POST" and events[-1]["sequence"]=="A7-SEQ-000041"
 else:
- assert m["status"]=="PRE_CAPTURED_POST_PENDING" and m["post"]["status"]=="AWAITING_VALIDATION"
-print("JP A7 ROADMAP ARCHIVE PASS stage="+("POST" if post.exists() else "PRE")+" single_live_id=1 task_refs=3")
+    assert m["status"]=="PRE_000002_CAPTURED_POST_PENDING"
+    assert m["latest_post"]["status"]=="AWAITING_LIVE_QA"
+print("JP A7 ROADMAP ARCHIVE PASS latest_stage="+("POST" if post2.exists() else "PRE")+" live_id=1 task_refs=3 previous_history_preserved=1")

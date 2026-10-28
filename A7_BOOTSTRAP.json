@@ -719,7 +719,26 @@
     "main_browser_run": 40602324062,
     "post_sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c",
     "post_snapshot_expected": "snapshot/post-a7-seq-000040-roadmap-version-control",
-    "final_closeout_ci": "PENDING",
-    "historical_private_ack_closed": false
+    "final_closeout_ci": "PASS_PROVIDER_VERIFIED",
+    "historical_private_ack_closed": false,
+    "final_closeout_registry_run": 40603070798,
+    "final_closeout_pages_run": 40603070677,
+    "final_release_immutability_run": 40603140848
+  },
+  "a7_operator_quickstart": {
+    "sequence_id": "A7-SEQ-000041",
+    "status": "FEATURE_STAGED_PENDING_QA",
+    "existing_page": "site/how-it-works.html",
+    "operator_anchor": "site/how-it-works.html#a7-operator-quickstart",
+    "runbook_authority": "A7_READ_FIRST.md",
+    "steps": 7,
+    "roadmap_task": "A7-N10",
+    "previous_historical_page_preserved": true,
+    "operator_PRE": "registry/archives/operator-guidance/000001_PRE_A7_SEQ_000041.html",
+    "operator_POST": "AWAITING_VALIDATION",
+    "roadmap_PRE": "registry/archives/roadmap/000002_PRE_A7_SEQ_000041.json",
+    "roadmap_POST": "AWAITING_VALIDATION",
+    "peer_writes": false,
+    "drive_writes": false
   }
 }

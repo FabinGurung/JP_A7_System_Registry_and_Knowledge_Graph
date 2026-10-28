@@ -85,6 +85,12 @@ async function inspect(page,kind){
   pass(kind+": L0 navigation → L1 Git timeline, filters, source commit links");
   const historyShot=out+"/history-"+kind+".png";
   await page.screenshot({path:historyShot,fullPage:true});report.screenshots.push(historyShot);
+  await page.goto(URL+"how-it-works.html#a7-operator-quickstart",{waitUntil:"load"});
+  assert.equal(await page.locator("#a7-operator-quickstart .a7-oper-step").count(),7);
+  assert.equal(await page.locator('#a7-operator-quickstart a[href="roadmap.html#roadmap-pinned"]').count(),1);
+  assert.match(await page.locator("main.guide-shell").textContent(),/Historical how-to reference/);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+2),"Operator guide must fit mobile viewport");
+  pass(kind+": current A7 operator 7-step guide, preserved historical reference, mobile fit");
   await page.goto(URL+"roadmap.html",{waitUntil:"load"});
   await page.locator("#roadmapDeveloped .rp-item").first().waitFor();
   assert.ok((await page.locator("#roadmapDeveloped .rp-item").count())>=20);

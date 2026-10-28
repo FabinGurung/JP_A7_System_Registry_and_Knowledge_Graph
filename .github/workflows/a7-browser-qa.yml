@@ -8,6 +8,7 @@ on:
     paths:
       - "site/**"
       - "scripts/a7_browser_qa.cjs"
+      - "scripts/validate_a7_operator_guidance.py"
       - "registry/curations/memory-ui-vocabulary.v0.1.json"
       - "registry/curations/memory-storage-architecture.v0.1.json"
       - "scripts/generate_memory_storage_architecture.py"
@@ -92,6 +93,8 @@ jobs:
           python scripts/generate_resource_navigator.py --output site/data/resource-navigator.json --commit-sha "$GITHUB_SHA"
           python scripts/validate_resource_navigator.py
           node --check site/assets/resource-navigator.js
+      - name: Validate operator and historical reference before Chromium
+        run: python scripts/validate_a7_operator_guidance.py
       - name: Install isolated Chromium for browser and viewport checks
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1
