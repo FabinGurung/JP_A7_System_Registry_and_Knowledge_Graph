@@ -1,0 +1,47 @@
+{
+  "schema": "jp-pre-post-git-ref/1",
+  "subject_id": "A7-MEM-LIVE-VERSION-009",
+  "sequence": "A7-SEQ-000046",
+  "phase": "PRE",
+  "live_source_commit": "150c396c5eed36e53775fe1e0ec589198599a2dc",
+  "snapshot_branch": "snapshot/pre-a7-seq-000046-permanent-live-ids",
+  "new_poster_source_initial_state": "NOT_PRESENT",
+  "sources": [
+    {
+      "path": "registry/curations/memory-wall-contents.v0.1.json",
+      "git_blob_sha": "7ffae24ff116989ac03b53c06d66e71f816314ba",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/registry/curations/memory-wall-contents.v0.1.json"
+    },
+    {
+      "path": "site/memory-wall.html",
+      "git_blob_sha": "95395fb3cb0f81ad6bf4e38e968d3d383b92ee9b",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/site/memory-wall.html"
+    },
+    {
+      "path": "scripts/generate_memory_extraction_guidance.py",
+      "git_blob_sha": "0b016629d4005576c5b4c138ecbaa47f4e9555d9",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/scripts/generate_memory_extraction_guidance.py"
+    },
+    {
+      "path": "scripts/validate_memory_extraction_guidance.py",
+      "git_blob_sha": "894fbe78a52f020e677d276b80451a2e2e6253a7",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/scripts/validate_memory_extraction_guidance.py"
+    },
+    {
+      "path": "scripts/validate_memory_wall_published_site.py",
+      "git_blob_sha": "b52a620c9ecb2a64616760b0fa0ab464e28fecfe",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/scripts/validate_memory_wall_published_site.py"
+    },
+    {
+      "path": "scripts/a7_browser_qa.cjs",
+      "git_blob_sha": "70067f50de4538689c8ab6dab08a7534df400226",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/scripts/a7_browser_qa.cjs"
+    },
+    {
+      "path": "docs/MEMORY_WALL_READ_FIRST.md",
+      "git_blob_sha": "29cde9fd06a22d937d89de003a04f7c3b8487075",
+      "original_url": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/150c396c5eed36e53775fe1e0ec589198599a2dc/docs/MEMORY_WALL_READ_FIRST.md"
+    }
+  ],
+  "restoration": "Restore selected original source blob from immutable pre-branch back to SAME live path by PR; do not replace IDs or change peer/Drive originals."
+}

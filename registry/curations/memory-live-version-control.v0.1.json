@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "collection_id": "A7-MEM-LIVE-VERSION-009",
+  "sequence_id": "A7-SEQ-000046",
+  "collection_number": 7,
+  "title": "Permanent live IDs & version control",
+  "subtitle": "One live identity. Numbered archives. Restore in place.",
+  "public_safe": true,
+  "read_only": true,
+  "source_scope": "A7_PUBLIC_POLICY_ONLY__NO_DRIVE_OR_COLAB_WRITES",
+  "not_implemented_integration": true,
+  "headline": "ONE LIVE FILE ID. EVERY GOVERNED REVISION REMEMBERED.",
+  "motto": "ARCHIVE THE VERSION. KEEP THE LIVE ID.",
+  "core_rule": "For each subject governed by the JP numbered-archive policy, find and reuse its original populated live file. Never create a replacement live source during routine revisions. Before a meaningful change save an enumerated PRE copy, edit the SAME live file ID, validate and provider-read back the original, then save an enumerated POST copy. Archive copies have their own IDs and versioned filenames; the original live ID stays stable.",
+  "filename_rule": "Rename only archive copies to carry ordinal and PRE/POST. Do not rename the original or manufacture a new live ID as a version number.",
+  "sequence_rule": "Each owning source maintains its own monotonically enumerated snapshot ordinal. Sheet versions, Google Docs revisions, Colab notebook snapshots, Git commits/tags, A7 sequences, and software releases are independent namespaces. Never infer synchronized version numbers.",
+  "workflow": [
+    {
+      "id": "01",
+      "label": "RESOLVE LIVE",
+      "detail": "Identify the owning project, subject, provider, exact original file ID, authority and access permissions."
+    },
+    {
+      "id": "02",
+      "label": "READ BACK",
+      "detail": "Fetch the populated current original; record provider ID, revision, filename, original link and source hash where possible."
+    },
+    {
+      "id": "03",
+      "label": "NUMBER + PRE",
+      "detail": "Choose the next ordinal in that subject's dedicated archive. Create a PRE copy with a versioned filename BEFORE changing the original."
+    },
+    {
+      "id": "04",
+      "label": "EDIT ORIGINAL",
+      "detail": "Apply authorized edits to the SAME live provider object ID or governed Git source path; never switch all links to a duplicate."
+    },
+    {
+      "id": "05",
+      "label": "VALIDATE + READBACK",
+      "detail": "Run relevant owner-specific checks and read back the same provider ID/revision. Report failures without claiming approval."
+    },
+    {
+      "id": "06",
+      "label": "NUMBER + POST",
+      "detail": "After checks, create the matching ordinal POST copy. Verify POST content corresponds to the validated live state."
+    },
+    {
+      "id": "07",
+      "label": "MANIFEST + RESTORE",
+      "detail": "Append what/why/source IDs/revisions/links/evidence/checks/uncertainties to version-history. Restore older content INTO original live ID when authorized."
+    }
+  ],
+  "source_types": [
+    {
+      "name": "Google Docs",
+      "live": "Original Google document ID + URL",
+      "archive": "Separate named Google Doc copies: 000001_PRE, 000001_POST, etc.",
+      "qualification": "Google's native revision history also exists; archive copies do not supersede the original."
+    },
+    {
+      "name": "Google Colab notebook",
+      "live": "Original notebook Drive file ID, .ipynb or notebook URL",
+      "archive": "Numbered .ipynb/notebook copies in that subject's central archive",
+      "qualification": "Keep runnable code/cells in original notebook; distinguish notebook-copy ordinal from a Git code release."
+    },
+    {
+      "name": "Google Sheets",
+      "live": "Original spreadsheet file ID, tabs/ranges and native revision",
+      "archive": "Numbered whole-workbook PRE/POST copies when required by owner policy",
+      "qualification": "Humans continue editing original Sheets. Never replace live cells with CSV or website output."
+    },
+    {
+      "name": "Excel / PDF / CAD / other Drive files",
+      "live": "Original provider file ID plus appropriate revision/hash",
+      "archive": "Enumerated complete copies in dedicated archive with extension retained",
+      "qualification": "File conversion may lose semantics; keep provider permissions and domain-specific approval gates."
+    },
+    {
+      "name": "GitHub code / JSON / website",
+      "live": "Single canonical repository path and branch (Git commits are immutable identities)",
+      "archive": "Annotated commit/branch PRE and validated POST refs plus manifest/history as required",
+      "qualification": "Git does not have Google Drive file IDs. Never treat a new Git commit as a new separate live source or require a Drive duplicate for every commit."
+    }
+  ],
+  "archive_example": [
+    "PROJECT / REPORT (LIVE FILE ID: unchanged)",
+    "  000001_PRE_REPORT (archive copy ID distinct)",
+    "  000001_POST_REPORT (archive copy ID distinct)",
+    "  000002_PRE_REPORT (archive copy ID distinct)",
+    "  000002_POST_REPORT (archive copy ID distinct)",
+    "  manifest.json · version-history.jsonl"
+  ],
+  "audit_fields": [
+    "subject/source ID and owner",
+    "original live provider ID and URL",
+    "PRE/POST ordinal and archive copy IDs",
+    "source revision and hash or commit",
+    "what changed and why",
+    "source message/evidence link when available",
+    "validation and provider readback",
+    "restoration path to SAME original ID",
+    "unverified status and approval/HOLD"
+  ],
+  "safety": "Applies to subjects whose owning A7/A9 policy requires enumerated archival. Do not create unbounded duplicate copies for unrelated Git commits, change Google document IDs, destroy revisions, expose private file IDs on public Pages, override original access controls, or claim cross-provider automation is deployed. Where provider-copy semantics differ, record the method and any limitation instead of asserting an exact replica.",
+  "implementation": "REFERENCE_ONLY_NOT_EXECUTED_ON_GOOGLE_PROVIDER",
+  "originals_preserved": true,
+  "derived_presentation_non_authoritative": true
+}

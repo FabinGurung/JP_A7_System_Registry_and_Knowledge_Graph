@@ -16,8 +16,10 @@ def build(commit_sha):
         return {**data,"site_build_commit":commit_sha,"source_path":"registry/curations/"+filename,"source_sha256":hashlib.sha256(raw).hexdigest(),"kind":"NON_AUTHORITATIVE_PUBLIC_GUIDANCE"}
     toc = derive("memory-wall-contents.v0.1.json","manifest_id","A7-MEM-WALL-CONTENTS-001")
     guide = derive("memory-extraction-retrieval.v0.1.json","collection_id","A7-MEM-EXTRACTION-008")
-    assert len(toc["collections"])==6 and len(guide["formats"])==17
-    return toc,guide
+    assert len(toc["collections"])==7 and len(guide["formats"])==17
+    policy = derive("memory-live-version-control.v0.1.json","collection_id","A7-MEM-LIVE-VERSION-009")
+    assert len(policy["workflow"])==7 and len(policy["source_types"])==5
+    return toc,guide,policy
 
 if __name__ == "__main__":
     a=argparse.ArgumentParser()
@@ -26,7 +28,7 @@ if __name__ == "__main__":
     args=a.parse_args()
     dest=Path(args.output_dir)
     dest.mkdir(parents=True,exist_ok=True)
-    toc,guide=build(args.commit_sha)
-    for filename,doc in [("memory-wall-contents.json",toc),("memory-extraction-retrieval.json",guide)]:
+    toc,guide,policy=build(args.commit_sha)
+    for filename,doc in [("memory-wall-contents.json",toc),("memory-extraction-retrieval.json",guide),("memory-live-version-control.json",policy)]:
         (dest/filename).write_text(json.dumps(doc,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("A7 MEMORY WALL CONTENTS AND EXTRACTION GUIDANCE PASS collections=6 file_families=17")
+    print("A7 MEMORY WALL CONTENTS AND EXTRACTION GUIDANCE PASS collections=7 file_families=17")

@@ -21,7 +21,7 @@ async function inspect(page,kind){
   assert.equal(await page.locator(".star-node").count(),9);
   pass(kind+": nine source-backed stations");
   assert.equal(await page.locator('aside.memory-wall-shortcut a[href="memory-wall.html#memory-wall-contents"]').count(),1,"Homepage must directly expose Memory Wall contents");
-  pass(kind+": L0 visibly links directly to six-chapter Memory Wall contents");
+  pass(kind+": L0 visibly links directly to seven-chapter Memory Wall contents");
 
   const start=await page.locator("#arc04Count").textContent();
   assert.match(start,/0 proposals shown/);
@@ -163,18 +163,18 @@ async function inspect(page,kind){
   assert.match(await page.locator("#storageArchStatus").textContent(),/versioned guidance, not proof/i);
   pass(kind+": Collection 05 seven public-safe format roles, provider boundary and original four collections");
   await page.locator("#mwContentsList .mw-toc-card").nth(5).waitFor({timeout:15000});
-  assert.equal(await page.locator("#mwContentsList .mw-toc-card").count(),6);
+  assert.equal(await page.locator("#mwContentsList .mw-toc-card").count(),7);
   assert.deepEqual(await page.locator("#mwContentsList .mw-toc-card").evaluateAll(links=>links.map(x=>x.getAttribute("href"))),
-    ["#posters","#visualization-reminders","#platform-role-board","#interface-vocabulary","#storage-only-architecture","#extraction-retrieval"]);
+    ["#posters","#visualization-reminders","#platform-role-board","#interface-vocabulary","#storage-only-architecture","#extraction-retrieval","#live-file-version-control"]);
   await page.locator('#mwContentsList a[href="#extraction-retrieval"]').click();
   assert.ok(page.url().endsWith("#extraction-retrieval"),"TOC deep link must navigate to Collection 06");
   await page.locator('#mwContentsList a[href="#posters"]').click();
   assert.ok(page.url().endsWith("#posters"),"TOC deep link must navigate to Collection 01");
-  pass(kind+": six canonical linked chapter anchors navigate to the original sections");
+  pass(kind+": seven canonical linked chapter anchors navigate to the original sections");
 
   assert.match(await page.locator("#mwContentsList .mw-toc-card").first().textContent(),/Developer Learning Toolkit/);
   assert.match(await page.locator("#board-title").textContent(),/Developer Learning Toolkit/);
-  assert.equal(await page.locator(".mw-chapter-return a").count(),5);
+  assert.equal(await page.locator(".mw-chapter-return a").count(),7);
   assert.equal(await page.locator(".mw-format-card[open]").count(),0);
 
   assert.equal(await page.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
@@ -197,7 +197,13 @@ async function inspect(page,kind){
   await page.locator("#mwFormatGroup").selectOption("ALL");
   assert.equal(await page.locator("#mwFormatGrid .mw-format-card").count(),17);
   assert.match(await page.locator("#mwExtractionStatus").textContent(),/NO_EXTERNAL_FILES_FETCHED|no private ingestion/);
-  pass(kind+": six-link Memory Wall contents, Collection 06 native format search, 7 steps, 18 provenance fields");
+  await page.locator("#mwLiveVcSteps li").nth(6).waitFor({timeout:15000});
+  assert.equal(await page.locator("#mwLiveVcSteps li").count(),7);
+  assert.equal(await page.locator("#mwLiveVcTypes article").count(),5);
+  assert.match(await page.locator("#mwLiveVcTitle").textContent(),/One live ID/);
+  await page.locator('#mwContentsList a[href="#live-file-version-control"]').click();
+  assert.ok(page.url().endsWith("#live-file-version-control"));
+  pass(kind+": seven-link Memory Wall contents, Collection 06 native format search, 7 steps, 18 provenance fields");
   const extractionShot=out+"/memory-extraction-"+kind+".png";
   await page.screenshot({path:extractionShot,fullPage:true});report.screenshots.push(extractionShot);
   const storageShot=out+"/memory-storage-"+kind+".png";
@@ -228,7 +234,7 @@ async function run(){
    const staticContext=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false,reducedMotion:"reduce"});
    const staticPage=await staticContext.newPage();
    await staticPage.goto(URL+"memory-wall.html#memory-wall-contents",{waitUntil:"load"});
-   assert.equal(await staticPage.locator("#mwContentsList .mw-toc-card").count(),6);
+   assert.equal(await staticPage.locator("#mwContentsList .mw-toc-card").count(),7);
    assert.equal(await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
    // Keyboard navigation is the real no-JS contract. Avoid a flaky smooth-scrolling mouse-stability gate.
    await staticPage.locator('#mwContentsList a[href="#extraction-retrieval"]').focus();
@@ -237,7 +243,7 @@ async function run(){
       staticPage.keyboard.press("Enter")
    ]);
    assert.ok(staticPage.url().endsWith("#extraction-retrieval"));
-   pass("no-JavaScript fallback has six functional TOC anchors");
+   pass("no-JavaScript fallback has seven functional TOC anchors");
    await staticContext.close();
    assert.equal(report.checks.filter(x=>x.status==="FAIL").length,0,"Unexpected page errors");
    report.status="PASS";console.log("A7 REAL CHROMIUM QA PASS");

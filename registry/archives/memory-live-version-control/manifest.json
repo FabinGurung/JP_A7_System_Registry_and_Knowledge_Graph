@@ -1,0 +1,18 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-MEM-LIVE-VERSION-009",
+  "source": "registry/curations/memory-live-version-control.v0.1.json",
+  "archive_ordinal": "000001",
+  "pre_path": "registry/archives/memory-live-version-control/000001_PRE_A7_SEQ_000046.json",
+  "post_path": "registry/archives/memory-live-version-control/000001_POST_A7_SEQ_000046.json",
+  "pre_source_commit": "150c396c5eed36e53775fe1e0ec589198599a2dc",
+  "post_source_commit": "d5db6583e3b3550f81cc593448be1fa904cce3ad",
+  "post_qa": {
+    "registry": 40826979865,
+    "browser": 40826979869
+  },
+  "status": "POST_CAPTURED_FEATURE_CI_SUCCESS__MAIN_PENDING",
+  "original_ids_preserved": true,
+  "independent_pages_http_unverified": true,
+  "history": "registry/archives/memory-live-version-control/version-history.jsonl"
+}
