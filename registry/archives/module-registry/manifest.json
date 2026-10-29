@@ -1,0 +1,17 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-MODULE-REGISTRY",
+  "live_source_path": "registry/entities/modules.json",
+  "central_archive_dir": "registry/archives/module-registry/",
+  "archive_ordinal": "000001",
+  "pre_path": "registry/archives/module-registry/000001_PRE_A7_SEQ_000044.json",
+  "post_path": "registry/archives/module-registry/000001_POST_A7_SEQ_000044.json",
+  "pre_source_commit": "3537596c5aa62f43a9359d524af6ff4c75b9f5de",
+  "pre_original_git_blob_sha": "e838dd06192ab38e4db480b411e21e3743fb6609",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
+  "history": "registry/archives/module-registry/version-history.jsonl",
+  "restoration": "Restore archived content into SAME original live path via governed GitHub PR, then rerun Registry, Pages and provider source readback",
+  "peer_writes": false,
+  "private_drive_writes": false,
+  "first_feature_registry_run": 40791867002
+}

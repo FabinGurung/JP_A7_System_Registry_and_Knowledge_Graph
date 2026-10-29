@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-29",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000043",
+  "current_closed_sequence": "A7-SEQ-000044",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -285,6 +285,13 @@
       "title": "Source-derived public A7 QA counts and dated external non-gates on existing Roadmap",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Preserved public A7 human-QA register (zero recorded entries at source readback) and existing A7 governance debt-boundary ledger as the sole inputs. The existing Roadmap shows aggregate QA counts without case payloads, dated six external non-gate dependencies with original conditions and source SHA-256 provenance. Feature PR #94 merged at 44382d0c0d4919c1f03bf123a32f2fb71084924a; exact feature-main Registry #40790723748, Chromium #40790723682 and Pages #40790723663 succeeded. Existing roadmap and private/peer boundaries preserved; live monitoring and specialist QA separately unverified."
+    },
+    {
+      "id": "A7-D40",
+      "stage": "A7-SEQ-000044 · N04 Operations module manifest pointer reconciliation",
+      "title": "Provider-verified Operations A7_MODULE routing pointer reconciled; CAD default-branch manifest remains owner-side HOLD",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Provider readback confirmed Operations module identity, existing main branch, current manifest blob 32565705cd2f1f716d4cae407e4f703be532e380, observed main abaa6b77ce9bacb182a9f66c03282312161f6945 and two added control paths. A7 only updated the existing module registry pointer and appended MODMAN-REC-000003; historical baselines and prior reconciliations preserved. Read-only peer survey found CAD default now main but A7_MODULE.json missing there; old narayani-pages-v0.2 still has a manifest. CAD is NOT repaired or approved, R&D already reconciled, private A9 untouched."
     }
   ],
   "next": [
@@ -320,7 +327,7 @@
       "id": "A7-N04",
       "priority": "P1",
       "title": "Cross-repository bootstrap/version visibility and CI",
-      "state": "PARTIAL",
+      "state": "OPS_MANIFEST_POINTER_RECONCILED__CAD_OWNER_DEFAULT_BRANCH_MANIFEST_HOLD__PEER_READ_ONLY",
       "done_when": "Each peer module can resolve pinned A7 policy release, owner control and drift check with provider readback; AGENTS files are not an account-wide auto-policy."
     },
     {
@@ -420,7 +427,7 @@
     "archive_dir": "registry/archives/roadmap/",
     "manifest": "registry/archives/roadmap/manifest.json",
     "append_only_history": "registry/archives/roadmap/version-history.jsonl",
-    "archive_ordinal": "000004",
+    "archive_ordinal": "000005",
     "release_tag_namespace": "A7_GIT_RELEASE",
     "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
     "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",

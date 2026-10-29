@@ -3,12 +3,12 @@
   "subject_id": "A7-BOOTSTRAP-000001",
   "live_source_path": "A7_BOOTSTRAP.json",
   "central_archive_dir": "registry/archives/a7-bootstrap/",
-  "archive_ordinal": "000003",
-  "pre_path": "registry/archives/a7-bootstrap/000003_PRE_A7_SEQ_000043.json",
-  "post_path": "registry/archives/a7-bootstrap/000003_POST_A7_SEQ_000043.json",
-  "source_commit": "44382d0c0d4919c1f03bf123a32f2fb71084924a",
+  "archive_ordinal": "000004",
+  "pre_path": "registry/archives/a7-bootstrap/000004_PRE_A7_SEQ_000044.json",
+  "post_path": "registry/archives/a7-bootstrap/000004_POST_A7_SEQ_000044.json",
+  "source_commit": "3537596c5aa62f43a9359d524af6ff4c75b9f5de",
   "original_blob_sha": "74338c105acecc0f68a652071f0f58627d38c295",
-  "status": "POST_000003_CAPTURED_AFTER_PR_REGISTRY_PASS",
+  "status": "POST_000004_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
   "history": "registry/archives/a7-bootstrap/version-history.jsonl",
   "restore": "Restore snapshot contents into the SAME A7_BOOTSTRAP.json on a governed PR; verify GitHub CI and source readback",
   "original_private_message_url": null,
@@ -25,12 +25,19 @@
     "post_path": "registry/archives/a7-bootstrap/000001_POST_A7_SEQ_000041.json",
     "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS"
   },
-  "post_blob_sha": "810e85d6ed476fc42ecc3feebdeeb551a48bb318",
+  "post_blob_sha": "0833200b818141c04cb8106d26d3cd245987d251",
   "first_closeout_registry_run": 40790938671,
   "historical_000002": {
     "pre_path": "registry/archives/a7-bootstrap/000002_PRE_A7_SEQ_000042.json",
     "post_path": "registry/archives/a7-bootstrap/000002_POST_A7_SEQ_000042.json",
     "status": "POST_000002_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
     "post_blob_sha": "88a5a4d7319d5cd6c374167aadb6dc434bbd2648"
-  }
+  },
+  "historical_000003": {
+    "pre_path": "registry/archives/a7-bootstrap/000003_PRE_A7_SEQ_000043.json",
+    "post_path": "registry/archives/a7-bootstrap/000003_POST_A7_SEQ_000043.json",
+    "status": "POST_000003_CAPTURED_AFTER_PR_REGISTRY_PASS",
+    "post_blob_sha": "810e85d6ed476fc42ecc3feebdeeb551a48bb318"
+  },
+  "first_feature_registry_run": 40791867002
 }
