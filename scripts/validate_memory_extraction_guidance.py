@@ -8,22 +8,29 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from generate_memory_extraction_guidance import build
 
-toc,d=build("SYNTHETIC_BUILD")
-assert toc["collection_count"]==6 and len(toc["collections"])==6
+toc,d,live=build("SYNTHETIC_BUILD")
+assert toc["collection_count"]==7 and len(toc["collections"])==7
 assert toc["collections"][0]["title"]=="Developer Learning Toolkit"
 assert toc["collections"][0]["subtitle"].startswith("Learn a path")
 assert len(toc["presentation_refinement"]["source_refs"])==3
-assert [c["number"] for c in toc["collections"]]==list(range(1,7))
+assert [c["number"] for c in toc["collections"]]==list(range(1,8))
 assert [c["anchor"] for c in toc["collections"]]==[
- "posters","visualization-reminders","platform-role-board","interface-vocabulary","storage-only-architecture","extraction-retrieval"
+ "posters","visualization-reminders","platform-role-board","interface-vocabulary","storage-only-architecture","extraction-retrieval","live-file-version-control"
 ]
 assert [c["id"] for c in toc["collections"]]==[
  "A7-MEM-WALL-EXTERNAL-REFERENCES-001","A7-VIS-DEC-000001","A7-MEM-PLATFORM-ROLES-005",
- "A7-MEM-UI-VOCAB-006","A7-MEM-STORAGE-ARCH-007","A7-MEM-EXTRACTION-008"
+ "A7-MEM-UI-VOCAB-006","A7-MEM-STORAGE-ARCH-007","A7-MEM-EXTRACTION-008","A7-MEM-LIVE-VERSION-009"
 ]
 assert re.fullmatch(r"[0-9a-f]{64}",toc["source_sha256"])
 assert re.fullmatch(r"[0-9a-f]{64}",d["source_sha256"])
 assert d["site_build_commit"]=="SYNTHETIC_BUILD" and toc["site_build_commit"]=="SYNTHETIC_BUILD"
+assert live["collection_id"]=="A7-MEM-LIVE-VERSION-009" and live["sequence_id"]=="A7-SEQ-000046"
+assert live["public_safe"] and live["not_implemented_integration"] is True
+assert len(live["workflow"])==7 and len(live["source_types"])==5
+assert "SAME live file" in live["core_rule"] and "PRE" in live["core_rule"] and "POST" in live["core_rule"]
+assert "Google Docs" in {x["name"] for x in live["source_types"]}
+assert "Google Colab notebook" in {x["name"] for x in live["source_types"]}
+assert "Google Sheets" in {x["name"] for x in live["source_types"]}
 assert d["sequence_id"]=="A7-SEQ-000036" and d["collection_number"]==6
 assert d["status"]=="REFERENCE_CONTRACT_ONLY_NOT_DEPLOYED_INGESTION"
 assert d["source_scope"]=="A7_ONLY__NO_EXTERNAL_FILES_FETCHED" and d["read_only"]
@@ -48,10 +55,10 @@ assert 'memory-wall.html#memory-wall-contents' in (ROOT/"site/assets/a7-site-she
 
 assert html.count('id="extraction-retrieval"')==1
 assert '<h2 id="board-title">Developer Learning Toolkit</h2>' in html
-assert html.count('class="mw-chapter-return"')==5
+assert html.count('class="mw-chapter-return"')==6
 assert "Room for more posters" not in html
 assert html.index('id="memory-wall-contents"')<html.index('class="notice-board"')
-assert html.index('id="storage-only-architecture"')<html.index('id="extraction-retrieval"')<html.index('class="mw-wall-tail"')
+assert html.index('id="storage-only-architecture"')<html.index('id="extraction-retrieval"')<html.index('id="live-file-version-control"')<html.index('class="mw-wall-tail"')
 for c in toc["collections"]:
     assert 'id="'+c["anchor"]+'"' in html,c["anchor"]
 for ident in ("mwContentsList","mwTocStatus","mwExtractionPipeline","mwFormatGrid","mwFormatSearch","mwFormatGroup","mwFormatCount","mwExtractionOutputs","mwEvidenceFields","mwExtractionSafeguards","mwEvidenceExample","mwExtractionStatus","mwExtractionSources"):
@@ -59,7 +66,7 @@ for ident in ("mwContentsList","mwTocStatus","mwExtractionPipeline","mwFormatGri
 assert html.count("assets/memory-wall-guides.css")==1 and html.count("assets/memory-wall-guides.js")==1
 css=(ROOT/"site/assets/memory-wall-guides.css").read_text(encoding="utf-8")
 js=(ROOT/"site/assets/memory-wall-guides.js").read_text(encoding="utf-8")
-assert "memory-wall-contents.json" in js and "memory-extraction-retrieval.json" in js
+assert "memory-wall-contents.json" in js and "memory-extraction-retrieval.json" in js and "memory-live-version-control.json" in js
 assert "textContent" in js and "innerHTML" not in js
 assert 'mk("details"' in js and 'mk("summary"' in js
 assert ".mw-toc-card" in css and ".mw-format-card" in css and "@media print" in css and "@media(max-width:" in css
@@ -74,9 +81,9 @@ vocab=json.loads((ROOT/"registry/curations/memory-ui-vocabulary.v0.1.json").read
 assert len(vocab["terms"])==13
 storage=json.loads((ROOT/"registry/curations/memory-storage-architecture.v0.1.json").read_text())
 assert len(storage["formats"])==7
-public=json.dumps(d).lower()+" "+json.dumps(toc).lower()
+public=json.dumps(d).lower()+" "+json.dumps(toc).lower()+" "+json.dumps(live).lower()
 for restricted in ("drive.google.com/file/","drive.google.com/drive/folders/","docs.google.com/document/d/","docs.google.com/spreadsheets/d/","1ddz-gevq","private-corpus-id"):
     assert restricted not in public, restricted
 for path in (".github/workflows/validate-registry.yml",".github/workflows/deploy-a7-pages.yml",".github/workflows/a7-browser-qa.yml"):
     assert "memory_extraction_guidance" in (ROOT/path).read_text(),path
-print("A7 MEMORY WALL EXTRACTION PASS six_collections=1 seventeen_families=1 original_01_05_protected=1 private_source_records=0")
+print("A7 MEMORY WALL EXTRACTION PASS seven_collections=1 seventeen_families=1 original_01_05_protected=1 private_source_records=0")

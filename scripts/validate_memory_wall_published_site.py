@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the exact A7 Pages static output before upload, including no-JS six-link TOC."""
+"""Validate the exact A7 Pages static output before upload, including no-JS seven-link TOC."""
 import argparse
 import hashlib
 import json
@@ -40,8 +40,11 @@ def main():
     extraction=json.loads((data/"memory-extraction-retrieval.json").read_text(encoding="utf-8"))
     assert toc["source_sha256"]==hashlib.sha256(raw).hexdigest(),"The published TOC does not match its source"
     assert toc["site_build_commit"]==args.commit_sha,"Published TOC was generated from the wrong commit"
-    assert extraction["site_build_commit"]==args.commit_sha,"Extraction bundle points to the wrong build"
-    assert toc["collection_count"]==6 and len(toc["collections"])==6
+    assert extraction["site_build_commit"]==args.commit_sha
+    versioned=json.loads((data/"memory-live-version-control.json").read_text(encoding="utf-8"))
+    assert versioned["collection_id"]=="A7-MEM-LIVE-VERSION-009"
+    assert versioned["site_build_commit"]==args.commit_sha,"Extraction bundle points to the wrong build"
+    assert toc["collection_count"]==7 and len(toc["collections"])==7
     assert toc["collections"]==canonical["collections"],"Generated TOC differs from source order or link metadata"
     html=(site/"memory-wall.html").read_text(encoding="utf-8")
     home=(site/"index.html").read_text(encoding="utf-8")
@@ -58,7 +61,8 @@ def main():
     assert '<script src="assets/memory-wall-guides.js" defer>' in html
     assert 'id="mwTocStatus"' in html
     assert 'href="#extraction-retrieval"' in html
+    assert 'href="#live-file-version-control"' in html and html.count('id="live-file-version-control"')==1
     assert extraction["collection_id"]=="A7-MEM-EXTRACTION-008" and len(extraction["formats"])==17
     assert 'memory-wall-contents.json' in (site/"assets/memory-wall-guides.js").read_text()
-    print("A7 PUBLISHED MEMORY WALL TOC PASS 6_links=1 6_targets=1 static_nojs=1 homepage_entry=1 built_sha="+args.commit_sha[:12])
+    print("A7 PUBLISHED MEMORY WALL TOC PASS 7_links=1 7_targets=1 static_nojs=1 homepage_entry=1 built_sha="+args.commit_sha[:12])
 if __name__=="__main__": main()
