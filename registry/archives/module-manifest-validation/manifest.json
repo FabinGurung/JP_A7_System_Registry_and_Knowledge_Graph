@@ -1,0 +1,19 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-MODULE-MANIFEST-VALIDATION-CODE",
+  "live_source_paths": [
+    "scripts/validate_module_manifests.py",
+    "scripts/validate_jp_roadmap_version_control.py",
+    "scripts/validate_a7_operator_guidance.py",
+    "docs/ROADMAP.md"
+  ],
+  "central_archive_dir": "registry/archives/module-manifest-validation/",
+  "archive_ordinal": "000001",
+  "pre_path": "registry/archives/module-manifest-validation/000001_PRE_A7_SEQ_000044.json",
+  "post_path": "registry/archives/module-manifest-validation/000001_POST_A7_SEQ_000044.json",
+  "status": "PRE_CAPTURED_POST_PENDING_VALIDATION",
+  "history": "registry/archives/module-manifest-validation/version-history.jsonl",
+  "restore": "Restore archived source contents to the SAME paths via governed PR; rerun configured Actions",
+  "private_drive_writes": false,
+  "peer_repo_writes": false
+}
