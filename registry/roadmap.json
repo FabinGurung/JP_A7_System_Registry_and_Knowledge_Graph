@@ -4,7 +4,7 @@
   "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
   "snapshot_date": "2026-10-29",
   "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
-  "current_closed_sequence": "A7-SEQ-000045",
+  "current_closed_sequence": "A7-SEQ-000046",
   "current_staged_sequence": "A7-SEQ-000013",
   "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
   "previous_deploy_confirmed": {
@@ -299,6 +299,13 @@
       "title": "Confirmed existing ecosystem command poster; pinned outstanding work by existing roadmap references",
       "status": "FINAL_CLOSED_PASS",
       "detail": "Read the prescribed A9 bootstrap, A7_READ_FIRST, Memory Wall guide, existing 3 external-poster curation and site. Found complete canonical Collection 03 poster A7-MEM-PLATFORM-ROLES-005 with exact requested command/source/verification model, printable responsive source-driven layout, Chapter 03 TOC link and prior SEQ32 Registry/Pages/Chromium proof; no duplicate poster or website changes. Preserved existing N04/N05/N10 pointers and added existing N01/N02 references with private A9 boundary; independent served-page HTTP inspection remains an N05 dependency. Only A7 roadmap provenance and derived public task navigation updated; no Drive/peer writes."
+    },
+    {
+      "id": "A7-D42",
+      "stage": "A7-SEQ-000046 · Memory Wall permanent live ID version-control guidance",
+      "title": "Chapter 07: permanent original IDs and numbered PRE/POST archives with matching TOC",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Source-first A7-only Memory Wall curation A7-MEM-LIVE-VERSION-009 was added without altering original six chapter IDs/poster sources. Docs, Colab, Sheets and owner-governed Drive originals retain original provider ID; numbered PRE/POST archive copies carry separate IDs and enumerated names, validated original retains canonical live path/ID, append-only manifest/history and restore-in-place. Native Google revisions, notebook archives, Sheet versions, Git commits/tags, A7 sequence and archive ordinal are independent. Feature PR #98 merged at 40e54d5256022eedd49914436aa1824aca1da2a0; exact main Registry #40827328998, Pages #40827329033, Chromium #40827328990 SUCCESS. No actual Drive duplication, migration, cross-repo edit or technical approvals claimed; independent served-body HTTP readback separate."
     }
   ],
   "next": [
@@ -444,7 +451,7 @@
     "archive_dir": "registry/archives/roadmap/",
     "manifest": "registry/archives/roadmap/manifest.json",
     "append_only_history": "registry/archives/roadmap/version-history.jsonl",
-    "archive_ordinal": "000006",
+    "archive_ordinal": "000007",
     "release_tag_namespace": "A7_GIT_RELEASE",
     "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
     "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",

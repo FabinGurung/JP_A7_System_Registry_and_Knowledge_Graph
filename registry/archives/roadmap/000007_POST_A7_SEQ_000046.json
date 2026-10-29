@@ -1,0 +1,460 @@
+{
+  "schema_version": "1.0.0",
+  "roadmap_id": "A7-ROADMAP-20261009",
+  "status": "A7_PUBLIC_UI_ACTIVE__PRIVATE_HISTORY_SEPARATELY_STAGED",
+  "snapshot_date": "2026-10-29",
+  "owner_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+  "current_closed_sequence": "A7-SEQ-000046",
+  "current_staged_sequence": "A7-SEQ-000013",
+  "semantic_model": "A7 central resolver and knowledge graph; providers/modules retain their own domain truth.",
+  "previous_deploy_confirmed": {
+    "run_id": 37870717817,
+    "head_sha": "3d82f138cde757e436a2f88f947228cbb40bda12",
+    "conclusion": "success"
+  },
+  "developed": [
+    {
+      "id": "A7-D01",
+      "stage": "Phases 1–2",
+      "title": "Semantic identity, authority and conflict engine",
+      "status": "DELIVERED",
+      "detail": "Entities, repository IDs, governed aliases, typed relationships, fact classes, authority precedence, human QA and public safety."
+    },
+    {
+      "id": "A7-D02",
+      "stage": "Phases 3–4",
+      "title": "GitHub inventory and redacted Drive topology",
+      "status": "DELIVERED",
+      "detail": "Nine connected repositories, branch and workflow/Pages evidence, A9 Drive anchors/coverage without dumping confidential Main Library metadata."
+    },
+    {
+      "id": "A7-D03",
+      "stage": "Phases 6–7",
+      "title": "Module ownership and deterministic cross-repository routing",
+      "status": "DELIVERED",
+      "detail": "Peer specialist modules, A7_MODULE.json contract and project → fact class → owner → provider route."
+    },
+    {
+      "id": "A7-D04",
+      "stage": "Sequences 8–10",
+      "title": "Pages/workflow refresh and module/project reconciliation",
+      "status": "DELIVERED",
+      "detail": "Provider-backed repository/Pages and R&D manifest reconciliation, project-to-module routing and tests."
+    },
+    {
+      "id": "A7-D05",
+      "stage": "Sequence 11",
+      "title": "Public visualization and derivation platform",
+      "status": "DELIVERED",
+      "detail": "Canvas 2D/3D, semantic search, route/authority matrices, generated Mermaid and Excalidraw data, content digests and public Pages. Does not imply React Flow/Cytoscape runtime implementation."
+    },
+    {
+      "id": "A7-D06",
+      "stage": "Sequence 12",
+      "title": "Pinned six-role visualization strategy",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Cytoscape semantic exploration; React Flow deterministic architecture; Tables QA; Mermaid docs as code; Excalidraw annotation; optional 3D. Implementation status is explicitly distinguished."
+    },
+    {
+      "id": "A7-D07",
+      "stage": "Sequence 13 — staged",
+      "title": "Git/Drive cross-provider operating contract",
+      "status": "PUBLIC_SAFE_RULE_ACTIVE__SEQ13_NOT_FINAL_CLOSED",
+      "detail": "A9_GIT_DRIVE_BOOTSTRAP.json, human rule, governance page, AGENTS.md pointers across all nine repos, minimal-context provider routing."
+    },
+    {
+      "id": "A7-D08",
+      "stage": "Sequence 13 — staged",
+      "title": "GitHub → Main Library dry-run bridge",
+      "status": "DRY_RUN_PASS__NOT_IMPORTED",
+      "detail": "Nine GitHub repository heads → schema-aligned nine ArtifactRegistry and eight ArtifactEdges candidates, SHA-256 digest manifest; no private Google Sheet writes. Actions 37870717830 success."
+    },
+    {
+      "id": "A7-D09",
+      "stage": "Sequence 14 — independent UI release",
+      "title": "Sky Mist light theme across A7 Pages",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Calm sky-blue site theme for graph, visualization workspace, governance and roadmap; graph palette and CI guard. A7-SEQ-000013 remains staged, private A9 import not claimed."
+    },
+    {
+      "id": "A7-D10",
+      "stage": "Sequence 15 — Control Tower Atlas",
+      "title": "Evidence-linked global/module/Drive/library control hierarchy",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "20 public-safe node identities, 24 typed relationships; navigable authority/data lineage, R&D LaTeX/PPTX links, private Drive normative categories, Main/Local roles and prioritized plan. GitHub Pages and CI verified. Private seq13 staged, not closed."
+    },
+    {
+      "id": "A7-D11",
+      "stage": "Galactic Atlas Arc 01 — 15 October 2026",
+      "title": "Central navigable repository galaxy and frozen pre-arc release",
+      "status": "DEPLOYED_PROVIDER_VERIFIED",
+      "detail": "Main aafeba37990ae83aa6cda238eefa6d7d627b2cd6, CI 38675686077, Pages 38675686071; original legacy-overview.html and annotated frozen release a7/pre-galactic-atlas-v0.1.0 preserved. Arc release is not A7 SEQ-000013 private A9 closeout."
+    },
+    {
+      "id": "A7-D12",
+      "stage": "A7-SEQ-000016 · policy/status debt reconciliation",
+      "title": "Explicit domain guide ownership and dated cross-repository status board",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Separate A7 global interface advice from CAD-owned AAD workflow; source nine GitHub provider observations; display R&D latest-main failures explicitly; no external repo modifications. Feature and merged main CI passed, Pages provider readback SUCCESS at ad8e784ea8d03219b878485b132916b71cc83b44; original A7 seq13 and owner R&D failure remain OPEN."
+    },
+    {
+      "id": "A7-D13",
+      "stage": "A7-SEQ-000017 — Memory Wall / posters",
+      "title": "Dedicated passive-recall poster board for three external developer references",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Sky-mist noticeboard page with printed A4 posters, no hidden/flip cards; owner-safe derived source and CI; unrelated to private A9 or new modules. PR #38 merged; main CI run 39346911707 succeeded; Pages run 39346912074 succeeded at 24510271c4f78e532b2c0232bc5b2a6008ff4132. Manual browser visual QA not independently performed."
+    },
+    {
+      "id": "A7-D14",
+      "stage": "A7-SEQ-000018 — Cloud Orbit site normalization",
+      "title": "Unified soothing white/sky-blue theme and wandering fluffy rocket across ten pages",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Last-loaded presentation-only CSS shared on ten existing HTML pages; no page content/data changes; independent SVG + reduced-motion-aware curved flight mascot. Site provider readback/CI pending. PR #40 merged; CI 39357528271 success, Pages 39357528287 success at fe2ef558386080ca51948ef24c3f4184ea7cfb73. Manual browser-level visual QA unavailable; no domain/peer/Drive source mutations."
+    },
+    {
+      "id": "A7-D15",
+      "stage": "A7-SEQ-000019 — Consistent navigation and History consolidation",
+      "title": "One site navigation, Visualization reminders under Memory Wall, retire duplicate legacy landing pages",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Shared site chrome across eleven pages, preserved old engines and releases in History & Rollback, Memory Wall six-lane cards from original derived decision, no source authority changes. Pending CI/Pages. PR #42 merged; main registry CI run 39364515947 succeeded and Pages run 39364515979 deployed f5b5890abf55571c01fa3b59d2ec70e9f96dc40c. Browser screenshot and interaction QA not independently performed."
+    },
+    {
+      "id": "A7-D16",
+      "stage": "A7-SEQ-000020 — Galactic Atlas Arc 02 selected-system inspector",
+      "title": "Dated source-owned GitHub provenance and owner gates for all nine stations",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Public-safe GitHub snapshot readback 20 October; nine station evidence panels with capabilities, branches, SHAs, successful deployment and separate workflow observation. R&D/Operations/Cost nuances are retained, no live-provider claim and no runtime dependency asserted. CI and Pages pending. PR #44 merged; merged-main CI run 39420207189 and Pages run 39420207301 succeeded at 707144cf0c6bb02759907beffe4eb6ee593bebc5. Artifact 12262888718 verified; no live provider polling or domain approval."
+    },
+    {
+      "id": "A7-D17",
+      "stage": "A7-SEQ-000021 — Galactic Atlas Arc03 sector exploration",
+      "title": "Five source-owned sectors with category filtering and searchable station inspection",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Five sector classifications (Control 1, Engineering 4, Operations 1, Knowledge 2, Adjacent 1), A7 hub always in view, search/reset, keyboard-visible arrow navigation; derived from normalized repository IDs; Arc02 source/QA preserved. CI/Pages still pending. PR #46 merged; main CI 39530362803 and Pages 39530362779 successful; browser QA separately open."
+    },
+    {
+      "id": "A7-D18",
+      "stage": "A7-SEQ-000022 — Galactic Atlas Arc04",
+      "title": "Evidence-gated typed interstellar routes",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Four canonical Operations→peer LINKS_TO_PEER_MODULE navigation edges with pinned record references; four off-by-default proposals explicitly unverified; zero runtime handoffs. PR #48 merged at fcf880a84e08f1631e3077fb69f38c5cfaffa529. Main registry CI 39587284143 and Pages run 39587284188 PASS; artifact 12340006573 sha256:88182405e74f1ead7fd7330a798bbe11bfadd871923aab3e763d1fefc5832633. Final closeout main CI 39588033923 and Pages 39588033873 succeeded; POST snapshot identical to final main bcbeaa0361e83248c71a8990564b707ccbe3b43f, 0 ahead/behind. Browser QA not independently performed."
+    },
+    {
+      "id": "A7-D19",
+      "stage": "A7-SEQ-000023 — governance debt/QA reconciliation",
+      "title": "Live-source R&D workflow status and A7 real-browser regression testing",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Source PR #51 merged at 4ca4119ef9251c8357877c147b3beffb7d8ab1ce; main registry CI 39592347665, Pages 39592347916, and real Chromium automated desktop/mobile 39592347739 all SUCCESS. R&D main workflow failures stale, R&D scientific approval still separately gated. Private A9 seq13 remains unacknowledged and unimported. Manual external QA not performed."
+    },
+    {
+      "id": "A7-D20",
+      "stage": "A7-SEQ-000024 — Arc05 immutable history constellations",
+      "title": "Pinned A7 release events and dated specialist publication evidence",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Five validated A7 source-milestone event histories, one genuine pre-Galactic GitHub tag, eight dated specialist Pages snapshots. PR #53 merged at 7c3bb5472d4fa0665e7e5b0deb1d12ae4bb7b1bd. Main registry CI 39593600381, Pages 39593600407, Chromium browser QA 39593600377 all SUCCESS. Private A9 data excluded, no runtime handoffs or extra tags invented. Final closeout CI 39593936542, Pages 39593936610 passed; POST branch identical to final main e0face993127f121220c564e874c03fdce4dcb5c, 0 ahead/behind."
+    },
+    {
+      "id": "A7-D21",
+      "stage": "A7-SEQ-000025 — outstanding debt: artifact lineage and private parity",
+      "title": "Meaningful source→CI→artifact→owner-Drive→Main-ACK typed contract",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Public-safe Git source→CI→Pages output provenance contract and real Pages example, CI/Pages validator. PR #55 merged at df18c7266b24ab5f98899a21a2893e356f236ecf; registry CI 39624448190 SUCCESS; Pages 39624448234 SUCCESS; feature PR Chromium 39624257598 SUCCESS. Private A9 audit saved privately, no forced import or ACK, historic A9 Portable Canon seq13 distinct from staged A7 bridge seq13."
+    },
+    {
+      "id": "A7-D22",
+      "stage": "A7-SEQ-000026 — reconcile current private Main Git identity metadata",
+      "title": "Provider-verified public repo identity admission without synthetic Local ACK",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Authorized original-provider private Main identity projection and exact native readback passed; dated aggregate public status recorded by PR #57 at d5300d9e424afaa7159fed77bd7d3182ed50fcf7. Main Registry CI 39688855866 and Pages 39688855848 PASS; PR Chromium 39688750179 PASS. Main/Local historical ACK and original A9 control/source parity are explicitly OPEN. Private record IDs and row details retained only in owner private audit. No next Arc."
+    },
+    {
+      "id": "A7-D23",
+      "stage": "Sequence 27 — L0/L1 navigation and source-built A7 development diary",
+      "title": "A7-only source-controlled commit, PR and Actions history at L1",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Git-native L1 /history.html promoted and linked from L0. Pages build at 89ae9616d184d2cd2db2d3177b53fcaeb0df28e8 generated 80 recent A7 commits, 24 merged PRs, 24 Actions observations with provider readback. Source PR #59. Main Registry CI 39699665201 SUCCESS, Pages 39699665198 SUCCESS, automated real Chromium QA 39699665196 SUCCESS. GitHub remains the sole version-control authority; no A9 write or other repository mutation. Final closeout run/POST branch verified separately."
+    },
+    {
+      "id": "A7-D24",
+      "stage": "Sequence 28 — source-backed L1 A7 progress",
+      "title": "Replace stale hardcoded roadmap with registry-derived progress and source-linked evidence",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "L1 roadmap source-bound to current registry; five A7-only backlog workstreams, searchable milestones, build SHA source hash, no fabricated live or external statuses; old hardcoded milestone copy removed."
+    },
+    {
+      "id": "A7-D25",
+      "stage": "Sequence 29 — Developer Dock and Platform Memory Map",
+      "title": "L1 checked-in developer source directory and curated platform responsibility guide",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "A7-only L1 developer dock and 7-row platform Memory Wall reference from source-curations, derived by Pages build. Feature PR #63 merged at 283a77bc2f9dce8afbe0474d0b20b217975695d1; main Registry CI 39764414808 PASS, Pages 39764414758 PASS; branch/PR Chromium 39764119173 and 39764276188 PASS. Other repositories not mutated; no A9 Drive writes or optional live service deployments."
+    },
+    {
+      "id": "A7-D26",
+      "stage": "Sequence 30 — A7 governance and local debt boundary",
+      "title": "Repair stale roadmap status and segregate external private obligations from A7 UI release gates",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "A7-owned local governance/docs debt scoped and fixed: source README no stale seq21, external historic private provider ACK and owner approvals explicitly OPEN and non-gating for unrelated UI. PR #65 merged 0aada02a0b3d05c3058433486c78f227b6077aaf, Registry CI 39771043631 SUCCESS and Pages 39771043680 SUCCESS, feature browser 39770900525 SUCCESS. No private drive/other repo writes."
+    },
+    {
+      "id": "A7-D27",
+      "stage": "A7-SEQ-000031 · Galactic Atlas Arc06 world navigation",
+      "title": "Selected-world flight deck, navigation history, shareable source IDs and grounded two-world comparison",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Feature PR #67 merged at 571c82dab755d0c386ce136c4a5eafac06d49c91. Source-backed nine-world navigator and owner descriptor comparison, world deep-links and in-page history. Main CI 39772624811, Pages 39772624987 and real-browser Chromium 39772624771 all SUCCESS at exact main. No peer writes, no inferred live integrations or engineering approval."
+    },
+    {
+      "id": "A7-D28",
+      "stage": "A7-SEQ-000032 · existing Memory Wall operating principle refined",
+      "title": "A7 poster 005: one command, governed sources and qualified website presentation",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Reused existing poster ID A7-MEM-PLATFORM-ROLES-005; PR #69 merged 2dfb04c2b0827b6eebb628856195c5740774b04e; main Registry CI 39882325975 SUCCESS, Pages 39882325976 SUCCESS (8 platform rows, 3 original posters, artifact digest recorded by GitHub); full push Chromium QA 39881697442 SUCCESS. Added governed AI, source/action/site flow, no new bookmark poster. Direct independent served-site HTTP content readback unavailable from current tool; Pages provider deployment verified. No peer/Drive writes."
+    },
+    {
+      "id": "A7-D29",
+      "stage": "SEQ 33 — Memory Wall vocabulary gallery",
+      "title": "Fenced code versus interactive card and thirteen filtered UI/data/audit prompting terms",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Same L1 Memory Wall upgraded with source-derived Collection04 (13 terms, 2 illustrative panel patterns); PR #72 merged at f52fb319e40052fe23cc1c62c78978f4b5eaefdf. Actual main Registry CI #40047852614, Chromium #40047852551 and Pages #40047852564 all success. Previous posters preserved by strict validator and changed-file scope; main homepage untouched. Public direct HTTP body GET not verified due current browsing restrictions. Resource Navigator not commenced."
+    },
+    {
+      "id": "A7-D30",
+      "stage": "A7-SEQ-000034 · Arc07 public Resource Navigator",
+      "title": "L1 Organization → Project → Category → Resource public-safe pilot",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Feature PR #74 merged at ec63a7be61be58b035a66800e8a78ea7491ed528. Initial release source: 1 public A7 presentation group, 1 project, 3 categories, 9 verified in-repository resource paths; scoped JS/CSS and additive shared-menu link. Source-safe validator and main Registry #40057605039 SUCCESS, desktop/mobile Chromium #40057604925 SUCCESS, Pages build/deploy #40057605064 SUCCESS. No original Galactic Atlas homepage or Memory Wall modification. No peer or Drive writes. Direct independent publicly served HTML body unavailable; GitHub Pages provider deploy confirmed."
+    },
+    {
+      "id": "A7-D31",
+      "stage": "A7-SEQ-000035 · Memory Wall storage-only architecture",
+      "title": "Collection 05: seven formats, source/file separation and no DB-folder mimicry",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Source-derived Collection 05 seven-format table; feature PR #76 merged at 6b382db1c4bf73004c4ab03d9ba367d95ff9df9f. Main A7 Registry #40073991504 SUCCESS, desktop/mobile Chromium #40073991493 SUCCESS and Pages #40073991520 SUCCESS; PR Registry #40073916987, browser #40073917029 SUCCESS. Collection 03 provider overview preserved rather than duplicated; Collection 01–04 source curations and Galactic Atlas homepage unchanged. No private Drive, peer repositories, deployed databases or migrations modified. Independent HTTP readback of public body unavailable; provider Pages SUCCESS."
+    },
+    {
+      "id": "A7-D32",
+      "stage": "A7-SEQ-000036 · Memory Wall contents and extraction evidence",
+      "title": "Six-collection table of contents and 17-format source-grounded extraction/retrieval guide",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Existing Memory Wall augmented in place with source-driven 6-collection TOC and public-only 17-format extraction and machine retrieval reference, no raw file ingestion. Feature PR #78 merged at 5851b450b28e455cde8caa062700e3e0ee72057b. Main Registry #40149409766, real desktop/mobile browser #40149409828, Pages build/deploy #40149409757 all SUCCESS at exact feature main. Source curations 01–05 and original L0 homepage remain unmodified. No private Drive or peer writes. Separate independent publicly served HTTP page readback not proven; provider Pages deployment confirmed."
+    },
+    {
+      "id": "A7-D33",
+      "stage": "A7-SEQ-000037 · Memory Wall editorial and accessibility refinement",
+      "title": "Developer Learning Toolkit after three verified source READMEs; tighter six-section navigation and expandable file-method details",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Read three authentic GitHub source READMEs and renamed Chapter 01 to Developer Learning Toolkit. Kept original source links/curations; tightened six-chapter TOC/hero, inserted five back-navigation links, removed stale duplicated bottom tips, and converted all 17 method cards into compact keyboard-accessible native expandable details. Feature PR #80 merged at 66f36f1ca6cf356b9c79edbd26086f735cd49e5e. Exact main Registry #40220229943 SUCCESS, Chromium mobile/desktop #40220229950 SUCCESS, Pages build/deploy #40220229890 SUCCESS. No private Drive or peer changes. Independent direct publicly served HTML body inspection unavailable."
+    },
+    {
+      "id": "A7-D34",
+      "stage": "A7-SEQ-000038 · Semantic registry debt and documentation sync",
+      "title": "Add canonical PRJ-000029, retire PRJ-000030 duplicate alias, correct stale project authority and legacy instructions",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "A7 issue #71: private source read-only verified PRJ-000029 canonical and PRJ-000030 retired redirect. A7 semantic index/route now 29 active IDs and 1 reserved non-routable alias, no client fields. PR #82 merged at e5751c2fca5675f63f2d80698e584fc0b4788008. Main Registry CI #40520450533 SUCCESS, Pages #40520450583 SUCCESS subject to final readback before closeout merge, feature Chromium #40519785461 SUCCESS. Historic frozen Github projects.csv labelled stale; old A7 README and roadmap next-deliverable text repaired. No private Drive or peer writes, historic A9 Seq13 remains staged."
+    },
+    {
+      "id": "A7-D35",
+      "stage": "A7-SEQ-000039 · Memory Wall TOC discoverability and Pages safety",
+      "title": "Surface existing six-chapter TOC on A7 L0, verify static/dynamic hyperlinks in published Pages artifact, and tag a governed milestone",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Restored discoverability of existing six-hyperlink Memory Wall TOC on L0 and site-wide footer, added Python gate for the Pages-delivered static six anchors, exact source SHA and generated JSON, and real desktop/mobile/no-JS hyperlink QA. Feature PR #84 merged at 07d5940a1a0e6da1397516effc169c556db2ab89, Registry #40595339823 and Pages #40595339881 both SUCCESS. GitHub milestone tag a7/memory-wall-toc-v1.0.0 issued at exact final 059b7a0dff0bc86ce03eef6ae020f905d2becb99, with passed Registry #40596017767, Pages #40596018203, Chromium #40596017905 and Release #40596095945. All original six chapter sources preserved; no private Drive, Communication & Web or peer repository writes. Independent served HTML-body retrieval not claimed."
+    },
+    {
+      "id": "A7-D36",
+      "stage": "A7-SEQ-000040 · JP safe roadmap pin/archive contract",
+      "title": "Pinned A7 work references and single-live-file PRE/POST archive",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Original populated roadmap unchanged as live source ID A7-ROADMAP-20261009. Three existing task IDs pinned without row duplication. Numbered PRE saved before edits; following Registry #40602323919, Pages #40602323693 and Chromium #40602324062 SUCCESS at feature main 4f432fb95e6abca3f9f103789d36b0c1ff7afcd4, POST saved byte-identically from closed canonical source. Manifest/history record readback and restoration. Sheet/notebook/private data and peer sources unchanged. Final closeout provider CI/Pages must be separately verified."
+    },
+    {
+      "id": "A7-D37",
+      "stage": "A7-SEQ-000041 · Operator quickstart and version-control debt closure",
+      "title": "Current source-first A7 operator workflow in the existing How It Works page; preserve old CAD example",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Additive current seven-step A7-only operator section in existing historical How It Works page, no historical content removed and no peer/Drive writes. PRE archived for roadmap and page before edit. Feature PR #88 merged main 347e174f0b28d6cde793b38de5d01e269ead2e25, Registry #40639134488 and Pages #40639134579 SUCCESS. The first main browser #40639134439 failed intermittently on asynchronous no-JS hash-navigation assertion; timing-only QA correction PR #89 merged at 3a59252187d5f73c85524dd2b4cf223ea2a572c9; exact main Registry #40639475527 and Chromium #40639475532 SUCCESS. Numbered subject POSTs saved after these checks, byte-identical to final source. Final closeout main Registry/Pages must be independently verified. No professional or private-source approvals inferred."
+    },
+    {
+      "id": "A7-D38",
+      "stage": "A7-SEQ-000042 · A7-N05 provider evidence visibility",
+      "title": "Dated GitHub Registry, Pages and milestone evidence on the original A7 Roadmap",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Added a source-derived SEQ41 historical workflow evidence panel to existing Roadmap rather than a new task register. It reads one authoritative A7_BOOTSTRAP.json field, links original Registry/Pages/Release GitHub Actions runs and makes independent external HTTP readback explicitly unverified. PR #92 merged at f92c2d599d2d134b709796bedf133f76240dd00a; main Registry #40788448453, Chromium #40788448158 and Pages #40788448147 succeeded. Numbered PRE/POST presentation bundle preserved; no peer, private Drive or provider automation introduced."
+    },
+    {
+      "id": "A7-D39",
+      "stage": "A7-SEQ-000043 · A7-N05 public QA and governance dependencies",
+      "title": "Source-derived public A7 QA counts and dated external non-gates on existing Roadmap",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Preserved public A7 human-QA register (zero recorded entries at source readback) and existing A7 governance debt-boundary ledger as the sole inputs. The existing Roadmap shows aggregate QA counts without case payloads, dated six external non-gate dependencies with original conditions and source SHA-256 provenance. Feature PR #94 merged at 44382d0c0d4919c1f03bf123a32f2fb71084924a; exact feature-main Registry #40790723748, Chromium #40790723682 and Pages #40790723663 succeeded. Existing roadmap and private/peer boundaries preserved; live monitoring and specialist QA separately unverified."
+    },
+    {
+      "id": "A7-D40",
+      "stage": "A7-SEQ-000044 · N04 Operations module manifest pointer reconciliation",
+      "title": "Provider-verified Operations A7_MODULE routing pointer reconciled; CAD default-branch manifest remains owner-side HOLD",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Provider readback confirmed Operations module identity, existing main branch, current manifest blob 32565705cd2f1f716d4cae407e4f703be532e380, observed main abaa6b77ce9bacb182a9f66c03282312161f6945 and two added control paths. A7 only updated the existing module registry pointer and appended MODMAN-REC-000003; historical baselines and prior reconciliations preserved. Read-only peer survey found CAD default now main but A7_MODULE.json missing there; old narayani-pages-v0.2 still has a manifest. CAD is NOT repaired or approved, R&D already reconciled, private A9 untouched."
+    },
+    {
+      "id": "A7-D41",
+      "stage": "A7-SEQ-000045 · Memory Wall architecture audit and existing-task pin continuity",
+      "title": "Confirmed existing ecosystem command poster; pinned outstanding work by existing roadmap references",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Read the prescribed A9 bootstrap, A7_READ_FIRST, Memory Wall guide, existing 3 external-poster curation and site. Found complete canonical Collection 03 poster A7-MEM-PLATFORM-ROLES-005 with exact requested command/source/verification model, printable responsive source-driven layout, Chapter 03 TOC link and prior SEQ32 Registry/Pages/Chromium proof; no duplicate poster or website changes. Preserved existing N04/N05/N10 pointers and added existing N01/N02 references with private A9 boundary; independent served-page HTTP inspection remains an N05 dependency. Only A7 roadmap provenance and derived public task navigation updated; no Drive/peer writes."
+    },
+    {
+      "id": "A7-D42",
+      "stage": "A7-SEQ-000046 · Memory Wall permanent live ID version-control guidance",
+      "title": "Chapter 07: permanent original IDs and numbered PRE/POST archives with matching TOC",
+      "status": "FINAL_CLOSED_PASS",
+      "detail": "Source-first A7-only Memory Wall curation A7-MEM-LIVE-VERSION-009 was added without altering original six chapter IDs/poster sources. Docs, Colab, Sheets and owner-governed Drive originals retain original provider ID; numbered PRE/POST archive copies carry separate IDs and enumerated names, validated original retains canonical live path/ID, append-only manifest/history and restore-in-place. Native Google revisions, notebook archives, Sheet versions, Git commits/tags, A7 sequence and archive ordinal are independent. Feature PR #98 merged at 40e54d5256022eedd49914436aa1824aca1da2a0; exact main Registry #40827328998, Pages #40827329033, Chromium #40827328990 SUCCESS. No actual Drive duplication, migration, cross-repo edit or technical approvals claimed; independent served-body HTTP readback separate."
+    }
+  ],
+  "next": [
+    {
+      "id": "A7-N08",
+      "priority": "P0",
+      "title": "R&D latest main workflow failures — owner-side remediation",
+      "state": "CURRENT_MAIN_CI_PASS__SCIENTIFIC_OUTPUT_QA_SEPARATE",
+      "done_when": "R&D repo CI and Pages succeeds at current main SHA, with root cause and provider readback; A7 only links reports."
+    },
+    {
+      "id": "A7-N01",
+      "priority": "P0",
+      "title": "Seal bounded public-safe A7 seq13 change accurately",
+      "state": "PUBLIC_SAFE_GIT_ROUTING_ACTIVE__PRIVATE_PROVIDER_IDENTITY_PROJECTION_CONFIRMED__LEGACY_SEQ13_STAGED",
+      "done_when": "Confirm current HEAD, CI, Pages and bridge source/manifest. Finalize only public-safe stage, never conflate it with private A9 cutover."
+    },
+    {
+      "id": "A7-N02",
+      "priority": "P1",
+      "title": "Reconcile private A9 Main/Local semantics before bridge import",
+      "state": "CURRENT_PUBLIC_GIT_IDENTITY_PARITY_PROVIDER_CONFIRMED__HISTORIC_A9_SOURCE_AND_CURSOR_ACK_OPEN",
+      "done_when": "Provider-first live index, ID collision reconciliation, historical run/edge/source parity, Main consumed cursors and Local ACK; gated private A9 write only."
+    },
+    {
+      "id": "A7-N03",
+      "priority": "P1",
+      "title": "Define release/artifact lineage contract",
+      "state": "DELIVERED_PUBLIC_SAFE_CONTRACT_VALIDATED__PRIVATE_DRIVE_LINEAGE_GATED",
+      "done_when": "Owning module Git repo/ref/commit/path → build/QA → Drive file/provider revision → A7 public-safe edges; do not duplicate every commit into Main Library."
+    },
+    {
+      "id": "A7-N04",
+      "priority": "P1",
+      "title": "Cross-repository bootstrap/version visibility and CI",
+      "state": "OPS_MANIFEST_POINTER_RECONCILED__CAD_OWNER_DEFAULT_BRANCH_MANIFEST_HOLD__PEER_READ_ONLY",
+      "done_when": "Each peer module can resolve pinned A7 policy release, owner control and drift check with provider readback; AGENTS files are not an account-wide auto-policy."
+    },
+    {
+      "id": "A7-N05",
+      "priority": "P2",
+      "title": "Roadmap and authority dashboard with real observations",
+      "state": "A7_PUBLIC_QA_AGGREGATE_AND_DATED_EXTERNAL_GAPS_DELIVERED__LIVE_CROSS_REPO_GATED",
+      "done_when": "Show current policy migration stages, provider-confirmed releases, audit gaps and human-QA queue. No stale SHA claimed current. A dated 9-repository status page is delivered; live provider queries and QA queue integration remain."
+    },
+    {
+      "id": "A7-N06",
+      "priority": "P2",
+      "title": "Implement visualization roles only with verified code",
+      "state": "PLANNED",
+      "done_when": "Cytoscape/React Flow if needed, keep source-of-truth JSON, Tables audit, Mermaid/Excalidraw export and accessible interactive pages tested."
+    },
+    {
+      "id": "A7-N07",
+      "priority": "P2",
+      "title": "Optional confidential governance runtime",
+      "state": "DEFERRED",
+      "done_when": "Only provision private repository or DB when authorized collaboration/concurrency needs justify it; do not mirror private Drive corpus in public A7."
+    },
+    {
+      "id": "A7-N09",
+      "priority": "P1",
+      "title": "Galactic Atlas Arc 02: selected-world provider inspection",
+      "state": "DELIVERED_DATED_EVIDENCE_NO_LIVE_POLLING",
+      "done_when": "Status provenance, age, owner workflow, pinned commit and dependencies in a usable world inspector, without claiming live monitoring."
+    },
+    {
+      "id": "A7-N10",
+      "priority": "P2",
+      "title": "Galaxy sectors, Developer Dock and operator guidance",
+      "state": "A7_OPERATOR_GUIDE_DELIVERED__PEER_WORKFLOW_APPROVAL_SEPARATE",
+      "done_when": "Separate operator How It Works from developer tools; source-derived sectors, typed routes, and preserved older Pages URLs."
+    },
+    {
+      "id": "A7-N11",
+      "priority": "P2",
+      "title": "Galactic Atlas Arc04: evidence-gated typed interstellar routes",
+      "state": "DELIVERED_NO_RUNTIME_HANDOFFS_ASSERTED",
+      "done_when": "Visualize typed cross-module relationships only with source-backed provider evidence; no inferred runtime data transfer or private A9 admission."
+    },
+    {
+      "id": "A7-N12",
+      "priority": "P2",
+      "title": "Galactic Atlas Arc05: immutable release-history constellations",
+      "state": "DELIVERED_DATED_EVIDENCE_ARC05_V01",
+      "done_when": "Display anchored Git tags, commits, source artifact provenance and verified release/readback history without becoming a second authority."
+    },
+    {
+      "id": "A7-N13",
+      "priority": "P1",
+      "title": "Automated real-Chromium Galaxy mobile/desktop QA",
+      "state": "AUTOMATED_CHROMIUM_QA_PASSED__MANUAL_EXTERNAL_QA_SEPARATE",
+      "done_when": "Chromium workflow passes headless desktop/mobile interactions and generates screenshot/report artifacts at exact A7 commit; manual external browser acceptance separately recorded if performed."
+    }
+  ],
+  "strict_boundaries": [
+    "Old Drive A9 governance is not replaced; controlled source-by-source parity and explicit cutover are required.",
+    "A7 is a public-safe semantic registry and router, not owner of peer research science, construction finance or raw source binaries.",
+    "A9 Main Library is private and has not imported the candidate Git records; its exact PK/FK/event/ACK ledger remains in Drive.",
+    "Git branches refer to whole repository commits, not one isolated researcher dataset.",
+    "R&D 18/18 Drive audit and 11 researchers are owned by R&D; A7 legacy research coverage was narrower and is not blindly rewritten.",
+    "MSCH_HYDROPOWER_CORPUS_B013 remains HOLD/DO NOT RESUME.",
+    "No latest deployed SHA should be stored as a permanent truth; fetch GitHub live before status claims."
+  ],
+  "crosslinks": {
+    "rd_roadmap": "https://fabingurung.github.io/JP_Research-and-Development/roadmap/",
+    "rd_handover": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md",
+    "a7_entrypoint": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json",
+    "public_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/"
+  },
+  "pinned_task_ids": [
+    "A7-N05",
+    "A7-N10",
+    "A7-N01",
+    "A7-N02",
+    "A7-N04"
+  ],
+  "pin_semantics": {
+    "A7-N05": {
+      "boundary": "A7_ONLY_DATED_PROJECTION",
+      "reason": "Source-backed, dated A7 dashboard; live cross-repository polling and independent served-page HTTP-body readback are still unverified. Do not imply real-time monitoring."
+    },
+    "A7-N10": {
+      "boundary": "A7_ONLY_OPERATOR_GUIDANCE",
+      "reason": "Keep A7 operator guidance separate from Developer Dock"
+    },
+    "A7-N04": {
+      "boundary": "PEER_READ_ONLY_HOLD",
+      "reason": "Only link to peer policy/version state; do not change owner repositories"
+    },
+    "A7-N01": {
+      "boundary": "PUBLIC_A7_ROUTING_ONLY__HISTORIC_PRIVATE_A9_HOLD",
+      "reason": "Public-safe A7 Git routing is distinct from the historical private A9 SEQ13 cutover. No private source approval or migration implied."
+    },
+    "A7-N02": {
+      "boundary": "PRIVATE_A9_MAIN_LOCAL_ACK_UNVERIFIED__NO_A7_PRIVATE_WRITE",
+      "reason": "Historical A9 Main/Local source parity and consumed-cursor acknowledgment need owner-provider verification. A7 records this dependency only."
+    }
+  },
+  "version_control": {
+    "source_id": "A7-ROADMAP-20261009",
+    "live_path": "registry/roadmap.json",
+    "archive_dir": "registry/archives/roadmap/",
+    "manifest": "registry/archives/roadmap/manifest.json",
+    "append_only_history": "registry/archives/roadmap/version-history.jsonl",
+    "archive_ordinal": "000007",
+    "release_tag_namespace": "A7_GIT_RELEASE",
+    "sheet_version_namespace": "OWNER_SHEET_INDEPENDENT",
+    "notebook_version_namespace": "OWNER_NOTEBOOK_INDEPENDENT",
+    "derived_are_non_authoritative": true
+  }
+}

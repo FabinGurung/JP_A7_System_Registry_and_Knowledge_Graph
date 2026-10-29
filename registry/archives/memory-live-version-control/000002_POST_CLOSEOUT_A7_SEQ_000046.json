@@ -1,0 +1,31 @@
+{
+  "schema": "jp-pre-post-git-ref/1",
+  "subject_id": "A7-SEQ46-CLOSEOUT",
+  "sequence": "A7-SEQ-000046",
+  "phase": "POST",
+  "pre_source_commit": "40e54d5256022eedd49914436aa1824aca1da2a0",
+  "verified_first_registry_run": 40827663411,
+  "original_source_paths": [
+    {
+      "path": "registry/roadmap.json",
+      "git_blob_sha": "78ae4bae02f2a7dccdaf4c3d746ad05693c6daa6"
+    },
+    {
+      "path": "A7_BOOTSTRAP.json",
+      "git_blob_sha": "9f0db1283944a1becec4ea3e67f2fb9551c9f002"
+    },
+    {
+      "path": "scripts/validate_jp_roadmap_version_control.py",
+      "git_blob_sha": "eec9f7632450100a3de91bf98163cf26d55bbfa2"
+    },
+    {
+      "path": "scripts/validate_a7_operator_guidance.py",
+      "git_blob_sha": "acf926db8b6331da83ddf8cec7a2929af98037ac"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "git_blob_sha": "b4dfb969667c0c16c1792661af3583c28df369d5"
+    }
+  ],
+  "restoration": "Use recorded immutable Git blobs to restore the SAME roadmap/bootstrap/code paths via PR, never new live files"
+}

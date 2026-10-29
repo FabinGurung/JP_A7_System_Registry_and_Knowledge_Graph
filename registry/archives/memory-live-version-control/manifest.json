@@ -14,5 +14,13 @@
   "status": "POST_CAPTURED_FEATURE_CI_SUCCESS__MAIN_PENDING",
   "original_ids_preserved": true,
   "independent_pages_http_unverified": true,
-  "history": "registry/archives/memory-live-version-control/version-history.jsonl"
+  "history": "registry/archives/memory-live-version-control/version-history.jsonl",
+  "closeout": {
+    "pre_path": "registry/archives/memory-live-version-control/000002_PRE_CLOSEOUT_A7_SEQ_000046.json",
+    "post_path": "registry/archives/memory-live-version-control/000002_POST_CLOSEOUT_A7_SEQ_000046.json",
+    "first_registry_run": 40827663411,
+    "original_source_ids_preserved": true,
+    "final_main_verification": "PENDING",
+    "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS"
+  }
 }
