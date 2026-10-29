@@ -17,5 +17,16 @@
   "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
   "restoration": "Restore to SAME original paths by PR then check GitHub Actions and Pages; the canonical live task source remains registry/roadmap.json",
   "no_other_repo_writes": true,
-  "first_feature_registry_run": 40822805147
+  "first_feature_registry_run": 40822805147,
+  "browser_qa_source_archive": {
+    "source_path": "scripts/a7_browser_qa.cjs",
+    "pre_path": "registry/archives/roadmap-pinning/000002_PRE_A7_SEQ_000045.cjs",
+    "post_path": "registry/archives/roadmap-pinning/000002_POST_A7_SEQ_000045.cjs",
+    "pre_blob_sha": "5d77f8bf5dd9b08931982c851afaee6493d7ff3b",
+    "post_blob_sha": "70067f50de4538689c8ab6dab08a7534df400226",
+    "feature_chromium_run": 40823264189,
+    "feature_chromium_conclusion": "success",
+    "status": "POST_CAPTURED_AFTER_CHROMIUM_SUCCESS",
+    "restoration": "Restore to original scripts/a7_browser_qa.cjs via governed PR; do not modify prior POST archive"
+  }
 }
