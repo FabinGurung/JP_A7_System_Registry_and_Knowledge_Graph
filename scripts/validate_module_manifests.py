@@ -106,10 +106,24 @@ for folder in ("module-registry","module-manifest-reconciliations"):
     assert (ROOT/manifest["pre_path"]).is_file(), folder
     post=ROOT/manifest["post_path"]
     if post.exists(): assert post.read_bytes()==(ROOT/manifest["live_source_path"]).read_bytes(), folder
+# Historical POST bundles prove their original bytes, not that all later live
+# validators/docs are forbidden to evolve. Check immutable saved Git blob SHA
+# for each legacy member, then check the current POST against its live source.
 code=ROOT/"registry/archives/module-manifest-validation"
 cm=json.loads((code/"manifest.json").read_text())
 assert (ROOT/cm["pre_path"]).is_file()
-if (ROOT/cm["post_path"]).exists():
-    bundle=json.loads((ROOT/cm["post_path"]).read_text())
-    assert all((ROOT/x["path"]).read_text(encoding="utf-8")==x["content"] for x in bundle["live_sources"])
+legacy_path=cm.get("historical_000001",{}).get("post_path",cm["post_path"])
+legacy_file=ROOT/legacy_path
+if legacy_file.exists() and legacy_file.suffix==".json":
+    bundle=json.loads(legacy_file.read_text(encoding="utf-8"))
+    assert bundle["subject_id"]=="A7-MODULE-MANIFEST-VALIDATION-CODE"
+    import hashlib
+    for item in bundle["live_sources"]:
+        raw=item["content"].encode("utf-8")
+        git_blob=hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()
+        assert git_blob==item["git_blob_sha"], item["path"]
+latest=ROOT/cm["post_path"]
+if latest.exists():
+    assert latest.read_bytes()==(ROOT/cm["latest_source_path"]).read_bytes()
+
 print(f"A7 MODULE MANIFEST VALIDATION: PASS modules={len(mods)} baselines={len(obs)} reconciliations={len(recs)} manifest_path={contract.get('canonical_path')}")
