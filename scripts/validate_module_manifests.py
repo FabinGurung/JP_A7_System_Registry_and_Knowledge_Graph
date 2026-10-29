@@ -98,4 +98,18 @@ if errors:
     print("A7 MODULE MANIFEST VALIDATION: FAIL")
     for e in errors: print("- "+e)
     raise SystemExit(1)
+# Source-specific JP archival guard. Prior provider observations and reconciliations
+# are immutable; latest POST must match the SAME original live file exactly.
+for folder in ("module-registry","module-manifest-reconciliations"):
+    root=ROOT/"registry/archives"/folder
+    manifest=json.loads((root/"manifest.json").read_text())
+    assert (ROOT/manifest["pre_path"]).is_file(), folder
+    post=ROOT/manifest["post_path"]
+    if post.exists(): assert post.read_bytes()==(ROOT/manifest["live_source_path"]).read_bytes(), folder
+code=ROOT/"registry/archives/module-manifest-validation"
+cm=json.loads((code/"manifest.json").read_text())
+assert (ROOT/cm["pre_path"]).is_file()
+if (ROOT/cm["post_path"]).exists():
+    bundle=json.loads((ROOT/cm["post_path"]).read_text())
+    assert all((ROOT/x["path"]).read_text(encoding="utf-8")==x["content"] for x in bundle["live_sources"])
 print(f"A7 MODULE MANIFEST VALIDATION: PASS modules={len(mods)} baselines={len(obs)} reconciliations={len(recs)} manifest_path={contract.get('canonical_path')}")
