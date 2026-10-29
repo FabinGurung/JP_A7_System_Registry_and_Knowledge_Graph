@@ -170,11 +170,11 @@ async function inspect(page,kind){
   assert.ok(page.url().endsWith("#extraction-retrieval"),"TOC deep link must navigate to Collection 06");
   await page.locator('#mwContentsList a[href="#posters"]').click();
   assert.ok(page.url().endsWith("#posters"),"TOC deep link must navigate to Collection 01");
-  pass(kind+": six canonical linked chapter anchors navigate to the original sections");
+  pass(kind+": seven canonical linked chapter anchors navigate to the original sections");
 
   assert.match(await page.locator("#mwContentsList .mw-toc-card").first().textContent(),/Developer Learning Toolkit/);
   assert.match(await page.locator("#board-title").textContent(),/Developer Learning Toolkit/);
-  assert.equal(await page.locator(".mw-chapter-return a").count(),5);
+  assert.equal(await page.locator(".mw-chapter-return a").count(),7);
   assert.equal(await page.locator(".mw-format-card[open]").count(),0);
 
   assert.equal(await page.locator('#mwContentsList a[href="#extraction-retrieval"]').count(),1);
