@@ -4,7 +4,7 @@
   "subject": "A7 roadmap",
   "live_source_path": "registry/roadmap.json",
   "central_archive_dir": "registry/archives/roadmap/",
-  "archive_ordinal": "000006",
+  "archive_ordinal": "000007",
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "POST_000006_VALIDATED_ARCHIVED",
+  "status": "PRE_000007_CAPTURED_POST_PENDING",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -50,9 +50,9 @@
     "independent_http_body_readback": false
   },
   "latest_pre": {
-    "path": "registry/archives/roadmap/000006_PRE_A7_SEQ_000045.json",
-    "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
-    "status": "EXACT_PRE_SAVED_BEFORE_EDIT"
+    "path": "registry/archives/roadmap/000007_PRE_A7_SEQ_000046.json",
+    "source_commit": "40e54d5256022eedd49914436aa1824aca1da2a0",
+    "status": "EXACT_PRE_SOURCE_SAVED"
   },
   "latest_post": {
     "path": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json",
@@ -104,5 +104,12 @@
     "post_git_blob_sha": "abbd910787e25d9a9578e80c8e10ddcb60fb9b47",
     "status": "POST_000005_VALIDATED_ARCHIVED"
   },
-  "seq45_post_expected": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json"
+  "seq45_post_expected": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json",
+  "historical_000006": {
+    "pre_path": "registry/archives/roadmap/000006_PRE_A7_SEQ_000045.json",
+    "post_path": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json",
+    "post_git_blob_sha": "c49623962bf7483e27199b38416c602578b9858b",
+    "status": "POST_000006_VALIDATED_ARCHIVED"
+  },
+  "seq46_post_expected": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json"
 }
