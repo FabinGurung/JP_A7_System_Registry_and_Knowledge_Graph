@@ -11,9 +11,10 @@
   "archive_ordinal": "000001",
   "pre_path": "registry/archives/module-manifest-validation/000001_PRE_A7_SEQ_000044.json",
   "post_path": "registry/archives/module-manifest-validation/000001_POST_A7_SEQ_000044.json",
-  "status": "PRE_CAPTURED_POST_PENDING_VALIDATION",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
   "history": "registry/archives/module-manifest-validation/version-history.jsonl",
   "restore": "Restore archived source contents to the SAME paths via governed PR; rerun configured Actions",
   "private_drive_writes": false,
-  "peer_repo_writes": false
+  "peer_repo_writes": false,
+  "first_feature_registry_run": 40791867002
 }
