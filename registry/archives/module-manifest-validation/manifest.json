@@ -8,13 +8,22 @@
     "docs/ROADMAP.md"
   ],
   "central_archive_dir": "registry/archives/module-manifest-validation/",
-  "archive_ordinal": "000001",
-  "pre_path": "registry/archives/module-manifest-validation/000001_PRE_A7_SEQ_000044.json",
-  "post_path": "registry/archives/module-manifest-validation/000001_POST_A7_SEQ_000044.json",
-  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
+  "archive_ordinal": "000002",
+  "pre_path": "registry/archives/module-manifest-validation/000002_PRE_A7_SEQ_000045.py",
+  "post_path": "registry/archives/module-manifest-validation/000002_POST_A7_SEQ_000045.py",
+  "status": "POST_000002_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
   "history": "registry/archives/module-manifest-validation/version-history.jsonl",
   "restore": "Restore archived source contents to the SAME paths via governed PR; rerun configured Actions",
   "private_drive_writes": false,
   "peer_repo_writes": false,
-  "first_feature_registry_run": 40791867002
+  "first_feature_registry_run": 40822805147,
+  "historical_000001": {
+    "pre_path": "registry/archives/module-manifest-validation/000001_PRE_A7_SEQ_000044.json",
+    "post_path": "registry/archives/module-manifest-validation/000001_POST_A7_SEQ_000044.json",
+    "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS"
+  },
+  "latest_source_path": "scripts/validate_module_manifests.py",
+  "original_live_paths": [
+    "scripts/validate_module_manifests.py"
+  ]
 }

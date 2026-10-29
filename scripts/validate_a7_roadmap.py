@@ -39,10 +39,12 @@ assert (proof["registry_run"],proof["pages_run"],proof["release_safeguard_run"])
 assert proof["historical_not_live"] is True and proof["independent_http_body_readback"] is False
 assert D["kind"]=="DERIVED_NOT_AUTHORITATIVE" and D["owner"]=="A7_ONLY"
 assert D["developed"]==[{k:x.get(k) for k in ("id","stage","title","status","detail")} for x in S["developed"]]
-assert {x["id"] for x in D["next_a7"]}=={"A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
-assert [x["id"] for x in D["pinned_a7"]]==S["pinned_task_ids"]==["A7-N05","A7-N10","A7-N04"]
+assert {x["id"] for x in D["next_a7"]}=={"A7-N01","A7-N02","A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
+assert [x["id"] for x in D["pinned_a7"]]==S["pinned_task_ids"]==["A7-N05","A7-N10","A7-N01","A7-N02","A7-N04"]
 assert D["pinned_a7"][-1]["task_boundary"]=="PEER_READ_ONLY_HOLD"
+assert D["pinned_a7"][3]["task_boundary"]=="PRIVATE_A9_MAIN_LOCAL_ACK_UNVERIFIED__NO_A7_PRIVATE_WRITE"
 assert re.fullmatch(r"[0-9a-f]{64}",D["source_sha256"])
+assert {x["id"] for x in D["pinned_a7"]}==set(S["pinned_task_ids"])
 h=(R/"site/roadmap.html").read_text();js=(R/"site/assets/a7-roadmap.js").read_text()
 assert 'id="roadmapSequence"' in h and 'id="roadmapDeveloped"' in h
 assert 'id="roadmap-governance"' in h and 'id="roadmapGovernance"' in h
@@ -76,5 +78,29 @@ if m["archive_ordinal"]=="000002":
         latest=json.loads(post2.read_text())
         assert latest["phase"]=="POST"
         assert {x["path"] for x in latest["live_sources"]}=={x["path"] for x in pre2["live_sources"]}
-        assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in latest["live_sources"])
+        # Preserve the exact SEQ43 POST content and its immutable Git blob
+        # identities; later governed versions may legitimately change code.
+        import hashlib
+        for item in latest["live_sources"]:
+            raw=item["content"].encode("utf-8")
+            assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()==item["git_blob_sha"]
+        if latest["sequence"]==S["current_closed_sequence"]:
+            assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in latest["live_sources"])
+# JP central archive for the present pinning iteration. PRE is never rewritten,
+# POST is the exact final governed code/doc source, not a new task authority.
+pins_archive=R/"registry/archives/roadmap-pinning"
+pins_manifest=json.loads((pins_archive/"manifest.json").read_text())
+pins_pre=json.loads((R/pins_manifest["pre_path"]).read_text())
+assert pins_pre["phase"]=="PRE" and len(pins_pre["live_sources"])==6
+pins_post=R/pins_manifest["post_path"]
+if pins_post.exists():
+    pins_saved=json.loads(pins_post.read_text())
+    assert pins_saved["phase"]=="POST"
+    assert {x["path"] for x in pins_saved["live_sources"]}=={x["path"] for x in pins_pre["live_sources"]}
+    import hashlib
+    for x in pins_saved["live_sources"]:
+        raw=x["content"].encode("utf-8")
+        assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()==x["git_blob_sha"]
+        if pins_saved["sequence"]==S["current_closed_sequence"]:
+            assert (R/x["path"]).read_text(encoding="utf-8")==x["content"]
 print("A7 L1 ROADMAP SOURCE QA PASS closed="+D["current_closed_sequence"])

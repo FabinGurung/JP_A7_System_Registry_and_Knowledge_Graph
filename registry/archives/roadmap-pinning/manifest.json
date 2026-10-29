@@ -1,0 +1,32 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-PIN-CODE-20261029",
+  "central_archive_dir": "registry/archives/roadmap-pinning/",
+  "pre_path": "registry/archives/roadmap-pinning/000001_PRE_A7_SEQ_000045.json",
+  "post_path": "registry/archives/roadmap-pinning/000001_POST_A7_SEQ_000045.json",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
+  "history": "registry/archives/roadmap-pinning/version-history.jsonl",
+  "original_live_paths": [
+    "scripts/generate_a7_roadmap.py",
+    "scripts/validate_a7_roadmap.py",
+    "scripts/validate_jp_roadmap_version_control.py",
+    "scripts/validate_a7_operator_guidance.py",
+    "docs/ROADMAP.md",
+    "docs/JP_A7_VERSION_CONTROL_READ_FIRST.md"
+  ],
+  "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
+  "restoration": "Restore to SAME original paths by PR then check GitHub Actions and Pages; the canonical live task source remains registry/roadmap.json",
+  "no_other_repo_writes": true,
+  "first_feature_registry_run": 40822805147,
+  "browser_qa_source_archive": {
+    "source_path": "scripts/a7_browser_qa.cjs",
+    "pre_path": "registry/archives/roadmap-pinning/000002_PRE_A7_SEQ_000045.cjs",
+    "post_path": "registry/archives/roadmap-pinning/000002_POST_A7_SEQ_000045.cjs",
+    "pre_blob_sha": "5d77f8bf5dd9b08931982c851afaee6493d7ff3b",
+    "post_blob_sha": "70067f50de4538689c8ab6dab08a7534df400226",
+    "feature_chromium_run": 40823264189,
+    "feature_chromium_conclusion": "success",
+    "status": "POST_CAPTURED_AFTER_CHROMIUM_SUCCESS",
+    "restoration": "Restore to original scripts/a7_browser_qa.cjs via governed PR; do not modify prior POST archive"
+  }
+}

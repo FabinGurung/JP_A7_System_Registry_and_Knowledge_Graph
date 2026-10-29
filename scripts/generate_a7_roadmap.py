@@ -7,7 +7,7 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 P=R/"registry/roadmap.json"
 # A7-specific website worklist; original source remains complete and audit-visible.
-WORKLIST={"A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
+WORKLIST={"A7-N01","A7-N02","A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
 
 # A7's public human-QA file is the only input here. A count of zero is never a
 # conclusion about private, external, or specialist domain QA.

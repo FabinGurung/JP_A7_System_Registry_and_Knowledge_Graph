@@ -12,6 +12,8 @@ Humans edit source Sheets and notebooks in their respective owner systems. Sheet
 Distinguish **prepared code** (commit exists), **offline test** (actually run), **live GitHub Actions** (verified run IDs), **GitHub Pages deployment** (verified run), and **independent public HTTP body inspection** (only if performed). Successful GitHub Pages or a tag does not prove engineering QA. Historical private A9 Main/Local parity and peer bootstrap drift remain separate holds.
 
 ## Pinned live task pointers
-`A7-N05`: dated A7 progress without false real-time monitoring.
+`A7-N05`: dated A7 progress, cross-repository provider polling and independent Pages served-body readback unverified.
 `A7-N10`: A7 operator guidance, separate from developer tools.
-`A7-N04`: peer read-only hold; no cross-repository modifications.
+`A7-N01`: public-safe A7 SEQ13 Git routing distinct from unverified historical private A9 cutover.
+`A7-N02`: private A9 Main/Local source parity and cursor ACK unverified; no A7 write authorization.
+`A7-N04`: CAD current-default-branch module manifest HOLD and peer read-only policy drift; no cross-repository modifications.
