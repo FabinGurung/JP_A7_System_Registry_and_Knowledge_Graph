@@ -96,10 +96,11 @@ async function inspect(page,kind){
   assert.ok((await page.locator("#roadmapDeveloped .rp-item").count())>=20);
   assert.match(await page.locator("#roadmapSequence").textContent(),/^\d{6}$/, "Sequence derives from canonical registry and can advance");
   await page.locator("#roadmapPinned .rp-pin").first().waitFor({timeout:15000});
-  assert.equal(await page.locator("#roadmapPinned .rp-pin").count(),3);
+  assert.equal(await page.locator("#roadmapPinned .rp-pin").count(),5);
   assert.equal(await page.locator("#roadmapUpcoming .rp-task").count(),2);
   assert.match(await page.locator("#roadmapPinned").textContent(),/PEER_READ_ONLY_HOLD/);
-  pass(kind+": three source-referenced task pins and no duplicated backlog items");
+  assert.match(await page.locator("#roadmapPinned").textContent(),/PRIVATE_A9_MAIN_LOCAL_ACK_UNVERIFIED__NO_A7_PRIVATE_WRITE/);
+  pass(kind+": five source-referenced task pins, explicit private A9 HOLD and no duplicated backlog items");
   await page.locator("#roadmapSearch").fill("unlikely_xyz_a7_roadmap");
   assert.equal(await page.locator("#roadmapDeveloped .rp-item").count(),0);
   pass(kind+": L1 source-built roadmap and working search");
