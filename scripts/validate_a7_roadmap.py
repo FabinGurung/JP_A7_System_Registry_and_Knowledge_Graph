@@ -86,4 +86,21 @@ if m["archive_ordinal"]=="000002":
             assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()==item["git_blob_sha"]
         if latest["sequence"]==S["current_closed_sequence"]:
             assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in latest["live_sources"])
+# JP central archive for the present pinning iteration. PRE is never rewritten,
+# POST is the exact final governed code/doc source, not a new task authority.
+pins_archive=R/"registry/archives/roadmap-pinning"
+pins_manifest=json.loads((pins_archive/"manifest.json").read_text())
+pins_pre=json.loads((R/pins_manifest["pre_path"]).read_text())
+assert pins_pre["phase"]=="PRE" and len(pins_pre["live_sources"])==6
+pins_post=R/pins_manifest["post_path"]
+if pins_post.exists():
+    pins_saved=json.loads(pins_post.read_text())
+    assert pins_saved["phase"]=="POST"
+    assert {x["path"] for x in pins_saved["live_sources"]}=={x["path"] for x in pins_pre["live_sources"]}
+    import hashlib
+    for x in pins_saved["live_sources"]:
+        raw=x["content"].encode("utf-8")
+        assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()==x["git_blob_sha"]
+        if pins_saved["sequence"]==S["current_closed_sequence"]:
+            assert (R/x["path"]).read_text(encoding="utf-8")==x["content"]
 print("A7 L1 ROADMAP SOURCE QA PASS closed="+D["current_closed_sequence"])
