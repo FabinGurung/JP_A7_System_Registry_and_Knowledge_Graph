@@ -127,3 +127,13 @@
 @media(max-width:700px){.wall-hero{min-height:0;padding:20px 0}.wall-ornament{display:none}.mw-toc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mw-toc-card{min-height:123px}.mw-format-grid{grid-template-columns:1fr}.mw-toc-summary strong{font-size:27px}}
 @media(max-width:430px){.mw-toc-grid{grid-template-columns:1fr}.mw-toc-card{min-height:90px}}
 @media print{.mw-toc-card{min-height:0}.mw-format-card{break-inside:avoid}.mw-format-card:not([open]) .mw-format-body{display:block}.mw-format-expand{display:none}.mw-chapter-return{display:none}}
+
+/* Seventh chapter: permanent original ID, distinct enumerated archive copies */
+.mw-live-vc{margin:38px 0;padding:clamp(17px,3vw,30px);background:linear-gradient(145deg,#fffefa,#eaf8f5);border:1px solid #c4e1db;border-radius:23px;scroll-margin-top:110px}
+.mw-live-vc h2{font-size:clamp(24px,3.3vw,39px);color:#244f65;line-height:1.1}.mw-live-vc h2 em{color:#348b79;font-style:normal}.mw-live-vc>p{color:#4d7281;max-width:860px}
+.mw-live-vc-motto{margin:18px 0;padding:15px 19px;text-align:center;color:white;background:#245d69;border-radius:12px;font-weight:850;letter-spacing:.055em}
+.mw-live-vc-flow{display:grid;grid-template-columns:1fr 1fr;gap:13px}.mw-live-vc-flow article,.mw-live-vc-steps li,.mw-live-vc-types article{background:white;border:1px solid #bededb;border-radius:13px;padding:15px;min-width:0;overflow-wrap:anywhere;break-inside:avoid}
+.mw-live-vc-flow strong,.mw-live-vc-flow small,.mw-live-vc-steps strong,.mw-live-vc-steps small{display:block}.mw-live-vc-flow small,.mw-live-vc-steps small{font-size:10px;color:#478879;font-weight:800}.mw-live-vc-flow strong{font-size:15px;color:#245f69;margin:7px 0}.mw-live-vc-flow p,.mw-live-vc-steps p,.mw-live-vc-types p{font-size:12px;color:#5b7c84}
+.mw-live-vc h3{font-size:16px;margin:23px 0 10px;color:#275f6b}.mw-live-vc-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mw-live-vc-steps strong{font-size:13px;color:#286372}.mw-live-vc-types{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mw-live-vc-types h4{color:#296775;margin:0;font-size:13px}.mw-live-vc-types small{font-size:10px;color:#738e99}.mw-live-vc-warning{border-left:3px solid #469788;padding:10px 15px;background:#f7fefd}
+@media(max-width:680px){.mw-live-vc-flow,.mw-live-vc-steps,.mw-live-vc-types{grid-template-columns:1fr}}
+@media print{.mw-live-vc{background:white;box-shadow:none;break-inside:auto}.mw-live-vc-motto{color:#245d69;background:white;border:2px solid #245d69}}
