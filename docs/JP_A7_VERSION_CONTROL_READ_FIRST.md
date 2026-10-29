@@ -13,5 +13,7 @@ Distinguish **prepared code** (commit exists), **offline test** (actually run), 
 
 ## Pinned live task pointers
 `A7-N05`: dated A7 progress, cross-repository provider polling and independent Pages served-body readback unverified.
-`A7-N10`: A7 operator guidance, separate from developer tools.\n`A7-N01`: public-safe A7 SEQ13 Git routing distinct from unverified historical private A9 cutover.\n`A7-N02`: private A9 Main/Local source parity and cursor ACK unverified; no A7 write authorization.
+`A7-N10`: A7 operator guidance, separate from developer tools.
+`A7-N01`: public-safe A7 SEQ13 Git routing distinct from unverified historical private A9 cutover.
+`A7-N02`: private A9 Main/Local source parity and cursor ACK unverified; no A7 write authorization.
 `A7-N04`: CAD current-default-branch module manifest HOLD and peer read-only policy drift; no cross-repository modifications.
