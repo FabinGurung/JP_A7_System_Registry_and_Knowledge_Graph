@@ -4,7 +4,7 @@
   "central_archive_dir": "registry/archives/roadmap-pinning/",
   "pre_path": "registry/archives/roadmap-pinning/000001_PRE_A7_SEQ_000045.json",
   "post_path": "registry/archives/roadmap-pinning/000001_POST_A7_SEQ_000045.json",
-  "status": "PRE_CAPTURED_POST_PENDING",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
   "history": "registry/archives/roadmap-pinning/version-history.jsonl",
   "original_live_paths": [
     "scripts/generate_a7_roadmap.py",
@@ -16,5 +16,6 @@
   ],
   "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
   "restoration": "Restore to SAME original paths by PR then check GitHub Actions and Pages; the canonical live task source remains registry/roadmap.json",
-  "no_other_repo_writes": true
+  "no_other_repo_writes": true,
+  "first_feature_registry_run": 40822805147
 }
