@@ -1,0 +1,30 @@
+{
+  "schema": "jp-pre-post-git-ref/1",
+  "subject_id": "A7-SEQ46-CLOSEOUT",
+  "phase": "PRE",
+  "sequence": "A7-SEQ-000046",
+  "source_commit": "40e54d5256022eedd49914436aa1824aca1da2a0",
+  "source_paths": [
+    {
+      "path": "registry/roadmap.json",
+      "git_blob_sha": "c49623962bf7483e27199b38416c602578b9858b"
+    },
+    {
+      "path": "A7_BOOTSTRAP.json",
+      "git_blob_sha": "f7133f4a7ad55ac19160e2aba1e76a4d33f254e0"
+    },
+    {
+      "path": "scripts/validate_jp_roadmap_version_control.py",
+      "git_blob_sha": "ed823a7f6aca8058c4d520b3c5d7279334010b8b"
+    },
+    {
+      "path": "scripts/validate_a7_operator_guidance.py",
+      "git_blob_sha": "e7010692b21af59ad6e9a052f5c3949fd29ffafa"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "git_blob_sha": "b5faf5025f133a1581bedd51fba2f3f988eb0151"
+    }
+  ],
+  "restore": "Restore original canonical paths from main commit; keep same roadmap/bootstrap source IDs"
+}
