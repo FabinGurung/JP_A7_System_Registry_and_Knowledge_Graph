@@ -78,5 +78,12 @@ if m["archive_ordinal"]=="000002":
         latest=json.loads(post2.read_text())
         assert latest["phase"]=="POST"
         assert {x["path"] for x in latest["live_sources"]}=={x["path"] for x in pre2["live_sources"]}
-        assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in latest["live_sources"])
+        # Preserve the exact SEQ43 POST content and its immutable Git blob
+        # identities; later governed versions may legitimately change code.
+        import hashlib
+        for item in latest["live_sources"]:
+            raw=item["content"].encode("utf-8")
+            assert hashlib.sha1(b"blob "+str(len(raw)).encode()+bytes([0])+raw).hexdigest()==item["git_blob_sha"]
+        if latest["sequence"]==S["current_closed_sequence"]:
+            assert all((R/x["path"]).read_text(encoding="utf-8")==x["content"] for x in latest["live_sources"])
 print("A7 L1 ROADMAP SOURCE QA PASS closed="+D["current_closed_sequence"])
