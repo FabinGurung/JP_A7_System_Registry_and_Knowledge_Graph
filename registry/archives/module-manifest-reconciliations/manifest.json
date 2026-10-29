@@ -8,9 +8,10 @@
   "post_path": "registry/archives/module-manifest-reconciliations/000001_POST_A7_SEQ_000044.jsonl",
   "pre_source_commit": "3537596c5aa62f43a9359d524af6ff4c75b9f5de",
   "pre_original_git_blob_sha": "ec0f4ffeea8b868c2ef8ad2bef535ebfc2cfbd9c",
-  "status": "PRE_CAPTURED_POST_PENDING_VALIDATION",
+  "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
   "history": "registry/archives/module-manifest-reconciliations/version-history.jsonl",
   "restoration": "Restore archived content into SAME original live path via governed GitHub PR, then rerun Registry, Pages and provider source readback",
   "peer_writes": false,
-  "private_drive_writes": false
+  "private_drive_writes": false,
+  "first_feature_registry_run": 40791867002
 }
