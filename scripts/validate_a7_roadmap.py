@@ -39,10 +39,12 @@ assert (proof["registry_run"],proof["pages_run"],proof["release_safeguard_run"])
 assert proof["historical_not_live"] is True and proof["independent_http_body_readback"] is False
 assert D["kind"]=="DERIVED_NOT_AUTHORITATIVE" and D["owner"]=="A7_ONLY"
 assert D["developed"]==[{k:x.get(k) for k in ("id","stage","title","status","detail")} for x in S["developed"]]
-assert {x["id"] for x in D["next_a7"]}=={"A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
-assert [x["id"] for x in D["pinned_a7"]]==S["pinned_task_ids"]==["A7-N05","A7-N10","A7-N04"]
+assert {x["id"] for x in D["next_a7"]}=={"A7-N01","A7-N02","A7-N04","A7-N05","A7-N06","A7-N10","A7-N13"}
+assert [x["id"] for x in D["pinned_a7"]]==S["pinned_task_ids"]==["A7-N05","A7-N10","A7-N01","A7-N02","A7-N04"]
 assert D["pinned_a7"][-1]["task_boundary"]=="PEER_READ_ONLY_HOLD"
+assert D["pinned_a7"][3]["task_boundary"]=="PRIVATE_A9_MAIN_LOCAL_ACK_UNVERIFIED__NO_A7_PRIVATE_WRITE"
 assert re.fullmatch(r"[0-9a-f]{64}",D["source_sha256"])
+assert {x["id"] for x in D["pinned_a7"]}==set(S["pinned_task_ids"])
 h=(R/"site/roadmap.html").read_text();js=(R/"site/assets/a7-roadmap.js").read_text()
 assert 'id="roadmapSequence"' in h and 'id="roadmapDeveloped"' in h
 assert 'id="roadmap-governance"' in h and 'id="roadmapGovernance"' in h

@@ -4,7 +4,7 @@
   "subject": "A7 roadmap",
   "live_source_path": "registry/roadmap.json",
   "central_archive_dir": "registry/archives/roadmap/",
-  "archive_ordinal": "000005",
+  "archive_ordinal": "000006",
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "POST_000005_VALIDATED_ARCHIVED",
+  "status": "PRE_000006_CAPTURED_POST_PENDING",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -50,9 +50,9 @@
     "independent_http_body_readback": false
   },
   "latest_pre": {
-    "path": "registry/archives/roadmap/000005_PRE_A7_SEQ_000044.json",
-    "source_commit": "3537596c5aa62f43a9359d524af6ff4c75b9f5de",
-    "status": "EXACT_PRE_SOURCE_SAVED"
+    "path": "registry/archives/roadmap/000006_PRE_A7_SEQ_000045.json",
+    "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
+    "status": "EXACT_PRE_SAVED_BEFORE_EDIT"
   },
   "latest_post": {
     "path": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json",
@@ -97,5 +97,12 @@
     "post_git_blob_sha": "d117245b0398fff94fe3d125d01ac0a06495a90c",
     "status": "POST_000004_VALIDATED_ARCHIVED"
   },
-  "seq44_post_expected": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json"
+  "seq44_post_expected": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json",
+  "historical_000005": {
+    "pre_path": "registry/archives/roadmap/000005_PRE_A7_SEQ_000044.json",
+    "post_path": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json",
+    "post_git_blob_sha": "abbd910787e25d9a9578e80c8e10ddcb60fb9b47",
+    "status": "POST_000005_VALIDATED_ARCHIVED"
+  },
+  "seq45_post_expected": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json"
 }
