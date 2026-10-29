@@ -1,0 +1,20 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-PIN-CODE-20261029",
+  "central_archive_dir": "registry/archives/roadmap-pinning/",
+  "pre_path": "registry/archives/roadmap-pinning/000001_PRE_A7_SEQ_000045.json",
+  "post_path": "registry/archives/roadmap-pinning/000001_POST_A7_SEQ_000045.json",
+  "status": "PRE_CAPTURED_POST_PENDING",
+  "history": "registry/archives/roadmap-pinning/version-history.jsonl",
+  "original_live_paths": [
+    "scripts/generate_a7_roadmap.py",
+    "scripts/validate_a7_roadmap.py",
+    "scripts/validate_jp_roadmap_version_control.py",
+    "scripts/validate_a7_operator_guidance.py",
+    "docs/ROADMAP.md",
+    "docs/JP_A7_VERSION_CONTROL_READ_FIRST.md"
+  ],
+  "source_commit": "acbf31b74d20294466c83405dbd381bf27e88b0d",
+  "restoration": "Restore to SAME original paths by PR then check GitHub Actions and Pages; the canonical live task source remains registry/roadmap.json",
+  "no_other_repo_writes": true
+}
