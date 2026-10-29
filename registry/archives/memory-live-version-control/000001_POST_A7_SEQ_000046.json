@@ -1,0 +1,54 @@
+{
+  "schema": "jp-pre-post-git-ref/1",
+  "subject_id": "A7-MEM-LIVE-VERSION-009",
+  "sequence": "A7-SEQ-000046",
+  "phase": "POST",
+  "source_commit": "d5db6583e3b3550f81cc593448be1fa904cce3ad",
+  "source_branch": "feature/a7-seq-000046-permanent-live-ids",
+  "verified_feature_registry_run": 40826979865,
+  "verified_feature_browser_run": 40826979869,
+  "representation": "IMMUTABLE_GIT_TREE_AND_BLOB_SNAPSHOTS",
+  "files": [
+    {
+      "path": "registry/curations/memory-live-version-control.v0.1.json",
+      "git_blob_sha": "f2031fb3802189f8d227ced18142532537ed6232"
+    },
+    {
+      "path": "registry/curations/memory-wall-contents.v0.1.json",
+      "git_blob_sha": "ce72526d0ec2fd36a93b8638ba30fc701630ac27"
+    },
+    {
+      "path": "site/memory-wall.html",
+      "git_blob_sha": "24d0d94e938ef61031d09594676c675fb8ea24ca"
+    },
+    {
+      "path": "site/assets/memory-wall-guides.js",
+      "git_blob_sha": "a4454768421ff1100fd8360699ed46a6e92983fb"
+    },
+    {
+      "path": "site/assets/memory-wall-guides.css",
+      "git_blob_sha": "74ee9ad427ced9f157a7c2d3db84966596d5466d"
+    },
+    {
+      "path": "scripts/generate_memory_extraction_guidance.py",
+      "git_blob_sha": "bc23062bf7dfabc1dc2e23cfed5b79bb6d332cca"
+    },
+    {
+      "path": "scripts/validate_memory_extraction_guidance.py",
+      "git_blob_sha": "91965fb7c2b06226499c3bb2ac04cd40f10bd8e9"
+    },
+    {
+      "path": "scripts/validate_memory_wall_published_site.py",
+      "git_blob_sha": "fe4499f4f0957c741724881964ea2d01aa10e33c"
+    },
+    {
+      "path": "scripts/a7_browser_qa.cjs",
+      "git_blob_sha": "4ae295f3cc09b76ef479dba5d6da2ad45fbb9a3d"
+    },
+    {
+      "path": "docs/MEMORY_WALL_READ_FIRST.md",
+      "git_blob_sha": "0c1aea5a4530c0f6499feee5710d84cb434c9870"
+    }
+  ],
+  "restoration": "Restore specific Git blob to same original source path via governed PR and rerun Registry, Chromium and Pages. Archive copies are separate version refs; this never changes any Google live file."
+}
