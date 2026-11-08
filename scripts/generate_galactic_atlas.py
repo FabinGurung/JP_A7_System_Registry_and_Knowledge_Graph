@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOGUE = ROOT / "registry/entities/repositories.json"
 LAYOUT = ROOT / "registry/decisions/galactic-atlas-ui.v0.1.json"
 PROVIDER = ROOT / "registry/providers/galactic-atlas-arc02-observation-20261020.json"
+PUBLIC_INVENTORY = ROOT / "registry/providers/galactic-atlas-public-repository-inventory-20261108.json"
 SECTORS = ROOT / "registry/decisions/galactic-atlas-sectors.v0.1.json"
 ARC04 = ROOT / "registry/decisions/galactic-atlas-arc04-routes.v0.1.json"
 MODULES = ROOT / "registry/entities/modules.json"
@@ -32,7 +33,7 @@ def build():
     assert sector_data["status"] == "ADOPTED_PRESENTATION_TAXONOMY"
     sector_lookup = {x["repository_id"]: x["sector_id"] for x in sector_data["assignments"]}
     valid_sectors = {s["id"] for s in sector_data["sectors"]}
-    assert len(sector_data["assignments"]) == len(sector_lookup) == 9
+    # The full sector count is checked against source catalogue below.
     assert set(sector_lookup) == set(source), "Each station requires exactly one sector"
     assert valid_sectors == {"CONTROL","ENGINEERING","OPERATIONS","KNOWLEDGE","ADJACENT"}
     assert all(x in valid_sectors for x in sector_lookup.values())
@@ -40,20 +41,31 @@ def build():
     provider = json.loads(PROVIDER.read_text(encoding="utf-8"))
     assert provider["status"] == "DATED_SNAPSHOT_NOT_LIVE_MONITOR"
     evidence = {item["id"]: item for item in provider["records"]}
-    assert set(evidence) == set(source) and len(evidence) == 9, "Arc02 observation must cover exactly the 9 registered systems"
+    inventory = json.loads(PUBLIC_INVENTORY.read_text(encoding="utf-8"))
+    assert inventory["count"] == len(source) == 10 and inventory["observed_date"] == "2026-11-08"
+    assert {r["provider_object_id"] for r in inventory["observed_repositories"]} == {r["provider_object_id"] for r in source.values()}
+    assert len(evidence) == 9 and set(evidence).issubset(source), "Preserve nine historical provider records"
+    new_ids = set(source) - set(evidence)
+    assert new_ids == {"REPO-000010"}, "Unverified additional systems need independent provider readback"
+    assert len(sector_data["assignments"]) == len(sector_lookup) == len(source)
+    assert len(ui["systems"]) == len(source)
     stations = []
-    assert len(source) == 9 and len(ui["systems"]) == 9
     for shape in ui["systems"]:
         ident = shape["id"]
         entry = source[ident]
-        item = evidence[ident]
-        assert entry["current_slug"] == item["slug"], "Provider snapshot repository identity mismatch"
-        assert len(item["main_sha"]) == 40 and item["deployment"]["id"] > 0
-        assert item["deployment"]["branch"] == item["production_branch"]
+        item = evidence.get(ident)
+        if item:
+            assert entry["current_slug"] == item["slug"], "Historical provider snapshot identity mismatch"
+            assert len(item["main_sha"]) == 40 and item["deployment"]["id"] > 0
+            assert item["deployment"]["branch"] == item["production_branch"]
+        else:
+            assert ident == inventory["new_repository"]["repository_id"]
+            assert entry["provider_object_id"] == inventory["new_repository"]["provider_object_id"]
+            assert entry["public_site_url"] is None, "Never fabricate a Pages URL"
         name = entry["repository_full_name"]
         assert name.startswith("FabinGurung/"), "Untrusted owner"
         site = entry.get("public_site_url")
-        assert site and site.startswith(ALLOWED_HOSTS[1]), "Unapproved Pages URL"
+        assert site is None or site.startswith(ALLOWED_HOSTS[1]), "Unapproved Pages URL"
         url = "https://github.com/" + name
         assert url.startswith(ALLOWED_HOSTS[0])
         deep = []
@@ -61,23 +73,14 @@ def build():
             if "github_path" in deep_item:
                 link = url + "/blob/main/" + deep_item["github_path"]
             else:
+                assert site is not None, "No deep link to unverified Pages"
                 assert ".." not in deep_item["path"] and "://" not in deep_item["path"]
                 link = site.rstrip("/") + "/" + deep_item["path"]
             if not link.startswith(ALLOWED_HOSTS):
                 raise ValueError("Untrusted deep link")
             deep.append({"label": deep_item["label"], "url": link})
-        stations.append({
-            "id": ident, "title": shape["label"], "short": shape["short"],
-            "role": shape["role"], "zone": shape["zone"],
-            "sector": sector_lookup[ident],
-            "azimuth": shape["azimuth"], "radial": shape["radial"],
-            "summary": shape["summary"], "owns": shape["owns"],
-            "does_not_own": shape.get("does_not_own"),
-            "module_repository": name, "github_url": url, "website_url": site,
-            "source_status_observation": entry.get("deployment_status"),
-            "source_observed_at": entry.get("last_verified_at"),
-            "deep_links": deep,
-            "provider_evidence": {
+        if item:
+            record = {
                 "observation_id": provider["observation_id"],
                 "observed_date": provider["observed_date"],
                 "not_live": True,
@@ -91,6 +94,35 @@ def build():
                 "dependency_note": item["dependency_note"],
                 "dependency_verified": False
             }
+        else:
+            new = inventory["new_repository"]
+            assert len(new["observed_main_sha"]) == 40 and new["pages_status"] == "UNVERIFIED"
+            record = {
+                "observation_id": inventory["observation_id"],
+                "observed_date": inventory["observed_date"],
+                "not_live": True,
+                "provider_label": "GITHUB_PUBLIC_PAGES_UNVERIFIED",
+                "main_sha": new["observed_main_sha"],
+                "publication_branch": "UNVERIFIED",
+                "last_successful_publication": None,
+                "related_workflow": new["verified_workflow"],
+                "capability": "Human-first resource portal; Git history migration safety QA",
+                "owner_gate": "Pages, A7_MODULE.json, owner acceptance and historical import completion are not verified.",
+                "dependency_note": "Catalogue navigation only; no approved runtime or source handoff to Operations.",
+                "dependency_verified": False
+            }
+        stations.append({
+            "id": ident, "title": shape["label"], "short": shape["short"],
+            "role": shape["role"], "zone": shape["zone"],
+            "sector": sector_lookup[ident],
+            "azimuth": shape["azimuth"], "radial": shape["radial"],
+            "summary": shape["summary"], "owns": shape["owns"],
+            "does_not_own": shape.get("does_not_own"),
+            "module_repository": name, "github_url": url, "website_url": site,
+            "source_status_observation": entry.get("deployment_status"),
+            "source_observed_at": entry.get("last_verified_at") or (inventory["observed_date"] if ident in new_ids else None),
+            "deep_links": deep,
+            "provider_evidence": record
         })
     # Arc04 projects ONLY admitted canonical module-navigation edges; the
     # display-only future candidates are not admitted into registry/edges.
@@ -240,6 +272,7 @@ def build():
             "registry/entities/repositories.json": digest(CATALOGUE),
             "registry/decisions/galactic-atlas-ui.v0.1.json": digest(LAYOUT),
             "registry/providers/galactic-atlas-arc02-observation-20261020.json": digest(PROVIDER),
+            "registry/providers/galactic-atlas-public-repository-inventory-20261108.json": digest(PUBLIC_INVENTORY),
             "registry/decisions/galactic-atlas-sectors.v0.1.json": digest(SECTORS),
             "registry/decisions/galactic-atlas-arc04-routes.v0.1.json": digest(ARC04),
             "registry/entities/modules.json": digest(MODULES),
