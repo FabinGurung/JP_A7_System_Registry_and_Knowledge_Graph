@@ -1,0 +1,20 @@
+{
+  "schema": "jp-source-archive-pre/1",
+  "subject_id": "A7-ATLAS-USER_VISIBLE_COUNTS",
+  "sequence_id": "A7-SEQ-000047",
+  "phase": "PRE",
+  "ordinal": "000001",
+  "original_main_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "original_sources": [
+    {
+      "path": "site/index.html",
+      "git_blob_sha": "d16ef6eb796c1627c8ce6c8c3fff6d2cbf93b162"
+    },
+    {
+      "path": "docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md",
+      "git_blob_sha": "af33b0af99f389b497274e5ebfa7f5d99386fd78"
+    }
+  ],
+  "reason": "Refresh visible 9/8 metadata to 10/9 and explain new Pages-unverified discovery.",
+  "restore": "Restore into same canonical paths by Git PR."
+}
