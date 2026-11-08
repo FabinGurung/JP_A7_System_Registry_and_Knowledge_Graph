@@ -182,6 +182,28 @@
       "attention": [
         "PAGES_SOURCE_DIFFERS_FROM_DEFAULT_BRANCH"
       ]
+    },
+    {
+      "pages_record_id": "GHPAGES-000010",
+      "repository_id": "REPO-000010",
+      "has_pages": null,
+      "public_site_url": null,
+      "public_site_url_evidence": "NOT_VERIFIED",
+      "deployment_mode": "NOT_VERIFIED",
+      "production_trigger_branch": null,
+      "content_source_ref": null,
+      "workflow_path": null,
+      "workflow_sha": null,
+      "latest_successful_run_id": null,
+      "latest_successful_run_sha": null,
+      "latest_successful_run_at": null,
+      "owner_invariant_status": "NOT_ESTABLISHED",
+      "default_branch_matches_trigger": null,
+      "attention": [
+        "NO_PAGES_WORKFLOW_IN_MAIN",
+        "PAGES_SETTINGS_ENDPOINT_NOT_AVAILABLE",
+        "PUBLIC_REPOSITORY_NOT_PROOF_OF_DEPLOYED_SITE"
+      ]
     }
   ]
 }

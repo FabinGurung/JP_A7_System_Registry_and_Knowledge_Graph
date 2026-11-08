@@ -119,7 +119,19 @@
       "radial": 50,
       "summary": "Research-backed learning materials, study sequences and knowledge acquisition.",
       "owns": "Study materials, curricula and learning workflows"
+    },
+    {
+      "id": "REPO-000010",
+      "label": "Field & Desk Resource Library",
+      "short": "LIB",
+      "role": "RESOURCE_LIBRARY",
+      "zone": "OPERATIONS",
+      "azimuth": 129,
+      "radial": 53,
+      "summary": "Independent human-first resource library. Historical import/Pages verification remain separately gated.",
+      "owns": "Its resource-library code and migration workflow",
+      "does_not_own": "Operations facts, original Drive sources, specialist approvals or A7 policies"
     }
   ],
-  "fact_scope_note": "Provider/release statuses are recorded observations and may be stale; each owning repo and live provider is authoritative for current work."
+  "fact_scope_note": "Provider/release statuses are recorded observations and may be stale; each owning repo and live provider is authoritative for current work. Newly discovered public repositories may have no verified Pages destination."
 }

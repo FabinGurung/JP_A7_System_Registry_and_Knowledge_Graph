@@ -13,14 +13,19 @@ data=build()
 assert o["status"]=="DATED_SNAPSHOT_NOT_LIVE_MONITOR"
 assert o["deployed_does_not_mean_approved"] and not o["private_data_included"]
 assert len(o["records"])==9 and len({x["id"] for x in o["records"]})==9
-assert {x["id"] for x in o["records"]}=={x["repository_id"] for x in catalog["repositories"]}
+assert {x["id"] for x in o["records"]}=={x["repository_id"] for x in catalog["repositories"]}-{"REPO-000010"}
 assert data["provider_snapshot_not_live"] and data["non_authoritative"]
 assert data["provider_observation_date"]=="2026-10-20"
 assert data["arc"]=="GALACTIC_ATLAS_ARC_02_INSPECTOR"
-assert len(data["stations"])==9 and len(data["links"])==8
+assert len(data["stations"])==10 and len(data["links"])==9
 assert "registry/providers/galactic-atlas-arc02-observation-20261020.json" in data["source_revisions"]
 byid={x["id"]:x for x in o["records"]}
 for station in data["stations"]:
+ if station["id"] == "REPO-000010":
+  e=station["provider_evidence"]
+  assert station["website_url"] is None and e["last_successful_publication"] is None
+  assert e["provider_label"]=="GITHUB_PUBLIC_PAGES_UNVERIFIED" and e["dependency_verified"] is False
+  continue
  x=byid[station["id"]];e=station["provider_evidence"];p=x["deployment"]
  assert x["slug"]==station["module_repository"].split("/",1)[1]
  assert len(e["main_sha"])==len(p["sha"])==40
@@ -51,4 +56,4 @@ dependency=json.loads((R/"registry/dependencies/status.json").read_text())
 assert not dependency["verified_dependencies"]
 assert "A7-SEQ-000013" in byid["REPO-000001"]["gate"]
 assert "portal deploy" in byid["REPO-000006"]["gate"]
-print("A7 ARC02 PROVIDER INSPECTOR PASS stations=9 dated_snapshot=yes dependencies_asserted=0")
+print("A7 ARC02 PROVIDER INSPECTOR PASS historical_deployments=9 catalogue_stations=10 dated_snapshot=yes dependencies_asserted=0")

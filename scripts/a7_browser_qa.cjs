@@ -17,9 +17,9 @@ async function untilReady(){
 async function inspect(page,kind){
   await page.goto(URL,{waitUntil:"load",timeout:30000});
   await page.locator(".star-node").first().waitFor({timeout:15000});
-  await page.waitForFunction(()=>document.querySelectorAll(".star-node").length===9 && document.querySelector("#arc04Count")?.textContent.includes("4 documented navigation"),{timeout:15000});
-  assert.equal(await page.locator(".star-node").count(),9);
-  pass(kind+": nine source-backed stations");
+  await page.waitForFunction(()=>document.querySelectorAll(".star-node").length===10 && document.querySelector("#arc04Count")?.textContent.includes("4 documented navigation"),{timeout:15000});
+  assert.equal(await page.locator(".star-node").count(),10);
+  pass(kind+": ten source-backed stations");
   assert.equal(await page.locator('aside.memory-wall-shortcut a[href="memory-wall.html#memory-wall-contents"]').count(),1,"Homepage must directly expose Memory Wall contents");
   pass(kind+": L0 visibly links directly to seven-chapter Memory Wall contents");
 
@@ -28,6 +28,10 @@ async function inspect(page,kind){
   await page.locator("#arc04RouteList .arc04-item").first().click();
   await page.locator('#arc04Inspect a[href*="/registry/edges/edges.jsonl#L"]').waitFor();
   pass(kind+": link to immutable canonical source evidence");
+  await page.locator('.star-node[data-repo-id="REPO-000010"]').click();
+  assert.equal(await page.locator("#selectedSite").getAttribute("href"),null,"Unverified Pages URL cannot be clickable");
+  assert.match(await page.locator("#inspectorDeployedSha").textContent(),/Not verified/,"Never show invented publication");
+  pass(kind+": new public repository indexed without Pages claim");
   await page.locator('.star-node[data-repo-id="REPO-000003"]').click();
   await page.locator("#arc04IncludeProposals").check();
   await page.waitForFunction(()=>document.querySelector("#arc04Count")?.textContent.includes("3 proposals shown"));
@@ -38,9 +42,9 @@ async function inspect(page,kind){
   await page.locator("#arc04IncludeProposals").uncheck();
   await page.waitForFunction(()=>document.querySelector("#arc04Count")?.textContent.includes("0 proposals shown"));
   await page.locator("#sectorSearch").fill("unlikely_nonexistent_repos_name");
-  await page.waitForFunction(()=>document.querySelector("#sectorStatus")?.textContent.includes("0 of 8 destinations"));
+  await page.waitForFunction(()=>document.querySelector("#sectorStatus")?.textContent.includes("0 of 9 destinations"));
   await page.locator("#sectorReset").click();
-  await page.waitForFunction(()=>document.querySelector("#sectorStatus")?.textContent.includes("8 of 8 destinations"));
+  await page.waitForFunction(()=>document.querySelector("#sectorStatus")?.textContent.includes("9 of 9 destinations"));
   pass(kind+": Arc03 search, empty state and reset unchanged");
   const screenshot=out+"/atlas-"+kind+".png";
   await page.screenshot({path:screenshot,fullPage:true});
@@ -56,7 +60,7 @@ async function inspect(page,kind){
   await page.waitForFunction(()=>document.querySelector("#arc05HistoryCount")?.textContent.includes("6 source-linked history records"));
   pass(kind+": Arc05 true tag, five immutable A7 events, dated peer publication");
   await page.locator("#arc06World").waitFor({state:"visible"});
-  await page.waitForFunction(()=>document.querySelector("#arc06World")?.options.length===9);
+  await page.waitForFunction(()=>document.querySelector("#arc06World")?.options.length===10);
   await page.locator("#arc06World").selectOption("REPO-000006");
   await page.locator("#arc06Go").click();
   await page.waitForFunction(()=>window.a7SelectedStationId==="REPO-000006");

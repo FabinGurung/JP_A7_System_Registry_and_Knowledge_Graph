@@ -227,6 +227,33 @@
       "last_verified_at": "2026-10-06T07:50:00Z",
       "historical_alias_coverage": "NOT_EXPOSED_BY_PROVIDER",
       "governance_notes": "Latest successful GitHub-managed Pages build is sourced from pages-live, not main."
+    },
+    {
+      "repository_id": "REPO-000010",
+      "entity_type": "github_repository",
+      "canonical_label": "JP Field and Desk Resource Library",
+      "repository_full_name": "FabinGurung/JP_Field_and_Desk_Resource_Library",
+      "current_slug": "JP_Field_and_Desk_Resource_Library",
+      "provider_object_id": "1448289662",
+      "description": "Human-first project resource portal backed by Google Drive",
+      "default_branch": "main",
+      "canonical_production_branch": null,
+      "canonical_pages_workflow": null,
+      "deployment_type": "PAGES_NOT_VERIFIED",
+      "public_site_url": null,
+      "deployment_status": "PUBLIC_GIT_REPO__PAGES_UNVERIFIED",
+      "visibility": "public",
+      "archived": false,
+      "system_role": "FIELD_DESK_RESOURCE_LIBRARY",
+      "ecosystem_scope": "CORE_SUPPORT",
+      "role_confidence": "HIGH_FOR_IDENTITY",
+      "pages_enabled": null,
+      "last_observed_default_branch_head": "87a5305306faf8a4ecffb0376eba363e86ff6dea",
+      "last_verified_at": null,
+      "observed_date": "2026-11-08",
+      "historical_alias_coverage": "NOT_EXPOSED_BY_PROVIDER",
+      "governance_notes": "Public repository verified; independent resource library. Migration QA observed but Pages, A7_MODULE and completed import not verified; no authority transfer.",
+      "head_resolution_rule": "FETCH_LIVE_FROM_GITHUB_PROVIDER"
     }
   ]
 }

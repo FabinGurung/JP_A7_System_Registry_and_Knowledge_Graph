@@ -1,0 +1,12 @@
+{
+  "schema": "jp-source-archive-pre/1",
+  "subject_id": "A7-GALACTIC-ARC06-CONTROLLER",
+  "sequence_id": "A7-SEQ-000047",
+  "phase": "PRE",
+  "ordinal": "000001",
+  "original_main_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "original_path": "site/assets/galactic-atlas-arc06.js",
+  "original_git_blob_sha": "01892429100c2879455eb9183be06570063f37e8",
+  "restore": "Restore exact old Git blob to same path via reviewed PR",
+  "reason": "Tenth station requires updating hardcoded nine-station Arc06 source verification."
+}

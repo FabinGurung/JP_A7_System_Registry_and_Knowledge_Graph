@@ -86,10 +86,10 @@
     const res=await fetch("data/galactic-atlas.json",{cache:"no-store"});
     if(!res.ok)throw Error("Galaxy projection unavailable");
     const value=await res.json();
-    if(value.non_authoritative!==true||value.station_count!==9||!Array.isArray(value.stations)||value.stations.length!==9||
+    if(value.non_authoritative!==true||value.station_count!==10||!Array.isArray(value.stations)||value.stations.length!==10||
       value.verified_runtime_handoff_count!==0)throw Error("Arc06 requires proven source projection");
     data=value;worlds=value.stations;const ids=new Set(worlds.map(s=>s.id));
-    if(ids.size!==9||!ids.has(root)||worlds.some(s=>!s.github_url?.startsWith("https://github.com/FabinGurung/")))throw Error("Invalid source station IDs");
+    if(ids.size!==10||!ids.has(root)||worlds.some(s=>!s.github_url?.startsWith("https://github.com/FabinGurung/")))throw Error("Invalid source station IDs");
     for(const target of [$("arc06World"),$("arc06CompareWorld")]){
       for(const s of worlds){const opt=dom("option",s.short+" · "+s.title);opt.value=s.id;target.append(opt);}
     }
@@ -101,7 +101,7 @@
     const wanted=valid(request)?request:null;
     const apply=()=>{
       if(initialConsumed)return;
-      if(document.querySelectorAll(".star-node").length!==9)return;
+      if(document.querySelectorAll(".star-node").length!==10)return;
       initialConsumed=true;
       if(wanted)go(wanted);
       else picked(window.a7SelectedStationId||root);

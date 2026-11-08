@@ -94,10 +94,19 @@ if not findings: errors.append("Pages findings inventory must not be empty")
 for f in findings:
     if f.get("repository_id") not in repo_by: errors.append(f"finding references unknown repo {f.get('repository_id')}")
 
-expected_provider_ids={"843020367","897526094","1307302088","1309466765","1312113873","1312147922","1312661427","1326596450","1406572237"}
+expected_provider_ids={"843020367","897526094","1307302088","1309466765","1312113873","1312147922","1312661427","1326596450","1406572237","1448289662"}
 if set(provider_ids)!=expected_provider_ids:
-    errors.append("connected owner repository provider-ID set differs from Phase-3 observed set")
+    errors.append("current public repository provider-ID set differs from 2026-11-08 source")
 
+new=repo_by.get("REPO-000010")
+if not new or new.get("provider_object_id")!="1448289662" or new.get("public_site_url") is not None:
+    errors.append("Resource Library identity or unverified Pages state drift")
+else:
+    page=next((p for p in pages if p.get("repository_id")=="REPO-000010"),None)
+    if not page or page.get("owner_invariant_status")!="NOT_ESTABLISHED" or page.get("latest_successful_run_id") is not None:
+        errors.append("Unverified Resource Library must not claim a deployed Pages release")
+    if any(w.get("repository_id")=="REPO-000010" and w.get("deploy_pages_capable") for w in workflows):
+        errors.append("Migration workflow misclassified as Pages")
 if errors:
     print("A7 GITHUB INVENTORY VALIDATION: FAIL")
     for e in errors: print("- "+e)

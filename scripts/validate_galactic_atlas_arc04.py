@@ -20,7 +20,7 @@ assert projection["relationship_arc"]=="GALACTIC_ATLAS_ARC_04_EVIDENCE_GATED_ROU
 assert projection["navigation_arc"]=="GALACTIC_ATLAS_ARC_03_SECTORS"
 assert projection["arc"]=="GALACTIC_ATLAS_ARC_02_INSPECTOR"
 assert projection["non_authoritative"] and projection["provider_snapshot_not_live"]
-assert projection["station_count"]==9 and len(projection["links"])==8
+assert projection["station_count"]==10 and len(projection["links"])==9
 assert len(projection["sectors"])==5 and projection["sector_count"]==5
 assert len(projection["routes"])==projection["route_count"]==4
 assert len(projection["candidate_routes"])==projection["candidate_count"]==4
@@ -30,7 +30,7 @@ assert set(decision["admitted_edge_ids"])=={e["id"] for e in projection["routes"
 modules=json.loads((R/"registry/entities/modules.json").read_text())["modules"]
 module_repo={m["module_id"]:m["repository_id"] for m in modules}
 ids={s["id"] for s in projection["stations"]}
-assert len(ids)==9 and len(module_repo)==7
+assert len(ids)==10 and len(module_repo)==7
 seen=set()
 for route in projection["routes"]:
     assert route["id"] not in seen
@@ -74,4 +74,4 @@ assert "pointer-events:none" in css and "@media(max-width:750px)" in css
 assert 'assets/fluffy-rocket.js' in html and 'a7-unified-theme.css' in html
 assert 'id="sectorFilters"' in html and 'id="selectedSector"' in html
 assert not any(x in (html+js+css) for x in ("drive.google.com/drive/folders/","GDRIVE-ROOT-"))
-print("A7 ARC04 ROUTES PASS navigation=4 proposals=4 verified_runtime=0 sectors=5 stations=9")
+print("A7 ARC04 ROUTES PASS navigation=4 proposals=4 verified_runtime=0 sectors=5 stations=10")

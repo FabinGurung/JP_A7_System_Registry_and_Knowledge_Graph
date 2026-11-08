@@ -163,6 +163,28 @@
       ],
       "observed_at": "2026-10-06T07:50:00Z",
       "binding_verified_at": "2026-10-06T11:02:44Z"
+    },
+    {
+      "role_candidate_id": "RROLE-000010",
+      "repository_id": "REPO-000010",
+      "candidate_role": "FIELD_DESK_RESOURCE_LIBRARY",
+      "confidence": "HIGH_FOR_REPOSITORY_IDENTITY",
+      "binding_status": "CATALOGUE_ONLY__MODULE_MANIFEST_NOT_FOUND",
+      "evidence": [
+        {
+          "kind": "GITHUB_PROVIDER_ID",
+          "value": "1448289662"
+        },
+        {
+          "kind": "CURRENT_REPOSITORY_README",
+          "value": "Human-first project resource portal backed by Google Drive"
+        },
+        {
+          "kind": "WORKFLOW_TREE",
+          "value": "Historical Git transfer plus safety tests, no Pages workflow"
+        }
+      ],
+      "observed_date": "2026-11-08"
     }
   ]
 }
