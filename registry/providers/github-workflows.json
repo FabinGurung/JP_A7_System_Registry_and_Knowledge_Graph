@@ -346,6 +346,36 @@
       "deploy_pages_capable": false,
       "pages_write": false,
       "production_status": "NON_PAGES"
+    },
+    {
+      "workflow_id": "GHWF-000024",
+      "repository_id": "REPO-000010",
+      "workflow_path": ".github/workflows/a9-history-transfer.yml",
+      "workflow_sha": "bd46d9fd2e11748f19860e3b6b62d6ac994a650a",
+      "workflow_name": "A9 / Resource Library - manual historical Git transfer",
+      "branch_refs": [
+        "main"
+      ],
+      "workflow_role": "MIGRATION_MANUAL_NOT_PAGES",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PAGES",
+      "latest_successful_run_id": 42370830801
+    },
+    {
+      "workflow_id": "GHWF-000025",
+      "repository_id": "REPO-000010",
+      "workflow_path": ".github/workflows/a9-history-transfer-qa.yml",
+      "workflow_sha": "e898b25485a85b726a38c9028a3ff39eb206235c",
+      "workflow_name": "A9 / Resource Library - historical transfer safety tests",
+      "branch_refs": [
+        "fix/partial-historical-import-resume-20261107"
+      ],
+      "workflow_role": "MIGRATION_QA_NOT_PAGES",
+      "deploy_pages_capable": false,
+      "pages_write": false,
+      "production_status": "NON_PAGES",
+      "latest_successful_run_id": 42379011051
     }
   ]
 }
