@@ -19,7 +19,7 @@ async function inspect(page,kind){
   await page.locator(".star-node").first().waitFor({timeout:15000});
   await page.waitForFunction(()=>document.querySelectorAll(".star-node").length===10 && document.querySelector("#arc04Count")?.textContent.includes("4 documented navigation"),{timeout:15000});
   assert.equal(await page.locator(".star-node").count(),10);
-  pass(kind+": nine source-backed stations");
+  pass(kind+": ten source-backed stations");
   assert.equal(await page.locator('aside.memory-wall-shortcut a[href="memory-wall.html#memory-wall-contents"]').count(),1,"Homepage must directly expose Memory Wall contents");
   pass(kind+": L0 visibly links directly to seven-chapter Memory Wall contents");
 
