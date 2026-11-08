@@ -1,0 +1,135 @@
+{
+  "schema": "jp-source-archive-post/1",
+  "subject_id": "A7-GALACTIC-REPO-CATALOGUE",
+  "sequence_id": "A7-SEQ-000047",
+  "ordinal": "000001",
+  "phase": "POST",
+  "verified_at_date": "2026-11-08",
+  "source_commit_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc",
+  "source_branch": "feature/a7-seq-000047-repository-inventory-20261108",
+  "pre_source_main_commit_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "pre_paths": [
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_ARC06_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_THEME_PIN_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_TEXT_A7_SEQ_000047.json"
+  ],
+  "content_git_blobs": [
+    {
+      "path": "docs/GALACTIC_ATLAS_ARC01_READ_FIRST.md",
+      "git_blob_sha": "a603d769e21d787396e71ba516e8466bcd82aece"
+    },
+    {
+      "path": "registry/authority/repository-role-candidates.json",
+      "git_blob_sha": "49155a47d1455dc277574f7806c88b58e3907066"
+    },
+    {
+      "path": "registry/decisions/cloud-orbit-theme.v0.1.json",
+      "git_blob_sha": "978a077331f9a4e7a10c9a240f564ee1bbab8227"
+    },
+    {
+      "path": "registry/decisions/galactic-atlas-sectors.v0.1.json",
+      "git_blob_sha": "1d4d37dfbca2c9fda205197734020fdc07da8a9b"
+    },
+    {
+      "path": "registry/decisions/galactic-atlas-ui.v0.1.json",
+      "git_blob_sha": "d20e4273ed1a13177941ccef807bead90e2fbb59"
+    },
+    {
+      "path": "registry/entities/repositories.json",
+      "git_blob_sha": "fc1aa29b683a794123f5f94e67aa116d7fa359be"
+    },
+    {
+      "path": "registry/providers/galactic-atlas-public-repository-inventory-20261108.json",
+      "git_blob_sha": "23d043fbaf79f39dbc13eae1803271b28d16b83f"
+    },
+    {
+      "path": "registry/providers/github-branches.jsonl",
+      "git_blob_sha": "89dd864cdc57a3309b778c68e168b1ed73496efa"
+    },
+    {
+      "path": "registry/providers/github-inventory-meta.json",
+      "git_blob_sha": "88857e9e4b499b1fc0a5a624d4cb303c4c514839"
+    },
+    {
+      "path": "registry/providers/github-pages.json",
+      "git_blob_sha": "5f4f5ec1711e151a4a6f401dbea82bd2ce4530f7"
+    },
+    {
+      "path": "registry/providers/github-workflows.json",
+      "git_blob_sha": "ca36fb22d271318543106409dc326092e685b8dc"
+    },
+    {
+      "path": "scripts/a7_browser_qa.cjs",
+      "git_blob_sha": "202024a15890286bc6909edabe1f580b1c9f7eba"
+    },
+    {
+      "path": "scripts/generate_galactic_atlas.py",
+      "git_blob_sha": "fee79ba400d72815e7814773617bcd81224c8af5"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas.py",
+      "git_blob_sha": "c75abc9cd4bd56046fc99f3988e9fd3b34091bdc"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc02.py",
+      "git_blob_sha": "fcde2e4d7888b8206b20112e25dce929c3d160bb"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc03.py",
+      "git_blob_sha": "47ce721b0a8febaa424dee49c6ef9dba235d9707"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc04.py",
+      "git_blob_sha": "760cac3273d4d246e8fd536410139dbc43c62255"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc05.py",
+      "git_blob_sha": "df8bd4575617aa483aded2e2a7f2dcd21316a934"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc06.py",
+      "git_blob_sha": "b56d33e0d3cc93b321becfba81c3b2992522087c"
+    },
+    {
+      "path": "scripts/validate_github_inventory.py",
+      "git_blob_sha": "3304de116d76992d1010a04bdccb00a39bbc9bd7"
+    },
+    {
+      "path": "site/assets/galactic-atlas-arc06.js",
+      "git_blob_sha": "54beb59c6a1cbfc64cab203648d62622c254fc96"
+    },
+    {
+      "path": "site/assets/galactic-atlas.js",
+      "git_blob_sha": "19c090060476cc3d25b98bc52fd7ec3fe3fff2dd"
+    },
+    {
+      "path": "site/index.html",
+      "git_blob_sha": "c08455fbc1a3b398eae172a88e5321bbae8410f6"
+    }
+  ],
+  "checks": {
+    "registry": {
+      "run_id": 42444576542,
+      "conclusion": "success",
+      "head_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc"
+    },
+    "real_browser": {
+      "run_id": 42444576529,
+      "conclusion": "success",
+      "head_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc"
+    },
+    "pages": "NOT_DEPLOYED_FROM_FEATURE_BRANCH",
+    "independent_http": "NOT_VERIFIED"
+  },
+  "observed": {
+    "public_repos": 10,
+    "old_ids_preserved": 9,
+    "added_id": "REPO-000010",
+    "pages_verified_for_added": false,
+    "private_inventory_complete": false
+  },
+  "restore": "Review and restore any recorded blob into its SAME canonical Git path; never reuse an archive path as live source",
+  "peer_writes": 0,
+  "private_drive_writes": 0
+}
