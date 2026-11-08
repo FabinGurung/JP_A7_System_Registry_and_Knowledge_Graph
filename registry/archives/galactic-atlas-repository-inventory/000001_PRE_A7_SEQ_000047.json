@@ -55,6 +55,30 @@
     {
       "path": "scripts/a7_browser_qa.cjs",
       "git_blob_sha": "4ae295f3cc09b76ef479dba5d6da2ad45fbb9a3d"
+    },
+    {
+      "path": "registry/providers/github-inventory-meta.json",
+      "git_blob_sha": "532941a24daaf8dd4acc17a8149eff6564eece64"
+    },
+    {
+      "path": "registry/providers/github-pages.json",
+      "git_blob_sha": "46819e9a6b13c7a03d9dcdd6ad38f4d2a1df891d"
+    },
+    {
+      "path": "registry/providers/github-branches.jsonl",
+      "git_blob_sha": "0c610f1eac3662bf2e42bf128352223ded4dc536"
+    },
+    {
+      "path": "registry/providers/github-workflows.json",
+      "git_blob_sha": "19202941bdedf88db59d0dbcc30afd9ae20c4c99"
+    },
+    {
+      "path": "registry/authority/repository-role-candidates.json",
+      "git_blob_sha": "944dc00ca5f371b40b37f5159b14e2701ac41c83"
+    },
+    {
+      "path": "scripts/validate_github_inventory.py",
+      "git_blob_sha": "0cafa5d8136d0d57719b72d45c1cd5381d1726fb"
     }
   ],
   "restore": "Restore recorded original Git blobs to SAME canonical paths via reviewed PR; do not rewrite history.",
