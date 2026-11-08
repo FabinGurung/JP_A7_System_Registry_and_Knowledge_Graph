@@ -3,7 +3,7 @@
   "sequence_id": "A7-SEQ-000021",
   "decision_id": "A7-GAL-ARC03-001",
   "status": "ADOPTED_PRESENTATION_TAXONOMY",
-  "scope": "Eight destination stations plus the one A7 control hub; navigation/filtering only, not domain reclassification",
+  "scope": "Nine destination stations plus the one A7 control hub; navigation/filtering only, not domain reclassification",
   "sector_order": [
     "CONTROL",
     "ENGINEERING",
@@ -93,6 +93,11 @@
       "repository_id": "REPO-000009",
       "sector_id": "KNOWLEDGE",
       "why": "Study materials and learning"
+    },
+    {
+      "repository_id": "REPO-000010",
+      "sector_id": "OPERATIONS",
+      "why": "Field-and-desk resource portal navigation only; no Operations ownership transfer"
     }
   ],
   "restrictions": {
@@ -103,6 +108,7 @@
     "category_changes_are_not_runtime_deps": true,
     "public_projection_only": true,
     "private_a9_seq13_remains_staged": true,
-    "peer_repository_edits": false
+    "peer_repository_edits": false,
+    "historical_arc02_provider_observation_preserved": true
   }
 }
