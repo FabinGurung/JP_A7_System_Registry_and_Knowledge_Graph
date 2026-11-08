@@ -1,0 +1,62 @@
+{
+  "schema": "jp-source-archive-pre/1",
+  "subject_id": "A7-GALACTIC-REPO-CATALOGUE",
+  "sequence_id": "A7-SEQ-000047",
+  "snapshot_ordinal": "000001",
+  "phase": "PRE",
+  "as_of": "2026-11-08",
+  "original_main_commit_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "branch": "feature/a7-seq-000047-repository-inventory-20261108",
+  "live_sources": [
+    {
+      "path": "registry/entities/repositories.json",
+      "git_blob_sha": "a37f2b6e0ee194c5cc864b4a161edcc83b93a0c8"
+    },
+    {
+      "path": "registry/decisions/galactic-atlas-ui.v0.1.json",
+      "git_blob_sha": "40ac96dcc338546071227335f889f331adf04f98"
+    },
+    {
+      "path": "registry/decisions/galactic-atlas-sectors.v0.1.json",
+      "git_blob_sha": "d797c0079e8c7723e512985ae23d7070df5198f6"
+    },
+    {
+      "path": "scripts/generate_galactic_atlas.py",
+      "git_blob_sha": "d76c6ded134fe8dbd748923ffe6d5eff997e3d97"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas.py",
+      "git_blob_sha": "38f5d69ee5e1ed4dc3d216341985a1bc7c331a3e"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc02.py",
+      "git_blob_sha": "55e9ddb35991ba0201e3447ba96030cfcd0ef733"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc03.py",
+      "git_blob_sha": "3ccc92e2b0f3f7f281f1a99da18495c389f60f7f"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc04.py",
+      "git_blob_sha": "ac82be3b4e6b7704c87f9ab3c20954c133f0b488"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc05.py",
+      "git_blob_sha": "a6e8313dc47857e2c2b04d5940da4dda04a93a9d"
+    },
+    {
+      "path": "scripts/validate_galactic_atlas_arc06.py",
+      "git_blob_sha": "2fce4f2a8b08c51a7b7e360ad301396eda651649"
+    },
+    {
+      "path": "site/assets/galactic-atlas.js",
+      "git_blob_sha": "00e93e3f5c2223bf8d820c4df9b77bea4d5e410c"
+    },
+    {
+      "path": "scripts/a7_browser_qa.cjs",
+      "git_blob_sha": "4ae295f3cc09b76ef479dba5d6da2ad45fbb9a3d"
+    }
+  ],
+  "restore": "Restore recorded original Git blobs to SAME canonical paths via reviewed PR; do not rewrite history.",
+  "reason": "Ten verified public FabinGurung repositories versus nine existing A7 stations; new Resource Library must be indexed without inventing Pages."
+}
