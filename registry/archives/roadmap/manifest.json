@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "PRE_000008_CAPTURED_POST_PENDING",
+  "status": "POST_000008_VALIDATED_ARCHIVED",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -55,10 +55,10 @@
     "status": "EXACT_PRE_SOURCE_SAVED"
   },
   "latest_post": {
-    "path": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json",
-    "status": "AWAITING_SOURCE_POST_000008_VALIDATED",
-    "git_blob_sha": "78ae4bae02f2a7dccdaf4c3d746ad05693c6daa6",
-    "first_registry_run": 40827663411,
+    "path": "registry/archives/roadmap/000008_POST_A7_SEQ_000047.json",
+    "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
+    "git_blob_sha": "04d02bf4de69a5dafad4b1e7230fb1fc97244a82",
+    "first_registry_run": 42445225147,
     "same_live_source_id": "A7-ROADMAP-20261009"
   },
   "final_seq41_closeout_checks": {
@@ -119,6 +119,14 @@
     "chromium_run": 42444877468,
     "pages_run": 42444877440,
     "all_success": true,
+    "independent_http": false
+  },
+  "seq47_post_verified": {
+    "same_git_blob_as_original": true,
+    "original_live_id": "A7-ROADMAP-20261009",
+    "new_archive_ordinal": "000008",
+    "post_source_git_blob_sha": "04d02bf4de69a5dafad4b1e7230fb1fc97244a82",
+    "first_registry_run": 42445225147,
     "independent_http": false
   }
 }
