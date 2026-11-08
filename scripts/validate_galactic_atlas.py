@@ -11,18 +11,18 @@ ui = json.loads((R / "registry/decisions/galactic-atlas-ui.v0.1.json").read_text
 repo = json.loads((R / "registry/entities/repositories.json").read_text())
 d = build()
 assert ui["status"] == "PRESENTATION_ONLY_NOT_DOMAIN_AUTHORITY"
-assert d["non_authoritative"] is True and d["station_count"] == 9
-assert len(d["stations"]) == len(repo["repositories"]) == 9
-assert len(d["links"]) == 8
+assert d["non_authoritative"] is True and d["station_count"] == 10
+assert len(d["stations"]) == len(repo["repositories"]) == 10
+assert len(d["links"]) == 9
 source_ids = {x["repository_id"] for x in repo["repositories"]}
 shown_ids = {x["id"] for x in d["stations"]}
-assert shown_ids == source_ids and len(source_ids) == 9
+assert shown_ids == source_ids and len(source_ids) == 10
 assert {e["from"] for e in d["links"]} == {"REPO-000001"}
 assert all(e["authority_transfer"] is False for e in d["links"])
 assert all(e["to"] in shown_ids and e["to"] != "REPO-000001" for e in d["links"])
 assert all(s["github_url"] == "https://github.com/" + s["module_repository"]
            for s in d["stations"])
-assert all(s["website_url"].startswith("https://fabingurung.github.io/")
+assert all(s["website_url"].startswith("https://fabingurung.github.io/") if s["id"]!="REPO-000010" else s["website_url"] is None
            for s in d["stations"])
 assert all(s["source_observed_at"] for s in d["stations"])
 aad = next(s for s in d["stations"] if s["id"] == "REPO-000003")
@@ -62,4 +62,4 @@ with tempfile.TemporaryDirectory() as tmp:
     opened = json.loads(path.read_text())
     assert opened["source_revisions"] == d["source_revisions"]
 
-print("A7 GALACTIC ATLAS ACCEPTANCE PASS indexed=9 routes=8 privacy=PASS legacy=preserved nav=progressive")
+print("A7 GALACTIC ATLAS ACCEPTANCE PASS indexed=10 routes=9 privacy=PASS legacy=preserved nav=progressive")
