@@ -1,0 +1,116 @@
+{
+  "schema": "a7://public-owner-repository-inventory/1",
+  "observation_id": "A7-PUBLIC-REPO-OBS-20261108-001",
+  "observed_date": "2026-11-08",
+  "owner": "FabinGurung",
+  "scope": "PUBLIC_REPOSITORIES_VISIBLE_TO_CONNECTED_GITHUB_APP__PRIVATE_OWNER_REPOS_NOT_ATTESTED",
+  "count": 10,
+  "source": "GitHub provider owner-filtered repository list, public search and exact repository/branch/workflow readback",
+  "observed_repositories": [
+    {
+      "repository_id": "REPO-000001",
+      "provider_object_id": "1406572237",
+      "repository_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000002",
+      "provider_object_id": "843020367",
+      "repository_full_name": "FabinGurung/JP_Structural_Analysis",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000003",
+      "provider_object_id": "897526094",
+      "repository_full_name": "FabinGurung/JP_Computer-Aided-Drawings",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000004",
+      "provider_object_id": "1307302088",
+      "repository_full_name": "FabinGurung/JP_Scheduling_Work_and_Resources_Management",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000005",
+      "provider_object_id": "1309466765",
+      "repository_full_name": "FabinGurung/sumita-pilates-studio",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000006",
+      "provider_object_id": "1312113873",
+      "repository_full_name": "FabinGurung/JP_Research-and-Development",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000007",
+      "provider_object_id": "1312147922",
+      "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000008",
+      "provider_object_id": "1312661427",
+      "repository_full_name": "FabinGurung/JP_Cost_Estimation",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000009",
+      "provider_object_id": "1326596450",
+      "repository_full_name": "FabinGurung/JP_Study_Hub",
+      "visibility": "public",
+      "archived": false
+    },
+    {
+      "repository_id": "REPO-000010",
+      "provider_object_id": "1448289662",
+      "repository_full_name": "FabinGurung/JP_Field_and_Desk_Resource_Library",
+      "visibility": "public",
+      "archived": false
+    }
+  ],
+  "preserved_legacy_ids": [
+    "REPO-000001",
+    "REPO-000002",
+    "REPO-000003",
+    "REPO-000004",
+    "REPO-000005",
+    "REPO-000006",
+    "REPO-000007",
+    "REPO-000008",
+    "REPO-000009"
+  ],
+  "removed_legacy_ids": [],
+  "new_repository": {
+    "repository_id": "REPO-000010",
+    "provider_object_id": "1448289662",
+    "repository_full_name": "FabinGurung/JP_Field_and_Desk_Resource_Library",
+    "default_branch": "main",
+    "observed_main_sha": "87a5305306faf8a4ecffb0376eba363e86ff6dea",
+    "main_commit_date": "2026-11-07T13:55:03Z",
+    "verified_workflow": {
+      "id": 42379011051,
+      "kind": "MIGRATION_SAFETY_TESTS_NOT_PAGES",
+      "result": "success",
+      "branch": "fix/partial-historical-import-resume-20261107"
+    },
+    "pages_status": "UNVERIFIED",
+    "pages_endpoint": "CONNECTOR_NOT_ALLOWED",
+    "production_pages_workflow_seen": false,
+    "root_module_manifest_seen": false,
+    "independent_http_pages_readback": false
+  },
+  "presentation_only": true,
+  "dated_not_live": true,
+  "no_private_repository_claim": true,
+  "no_publication_inferred_from_visibility": true
+}
