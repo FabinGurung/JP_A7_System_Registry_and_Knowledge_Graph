@@ -3,11 +3,11 @@
   "sequence_id": "A7-SEQ-000008",
   "owner": "FabinGurung",
   "observed_at": "2026-10-06T22:19:05Z",
-  "repositories_observed": 9,
-  "repositories_scope": "ALL_REPOSITORIES_RETURNED_FOR_OWNER_BY_CONNECTED_GITHUB_PROVIDER",
-  "branch_records": 88,
-  "current_custom_workflow_records": 23,
-  "pages_records": 9,
+  "repositories_observed": 10,
+  "repositories_scope": "PUBLIC_REPOSITORIES_VISIBLE_TO_CONNECTED_GITHUB_APP__PRIVATE_UNVERIFIED",
+  "branch_records": 100,
+  "current_custom_workflow_records": 25,
+  "pages_records": 10,
   "methodology": [
     "GitHub repository metadata endpoint for immutable repository IDs/default branch/homepage/has_pages",
     "GitHub branches endpoint for branch names/current heads",
@@ -30,6 +30,14 @@
   "fail_forward_status": "NO_INVENTORY_BLOCKER; equivalent provider evidence paths succeeded.",
   "historical_alias_policy": "GitHub repository rename history is not exposed by the available provider endpoint. Historical aliases are recorded only where independently verified; do not infer missing old slugs.",
   "cross_repository_dependency_search": "No current default-branch code-search hits were returned for specialist repository slugs in the Operations Hub or R&D hub. Treat cross-repository dependencies as not yet provider-verified rather than absent.",
-  "refresh_scope": "BOUND_MODULE_PAGES_AND_WORKFLOW_PROVIDER_REFRESH",
-  "refresh_summary": "Seven bound module repositories re-read through GitHub Actions/workflow provider evidence; five records advanced, CAD and Study unchanged."
+  "refresh_scope": "PUBLIC_OWNER_REPOSITORY_RECONCILIATION",
+  "refresh_summary": "Ten public owner repositories, one new Resource Library with no verified Pages. Historical nine provider snapshots unchanged; private repositories not attested.",
+  "new_public_reconciliation": {
+    "date": "2026-11-08",
+    "new_repo_id": "REPO-000010",
+    "new_provider_id": "1448289662",
+    "previous_nine_preserved": true,
+    "dated_historical_pages_snapshots_preserved": true,
+    "new_pages_verified": false
+  }
 }
