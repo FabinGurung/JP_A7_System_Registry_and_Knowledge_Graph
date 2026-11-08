@@ -7,7 +7,7 @@ R=Path(__file__).resolve().parents[1]
 source=R/"registry/decisions/galactic-atlas-sectors.v0.1.json"
 o=json.loads(source.read_text(encoding="utf-8"))
 data=build()
-expected={"CONTROL":1,"ENGINEERING":4,"OPERATIONS":1,"KNOWLEDGE":2,"ADJACENT":1}
+expected={"CONTROL":1,"ENGINEERING":4,"OPERATIONS":2,"KNOWLEDGE":2,"ADJACENT":1}
 assert o["status"]=="ADOPTED_PRESENTATION_TAXONOMY"
 assert o["restrictions"]["private_a9_seq13_remains_staged"] is True
 assert o["restrictions"]["peer_repository_edits"] is False
@@ -16,10 +16,10 @@ assert set(o["sector_order"])==set(expected)
 assert {s["id"]:s["count"] for s in data["sectors"]}==expected
 assert data["navigation_arc"]=="GALACTIC_ATLAS_ARC_03_SECTORS"
 assert data["sector_taxonomy_presentation_only"] and data["non_authoritative"]
-assert len(data["stations"])==9 and len(data["links"])==8
-assert len({s["id"] for s in data["stations"]})==9
+assert len(data["stations"])==10 and len(data["links"])==9
+assert len({s["id"] for s in data["stations"]})==10
 assignments={a["repository_id"]:a["sector_id"] for a in o["assignments"]}
-assert len(assignments)==9
+assert len(assignments)==10
 for station in data["stations"]:
     assert station["sector"]==assignments[station["id"]]
     assert station["provider_evidence"]["not_live"]
@@ -50,4 +50,4 @@ assert 'new URL("control-towers.html"' in js
 assert (R/"registry/dependencies/status.json").exists()
 dep=json.loads((R/"registry/dependencies/status.json").read_text())
 assert not dep["verified_dependencies"]
-print("A7 ARC03 GALACTIC SECTORS PASS: five sectors, nine source-backed stations, zero runtime links")
+print("A7 ARC03 GALACTIC SECTORS PASS: five sectors, ten source-backed stations, zero runtime links")
