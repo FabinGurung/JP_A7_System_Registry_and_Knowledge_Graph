@@ -99,7 +99,7 @@
     "require_provider_readback": true,
     "create_new_sequence_for_acknowledgement": false
   },
-  "current_sequence": "A7-SEQ-000046",
+  "current_sequence": "A7-SEQ-000047",
   "current_sequence_status": "FINAL_CLOSED_PASS",
   "observed_at": "2026-10-20T12:10:28Z",
   "google_drive_inventory": {
@@ -767,5 +767,35 @@
       "independent_http_body_readback": false,
       "independent_owner_approval": false
     }
+  },
+  "a7_public_repository_reconciliation": {
+    "sequence_id": "A7-SEQ-000047",
+    "status": "FINAL_CLOSED_PASS",
+    "observation_id": "A7-PUBLIC-REPO-OBS-20261108-001",
+    "observation_date": "2026-11-08",
+    "original_repository_registry": "registry/entities/repositories.json",
+    "catalogue_ids": "REPO-000001..REPO-000010",
+    "count_public": 10,
+    "preexisting_public_count": 9,
+    "added_id": "REPO-000010",
+    "preserved_ids": true,
+    "deleted_ids": [],
+    "private_owner_inventory": "NOT_ATTESTED_CONNECTED_LOGIN_DIFFERS",
+    "new_repository_pages": "NOT_VERIFIED",
+    "new_repository_a7_module_manifest": "NOT_VERIFIED",
+    "original_nine_publication_snapshots": "IMMUTABLE_HISTORICAL",
+    "pre_archive": "registry/archives/galactic-atlas-repository-inventory/000001_PRE_A7_SEQ_000047.json",
+    "validated_post_archive": "registry/archives/galactic-atlas-repository-inventory/000001_POST_A7_SEQ_000047.json",
+    "feature_pr": 101,
+    "feature_main_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "main_checks": {
+      "registry_run": 42444877442,
+      "chromium_run": 42444877468,
+      "pages_run": 42444877440,
+      "all_success": true
+    },
+    "independent_public_http_readback": false,
+    "private_drive_writes": false,
+    "peer_repository_writes": false
   }
 }

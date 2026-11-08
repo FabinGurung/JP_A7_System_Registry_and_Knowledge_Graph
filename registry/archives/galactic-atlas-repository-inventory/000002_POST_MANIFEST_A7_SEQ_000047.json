@@ -1,0 +1,63 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-GALACTIC-REPO-CATALOGUE",
+  "sequence_id": "A7-SEQ-000047",
+  "original_live_source": "registry/entities/repositories.json",
+  "live_repository_id_registry": "REPO-000001..REPO-000010",
+  "dedicated_archive_dir": "registry/archives/galactic-atlas-repository-inventory",
+  "archive_ordinal": "000001",
+  "pre_paths": [
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_ARC06_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_THEME_PIN_A7_SEQ_000047.json",
+    "registry/archives/galactic-atlas-repository-inventory/000001_PRE_TEXT_A7_SEQ_000047.json"
+  ],
+  "post_path": "registry/archives/galactic-atlas-repository-inventory/000001_POST_A7_SEQ_000047.json",
+  "append_only_history": "registry/archives/galactic-atlas-repository-inventory/version-history.jsonl",
+  "pre_main_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "validated_feature_source_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc",
+  "validation": {
+    "registry": {
+      "run_id": 42444576542,
+      "conclusion": "success",
+      "head_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc"
+    },
+    "real_browser": {
+      "run_id": 42444576529,
+      "conclusion": "success",
+      "head_sha": "f5f290f1ee88445bda4e86146b18a97b0429b5fc"
+    },
+    "pages": "NOT_DEPLOYED_FROM_FEATURE_BRANCH",
+    "independent_http": "NOT_VERIFIED"
+  },
+  "final_main_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+  "deployment": "GITHUB_PAGES_BUILD_DEPLOY_SUCCESS_AT_FEATURE_MAIN",
+  "independent_http_readback": false,
+  "restoration": "Review and restore any recorded blob into its SAME canonical Git path; never reuse an archive path as live source",
+  "private_provider_ids_published": false,
+  "original_nine_preserved": true,
+  "no_pages_claim_for_new": true,
+  "main_provider_readback": {
+    "registry_run": 42444877442,
+    "chromium_run": 42444877468,
+    "pages_run": 42444877440,
+    "head_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "all_success": true,
+    "independent_public_http": false
+  },
+  "closeout_pre_path": "registry/archives/galactic-atlas-repository-inventory/000002_PRE_MANIFEST_A7_SEQ_000047.json",
+  "closeout": {
+    "sequence_id": "A7-SEQ-000047",
+    "source_verification_run": 42445225147,
+    "original_catalogue_source": "registry/entities/repositories.json",
+    "original_live_ids_preserved": true,
+    "archived_validation_post": "registry/archives/roadmap/validator/000001_POST_A7_SEQ_000047.py",
+    "archived_human_post": "registry/archives/roadmap/docs/000001_POST_A7_SEQ_000047.md",
+    "roadmap_post_blob_sha": "04d02bf4de69a5dafad4b1e7230fb1fc97244a82",
+    "bootstrap_post_blob_sha": "1d074a9e46125c8da65b3f0d82bb39a54b56f41f",
+    "final_main_sha": "PENDING_CLOSEOUT_PR_MERGE",
+    "pages_deployed_for_a7_feature": true,
+    "pages_verified_for_resource_library": false,
+    "independent_http": false
+  }
+}

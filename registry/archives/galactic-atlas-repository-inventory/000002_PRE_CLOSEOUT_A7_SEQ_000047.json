@@ -1,0 +1,10 @@
+{
+  "schema": "jp-source-archive-pre/1",
+  "sequence_id": "A7-SEQ-000047",
+  "phase": "PRE",
+  "ordinal": "000002",
+  "source": "registry/archives/galactic-atlas-repository-inventory/manifest.json",
+  "original_blob_sha": "0629529c431ff842890263233659d0052c84fe29",
+  "pre_feature_main_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+  "restore": "Restore manifest to same path by PR; keep original first PRE/POST records intact"
+}

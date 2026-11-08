@@ -1,0 +1,132 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-ROADMAP-20261009",
+  "subject": "A7 roadmap",
+  "live_source_path": "registry/roadmap.json",
+  "central_archive_dir": "registry/archives/roadmap/",
+  "archive_ordinal": "000008",
+  "pre": {
+    "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
+    "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
+    "status": "COPIED_EXACT_ORIGINAL_BEFORE_EDIT",
+    "sha256": "1a2ad62ef1cc9027d63eaabe8f7af87eb2df590220e8aa49668617ce0ff588e4"
+  },
+  "post": {
+    "path": "registry/archives/roadmap/000001_POST_A7_SEQ_000040.json",
+    "status": "PASS_AFTER_VALIDATION",
+    "sha256": "086a8d9a8f732c67b35bee9e17643abda16ff1c62a2d7ac47a9ea98c016ebd9c",
+    "validated_feature_main_sha": "4f432fb95e6abca3f9f103789d36b0c1ff7afcd4",
+    "registry_run": 40602323919,
+    "pages_run": 40602323693,
+    "chromium_run": 40602324062,
+    "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
+    "source_body_same_as_post": true
+  },
+  "status": "POST_000008_VALIDATED_ARCHIVED",
+  "history": "registry/archives/roadmap/version-history.jsonl",
+  "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
+  "sheet_versions": "SEPARATE_UNTOUCHED",
+  "notebook_versions": "SEPARATE_UNTOUCHED",
+  "release_versions": "SEPARATE_GIT_TAG_NAMESPACE",
+  "original_message": {
+    "provider": "PRIVATE_CHAT",
+    "source_url": null,
+    "stored_in_private_chat": true,
+    "public_copy": false
+  },
+  "evidence": [
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/registry/roadmap.json",
+    "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/releases/tag/a7/memory-wall-toc-v1.0.0"
+  ],
+  "no_private_data": true,
+  "restoration_validation": "RESTORE_INTO_SAME_LIVE_PATH_AND_ID__REVALIDATE_SHA_AND_PROVIDER_READBACK",
+  "final_closeout_checks": {
+    "state": "VERIFIED",
+    "final_commit": "f690a94e5cafcc874ed7c2d9fdd10b21b3099da2",
+    "registry_run": 40603070798,
+    "pages_run": 40603070677,
+    "release_preservation_run": 40603140848,
+    "provider_readback": "GITHUB_ACTIONS_SUCCESS",
+    "independent_http_body_readback": false
+  },
+  "latest_pre": {
+    "path": "registry/archives/roadmap/000008_PRE_A7_SEQ_000047.json",
+    "source_commit": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "status": "EXACT_PRE_SOURCE_SAVED"
+  },
+  "latest_post": {
+    "path": "registry/archives/roadmap/000008_POST_A7_SEQ_000047.json",
+    "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS",
+    "git_blob_sha": "04d02bf4de69a5dafad4b1e7230fb1fc97244a82",
+    "first_registry_run": 42445225147,
+    "same_live_source_id": "A7-ROADMAP-20261009"
+  },
+  "final_seq41_closeout_checks": {
+    "state": "VERIFIED",
+    "verified_against_main_commit": "c4baaf8ff7dfcf9884f09e547e7babc3593be642",
+    "registry_run": 40639913059,
+    "pages_run": 40639913026,
+    "release_safeguard_run": 40639983824,
+    "conclusions": {
+      "registry": "success",
+      "pages": "success",
+      "milestone_safeguard": "success"
+    },
+    "run_head_sha_matches_main": true,
+    "independent_http_body_readback": false,
+    "independent_owner_approval": false
+  },
+  "seq41_manifest_evidence_archive": {
+    "pre": "registry/archives/roadmap/manifest-evidence/000001_PRE_A7_SEQ_000041.json",
+    "post": "registry/archives/roadmap/manifest-evidence/000001_POST_A7_SEQ_000041.json",
+    "original_manifest_blob": "a51d4948343388d95d309a101b1c7ce9663a81d2",
+    "source_path": "registry/archives/roadmap/manifest.json",
+    "same_live_path": true
+  },
+  "seq42_post_expected": "registry/archives/roadmap/000003_POST_A7_SEQ_000042.json",
+  "historical_000003": {
+    "pre_path": "registry/archives/roadmap/000003_PRE_A7_SEQ_000042.json",
+    "post_path": "registry/archives/roadmap/000003_POST_A7_SEQ_000042.json",
+    "post_git_blob_sha": "103b10dea0fc58a18b90b238e1637eeea872cd55",
+    "status": "POST_000003_VALIDATED_ARCHIVED"
+  },
+  "seq43_post_expected": "registry/archives/roadmap/000004_POST_A7_SEQ_000043.json",
+  "historical_000004": {
+    "pre_path": "registry/archives/roadmap/000004_PRE_A7_SEQ_000043.json",
+    "post_path": "registry/archives/roadmap/000004_POST_A7_SEQ_000043.json",
+    "post_git_blob_sha": "d117245b0398fff94fe3d125d01ac0a06495a90c",
+    "status": "POST_000004_VALIDATED_ARCHIVED"
+  },
+  "seq44_post_expected": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json",
+  "historical_000005": {
+    "pre_path": "registry/archives/roadmap/000005_PRE_A7_SEQ_000044.json",
+    "post_path": "registry/archives/roadmap/000005_POST_A7_SEQ_000044.json",
+    "post_git_blob_sha": "abbd910787e25d9a9578e80c8e10ddcb60fb9b47",
+    "status": "POST_000005_VALIDATED_ARCHIVED"
+  },
+  "seq45_post_expected": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json",
+  "historical_000006": {
+    "pre_path": "registry/archives/roadmap/000006_PRE_A7_SEQ_000045.json",
+    "post_path": "registry/archives/roadmap/000006_POST_A7_SEQ_000045.json",
+    "post_git_blob_sha": "c49623962bf7483e27199b38416c602578b9858b",
+    "status": "POST_000006_VALIDATED_ARCHIVED"
+  },
+  "seq46_post_expected": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json",
+  "seq47_post_expected": "registry/archives/roadmap/000008_POST_A7_SEQ_000047.json",
+  "seq47_main_feature_checks": {
+    "commit_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "registry_run": 42444877442,
+    "chromium_run": 42444877468,
+    "pages_run": 42444877440,
+    "all_success": true,
+    "independent_http": false
+  },
+  "seq47_post_verified": {
+    "same_git_blob_as_original": true,
+    "original_live_id": "A7-ROADMAP-20261009",
+    "new_archive_ordinal": "000008",
+    "post_source_git_blob_sha": "04d02bf4de69a5dafad4b1e7230fb1fc97244a82",
+    "first_registry_run": 42445225147,
+    "independent_http": false
+  }
+}
