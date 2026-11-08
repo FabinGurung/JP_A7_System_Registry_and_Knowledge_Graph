@@ -12,7 +12,7 @@
 
 ## Arc 01 rollout — only the central navigation
 
-1. Homepage shows a spatial Galactic Atlas with A7 at the centre and eight peer repositories around it; select **one** node to open a compact inspector.
+1. Homepage shows a spatial Galactic Atlas with A7 at the centre and nine peer repositories around it; select **one** node to open a compact inspector.
 2. Click **Visit system website** to leave A7 for the product's own Pages website, or **Repository / version history** to open its owning Git source. No iframes are assumed (embedding may be blocked by the site and bypasses ordinary navigation); the inspector offers clear source/provider links.
 3. Deep links to specialist products may be shown only as read-only pointers from the catalogue, not embedded copies of template instructions.
 4. Under collapsed “Governance protocol” the seven ownership classes map A7 catalogue vs owning repository for identities, discovery, relationships, history, templates, execution and authority. Governing rule **one writer / typed references / no duplicated authority**.
@@ -27,7 +27,7 @@ The client `site/assets/galactic-atlas.js` reads this public projection, refuses
 
 ## Website links and status caution
 
-All eight peer website URLs come from the A7 repo catalogue. They have last-observed timestamps, and the live website status is **not asserted fresh from A7**. GitHub provider/Actions or original domain owner is authoritative for current publication health; a website is not guaranteed to permit embedding. If a website is offline, GitHub repository link remains available for the selected system.
+The nine peer repositories come from the A7 catalogue; a public repository does not always have a verified Pages website. They have last-observed timestamps, and the live website status is **not asserted fresh from A7**. GitHub provider/Actions or original domain owner is authoritative for current publication health; a website is not guaranteed to permit embedding. If Pages is unverified or a website is offline, only the original GitHub repository link is offered for that system.
 
 ## Intended later arcs (not shipped)
 
