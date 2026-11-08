@@ -82,7 +82,15 @@
       get("selectedSite").textContent = "Open A7 Control Towers ↗";
       get("selectedSite").target = "_self";
       get("selectedSite").removeAttribute("rel");
-    } else link(get("selectedSite"), homepage, "pages", "Visit system website ↗");
+    } else if (selectedRecord.website_url) {
+      link(get("selectedSite"), homepage, "pages", "Visit system website ↗");
+    } else {
+      const siteLink = get("selectedSite");
+      siteLink.removeAttribute("href");
+      siteLink.removeAttribute("target");
+      siteLink.removeAttribute("rel");
+      siteLink.textContent = "Pages not verified for this repository";
+    }
     link(get("selectedRepo"), selectedRecord.github_url, "github", "Repository, version history ↗");
 
     const extras = get("selectedExtras");
@@ -109,15 +117,15 @@
      readback. No API calls, speculative dependencies, or release approvals. */
   function renderProviderEvidence(station) {
     const e = station.provider_evidence;
-    if (!e || !e.not_live || !e.last_successful_publication) return;
+    if (!e || !e.not_live) return;
     get("inspectorObservationDate").textContent = "Observed " + e.observed_date + " (snapshot)";
     const status = get("inspectorStatus");
     status.textContent = e.provider_label.replaceAll("_"," ");
-    status.classList.toggle("arc02-review",/FAILED|PENDING|OLDER|MIXED|SEPARATE|FEATURE/.test(e.provider_label));
+    status.classList.toggle("arc02-review",/FAILED|PENDING|OLDER|MIXED|SEPARATE|FEATURE|UNVERIFIED/.test(e.provider_label));
     get("inspectorMainSha").textContent = e.main_sha.slice(0,12);
     get("inspectorPublishedBranch").textContent = e.publication_branch;
-    get("inspectorDeployedSha").textContent = e.last_successful_publication.sha.slice(0,12);
-    get("inspectorDeployedAt").textContent = e.last_successful_publication.at.slice(0,16).replace("T"," ")+" UTC";
+    get("inspectorDeployedSha").textContent = e.last_successful_publication?.sha?.slice(0,12) || "Not verified";
+    get("inspectorDeployedAt").textContent = e.last_successful_publication?.at ? e.last_successful_publication.at.slice(0,16).replace("T"," ")+" UTC" : "Not verified";
     get("inspectorCapabilities").textContent = e.capability;
     get("inspectorGate").textContent = e.owner_gate;
     get("inspectorDependency").textContent = e.dependency_note;
@@ -130,12 +138,12 @@
       a.href=url; a.target="_blank"; a.rel="noopener noreferrer";
       a.textContent=label+" ↗";anchors.append(a);
     }
-    add("Successful deployment evidence",base+"/actions/runs/"+e.last_successful_publication.id);
-    if(e.related_workflow?.id!==e.last_successful_publication.id) {
+    if(e.last_successful_publication?.id) add("Successful deployment evidence",base+"/actions/runs/"+e.last_successful_publication.id);
+    if(e.related_workflow?.id && e.related_workflow.id!==e.last_successful_publication?.id) {
       add("Additional workflow observation",base+"/actions/runs/"+e.related_workflow.id);
     }
     add("Main source at recorded SHA",base+"/tree/"+e.main_sha);
-    if(e.publication_branch!=="main")
+    if(e.last_successful_publication?.sha && e.publication_branch!=="main")
       add("Publication commit",base+"/tree/"+e.last_successful_publication.sha);
   }
 
@@ -195,9 +203,9 @@
 
   function valid(data) {
     if (!data || data.schema !== "a7://galactic-atlas-read-projection/0.1" ||
-      data.non_authoritative !== true || data.station_count !== 9 ||
-      !Array.isArray(data.stations) || data.stations.length !== 9 ||
-      !Array.isArray(data.links) || data.links.length !== 8 ||
+      data.non_authoritative !== true || data.station_count !== 10 ||
+      !Array.isArray(data.stations) || data.stations.length !== 10 ||
+      !Array.isArray(data.links) || data.links.length !== 9 ||
       data.navigation_arc!=="GALACTIC_ATLAS_ARC_03_SECTORS" ||
       data.sector_taxonomy_presentation_only!==true ||
       data.sector_count!==5 || !Array.isArray(data.sectors) ||
@@ -214,9 +222,9 @@
           typeof station.owns !== "string" ||
           !station.module_repository?.startsWith(OWNER_PREFIX) ||
           !safeUrl(station.github_url, "github") ||
-          !safeUrl(station.website_url, "pages") ||
+          !(safeUrl(station.website_url, "pages") || (station.id==="REPO-000010" && station.website_url===null)) ||
           !station.provider_evidence?.not_live ||
-          !station.provider_evidence?.last_successful_publication?.id ||
+          !(station.provider_evidence?.last_successful_publication?.id || (station.id==="REPO-000010" && station.provider_evidence?.provider_label==="GITHUB_PUBLIC_PAGES_UNVERIFIED" && station.provider_evidence?.last_successful_publication===null)) ||
           !station.provider_evidence?.owner_gate ||
           !Number.isFinite(Number(station.azimuth)) ||
           !Number.isFinite(Number(station.radial))) return false;
