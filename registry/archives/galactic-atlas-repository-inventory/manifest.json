@@ -30,11 +30,20 @@
     "pages": "NOT_DEPLOYED_FROM_FEATURE_BRANCH",
     "independent_http": "NOT_VERIFIED"
   },
-  "final_main_sha": "PENDING_MERGE",
-  "deployment": "PENDING_MAIN_GITHUB_PAGES",
+  "final_main_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+  "deployment": "GITHUB_PAGES_BUILD_DEPLOY_SUCCESS_AT_FEATURE_MAIN",
   "independent_http_readback": false,
   "restoration": "Review and restore any recorded blob into its SAME canonical Git path; never reuse an archive path as live source",
   "private_provider_ids_published": false,
   "original_nine_preserved": true,
-  "no_pages_claim_for_new": true
+  "no_pages_claim_for_new": true,
+  "main_provider_readback": {
+    "registry_run": 42444877442,
+    "chromium_run": 42444877468,
+    "pages_run": 42444877440,
+    "head_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "all_success": true,
+    "independent_public_http": false
+  },
+  "closeout_pre_path": "registry/archives/galactic-atlas-repository-inventory/000002_PRE_MANIFEST_A7_SEQ_000047.json"
 }
