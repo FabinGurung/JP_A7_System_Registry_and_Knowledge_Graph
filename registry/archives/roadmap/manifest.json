@@ -4,7 +4,7 @@
   "subject": "A7 roadmap",
   "live_source_path": "registry/roadmap.json",
   "central_archive_dir": "registry/archives/roadmap/",
-  "archive_ordinal": "000007",
+  "archive_ordinal": "000008",
   "pre": {
     "path": "registry/archives/roadmap/000001_PRE_A7_SEQ_000040.json",
     "source_commit": "059b7a0dff0bc86ce03eef6ae020f905d2becb99",
@@ -22,7 +22,7 @@
     "post_captured_after": "SOURCE_REGISTRY_AND_PAGES_PROOF",
     "source_body_same_as_post": true
   },
-  "status": "POST_000007_VALIDATED_ARCHIVED",
+  "status": "PRE_000008_CAPTURED_POST_PENDING",
   "history": "registry/archives/roadmap/version-history.jsonl",
   "restore": "Restore PRE or POST into the same registry/roadmap.json via versioned PR, run validators and provider readback",
   "sheet_versions": "SEPARATE_UNTOUCHED",
@@ -50,13 +50,13 @@
     "independent_http_body_readback": false
   },
   "latest_pre": {
-    "path": "registry/archives/roadmap/000007_PRE_A7_SEQ_000046.json",
-    "source_commit": "40e54d5256022eedd49914436aa1824aca1da2a0",
+    "path": "registry/archives/roadmap/000008_PRE_A7_SEQ_000047.json",
+    "source_commit": "113f8225d808d48295ce17fad5062a337a9d21e8",
     "status": "EXACT_PRE_SOURCE_SAVED"
   },
   "latest_post": {
     "path": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json",
-    "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_PASS",
+    "status": "AWAITING_SOURCE_POST_000008_VALIDATED",
     "git_blob_sha": "78ae4bae02f2a7dccdaf4c3d746ad05693c6daa6",
     "first_registry_run": 40827663411,
     "same_live_source_id": "A7-ROADMAP-20261009"
@@ -111,5 +111,14 @@
     "post_git_blob_sha": "c49623962bf7483e27199b38416c602578b9858b",
     "status": "POST_000006_VALIDATED_ARCHIVED"
   },
-  "seq46_post_expected": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json"
+  "seq46_post_expected": "registry/archives/roadmap/000007_POST_A7_SEQ_000046.json",
+  "seq47_post_expected": "registry/archives/roadmap/000008_POST_A7_SEQ_000047.json",
+  "seq47_main_feature_checks": {
+    "commit_sha": "113f8225d808d48295ce17fad5062a337a9d21e8",
+    "registry_run": 42444877442,
+    "chromium_run": 42444877468,
+    "pages_run": 42444877440,
+    "all_success": true,
+    "independent_http": false
+  }
 }
