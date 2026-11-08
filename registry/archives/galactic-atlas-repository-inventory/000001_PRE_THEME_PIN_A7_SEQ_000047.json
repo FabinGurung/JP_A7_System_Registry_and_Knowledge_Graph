@@ -1,0 +1,12 @@
+{
+  "schema": "jp-source-archive-pre/1",
+  "sequence_id": "A7-SEQ-000047",
+  "phase": "PRE",
+  "subject_id": "A7-CLOUD-ORBIT-THEME-ENGINE-PIN",
+  "archive_ordinal": "000001",
+  "original_main_sha": "6403360b8fc74952c3a6b386a4eaddc4aa300267",
+  "original_theme_blob_sha": "6598ff97999fcce39cf378bc7e282dcc3f42cddc",
+  "original_galaxy_js_blob_sha": "00e93e3f5c2223bf8d820c4df9b77bea4d5e410c",
+  "reason": "Intentional constellation renderer update requires historical SHA pin review; other five engines unchanged",
+  "restore": "Restore old Git blobs to same original file paths via reviewed PR"
+}
