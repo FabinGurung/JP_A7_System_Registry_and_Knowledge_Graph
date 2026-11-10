@@ -134,6 +134,10 @@ jobs:
           node --check site/assets/memory-wall-guides.js
       - name: Validate printable, non-authoritative Memory Wall posters
         run: python scripts/validate_memory_wall.py
+      - name: Validate linked Harisharan public memory case (never engineering approval)
+        run: |
+          python scripts/validate_harisharan_memory_case.py
+          node --check site/assets/harisharan-cad-case.js
       - name: Validate unified site theme and decorative rocket
         run: python scripts/validate_unified_theme.py
       - name: Validate unified navigation, preserved history and six Memory Wall techniques
