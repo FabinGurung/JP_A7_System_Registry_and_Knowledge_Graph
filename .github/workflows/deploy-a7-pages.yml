@@ -37,6 +37,9 @@ on:
       - "scripts/validate_repository_health.py"
       - "scripts/generate_memory_wall.py"
       - "scripts/validate_memory_wall.py"
+      - "scripts/validate_harisharan_memory_case.py"
+      - "site/assets/harisharan-cad-case.js"
+      - "site/memory-wall.html"
       - "scripts/generate_memory_ui_vocabulary.py"
       - "scripts/validate_memory_ui_vocabulary.py"
       - "scripts/generate_memory_storage_architecture.py"
@@ -76,6 +79,10 @@ jobs:
         run: |
           python scripts/validate_project_module_bindings.py
           python scripts/test_project_semantic_id.py
+      - name: Validate Harisharan evidence reference Memory Wall curation
+        run: |
+          python scripts/validate_harisharan_memory_case.py
+          node --check site/assets/harisharan-cad-case.js
       - name: Generate A7 projections
         run: python scripts/generate_visualizations.py --output-dir site/data --commit-sha "$GITHUB_SHA"
       - name: Validate generated projections
