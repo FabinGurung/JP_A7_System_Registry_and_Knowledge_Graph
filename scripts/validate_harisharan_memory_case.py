@@ -19,6 +19,8 @@ assert all(x['url'].startswith('https://') for x in src['sourceLinks'])
 assert 'drive.google.com' not in p.read_text()
 html=(root/'site/memory-wall.html').read_text()
 assert 'id="harisharan-cad-source-memory"' in html
-assert 'harisharan-cad-evidence-mnemonic.json' in html
+assert 'assets/harisharan-cad-case.js' in html
+js=(root/'site/assets/harisharan-cad-case.js').read_text()
+assert 'harisharan-cad-evidence-mnemonic.json' in js
 assert 'NOT FOR CONSTRUCTION' in html
 print('A7_HARISHARAN_PUBLIC_SAFE_MEMORY_PASS source=canonical curation, approval=false')
