@@ -1,0 +1,43 @@
+{
+  "schema": "a7://public-memory-case/1",
+  "id": "A7-MEM-CAD-HAR-20261110-001",
+  "revision": "R000001",
+  "observed_on": "2026-11-10",
+  "ownership": "A7_PUBLIC_CROSS_REFERENCE_ONLY",
+  "domainAuthority": "FabinGurung/JP_Computer-Aided-Drawings",
+  "constructionApproval": false,
+  "sourceApproval": false,
+  "ownerDirectionStatus": "OWNER_INPUT_NOT_ISSUED_FOR_CONSTRUCTION",
+  "sourceLinks": [
+    {
+      "label": "Harisharan source-linked member review",
+      "url": "https://fabingurung.github.io/JP_Computer-Aided-Drawings/projects/harisharan-adhikari/review/"
+    },
+    {
+      "label": "Harisharan CAD repository",
+      "url": "https://github.com/FabinGurung/JP_Computer-Aided-Drawings"
+    }
+  ],
+  "reminders": [
+    {
+      "heading": "Source drawing says",
+      "text": "STR-02 shows Ø8 @125 mm at the plinth zone; STR-06 explicitly shows Ø10 @100 mm beside its right-hand column. Preserve both until reconciled.",
+      "status": "CONFLICTING_ORIGINAL_SOURCE"
+    },
+    {
+      "heading": "Owner chooses a scenario",
+      "text": "Two footing mats; M25 as the report material scenario; Soil Type A only as an unverified assumption; a 16,000-L tank target and a five-storey flat-roof interpretation.",
+      "status": "OWNER_DIRECTION_NOT_ENGINEERING_APPROVAL"
+    },
+    {
+      "heading": "Code checks and site evidence decide",
+      "text": "STR-15 already contains a smaller tank and reinforcement drawings. Verified foundation geometry, geotechnical evidence, dimensional tank redesign and professional review remain required.",
+      "status": "DESIGN_REVIEW_HOLD"
+    }
+  ],
+  "versionRule": "Original Drive source IDs do not change. Archive PRE before edits; edit live IDs; verify POST and Git PR; preserve release tags. A7 links but never duplicates owner CAD engineering data.",
+  "limitations": [
+    "A7 is a semantic reference wall, not an alternate bill-of-quantities database or engineering design authority.",
+    "No restricted Drive links, private file IDs, contact data or engineering sign-off are published."
+  ]
+}
