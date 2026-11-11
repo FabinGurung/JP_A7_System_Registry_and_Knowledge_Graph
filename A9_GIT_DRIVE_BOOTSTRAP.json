@@ -3,7 +3,7 @@
   "contract_id": "A7-A9-GIT-DRIVE-ENTRY-001",
   "status": "ACTIVE_FOR_PUBLIC_SAFE_NEW_WORK__HISTORICAL_A9_DRIVE_PARITY_NOT_ATTESTED",
   "policy_version": "2026-10-09-v1",
-  "repository_full_name": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+  "repository_full_name": "FabinGurung/jp-a7-system-registry",
   "read_first": "A7_READ_FIRST.md",
   "policy": "docs/A9_GIT_DRIVE_OPERATING_RULE.md",
   "semantic_authority": "registry/authority/authority-map.json",
@@ -53,7 +53,7 @@
     "external_scheduling": "not_enabled"
   },
   "links": {
-    "a7_site": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/",
+    "a7_site": "https://fabingurung.github.io/jp-a7-system-registry/",
     "rnd": "https://github.com/FabinGurung/JP_Research-and-Development"
   },
   "private_bridge_dated_observation": {
