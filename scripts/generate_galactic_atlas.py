@@ -55,7 +55,17 @@ def build():
         entry = source[ident]
         item = evidence.get(ident)
         if item:
-            assert entry["current_slug"] == item["slug"], "Historical provider snapshot identity mismatch"
+            # This dated provider snapshot records an earlier slug. A later
+            # confirmed GitHub rename may change the current slug, but must not
+            # rewrite that historical observation or its stable provider ID.
+            historical_renames = {
+                "REPO-000001": ("JP_A7_System_Registry_and_Knowledge_Graph", "jp-a7-system-registry", "1406572237"),
+                "REPO-000007": ("JP_Communication-Command-Centre-and-Resource-Hub", "jp-site-operations", "1312147922"),
+            }
+            if entry["current_slug"] != item["slug"]:
+                allowed = historical_renames.get(ident)
+                assert allowed and item["slug"] == allowed[0] and entry["current_slug"] == allowed[1] \
+                    and str(entry["provider_object_id"]) == allowed[2], "Historical provider snapshot identity mismatch"
             assert len(item["main_sha"]) == 40 and item["deployment"]["id"] > 0
             assert item["deployment"]["branch"] == item["production_branch"]
         else:
