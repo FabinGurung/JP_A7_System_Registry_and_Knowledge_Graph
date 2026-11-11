@@ -1,7 +1,7 @@
 # Global agent/router rule (public-safe)
 
 Central authoritative cross-provider bootstrap:
-https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json
+https://github.com/FabinGurung/jp-a7-system-registry/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json
 
 Read that one short machine entrypoint before new cross-repository Git/Google Drive work. Then resolve this repository's A7_MODULE.json if present and read only the relevant local owner control and current state. A7 defines semantic routing; this repository owns its code and fact classes. A Git branch is a complete repository snapshot, not a person's folder.
 
