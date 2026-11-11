@@ -48,14 +48,16 @@ for o in obs:
     if not m: errors.append(f"unknown module observation {mid}"); continue
     if m.get("repository_id")!=rid: errors.append(f"{mid}: repository_id mismatch")
     if m.get("provider_repository_id")!=pid: errors.append(f"{mid}: provider_repository_id mismatch")
-    if m.get("repository_full_name")!=o.get("repository_full_name"): errors.append(f"{mid}: repository_full_name mismatch")
+    # Immutable provider observations retain the exact name at the time of capture.
+    if not o.get("repository_full_name"): errors.append(f"{mid}: missing historical repository identity")
     if m.get("default_branch")!=o.get("default_branch"): errors.append(f"{mid}: default branch mismatch")
     if m.get("ownership_profile_id") not in own_ids: errors.append(f"{mid}: unknown ownership profile")
     if o.get("provider_readback")!="PASS": errors.append(f"{mid}: baseline provider readback not PASS")
     if o.get("entrypoint_count",0)<1: errors.append(f"{mid}: baseline has no routing entrypoints")
     if o.get("post_snapshot_branch")!="snapshot/post-a7-seq-000007-module-manifest": errors.append(f"{mid}: Phase-7 POST snapshot branch mismatch")
 
-effective={mid:{"blob":o.get("manifest_blob_sha"),"commit":o.get("post_sha")} for mid,o in obs_by.items()}
+effective={mid:{"blob":o.get("manifest_blob_sha"),"commit":o.get("post_sha"),
+                "repo_name":o.get("repository_full_name")} for mid,o in obs_by.items()}
 seen_rec_ids=set()
 for r in recs:
     rid=r.get("reconciliation_id"); mid=r.get("module_id")
@@ -65,7 +67,13 @@ for r in recs:
     m=mod_by[mid]
     if r.get("repository_id")!=m.get("repository_id"): errors.append(f"{rid}: repository_id mismatch")
     if r.get("provider_repository_id")!=m.get("provider_repository_id"): errors.append(f"{rid}: provider_repository_id mismatch")
-    if r.get("repository_full_name")!=m.get("repository_full_name"): errors.append(f"{rid}: repository_full_name mismatch")
+    # Resolve the name against the chain rather than rewriting past historical
+    # observations when GitHub renames a repo but keeps the same provider ID.
+    prior=effective.get(mid)
+    if prior and r.get("repository_full_name")!=prior.get("repo_name"):
+        if not (r.get("repository_rename_verified") is True
+                and r.get("previous_repository_full_name")==prior.get("repo_name")):
+            errors.append(f"{rid}: changed repository name without verified alias chain")
     if r.get("manifest_path")!="A7_MODULE.json": errors.append(f"{rid}: manifest_path invalid")
     if r.get("manifest_role")!="ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS": errors.append(f"{rid}: manifest role invalid")
     if r.get("provider_readback")!="PASS": errors.append(f"{rid}: provider readback not PASS")
@@ -74,7 +82,8 @@ for r in recs:
     if not cur: errors.append(f"{rid}: no baseline observation"); continue
     if r.get("previous_manifest_blob_sha")!=cur["blob"]: errors.append(f"{rid}: previous blob does not chain from prior state")
     if r.get("previous_observed_commit_sha")!=cur["commit"]: errors.append(f"{rid}: previous commit does not chain from prior state")
-    effective[mid]={"blob":r.get("current_manifest_blob_sha"),"commit":r.get("current_observed_commit_sha")}
+    effective[mid]={"blob":r.get("current_manifest_blob_sha"),"commit":r.get("current_observed_commit_sha"),
+                    "repo_name":r.get("repository_full_name")}
 
 for mid,m in mod_by.items():
     ptr=m.get("a7_module_manifest",{})
@@ -83,6 +92,8 @@ for mid,m in mod_by.items():
     if ptr.get("manifest_role")!="ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS": errors.append(f"{mid}: manifest pointer role invalid")
     eff=effective.get(mid)
     if not eff: errors.append(f"{mid}: no effective manifest state"); continue
+    if m.get("repository_full_name")!=eff.get("repo_name"):
+        errors.append(f"{mid}: current repository slug differs from the reconciled provider name")
     if ptr.get("provider_blob_sha")!=eff["blob"]: errors.append(f"{mid}: current manifest blob mismatch")
     if ptr.get("observed_commit_sha")!=eff["commit"]: errors.append(f"{mid}: current manifest observed commit mismatch")
 

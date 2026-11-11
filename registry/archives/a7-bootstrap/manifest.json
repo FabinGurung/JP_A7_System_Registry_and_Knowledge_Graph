@@ -3,12 +3,12 @@
   "subject_id": "A7-BOOTSTRAP-000001",
   "live_source_path": "A7_BOOTSTRAP.json",
   "central_archive_dir": "registry/archives/a7-bootstrap/",
-  "archive_ordinal": "000007",
-  "pre_path": "registry/archives/a7-bootstrap/000007_PRE_A7_SEQ_000047.json",
-  "post_path": "registry/archives/a7-bootstrap/000007_POST_A7_SEQ_000047.json",
-  "source_commit": "113f8225d808d48295ce17fad5062a337a9d21e8",
+  "archive_ordinal": "000008",
+  "pre_path": "registry/archives/a7-bootstrap/000008_PRE_A7_SEQ_000048.json",
+  "post_path": "registry/archives/a7-bootstrap/000008_POST_A7_SEQ_000048.json",
+  "source_commit": "6ac6a15271af9cd2b5a1592bf85bada901e7e2e0",
   "original_blob_sha": "9f0db1283944a1becec4ea3e67f2fb9551c9f002",
-  "status": "POST_000007_CAPTURED_AFTER_REGISTRY_SUCCESS",
+  "status": "POST_000008_CAPTURED_PENDING_REGISTRY_CI",
   "history": "registry/archives/a7-bootstrap/version-history.jsonl",
   "restore": "Restore snapshot contents into the SAME A7_BOOTSTRAP.json on a governed PR; verify GitHub CI and source readback",
   "original_private_message_url": null,
@@ -25,7 +25,7 @@
     "post_path": "registry/archives/a7-bootstrap/000001_POST_A7_SEQ_000041.json",
     "status": "POST_CAPTURED_AFTER_FEATURE_REGISTRY_SUCCESS"
   },
-  "post_blob_sha": "1d074a9e46125c8da65b3f0d82bb39a54b56f41f",
+  "post_blob_sha": "4754f257605c6012848bfb84b6cc013b07359a25",
   "first_closeout_registry_run": 40790938671,
   "historical_000002": {
     "pre_path": "registry/archives/a7-bootstrap/000002_PRE_A7_SEQ_000042.json",
@@ -73,5 +73,11 @@
     "post_source_git_blob_sha": "1d074a9e46125c8da65b3f0d82bb39a54b56f41f",
     "first_registry_run": 42445225147,
     "independent_http": false
+  },
+  "historical_000007": {
+    "pre_path": "registry/archives/a7-bootstrap/000007_PRE_A7_SEQ_000047.json",
+    "post_path": "registry/archives/a7-bootstrap/000007_POST_A7_SEQ_000047.json",
+    "status": "POST_000007_CAPTURED_AFTER_REGISTRY_SUCCESS",
+    "post_blob_sha": "1d074a9e46125c8da65b3f0d82bb39a54b56f41f"
   }
 }

@@ -27,7 +27,17 @@ for station in data["stations"]:
   assert e["provider_label"]=="GITHUB_PUBLIC_PAGES_UNVERIFIED" and e["dependency_verified"] is False
   continue
  x=byid[station["id"]];e=station["provider_evidence"];p=x["deployment"]
- assert x["slug"]==station["module_repository"].split("/",1)[1]
+ # The provider snapshot is dated 20 Oct; newer canonical slugs must not
+ # overwrite its historical observation, only resolve through same-ID aliases.
+ current_slug=station["module_repository"].split("/",1)[1]
+ previous_aliases={
+  "REPO-000001": ("JP_A7_System_Registry_and_Knowledge_Graph", "jp-a7-system-registry","1406572237"),
+  "REPO-000007": ("JP_Communication-Command-Centre-and-Resource-Hub","jp-site-operations","1312147922"),
+ }
+ if x["slug"]!=current_slug:
+  allowed=previous_aliases.get(station["id"])
+  assert allowed and x["slug"]==allowed[0] and current_slug==allowed[1] \
+    and str(next(c["provider_object_id"] for c in catalog["repositories"] if c["repository_id"]==station["id"]))==allowed[2]
  assert len(e["main_sha"])==len(p["sha"])==40
  assert e["last_successful_publication"]["result"]=="success"
  assert e["last_successful_publication"]["id"]==p["id"]
