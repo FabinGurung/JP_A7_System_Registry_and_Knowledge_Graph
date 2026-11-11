@@ -11,7 +11,7 @@
       "platform_level": "PEER_SPECIALIST_MODULE",
       "repository_id": "REPO-000007",
       "provider_repository_id": "1312147922",
-      "repository_full_name": "FabinGurung/JP_Communication-Command-Centre-and-Resource-Hub",
+      "repository_full_name": "FabinGurung/jp-site-operations",
       "default_branch": "main",
       "canonical_working_ref": "main",
       "observed_ref_sha": "8f9cb1b7add3ba236771a2518a981dd6fd8cd3f7",
@@ -29,7 +29,7 @@
         "ops/PLATFORM_MODULES.md"
       ],
       "ownership_profile_id": "OWN-MOD-OPS-001",
-      "public_site_url": "https://fabingurung.github.io/JP_Communication-Command-Centre-and-Resource-Hub/",
+      "public_site_url": "https://fabingurung.github.io/jp-site-operations/",
       "note": "Human-facing project experience, Daily Ops and specialist navigation. It may surface/link peer specialist modules but does not own their engineering engines.",
       "a7_module_manifest": {
         "path": "A7_MODULE.json",
@@ -40,7 +40,9 @@
         "contract_id": "A7-CONTRACT-MODULE-MANIFEST-001",
         "last_reconciliation_id": "MODMAN-REC-000003",
         "last_reconciled_date": "2026-10-29"
-      }
+      },
+      "current_slug": "jp-site-operations",
+      "canonical_pages_workflow": ".github/workflows/operations-sheets-pages.yml"
     },
     {
       "module_id": "MOD-SCHED-001",
