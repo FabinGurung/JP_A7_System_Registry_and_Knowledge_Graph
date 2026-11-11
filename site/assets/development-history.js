@@ -1,6 +1,6 @@
 /* A7 L1 GitHub development readout. Static, owner-scoped, never a write or live polling client. */
 (() => {"use strict";
-const repo="https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph";
+const repo="https://github.com/FabinGurung/jp-a7-system-registry";
 const $=id=>document.getElementById(id);
 let snapshot=null;
 function node(tag,txt,cls){const el=document.createElement(tag);if(txt!==undefined)el.textContent=String(txt);if(cls)el.className=cls;return el}
@@ -69,7 +69,7 @@ async function start(){
   const data=await res.json();
   if(data.schema!=="a7-development-history.v0.1"||data.scope!=="THIS_A7_REPOSITORY_ONLY"||
     !Array.isArray(data.commits)||!Array.isArray(data.pull_requests)||!Array.isArray(data.workflow_runs)||
-    data.repository!=="FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph")throw new Error("Unexpected history dataset");
+    data.repository!=="FabinGurung/jp-a7-system-registry")throw new Error("Unexpected history dataset");
   snapshot=data;
   $("dhCommitCount").textContent=String(data.commits.length);
   $("dhPrCount").textContent=String(data.pull_requests.length);

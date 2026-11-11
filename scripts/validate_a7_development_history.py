@@ -9,7 +9,7 @@ p=argparse.ArgumentParser()
 p.add_argument("--data-dir",default="site/data")
 args=p.parse_args()
 data=json.loads((R/args.data_dir/"development-history.json").read_text(encoding="utf-8"))
-repo="FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph"
+repo="FabinGurung/jp-a7-system-registry"
 origin="https://github.com/"+repo
 assert data["schema"]=="a7-development-history.v0.1"
 assert data["scope"]=="THIS_A7_REPOSITORY_ONLY"

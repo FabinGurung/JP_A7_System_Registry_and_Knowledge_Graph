@@ -14,7 +14,7 @@ import subprocess
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY = "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph"
+REPOSITORY = "FabinGurung/jp-a7-system-registry"
 BASE = "https://github.com/" + REPOSITORY
 API = "https://api.github.com/repos/" + REPOSITORY
 
