@@ -86,7 +86,7 @@ if bootstrap.get("system_code") != "A7":
 repo = bootstrap.get("canonical_repository", {})
 if repo.get("provider_object_id") != "1406572237":
     errors.append("A7_BOOTSTRAP.json: canonical GitHub provider_object_id mismatch")
-if repo.get("full_name") != "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph":
+if repo.get("full_name") != "FabinGurung/jp-a7-system-registry":
     errors.append("A7_BOOTSTRAP.json: canonical repository name mismatch")
 if bootstrap.get("current_operating_model", {}).get("generated_outputs_are_authority") is not False:
     errors.append("A7_BOOTSTRAP.json: generated outputs must be non-authoritative")
