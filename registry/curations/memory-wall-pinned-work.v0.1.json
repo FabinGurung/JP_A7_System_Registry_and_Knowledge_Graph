@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "A7-MEM-PIN-034-SOURCE-SHEETS-20261112",
+  "recorded_date_npt": "2026-11-12",
+  "display_order": 1,
+  "visibility": "PUBLIC_SAFE_METADATA_ONLY",
+  "status": "DEFERRED_BY_USER",
+  "reminder_type": "PERSISTENT_MEMORY_WALL",
+  "title": "Review the 34 registered website Sheets",
+  "count_recorded": 34,
+  "reviewed_scope": "Directory links and locations were checked previously; full cross-repository normalized-data consistency audit remains to be completed.",
+  "resume_action": "When ready, inspect existing registered source Sheets for ownership, schema, version, permissions, primary keys and repository consumer mappings. Keep one authoritative normalized source per fact and separate repository-specific publishing projections.",
+  "acceptance_checks": [
+    "Cross-check each of the 34 directory entries and identify real owning sources versus derived views and archived references.",
+    "Preserve stable live IDs and A7 PRE/POST controlled histories while correcting stale references.",
+    "Map normalized source table schema and owner to all consuming GitHub repositories, their Actions and Pages.",
+    "Implement a central Google Sheet + Python consistency checker in the owning repository when requested.",
+    "Check privacy and permission boundaries before any public publication, and record QA evidence before closing."
+  ],
+  "requires_now": false,
+  "due_date": null,
+  "auto_publish_approved": false,
+  "file_moves_approved": false,
+  "financial_approval_implied": false,
+  "owning_repository": "FabinGurung/jp-site-operations",
+  "tracking_issue": "https://github.com/FabinGurung/jp-site-operations/issues/36",
+  "private_source_links_excluded": true,
+  "is_domain_authority": false,
+  "parent_context": "A7 Memory Wall public read-only reminder; original website source registry remains under Drive/Operations authority."
+}

@@ -50,4 +50,18 @@ assert 'href="memory-wall.html"' in (ROOT/"site/index.html").read_text()
 assert 'href="memory-wall.html"' in (ROOT/"site/control-towers.html").read_text()
 assert "scripts/generate_memory_wall.py" in (ROOT/".github/workflows/deploy-a7-pages.yml").read_text()
 assert "scripts/validate_memory_wall.py" in (ROOT/".github/workflows/validate-registry.yml").read_text()
-print("A7 MEMORY WALL QA PASS: 3 public verified poster links, visible, printable, owner-safe")
+# Public-safe deferred work pin: same A7 page, separate from the seven reference chapters.
+pinned_file=ROOT/"registry/curations/memory-wall-pinned-work.v0.1.json"
+pinned_text=pinned_file.read_text(encoding="utf-8")
+pin=json.loads(pinned_text)
+assert pin["record_id"]=="A7-MEM-PIN-034-SOURCE-SHEETS-20261112"
+assert pin["count_recorded"]==34 and pin["status"]=="DEFERRED_BY_USER"
+assert pin["private_source_links_excluded"] and pin["is_domain_authority"] is False
+assert pin["file_moves_approved"] is False and pin["auto_publish_approved"] is False
+assert pin["tracking_issue"]=="https://github.com/FabinGurung/jp-site-operations/issues/36"
+assert "drive.google.com" not in pinned_text and "docs.google.com" not in pinned_text
+assert html.count('id="pinned-34-source-sheets"')==1
+assert pin["tracking_issue"] in html
+assert html.index('id="pinned-34-source-sheets"')<html.index('class="notice-board"')
+
+print("A7 MEMORY WALL QA PASS: 3 public posters, 7 original chapters, deferred 34-source pin, owner-safe")
