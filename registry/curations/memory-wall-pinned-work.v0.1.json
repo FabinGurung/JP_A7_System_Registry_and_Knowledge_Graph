@@ -26,5 +26,15 @@
   "tracking_issue": "https://github.com/FabinGurung/jp-site-operations/issues/36",
   "private_source_links_excluded": true,
   "is_domain_authority": false,
-  "parent_context": "A7 Memory Wall public read-only reminder; original website source registry remains under Drive/Operations authority."
+  "parent_context": "A7 Memory Wall public read-only reminder; original website source registry remains under Drive/Operations authority.",
+  "related_owners": [
+    {
+      "name": "Cost Estimation",
+      "repository": "FabinGurung/jp-estimating-and-boq",
+      "source_memory_wall": "https://fabingurung.github.io/jp-estimating-and-boq/memory-posters.html#google-sheets-fetched",
+      "role": "ACTIVE_SPECIALIST_SOURCE_FETCH_MAP",
+      "status": "MANUAL_FIRST_4_FEEDS_2_REFERENCES",
+      "note": "A7 is a pointer only; detailed source/tab/importer contracts live in Estimation, not here."
+    }
+  ]
 }
