@@ -62,6 +62,9 @@ assert pin["tracking_issue"]=="https://github.com/FabinGurung/jp-site-operations
 assert "drive.google.com" not in pinned_text and "docs.google.com" not in pinned_text
 assert html.count('id="pinned-34-source-sheets"')==1
 assert pin["tracking_issue"] in html
+assert len(pin["related_owners"])==1 and pin["related_owners"][0]["repository"]=="FabinGurung/jp-estimating-and-boq"
+assert pin["related_owners"][0]["source_memory_wall"] in html
+assert "1_MYCZ98tsfmWgTn_-jQBU9OcdrygwC9nlE9BF1gWK2k" not in pinned_text
 assert html.index('id="pinned-34-source-sheets"')<html.index('class="notice-board"')
 
 print("A7 MEMORY WALL QA PASS: 3 public posters, 7 original chapters, deferred 34-source pin, owner-safe")
