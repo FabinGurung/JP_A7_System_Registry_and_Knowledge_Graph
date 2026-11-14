@@ -33,8 +33,8 @@
       "repository": "FabinGurung/jp-estimating-and-boq",
       "source_memory_wall": "https://fabingurung.github.io/jp-estimating-and-boq/memory-posters.html#google-sheets-fetched",
       "role": "ACTIVE_SPECIALIST_SOURCE_FETCH_MAP",
-      "status": "MANUAL_FIRST_4_FEEDS_2_REFERENCES",
-      "note": "A7 is a pointer only; detailed source/tab/importer contracts live in Estimation, not here."
+      "status": "MANUAL_FIRST_4_AUTHENTICATED_1_OPTIONAL_VENDOR_BILLS_2_REFERENCES_V000004",
+      "note": "A7 is a pointer only. Estimation's seven-Sheet source/consumer inventory V000006 includes four established authenticated paths, one optional manual-only Vendor Bills V000004 snapshot (not yet an authenticated read) and two reference/template sources. The original LIVE working Google Sheet and detailed QA Google Doc remain private in the Cost Estimation Drive folder."
     }
   ]
 }
