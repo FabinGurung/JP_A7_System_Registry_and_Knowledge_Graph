@@ -1,0 +1,19 @@
+{
+  "schema": "jp-source-archive-manifest/1",
+  "subject_id": "A7-MEM-SCHED-TEMPLATE-ADOPTION-010",
+  "source": "registry/curations/scheduling-template-adoption.v0.1.json",
+  "ordinal": "000001",
+  "pre_path": "registry/archives/scheduling-template-adoption/000001_PRE_A7_SEQ_000049.json",
+  "post_path": "registry/archives/scheduling-template-adoption/000001_POST_A7_SEQ_000049.json",
+  "record_type": "NEW_PUBLIC_SAFE_ROUTING_POINTER_NOT_EXISTING_LIVE_FILE_REPLACEMENT",
+  "pre_main_commit": "e7ff05665e0fc142328807f3a6b005219cb754a2",
+  "post_source_commit": "ffa8eed4ebac61fd62fd0664129e8cb431630d07",
+  "registry_validation_run": 43605356171,
+  "pages_deployment_run": 43605326858,
+  "browser_qa_run": 43605326922,
+  "independently_verified_http_body": false,
+  "scope": "A7 navigation header, curated pointer and governing read-first documentation only",
+  "not_domain_authority": true,
+  "preserve_owner_version": "Skyforge v1.16.0-skyforge-standard-schedule-template.1",
+  "status": "POST_SOURCE_CAPTURED__REGISTRY_DEPLOYMENT_AND_BROWSER_PASSED"
+}

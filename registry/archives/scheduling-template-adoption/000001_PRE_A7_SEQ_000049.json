@@ -1,0 +1,12 @@
+{
+  "format": "A7_GOVERNED_NEW_CURATION_PRE_V1",
+  "subject_id": "A7-MEM-SCHED-TEMPLATE-ADOPTION-010",
+  "sequence_id": "A7-SEQ-000049",
+  "baseline_commit": "e7ff05665e0fc142328807f3a6b005219cb754a2",
+  "prior_source_path": "registry/curations/scheduling-template-adoption.v0.1.json",
+  "prior_source_state": "NOT_PRESENT_BEFORE_THIS_MUTATION",
+  "previous_wall_header": "NOT_PRESENT",
+  "existing_chapters_untouched": 7,
+  "prior_deferred_34_sheet_pin": "PRESERVED",
+  "no_original_project_source_edited": true
+}
