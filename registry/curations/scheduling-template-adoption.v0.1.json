@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "A7-MEM-SCHED-TEMPLATE-ADOPTION-010",
+  "sequence_id": "A7-SEQ-000049",
+  "recorded_on": "2026-11-14",
+  "kind": "CROSS_REPOSITORY_WORKFLOW_POINTER",
+  "title": "NEW PROJECT? REUSE SKYFORGE'S SCHEDULING TEMPLATE",
+  "headline": "ONE ENGINE · ONE SOURCE-CONTRACT · INDEPENDENT PROJECT RECORDS",
+  "memory_cue": "Open the A7 source pointer, copy the Skyforge template, preserve the project's original text in Drive, derive one WBS/schedule through the shared engine, then validate Gantt/Calendar/Resources before release.",
+  "domain_owner": "FabinGurung/jp-scheduling-resources-management",
+  "owner_module": "MOD-SCHED-001",
+  "authoritative_source": "https://github.com/FabinGurung/jp-scheduling-resources-management/blob/v1.16.0-skyforge-standard-schedule-template.1/docs/architecture/SKYFORGE_STANDARD_SCHEDULE_TEMPLATE_V1_20261114.md",
+  "source_template": "https://fabingurung.github.io/jp-scheduling-resources-management/templates/scheduling/standard-schedule-input-v1.example.json",
+  "schema": "https://fabingurung.github.io/jp-scheduling-resources-management/schemas/standard-schedule-input.schema.json",
+  "comparison": "https://fabingurung.github.io/jp-scheduling-resources-management/templates/scheduling/edition-comparison.json",
+  "release": "https://github.com/FabinGurung/jp-scheduling-resources-management/releases/tag/v1.16.0-skyforge-standard-schedule-template.1",
+  "project_adoption_prompt": [
+    "Continue work on PROJECT_NAME / PROJECT_ID using the current verified Skyforge Standard Project Schedule Template; do not create or fork another scheduling engine.",
+    "Read the Skyforge v1.16 tagged architecture, the source JSON template and schema; check the present kernel branch for newer compatible source contracts. Read A7 governance and the project's source register before making any changes.",
+    "Verify the project's own identity and Google Drive original documents. For Nepali input, keep an immutable Nepali transcription and a separate traceable English working translation, and derive from English only after comparison to the original. Preserve exact units, dates, constraints and source lines.",
+    "Create a separate project-specific source edition from the reusable template; maintain source IDs and WBS/activity IDs, relative-vs-dated calendar basis, working-day vs elapsed-day lags, crew availability, quantities/units, references, holds and unresolved assumptions. Never copy project quantities or engineer decisions from Narayani or Harisharan.",
+    "Use the shared scheduling solver, Gantt/Calendar/Resource interfaces and separately validated Work Output and Materials calculators where units/source grades support them. Do not silently convert reference rates or unverified dimensions into approved work quantities, progress or procurement.",
+    "Preserve pilot and prior editions. Run source, scheduling, schema, privacy, kernel, and mobile/browser QA; update only public-safe projection and GitHub Actions/Pages after project approval for publication. Return live URLs, commit, run IDs, unresolved holds and an audit trail.",
+    "No structural or contractor approval is implied by successful GitHub Actions or published charts. A7 remains a pointer; the scheduling repository owns the engine and each project owns its input records."
+  ],
+  "confidentiality": "PUBLIC_SAFE_METADATA_ONLY_NO_OWNER_PROJECT_TEXT_OR_DRIVE_IDENTIFIERS",
+  "domain_authority": false,
+  "no_duplicate_template": true,
+  "release_approval_implied": false,
+  "source_revision": "Skyforge v1.16.0-skyforge-standard-schedule-template.1"
+}
